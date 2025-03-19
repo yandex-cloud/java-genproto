@@ -319,7 +319,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific stream.
+     * Get the specific stream.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamServiceOuterClass.GetStreamRequest request,
@@ -389,7 +389,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Perform an action on the stream.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.StreamServiceOuterClass.PerformStreamActionRequest request,
@@ -478,7 +478,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific stream.
+     * Get the specific stream.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamServiceOuterClass.GetStreamRequest request,
@@ -555,7 +555,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Perform an action on the stream.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.StreamServiceOuterClass.PerformStreamActionRequest request,
@@ -584,7 +584,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific stream.
+     * Get the specific stream.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamOuterClass.Stream get(yandex.cloud.api.video.v1.StreamServiceOuterClass.GetStreamRequest request) {
@@ -654,7 +654,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Perform an action on the stream.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation performAction(yandex.cloud.api.video.v1.StreamServiceOuterClass.PerformStreamActionRequest request) {
@@ -682,7 +682,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific stream.
+     * Get the specific stream.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamOuterClass.Stream> get(
@@ -759,7 +759,7 @@ public final class StreamServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Perform an action on the stream.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> performAction(

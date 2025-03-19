@@ -328,6 +328,37 @@ public final class VideoServiceGrpc {
     return getGetPlayerURLMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest,
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse> getBatchGetPlayerURLsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BatchGetPlayerURLs",
+      requestType = yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest.class,
+      responseType = yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest,
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse> getBatchGetPlayerURLsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest, yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse> getBatchGetPlayerURLsMethod;
+    if ((getBatchGetPlayerURLsMethod = VideoServiceGrpc.getBatchGetPlayerURLsMethod) == null) {
+      synchronized (VideoServiceGrpc.class) {
+        if ((getBatchGetPlayerURLsMethod = VideoServiceGrpc.getBatchGetPlayerURLsMethod) == null) {
+          VideoServiceGrpc.getBatchGetPlayerURLsMethod = getBatchGetPlayerURLsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest, yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchGetPlayerURLs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VideoServiceMethodDescriptorSupplier("BatchGetPlayerURLs"))
+              .build();
+        }
+      }
+    }
+    return getBatchGetPlayerURLsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest,
       yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse> getGetManifestsMethod;
 
@@ -412,7 +443,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific video.
+     * Get the specific video.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoRequest request,
@@ -432,7 +463,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get video in specific channel.
+     * Batch get videos in specific channel.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request,
@@ -482,7 +513,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete video.
+     * Batch delete videos.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request,
@@ -492,7 +523,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Perform an action on the video.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.VideoServiceOuterClass.PerformVideoActionRequest request,
@@ -502,7 +533,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns url to the player.
+     * Get player url.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLRequest request,
@@ -512,7 +543,17 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns manifest urls.
+     * Batch get player urls.
+     * </pre>
+     */
+    public void batchGetPlayerURLs(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchGetPlayerURLsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get manifest urls.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request,
@@ -593,6 +634,13 @@ public final class VideoServiceGrpc {
                 yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLResponse>(
                   this, METHODID_GET_PLAYER_URL)))
           .addMethod(
+            getBatchGetPlayerURLsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest,
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse>(
+                  this, METHODID_BATCH_GET_PLAYER_URLS)))
+          .addMethod(
             getGetManifestsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
@@ -622,7 +670,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific video.
+     * Get the specific video.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoRequest request,
@@ -644,7 +692,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get video in specific channel.
+     * Batch get videos in specific channel.
      * </pre>
      */
     public void batchGet(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request,
@@ -699,7 +747,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete video.
+     * Batch delete videos.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request,
@@ -710,7 +758,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Perform an action on the video.
      * </pre>
      */
     public void performAction(yandex.cloud.api.video.v1.VideoServiceOuterClass.PerformVideoActionRequest request,
@@ -721,7 +769,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns url to the player.
+     * Get player url.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLRequest request,
@@ -732,7 +780,18 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns manifest urls.
+     * Batch get player urls.
+     * </pre>
+     */
+    public void batchGetPlayerURLs(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchGetPlayerURLsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get manifest urls.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request,
@@ -761,7 +820,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific video.
+     * Get the specific video.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoOuterClass.Video get(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoRequest request) {
@@ -781,7 +840,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get video in specific channel.
+     * Batch get videos in specific channel.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse batchGet(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosRequest request) {
@@ -831,7 +890,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete video.
+     * Batch delete videos.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchDeleteVideosRequest request) {
@@ -841,7 +900,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Perform an action on the video.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation performAction(yandex.cloud.api.video.v1.VideoServiceOuterClass.PerformVideoActionRequest request) {
@@ -851,7 +910,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns url to the player.
+     * Get player url.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLResponse getPlayerURL(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLRequest request) {
@@ -861,7 +920,17 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns manifest urls.
+     * Batch get player urls.
+     * </pre>
+     */
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse batchGetPlayerURLs(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchGetPlayerURLsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get manifest urls.
      * </pre>
      */
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse getManifests(yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest request) {
@@ -889,7 +958,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific video.
+     * Get the specific video.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoOuterClass.Video> get(
@@ -911,7 +980,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch get video in specific channel.
+     * Batch get videos in specific channel.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideosResponse> batchGet(
@@ -966,7 +1035,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete video.
+     * Batch delete videos.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
@@ -977,7 +1046,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Perform an action on the episode.
+     * Perform an action on the video.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> performAction(
@@ -988,7 +1057,7 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns url to the player.
+     * Get player url.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLResponse> getPlayerURL(
@@ -999,7 +1068,18 @@ public final class VideoServiceGrpc {
 
     /**
      * <pre>
-     * Returns manifest urls.
+     * Batch get player urls.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse> batchGetPlayerURLs(
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchGetPlayerURLsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Get manifest urls.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsResponse> getManifests(
@@ -1019,7 +1099,8 @@ public final class VideoServiceGrpc {
   private static final int METHODID_BATCH_DELETE = 7;
   private static final int METHODID_PERFORM_ACTION = 8;
   private static final int METHODID_GET_PLAYER_URL = 9;
-  private static final int METHODID_GET_MANIFESTS = 10;
+  private static final int METHODID_BATCH_GET_PLAYER_URLS = 10;
+  private static final int METHODID_GET_MANIFESTS = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1077,6 +1158,10 @@ public final class VideoServiceGrpc {
         case METHODID_GET_PLAYER_URL:
           serviceImpl.getPlayerURL((yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoPlayerURLResponse>) responseObserver);
+          break;
+        case METHODID_BATCH_GET_PLAYER_URLS:
+          serviceImpl.batchGetPlayerURLs((yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse>) responseObserver);
           break;
         case METHODID_GET_MANIFESTS:
           serviceImpl.getManifests((yandex.cloud.api.video.v1.VideoServiceOuterClass.GetVideoManifestsRequest) request,
@@ -1153,6 +1238,7 @@ public final class VideoServiceGrpc {
               .addMethod(getBatchDeleteMethod())
               .addMethod(getPerformActionMethod())
               .addMethod(getGetPlayerURLMethod())
+              .addMethod(getBatchGetPlayerURLsMethod())
               .addMethod(getGetManifestsMethod())
               .build();
         }

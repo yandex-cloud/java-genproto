@@ -204,6 +204,37 @@ public final class RunServiceGrpc {
     return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest,
+      yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse> getSubmitMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Submit",
+      requestType = yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.class,
+      responseType = yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest,
+      yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse> getSubmitMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse> getSubmitMethod;
+    if ((getSubmitMethod = RunServiceGrpc.getSubmitMethod) == null) {
+      synchronized (RunServiceGrpc.class) {
+        if ((getSubmitMethod = RunServiceGrpc.getSubmitMethod) == null) {
+          RunServiceGrpc.getSubmitMethod = getSubmitMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Submit"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new RunServiceMethodDescriptorSupplier("Submit"))
+              .build();
+        }
+      }
+    }
+    return getSubmitMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -319,6 +350,17 @@ public final class RunServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Submit event to run
+     * For example, submit function call results when the run is waiting for user input.
+     * </pre>
+     */
+    public void submit(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSubmitMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -363,6 +405,13 @@ public final class RunServiceGrpc {
                 yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsRequest,
                 yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getSubmitMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest,
+                yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse>(
+                  this, METHODID_SUBMIT)))
           .build();
     }
   }
@@ -453,6 +502,18 @@ public final class RunServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Submit event to run
+     * For example, submit function call results when the run is waiting for user input.
+     * </pre>
+     */
+    public void submit(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSubmitMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -524,6 +585,17 @@ public final class RunServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Submit event to run
+     * For example, submit function call results when the run is waiting for user input.
+     * </pre>
+     */
+    public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse submit(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSubmitMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -586,6 +658,18 @@ public final class RunServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Submit event to run
+     * For example, submit function call results when the run is waiting for user input.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse> submit(
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSubmitMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
@@ -593,7 +677,8 @@ public final class RunServiceGrpc {
   private static final int METHODID_GET = 2;
   private static final int METHODID_GET_LAST_BY_THREAD = 3;
   private static final int METHODID_LIST = 4;
-  private static final int METHODID_ATTACH = 5;
+  private static final int METHODID_SUBMIT = 5;
+  private static final int METHODID_ATTACH = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -631,6 +716,10 @@ public final class RunServiceGrpc {
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.ListRunsResponse>) responseObserver);
+          break;
+        case METHODID_SUBMIT:
+          serviceImpl.submit((yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -702,6 +791,7 @@ public final class RunServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getGetLastByThreadMethod())
               .addMethod(getListMethod())
+              .addMethod(getSubmitMethod())
               .build();
         }
       }

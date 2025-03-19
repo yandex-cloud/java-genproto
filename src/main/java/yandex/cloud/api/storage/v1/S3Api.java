@@ -31537,7 +31537,7 @@ public final class S3Api {
   }
   /**
    * <pre>
-   * Container for the MultipartUpload for the Amazon S3 object.
+   * Container for the MultipartUpload for the S3 object.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.storage.v1.S3APIMultipartUpload}
@@ -32152,7 +32152,7 @@ public final class S3Api {
     }
     /**
      * <pre>
-     * Container for the MultipartUpload for the Amazon S3 object.
+     * Container for the MultipartUpload for the S3 object.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.storage.v1.S3APIMultipartUpload}
@@ -35022,6 +35022,5191 @@ public final class S3Api {
 
   }
 
+  public interface S3APIListObjectsV2ResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.S3APIListObjectsV2Response)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * A flag that indicates whether S3 returned all of the results that satisfied the search criteria.
+     * </pre>
+     *
+     * <code>bool is_truncated = 1;</code>
+     * @return The isTruncated.
+     */
+    boolean getIsTruncated();
+
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIObject> 
+        getContentsList();
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APIObject getContents(int index);
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    int getContentsCount();
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder> 
+        getContentsOrBuilderList();
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder getContentsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * The bucket name.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The bucket name.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Keys that begin with the indicated prefix.
+     * </pre>
+     *
+     * <code>string prefix = 4;</code>
+     * @return The prefix.
+     */
+    java.lang.String getPrefix();
+    /**
+     * <pre>
+     * Keys that begin with the indicated prefix.
+     * </pre>
+     *
+     * <code>string prefix = 4;</code>
+     * @return The bytes for prefix.
+     */
+    com.google.protobuf.ByteString
+        getPrefixBytes();
+
+    /**
+     * <pre>
+     * Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection.
+     * </pre>
+     *
+     * <code>string delimiter = 5;</code>
+     * @return The delimiter.
+     */
+    java.lang.String getDelimiter();
+    /**
+     * <pre>
+     * Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection.
+     * </pre>
+     *
+     * <code>string delimiter = 5;</code>
+     * @return The bytes for delimiter.
+     */
+    com.google.protobuf.ByteString
+        getDelimiterBytes();
+
+    /**
+     * <pre>
+     * The maximum number of keys returned in the response body.
+     * </pre>
+     *
+     * <code>int64 max_keys = 6;</code>
+     * @return The maxKeys.
+     */
+    long getMaxKeys();
+
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix> 
+        getCommonPrefixesList();
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix getCommonPrefixes(int index);
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    int getCommonPrefixesCount();
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder> 
+        getCommonPrefixesOrBuilderList();
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder getCommonPrefixesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * The number of keys returned with this request.
+     * </pre>
+     *
+     * <code>int64 key_count = 8;</code>
+     * @return The keyCount.
+     */
+    long getKeyCount();
+
+    /**
+     * <pre>
+     * Indicates where in the bucket listing begins. This is only returned if a continuation token was used in the request.
+     * </pre>
+     *
+     * <code>string continuation_token = 9;</code>
+     * @return The continuationToken.
+     */
+    java.lang.String getContinuationToken();
+    /**
+     * <pre>
+     * Indicates where in the bucket listing begins. This is only returned if a continuation token was used in the request.
+     * </pre>
+     *
+     * <code>string continuation_token = 9;</code>
+     * @return The bytes for continuationToken.
+     */
+    com.google.protobuf.ByteString
+        getContinuationTokenBytes();
+
+    /**
+     * <pre>
+     * If the response is truncated, S3 returns this continuation token, which you can use in the next request to fetch the next set of keys.
+     * </pre>
+     *
+     * <code>string next_continuation_token = 10;</code>
+     * @return The nextContinuationToken.
+     */
+    java.lang.String getNextContinuationToken();
+    /**
+     * <pre>
+     * If the response is truncated, S3 returns this continuation token, which you can use in the next request to fetch the next set of keys.
+     * </pre>
+     *
+     * <code>string next_continuation_token = 10;</code>
+     * @return The bytes for nextContinuationToken.
+     */
+    com.google.protobuf.ByteString
+        getNextContinuationTokenBytes();
+
+    /**
+     * <pre>
+     * StartAfter is where you want S3 to start listing from. This is only returned if a start-after was used in the request.
+     * </pre>
+     *
+     * <code>string start_after = 11;</code>
+     * @return The startAfter.
+     */
+    java.lang.String getStartAfter();
+    /**
+     * <pre>
+     * StartAfter is where you want S3 to start listing from. This is only returned if a start-after was used in the request.
+     * </pre>
+     *
+     * <code>string start_after = 11;</code>
+     * @return The bytes for startAfter.
+     */
+    com.google.protobuf.ByteString
+        getStartAfterBytes();
+
+    /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
+     * <code>string request_id = 12;</code>
+     * @return The requestId.
+     */
+    java.lang.String getRequestId();
+    /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
+     * <code>string request_id = 12;</code>
+     * @return The bytes for requestId.
+     */
+    com.google.protobuf.ByteString
+        getRequestIdBytes();
+  }
+  /**
+   * <pre>
+   * Represents a response of list objects v2 request to S3.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.storage.v1.S3APIListObjectsV2Response}
+   */
+  public static final class S3APIListObjectsV2Response extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.S3APIListObjectsV2Response)
+      S3APIListObjectsV2ResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use S3APIListObjectsV2Response.newBuilder() to construct.
+    private S3APIListObjectsV2Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private S3APIListObjectsV2Response() {
+      contents_ = java.util.Collections.emptyList();
+      name_ = "";
+      prefix_ = "";
+      delimiter_ = "";
+      commonPrefixes_ = java.util.Collections.emptyList();
+      continuationToken_ = "";
+      nextContinuationToken_ = "";
+      startAfter_ = "";
+      requestId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new S3APIListObjectsV2Response();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private S3APIListObjectsV2Response(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              isTruncated_ = input.readBool();
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                contents_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.S3Api.S3APIObject>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              contents_.add(
+                  input.readMessage(yandex.cloud.api.storage.v1.S3Api.S3APIObject.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              prefix_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              delimiter_ = s;
+              break;
+            }
+            case 48: {
+
+              maxKeys_ = input.readInt64();
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                commonPrefixes_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              commonPrefixes_.add(
+                  input.readMessage(yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.parser(), extensionRegistry));
+              break;
+            }
+            case 64: {
+
+              keyCount_ = input.readInt64();
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              continuationToken_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextContinuationToken_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              startAfter_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              requestId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          contents_ = java.util.Collections.unmodifiableList(contents_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          commonPrefixes_ = java.util.Collections.unmodifiableList(commonPrefixes_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response.class, yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response.Builder.class);
+    }
+
+    public static final int IS_TRUNCATED_FIELD_NUMBER = 1;
+    private boolean isTruncated_;
+    /**
+     * <pre>
+     * A flag that indicates whether S3 returned all of the results that satisfied the search criteria.
+     * </pre>
+     *
+     * <code>bool is_truncated = 1;</code>
+     * @return The isTruncated.
+     */
+    @java.lang.Override
+    public boolean getIsTruncated() {
+      return isTruncated_;
+    }
+
+    public static final int CONTENTS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIObject> contents_;
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIObject> getContentsList() {
+      return contents_;
+    }
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder> 
+        getContentsOrBuilderList() {
+      return contents_;
+    }
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    @java.lang.Override
+    public int getContentsCount() {
+      return contents_.size();
+    }
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIObject getContents(int index) {
+      return contents_.get(index);
+    }
+    /**
+     * <pre>
+     * Metadata about each object returned.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder getContentsOrBuilder(
+        int index) {
+      return contents_.get(index);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * The bucket name.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The bucket name.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREFIX_FIELD_NUMBER = 4;
+    private volatile java.lang.Object prefix_;
+    /**
+     * <pre>
+     * Keys that begin with the indicated prefix.
+     * </pre>
+     *
+     * <code>string prefix = 4;</code>
+     * @return The prefix.
+     */
+    @java.lang.Override
+    public java.lang.String getPrefix() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        prefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Keys that begin with the indicated prefix.
+     * </pre>
+     *
+     * <code>string prefix = 4;</code>
+     * @return The bytes for prefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrefixBytes() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        prefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELIMITER_FIELD_NUMBER = 5;
+    private volatile java.lang.Object delimiter_;
+    /**
+     * <pre>
+     * Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection.
+     * </pre>
+     *
+     * <code>string delimiter = 5;</code>
+     * @return The delimiter.
+     */
+    @java.lang.Override
+    public java.lang.String getDelimiter() {
+      java.lang.Object ref = delimiter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        delimiter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection.
+     * </pre>
+     *
+     * <code>string delimiter = 5;</code>
+     * @return The bytes for delimiter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDelimiterBytes() {
+      java.lang.Object ref = delimiter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        delimiter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_KEYS_FIELD_NUMBER = 6;
+    private long maxKeys_;
+    /**
+     * <pre>
+     * The maximum number of keys returned in the response body.
+     * </pre>
+     *
+     * <code>int64 max_keys = 6;</code>
+     * @return The maxKeys.
+     */
+    @java.lang.Override
+    public long getMaxKeys() {
+      return maxKeys_;
+    }
+
+    public static final int COMMON_PREFIXES_FIELD_NUMBER = 7;
+    private java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix> commonPrefixes_;
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix> getCommonPrefixesList() {
+      return commonPrefixes_;
+    }
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder> 
+        getCommonPrefixesOrBuilderList() {
+      return commonPrefixes_;
+    }
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    @java.lang.Override
+    public int getCommonPrefixesCount() {
+      return commonPrefixes_.size();
+    }
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix getCommonPrefixes(int index) {
+      return commonPrefixes_.get(index);
+    }
+    /**
+     * <pre>
+     * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder getCommonPrefixesOrBuilder(
+        int index) {
+      return commonPrefixes_.get(index);
+    }
+
+    public static final int KEY_COUNT_FIELD_NUMBER = 8;
+    private long keyCount_;
+    /**
+     * <pre>
+     * The number of keys returned with this request.
+     * </pre>
+     *
+     * <code>int64 key_count = 8;</code>
+     * @return The keyCount.
+     */
+    @java.lang.Override
+    public long getKeyCount() {
+      return keyCount_;
+    }
+
+    public static final int CONTINUATION_TOKEN_FIELD_NUMBER = 9;
+    private volatile java.lang.Object continuationToken_;
+    /**
+     * <pre>
+     * Indicates where in the bucket listing begins. This is only returned if a continuation token was used in the request.
+     * </pre>
+     *
+     * <code>string continuation_token = 9;</code>
+     * @return The continuationToken.
+     */
+    @java.lang.Override
+    public java.lang.String getContinuationToken() {
+      java.lang.Object ref = continuationToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        continuationToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Indicates where in the bucket listing begins. This is only returned if a continuation token was used in the request.
+     * </pre>
+     *
+     * <code>string continuation_token = 9;</code>
+     * @return The bytes for continuationToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContinuationTokenBytes() {
+      java.lang.Object ref = continuationToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        continuationToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEXT_CONTINUATION_TOKEN_FIELD_NUMBER = 10;
+    private volatile java.lang.Object nextContinuationToken_;
+    /**
+     * <pre>
+     * If the response is truncated, S3 returns this continuation token, which you can use in the next request to fetch the next set of keys.
+     * </pre>
+     *
+     * <code>string next_continuation_token = 10;</code>
+     * @return The nextContinuationToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextContinuationToken() {
+      java.lang.Object ref = nextContinuationToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextContinuationToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If the response is truncated, S3 returns this continuation token, which you can use in the next request to fetch the next set of keys.
+     * </pre>
+     *
+     * <code>string next_continuation_token = 10;</code>
+     * @return The bytes for nextContinuationToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextContinuationTokenBytes() {
+      java.lang.Object ref = nextContinuationToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextContinuationToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_AFTER_FIELD_NUMBER = 11;
+    private volatile java.lang.Object startAfter_;
+    /**
+     * <pre>
+     * StartAfter is where you want S3 to start listing from. This is only returned if a start-after was used in the request.
+     * </pre>
+     *
+     * <code>string start_after = 11;</code>
+     * @return The startAfter.
+     */
+    @java.lang.Override
+    public java.lang.String getStartAfter() {
+      java.lang.Object ref = startAfter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        startAfter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * StartAfter is where you want S3 to start listing from. This is only returned if a start-after was used in the request.
+     * </pre>
+     *
+     * <code>string start_after = 11;</code>
+     * @return The bytes for startAfter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStartAfterBytes() {
+      java.lang.Object ref = startAfter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        startAfter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUEST_ID_FIELD_NUMBER = 12;
+    private volatile java.lang.Object requestId_;
+    /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
+     * <code>string request_id = 12;</code>
+     * @return The requestId.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestId() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique request ID.
+     * </pre>
+     *
+     * <code>string request_id = 12;</code>
+     * @return The bytes for requestId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestIdBytes() {
+      java.lang.Object ref = requestId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isTruncated_ != false) {
+        output.writeBool(1, isTruncated_);
+      }
+      for (int i = 0; i < contents_.size(); i++) {
+        output.writeMessage(2, contents_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, prefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delimiter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, delimiter_);
+      }
+      if (maxKeys_ != 0L) {
+        output.writeInt64(6, maxKeys_);
+      }
+      for (int i = 0; i < commonPrefixes_.size(); i++) {
+        output.writeMessage(7, commonPrefixes_.get(i));
+      }
+      if (keyCount_ != 0L) {
+        output.writeInt64(8, keyCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(continuationToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, continuationToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextContinuationToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nextContinuationToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startAfter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, startAfter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, requestId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isTruncated_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isTruncated_);
+      }
+      for (int i = 0; i < contents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, contents_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, prefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(delimiter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, delimiter_);
+      }
+      if (maxKeys_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, maxKeys_);
+      }
+      for (int i = 0; i < commonPrefixes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, commonPrefixes_.get(i));
+      }
+      if (keyCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, keyCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(continuationToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, continuationToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextContinuationToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nextContinuationToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startAfter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, startAfter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, requestId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response other = (yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response) obj;
+
+      if (getIsTruncated()
+          != other.getIsTruncated()) return false;
+      if (!getContentsList()
+          .equals(other.getContentsList())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getPrefix()
+          .equals(other.getPrefix())) return false;
+      if (!getDelimiter()
+          .equals(other.getDelimiter())) return false;
+      if (getMaxKeys()
+          != other.getMaxKeys()) return false;
+      if (!getCommonPrefixesList()
+          .equals(other.getCommonPrefixesList())) return false;
+      if (getKeyCount()
+          != other.getKeyCount()) return false;
+      if (!getContinuationToken()
+          .equals(other.getContinuationToken())) return false;
+      if (!getNextContinuationToken()
+          .equals(other.getNextContinuationToken())) return false;
+      if (!getStartAfter()
+          .equals(other.getStartAfter())) return false;
+      if (!getRequestId()
+          .equals(other.getRequestId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IS_TRUNCATED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsTruncated());
+      if (getContentsCount() > 0) {
+        hash = (37 * hash) + CONTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getContentsList().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getPrefix().hashCode();
+      hash = (37 * hash) + DELIMITER_FIELD_NUMBER;
+      hash = (53 * hash) + getDelimiter().hashCode();
+      hash = (37 * hash) + MAX_KEYS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxKeys());
+      if (getCommonPrefixesCount() > 0) {
+        hash = (37 * hash) + COMMON_PREFIXES_FIELD_NUMBER;
+        hash = (53 * hash) + getCommonPrefixesList().hashCode();
+      }
+      hash = (37 * hash) + KEY_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getKeyCount());
+      hash = (37 * hash) + CONTINUATION_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getContinuationToken().hashCode();
+      hash = (37 * hash) + NEXT_CONTINUATION_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextContinuationToken().hashCode();
+      hash = (37 * hash) + START_AFTER_FIELD_NUMBER;
+      hash = (53 * hash) + getStartAfter().hashCode();
+      hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Represents a response of list objects v2 request to S3.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.storage.v1.S3APIListObjectsV2Response}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.S3APIListObjectsV2Response)
+        yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2ResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response.class, yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getContentsFieldBuilder();
+          getCommonPrefixesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        isTruncated_ = false;
+
+        if (contentsBuilder_ == null) {
+          contents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          contentsBuilder_.clear();
+        }
+        name_ = "";
+
+        prefix_ = "";
+
+        delimiter_ = "";
+
+        maxKeys_ = 0L;
+
+        if (commonPrefixesBuilder_ == null) {
+          commonPrefixes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          commonPrefixesBuilder_.clear();
+        }
+        keyCount_ = 0L;
+
+        continuationToken_ = "";
+
+        nextContinuationToken_ = "";
+
+        startAfter_ = "";
+
+        requestId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response getDefaultInstanceForType() {
+        return yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response build() {
+        yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response buildPartial() {
+        yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response result = new yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response(this);
+        int from_bitField0_ = bitField0_;
+        result.isTruncated_ = isTruncated_;
+        if (contentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            contents_ = java.util.Collections.unmodifiableList(contents_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.contents_ = contents_;
+        } else {
+          result.contents_ = contentsBuilder_.build();
+        }
+        result.name_ = name_;
+        result.prefix_ = prefix_;
+        result.delimiter_ = delimiter_;
+        result.maxKeys_ = maxKeys_;
+        if (commonPrefixesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            commonPrefixes_ = java.util.Collections.unmodifiableList(commonPrefixes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.commonPrefixes_ = commonPrefixes_;
+        } else {
+          result.commonPrefixes_ = commonPrefixesBuilder_.build();
+        }
+        result.keyCount_ = keyCount_;
+        result.continuationToken_ = continuationToken_;
+        result.nextContinuationToken_ = nextContinuationToken_;
+        result.startAfter_ = startAfter_;
+        result.requestId_ = requestId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response) {
+          return mergeFrom((yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response other) {
+        if (other == yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response.getDefaultInstance()) return this;
+        if (other.getIsTruncated() != false) {
+          setIsTruncated(other.getIsTruncated());
+        }
+        if (contentsBuilder_ == null) {
+          if (!other.contents_.isEmpty()) {
+            if (contents_.isEmpty()) {
+              contents_ = other.contents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureContentsIsMutable();
+              contents_.addAll(other.contents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.contents_.isEmpty()) {
+            if (contentsBuilder_.isEmpty()) {
+              contentsBuilder_.dispose();
+              contentsBuilder_ = null;
+              contents_ = other.contents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              contentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getContentsFieldBuilder() : null;
+            } else {
+              contentsBuilder_.addAllMessages(other.contents_);
+            }
+          }
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getPrefix().isEmpty()) {
+          prefix_ = other.prefix_;
+          onChanged();
+        }
+        if (!other.getDelimiter().isEmpty()) {
+          delimiter_ = other.delimiter_;
+          onChanged();
+        }
+        if (other.getMaxKeys() != 0L) {
+          setMaxKeys(other.getMaxKeys());
+        }
+        if (commonPrefixesBuilder_ == null) {
+          if (!other.commonPrefixes_.isEmpty()) {
+            if (commonPrefixes_.isEmpty()) {
+              commonPrefixes_ = other.commonPrefixes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureCommonPrefixesIsMutable();
+              commonPrefixes_.addAll(other.commonPrefixes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.commonPrefixes_.isEmpty()) {
+            if (commonPrefixesBuilder_.isEmpty()) {
+              commonPrefixesBuilder_.dispose();
+              commonPrefixesBuilder_ = null;
+              commonPrefixes_ = other.commonPrefixes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              commonPrefixesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCommonPrefixesFieldBuilder() : null;
+            } else {
+              commonPrefixesBuilder_.addAllMessages(other.commonPrefixes_);
+            }
+          }
+        }
+        if (other.getKeyCount() != 0L) {
+          setKeyCount(other.getKeyCount());
+        }
+        if (!other.getContinuationToken().isEmpty()) {
+          continuationToken_ = other.continuationToken_;
+          onChanged();
+        }
+        if (!other.getNextContinuationToken().isEmpty()) {
+          nextContinuationToken_ = other.nextContinuationToken_;
+          onChanged();
+        }
+        if (!other.getStartAfter().isEmpty()) {
+          startAfter_ = other.startAfter_;
+          onChanged();
+        }
+        if (!other.getRequestId().isEmpty()) {
+          requestId_ = other.requestId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean isTruncated_ ;
+      /**
+       * <pre>
+       * A flag that indicates whether S3 returned all of the results that satisfied the search criteria.
+       * </pre>
+       *
+       * <code>bool is_truncated = 1;</code>
+       * @return The isTruncated.
+       */
+      @java.lang.Override
+      public boolean getIsTruncated() {
+        return isTruncated_;
+      }
+      /**
+       * <pre>
+       * A flag that indicates whether S3 returned all of the results that satisfied the search criteria.
+       * </pre>
+       *
+       * <code>bool is_truncated = 1;</code>
+       * @param value The isTruncated to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsTruncated(boolean value) {
+        
+        isTruncated_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A flag that indicates whether S3 returned all of the results that satisfied the search criteria.
+       * </pre>
+       *
+       * <code>bool is_truncated = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsTruncated() {
+        
+        isTruncated_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIObject> contents_ =
+        java.util.Collections.emptyList();
+      private void ensureContentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          contents_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.S3Api.S3APIObject>(contents_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APIObject, yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder> contentsBuilder_;
+
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIObject> getContentsList() {
+        if (contentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(contents_);
+        } else {
+          return contentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public int getContentsCount() {
+        if (contentsBuilder_ == null) {
+          return contents_.size();
+        } else {
+          return contentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIObject getContents(int index) {
+        if (contentsBuilder_ == null) {
+          return contents_.get(index);
+        } else {
+          return contentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public Builder setContents(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APIObject value) {
+        if (contentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentsIsMutable();
+          contents_.set(index, value);
+          onChanged();
+        } else {
+          contentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public Builder setContents(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder builderForValue) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public Builder addContents(yandex.cloud.api.storage.v1.S3Api.S3APIObject value) {
+        if (contentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentsIsMutable();
+          contents_.add(value);
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public Builder addContents(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APIObject value) {
+        if (contentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureContentsIsMutable();
+          contents_.add(index, value);
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public Builder addContents(
+          yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder builderForValue) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public Builder addContents(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder builderForValue) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          contentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public Builder addAllContents(
+          java.lang.Iterable<? extends yandex.cloud.api.storage.v1.S3Api.S3APIObject> values) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, contents_);
+          onChanged();
+        } else {
+          contentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public Builder clearContents() {
+        if (contentsBuilder_ == null) {
+          contents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          contentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public Builder removeContents(int index) {
+        if (contentsBuilder_ == null) {
+          ensureContentsIsMutable();
+          contents_.remove(index);
+          onChanged();
+        } else {
+          contentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder getContentsBuilder(
+          int index) {
+        return getContentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder getContentsOrBuilder(
+          int index) {
+        if (contentsBuilder_ == null) {
+          return contents_.get(index);  } else {
+          return contentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder> 
+           getContentsOrBuilderList() {
+        if (contentsBuilder_ != null) {
+          return contentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(contents_);
+        }
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder addContentsBuilder() {
+        return getContentsFieldBuilder().addBuilder(
+            yandex.cloud.api.storage.v1.S3Api.S3APIObject.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder addContentsBuilder(
+          int index) {
+        return getContentsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.storage.v1.S3Api.S3APIObject.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Metadata about each object returned.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APIObject contents = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder> 
+           getContentsBuilderList() {
+        return getContentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APIObject, yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder> 
+          getContentsFieldBuilder() {
+        if (contentsBuilder_ == null) {
+          contentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.storage.v1.S3Api.S3APIObject, yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder>(
+                  contents_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          contents_ = null;
+        }
+        return contentsBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The bucket name.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The bucket name.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The bucket name.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The bucket name.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The bucket name.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object prefix_ = "";
+      /**
+       * <pre>
+       * Keys that begin with the indicated prefix.
+       * </pre>
+       *
+       * <code>string prefix = 4;</code>
+       * @return The prefix.
+       */
+      public java.lang.String getPrefix() {
+        java.lang.Object ref = prefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          prefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Keys that begin with the indicated prefix.
+       * </pre>
+       *
+       * <code>string prefix = 4;</code>
+       * @return The bytes for prefix.
+       */
+      public com.google.protobuf.ByteString
+          getPrefixBytes() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          prefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Keys that begin with the indicated prefix.
+       * </pre>
+       *
+       * <code>string prefix = 4;</code>
+       * @param value The prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefix(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        prefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Keys that begin with the indicated prefix.
+       * </pre>
+       *
+       * <code>string prefix = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrefix() {
+        
+        prefix_ = getDefaultInstance().getPrefix();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Keys that begin with the indicated prefix.
+       * </pre>
+       *
+       * <code>string prefix = 4;</code>
+       * @param value The bytes for prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        prefix_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object delimiter_ = "";
+      /**
+       * <pre>
+       * Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection.
+       * </pre>
+       *
+       * <code>string delimiter = 5;</code>
+       * @return The delimiter.
+       */
+      public java.lang.String getDelimiter() {
+        java.lang.Object ref = delimiter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          delimiter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection.
+       * </pre>
+       *
+       * <code>string delimiter = 5;</code>
+       * @return The bytes for delimiter.
+       */
+      public com.google.protobuf.ByteString
+          getDelimiterBytes() {
+        java.lang.Object ref = delimiter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          delimiter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection.
+       * </pre>
+       *
+       * <code>string delimiter = 5;</code>
+       * @param value The delimiter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelimiter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        delimiter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection.
+       * </pre>
+       *
+       * <code>string delimiter = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelimiter() {
+        
+        delimiter_ = getDefaultInstance().getDelimiter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Causes keys that contain the same string between the prefix and the first occurrence of the delimiter to be rolled up into a single result element in the CommonPrefixes collection.
+       * </pre>
+       *
+       * <code>string delimiter = 5;</code>
+       * @param value The bytes for delimiter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelimiterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        delimiter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long maxKeys_ ;
+      /**
+       * <pre>
+       * The maximum number of keys returned in the response body.
+       * </pre>
+       *
+       * <code>int64 max_keys = 6;</code>
+       * @return The maxKeys.
+       */
+      @java.lang.Override
+      public long getMaxKeys() {
+        return maxKeys_;
+      }
+      /**
+       * <pre>
+       * The maximum number of keys returned in the response body.
+       * </pre>
+       *
+       * <code>int64 max_keys = 6;</code>
+       * @param value The maxKeys to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxKeys(long value) {
+        
+        maxKeys_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of keys returned in the response body.
+       * </pre>
+       *
+       * <code>int64 max_keys = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxKeys() {
+        
+        maxKeys_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix> commonPrefixes_ =
+        java.util.Collections.emptyList();
+      private void ensureCommonPrefixesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          commonPrefixes_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix>(commonPrefixes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder> commonPrefixesBuilder_;
+
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix> getCommonPrefixesList() {
+        if (commonPrefixesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(commonPrefixes_);
+        } else {
+          return commonPrefixesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public int getCommonPrefixesCount() {
+        if (commonPrefixesBuilder_ == null) {
+          return commonPrefixes_.size();
+        } else {
+          return commonPrefixesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix getCommonPrefixes(int index) {
+        if (commonPrefixesBuilder_ == null) {
+          return commonPrefixes_.get(index);
+        } else {
+          return commonPrefixesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public Builder setCommonPrefixes(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix value) {
+        if (commonPrefixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommonPrefixesIsMutable();
+          commonPrefixes_.set(index, value);
+          onChanged();
+        } else {
+          commonPrefixesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public Builder setCommonPrefixes(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder builderForValue) {
+        if (commonPrefixesBuilder_ == null) {
+          ensureCommonPrefixesIsMutable();
+          commonPrefixes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          commonPrefixesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public Builder addCommonPrefixes(yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix value) {
+        if (commonPrefixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommonPrefixesIsMutable();
+          commonPrefixes_.add(value);
+          onChanged();
+        } else {
+          commonPrefixesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public Builder addCommonPrefixes(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix value) {
+        if (commonPrefixesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommonPrefixesIsMutable();
+          commonPrefixes_.add(index, value);
+          onChanged();
+        } else {
+          commonPrefixesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public Builder addCommonPrefixes(
+          yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder builderForValue) {
+        if (commonPrefixesBuilder_ == null) {
+          ensureCommonPrefixesIsMutable();
+          commonPrefixes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          commonPrefixesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public Builder addCommonPrefixes(
+          int index, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder builderForValue) {
+        if (commonPrefixesBuilder_ == null) {
+          ensureCommonPrefixesIsMutable();
+          commonPrefixes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          commonPrefixesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public Builder addAllCommonPrefixes(
+          java.lang.Iterable<? extends yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix> values) {
+        if (commonPrefixesBuilder_ == null) {
+          ensureCommonPrefixesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, commonPrefixes_);
+          onChanged();
+        } else {
+          commonPrefixesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public Builder clearCommonPrefixes() {
+        if (commonPrefixesBuilder_ == null) {
+          commonPrefixes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          commonPrefixesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public Builder removeCommonPrefixes(int index) {
+        if (commonPrefixesBuilder_ == null) {
+          ensureCommonPrefixesIsMutable();
+          commonPrefixes_.remove(index);
+          onChanged();
+        } else {
+          commonPrefixesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder getCommonPrefixesBuilder(
+          int index) {
+        return getCommonPrefixesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder getCommonPrefixesOrBuilder(
+          int index) {
+        if (commonPrefixesBuilder_ == null) {
+          return commonPrefixes_.get(index);  } else {
+          return commonPrefixesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder> 
+           getCommonPrefixesOrBuilderList() {
+        if (commonPrefixesBuilder_ != null) {
+          return commonPrefixesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(commonPrefixes_);
+        }
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder addCommonPrefixesBuilder() {
+        return getCommonPrefixesFieldBuilder().addBuilder(
+            yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder addCommonPrefixesBuilder(
+          int index) {
+        return getCommonPrefixesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * All of the keys rolled up into a common prefix count as a single return when calculating the number of returns.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.storage.v1.S3APICommonPrefix common_prefixes = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder> 
+           getCommonPrefixesBuilderList() {
+        return getCommonPrefixesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder> 
+          getCommonPrefixesFieldBuilder() {
+        if (commonPrefixesBuilder_ == null) {
+          commonPrefixesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder>(
+                  commonPrefixes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          commonPrefixes_ = null;
+        }
+        return commonPrefixesBuilder_;
+      }
+
+      private long keyCount_ ;
+      /**
+       * <pre>
+       * The number of keys returned with this request.
+       * </pre>
+       *
+       * <code>int64 key_count = 8;</code>
+       * @return The keyCount.
+       */
+      @java.lang.Override
+      public long getKeyCount() {
+        return keyCount_;
+      }
+      /**
+       * <pre>
+       * The number of keys returned with this request.
+       * </pre>
+       *
+       * <code>int64 key_count = 8;</code>
+       * @param value The keyCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyCount(long value) {
+        
+        keyCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of keys returned with this request.
+       * </pre>
+       *
+       * <code>int64 key_count = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyCount() {
+        
+        keyCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object continuationToken_ = "";
+      /**
+       * <pre>
+       * Indicates where in the bucket listing begins. This is only returned if a continuation token was used in the request.
+       * </pre>
+       *
+       * <code>string continuation_token = 9;</code>
+       * @return The continuationToken.
+       */
+      public java.lang.String getContinuationToken() {
+        java.lang.Object ref = continuationToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          continuationToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Indicates where in the bucket listing begins. This is only returned if a continuation token was used in the request.
+       * </pre>
+       *
+       * <code>string continuation_token = 9;</code>
+       * @return The bytes for continuationToken.
+       */
+      public com.google.protobuf.ByteString
+          getContinuationTokenBytes() {
+        java.lang.Object ref = continuationToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          continuationToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Indicates where in the bucket listing begins. This is only returned if a continuation token was used in the request.
+       * </pre>
+       *
+       * <code>string continuation_token = 9;</code>
+       * @param value The continuationToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContinuationToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        continuationToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates where in the bucket listing begins. This is only returned if a continuation token was used in the request.
+       * </pre>
+       *
+       * <code>string continuation_token = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContinuationToken() {
+        
+        continuationToken_ = getDefaultInstance().getContinuationToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates where in the bucket listing begins. This is only returned if a continuation token was used in the request.
+       * </pre>
+       *
+       * <code>string continuation_token = 9;</code>
+       * @param value The bytes for continuationToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContinuationTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        continuationToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nextContinuationToken_ = "";
+      /**
+       * <pre>
+       * If the response is truncated, S3 returns this continuation token, which you can use in the next request to fetch the next set of keys.
+       * </pre>
+       *
+       * <code>string next_continuation_token = 10;</code>
+       * @return The nextContinuationToken.
+       */
+      public java.lang.String getNextContinuationToken() {
+        java.lang.Object ref = nextContinuationToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextContinuationToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If the response is truncated, S3 returns this continuation token, which you can use in the next request to fetch the next set of keys.
+       * </pre>
+       *
+       * <code>string next_continuation_token = 10;</code>
+       * @return The bytes for nextContinuationToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextContinuationTokenBytes() {
+        java.lang.Object ref = nextContinuationToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextContinuationToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If the response is truncated, S3 returns this continuation token, which you can use in the next request to fetch the next set of keys.
+       * </pre>
+       *
+       * <code>string next_continuation_token = 10;</code>
+       * @param value The nextContinuationToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextContinuationToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextContinuationToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the response is truncated, S3 returns this continuation token, which you can use in the next request to fetch the next set of keys.
+       * </pre>
+       *
+       * <code>string next_continuation_token = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextContinuationToken() {
+        
+        nextContinuationToken_ = getDefaultInstance().getNextContinuationToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If the response is truncated, S3 returns this continuation token, which you can use in the next request to fetch the next set of keys.
+       * </pre>
+       *
+       * <code>string next_continuation_token = 10;</code>
+       * @param value The bytes for nextContinuationToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextContinuationTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextContinuationToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object startAfter_ = "";
+      /**
+       * <pre>
+       * StartAfter is where you want S3 to start listing from. This is only returned if a start-after was used in the request.
+       * </pre>
+       *
+       * <code>string start_after = 11;</code>
+       * @return The startAfter.
+       */
+      public java.lang.String getStartAfter() {
+        java.lang.Object ref = startAfter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          startAfter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * StartAfter is where you want S3 to start listing from. This is only returned if a start-after was used in the request.
+       * </pre>
+       *
+       * <code>string start_after = 11;</code>
+       * @return The bytes for startAfter.
+       */
+      public com.google.protobuf.ByteString
+          getStartAfterBytes() {
+        java.lang.Object ref = startAfter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          startAfter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * StartAfter is where you want S3 to start listing from. This is only returned if a start-after was used in the request.
+       * </pre>
+       *
+       * <code>string start_after = 11;</code>
+       * @param value The startAfter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartAfter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        startAfter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * StartAfter is where you want S3 to start listing from. This is only returned if a start-after was used in the request.
+       * </pre>
+       *
+       * <code>string start_after = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartAfter() {
+        
+        startAfter_ = getDefaultInstance().getStartAfter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * StartAfter is where you want S3 to start listing from. This is only returned if a start-after was used in the request.
+       * </pre>
+       *
+       * <code>string start_after = 11;</code>
+       * @param value The bytes for startAfter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartAfterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        startAfter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object requestId_ = "";
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 12;</code>
+       * @return The requestId.
+       */
+      public java.lang.String getRequestId() {
+        java.lang.Object ref = requestId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 12;</code>
+       * @return The bytes for requestId.
+       */
+      public com.google.protobuf.ByteString
+          getRequestIdBytes() {
+        java.lang.Object ref = requestId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 12;</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        requestId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestId() {
+        
+        requestId_ = getDefaultInstance().getRequestId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique request ID.
+       * </pre>
+       *
+       * <code>string request_id = 12;</code>
+       * @param value The bytes for requestId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        requestId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.S3APIListObjectsV2Response)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.S3APIListObjectsV2Response)
+    private static final yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response();
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<S3APIListObjectsV2Response>
+        PARSER = new com.google.protobuf.AbstractParser<S3APIListObjectsV2Response>() {
+      @java.lang.Override
+      public S3APIListObjectsV2Response parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new S3APIListObjectsV2Response(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<S3APIListObjectsV2Response> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<S3APIListObjectsV2Response> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIListObjectsV2Response getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface S3APIObjectOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.S3APIObject)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The object key.
+     * </pre>
+     *
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <pre>
+     * The object key.
+     * </pre>
+     *
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <pre>
+     * Date and time the object was last modified.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+     * @return Whether the lastModified field is set.
+     */
+    boolean hasLastModified();
+    /**
+     * <pre>
+     * Date and time the object was last modified.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+     * @return The lastModified.
+     */
+    com.google.protobuf.Timestamp getLastModified();
+    /**
+     * <pre>
+     * Date and time the object was last modified.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder();
+
+    /**
+     * <pre>
+     * The entity tag is a hash of the object.
+     * </pre>
+     *
+     * <code>string etag = 3;</code>
+     * @return The etag.
+     */
+    java.lang.String getEtag();
+    /**
+     * <pre>
+     * The entity tag is a hash of the object.
+     * </pre>
+     *
+     * <code>string etag = 3;</code>
+     * @return The bytes for etag.
+     */
+    com.google.protobuf.ByteString
+        getEtagBytes();
+
+    /**
+     * <pre>
+     * Size in bytes of the object.
+     * </pre>
+     *
+     * <code>int64 size = 4;</code>
+     * @return The size.
+     */
+    long getSize();
+
+    /**
+     * <pre>
+     * The owner of the object.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+     * @return Whether the owner field is set.
+     */
+    boolean hasOwner();
+    /**
+     * <pre>
+     * The owner of the object.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+     * @return The owner.
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APIOwner getOwner();
+    /**
+     * <pre>
+     * The owner of the object.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+     */
+    yandex.cloud.api.storage.v1.S3Api.S3APIOwnerOrBuilder getOwnerOrBuilder();
+
+    /**
+     * <pre>
+     * The class of storage used to store the object.
+     * </pre>
+     *
+     * <code>string storage_class = 6;</code>
+     * @return The storageClass.
+     */
+    java.lang.String getStorageClass();
+    /**
+     * <pre>
+     * The class of storage used to store the object.
+     * </pre>
+     *
+     * <code>string storage_class = 6;</code>
+     * @return The bytes for storageClass.
+     */
+    com.google.protobuf.ByteString
+        getStorageClassBytes();
+  }
+  /**
+   * <pre>
+   * Container for object metadata.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.storage.v1.S3APIObject}
+   */
+  public static final class S3APIObject extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.S3APIObject)
+      S3APIObjectOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use S3APIObject.newBuilder() to construct.
+    private S3APIObject(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private S3APIObject() {
+      key_ = "";
+      etag_ = "";
+      storageClass_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new S3APIObject();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private S3APIObject(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastModified_ != null) {
+                subBuilder = lastModified_.toBuilder();
+              }
+              lastModified_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastModified_);
+                lastModified_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              etag_ = s;
+              break;
+            }
+            case 32: {
+
+              size_ = input.readInt64();
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.storage.v1.S3Api.S3APIOwner.Builder subBuilder = null;
+              if (owner_ != null) {
+                subBuilder = owner_.toBuilder();
+              }
+              owner_ = input.readMessage(yandex.cloud.api.storage.v1.S3Api.S3APIOwner.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(owner_);
+                owner_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              storageClass_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIObject_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIObject_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.storage.v1.S3Api.S3APIObject.class, yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
+    /**
+     * <pre>
+     * The object key.
+     * </pre>
+     *
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The object key.
+     * </pre>
+     *
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LAST_MODIFIED_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp lastModified_;
+    /**
+     * <pre>
+     * Date and time the object was last modified.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+     * @return Whether the lastModified field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastModified() {
+      return lastModified_ != null;
+    }
+    /**
+     * <pre>
+     * Date and time the object was last modified.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+     * @return The lastModified.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastModified() {
+      return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
+    }
+    /**
+     * <pre>
+     * Date and time the object was last modified.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder() {
+      return getLastModified();
+    }
+
+    public static final int ETAG_FIELD_NUMBER = 3;
+    private volatile java.lang.Object etag_;
+    /**
+     * <pre>
+     * The entity tag is a hash of the object.
+     * </pre>
+     *
+     * <code>string etag = 3;</code>
+     * @return The etag.
+     */
+    @java.lang.Override
+    public java.lang.String getEtag() {
+      java.lang.Object ref = etag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        etag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The entity tag is a hash of the object.
+     * </pre>
+     *
+     * <code>string etag = 3;</code>
+     * @return The bytes for etag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEtagBytes() {
+      java.lang.Object ref = etag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        etag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIZE_FIELD_NUMBER = 4;
+    private long size_;
+    /**
+     * <pre>
+     * Size in bytes of the object.
+     * </pre>
+     *
+     * <code>int64 size = 4;</code>
+     * @return The size.
+     */
+    @java.lang.Override
+    public long getSize() {
+      return size_;
+    }
+
+    public static final int OWNER_FIELD_NUMBER = 5;
+    private yandex.cloud.api.storage.v1.S3Api.S3APIOwner owner_;
+    /**
+     * <pre>
+     * The owner of the object.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+     * @return Whether the owner field is set.
+     */
+    @java.lang.Override
+    public boolean hasOwner() {
+      return owner_ != null;
+    }
+    /**
+     * <pre>
+     * The owner of the object.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+     * @return The owner.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIOwner getOwner() {
+      return owner_ == null ? yandex.cloud.api.storage.v1.S3Api.S3APIOwner.getDefaultInstance() : owner_;
+    }
+    /**
+     * <pre>
+     * The owner of the object.
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIOwnerOrBuilder getOwnerOrBuilder() {
+      return getOwner();
+    }
+
+    public static final int STORAGE_CLASS_FIELD_NUMBER = 6;
+    private volatile java.lang.Object storageClass_;
+    /**
+     * <pre>
+     * The class of storage used to store the object.
+     * </pre>
+     *
+     * <code>string storage_class = 6;</code>
+     * @return The storageClass.
+     */
+    @java.lang.Override
+    public java.lang.String getStorageClass() {
+      java.lang.Object ref = storageClass_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        storageClass_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The class of storage used to store the object.
+     * </pre>
+     *
+     * <code>string storage_class = 6;</code>
+     * @return The bytes for storageClass.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStorageClassBytes() {
+      java.lang.Object ref = storageClass_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        storageClass_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (lastModified_ != null) {
+        output.writeMessage(2, getLastModified());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, etag_);
+      }
+      if (size_ != 0L) {
+        output.writeInt64(4, size_);
+      }
+      if (owner_ != null) {
+        output.writeMessage(5, getOwner());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storageClass_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, storageClass_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (lastModified_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getLastModified());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(etag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, etag_);
+      }
+      if (size_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, size_);
+      }
+      if (owner_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getOwner());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storageClass_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, storageClass_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.storage.v1.S3Api.S3APIObject)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.storage.v1.S3Api.S3APIObject other = (yandex.cloud.api.storage.v1.S3Api.S3APIObject) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (hasLastModified() != other.hasLastModified()) return false;
+      if (hasLastModified()) {
+        if (!getLastModified()
+            .equals(other.getLastModified())) return false;
+      }
+      if (!getEtag()
+          .equals(other.getEtag())) return false;
+      if (getSize()
+          != other.getSize()) return false;
+      if (hasOwner() != other.hasOwner()) return false;
+      if (hasOwner()) {
+        if (!getOwner()
+            .equals(other.getOwner())) return false;
+      }
+      if (!getStorageClass()
+          .equals(other.getStorageClass())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      if (hasLastModified()) {
+        hash = (37 * hash) + LAST_MODIFIED_FIELD_NUMBER;
+        hash = (53 * hash) + getLastModified().hashCode();
+      }
+      hash = (37 * hash) + ETAG_FIELD_NUMBER;
+      hash = (53 * hash) + getEtag().hashCode();
+      hash = (37 * hash) + SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSize());
+      if (hasOwner()) {
+        hash = (37 * hash) + OWNER_FIELD_NUMBER;
+        hash = (53 * hash) + getOwner().hashCode();
+      }
+      hash = (37 * hash) + STORAGE_CLASS_FIELD_NUMBER;
+      hash = (53 * hash) + getStorageClass().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.storage.v1.S3Api.S3APIObject prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Container for object metadata.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.storage.v1.S3APIObject}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.S3APIObject)
+        yandex.cloud.api.storage.v1.S3Api.S3APIObjectOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIObject_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIObject_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.S3Api.S3APIObject.class, yandex.cloud.api.storage.v1.S3Api.S3APIObject.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.storage.v1.S3Api.S3APIObject.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        key_ = "";
+
+        if (lastModifiedBuilder_ == null) {
+          lastModified_ = null;
+        } else {
+          lastModified_ = null;
+          lastModifiedBuilder_ = null;
+        }
+        etag_ = "";
+
+        size_ = 0L;
+
+        if (ownerBuilder_ == null) {
+          owner_ = null;
+        } else {
+          owner_ = null;
+          ownerBuilder_ = null;
+        }
+        storageClass_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APIObject_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIObject getDefaultInstanceForType() {
+        return yandex.cloud.api.storage.v1.S3Api.S3APIObject.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIObject build() {
+        yandex.cloud.api.storage.v1.S3Api.S3APIObject result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APIObject buildPartial() {
+        yandex.cloud.api.storage.v1.S3Api.S3APIObject result = new yandex.cloud.api.storage.v1.S3Api.S3APIObject(this);
+        result.key_ = key_;
+        if (lastModifiedBuilder_ == null) {
+          result.lastModified_ = lastModified_;
+        } else {
+          result.lastModified_ = lastModifiedBuilder_.build();
+        }
+        result.etag_ = etag_;
+        result.size_ = size_;
+        if (ownerBuilder_ == null) {
+          result.owner_ = owner_;
+        } else {
+          result.owner_ = ownerBuilder_.build();
+        }
+        result.storageClass_ = storageClass_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.storage.v1.S3Api.S3APIObject) {
+          return mergeFrom((yandex.cloud.api.storage.v1.S3Api.S3APIObject)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.storage.v1.S3Api.S3APIObject other) {
+        if (other == yandex.cloud.api.storage.v1.S3Api.S3APIObject.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        if (other.hasLastModified()) {
+          mergeLastModified(other.getLastModified());
+        }
+        if (!other.getEtag().isEmpty()) {
+          etag_ = other.etag_;
+          onChanged();
+        }
+        if (other.getSize() != 0L) {
+          setSize(other.getSize());
+        }
+        if (other.hasOwner()) {
+          mergeOwner(other.getOwner());
+        }
+        if (!other.getStorageClass().isEmpty()) {
+          storageClass_ = other.storageClass_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.storage.v1.S3Api.S3APIObject parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.storage.v1.S3Api.S3APIObject) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <pre>
+       * The object key.
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The object key.
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The object key.
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The object key.
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The object key.
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp lastModified_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lastModifiedBuilder_;
+      /**
+       * <pre>
+       * Date and time the object was last modified.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+       * @return Whether the lastModified field is set.
+       */
+      public boolean hasLastModified() {
+        return lastModifiedBuilder_ != null || lastModified_ != null;
+      }
+      /**
+       * <pre>
+       * Date and time the object was last modified.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+       * @return The lastModified.
+       */
+      public com.google.protobuf.Timestamp getLastModified() {
+        if (lastModifiedBuilder_ == null) {
+          return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
+        } else {
+          return lastModifiedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Date and time the object was last modified.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+       */
+      public Builder setLastModified(com.google.protobuf.Timestamp value) {
+        if (lastModifiedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lastModified_ = value;
+          onChanged();
+        } else {
+          lastModifiedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Date and time the object was last modified.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+       */
+      public Builder setLastModified(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (lastModifiedBuilder_ == null) {
+          lastModified_ = builderForValue.build();
+          onChanged();
+        } else {
+          lastModifiedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Date and time the object was last modified.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+       */
+      public Builder mergeLastModified(com.google.protobuf.Timestamp value) {
+        if (lastModifiedBuilder_ == null) {
+          if (lastModified_ != null) {
+            lastModified_ =
+              com.google.protobuf.Timestamp.newBuilder(lastModified_).mergeFrom(value).buildPartial();
+          } else {
+            lastModified_ = value;
+          }
+          onChanged();
+        } else {
+          lastModifiedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Date and time the object was last modified.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+       */
+      public Builder clearLastModified() {
+        if (lastModifiedBuilder_ == null) {
+          lastModified_ = null;
+          onChanged();
+        } else {
+          lastModified_ = null;
+          lastModifiedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Date and time the object was last modified.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getLastModifiedBuilder() {
+        
+        onChanged();
+        return getLastModifiedFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Date and time the object was last modified.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder() {
+        if (lastModifiedBuilder_ != null) {
+          return lastModifiedBuilder_.getMessageOrBuilder();
+        } else {
+          return lastModified_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
+        }
+      }
+      /**
+       * <pre>
+       * Date and time the object was last modified.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp last_modified = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getLastModifiedFieldBuilder() {
+        if (lastModifiedBuilder_ == null) {
+          lastModifiedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getLastModified(),
+                  getParentForChildren(),
+                  isClean());
+          lastModified_ = null;
+        }
+        return lastModifiedBuilder_;
+      }
+
+      private java.lang.Object etag_ = "";
+      /**
+       * <pre>
+       * The entity tag is a hash of the object.
+       * </pre>
+       *
+       * <code>string etag = 3;</code>
+       * @return The etag.
+       */
+      public java.lang.String getEtag() {
+        java.lang.Object ref = etag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          etag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The entity tag is a hash of the object.
+       * </pre>
+       *
+       * <code>string etag = 3;</code>
+       * @return The bytes for etag.
+       */
+      public com.google.protobuf.ByteString
+          getEtagBytes() {
+        java.lang.Object ref = etag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          etag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The entity tag is a hash of the object.
+       * </pre>
+       *
+       * <code>string etag = 3;</code>
+       * @param value The etag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtag(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        etag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The entity tag is a hash of the object.
+       * </pre>
+       *
+       * <code>string etag = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEtag() {
+        
+        etag_ = getDefaultInstance().getEtag();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The entity tag is a hash of the object.
+       * </pre>
+       *
+       * <code>string etag = 3;</code>
+       * @param value The bytes for etag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        etag_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long size_ ;
+      /**
+       * <pre>
+       * Size in bytes of the object.
+       * </pre>
+       *
+       * <code>int64 size = 4;</code>
+       * @return The size.
+       */
+      @java.lang.Override
+      public long getSize() {
+        return size_;
+      }
+      /**
+       * <pre>
+       * Size in bytes of the object.
+       * </pre>
+       *
+       * <code>int64 size = 4;</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSize(long value) {
+        
+        size_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size in bytes of the object.
+       * </pre>
+       *
+       * <code>int64 size = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSize() {
+        
+        size_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.storage.v1.S3Api.S3APIOwner owner_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APIOwner, yandex.cloud.api.storage.v1.S3Api.S3APIOwner.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIOwnerOrBuilder> ownerBuilder_;
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+       * @return Whether the owner field is set.
+       */
+      public boolean hasOwner() {
+        return ownerBuilder_ != null || owner_ != null;
+      }
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+       * @return The owner.
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIOwner getOwner() {
+        if (ownerBuilder_ == null) {
+          return owner_ == null ? yandex.cloud.api.storage.v1.S3Api.S3APIOwner.getDefaultInstance() : owner_;
+        } else {
+          return ownerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+       */
+      public Builder setOwner(yandex.cloud.api.storage.v1.S3Api.S3APIOwner value) {
+        if (ownerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          owner_ = value;
+          onChanged();
+        } else {
+          ownerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+       */
+      public Builder setOwner(
+          yandex.cloud.api.storage.v1.S3Api.S3APIOwner.Builder builderForValue) {
+        if (ownerBuilder_ == null) {
+          owner_ = builderForValue.build();
+          onChanged();
+        } else {
+          ownerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+       */
+      public Builder mergeOwner(yandex.cloud.api.storage.v1.S3Api.S3APIOwner value) {
+        if (ownerBuilder_ == null) {
+          if (owner_ != null) {
+            owner_ =
+              yandex.cloud.api.storage.v1.S3Api.S3APIOwner.newBuilder(owner_).mergeFrom(value).buildPartial();
+          } else {
+            owner_ = value;
+          }
+          onChanged();
+        } else {
+          ownerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+       */
+      public Builder clearOwner() {
+        if (ownerBuilder_ == null) {
+          owner_ = null;
+          onChanged();
+        } else {
+          owner_ = null;
+          ownerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIOwner.Builder getOwnerBuilder() {
+        
+        onChanged();
+        return getOwnerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+       */
+      public yandex.cloud.api.storage.v1.S3Api.S3APIOwnerOrBuilder getOwnerOrBuilder() {
+        if (ownerBuilder_ != null) {
+          return ownerBuilder_.getMessageOrBuilder();
+        } else {
+          return owner_ == null ?
+              yandex.cloud.api.storage.v1.S3Api.S3APIOwner.getDefaultInstance() : owner_;
+        }
+      }
+      /**
+       * <pre>
+       * The owner of the object.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.S3APIOwner owner = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.S3Api.S3APIOwner, yandex.cloud.api.storage.v1.S3Api.S3APIOwner.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIOwnerOrBuilder> 
+          getOwnerFieldBuilder() {
+        if (ownerBuilder_ == null) {
+          ownerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.S3Api.S3APIOwner, yandex.cloud.api.storage.v1.S3Api.S3APIOwner.Builder, yandex.cloud.api.storage.v1.S3Api.S3APIOwnerOrBuilder>(
+                  getOwner(),
+                  getParentForChildren(),
+                  isClean());
+          owner_ = null;
+        }
+        return ownerBuilder_;
+      }
+
+      private java.lang.Object storageClass_ = "";
+      /**
+       * <pre>
+       * The class of storage used to store the object.
+       * </pre>
+       *
+       * <code>string storage_class = 6;</code>
+       * @return The storageClass.
+       */
+      public java.lang.String getStorageClass() {
+        java.lang.Object ref = storageClass_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          storageClass_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The class of storage used to store the object.
+       * </pre>
+       *
+       * <code>string storage_class = 6;</code>
+       * @return The bytes for storageClass.
+       */
+      public com.google.protobuf.ByteString
+          getStorageClassBytes() {
+        java.lang.Object ref = storageClass_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          storageClass_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The class of storage used to store the object.
+       * </pre>
+       *
+       * <code>string storage_class = 6;</code>
+       * @param value The storageClass to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStorageClass(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        storageClass_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The class of storage used to store the object.
+       * </pre>
+       *
+       * <code>string storage_class = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStorageClass() {
+        
+        storageClass_ = getDefaultInstance().getStorageClass();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The class of storage used to store the object.
+       * </pre>
+       *
+       * <code>string storage_class = 6;</code>
+       * @param value The bytes for storageClass to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStorageClassBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        storageClass_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.S3APIObject)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.S3APIObject)
+    private static final yandex.cloud.api.storage.v1.S3Api.S3APIObject DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.S3Api.S3APIObject();
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APIObject getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<S3APIObject>
+        PARSER = new com.google.protobuf.AbstractParser<S3APIObject>() {
+      @java.lang.Override
+      public S3APIObject parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new S3APIObject(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<S3APIObject> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<S3APIObject> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APIObject getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface S3APICommonPrefixOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.S3APICommonPrefix)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Container for the specified common prefix.
+     * </pre>
+     *
+     * <code>string prefix = 1;</code>
+     * @return The prefix.
+     */
+    java.lang.String getPrefix();
+    /**
+     * <pre>
+     * Container for the specified common prefix.
+     * </pre>
+     *
+     * <code>string prefix = 1;</code>
+     * @return The bytes for prefix.
+     */
+    com.google.protobuf.ByteString
+        getPrefixBytes();
+  }
+  /**
+   * <pre>
+   * Container for common prefix information.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.storage.v1.S3APICommonPrefix}
+   */
+  public static final class S3APICommonPrefix extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.S3APICommonPrefix)
+      S3APICommonPrefixOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use S3APICommonPrefix.newBuilder() to construct.
+    private S3APICommonPrefix(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private S3APICommonPrefix() {
+      prefix_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new S3APICommonPrefix();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private S3APICommonPrefix(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              prefix_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.class, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder.class);
+    }
+
+    public static final int PREFIX_FIELD_NUMBER = 1;
+    private volatile java.lang.Object prefix_;
+    /**
+     * <pre>
+     * Container for the specified common prefix.
+     * </pre>
+     *
+     * <code>string prefix = 1;</code>
+     * @return The prefix.
+     */
+    @java.lang.Override
+    public java.lang.String getPrefix() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        prefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Container for the specified common prefix.
+     * </pre>
+     *
+     * <code>string prefix = 1;</code>
+     * @return The bytes for prefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrefixBytes() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        prefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prefix_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prefix_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix other = (yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix) obj;
+
+      if (!getPrefix()
+          .equals(other.getPrefix())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getPrefix().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Container for common prefix information.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.storage.v1.S3APICommonPrefix}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.S3APICommonPrefix)
+        yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefixOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.class, yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        prefix_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.storage.v1.S3Api.internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix getDefaultInstanceForType() {
+        return yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix build() {
+        yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix buildPartial() {
+        yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix result = new yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix(this);
+        result.prefix_ = prefix_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix) {
+          return mergeFrom((yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix other) {
+        if (other == yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix.getDefaultInstance()) return this;
+        if (!other.getPrefix().isEmpty()) {
+          prefix_ = other.prefix_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object prefix_ = "";
+      /**
+       * <pre>
+       * Container for the specified common prefix.
+       * </pre>
+       *
+       * <code>string prefix = 1;</code>
+       * @return The prefix.
+       */
+      public java.lang.String getPrefix() {
+        java.lang.Object ref = prefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          prefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Container for the specified common prefix.
+       * </pre>
+       *
+       * <code>string prefix = 1;</code>
+       * @return The bytes for prefix.
+       */
+      public com.google.protobuf.ByteString
+          getPrefixBytes() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          prefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Container for the specified common prefix.
+       * </pre>
+       *
+       * <code>string prefix = 1;</code>
+       * @param value The prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefix(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        prefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Container for the specified common prefix.
+       * </pre>
+       *
+       * <code>string prefix = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrefix() {
+        
+        prefix_ = getDefaultInstance().getPrefix();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Container for the specified common prefix.
+       * </pre>
+       *
+       * <code>string prefix = 1;</code>
+       * @param value The bytes for prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        prefix_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.S3APICommonPrefix)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.S3APICommonPrefix)
+    private static final yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix();
+    }
+
+    public static yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<S3APICommonPrefix>
+        PARSER = new com.google.protobuf.AbstractParser<S3APICommonPrefix>() {
+      @java.lang.Override
+      public S3APICommonPrefix parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new S3APICommonPrefix(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<S3APICommonPrefix> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<S3APICommonPrefix> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.S3Api.S3APICommonPrefix getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_storage_v1_S3APIGetObjectResponse_descriptor;
   private static final 
@@ -35167,6 +40352,21 @@ public final class S3Api {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_storage_v1_S3APIUploadPartCopyResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_S3APIObject_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_S3APIObject_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35276,9 +40476,24 @@ public final class S3Api {
       "name\030\002 \001(\t\"u\n\033S3APIUploadPartCopyRespons" +
       "e\022\014\n\004etag\030\001 \001(\t\0224\n\020last_modified_at\030\002 \001(" +
       "\0132\032.google.protobuf.Timestamp\022\022\n\nrequest" +
-      "_id\030\003 \001(\tBb\n\033yandex.cloud.api.storage.v1" +
-      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/storage/v1;storageb\006proto3"
+      "_id\030\003 \001(\t\"\353\002\n\032S3APIListObjectsV2Response" +
+      "\022\024\n\014is_truncated\030\001 \001(\010\0226\n\010contents\030\002 \003(\013" +
+      "2$.yandex.cloud.storage.v1.S3APIObject\022\014" +
+      "\n\004name\030\003 \001(\t\022\016\n\006prefix\030\004 \001(\t\022\021\n\tdelimite" +
+      "r\030\005 \001(\t\022\020\n\010max_keys\030\006 \001(\003\022C\n\017common_pref" +
+      "ixes\030\007 \003(\0132*.yandex.cloud.storage.v1.S3A" +
+      "PICommonPrefix\022\021\n\tkey_count\030\010 \001(\003\022\032\n\022con" +
+      "tinuation_token\030\t \001(\t\022\037\n\027next_continuati" +
+      "on_token\030\n \001(\t\022\023\n\013start_after\030\013 \001(\t\022\022\n\nr" +
+      "equest_id\030\014 \001(\t\"\264\001\n\013S3APIObject\022\013\n\003key\030\001" +
+      " \001(\t\0221\n\rlast_modified\030\002 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022\014\n\004etag\030\003 \001(\t\022\014\n\004size\030\004 " +
+      "\001(\003\0222\n\005owner\030\005 \001(\0132#.yandex.cloud.storag" +
+      "e.v1.S3APIOwner\022\025\n\rstorage_class\030\006 \001(\t\"#" +
+      "\n\021S3APICommonPrefix\022\016\n\006prefix\030\001 \001(\tBb\n\033y" +
+      "andex.cloud.api.storage.v1ZCgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/sto" +
+      "rage/v1;storageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35459,6 +40674,24 @@ public final class S3Api {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_S3APIUploadPartCopyResponse_descriptor,
         new java.lang.String[] { "Etag", "LastModifiedAt", "RequestId", });
+    internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_S3APIListObjectsV2Response_descriptor,
+        new java.lang.String[] { "IsTruncated", "Contents", "Name", "Prefix", "Delimiter", "MaxKeys", "CommonPrefixes", "KeyCount", "ContinuationToken", "NextContinuationToken", "StartAfter", "RequestId", });
+    internal_static_yandex_cloud_storage_v1_S3APIObject_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_yandex_cloud_storage_v1_S3APIObject_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_S3APIObject_descriptor,
+        new java.lang.String[] { "Key", "LastModified", "Etag", "Size", "Owner", "StorageClass", });
+    internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_S3APICommonPrefix_descriptor,
+        new java.lang.String[] { "Prefix", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

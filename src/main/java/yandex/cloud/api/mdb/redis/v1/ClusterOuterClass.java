@@ -1308,6 +1308,14 @@ public final class ClusterOuterClass {
        * <code>OFF = 1;</code>
        */
       OFF(1),
+      /**
+       * <pre>
+       * cluster persistence on replicas only
+       * </pre>
+       *
+       * <code>ON_REPLICAS = 2;</code>
+       */
+      ON_REPLICAS(2),
       UNRECOGNIZED(-1),
       ;
 
@@ -1327,6 +1335,14 @@ public final class ClusterOuterClass {
        * <code>OFF = 1;</code>
        */
       public static final int OFF_VALUE = 1;
+      /**
+       * <pre>
+       * cluster persistence on replicas only
+       * </pre>
+       *
+       * <code>ON_REPLICAS = 2;</code>
+       */
+      public static final int ON_REPLICAS_VALUE = 2;
 
 
       public final int getNumber() {
@@ -1355,6 +1371,7 @@ public final class ClusterOuterClass {
         switch (value) {
           case 0: return ON;
           case 1: return OFF;
+          case 2: return ON_REPLICAS;
           default: return null;
         }
       }
@@ -17281,7 +17298,7 @@ public final class ClusterOuterClass {
       "s/v1/config/redis6_2.proto\032/yandex/cloud" +
       "/mdb/redis/v1/config/redis7_0.proto\032+yan" +
       "dex/cloud/mdb/redis/v1/maintenance.proto" +
-      "\"\317\t\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
+      "\"\340\t\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
       "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description" +
       "\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex.cloud.md" +
@@ -17310,63 +17327,63 @@ public final class ClusterOuterClass {
       "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006S" +
       "tatus\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022" +
       "\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n" +
-      "\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"\"" +
-      "\n\017PersistenceMode\022\006\n\002ON\020\000\022\007\n\003OFF\020\001\"=\n\nMo" +
-      "nitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 " +
-      "\001(\t\022\014\n\004link\030\003 \001(\t\"\265\006\n\rClusterConfig\022\017\n\007v" +
-      "ersion\030\001 \001(\t\022`\n\020redis_config_5_0\030\002 \001(\01323" +
-      ".yandex.cloud.mdb.redis.v1.config.RedisC" +
-      "onfigSet5_0H\000R\017redisConfig_5_0\022`\n\020redis_" +
-      "config_6_0\030\006 \001(\01323.yandex.cloud.mdb.redi" +
-      "s.v1.config.RedisConfigSet6_0H\000R\017redisCo" +
-      "nfig_6_0\022`\n\020redis_config_6_2\030\007 \001(\01323.yan" +
-      "dex.cloud.mdb.redis.v1.config.RedisConfi" +
-      "gSet6_2H\000R\017redisConfig_6_2\022`\n\020redis_conf" +
-      "ig_7_0\030\010 \001(\01323.yandex.cloud.mdb.redis.v1" +
-      ".config.RedisConfigSet7_0H\000R\017redisConfig" +
-      "_7_0\0227\n\tresources\030\003 \001(\0132$.yandex.cloud.m" +
-      "db.redis.v1.Resources\0223\n\023backup_window_s" +
-      "tart\030\004 \001(\0132\026.google.type.TimeOfDay\0221\n\006ac" +
-      "cess\030\005 \001(\0132!.yandex.cloud.mdb.redis.v1.A" +
-      "ccess\022?\n\005redis\030\t \001(\01320.yandex.cloud.mdb." +
-      "redis.v1.config.RedisConfigSet\022M\n\025disk_s" +
-      "ize_autoscaling\030\n \001(\0132..yandex.cloud.mdb" +
-      ".redis.v1.DiskSizeAutoscaling\022>\n\031backup_" +
-      "retain_period_days\030\r \001(\0132\033.google.protob" +
-      "uf.Int64ValueB\016\n\014redis_configJ\004\010\013\020\014J\004\010\014\020" +
-      "\r\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002" +
-      " \001(\t\"\200\004\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_i" +
-      "d\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 " +
-      "\001(\t\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.md" +
-      "b.redis.v1.Resources\0222\n\004role\030\006 \001(\0162$.yan" +
-      "dex.cloud.mdb.redis.v1.Host.Role\0226\n\006heal" +
-      "th\030\007 \001(\0162&.yandex.cloud.mdb.redis.v1.Hos" +
-      "t.Health\0224\n\010services\030\010 \003(\0132\".yandex.clou" +
-      "d.mdb.redis.v1.Service\022\022\n\nshard_name\030\t \001" +
-      "(\t\0225\n\020replica_priority\030\n \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022\030\n\020assign_public_ip\030\013 " +
-      "\001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020" +
-      "\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
-      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"" +
-      "\367\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex.cloud" +
-      ".mdb.redis.v1.Service.Type\0229\n\006health\030\002 \001" +
-      "(\0162).yandex.cloud.mdb.redis.v1.Service.H" +
-      "ealth\"G\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005R" +
-      "EDIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1" +
-      "\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022" +
-      "\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_prese" +
-      "t_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_ty" +
-      "pe_id\030\003 \001(\t\",\n\006Access\022\021\n\tdata_lens\030\001 \001(\010" +
-      "\022\017\n\007web_sql\030\002 \001(\010\"\347\001\n\023DiskSizeAutoscalin" +
-      "g\022K\n\027planned_usage_threshold\030\001 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\022M" +
-      "\n\031emergency_usage_threshold\030\002 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\r\350\3071\000\372\3071\0050-100\0224\n" +
-      "\017disk_size_limit\030\003 \001(\0132\033.google.protobuf" +
-      ".Int64ValueBd\n\035yandex.cloud.api.mdb.redi" +
-      "s.v1ZCgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/mdb/redis/v1;redisb\006proto" +
-      "3"
+      "\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"3" +
+      "\n\017PersistenceMode\022\006\n\002ON\020\000\022\007\n\003OFF\020\001\022\017\n\013ON" +
+      "_REPLICAS\020\002\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022" +
+      "\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\265\006\n\rC" +
+      "lusterConfig\022\017\n\007version\030\001 \001(\t\022`\n\020redis_c" +
+      "onfig_5_0\030\002 \001(\01323.yandex.cloud.mdb.redis" +
+      ".v1.config.RedisConfigSet5_0H\000R\017redisCon" +
+      "fig_5_0\022`\n\020redis_config_6_0\030\006 \001(\01323.yand" +
+      "ex.cloud.mdb.redis.v1.config.RedisConfig" +
+      "Set6_0H\000R\017redisConfig_6_0\022`\n\020redis_confi" +
+      "g_6_2\030\007 \001(\01323.yandex.cloud.mdb.redis.v1." +
+      "config.RedisConfigSet6_2H\000R\017redisConfig_" +
+      "6_2\022`\n\020redis_config_7_0\030\010 \001(\01323.yandex.c" +
+      "loud.mdb.redis.v1.config.RedisConfigSet7" +
+      "_0H\000R\017redisConfig_7_0\0227\n\tresources\030\003 \001(\013" +
+      "2$.yandex.cloud.mdb.redis.v1.Resources\0223" +
+      "\n\023backup_window_start\030\004 \001(\0132\026.google.typ" +
+      "e.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yandex.clo" +
+      "ud.mdb.redis.v1.Access\022?\n\005redis\030\t \001(\01320." +
+      "yandex.cloud.mdb.redis.v1.config.RedisCo" +
+      "nfigSet\022M\n\025disk_size_autoscaling\030\n \001(\0132." +
+      ".yandex.cloud.mdb.redis.v1.DiskSizeAutos" +
+      "caling\022>\n\031backup_retain_period_days\030\r \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\016\n\014redis_" +
+      "configJ\004\010\013\020\014J\004\010\014\020\r\")\n\005Shard\022\014\n\004name\030\001 \001(" +
+      "\t\022\022\n\ncluster_id\030\002 \001(\t\"\200\004\n\004Host\022\014\n\004name\030\001" +
+      " \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(" +
+      "\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresources\030\005 \001(\0132" +
+      "$.yandex.cloud.mdb.redis.v1.Resources\0222\n" +
+      "\004role\030\006 \001(\0162$.yandex.cloud.mdb.redis.v1." +
+      "Host.Role\0226\n\006health\030\007 \001(\0162&.yandex.cloud" +
+      ".mdb.redis.v1.Host.Health\0224\n\010services\030\010 " +
+      "\003(\0132\".yandex.cloud.mdb.redis.v1.Service\022" +
+      "\022\n\nshard_name\030\t \001(\t\0225\n\020replica_priority\030" +
+      "\n \001(\0132\033.google.protobuf.Int64Value\022\030\n\020as" +
+      "sign_public_ip\030\013 \001(\010\"1\n\004Role\022\020\n\014ROLE_UNK" +
+      "NOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Healt" +
+      "h\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD" +
+      "\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004type\030\001 \001" +
+      "(\0162\'.yandex.cloud.mdb.redis.v1.Service.T" +
+      "ype\0229\n\006health\030\002 \001(\0162).yandex.cloud.mdb.r" +
+      "edis.v1.Service.Health\"G\n\004Type\022\024\n\020TYPE_U" +
+      "NSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\r" +
+      "REDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEALTH_UNKN" +
+      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022" +
+      "\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size" +
+      "\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n\006Access\022\021" +
+      "\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\"\347\001\n\023D" +
+      "iskSizeAutoscaling\022K\n\027planned_usage_thre" +
+      "shold\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\r\350\3071\000\372\3071\0050-100\022M\n\031emergency_usage_thres" +
+      "hold\030\002 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\r\350\3071\000\372\3071\0050-100\0224\n\017disk_size_limit\030\003 \001(\0132" +
+      "\033.google.protobuf.Int64ValueBd\n\035yandex.c" +
+      "loud.api.mdb.redis.v1ZCgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/redi" +
+      "s/v1;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

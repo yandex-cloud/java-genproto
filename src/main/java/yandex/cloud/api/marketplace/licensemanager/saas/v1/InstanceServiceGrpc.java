@@ -49,6 +49,37 @@ public final class InstanceServiceGrpc {
     return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest,
+      yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo> getGetUserInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetUserInfo",
+      requestType = yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest.class,
+      responseType = yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest,
+      yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo> getGetUserInfoMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest, yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo> getGetUserInfoMethod;
+    if ((getGetUserInfoMethod = InstanceServiceGrpc.getGetUserInfoMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getGetUserInfoMethod = InstanceServiceGrpc.getGetUserInfoMethod) == null) {
+          InstanceServiceGrpc.getGetUserInfoMethod = getGetUserInfoMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest, yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("GetUserInfo"))
+              .build();
+        }
+      }
+    }
+    return getGetUserInfoMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -110,6 +141,16 @@ public final class InstanceServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns information about legal person (Russia only) who owns this subscription instance.
+     * </pre>
+     */
+    public void getUserInfo(yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserInfoMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -119,6 +160,13 @@ public final class InstanceServiceGrpc {
                 yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetInstanceRequest,
                 yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance>(
                   this, METHODID_GET)))
+          .addMethod(
+            getGetUserInfoMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest,
+                yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo>(
+                  this, METHODID_GET_USER_INFO)))
           .build();
     }
   }
@@ -150,6 +198,17 @@ public final class InstanceServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns information about legal person (Russia only) who owns this subscription instance.
+     * </pre>
+     */
+    public void getUserInfo(yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetUserInfoMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -177,6 +236,16 @@ public final class InstanceServiceGrpc {
     public yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance get(yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns information about legal person (Russia only) who owns this subscription instance.
+     * </pre>
+     */
+    public yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo getUserInfo(yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetUserInfoMethod(), getCallOptions(), request);
     }
   }
 
@@ -207,9 +276,21 @@ public final class InstanceServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns information about legal person (Russia only) who owns this subscription instance.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo> getUserInfo(
+        yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetUserInfoMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
+  private static final int METHODID_GET_USER_INFO = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -231,6 +312,10 @@ public final class InstanceServiceGrpc {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetInstanceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance>) responseObserver);
+          break;
+        case METHODID_GET_USER_INFO:
+          serviceImpl.getUserInfo((yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.UserInfo>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -294,6 +379,7 @@ public final class InstanceServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new InstanceServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
+              .addMethod(getGetUserInfoMethod())
               .build();
         }
       }

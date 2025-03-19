@@ -10974,6 +10974,1388 @@ public final class RunServiceOuterClass {
 
   }
 
+  public interface SubmitToRunRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.runs.SubmitToRunRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the run to submit to.
+     * </pre>
+     *
+     * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The runId.
+     */
+    java.lang.String getRunId();
+    /**
+     * <pre>
+     * ID of the run to submit to.
+     * </pre>
+     *
+     * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for runId.
+     */
+    com.google.protobuf.ByteString
+        getRunIdBytes();
+
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+     * @return Whether the toolResultList field is set.
+     */
+    boolean hasToolResultList();
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+     * @return The toolResultList.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolResultList getToolResultList();
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder getToolResultListOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.EventCase getEventCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.SubmitToRunRequest}
+   */
+  public static final class SubmitToRunRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.runs.SubmitToRunRequest)
+      SubmitToRunRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SubmitToRunRequest.newBuilder() to construct.
+    private SubmitToRunRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SubmitToRunRequest() {
+      runId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SubmitToRunRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SubmitToRunRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              runId_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder subBuilder = null;
+              if (eventCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_).toBuilder();
+              }
+              event_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_);
+                event_ = subBuilder.buildPartial();
+              }
+              eventCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.class, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.Builder.class);
+    }
+
+    private int eventCase_ = 0;
+    private java.lang.Object event_;
+    public enum EventCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TOOL_RESULT_LIST(2),
+      EVENT_NOT_SET(0);
+      private final int value;
+      private EventCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EventCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static EventCase forNumber(int value) {
+        switch (value) {
+          case 2: return TOOL_RESULT_LIST;
+          case 0: return EVENT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public EventCase
+    getEventCase() {
+      return EventCase.forNumber(
+          eventCase_);
+    }
+
+    public static final int RUN_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object runId_;
+    /**
+     * <pre>
+     * ID of the run to submit to.
+     * </pre>
+     *
+     * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The runId.
+     */
+    @java.lang.Override
+    public java.lang.String getRunId() {
+      java.lang.Object ref = runId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        runId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the run to submit to.
+     * </pre>
+     *
+     * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for runId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRunIdBytes() {
+      java.lang.Object ref = runId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        runId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOOL_RESULT_LIST_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+     * @return Whether the toolResultList field is set.
+     */
+    @java.lang.Override
+    public boolean hasToolResultList() {
+      return eventCase_ == 2;
+    }
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+     * @return The toolResultList.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList getToolResultList() {
+      if (eventCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * A list of tool results to submit to the run, such as the output of a function call.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder getToolResultListOrBuilder() {
+      if (eventCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(runId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, runId_);
+      }
+      if (eventCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(runId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, runId_);
+      }
+      if (eventCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest other = (yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest) obj;
+
+      if (!getRunId()
+          .equals(other.getRunId())) return false;
+      if (!getEventCase().equals(other.getEventCase())) return false;
+      switch (eventCase_) {
+        case 2:
+          if (!getToolResultList()
+              .equals(other.getToolResultList())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RUN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRunId().hashCode();
+      switch (eventCase_) {
+        case 2:
+          hash = (37 * hash) + TOOL_RESULT_LIST_FIELD_NUMBER;
+          hash = (53 * hash) + getToolResultList().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.SubmitToRunRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.runs.SubmitToRunRequest)
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.class, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        runId_ = "";
+
+        eventCase_ = 0;
+        event_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest build() {
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest result = new yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest(this);
+        result.runId_ = runId_;
+        if (eventCase_ == 2) {
+          if (toolResultListBuilder_ == null) {
+            result.event_ = event_;
+          } else {
+            result.event_ = toolResultListBuilder_.build();
+          }
+        }
+        result.eventCase_ = eventCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest.getDefaultInstance()) return this;
+        if (!other.getRunId().isEmpty()) {
+          runId_ = other.runId_;
+          onChanged();
+        }
+        switch (other.getEventCase()) {
+          case TOOL_RESULT_LIST: {
+            mergeToolResultList(other.getToolResultList());
+            break;
+          }
+          case EVENT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int eventCase_ = 0;
+      private java.lang.Object event_;
+      public EventCase
+          getEventCase() {
+        return EventCase.forNumber(
+            eventCase_);
+      }
+
+      public Builder clearEvent() {
+        eventCase_ = 0;
+        event_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object runId_ = "";
+      /**
+       * <pre>
+       * ID of the run to submit to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The runId.
+       */
+      public java.lang.String getRunId() {
+        java.lang.Object ref = runId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          runId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the run to submit to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for runId.
+       */
+      public com.google.protobuf.ByteString
+          getRunIdBytes() {
+        java.lang.Object ref = runId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          runId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the run to submit to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The runId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRunId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        runId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the run to submit to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRunId() {
+        
+        runId_ = getDefaultInstance().getRunId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the run to submit to.
+       * </pre>
+       *
+       * <code>string run_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for runId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRunIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        runId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolResultList, yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder> toolResultListBuilder_;
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+       * @return Whether the toolResultList field is set.
+       */
+      @java.lang.Override
+      public boolean hasToolResultList() {
+        return eventCase_ == 2;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+       * @return The toolResultList.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList getToolResultList() {
+        if (toolResultListBuilder_ == null) {
+          if (eventCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+        } else {
+          if (eventCase_ == 2) {
+            return toolResultListBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+       */
+      public Builder setToolResultList(yandex.cloud.api.ai.assistants.v1.Common.ToolResultList value) {
+        if (toolResultListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          toolResultListBuilder_.setMessage(value);
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+       */
+      public Builder setToolResultList(
+          yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder builderForValue) {
+        if (toolResultListBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          toolResultListBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+       */
+      public Builder mergeToolResultList(yandex.cloud.api.ai.assistants.v1.Common.ToolResultList value) {
+        if (toolResultListBuilder_ == null) {
+          if (eventCase_ == 2 &&
+              event_ != yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance()) {
+            event_ = yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 2) {
+            toolResultListBuilder_.mergeFrom(value);
+          }
+          toolResultListBuilder_.setMessage(value);
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+       */
+      public Builder clearToolResultList() {
+        if (toolResultListBuilder_ == null) {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          toolResultListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder getToolResultListBuilder() {
+        return getToolResultListFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder getToolResultListOrBuilder() {
+        if ((eventCase_ == 2) && (toolResultListBuilder_ != null)) {
+          return toolResultListBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A list of tool results to submit to the run, such as the output of a function call.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.ToolResultList tool_result_list = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.ToolResultList, yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder> 
+          getToolResultListFieldBuilder() {
+        if (toolResultListBuilder_ == null) {
+          if (!(eventCase_ == 2)) {
+            event_ = yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.getDefaultInstance();
+          }
+          toolResultListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.ToolResultList, yandex.cloud.api.ai.assistants.v1.Common.ToolResultList.Builder, yandex.cloud.api.ai.assistants.v1.Common.ToolResultListOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.ToolResultList) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 2;
+        onChanged();;
+        return toolResultListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.runs.SubmitToRunRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.runs.SubmitToRunRequest)
+    private static final yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SubmitToRunRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SubmitToRunRequest>() {
+      @java.lang.Override
+      public SubmitToRunRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SubmitToRunRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SubmitToRunRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SubmitToRunRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SubmitToRunResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.runs.SubmitToRunResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.SubmitToRunResponse}
+   */
+  public static final class SubmitToRunResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.runs.SubmitToRunResponse)
+      SubmitToRunResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SubmitToRunResponse.newBuilder() to construct.
+    private SubmitToRunResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SubmitToRunResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SubmitToRunResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SubmitToRunResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse.class, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse other = (yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.runs.SubmitToRunResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.runs.SubmitToRunResponse)
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse.class, yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse build() {
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse result = new yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.runs.SubmitToRunResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.runs.SubmitToRunResponse)
+    private static final yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SubmitToRunResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SubmitToRunResponse>() {
+      @java.lang.Override
+      public SubmitToRunResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SubmitToRunResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SubmitToRunResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SubmitToRunResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.runs.RunServiceOuterClass.SubmitToRunResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_runs_CreateRunRequest_descriptor;
   private static final 
@@ -11024,6 +12406,16 @@ public final class RunServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_runs_StreamEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11085,32 +12477,39 @@ public final class RunServiceOuterClass {
       "1.ToolCallListH\000\"a\n\tEventType\022\032\n\026EVENT_T" +
       "YPE_UNSPECIFIED\020\000\022\023\n\017PARTIAL_MESSAGE\020\001\022\t" +
       "\n\005ERROR\020\002\022\010\n\004DONE\020\003\022\016\n\nTOOL_CALLS\020\004B\013\n\tE" +
-      "ventData2\343\006\n\nRunService\022\207\001\n\006Create\0224.yan" +
-      "dex.cloud.ai.assistants.v1.runs.CreateRu" +
-      "nRequest\032\'.yandex.cloud.ai.assistants.v1" +
-      ".runs.Run\"\036\202\323\344\223\002\030\"\023/assistants/v1/runs:\001" +
-      "*\022\225\001\n\006Listen\0224.yandex.cloud.ai.assistant" +
-      "s.v1.runs.ListenRunRequest\032/.yandex.clou" +
-      "d.ai.assistants.v1.runs.StreamEvent\"\"\202\323\344" +
-      "\223\002\034\022\032/assistants/v1/runs/listen0\001\022s\n\006Att" +
-      "ach\0224.yandex.cloud.ai.assistants.v1.runs" +
-      ".AttachRunRequest\032/.yandex.cloud.ai.assi" +
-      "stants.v1.runs.StreamEvent(\0010\001\022\207\001\n\003Get\0221" +
-      ".yandex.cloud.ai.assistants.v1.runs.GetR" +
-      "unRequest\032\'.yandex.cloud.ai.assistants.v" +
-      "1.runs.Run\"$\202\323\344\223\002\036\022\034/assistants/v1/runs/" +
-      "{run_id}\022\242\001\n\017GetLastByThread\022=.yandex.cl" +
-      "oud.ai.assistants.v1.runs.GetLastRunByTh" +
-      "readRequest\032\'.yandex.cloud.ai.assistants" +
-      ".v1.runs.Run\"\'\202\323\344\223\002!\022\037/assistants/v1/run" +
-      "s:getByThread\022\216\001\n\004List\0223.yandex.cloud.ai" +
-      ".assistants.v1.runs.ListRunsRequest\0324.ya" +
-      "ndex.cloud.ai.assistants.v1.runs.ListRun" +
-      "sResponse\"\033\202\323\344\223\002\025\022\023/assistants/v1/runsBu" +
-      "\n&yandex.cloud.api.ai.assistants.v1.runs" +
-      "ZKgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/ai/assistants/v1/runs;runsb\006p" +
-      "roto3"
+      "ventData\"~\n\022SubmitToRunRequest\022\024\n\006run_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022I\n\020tool_result_list\030\002 \001(\0132-" +
+      ".yandex.cloud.ai.assistants.v1.ToolResul" +
+      "tListH\000B\007\n\005Event\"\025\n\023SubmitToRunResponse2" +
+      "\206\010\n\nRunService\022\207\001\n\006Create\0224.yandex.cloud" +
+      ".ai.assistants.v1.runs.CreateRunRequest\032" +
+      "\'.yandex.cloud.ai.assistants.v1.runs.Run" +
+      "\"\036\202\323\344\223\002\030\"\023/assistants/v1/runs:\001*\022\225\001\n\006Lis" +
+      "ten\0224.yandex.cloud.ai.assistants.v1.runs" +
+      ".ListenRunRequest\032/.yandex.cloud.ai.assi" +
+      "stants.v1.runs.StreamEvent\"\"\202\323\344\223\002\034\022\032/ass" +
+      "istants/v1/runs/listen0\001\022s\n\006Attach\0224.yan" +
+      "dex.cloud.ai.assistants.v1.runs.AttachRu" +
+      "nRequest\032/.yandex.cloud.ai.assistants.v1" +
+      ".runs.StreamEvent(\0010\001\022\207\001\n\003Get\0221.yandex.c" +
+      "loud.ai.assistants.v1.runs.GetRunRequest" +
+      "\032\'.yandex.cloud.ai.assistants.v1.runs.Ru" +
+      "n\"$\202\323\344\223\002\036\022\034/assistants/v1/runs/{run_id}\022" +
+      "\242\001\n\017GetLastByThread\022=.yandex.cloud.ai.as" +
+      "sistants.v1.runs.GetLastRunByThreadReque" +
+      "st\032\'.yandex.cloud.ai.assistants.v1.runs." +
+      "Run\"\'\202\323\344\223\002!\022\037/assistants/v1/runs:getByTh" +
+      "read\022\216\001\n\004List\0223.yandex.cloud.ai.assistan" +
+      "ts.v1.runs.ListRunsRequest\0324.yandex.clou" +
+      "d.ai.assistants.v1.runs.ListRunsResponse" +
+      "\"\033\202\323\344\223\002\025\022\023/assistants/v1/runs\022\240\001\n\006Submit" +
+      "\0226.yandex.cloud.ai.assistants.v1.runs.Su" +
+      "bmitToRunRequest\0327.yandex.cloud.ai.assis" +
+      "tants.v1.runs.SubmitToRunResponse\"%\202\323\344\223\002" +
+      "\0372\032/assistants/v1/runs/submit:\001*Bu\n&yand" +
+      "ex.cloud.api.ai.assistants.v1.runsZKgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/ai/assistants/v1/runs;runsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11183,6 +12582,18 @@ public final class RunServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_runs_StreamEvent_descriptor,
         new java.lang.String[] { "EventType", "StreamCursor", "Error", "PartialMessage", "CompletedMessage", "ToolCallList", "EventData", });
+    internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunRequest_descriptor,
+        new java.lang.String[] { "RunId", "ToolResultList", "Event", });
+    internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_runs_SubmitToRunResponse_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

@@ -19965,6 +19965,26 @@ public final class DatasetServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getTaskTypeBytes();
+
+    /**
+     * <pre>
+     * Folder to search task type (if empty only public types allowed)
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Folder to search task type (if empty only public types allowed)
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.dataset.v1.ListUploadSchemasRequest}
@@ -19980,6 +20000,7 @@ public final class DatasetServiceOuterClass {
     }
     private ListUploadSchemasRequest() {
       taskType_ = "";
+      folderId_ = "";
     }
 
     @java.lang.Override
@@ -20016,6 +20037,12 @@ public final class DatasetServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               taskType_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
               break;
             }
             default: {
@@ -20096,6 +20123,52 @@ public final class DatasetServiceOuterClass {
       }
     }
 
+    public static final int FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Folder to search task type (if empty only public types allowed)
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Folder to search task type (if empty only public types allowed)
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -20113,6 +20186,9 @@ public final class DatasetServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, taskType_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -20124,6 +20200,9 @@ public final class DatasetServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, taskType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -20142,6 +20221,8 @@ public final class DatasetServiceOuterClass {
 
       if (!getTaskType()
           .equals(other.getTaskType())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -20155,6 +20236,8 @@ public final class DatasetServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TASK_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getTaskType().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -20290,6 +20373,8 @@ public final class DatasetServiceOuterClass {
         super.clear();
         taskType_ = "";
 
+        folderId_ = "";
+
         return this;
       }
 
@@ -20317,6 +20402,7 @@ public final class DatasetServiceOuterClass {
       public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest buildPartial() {
         yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest result = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest(this);
         result.taskType_ = taskType_;
+        result.folderId_ = folderId_;
         onBuilt();
         return result;
       }
@@ -20367,6 +20453,10 @@ public final class DatasetServiceOuterClass {
         if (other == yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListUploadSchemasRequest.getDefaultInstance()) return this;
         if (!other.getTaskType().isEmpty()) {
           taskType_ = other.taskType_;
+          onChanged();
+        }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -20490,6 +20580,102 @@ public final class DatasetServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         taskType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Folder to search task type (if empty only public types allowed)
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder to search task type (if empty only public types allowed)
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder to search task type (if empty only public types allowed)
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder to search task type (if empty only public types allowed)
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder to search task type (if empty only public types allowed)
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
         onChanged();
         return this;
       }
@@ -21454,6 +21640,26 @@ public final class DatasetServiceOuterClass {
   public interface ListTypesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.dataset.v1.ListTypesRequest)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Folder to search task types (if empty only public types will be returned)
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Folder to search task types (if empty only public types will be returned)
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.dataset.v1.ListTypesRequest}
@@ -21468,6 +21674,7 @@ public final class DatasetServiceOuterClass {
       super(builder);
     }
     private ListTypesRequest() {
+      folderId_ = "";
     }
 
     @java.lang.Override
@@ -21500,6 +21707,12 @@ public final class DatasetServiceOuterClass {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -21532,6 +21745,52 @@ public final class DatasetServiceOuterClass {
               yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest.class, yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest.Builder.class);
     }
 
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Folder to search task types (if empty only public types will be returned)
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Folder to search task types (if empty only public types will be returned)
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21546,6 +21805,9 @@ public final class DatasetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -21555,6 +21817,9 @@ public final class DatasetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -21570,6 +21835,8 @@ public final class DatasetServiceOuterClass {
       }
       yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest other = (yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest) obj;
 
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -21581,6 +21848,8 @@ public final class DatasetServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -21714,6 +21983,8 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        folderId_ = "";
+
         return this;
       }
 
@@ -21740,6 +22011,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest buildPartial() {
         yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest result = new yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest(this);
+        result.folderId_ = folderId_;
         onBuilt();
         return result;
       }
@@ -21788,6 +22060,10 @@ public final class DatasetServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest other) {
         if (other == yandex.cloud.api.ai.dataset.v1.DatasetServiceOuterClass.ListTypesRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -21814,6 +22090,102 @@ public final class DatasetServiceOuterClass {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Folder to search task types (if empty only public types will be returned)
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder to search task types (if empty only public types will be returned)
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder to search task types (if empty only public types will be returned)
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder to search task types (if empty only public types will be returned)
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder to search task types (if empty only public types will be returned)
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -27281,77 +27653,78 @@ public final class DatasetServiceOuterClass {
       "asetInfo\022\027\n\017next_page_token\030\002 \001(\t\"3\n\030Lis" +
       "tUploadFormatsRequest\022\027\n\ttask_type\030\001 \001(\t" +
       "B\004\350\3071\001\",\n\031ListUploadFormatsResponse\022\017\n\007f" +
-      "ormats\030\001 \003(\t\"3\n\030ListUploadSchemasRequest" +
-      "\022\027\n\ttask_type\030\001 \001(\tB\004\350\3071\001\"]\n\031ListUploadS" +
-      "chemasResponse\022@\n\007schemas\030\001 \003(\0132/.yandex" +
-      ".cloud.ai.dataset.v1.DatasetUploadSchema" +
-      "\"\022\n\020ListTypesRequest\"\"\n\021ListTypesRespons" +
-      "e\022\r\n\005types\030\001 \003(\t\"4\n\030GetDatasetPreviewReq" +
-      "uest\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"F\n\031GetDat" +
-      "asetPreviewResponse\022\022\n\ndataset_id\030\001 \001(\t\022" +
-      "\025\n\rpreview_lines\030\002 \003(\t\"2\n\026GetDownloadUrl" +
-      "sRequest\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"x\n\027Ge" +
-      "tDownloadUrlsResponse\022\022\n\ndataset_id\030\001 \001(" +
-      "\t\022I\n\rdownload_urls\030\002 \003(\01322.yandex.cloud." +
-      "ai.dataset.v1.DatasetFileDownloadUrl\".\n\030" +
-      "ListOperationsIdsRequest\022\022\n\ndataset_id\030\001" +
-      " \003(\t\"\321\001\n\031ListOperationsIdsResponse\022u\n\032da" +
-      "taset_id_to_operation_id\030\001 \003(\0132Q.yandex." +
-      "cloud.ai.dataset.v1.ListOperationsIdsRes" +
-      "ponse.DatasetIdToOperationIdEntry\032=\n\033Dat" +
-      "asetIdToOperationIdEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\0012\204\017\n\016DatasetService\022s\n\010D" +
-      "escribe\0222.yandex.cloud.ai.dataset.v1.Des" +
-      "cribeDatasetRequest\0323.yandex.cloud.ai.da" +
-      "taset.v1.DescribeDatasetResponse\022\231\001\n\010Val" +
-      "idate\0222.yandex.cloud.ai.dataset.v1.Valid" +
-      "ateDatasetRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"6\262\322*2\n\027ValidateDatasetMetad" +
-      "ata\022\027ValidateDatasetResponse\022m\n\006Create\0220" +
-      ".yandex.cloud.ai.dataset.v1.CreateDatase" +
-      "tRequest\0321.yandex.cloud.ai.dataset.v1.Cr" +
-      "eateDatasetResponse\022m\n\006Update\0220.yandex.c" +
-      "loud.ai.dataset.v1.UpdateDatasetRequest\032" +
-      "1.yandex.cloud.ai.dataset.v1.UpdateDatas" +
-      "etResponse\022m\n\006Delete\0220.yandex.cloud.ai.d" +
-      "ataset.v1.DeleteDatasetRequest\0321.yandex." +
-      "cloud.ai.dataset.v1.DeleteDatasetRespons" +
-      "e\022i\n\004List\022/.yandex.cloud.ai.dataset.v1.L" +
-      "istDatasetsRequest\0320.yandex.cloud.ai.dat" +
-      "aset.v1.ListDatasetsResponse\022\205\001\n\021ListUpl" +
-      "oadFormats\0224.yandex.cloud.ai.dataset.v1." +
-      "ListUploadFormatsRequest\0325.yandex.cloud." +
-      "ai.dataset.v1.ListUploadFormatsResponse\"" +
-      "\003\210\002\001\022\200\001\n\021ListUploadSchemas\0224.yandex.clou" +
-      "d.ai.dataset.v1.ListUploadSchemasRequest" +
-      "\0325.yandex.cloud.ai.dataset.v1.ListUpload" +
-      "SchemasResponse\022\200\001\n\021GetUploadDraftUrl\0224." +
-      "yandex.cloud.ai.dataset.v1.GetUploadDraf" +
-      "tUrlRequest\0325.yandex.cloud.ai.dataset.v1" +
-      ".GetUploadDraftUrlResponse\022z\n\017GetDownloa" +
-      "dUrls\0222.yandex.cloud.ai.dataset.v1.GetDo" +
-      "wnloadUrlsRequest\0323.yandex.cloud.ai.data" +
-      "set.v1.GetDownloadUrlsResponse\022\230\001\n\031Start" +
-      "MultipartUploadDraft\022<.yandex.cloud.ai.d" +
-      "ataset.v1.StartMultipartUploadDraftReque" +
-      "st\032=.yandex.cloud.ai.dataset.v1.StartMul" +
-      "tipartUploadDraftResponse\022\233\001\n\032FinishMult" +
-      "ipartUploadDraft\022=.yandex.cloud.ai.datas" +
-      "et.v1.FinishMultipartUploadDraftRequest\032" +
-      ">.yandex.cloud.ai.dataset.v1.FinishMulti" +
-      "partUploadDraftResponse\022h\n\tListTypes\022,.y" +
-      "andex.cloud.ai.dataset.v1.ListTypesReque" +
-      "st\032-.yandex.cloud.ai.dataset.v1.ListType" +
-      "sResponse\022y\n\nGetPreview\0224.yandex.cloud.a" +
-      "i.dataset.v1.GetDatasetPreviewRequest\0325." +
-      "yandex.cloud.ai.dataset.v1.GetDatasetPre" +
-      "viewResponse\022\200\001\n\021ListOperationsIds\0224.yan" +
-      "dex.cloud.ai.dataset.v1.ListOperationsId" +
-      "sRequest\0325.yandex.cloud.ai.dataset.v1.Li" +
-      "stOperationsIdsResponseBe\n\036yandex.cloud." +
-      "api.ai.dataset.v1ZCgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/ai/dataset/v" +
-      "1;fomob\006proto3"
+      "ormats\030\001 \003(\t\"F\n\030ListUploadSchemasRequest" +
+      "\022\027\n\ttask_type\030\001 \001(\tB\004\350\3071\001\022\021\n\tfolder_id\030\002" +
+      " \001(\t\"]\n\031ListUploadSchemasResponse\022@\n\007sch" +
+      "emas\030\001 \003(\0132/.yandex.cloud.ai.dataset.v1." +
+      "DatasetUploadSchema\"%\n\020ListTypesRequest\022" +
+      "\021\n\tfolder_id\030\001 \001(\t\"\"\n\021ListTypesResponse\022" +
+      "\r\n\005types\030\001 \003(\t\"4\n\030GetDatasetPreviewReque" +
+      "st\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"F\n\031GetDatas" +
+      "etPreviewResponse\022\022\n\ndataset_id\030\001 \001(\t\022\025\n" +
+      "\rpreview_lines\030\002 \003(\t\"2\n\026GetDownloadUrlsR" +
+      "equest\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"x\n\027GetD" +
+      "ownloadUrlsResponse\022\022\n\ndataset_id\030\001 \001(\t\022" +
+      "I\n\rdownload_urls\030\002 \003(\01322.yandex.cloud.ai" +
+      ".dataset.v1.DatasetFileDownloadUrl\".\n\030Li" +
+      "stOperationsIdsRequest\022\022\n\ndataset_id\030\001 \003" +
+      "(\t\"\321\001\n\031ListOperationsIdsResponse\022u\n\032data" +
+      "set_id_to_operation_id\030\001 \003(\0132Q.yandex.cl" +
+      "oud.ai.dataset.v1.ListOperationsIdsRespo" +
+      "nse.DatasetIdToOperationIdEntry\032=\n\033Datas" +
+      "etIdToOperationIdEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\0012\204\017\n\016DatasetService\022s\n\010Des" +
+      "cribe\0222.yandex.cloud.ai.dataset.v1.Descr" +
+      "ibeDatasetRequest\0323.yandex.cloud.ai.data" +
+      "set.v1.DescribeDatasetResponse\022\231\001\n\010Valid" +
+      "ate\0222.yandex.cloud.ai.dataset.v1.Validat" +
+      "eDatasetRequest\032!.yandex.cloud.operation" +
+      ".Operation\"6\262\322*2\n\027ValidateDatasetMetadat" +
+      "a\022\027ValidateDatasetResponse\022m\n\006Create\0220.y" +
+      "andex.cloud.ai.dataset.v1.CreateDatasetR" +
+      "equest\0321.yandex.cloud.ai.dataset.v1.Crea" +
+      "teDatasetResponse\022m\n\006Update\0220.yandex.clo" +
+      "ud.ai.dataset.v1.UpdateDatasetRequest\0321." +
+      "yandex.cloud.ai.dataset.v1.UpdateDataset" +
+      "Response\022m\n\006Delete\0220.yandex.cloud.ai.dat" +
+      "aset.v1.DeleteDatasetRequest\0321.yandex.cl" +
+      "oud.ai.dataset.v1.DeleteDatasetResponse\022" +
+      "i\n\004List\022/.yandex.cloud.ai.dataset.v1.Lis" +
+      "tDatasetsRequest\0320.yandex.cloud.ai.datas" +
+      "et.v1.ListDatasetsResponse\022\205\001\n\021ListUploa" +
+      "dFormats\0224.yandex.cloud.ai.dataset.v1.Li" +
+      "stUploadFormatsRequest\0325.yandex.cloud.ai" +
+      ".dataset.v1.ListUploadFormatsResponse\"\003\210" +
+      "\002\001\022\200\001\n\021ListUploadSchemas\0224.yandex.cloud." +
+      "ai.dataset.v1.ListUploadSchemasRequest\0325" +
+      ".yandex.cloud.ai.dataset.v1.ListUploadSc" +
+      "hemasResponse\022\200\001\n\021GetUploadDraftUrl\0224.ya" +
+      "ndex.cloud.ai.dataset.v1.GetUploadDraftU" +
+      "rlRequest\0325.yandex.cloud.ai.dataset.v1.G" +
+      "etUploadDraftUrlResponse\022z\n\017GetDownloadU" +
+      "rls\0222.yandex.cloud.ai.dataset.v1.GetDown" +
+      "loadUrlsRequest\0323.yandex.cloud.ai.datase" +
+      "t.v1.GetDownloadUrlsResponse\022\230\001\n\031StartMu" +
+      "ltipartUploadDraft\022<.yandex.cloud.ai.dat" +
+      "aset.v1.StartMultipartUploadDraftRequest" +
+      "\032=.yandex.cloud.ai.dataset.v1.StartMulti" +
+      "partUploadDraftResponse\022\233\001\n\032FinishMultip" +
+      "artUploadDraft\022=.yandex.cloud.ai.dataset" +
+      ".v1.FinishMultipartUploadDraftRequest\032>." +
+      "yandex.cloud.ai.dataset.v1.FinishMultipa" +
+      "rtUploadDraftResponse\022h\n\tListTypes\022,.yan" +
+      "dex.cloud.ai.dataset.v1.ListTypesRequest" +
+      "\032-.yandex.cloud.ai.dataset.v1.ListTypesR" +
+      "esponse\022y\n\nGetPreview\0224.yandex.cloud.ai." +
+      "dataset.v1.GetDatasetPreviewRequest\0325.ya" +
+      "ndex.cloud.ai.dataset.v1.GetDatasetPrevi" +
+      "ewResponse\022\200\001\n\021ListOperationsIds\0224.yande" +
+      "x.cloud.ai.dataset.v1.ListOperationsIdsR" +
+      "equest\0325.yandex.cloud.ai.dataset.v1.List" +
+      "OperationsIdsResponseBe\n\036yandex.cloud.ap" +
+      "i.ai.dataset.v1ZCgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/ai/dataset/v1;" +
+      "fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27511,7 +27884,7 @@ public final class DatasetServiceOuterClass {
     internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasRequest_descriptor,
-        new java.lang.String[] { "TaskType", });
+        new java.lang.String[] { "TaskType", "FolderId", });
     internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_ai_dataset_v1_ListUploadSchemasResponse_fieldAccessorTable = new
@@ -27523,7 +27896,7 @@ public final class DatasetServiceOuterClass {
     internal_static_yandex_cloud_ai_dataset_v1_ListTypesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_dataset_v1_ListTypesRequest_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "FolderId", });
     internal_static_yandex_cloud_ai_dataset_v1_ListTypesResponse_descriptor =
       getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_ai_dataset_v1_ListTypesResponse_fieldAccessorTable = new

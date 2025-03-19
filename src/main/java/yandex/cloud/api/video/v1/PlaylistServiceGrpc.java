@@ -288,7 +288,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific playlist.
+     * Get the specific playlist.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistRequest request,
@@ -338,7 +338,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete playlist.
+     * Batch delete playlists.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.BatchDeletePlaylistsRequest request,
@@ -348,7 +348,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Returns player's url.
+     * Get player url.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLRequest request,
@@ -430,7 +430,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific playlist.
+     * Get the specific playlist.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistRequest request,
@@ -485,7 +485,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete playlist.
+     * Batch delete playlists.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.BatchDeletePlaylistsRequest request,
@@ -496,7 +496,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Returns player's url.
+     * Get player url.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLRequest request,
@@ -525,7 +525,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific playlist.
+     * Get the specific playlist.
      * </pre>
      */
     public yandex.cloud.api.video.v1.PlaylistOuterClass.Playlist get(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistRequest request) {
@@ -575,7 +575,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete playlist.
+     * Batch delete playlists.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.BatchDeletePlaylistsRequest request) {
@@ -585,7 +585,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Returns player's url.
+     * Get player url.
      * </pre>
      */
     public yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLResponse getPlayerURL(yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLRequest request) {
@@ -613,7 +613,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific playlist.
+     * Get the specific playlist.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.PlaylistOuterClass.Playlist> get(
@@ -668,7 +668,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete playlist.
+     * Batch delete playlists.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
@@ -679,7 +679,7 @@ public final class PlaylistServiceGrpc {
 
     /**
      * <pre>
-     * Returns player's url.
+     * Get player url.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.PlaylistServiceOuterClass.GetPlaylistPlayerURLResponse> getPlayerURL(

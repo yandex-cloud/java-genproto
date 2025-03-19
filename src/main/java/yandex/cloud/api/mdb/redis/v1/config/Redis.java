@@ -598,6 +598,60 @@ public final class Redis {
      * <code>.google.protobuf.Int64Value zset_max_listpack_entries = 22 [(.yandex.cloud.value) = "32-2048"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getZsetMaxListpackEntriesOrBuilder();
+
+    /**
+     * <pre>
+     * AOF maximum size as a percentage of disk available
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return Whether the aofMaxSizePercent field is set.
+     */
+    boolean hasAofMaxSizePercent();
+    /**
+     * <pre>
+     * AOF maximum size as a percentage of disk available
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return The aofMaxSizePercent.
+     */
+    com.google.protobuf.Int64Value getAofMaxSizePercent();
+    /**
+     * <pre>
+     * AOF maximum size as a percentage of disk available
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAofMaxSizePercentOrBuilder();
+
+    /**
+     * <pre>
+     * Enable active (online) memory defragmentation
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+     * @return Whether the activedefrag field is set.
+     */
+    boolean hasActivedefrag();
+    /**
+     * <pre>
+     * Enable active (online) memory defragmentation
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+     * @return The activedefrag.
+     */
+    com.google.protobuf.BoolValue getActivedefrag();
+    /**
+     * <pre>
+     * Enable active (online) memory defragmentation
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getActivedefragOrBuilder();
   }
   /**
    * <pre>
@@ -913,6 +967,32 @@ public final class Redis {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(zsetMaxListpackEntries_);
                 zsetMaxListpackEntries_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 186: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (aofMaxSizePercent_ != null) {
+                subBuilder = aofMaxSizePercent_.toBuilder();
+              }
+              aofMaxSizePercent_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(aofMaxSizePercent_);
+                aofMaxSizePercent_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 194: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (activedefrag_ != null) {
+                subBuilder = activedefrag_.toBuilder();
+              }
+              activedefrag_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(activedefrag_);
+                activedefrag_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3245,6 +3325,82 @@ public final class Redis {
       return getZsetMaxListpackEntries();
     }
 
+    public static final int AOF_MAX_SIZE_PERCENT_FIELD_NUMBER = 23;
+    private com.google.protobuf.Int64Value aofMaxSizePercent_;
+    /**
+     * <pre>
+     * AOF maximum size as a percentage of disk available
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return Whether the aofMaxSizePercent field is set.
+     */
+    @java.lang.Override
+    public boolean hasAofMaxSizePercent() {
+      return aofMaxSizePercent_ != null;
+    }
+    /**
+     * <pre>
+     * AOF maximum size as a percentage of disk available
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return The aofMaxSizePercent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAofMaxSizePercent() {
+      return aofMaxSizePercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : aofMaxSizePercent_;
+    }
+    /**
+     * <pre>
+     * AOF maximum size as a percentage of disk available
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAofMaxSizePercentOrBuilder() {
+      return getAofMaxSizePercent();
+    }
+
+    public static final int ACTIVEDEFRAG_FIELD_NUMBER = 24;
+    private com.google.protobuf.BoolValue activedefrag_;
+    /**
+     * <pre>
+     * Enable active (online) memory defragmentation
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+     * @return Whether the activedefrag field is set.
+     */
+    @java.lang.Override
+    public boolean hasActivedefrag() {
+      return activedefrag_ != null;
+    }
+    /**
+     * <pre>
+     * Enable active (online) memory defragmentation
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+     * @return The activedefrag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getActivedefrag() {
+      return activedefrag_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : activedefrag_;
+    }
+    /**
+     * <pre>
+     * Enable active (online) memory defragmentation
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getActivedefragOrBuilder() {
+      return getActivedefrag();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3324,6 +3480,12 @@ public final class Redis {
       }
       if (zsetMaxListpackEntries_ != null) {
         output.writeMessage(22, getZsetMaxListpackEntries());
+      }
+      if (aofMaxSizePercent_ != null) {
+        output.writeMessage(23, getAofMaxSizePercent());
+      }
+      if (activedefrag_ != null) {
+        output.writeMessage(24, getActivedefrag());
       }
       unknownFields.writeTo(output);
     }
@@ -3419,6 +3581,14 @@ public final class Redis {
       if (zsetMaxListpackEntries_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, getZsetMaxListpackEntries());
+      }
+      if (aofMaxSizePercent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getAofMaxSizePercent());
+      }
+      if (activedefrag_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getActivedefrag());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3535,6 +3705,16 @@ public final class Redis {
         if (!getZsetMaxListpackEntries()
             .equals(other.getZsetMaxListpackEntries())) return false;
       }
+      if (hasAofMaxSizePercent() != other.hasAofMaxSizePercent()) return false;
+      if (hasAofMaxSizePercent()) {
+        if (!getAofMaxSizePercent()
+            .equals(other.getAofMaxSizePercent())) return false;
+      }
+      if (hasActivedefrag() != other.hasActivedefrag()) return false;
+      if (hasActivedefrag()) {
+        if (!getActivedefrag()
+            .equals(other.getActivedefrag())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3627,6 +3807,14 @@ public final class Redis {
       if (hasZsetMaxListpackEntries()) {
         hash = (37 * hash) + ZSET_MAX_LISTPACK_ENTRIES_FIELD_NUMBER;
         hash = (53 * hash) + getZsetMaxListpackEntries().hashCode();
+      }
+      if (hasAofMaxSizePercent()) {
+        hash = (37 * hash) + AOF_MAX_SIZE_PERCENT_FIELD_NUMBER;
+        hash = (53 * hash) + getAofMaxSizePercent().hashCode();
+      }
+      if (hasActivedefrag()) {
+        hash = (37 * hash) + ACTIVEDEFRAG_FIELD_NUMBER;
+        hash = (53 * hash) + getActivedefrag().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3886,6 +4074,18 @@ public final class Redis {
           zsetMaxListpackEntries_ = null;
           zsetMaxListpackEntriesBuilder_ = null;
         }
+        if (aofMaxSizePercentBuilder_ == null) {
+          aofMaxSizePercent_ = null;
+        } else {
+          aofMaxSizePercent_ = null;
+          aofMaxSizePercentBuilder_ = null;
+        }
+        if (activedefragBuilder_ == null) {
+          activedefrag_ = null;
+        } else {
+          activedefrag_ = null;
+          activedefragBuilder_ = null;
+        }
         return this;
       }
 
@@ -4010,6 +4210,16 @@ public final class Redis {
         } else {
           result.zsetMaxListpackEntries_ = zsetMaxListpackEntriesBuilder_.build();
         }
+        if (aofMaxSizePercentBuilder_ == null) {
+          result.aofMaxSizePercent_ = aofMaxSizePercent_;
+        } else {
+          result.aofMaxSizePercent_ = aofMaxSizePercentBuilder_.build();
+        }
+        if (activedefragBuilder_ == null) {
+          result.activedefrag_ = activedefrag_;
+        } else {
+          result.activedefrag_ = activedefragBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4125,6 +4335,12 @@ public final class Redis {
         }
         if (other.hasZsetMaxListpackEntries()) {
           mergeZsetMaxListpackEntries(other.getZsetMaxListpackEntries());
+        }
+        if (other.hasAofMaxSizePercent()) {
+          mergeAofMaxSizePercent(other.getAofMaxSizePercent());
+        }
+        if (other.hasActivedefrag()) {
+          mergeActivedefrag(other.getActivedefrag());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7389,6 +7605,316 @@ public final class Redis {
         }
         return zsetMaxListpackEntriesBuilder_;
       }
+
+      private com.google.protobuf.Int64Value aofMaxSizePercent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> aofMaxSizePercentBuilder_;
+      /**
+       * <pre>
+       * AOF maximum size as a percentage of disk available
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+       * @return Whether the aofMaxSizePercent field is set.
+       */
+      public boolean hasAofMaxSizePercent() {
+        return aofMaxSizePercentBuilder_ != null || aofMaxSizePercent_ != null;
+      }
+      /**
+       * <pre>
+       * AOF maximum size as a percentage of disk available
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+       * @return The aofMaxSizePercent.
+       */
+      public com.google.protobuf.Int64Value getAofMaxSizePercent() {
+        if (aofMaxSizePercentBuilder_ == null) {
+          return aofMaxSizePercent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : aofMaxSizePercent_;
+        } else {
+          return aofMaxSizePercentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * AOF maximum size as a percentage of disk available
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+       */
+      public Builder setAofMaxSizePercent(com.google.protobuf.Int64Value value) {
+        if (aofMaxSizePercentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          aofMaxSizePercent_ = value;
+          onChanged();
+        } else {
+          aofMaxSizePercentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AOF maximum size as a percentage of disk available
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+       */
+      public Builder setAofMaxSizePercent(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (aofMaxSizePercentBuilder_ == null) {
+          aofMaxSizePercent_ = builderForValue.build();
+          onChanged();
+        } else {
+          aofMaxSizePercentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AOF maximum size as a percentage of disk available
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+       */
+      public Builder mergeAofMaxSizePercent(com.google.protobuf.Int64Value value) {
+        if (aofMaxSizePercentBuilder_ == null) {
+          if (aofMaxSizePercent_ != null) {
+            aofMaxSizePercent_ =
+              com.google.protobuf.Int64Value.newBuilder(aofMaxSizePercent_).mergeFrom(value).buildPartial();
+          } else {
+            aofMaxSizePercent_ = value;
+          }
+          onChanged();
+        } else {
+          aofMaxSizePercentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AOF maximum size as a percentage of disk available
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+       */
+      public Builder clearAofMaxSizePercent() {
+        if (aofMaxSizePercentBuilder_ == null) {
+          aofMaxSizePercent_ = null;
+          onChanged();
+        } else {
+          aofMaxSizePercent_ = null;
+          aofMaxSizePercentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AOF maximum size as a percentage of disk available
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAofMaxSizePercentBuilder() {
+        
+        onChanged();
+        return getAofMaxSizePercentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * AOF maximum size as a percentage of disk available
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAofMaxSizePercentOrBuilder() {
+        if (aofMaxSizePercentBuilder_ != null) {
+          return aofMaxSizePercentBuilder_.getMessageOrBuilder();
+        } else {
+          return aofMaxSizePercent_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : aofMaxSizePercent_;
+        }
+      }
+      /**
+       * <pre>
+       * AOF maximum size as a percentage of disk available
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value aof_max_size_percent = 23 [(.yandex.cloud.value) = "1-99"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAofMaxSizePercentFieldBuilder() {
+        if (aofMaxSizePercentBuilder_ == null) {
+          aofMaxSizePercentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAofMaxSizePercent(),
+                  getParentForChildren(),
+                  isClean());
+          aofMaxSizePercent_ = null;
+        }
+        return aofMaxSizePercentBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue activedefrag_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> activedefragBuilder_;
+      /**
+       * <pre>
+       * Enable active (online) memory defragmentation
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+       * @return Whether the activedefrag field is set.
+       */
+      public boolean hasActivedefrag() {
+        return activedefragBuilder_ != null || activedefrag_ != null;
+      }
+      /**
+       * <pre>
+       * Enable active (online) memory defragmentation
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+       * @return The activedefrag.
+       */
+      public com.google.protobuf.BoolValue getActivedefrag() {
+        if (activedefragBuilder_ == null) {
+          return activedefrag_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : activedefrag_;
+        } else {
+          return activedefragBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable active (online) memory defragmentation
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+       */
+      public Builder setActivedefrag(com.google.protobuf.BoolValue value) {
+        if (activedefragBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          activedefrag_ = value;
+          onChanged();
+        } else {
+          activedefragBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable active (online) memory defragmentation
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+       */
+      public Builder setActivedefrag(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (activedefragBuilder_ == null) {
+          activedefrag_ = builderForValue.build();
+          onChanged();
+        } else {
+          activedefragBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable active (online) memory defragmentation
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+       */
+      public Builder mergeActivedefrag(com.google.protobuf.BoolValue value) {
+        if (activedefragBuilder_ == null) {
+          if (activedefrag_ != null) {
+            activedefrag_ =
+              com.google.protobuf.BoolValue.newBuilder(activedefrag_).mergeFrom(value).buildPartial();
+          } else {
+            activedefrag_ = value;
+          }
+          onChanged();
+        } else {
+          activedefragBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable active (online) memory defragmentation
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+       */
+      public Builder clearActivedefrag() {
+        if (activedefragBuilder_ == null) {
+          activedefrag_ = null;
+          onChanged();
+        } else {
+          activedefrag_ = null;
+          activedefragBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable active (online) memory defragmentation
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getActivedefragBuilder() {
+        
+        onChanged();
+        return getActivedefragFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable active (online) memory defragmentation
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getActivedefragOrBuilder() {
+        if (activedefragBuilder_ != null) {
+          return activedefragBuilder_.getMessageOrBuilder();
+        } else {
+          return activedefrag_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : activedefrag_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable active (online) memory defragmentation
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue activedefrag = 24;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getActivedefragFieldBuilder() {
+        if (activedefragBuilder_ == null) {
+          activedefragBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getActivedefrag(),
+                  getParentForChildren(),
+                  isClean());
+          activedefrag_ = null;
+        }
+        return activedefragBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8691,7 +9217,7 @@ public final class Redis {
       "\n,yandex/cloud/mdb/redis/v1/config/redis" +
       ".proto\022 yandex.cloud.mdb.redis.v1.config" +
       "\032\036google/protobuf/wrappers.proto\032\035yandex" +
-      "/cloud/validation.proto\"\203\017\n\013RedisConfig\022" +
+      "/cloud/validation.proto\"\372\017\n\013RedisConfig\022" +
       "W\n\020maxmemory_policy\030\001 \001(\0162=.yandex.cloud" +
       ".mdb.redis.v1.config.RedisConfig.Maxmemo" +
       "ryPolicy\022,\n\007timeout\030\002 \001(\0132\033.google.proto" +
@@ -8729,26 +9255,29 @@ public final class Redis {
       "e\0226\n\022io_threads_allowed\030\025 \001(\0132\032.google.p" +
       "rotobuf.BoolValue\022K\n\031zset_max_listpack_e" +
       "ntries\030\026 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\013\372\3071\00732-2048\032\325\001\n\027ClientOutputBufferLim" +
-      "it\0228\n\nhard_limit\030\001 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\0228\n\nsoft_limit\030\003 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022:" +
-      "\n\014soft_seconds\030\005 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\003>=0J\004\010\004\020\005J\004\010\002\020\003\"\304\001\n\017Maxme" +
-      "moryPolicy\022 \n\034MAXMEMORY_POLICY_UNSPECIFI" +
-      "ED\020\000\022\020\n\014VOLATILE_LRU\020\001\022\017\n\013ALLKEYS_LRU\020\002\022" +
-      "\020\n\014VOLATILE_LFU\020\003\022\017\n\013ALLKEYS_LFU\020\004\022\023\n\017VO" +
-      "LATILE_RANDOM\020\005\022\022\n\016ALLKEYS_RANDOM\020\006\022\020\n\014V" +
-      "OLATILE_TTL\020\007\022\016\n\nNOEVICTION\020\010\"\344\001\n\016RedisC" +
-      "onfigSet\022G\n\020effective_config\030\001 \001(\0132-.yan" +
-      "dex.cloud.mdb.redis.v1.config.RedisConfi" +
-      "g\022B\n\013user_config\030\002 \001(\0132-.yandex.cloud.md" +
-      "b.redis.v1.config.RedisConfig\022E\n\016default" +
-      "_config\030\003 \001(\0132-.yandex.cloud.mdb.redis.v" +
-      "1.config.RedisConfigBr\n$yandex.cloud.api" +
-      ".mdb.redis.v1.configZJgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/redis" +
-      "/v1/config;redisb\006proto3"
+      "eB\013\372\3071\00732-2048\022C\n\024aof_max_size_percent\030\027" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\010\372\3071\0041" +
+      "-99\0220\n\014activedefrag\030\030 \001(\0132\032.google.proto" +
+      "buf.BoolValue\032\325\001\n\027ClientOutputBufferLimi" +
+      "t\0228\n\nhard_limit\030\001 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\0228\n\nsoft_limit\030\003 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022:\n" +
+      "\014soft_seconds\030\005 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0J\004\010\004\020\005J\004\010\002\020\003\"\304\001\n\017Maxmem" +
+      "oryPolicy\022 \n\034MAXMEMORY_POLICY_UNSPECIFIE" +
+      "D\020\000\022\020\n\014VOLATILE_LRU\020\001\022\017\n\013ALLKEYS_LRU\020\002\022\020" +
+      "\n\014VOLATILE_LFU\020\003\022\017\n\013ALLKEYS_LFU\020\004\022\023\n\017VOL" +
+      "ATILE_RANDOM\020\005\022\022\n\016ALLKEYS_RANDOM\020\006\022\020\n\014VO" +
+      "LATILE_TTL\020\007\022\016\n\nNOEVICTION\020\010\"\344\001\n\016RedisCo" +
+      "nfigSet\022G\n\020effective_config\030\001 \001(\0132-.yand" +
+      "ex.cloud.mdb.redis.v1.config.RedisConfig" +
+      "\022B\n\013user_config\030\002 \001(\0132-.yandex.cloud.mdb" +
+      ".redis.v1.config.RedisConfig\022E\n\016default_" +
+      "config\030\003 \001(\0132-.yandex.cloud.mdb.redis.v1" +
+      ".config.RedisConfigBr\n$yandex.cloud.api." +
+      "mdb.redis.v1.configZJgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/mdb/redis/" +
+      "v1/config;redisb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8761,7 +9290,7 @@ public final class Redis {
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_descriptor,
-        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", "ClientOutputBufferLimitPubsub", "ClientOutputBufferLimitNormal", "MaxmemoryPercent", "LuaTimeLimit", "ReplBacklogSizePercent", "ClusterRequireFullCoverage", "ClusterAllowReadsWhenDown", "ClusterAllowPubsubshardWhenDown", "LfuDecayTime", "LfuLogFactor", "TurnBeforeSwitchover", "AllowDataLoss", "UseLuajit", "IoThreadsAllowed", "ZsetMaxListpackEntries", });
+        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", "ClientOutputBufferLimitPubsub", "ClientOutputBufferLimitNormal", "MaxmemoryPercent", "LuaTimeLimit", "ReplBacklogSizePercent", "ClusterRequireFullCoverage", "ClusterAllowReadsWhenDown", "ClusterAllowPubsubshardWhenDown", "LfuDecayTime", "LfuLogFactor", "TurnBeforeSwitchover", "AllowDataLoss", "UseLuajit", "IoThreadsAllowed", "ZsetMaxListpackEntries", "AofMaxSizePercent", "Activedefrag", });
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_ClientOutputBufferLimit_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig_ClientOutputBufferLimit_fieldAccessorTable = new

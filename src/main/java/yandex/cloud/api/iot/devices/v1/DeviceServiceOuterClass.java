@@ -1815,7 +1815,7 @@ public final class DeviceServiceOuterClass {
      * Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-20000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -2158,7 +2158,7 @@ public final class DeviceServiceOuterClass {
      * Default value: 100.
      * </pre>
      *
-     * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-20000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -2920,7 +2920,7 @@ public final class DeviceServiceOuterClass {
        * Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-20000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -2935,7 +2935,7 @@ public final class DeviceServiceOuterClass {
        * Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-20000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -2953,7 +2953,7 @@ public final class DeviceServiceOuterClass {
        * Default value: 100.
        * </pre>
        *
-       * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-20000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -4503,6 +4503,60 @@ public final class DeviceServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.CreateDeviceRequest}
@@ -4601,6 +4655,19 @@ public final class DeviceServiceOuterClass {
               password_ = s;
               break;
             }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4635,6 +4702,8 @@ public final class DeviceServiceOuterClass {
       switch (number) {
         case 5:
           return internalGetTopicAliases();
+        case 7:
+          return internalGetLabels();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -5609,6 +5678,103 @@ public final class DeviceServiceOuterClass {
       }
     }
 
+    public static final int LABELS_FIELD_NUMBER = 7;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5644,6 +5810,12 @@ public final class DeviceServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, password_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          7);
       unknownFields.writeTo(output);
     }
 
@@ -5679,6 +5851,16 @@ public final class DeviceServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, password_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5706,6 +5888,8 @@ public final class DeviceServiceOuterClass {
           other.internalGetTopicAliases())) return false;
       if (!getPassword()
           .equals(other.getPassword())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5733,6 +5917,10 @@ public final class DeviceServiceOuterClass {
       }
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
       hash = (53 * hash) + getPassword().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5846,6 +6034,8 @@ public final class DeviceServiceOuterClass {
         switch (number) {
           case 5:
             return internalGetTopicAliases();
+          case 7:
+            return internalGetLabels();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -5857,6 +6047,8 @@ public final class DeviceServiceOuterClass {
         switch (number) {
           case 5:
             return internalGetMutableTopicAliases();
+          case 7:
+            return internalGetMutableLabels();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -5904,6 +6096,7 @@ public final class DeviceServiceOuterClass {
         internalGetMutableTopicAliases().clear();
         password_ = "";
 
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -5946,6 +6139,8 @@ public final class DeviceServiceOuterClass {
         result.topicAliases_ = internalGetTopicAliases();
         result.topicAliases_.makeImmutable();
         result.password_ = password_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -6038,6 +6233,8 @@ public final class DeviceServiceOuterClass {
           password_ = other.password_;
           onChanged();
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6939,6 +7136,165 @@ public final class DeviceServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 7 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7747,6 +8103,60 @@ public final class DeviceServiceOuterClass {
 
     java.lang.String getTopicAliasesOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.iot.devices.v1.UpdateDeviceRequest}
@@ -7841,6 +8251,19 @@ public final class DeviceServiceOuterClass {
                   topicAliases__.getKey(), topicAliases__.getValue());
               break;
             }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7872,6 +8295,8 @@ public final class DeviceServiceOuterClass {
       switch (number) {
         case 5:
           return internalGetTopicAliases();
+        case 6:
+          return internalGetLabels();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -8164,6 +8589,103 @@ public final class DeviceServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int LABELS_FIELD_NUMBER = 6;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8196,6 +8718,12 @@ public final class DeviceServiceOuterClass {
           internalGetTopicAliases(),
           TopicAliasesDefaultEntryHolder.defaultEntry,
           5);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          6);
       unknownFields.writeTo(output);
     }
 
@@ -8228,6 +8756,16 @@ public final class DeviceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, topicAliases__);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8256,6 +8794,8 @@ public final class DeviceServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetTopicAliases().equals(
           other.internalGetTopicAliases())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8280,6 +8820,10 @@ public final class DeviceServiceOuterClass {
       if (!internalGetTopicAliases().getMap().isEmpty()) {
         hash = (37 * hash) + TOPIC_ALIASES_FIELD_NUMBER;
         hash = (53 * hash) + internalGetTopicAliases().hashCode();
+      }
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8394,6 +8938,8 @@ public final class DeviceServiceOuterClass {
         switch (number) {
           case 5:
             return internalGetTopicAliases();
+          case 6:
+            return internalGetLabels();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -8405,6 +8951,8 @@ public final class DeviceServiceOuterClass {
         switch (number) {
           case 5:
             return internalGetMutableTopicAliases();
+          case 6:
+            return internalGetMutableLabels();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -8449,6 +8997,7 @@ public final class DeviceServiceOuterClass {
         description_ = "";
 
         internalGetMutableTopicAliases().clear();
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -8486,6 +9035,8 @@ public final class DeviceServiceOuterClass {
         result.description_ = description_;
         result.topicAliases_ = internalGetTopicAliases();
         result.topicAliases_.makeImmutable();
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -8551,6 +9102,8 @@ public final class DeviceServiceOuterClass {
         }
         internalGetMutableTopicAliases().mergeFrom(
             other.internalGetTopicAliases());
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9191,6 +9744,165 @@ public final class DeviceServiceOuterClass {
       public Builder putAllTopicAliases(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableTopicAliases().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 6 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
             .putAll(values);
         return this;
       }
@@ -22727,6 +23439,11 @@ public final class DeviceServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_TopicAliasesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_Certificate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -22746,6 +23463,11 @@ public final class DeviceServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_TopicAliasesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceMetadata_descriptor;
   private static final 
@@ -22854,136 +23576,146 @@ public final class DeviceServiceOuterClass {
       "stry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\013device_na" +
       "me\030\002 \001(\tB\036\350\3071\001\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*" +
       "\022<\n\013device_view\030\003 \001(\0162\'.yandex.cloud.iot" +
-      ".devices.v1.DeviceView\"\334\001\n\022ListDevicesRe" +
+      ".devices.v1.DeviceView\"\335\001\n\022ListDevicesRe" +
       "quest\022\037\n\013registry_id\030\001 \001(\tB\010\212\3101\004<=50H\000\022\035" +
-      "\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022\035\n\tpage_si" +
-      "ze\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\t" +
-      "B\t\212\3101\005<=100\022<\n\013device_view\030\005 \001(\0162\'.yande" +
-      "x.cloud.iot.devices.v1.DeviceViewB\n\n\002id\022" +
-      "\004\300\3011\001\"d\n\023ListDevicesResponse\0224\n\007devices\030" +
-      "\001 \003(\0132#.yandex.cloud.iot.devices.v1.Devi" +
-      "ce\022\027\n\017next_page_token\030\002 \001(\t\"\245\003\n\023CreateDe" +
-      "viceRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=50\362\3071\016[a" +
-      "-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<" +
-      "=256\022R\n\014certificates\030\004 \003(\0132<.yandex.clou" +
-      "d.iot.devices.v1.CreateDeviceRequest.Cer" +
-      "tificate\022Y\n\rtopic_aliases\030\005 \003(\0132B.yandex" +
-      ".cloud.iot.devices.v1.CreateDeviceReques" +
-      "t.TopicAliasesEntry\022\020\n\010password\030\006 \001(\t\0323\n" +
-      "\021TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\032\'\n\013Certificate\022\030\n\020certificate" +
-      "_data\030\001 \001(\t\")\n\024CreateDeviceMetadata\022\021\n\td" +
-      "evice_id\030\001 \001(\t\"\301\002\n\023UpdateDeviceRequest\022\037" +
-      "\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013updat" +
-      "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
-      "\022(\n\004name\030\003 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-" +
-      "]*\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022Y\n\rto" +
-      "pic_aliases\030\005 \003(\0132B.yandex.cloud.iot.dev" +
-      "ices.v1.UpdateDeviceRequest.TopicAliases" +
-      "Entry\0323\n\021TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\")\n\024UpdateDeviceMetada" +
-      "ta\022\021\n\tdevice_id\030\001 \001(\t\"6\n\023DeleteDeviceReq" +
-      "uest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n" +
-      "\024DeleteDeviceMetadata\022\021\n\tdevice_id\030\001 \001(\t" +
-      "\"@\n\035ListDeviceCertificatesRequest\022\037\n\tdev" +
-      "ice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"f\n\036ListDevice" +
-      "CertificatesResponse\022D\n\014certificates\030\001 \003" +
-      "(\0132..yandex.cloud.iot.devices.v1.DeviceC" +
-      "ertificate\"^\n\033AddDeviceCertificateReques" +
-      "t\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020ce" +
-      "rtificate_data\030\003 \001(\tJ\004\010\002\020\003\"F\n\034AddDeviceC" +
-      "ertificateMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023\n" +
-      "\013fingerprint\030\002 \001(\t\"d\n\036DeleteDeviceCertif" +
-      "icateRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"e\n\037DeleteDeviceCertificateMetadata\022\037\n\td" +
+      "\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022\036\n\tpage_si" +
+      "ze\030\003 \001(\003B\013\372\3071\0070-20000\022\035\n\npage_token\030\004 \001(" +
+      "\tB\t\212\3101\005<=100\022<\n\013device_view\030\005 \001(\0162\'.yand" +
+      "ex.cloud.iot.devices.v1.DeviceViewB\n\n\002id" +
+      "\022\004\300\3011\001\"d\n\023ListDevicesResponse\0224\n\007devices" +
+      "\030\001 \003(\0132#.yandex.cloud.iot.devices.v1.Dev" +
+      "ice\022\027\n\017next_page_token\030\002 \001(\t\"\344\004\n\023CreateD" +
+      "eviceRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=50\362\3071\016[" +
+      "a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005" +
+      "<=256\022R\n\014certificates\030\004 \003(\0132<.yandex.clo" +
+      "ud.iot.devices.v1.CreateDeviceRequest.Ce" +
+      "rtificate\022Y\n\rtopic_aliases\030\005 \003(\0132B.yande" +
+      "x.cloud.iot.devices.v1.CreateDeviceReque" +
+      "st.TopicAliasesEntry\022\020\n\010password\030\006 \001(\t\022\215" +
+      "\001\n\006labels\030\007 \003(\0132<.yandex.cloud.iot.devic" +
+      "es.v1.CreateDeviceRequest.LabelsEntryB?\202" +
+      "\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63" +
+      "\262\3101\022\022\020[a-z][-_0-9a-z]*\0323\n\021TopicAliasesEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032-\n\013L" +
+      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
+      "8\001\032\'\n\013Certificate\022\030\n\020certificate_data\030\001 " +
+      "\001(\t\")\n\024CreateDeviceMetadata\022\021\n\tdevice_id" +
+      "\030\001 \001(\t\"\200\004\n\023UpdateDeviceRequest\022\037\n\tdevice" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002" +
+      " \001(\0132\032.google.protobuf.FieldMask\022(\n\004name" +
+      "\030\003 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013de" +
+      "scription\030\004 \001(\tB\t\212\3101\005<=256\022Y\n\rtopic_alia" +
+      "ses\030\005 \003(\0132B.yandex.cloud.iot.devices.v1." +
+      "UpdateDeviceRequest.TopicAliasesEntry\022\215\001" +
+      "\n\006labels\030\006 \003(\0132<.yandex.cloud.iot.device" +
+      "s.v1.UpdateDeviceRequest.LabelsEntryB?\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\0323\n\021TopicAliasesEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\")\n\024UpdateDeviceMetadata\022\021\n\tdevice_id\030\001" +
+      " \001(\t\"6\n\023DeleteDeviceRequest\022\037\n\tdevice_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteDeviceMeta" +
+      "data\022\021\n\tdevice_id\030\001 \001(\t\"@\n\035ListDeviceCer" +
+      "tificatesRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"f\n\036ListDeviceCertificatesRespo" +
+      "nse\022D\n\014certificates\030\001 \003(\0132..yandex.cloud" +
+      ".iot.devices.v1.DeviceCertificate\"^\n\033Add" +
+      "DeviceCertificateRequest\022\037\n\tdevice_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020certificate_data\030\003 " +
+      "\001(\tJ\004\010\002\020\003\"F\n\034AddDeviceCertificateMetadat" +
+      "a\022\021\n\tdevice_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(" +
+      "\t\"d\n\036DeleteDeviceCertificateRequest\022\037\n\td" +
       "evice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerpr" +
-      "int\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"=\n\032ListDevicePas" +
-      "swordsRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"]\n\033ListDevicePasswordsResponse\022>\n" +
-      "\tpasswords\030\001 \003(\0132+.yandex.cloud.iot.devi" +
-      "ces.v1.DevicePassword\"W\n\030AddDevicePasswo" +
-      "rdRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\032\n\010password\030\002 \001(\tB\010\212\3101\004>=14\"C\n\031AddDev" +
-      "icePasswordMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023" +
-      "\n\013password_id\030\002 \001(\t\"a\n\033DeleteDevicePassw" +
-      "ordRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b" +
-      "\n\034DeleteDevicePasswordMetadata\022\037\n\tdevice" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\033ListDeviceOperati" +
-      "onsRequest\022\027\n\tdevice_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tp" +
-      "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
-      "\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
-      "=1000\"n\n\034ListDeviceOperationsResponse\0225\n" +
-      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
-      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t2\260\023" +
-      "\n\rDeviceService\022\206\001\n\003Get\022-.yandex.cloud.i" +
-      "ot.devices.v1.GetDeviceRequest\032#.yandex." +
-      "cloud.iot.devices.v1.Device\"+\202\323\344\223\002%\022#/io" +
-      "t-devices/v1/devices/{device_id}\022\220\001\n\tGet" +
-      "ByName\0223.yandex.cloud.iot.devices.v1.Get" +
-      "ByNameDeviceRequest\032#.yandex.cloud.iot.d" +
-      "evices.v1.Device\")\202\323\344\223\002#\022!/iot-devices/v" +
-      "1/devices:getByName\022\212\001\n\004List\022/.yandex.cl" +
-      "oud.iot.devices.v1.ListDevicesRequest\0320." +
-      "yandex.cloud.iot.devices.v1.ListDevicesR" +
-      "esponse\"\037\202\323\344\223\002\031\022\027/iot-devices/v1/devices" +
-      "\022\243\001\n\006Create\0220.yandex.cloud.iot.devices.v" +
-      "1.CreateDeviceRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"D\202\323\344\223\002\034\"\027/iot-devices/v" +
-      "1/devices:\001*\262\322*\036\n\024CreateDeviceMetadata\022\006" +
-      "Device\022\257\001\n\006Update\0220.yandex.cloud.iot.dev" +
-      "ices.v1.UpdateDeviceRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"P\202\323\344\223\002(2#/iot-dev" +
-      "ices/v1/devices/{device_id}:\001*\262\322*\036\n\024Upda" +
-      "teDeviceMetadata\022\006Device\022\273\001\n\006Delete\0220.ya" +
-      "ndex.cloud.iot.devices.v1.DeleteDeviceRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\\\202\323\344\223\002%*#/iot-devices/v1/devices/{devic" +
-      "e_id}\262\322*-\n\024DeleteDeviceMetadata\022\025google." +
-      "protobuf.Empty\022\305\001\n\020ListCertificates\022:.ya" +
-      "ndex.cloud.iot.devices.v1.ListDeviceCert" +
-      "ificatesRequest\032;.yandex.cloud.iot.devic" +
-      "es.v1.ListDeviceCertificatesResponse\"8\202\323" +
-      "\344\223\0022\0220/iot-devices/v1/devices/{device_id" +
-      "}/certificates\022\337\001\n\016AddCertificate\0228.yand" +
-      "ex.cloud.iot.devices.v1.AddDeviceCertifi" +
-      "cateRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"p\202\323\344\223\0025\"0/iot-devices/v1/devices/" +
-      "{device_id}/certificates:\001*\262\322*1\n\034AddDevi" +
-      "ceCertificateMetadata\022\021DeviceCertificate" +
-      "\022\370\001\n\021DeleteCertificate\022;.yandex.cloud.io" +
-      "t.devices.v1.DeleteDeviceCertificateRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\202" +
-      "\001\202\323\344\223\002@*>/iot-devices/v1/devices/{device" +
-      "_id}/certificates/{fingerprint}\262\322*8\n\037Del" +
-      "eteDeviceCertificateMetadata\022\025google.pro" +
-      "tobuf.Empty\022\271\001\n\rListPasswords\0227.yandex.c" +
+      "int\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\037DeleteDeviceC" +
+      "ertificateMetadata\022\037\n\tdevice_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\"=\n\032ListDevicePasswordsRequest\022\037\n\t" +
+      "device_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"]\n\033ListDev" +
+      "icePasswordsResponse\022>\n\tpasswords\030\001 \003(\0132" +
+      "+.yandex.cloud.iot.devices.v1.DevicePass" +
+      "word\"W\n\030AddDevicePasswordRequest\022\037\n\tdevi" +
+      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010password\030\002 " +
+      "\001(\tB\010\212\3101\004>=14\"C\n\031AddDevicePasswordMetada" +
+      "ta\022\021\n\tdevice_id\030\001 \001(\t\022\023\n\013password_id\030\002 \001" +
+      "(\t\"a\n\033DeleteDevicePasswordRequest\022\037\n\tdev" +
+      "ice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_i" +
+      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\034DeleteDevicePas" +
+      "swordMetadata\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\"\220\001\n\033ListDeviceOperationsRequest\022\027\n\tdev" +
+      "ice_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"n\n\034ListDevi" +
+      "ceOperationsResponse\0225\n\noperations\030\001 \003(\013" +
+      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t2\260\023\n\rDeviceService\022\206" +
+      "\001\n\003Get\022-.yandex.cloud.iot.devices.v1.Get" +
+      "DeviceRequest\032#.yandex.cloud.iot.devices" +
+      ".v1.Device\"+\202\323\344\223\002%\022#/iot-devices/v1/devi" +
+      "ces/{device_id}\022\220\001\n\tGetByName\0223.yandex.c" +
+      "loud.iot.devices.v1.GetByNameDeviceReque" +
+      "st\032#.yandex.cloud.iot.devices.v1.Device\"" +
+      ")\202\323\344\223\002#\022!/iot-devices/v1/devices:getByNa" +
+      "me\022\212\001\n\004List\022/.yandex.cloud.iot.devices.v" +
+      "1.ListDevicesRequest\0320.yandex.cloud.iot." +
+      "devices.v1.ListDevicesResponse\"\037\202\323\344\223\002\031\022\027" +
+      "/iot-devices/v1/devices\022\243\001\n\006Create\0220.yan" +
+      "dex.cloud.iot.devices.v1.CreateDeviceReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "D\202\323\344\223\002\034\"\027/iot-devices/v1/devices:\001*\262\322*\036\n" +
+      "\024CreateDeviceMetadata\022\006Device\022\257\001\n\006Update" +
+      "\0220.yandex.cloud.iot.devices.v1.UpdateDev" +
+      "iceRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"P\202\323\344\223\002(2#/iot-devices/v1/devices/{" +
+      "device_id}:\001*\262\322*\036\n\024UpdateDeviceMetadata\022" +
+      "\006Device\022\273\001\n\006Delete\0220.yandex.cloud.iot.de" +
+      "vices.v1.DeleteDeviceRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"\\\202\323\344\223\002%*#/iot-de" +
+      "vices/v1/devices/{device_id}\262\322*-\n\024Delete" +
+      "DeviceMetadata\022\025google.protobuf.Empty\022\305\001" +
+      "\n\020ListCertificates\022:.yandex.cloud.iot.de" +
+      "vices.v1.ListDeviceCertificatesRequest\032;" +
+      ".yandex.cloud.iot.devices.v1.ListDeviceC" +
+      "ertificatesResponse\"8\202\323\344\223\0022\0220/iot-device" +
+      "s/v1/devices/{device_id}/certificates\022\337\001" +
+      "\n\016AddCertificate\0228.yandex.cloud.iot.devi" +
+      "ces.v1.AddDeviceCertificateRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"p\202\323\344\223\0025\"0/" +
+      "iot-devices/v1/devices/{device_id}/certi" +
+      "ficates:\001*\262\322*1\n\034AddDeviceCertificateMeta" +
+      "data\022\021DeviceCertificate\022\370\001\n\021DeleteCertif" +
+      "icate\022;.yandex.cloud.iot.devices.v1.Dele" +
+      "teDeviceCertificateRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\202\001\202\323\344\223\002@*>/iot-dev" +
+      "ices/v1/devices/{device_id}/certificates" +
+      "/{fingerprint}\262\322*8\n\037DeleteDeviceCertific" +
+      "ateMetadata\022\025google.protobuf.Empty\022\271\001\n\rL" +
+      "istPasswords\0227.yandex.cloud.iot.devices." +
+      "v1.ListDevicePasswordsRequest\0328.yandex.c" +
       "loud.iot.devices.v1.ListDevicePasswordsR" +
-      "equest\0328.yandex.cloud.iot.devices.v1.Lis" +
-      "tDevicePasswordsResponse\"5\202\323\344\223\002/\022-/iot-d" +
-      "evices/v1/devices/{device_id}/passwords\022" +
-      "\320\001\n\013AddPassword\0225.yandex.cloud.iot.devic" +
-      "es.v1.AddDevicePasswordRequest\032!.yandex." +
-      "cloud.operation.Operation\"g\202\323\344\223\0022\"-/iot-" +
+      "esponse\"5\202\323\344\223\002/\022-/iot-devices/v1/devices" +
+      "/{device_id}/passwords\022\320\001\n\013AddPassword\0225" +
+      ".yandex.cloud.iot.devices.v1.AddDevicePa" +
+      "sswordRequest\032!.yandex.cloud.operation.O" +
+      "peration\"g\202\323\344\223\0022\"-/iot-devices/v1/device" +
+      "s/{device_id}/passwords:\001*\262\322*+\n\031AddDevic" +
+      "ePasswordMetadata\022\016DevicePassword\022\353\001\n\016De" +
+      "letePassword\0228.yandex.cloud.iot.devices." +
+      "v1.DeleteDevicePasswordRequest\032!.yandex." +
+      "cloud.operation.Operation\"|\202\323\344\223\002=*;/iot-" +
       "devices/v1/devices/{device_id}/passwords" +
-      ":\001*\262\322*+\n\031AddDevicePasswordMetadata\022\016Devi" +
-      "cePassword\022\353\001\n\016DeletePassword\0228.yandex.c" +
-      "loud.iot.devices.v1.DeleteDevicePassword" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"|\202\323\344\223\002=*;/iot-devices/v1/devices/{dev" +
-      "ice_id}/passwords/{password_id}\262\322*5\n\034Del" +
-      "eteDevicePasswordMetadata\022\025google.protob" +
-      "uf.Empty\022\275\001\n\016ListOperations\0228.yandex.clo" +
-      "ud.iot.devices.v1.ListDeviceOperationsRe" +
-      "quest\0329.yandex.cloud.iot.devices.v1.List" +
-      "DeviceOperationsResponse\"6\202\323\344\223\0020\022./iot-d" +
-      "evices/v1/devices/{device_id}/operations" +
-      "Bj\n\037yandex.cloud.api.iot.devices.v1ZGgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/iot/devices/v1;devicesb\006proto3"
+      "/{password_id}\262\322*5\n\034DeleteDevicePassword" +
+      "Metadata\022\025google.protobuf.Empty\022\275\001\n\016List" +
+      "Operations\0228.yandex.cloud.iot.devices.v1" +
+      ".ListDeviceOperationsRequest\0329.yandex.cl" +
+      "oud.iot.devices.v1.ListDeviceOperationsR" +
+      "esponse\"6\202\323\344\223\0020\022./iot-devices/v1/devices" +
+      "/{device_id}/operationsBj\n\037yandex.cloud." +
+      "api.iot.devices.v1ZGgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/iot/devices" +
+      "/v1;devicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23024,15 +23756,21 @@ public final class DeviceServiceOuterClass {
     internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_descriptor,
-        new java.lang.String[] { "RegistryId", "Name", "Description", "Certificates", "TopicAliases", "Password", });
+        new java.lang.String[] { "RegistryId", "Name", "Description", "Certificates", "TopicAliases", "Password", "Labels", });
     internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_TopicAliasesEntry_descriptor =
       internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_TopicAliasesEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_TopicAliasesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_Certificate_descriptor =
+    internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_Certificate_descriptor =
+      internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_Certificate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_Certificate_descriptor,
@@ -23048,12 +23786,18 @@ public final class DeviceServiceOuterClass {
     internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_descriptor,
-        new java.lang.String[] { "DeviceId", "UpdateMask", "Name", "Description", "TopicAliases", });
+        new java.lang.String[] { "DeviceId", "UpdateMask", "Name", "Description", "TopicAliases", "Labels", });
     internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_TopicAliasesEntry_descriptor =
       internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_TopicAliasesEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_TopicAliasesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceMetadata_descriptor =
       getDescriptor().getMessageTypes().get(7);
@@ -23163,8 +23907,10 @@ public final class DeviceServiceOuterClass {
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

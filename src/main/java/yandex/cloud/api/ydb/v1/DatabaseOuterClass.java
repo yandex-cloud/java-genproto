@@ -535,6 +535,31 @@ public final class DatabaseOuterClass {
      */
     boolean getDeletionProtection();
 
+    /**
+     * <code>repeated string security_group_ids = 27;</code>
+     * @return A list containing the securityGroupIds.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <code>repeated string security_group_ids = 27;</code>
+     * @return The count of securityGroupIds.
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <code>repeated string security_group_ids = 27;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <code>repeated string security_group_ids = 27;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
+
     public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Database.DatabaseTypeCase getDatabaseTypeCase();
   }
   /**
@@ -567,6 +592,7 @@ public final class DatabaseOuterClass {
       documentApiEndpoint_ = "";
       kinesisApiEndpoint_ = "";
       kafkaApiEndpoint_ = "";
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -825,6 +851,15 @@ public final class DatabaseOuterClass {
               kafkaApiEndpoint_ = s;
               break;
             }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -842,6 +877,9 @@ public final class DatabaseOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           subnetIds_ = subnetIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1932,6 +1970,41 @@ public final class DatabaseOuterClass {
       return deletionProtection_;
     }
 
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 27;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <code>repeated string security_group_ids = 27;</code>
+     * @return A list containing the securityGroupIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <code>repeated string security_group_ids = 27;</code>
+     * @return The count of securityGroupIds.
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <code>repeated string security_group_ids = 27;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <code>repeated string security_group_ids = 27;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2023,6 +2096,9 @@ public final class DatabaseOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kafkaApiEndpoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 26, kafkaApiEndpoint_);
+      }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, securityGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2132,6 +2208,14 @@ public final class DatabaseOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kafkaApiEndpoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, kafkaApiEndpoint_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getSecurityGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2203,6 +2287,8 @@ public final class DatabaseOuterClass {
       }
       if (getDeletionProtection()
           != other.getDeletionProtection()) return false;
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
       if (!getDatabaseTypeCase().equals(other.getDatabaseTypeCase())) return false;
       switch (databaseTypeCase_) {
         case 14:
@@ -2293,6 +2379,10 @@ public final class DatabaseOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
       switch (databaseTypeCase_) {
         case 14:
           hash = (37 * hash) + ZONAL_DATABASE_FIELD_NUMBER;
@@ -2533,6 +2623,8 @@ public final class DatabaseOuterClass {
         }
         deletionProtection_ = false;
 
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         databaseTypeCase_ = 0;
         databaseType_ = null;
         return this;
@@ -2636,6 +2728,11 @@ public final class DatabaseOuterClass {
           result.monitoringConfig_ = monitoringConfigBuilder_.build();
         }
         result.deletionProtection_ = deletionProtection_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
         result.databaseTypeCase_ = databaseTypeCase_;
         onBuilt();
         return result;
@@ -2764,6 +2861,16 @@ public final class DatabaseOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
         }
         switch (other.getDatabaseTypeCase()) {
           case ZONAL_DATABASE: {
@@ -5251,6 +5358,116 @@ public final class DatabaseOuterClass {
       public Builder clearDeletionProtection() {
         
         deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string security_group_ids = 27;</code>
+       * @return A list containing the securityGroupIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string security_group_ids = 27;</code>
+       * @return The count of securityGroupIds.
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <code>repeated string security_group_ids = 27;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <code>repeated string security_group_ids = 27;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string security_group_ids = 27;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_group_ids = 27;</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_group_ids = 27;</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_group_ids = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_group_ids = 27;</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
         onChanged();
         return this;
       }
@@ -15342,6 +15559,31 @@ public final class DatabaseOuterClass {
      * @return The assignPublicIps.
      */
     boolean getAssignPublicIps();
+
+    /**
+     * <code>repeated string security_group_ids = 7;</code>
+     * @return A list containing the securityGroupIds.
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <code>repeated string security_group_ids = 7;</code>
+     * @return The count of securityGroupIds.
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <code>repeated string security_group_ids = 7;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <code>repeated string security_group_ids = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.DedicatedDatabase}
@@ -15359,6 +15601,7 @@ public final class DatabaseOuterClass {
       resourcePresetId_ = "";
       networkId_ = "";
       subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -15444,6 +15687,15 @@ public final class DatabaseOuterClass {
               assignPublicIps_ = input.readBool();
               break;
             }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15461,6 +15713,9 @@ public final class DatabaseOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           subnetIds_ = subnetIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -15653,6 +15908,41 @@ public final class DatabaseOuterClass {
       return assignPublicIps_;
     }
 
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 7;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <code>repeated string security_group_ids = 7;</code>
+     * @return A list containing the securityGroupIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <code>repeated string security_group_ids = 7;</code>
+     * @return The count of securityGroupIds.
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <code>repeated string security_group_ids = 7;</code>
+     * @param index The index of the element to return.
+     * @return The securityGroupIds at the given index.
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <code>repeated string security_group_ids = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the securityGroupIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15684,6 +15974,9 @@ public final class DatabaseOuterClass {
       }
       if (assignPublicIps_ != false) {
         output.writeBool(6, assignPublicIps_);
+      }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, securityGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -15720,6 +16013,14 @@ public final class DatabaseOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, assignPublicIps_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSecurityGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -15753,6 +16054,8 @@ public final class DatabaseOuterClass {
           .equals(other.getSubnetIdsList())) return false;
       if (getAssignPublicIps()
           != other.getAssignPublicIps()) return false;
+      if (!getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15783,6 +16086,10 @@ public final class DatabaseOuterClass {
       hash = (37 * hash) + ASSIGN_PUBLIC_IPS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAssignPublicIps());
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15936,6 +16243,8 @@ public final class DatabaseOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         assignPublicIps_ = false;
 
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -15981,6 +16290,11 @@ public final class DatabaseOuterClass {
         }
         result.subnetIds_ = subnetIds_;
         result.assignPublicIps_ = assignPublicIps_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
         onBuilt();
         return result;
       }
@@ -16055,6 +16369,16 @@ public final class DatabaseOuterClass {
         }
         if (other.getAssignPublicIps() != false) {
           setAssignPublicIps(other.getAssignPublicIps());
+        }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16613,6 +16937,116 @@ public final class DatabaseOuterClass {
       public Builder clearAssignPublicIps() {
         
         assignPublicIps_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string security_group_ids = 7;</code>
+       * @return A list containing the securityGroupIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string security_group_ids = 7;</code>
+       * @return The count of securityGroupIds.
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <code>repeated string security_group_ids = 7;</code>
+       * @param index The index of the element to return.
+       * @return The securityGroupIds at the given index.
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <code>repeated string security_group_ids = 7;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the securityGroupIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string security_group_ids = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The securityGroupIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_group_ids = 7;</code>
+       * @param value The securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_group_ids = 7;</code>
+       * @param values The securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_group_ids = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string security_group_ids = 7;</code>
+       * @param value The bytes of the securityGroupIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
         onChanged();
         return this;
       }
@@ -23328,7 +23762,7 @@ public final class DatabaseOuterClass {
       "\n\"yandex/cloud/ydb/v1/database.proto\022\023ya" +
       "ndex.cloud.ydb.v1\032\037google/protobuf/times" +
       "tamp.proto\032\035yandex/cloud/validation.prot" +
-      "o\032 yandex/cloud/ydb/v1/backup.proto\"\263\t\n\010" +
+      "o\032 yandex/cloud/ydb/v1/backup.proto\"\317\t\n\010" +
       "Database\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022" +
       ".\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Ti" +
       "mestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001" +
@@ -23353,82 +23787,83 @@ public final class DatabaseOuterClass {
       "\030\026 \001(\t\022\034\n\024kinesis_api_endpoint\030\027 \001(\t\022\032\n\022" +
       "kafka_api_endpoint\030\032 \001(\t\022@\n\021monitoring_c" +
       "onfig\030\030 \001(\0132%.yandex.cloud.ydb.v1.Monito" +
-      "ringConfig\022\033\n\023deletion_protection\030\031 \001(\010\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"\201\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
-      "\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\014\n\010UPDA" +
-      "TING\020\004\022\t\n\005ERROR\020\005\022\014\n\010DELETING\020\006\022\014\n\010START" +
-      "ING\020\007\022\013\n\007STOPPED\020\010B\017\n\rdatabase_typeJ\004\010\007\020" +
-      "\010\"\202\006\n\016AlertParameter\022Z\n\026double_parameter" +
-      "_value\030\001 \001(\01328.yandex.cloud.ydb.v1.Alert" +
-      "Parameter.DoubleParameterValueH\000\022\\\n\027inte" +
-      "ger_parameter_value\030\002 \001(\01329.yandex.cloud" +
-      ".ydb.v1.AlertParameter.IntegerParameterV" +
-      "alueH\000\022V\n\024text_parameter_value\030\003 \001(\01326.y" +
-      "andex.cloud.ydb.v1.AlertParameter.TextPa" +
-      "rameterValueH\000\022_\n\031text_list_parameter_va" +
-      "lue\030\004 \001(\0132:.yandex.cloud.ydb.v1.AlertPar" +
-      "ameter.TextListParameterValueH\000\022a\n\032label" +
-      "_list_parameter_value\030\005 \001(\0132;.yandex.clo" +
-      "ud.ydb.v1.AlertParameter.LabelListParame" +
-      "terValueH\000\0323\n\024DoubleParameterValue\022\014\n\004na" +
-      "me\030\001 \001(\t\022\r\n\005value\030\002 \001(\001\0324\n\025IntegerParame" +
-      "terValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\003\0321\n" +
-      "\022TextParameterValue\022\014\n\004name\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t\0326\n\026TextListParameterValue\022\014\n\004na" +
-      "me\030\001 \001(\t\022\016\n\006values\030\002 \003(\t\0327\n\027LabelListPar" +
-      "ameterValue\022\014\n\004name\030\001 \001(\t\022\016\n\006values\030\002 \003(" +
-      "\tB\013\n\tparameter\"\242\001\n\023NotificationChannel\022\037" +
-      "\n\027notification_channel_id\030\001 \001(\t\022I\n\025notif" +
-      "y_about_statuses\030\002 \003(\0162*.yandex.cloud.yd" +
-      "b.v1.AlertEvaluationStatus\022\037\n\027repeate_no" +
-      "tify_delay_ms\030\003 \001(\003\"\236\002\n\005Alert\022\020\n\010alert_i" +
-      "d\030\001 \001(\t\022\031\n\021alert_template_id\030\002 \001(\t\022\014\n\004na" +
-      "me\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022G\n\025notific" +
-      "ation_channels\030\005 \003(\0132(.yandex.cloud.ydb." +
-      "v1.NotificationChannel\022=\n\020alert_paramete" +
-      "rs\030\006 \003(\0132#.yandex.cloud.ydb.v1.AlertPara" +
-      "meter\022=\n\020alert_thresholds\030\007 \003(\0132#.yandex" +
-      ".cloud.ydb.v1.AlertParameter\">\n\020Monitori" +
-      "ngConfig\022*\n\006alerts\030\001 \003(\0132\032.yandex.cloud." +
-      "ydb.v1.Alert\"\346\001\n\021DedicatedDatabase\022\032\n\022re" +
-      "source_preset_id\030\001 \001(\t\022:\n\016storage_config" +
-      "\030\002 \001(\0132\".yandex.cloud.ydb.v1.StorageConf" +
-      "ig\0226\n\014scale_policy\030\003 \001(\0132 .yandex.cloud." +
-      "ydb.v1.ScalePolicy\022\022\n\nnetwork_id\030\004 \001(\t\022\022" +
-      "\n\nsubnet_ids\030\005 \003(\t\022\031\n\021assign_public_ips\030" +
-      "\006 \001(\010\"\255\001\n\022ServerlessDatabase\022\034\n\024throttli" +
-      "ng_rcu_limit\030\001 \001(\003\022\032\n\022storage_size_limit" +
-      "\030\002 \001(\003\022#\n\033enable_throttling_rcu_limit\030\003 " +
-      "\001(\010\022\035\n\025provisioned_rcu_limit\030\004 \001(\003\022\031\n\021to" +
-      "pic_write_quota\030\005 \001(\003\"&\n\rZonalDatabase\022\025" +
-      "\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalDatabas" +
-      "e\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\"\317\003\n\013ScalePoli" +
-      "cy\022B\n\013fixed_scale\030\001 \001(\0132+.yandex.cloud.y" +
-      "db.v1.ScalePolicy.FixedScaleH\000\022@\n\nauto_s" +
-      "cale\030\002 \001(\0132*.yandex.cloud.ydb.v1.ScalePo" +
-      "licy.AutoScaleH\000\032#\n\nFixedScale\022\025\n\004size\030\001" +
-      " \001(\003B\007\372\3071\003>=1\032\200\002\n\tAutoScale\022\031\n\010min_size\030" +
-      "\001 \001(\003B\007\372\3071\003>=1\022\031\n\010max_size\030\002 \001(\003B\007\372\3071\003>=" +
-      "1\022T\n\017target_tracking\030\003 \001(\01329.yandex.clou" +
-      "d.ydb.v1.ScalePolicy.AutoScale.TargetTra" +
-      "ckingH\000\032N\n\016TargetTracking\022,\n\027cpu_utiliza" +
-      "tion_percent\030\001 \001(\003B\t\372\3071\00510-90H\000B\016\n\006targe" +
-      "t\022\004\300\3011\001B\027\n\017auto_scale_type\022\004\300\3011\001B\022\n\nscal" +
-      "e_type\022\004\300\3011\001\"q\n\rStorageConfig\022D\n\017storage" +
-      "_options\030\001 \003(\0132\".yandex.cloud.ydb.v1.Sto" +
-      "rageOptionB\007\202\3101\003>=1\022\032\n\022storage_size_limi" +
-      "t\030\002 \001(\003\"=\n\rStorageOption\022\027\n\017storage_type" +
-      "_id\030\001 \001(\t\022\023\n\013group_count\030\002 \001(\003*\355\001\n\025Alert" +
-      "EvaluationStatus\022\'\n#ALERT_EVALUATION_STA" +
-      "TUS_UNSPECIFIED\020\000\022\036\n\032ALERT_EVALUATION_ST" +
-      "ATUS_OK\020\001\022#\n\037ALERT_EVALUATION_STATUS_NO_" +
-      "DATA\020\002\022!\n\035ALERT_EVALUATION_STATUS_ERROR\020" +
-      "\003\022!\n\035ALERT_EVALUATION_STATUS_ALARM\020\004\022 \n\034" +
-      "ALERT_EVALUATION_STATUS_WARN\020\005BV\n\027yandex" +
-      ".cloud.api.ydb.v1Z;github.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/ydb/v1;ydbb\006" +
-      "proto3"
+      "ringConfig\022\033\n\023deletion_protection\030\031 \001(\010\022" +
+      "\032\n\022security_group_ids\030\033 \003(\t\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\201\001\n\006S" +
+      "tatus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISI" +
+      "ONING\020\001\022\013\n\007RUNNING\020\002\022\014\n\010UPDATING\020\004\022\t\n\005ER" +
+      "ROR\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\022\013\n\007STO" +
+      "PPED\020\010B\017\n\rdatabase_typeJ\004\010\007\020\010\"\202\006\n\016AlertP" +
+      "arameter\022Z\n\026double_parameter_value\030\001 \001(\013" +
+      "28.yandex.cloud.ydb.v1.AlertParameter.Do" +
+      "ubleParameterValueH\000\022\\\n\027integer_paramete" +
+      "r_value\030\002 \001(\01329.yandex.cloud.ydb.v1.Aler" +
+      "tParameter.IntegerParameterValueH\000\022V\n\024te" +
+      "xt_parameter_value\030\003 \001(\01326.yandex.cloud." +
+      "ydb.v1.AlertParameter.TextParameterValue" +
+      "H\000\022_\n\031text_list_parameter_value\030\004 \001(\0132:." +
+      "yandex.cloud.ydb.v1.AlertParameter.TextL" +
+      "istParameterValueH\000\022a\n\032label_list_parame" +
+      "ter_value\030\005 \001(\0132;.yandex.cloud.ydb.v1.Al" +
+      "ertParameter.LabelListParameterValueH\000\0323" +
+      "\n\024DoubleParameterValue\022\014\n\004name\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\001\0324\n\025IntegerParameterValue\022\014\n\004" +
+      "name\030\001 \001(\t\022\r\n\005value\030\002 \001(\003\0321\n\022TextParamet" +
+      "erValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\0326\n\026" +
+      "TextListParameterValue\022\014\n\004name\030\001 \001(\t\022\016\n\006" +
+      "values\030\002 \003(\t\0327\n\027LabelListParameterValue\022" +
+      "\014\n\004name\030\001 \001(\t\022\016\n\006values\030\002 \003(\tB\013\n\tparamet" +
+      "er\"\242\001\n\023NotificationChannel\022\037\n\027notificati" +
+      "on_channel_id\030\001 \001(\t\022I\n\025notify_about_stat" +
+      "uses\030\002 \003(\0162*.yandex.cloud.ydb.v1.AlertEv" +
+      "aluationStatus\022\037\n\027repeate_notify_delay_m" +
+      "s\030\003 \001(\003\"\236\002\n\005Alert\022\020\n\010alert_id\030\001 \001(\t\022\031\n\021a" +
+      "lert_template_id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\023\n\013" +
+      "description\030\004 \001(\t\022G\n\025notification_channe" +
+      "ls\030\005 \003(\0132(.yandex.cloud.ydb.v1.Notificat" +
+      "ionChannel\022=\n\020alert_parameters\030\006 \003(\0132#.y" +
+      "andex.cloud.ydb.v1.AlertParameter\022=\n\020ale" +
+      "rt_thresholds\030\007 \003(\0132#.yandex.cloud.ydb.v" +
+      "1.AlertParameter\">\n\020MonitoringConfig\022*\n\006" +
+      "alerts\030\001 \003(\0132\032.yandex.cloud.ydb.v1.Alert" +
+      "\"\202\002\n\021DedicatedDatabase\022\032\n\022resource_prese" +
+      "t_id\030\001 \001(\t\022:\n\016storage_config\030\002 \001(\0132\".yan" +
+      "dex.cloud.ydb.v1.StorageConfig\0226\n\014scale_" +
+      "policy\030\003 \001(\0132 .yandex.cloud.ydb.v1.Scale" +
+      "Policy\022\022\n\nnetwork_id\030\004 \001(\t\022\022\n\nsubnet_ids" +
+      "\030\005 \003(\t\022\031\n\021assign_public_ips\030\006 \001(\010\022\032\n\022sec" +
+      "urity_group_ids\030\007 \003(\t\"\255\001\n\022ServerlessData" +
+      "base\022\034\n\024throttling_rcu_limit\030\001 \001(\003\022\032\n\022st" +
+      "orage_size_limit\030\002 \001(\003\022#\n\033enable_throttl" +
+      "ing_rcu_limit\030\003 \001(\010\022\035\n\025provisioned_rcu_l" +
+      "imit\030\004 \001(\003\022\031\n\021topic_write_quota\030\005 \001(\003\"&\n" +
+      "\rZonalDatabase\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"+\n" +
+      "\020RegionalDatabase\022\027\n\tregion_id\030\001 \001(\tB\004\350\307" +
+      "1\001\"\317\003\n\013ScalePolicy\022B\n\013fixed_scale\030\001 \001(\0132" +
+      "+.yandex.cloud.ydb.v1.ScalePolicy.FixedS" +
+      "caleH\000\022@\n\nauto_scale\030\002 \001(\0132*.yandex.clou" +
+      "d.ydb.v1.ScalePolicy.AutoScaleH\000\032#\n\nFixe" +
+      "dScale\022\025\n\004size\030\001 \001(\003B\007\372\3071\003>=1\032\200\002\n\tAutoSc" +
+      "ale\022\031\n\010min_size\030\001 \001(\003B\007\372\3071\003>=1\022\031\n\010max_si" +
+      "ze\030\002 \001(\003B\007\372\3071\003>=1\022T\n\017target_tracking\030\003 \001" +
+      "(\01329.yandex.cloud.ydb.v1.ScalePolicy.Aut" +
+      "oScale.TargetTrackingH\000\032N\n\016TargetTrackin" +
+      "g\022,\n\027cpu_utilization_percent\030\001 \001(\003B\t\372\3071\005" +
+      "10-90H\000B\016\n\006target\022\004\300\3011\001B\027\n\017auto_scale_ty" +
+      "pe\022\004\300\3011\001B\022\n\nscale_type\022\004\300\3011\001\"q\n\rStorageC" +
+      "onfig\022D\n\017storage_options\030\001 \003(\0132\".yandex." +
+      "cloud.ydb.v1.StorageOptionB\007\202\3101\003>=1\022\032\n\022s" +
+      "torage_size_limit\030\002 \001(\003\"=\n\rStorageOption" +
+      "\022\027\n\017storage_type_id\030\001 \001(\t\022\023\n\013group_count" +
+      "\030\002 \001(\003*\355\001\n\025AlertEvaluationStatus\022\'\n#ALER" +
+      "T_EVALUATION_STATUS_UNSPECIFIED\020\000\022\036\n\032ALE" +
+      "RT_EVALUATION_STATUS_OK\020\001\022#\n\037ALERT_EVALU" +
+      "ATION_STATUS_NO_DATA\020\002\022!\n\035ALERT_EVALUATI" +
+      "ON_STATUS_ERROR\020\003\022!\n\035ALERT_EVALUATION_ST" +
+      "ATUS_ALARM\020\004\022 \n\034ALERT_EVALUATION_STATUS_" +
+      "WARN\020\005BV\n\027yandex.cloud.api.ydb.v1Z;githu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/ydb/v1;ydbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23442,7 +23877,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_Database_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_Database_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Status", "Endpoint", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "DocumentApiEndpoint", "KinesisApiEndpoint", "KafkaApiEndpoint", "MonitoringConfig", "DeletionProtection", "DatabaseType", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Status", "Endpoint", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "DocumentApiEndpoint", "KinesisApiEndpoint", "KafkaApiEndpoint", "MonitoringConfig", "DeletionProtection", "SecurityGroupIds", "DatabaseType", });
     internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ydb_v1_Database_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_fieldAccessorTable = new
@@ -23508,7 +23943,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_DedicatedDatabase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_DedicatedDatabase_descriptor,
-        new java.lang.String[] { "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "AssignPublicIps", });
+        new java.lang.String[] { "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "AssignPublicIps", "SecurityGroupIds", });
     internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_fieldAccessorTable = new

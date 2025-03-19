@@ -618,11 +618,620 @@ public final class InstanceServiceOuterClass {
 
   }
 
+  public interface GetUserInfoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.marketplace.licensemanager.saas.v1.GetUserInfoRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The instanceId.
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for instanceId.
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.marketplace.licensemanager.saas.v1.GetUserInfoRequest}
+   */
+  public static final class GetUserInfoRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.marketplace.licensemanager.saas.v1.GetUserInfoRequest)
+      GetUserInfoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetUserInfoRequest.newBuilder() to construct.
+    private GetUserInfoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetUserInfoRequest() {
+      instanceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetUserInfoRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetUserInfoRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest.class, yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The instanceId.
+     */
+    @java.lang.Override
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for instanceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instanceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest other = (yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest) obj;
+
+      if (!getInstanceId()
+          .equals(other.getInstanceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.marketplace.licensemanager.saas.v1.GetUserInfoRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.marketplace.licensemanager.saas.v1.GetUserInfoRequest)
+        yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest.class, yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest build() {
+        yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest buildPartial() {
+        yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest result = new yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest(this);
+        result.instanceId_ = instanceId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest) {
+          return mergeFrom((yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest other) {
+        if (other == yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The instanceId.
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for instanceId.
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for instanceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.marketplace.licensemanager.saas.v1.GetUserInfoRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.marketplace.licensemanager.saas.v1.GetUserInfoRequest)
+    private static final yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest();
+    }
+
+    public static yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetUserInfoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetUserInfoRequest>() {
+      @java.lang.Override
+      public GetUserInfoRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetUserInfoRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetUserInfoRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetUserInfoRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.marketplace.licensemanager.saas.v1.InstanceServiceOuterClass.GetUserInfoRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetInstanceRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetInstanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -637,24 +1246,34 @@ public final class InstanceServiceOuterClass {
       ".cloud.marketplace.licensemanager.saas.v" +
       "1\032\034google/api/annotations.proto\0329yandex/" +
       "cloud/marketplace/licensemanager/v1/inst" +
-      "ance.proto\032\035yandex/cloud/validation.prot" +
-      "o\"/\n\022GetInstanceRequest\022\031\n\013instance_id\030\001" +
-      " \001(\tB\004\350\3071\0012\332\001\n\017InstanceService\022\306\001\n\003Get\022C" +
-      ".yandex.cloud.marketplace.licensemanager" +
-      ".saas.v1.GetInstanceRequest\0324.yandex.clo" +
-      "ud.marketplace.licensemanager.v1.Instanc" +
-      "e\"D\202\323\344\223\002>\022</marketplace/license-manager/" +
-      "saas/v1/instances/{instance_id}B\231\001\n3yand" +
-      "ex.cloud.api.marketplace.licensemanager." +
-      "saas.v1Zbgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/marketplace/licenseman" +
-      "ager/saas/v1;licensemanagerb\006proto3"
+      "ance.proto\032:yandex/cloud/marketplace/lic" +
+      "ensemanager/v1/user_info.proto\032\035yandex/c" +
+      "loud/validation.proto\"/\n\022GetInstanceRequ" +
+      "est\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\"/\n\022GetUse" +
+      "rInfoRequest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\0012" +
+      "\265\003\n\017InstanceService\022\306\001\n\003Get\022C.yandex.clo" +
+      "ud.marketplace.licensemanager.saas.v1.Ge" +
+      "tInstanceRequest\0324.yandex.cloud.marketpl" +
+      "ace.licensemanager.v1.Instance\"D\202\323\344\223\002>\022<" +
+      "/marketplace/license-manager/saas/v1/ins" +
+      "tances/{instance_id}\022\330\001\n\013GetUserInfo\022C.y" +
+      "andex.cloud.marketplace.licensemanager.s" +
+      "aas.v1.GetUserInfoRequest\0324.yandex.cloud" +
+      ".marketplace.licensemanager.v1.UserInfo\"" +
+      "N\202\323\344\223\002H\022F/marketplace/license-manager/sa" +
+      "as/v1/instances/{instance_id}/user_infoB" +
+      "\231\001\n3yandex.cloud.api.marketplace.license" +
+      "manager.saas.v1Zbgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/marketplace/li" +
+      "censemanager/saas/v1;licensemanagerb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.getDescriptor(),
+          yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetInstanceRequest_descriptor =
@@ -662,6 +1281,12 @@ public final class InstanceServiceOuterClass {
     internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetInstanceRequest_descriptor,
+        new java.lang.String[] { "InstanceId", });
+    internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_marketplace_licensemanager_saas_v1_GetUserInfoRequest_descriptor,
         new java.lang.String[] { "InstanceId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -671,6 +1296,7 @@ public final class InstanceServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.getDescriptor();
+    yandex.cloud.api.marketplace.licensemanager.v1.UserInfoOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

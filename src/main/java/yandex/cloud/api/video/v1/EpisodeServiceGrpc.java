@@ -381,7 +381,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific channel.
+     * Get the specific channel.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request,
@@ -441,7 +441,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete episode.
+     * Batch delete episodes.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request,
@@ -461,7 +461,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns url to the player.
+     * Get player url.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request,
@@ -471,7 +471,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns manifest urls.
+     * Get manifest urls.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request,
@@ -574,7 +574,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific channel.
+     * Get the specific channel.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request,
@@ -640,7 +640,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete episode.
+     * Batch delete episodes.
      * </pre>
      */
     public void batchDelete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request,
@@ -662,7 +662,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns url to the player.
+     * Get player url.
      * </pre>
      */
     public void getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request,
@@ -673,7 +673,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns manifest urls.
+     * Get manifest urls.
      * </pre>
      */
     public void getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request,
@@ -702,7 +702,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific channel.
+     * Get the specific channel.
      * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeOuterClass.Episode get(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeRequest request) {
@@ -762,7 +762,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete episode.
+     * Batch delete episodes.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation batchDelete(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.BatchDeleteEpisodesRequest request) {
@@ -782,7 +782,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns url to the player.
+     * Get player url.
      * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse getPlayerURL(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLRequest request) {
@@ -792,7 +792,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns manifest urls.
+     * Get manifest urls.
      * </pre>
      */
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse getManifests(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsRequest request) {
@@ -820,7 +820,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific channel.
+     * Get the specific channel.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeOuterClass.Episode> get(
@@ -886,7 +886,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Batch delete episode.
+     * Batch delete episodes.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> batchDelete(
@@ -908,7 +908,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns url to the player.
+     * Get player url.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodePlayerURLResponse> getPlayerURL(
@@ -919,7 +919,7 @@ public final class EpisodeServiceGrpc {
 
     /**
      * <pre>
-     * Returns manifest urls.
+     * Get manifest urls.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.EpisodeServiceOuterClass.GetEpisodeManifestsResponse> getManifests(

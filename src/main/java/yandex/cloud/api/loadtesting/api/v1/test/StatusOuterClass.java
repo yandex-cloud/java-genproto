@@ -101,7 +101,7 @@ public final class StatusOuterClass {
     STOPPING(9),
     /**
      * <pre>
-     * Test has been stopped.
+     * Test has been stopped by user.
      * </pre>
      *
      * <code>STOPPED = 10;</code>
@@ -141,6 +141,14 @@ public final class StatusOuterClass {
      * <code>LOST = 14;</code>
      */
     LOST(14),
+    /**
+     * <pre>
+     * Test has been cancelled.
+     * </pre>
+     *
+     * <code>CANCELLED = 15;</code>
+     */
+    CANCELLED(15),
     UNRECOGNIZED(-1),
     ;
 
@@ -226,7 +234,7 @@ public final class StatusOuterClass {
     public static final int STOPPING_VALUE = 9;
     /**
      * <pre>
-     * Test has been stopped.
+     * Test has been stopped by user.
      * </pre>
      *
      * <code>STOPPED = 10;</code>
@@ -266,6 +274,14 @@ public final class StatusOuterClass {
      * <code>LOST = 14;</code>
      */
     public static final int LOST_VALUE = 14;
+    /**
+     * <pre>
+     * Test has been cancelled.
+     * </pre>
+     *
+     * <code>CANCELLED = 15;</code>
+     */
+    public static final int CANCELLED_VALUE = 15;
 
 
     public final int getNumber() {
@@ -307,6 +323,7 @@ public final class StatusOuterClass {
         case 12: return WAITING;
         case 13: return DELETING;
         case 14: return LOST;
+        case 15: return CANCELLED;
         default: return null;
       }
     }
@@ -374,16 +391,16 @@ public final class StatusOuterClass {
     java.lang.String[] descriptorData = {
       "\n1yandex/cloud/loadtesting/api/v1/test/s" +
       "tatus.proto\022$yandex.cloud.loadtesting.ap" +
-      "i.v1.test*\343\001\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
+      "i.v1.test*\362\001\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
       "ED\020\000\022\013\n\007CREATED\020\001\022\r\n\tINITIATED\020\002\022\r\n\tPREP" +
       "ARING\020\003\022\013\n\007RUNNING\020\004\022\r\n\tFINISHING\020\005\022\010\n\004D" +
       "ONE\020\006\022\023\n\017POST_PROCESSING\020\007\022\n\n\006FAILED\020\010\022\014" +
       "\n\010STOPPING\020\t\022\013\n\007STOPPED\020\n\022\017\n\013AUTOSTOPPED" +
-      "\020\013\022\013\n\007WAITING\020\014\022\014\n\010DELETING\020\r\022\010\n\004LOST\020\016B" +
-      "y\n(yandex.cloud.api.loadtesting.api.v1.t" +
-      "estZMgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/loadtesting/api/v1/test;te" +
-      "stb\006proto3"
+      "\020\013\022\013\n\007WAITING\020\014\022\014\n\010DELETING\020\r\022\010\n\004LOST\020\016\022" +
+      "\r\n\tCANCELLED\020\017By\n(yandex.cloud.api.loadt" +
+      "esting.api.v1.testZMgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/loadtesting" +
+      "/api/v1/test;testb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

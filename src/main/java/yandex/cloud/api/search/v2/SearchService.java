@@ -1960,7 +1960,7 @@ public final class SearchService {
      * ID of the search country or region that impacts the document ranking rules.
      * </pre>
      *
-     * <code>string region = 5;</code>
+     * <code>string region = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The region.
      */
     java.lang.String getRegion();
@@ -1969,7 +1969,7 @@ public final class SearchService {
      * ID of the search country or region that impacts the document ranking rules.
      * </pre>
      *
-     * <code>string region = 5;</code>
+     * <code>string region = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for region.
      */
     com.google.protobuf.ByteString
@@ -2679,7 +2679,7 @@ public final class SearchService {
      * ID of the search country or region that impacts the document ranking rules.
      * </pre>
      *
-     * <code>string region = 5;</code>
+     * <code>string region = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The region.
      */
     @java.lang.Override
@@ -2700,7 +2700,7 @@ public final class SearchService {
      * ID of the search country or region that impacts the document ranking rules.
      * </pre>
      *
-     * <code>string region = 5;</code>
+     * <code>string region = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for region.
      */
     @java.lang.Override
@@ -3854,7 +3854,7 @@ public final class SearchService {
        * ID of the search country or region that impacts the document ranking rules.
        * </pre>
        *
-       * <code>string region = 5;</code>
+       * <code>string region = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The region.
        */
       public java.lang.String getRegion() {
@@ -3874,7 +3874,7 @@ public final class SearchService {
        * ID of the search country or region that impacts the document ranking rules.
        * </pre>
        *
-       * <code>string region = 5;</code>
+       * <code>string region = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for region.
        */
       public com.google.protobuf.ByteString
@@ -3895,7 +3895,7 @@ public final class SearchService {
        * ID of the search country or region that impacts the document ranking rules.
        * </pre>
        *
-       * <code>string region = 5;</code>
+       * <code>string region = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The region to set.
        * @return This builder for chaining.
        */
@@ -3914,7 +3914,7 @@ public final class SearchService {
        * ID of the search country or region that impacts the document ranking rules.
        * </pre>
        *
-       * <code>string region = 5;</code>
+       * <code>string region = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearRegion() {
@@ -3928,7 +3928,7 @@ public final class SearchService {
        * ID of the search country or region that impacts the document ranking rules.
        * </pre>
        *
-       * <code>string region = 5;</code>
+       * <code>string region = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for region to set.
        * @return This builder for chaining.
        */
@@ -4897,35 +4897,36 @@ public final class SearchService {
       "\t\372\3071\0051-100\022\036\n\rdocs_in_group\030\003 \001(\003B\007\372\3071\0031" +
       "-3\"Q\n\tGroupMode\022\032\n\026GROUP_MODE_UNSPECIFIE" +
       "D\020\000\022\023\n\017GROUP_MODE_FLAT\020\001\022\023\n\017GROUP_MODE_D" +
-      "EEP\020\002\"\261\005\n\020WebSearchRequest\022;\n\005query\030\001 \001(" +
+      "EEP\020\002\"\274\005\n\020WebSearchRequest\022;\n\005query\030\001 \001(" +
       "\0132&.yandex.cloud.searchapi.v2.SearchQuer" +
       "yB\004\350\3071\001\0226\n\tsort_spec\030\002 \001(\0132#.yandex.clou" +
       "d.searchapi.v2.SortSpec\0228\n\ngroup_spec\030\003 " +
       "\001(\0132$.yandex.cloud.searchapi.v2.GroupSpe" +
-      "c\022\035\n\014max_passages\030\004 \001(\003B\007\372\3071\0031-5\022\016\n\006regi" +
-      "on\030\005 \001(\t\022F\n\004l10n\030\006 \001(\01628.yandex.cloud.se" +
-      "archapi.v2.WebSearchRequest.Localization" +
-      "\022\033\n\tfolder_id\030\007 \001(\tB\010\212\3101\004<=50\022K\n\017respons" +
-      "e_format\030\010 \001(\01622.yandex.cloud.searchapi." +
-      "v2.WebSearchRequest.Format\022\035\n\nuser_agent" +
-      "\030\t \001(\tB\t\212\3101\005<=200\"\252\001\n\014Localization\022\034\n\030LO" +
-      "CALIZATION_UNSPECIFIED\020\000\022\023\n\017LOCALIZATION" +
-      "_RU\020\001\022\023\n\017LOCALIZATION_UK\020\002\022\023\n\017LOCALIZATI" +
-      "ON_BE\020\003\022\023\n\017LOCALIZATION_KK\020\004\022\023\n\017LOCALIZA" +
-      "TION_TR\020\005\022\023\n\017LOCALIZATION_EN\020\006\"A\n\006Format" +
-      "\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nFORMAT_XML\020\001" +
-      "\022\017\n\013FORMAT_HTML\020\002\"+\n\021WebSearchResponse\022\026" +
-      "\n\010raw_data\030\001 \001(\014B\004\350\3071\0012\251\001\n\025WebSearchAsyn" +
-      "cService\022\217\001\n\006Search\022+.yandex.cloud.searc" +
-      "hapi.v2.WebSearchRequest\032!.yandex.cloud." +
-      "operation.Operation\"5\262\322*\023\022\021WebSearchResp" +
-      "onse\202\323\344\223\002\030\"\023/v2/web/searchAsync:\001*2y\n\020We" +
-      "bSearchService\022e\n\006Search\022+.yandex.cloud." +
-      "searchapi.v2.WebSearchRequest\032,.yandex.c" +
-      "loud.searchapi.v2.WebSearchResponse\"\000Be\n" +
-      "\032yandex.cloud.api.search.v2ZGgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/se" +
-      "archapi/v2;searchapib\006proto3"
+      "c\022\035\n\014max_passages\030\004 \001(\003B\007\372\3071\0031-5\022\031\n\006regi" +
+      "on\030\005 \001(\tB\t\212\3101\005<=100\022F\n\004l10n\030\006 \001(\01628.yand" +
+      "ex.cloud.searchapi.v2.WebSearchRequest.L" +
+      "ocalization\022\033\n\tfolder_id\030\007 \001(\tB\010\212\3101\004<=50" +
+      "\022K\n\017response_format\030\010 \001(\01622.yandex.cloud" +
+      ".searchapi.v2.WebSearchRequest.Format\022\035\n" +
+      "\nuser_agent\030\t \001(\tB\t\212\3101\005<=200\"\252\001\n\014Localiz" +
+      "ation\022\034\n\030LOCALIZATION_UNSPECIFIED\020\000\022\023\n\017L" +
+      "OCALIZATION_RU\020\001\022\023\n\017LOCALIZATION_UK\020\002\022\023\n" +
+      "\017LOCALIZATION_BE\020\003\022\023\n\017LOCALIZATION_KK\020\004\022" +
+      "\023\n\017LOCALIZATION_TR\020\005\022\023\n\017LOCALIZATION_EN\020" +
+      "\006\"A\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nF" +
+      "ORMAT_XML\020\001\022\017\n\013FORMAT_HTML\020\002\"+\n\021WebSearc" +
+      "hResponse\022\026\n\010raw_data\030\001 \001(\014B\004\350\3071\0012\251\001\n\025We" +
+      "bSearchAsyncService\022\217\001\n\006Search\022+.yandex." +
+      "cloud.searchapi.v2.WebSearchRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"5\262\322*\023\022\021We" +
+      "bSearchResponse\202\323\344\223\002\030\"\023/v2/web/searchAsy" +
+      "nc:\001*2\222\001\n\020WebSearchService\022~\n\006Search\022+.y" +
+      "andex.cloud.searchapi.v2.WebSearchReques" +
+      "t\032,.yandex.cloud.searchapi.v2.WebSearchR" +
+      "esponse\"\031\202\323\344\223\002\023\"\016/v2/web/search:\001*Be\n\032ya" +
+      "ndex.cloud.api.search.v2ZGgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/searc" +
+      "hapi/v2;searchapib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

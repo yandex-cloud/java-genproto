@@ -80,7 +80,7 @@ public final class EpisodeOuterClass {
 
     /**
      * <pre>
-     * Channel title.
+     * Episode title.
      * </pre>
      *
      * <code>string title = 4;</code>
@@ -89,7 +89,7 @@ public final class EpisodeOuterClass {
     java.lang.String getTitle();
     /**
      * <pre>
-     * Channel title.
+     * Episode title.
      * </pre>
      *
      * <code>string title = 4;</code>
@@ -100,7 +100,7 @@ public final class EpisodeOuterClass {
 
     /**
      * <pre>
-     * Channel description.
+     * Episode description.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -109,7 +109,7 @@ public final class EpisodeOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Channel description.
+     * Episode description.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -194,8 +194,9 @@ public final class EpisodeOuterClass {
 
     /**
      * <pre>
-     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-     * possible values:
+     * Enables episode DVR mode.
+     * Determines how many last seconds of the stream are available for watching.
+     * Possible values:
      *  * `0`: infinite dvr size, the full length of the stream allowed to display
      *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
      * </pre>
@@ -880,7 +881,7 @@ public final class EpisodeOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Channel title.
+     * Episode title.
      * </pre>
      *
      * <code>string title = 4;</code>
@@ -901,7 +902,7 @@ public final class EpisodeOuterClass {
     }
     /**
      * <pre>
-     * Channel title.
+     * Episode title.
      * </pre>
      *
      * <code>string title = 4;</code>
@@ -926,7 +927,7 @@ public final class EpisodeOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Channel description.
+     * Episode description.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -947,7 +948,7 @@ public final class EpisodeOuterClass {
     }
     /**
      * <pre>
-     * Channel description.
+     * Episode description.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1094,8 +1095,9 @@ public final class EpisodeOuterClass {
     private long dvrSeconds_;
     /**
      * <pre>
-     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-     * possible values:
+     * Enables episode DVR mode.
+     * Determines how many last seconds of the stream are available for watching.
+     * Possible values:
      *  * `0`: infinite dvr size, the full length of the stream allowed to display
      *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
      * </pre>
@@ -2274,7 +2276,7 @@ public final class EpisodeOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Channel title.
+       * Episode title.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2294,7 +2296,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Channel title.
+       * Episode title.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2315,7 +2317,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Channel title.
+       * Episode title.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2334,7 +2336,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Channel title.
+       * Episode title.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2348,7 +2350,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Channel title.
+       * Episode title.
        * </pre>
        *
        * <code>string title = 4;</code>
@@ -2370,7 +2372,7 @@ public final class EpisodeOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Channel description.
+       * Episode description.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2390,7 +2392,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Channel description.
+       * Episode description.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2411,7 +2413,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Channel description.
+       * Episode description.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2430,7 +2432,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Channel description.
+       * Episode description.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2444,7 +2446,7 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Channel description.
+       * Episode description.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2872,8 +2874,9 @@ public final class EpisodeOuterClass {
       private long dvrSeconds_ ;
       /**
        * <pre>
-       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-       * possible values:
+       * Enables episode DVR mode.
+       * Determines how many last seconds of the stream are available for watching.
+       * Possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
        * </pre>
@@ -2887,8 +2890,9 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-       * possible values:
+       * Enables episode DVR mode.
+       * Determines how many last seconds of the stream are available for watching.
+       * Possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
        * </pre>
@@ -2905,8 +2909,9 @@ public final class EpisodeOuterClass {
       }
       /**
        * <pre>
-       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-       * possible values:
+       * Enables episode DVR mode.
+       * Determines how many last seconds of the stream are available for watching.
+       * Possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
        * </pre>

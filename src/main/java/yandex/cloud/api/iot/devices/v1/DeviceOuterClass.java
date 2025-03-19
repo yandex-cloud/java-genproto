@@ -355,6 +355,60 @@ public final class DeviceOuterClass {
      * <code>.yandex.cloud.iot.devices.v1.DeviceMonitoringData monitoring_data = 8;</code>
      */
     yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceMonitoringDataOrBuilder getMonitoringDataOrBuilder();
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * <pre>
@@ -480,6 +534,19 @@ public final class DeviceOuterClass {
 
               break;
             }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -511,6 +578,8 @@ public final class DeviceOuterClass {
       switch (number) {
         case 6:
           return internalGetTopicAliases();
+        case 9:
+          return internalGetLabels();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -1062,6 +1131,103 @@ public final class DeviceOuterClass {
       return getMonitoringData();
     }
 
+    public static final int LABELS_FIELD_NUMBER = 9;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.iot.devices.v1.DeviceOuterClass.internal_static_yandex_cloud_iot_devices_v1_Device_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 9;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1103,6 +1269,12 @@ public final class DeviceOuterClass {
       if (monitoringData_ != null) {
         output.writeMessage(8, getMonitoringData());
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          9);
       unknownFields.writeTo(output);
     }
 
@@ -1146,6 +1318,16 @@ public final class DeviceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getMonitoringData());
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(9, labels__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1182,6 +1364,8 @@ public final class DeviceOuterClass {
         if (!getMonitoringData()
             .equals(other.getMonitoringData())) return false;
       }
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1214,6 +1398,10 @@ public final class DeviceOuterClass {
       if (hasMonitoringData()) {
         hash = (37 * hash) + MONITORING_DATA_FIELD_NUMBER;
         hash = (53 * hash) + getMonitoringData().hashCode();
+      }
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1332,6 +1520,8 @@ public final class DeviceOuterClass {
         switch (number) {
           case 6:
             return internalGetTopicAliases();
+          case 9:
+            return internalGetLabels();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1343,6 +1533,8 @@ public final class DeviceOuterClass {
         switch (number) {
           case 6:
             return internalGetMutableTopicAliases();
+          case 9:
+            return internalGetMutableLabels();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1397,6 +1589,7 @@ public final class DeviceOuterClass {
           monitoringData_ = null;
           monitoringDataBuilder_ = null;
         }
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -1441,6 +1634,8 @@ public final class DeviceOuterClass {
         } else {
           result.monitoringData_ = monitoringDataBuilder_.build();
         }
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -1516,6 +1711,8 @@ public final class DeviceOuterClass {
         if (other.hasMonitoringData()) {
           mergeMonitoringData(other.getMonitoringData());
         }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2478,6 +2675,165 @@ public final class DeviceOuterClass {
           monitoringData_ = null;
         }
         return monitoringDataBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 9;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6434,6 +6790,11 @@ public final class DeviceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iot_devices_v1_Device_TopicAliasesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_Device_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_Device_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iot_devices_v1_DeviceCertificate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6459,7 +6820,7 @@ public final class DeviceOuterClass {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/iot/devices/v1/device.pro" +
       "to\022\033yandex.cloud.iot.devices.v1\032\037google/" +
-      "protobuf/timestamp.proto\"\321\003\n\006Device\022\n\n\002i" +
+      "protobuf/timestamp.proto\"\301\004\n\006Device\022\n\n\002i" +
       "d\030\001 \001(\t\022\023\n\013registry_id\030\002 \001(\t\022.\n\ncreated_" +
       "at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004" +
       "name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022L\n\rtopic" +
@@ -6468,28 +6829,30 @@ public final class DeviceOuterClass {
       "\007 \001(\0162*.yandex.cloud.iot.devices.v1.Devi" +
       "ce.Status\022J\n\017monitoring_data\030\010 \001(\01321.yan" +
       "dex.cloud.iot.devices.v1.DeviceMonitorin" +
-      "gData\0323\n\021TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_U" +
-      "NSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014" +
-      "\n\010DELETING\020\003\"\205\001\n\021DeviceCertificate\022\021\n\tde" +
-      "vice_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\022\030\n\020ce" +
-      "rtificate_data\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\013" +
-      "2\032.google.protobuf.Timestamp\"_\n\016DevicePa" +
-      "ssword\022\021\n\tdevice_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n" +
-      "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
-      "stamp\"\310\002\n\024DeviceMonitoringData\022\024\n\014last_a" +
-      "uth_ip\030\001 \001(\t\0222\n\016last_auth_time\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022:\n\026last_pub_act" +
-      "ivity_time\030\003 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022:\n\026last_sub_activity_time\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\0224\n\020last_online_" +
-      "time\030\005 \001(\0132\032.google.protobuf.Timestamp\0228" +
-      "\n\024last_disconnect_time\030\006 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp*!\n\nDeviceView\022\t\n\005BASIC\020" +
-      "\000\022\010\n\004FULL\020\001Bj\n\037yandex.cloud.api.iot.devi" +
-      "ces.v1ZGgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/iot/devices/v1;devicesb" +
-      "\006proto3"
+      "gData\022?\n\006labels\030\t \003(\0132/.yandex.cloud.iot" +
+      ".devices.v1.Device.LabelsEntry\0323\n\021TopicA" +
+      "liasesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
+      "ED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETI" +
+      "NG\020\003\"\205\001\n\021DeviceCertificate\022\021\n\tdevice_id\030" +
+      "\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\022\030\n\020certificat" +
+      "e_data\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\"_\n\016DevicePassword\022\021" +
+      "\n\tdevice_id\030\001 \001(\t\022\n\n\002id\030\002 \001(\t\022.\n\ncreated" +
+      "_at\030\003 \001(\0132\032.google.protobuf.Timestamp\"\310\002" +
+      "\n\024DeviceMonitoringData\022\024\n\014last_auth_ip\030\001" +
+      " \001(\t\0222\n\016last_auth_time\030\002 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022:\n\026last_pub_activity_ti" +
+      "me\030\003 \001(\0132\032.google.protobuf.Timestamp\022:\n\026" +
+      "last_sub_activity_time\030\004 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\0224\n\020last_online_time\030\005 \001" +
+      "(\0132\032.google.protobuf.Timestamp\0228\n\024last_d" +
+      "isconnect_time\030\006 \001(\0132\032.google.protobuf.T" +
+      "imestamp*!\n\nDeviceView\022\t\n\005BASIC\020\000\022\010\n\004FUL" +
+      "L\020\001Bj\n\037yandex.cloud.api.iot.devices.v1ZG" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/iot/devices/v1;devicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6501,12 +6864,18 @@ public final class DeviceOuterClass {
     internal_static_yandex_cloud_iot_devices_v1_Device_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_Device_descriptor,
-        new java.lang.String[] { "Id", "RegistryId", "CreatedAt", "Name", "Description", "TopicAliases", "Status", "MonitoringData", });
+        new java.lang.String[] { "Id", "RegistryId", "CreatedAt", "Name", "Description", "TopicAliases", "Status", "MonitoringData", "Labels", });
     internal_static_yandex_cloud_iot_devices_v1_Device_TopicAliasesEntry_descriptor =
       internal_static_yandex_cloud_iot_devices_v1_Device_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_iot_devices_v1_Device_TopicAliasesEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_Device_TopicAliasesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_iot_devices_v1_Device_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_iot_devices_v1_Device_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_iot_devices_v1_Device_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_Device_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_iot_devices_v1_DeviceCertificate_descriptor =
       getDescriptor().getMessageTypes().get(1);

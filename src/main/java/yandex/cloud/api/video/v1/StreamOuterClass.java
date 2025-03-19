@@ -240,7 +240,37 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * Automatically publish stream when ready.
+     * Switches status from READY to ONAIR.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+     * @return Whether the autoPublish field is set.
+     */
+    boolean hasAutoPublish();
+    /**
+     * <pre>
+     * Automatically publish stream when ready.
+     * Switches status from READY to ONAIR.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+     * @return The autoPublish.
+     */
+    com.google.protobuf.BoolValue getAutoPublish();
+    /**
+     * <pre>
+     * Automatically publish stream when ready.
+     * Switches status from READY to ONAIR.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAutoPublishOrBuilder();
+
+    /**
+     * <pre>
+     * On-demand stream. Starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -249,7 +279,7 @@ public final class StreamOuterClass {
     boolean hasOnDemand();
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On-demand stream. Starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -258,7 +288,7 @@ public final class StreamOuterClass {
     yandex.cloud.api.video.v1.StreamOuterClass.OnDemand getOnDemand();
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On-demand stream. Starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -267,7 +297,7 @@ public final class StreamOuterClass {
 
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Schedule stream. Starts or finished at the specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -276,7 +306,7 @@ public final class StreamOuterClass {
     boolean hasSchedule();
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Schedule stream. Starts or finished at the specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -285,7 +315,7 @@ public final class StreamOuterClass {
     yandex.cloud.api.video.v1.StreamOuterClass.Schedule getSchedule();
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Schedule stream. Starts or finished at the specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -532,6 +562,19 @@ public final class StreamOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(finishTime_);
                 finishTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (autoPublish_ != null) {
+                subBuilder = autoPublish_.toBuilder();
+              }
+              autoPublish_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoPublish_);
+                autoPublish_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1301,10 +1344,51 @@ public final class StreamOuterClass {
       return getFinishTime();
     }
 
+    public static final int AUTO_PUBLISH_FIELD_NUMBER = 12;
+    private com.google.protobuf.BoolValue autoPublish_;
+    /**
+     * <pre>
+     * Automatically publish stream when ready.
+     * Switches status from READY to ONAIR.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+     * @return Whether the autoPublish field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoPublish() {
+      return autoPublish_ != null;
+    }
+    /**
+     * <pre>
+     * Automatically publish stream when ready.
+     * Switches status from READY to ONAIR.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+     * @return The autoPublish.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAutoPublish() {
+      return autoPublish_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoPublish_;
+    }
+    /**
+     * <pre>
+     * Automatically publish stream when ready.
+     * Switches status from READY to ONAIR.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAutoPublishOrBuilder() {
+      return getAutoPublish();
+    }
+
     public static final int ON_DEMAND_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On-demand stream. Starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -1316,7 +1400,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On-demand stream. Starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -1331,7 +1415,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * On demand stream. It starts immediately when a signal appears.
+     * On-demand stream. Starts immediately when a signal appears.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -1347,7 +1431,7 @@ public final class StreamOuterClass {
     public static final int SCHEDULE_FIELD_NUMBER = 1001;
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Schedule stream. Starts or finished at the specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -1359,7 +1443,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Schedule stream. Starts or finished at the specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -1374,7 +1458,7 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * Schedule stream. Determines when to start receiving the signal or finish time.
+     * Schedule stream. Starts or finished at the specified time.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -1604,6 +1688,9 @@ public final class StreamOuterClass {
       if (finishTime_ != null) {
         output.writeMessage(11, getFinishTime());
       }
+      if (autoPublish_ != null) {
+        output.writeMessage(12, getAutoPublish());
+      }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
       }
@@ -1664,6 +1751,10 @@ public final class StreamOuterClass {
       if (finishTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getFinishTime());
+      }
+      if (autoPublish_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getAutoPublish());
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1734,6 +1825,11 @@ public final class StreamOuterClass {
         if (!getFinishTime()
             .equals(other.getFinishTime())) return false;
       }
+      if (hasAutoPublish() != other.hasAutoPublish()) return false;
+      if (hasAutoPublish()) {
+        if (!getAutoPublish()
+            .equals(other.getAutoPublish())) return false;
+      }
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -1795,6 +1891,10 @@ public final class StreamOuterClass {
       if (hasFinishTime()) {
         hash = (37 * hash) + FINISH_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getFinishTime().hashCode();
+      }
+      if (hasAutoPublish()) {
+        hash = (37 * hash) + AUTO_PUBLISH_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoPublish().hashCode();
       }
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
@@ -2007,6 +2107,12 @@ public final class StreamOuterClass {
           finishTime_ = null;
           finishTimeBuilder_ = null;
         }
+        if (autoPublishBuilder_ == null) {
+          autoPublish_ = null;
+        } else {
+          autoPublish_ = null;
+          autoPublishBuilder_ = null;
+        }
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -2070,6 +2176,11 @@ public final class StreamOuterClass {
           result.finishTime_ = finishTime_;
         } else {
           result.finishTime_ = finishTimeBuilder_.build();
+        }
+        if (autoPublishBuilder_ == null) {
+          result.autoPublish_ = autoPublish_;
+        } else {
+          result.autoPublish_ = autoPublishBuilder_.build();
         }
         if (streamTypeCase_ == 1000) {
           if (onDemandBuilder_ == null) {
@@ -2181,6 +2292,9 @@ public final class StreamOuterClass {
         }
         if (other.hasFinishTime()) {
           mergeFinishTime(other.getFinishTime());
+        }
+        if (other.hasAutoPublish()) {
+          mergeAutoPublish(other.getAutoPublish());
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
@@ -3363,11 +3477,175 @@ public final class StreamOuterClass {
         return finishTimeBuilder_;
       }
 
+      private com.google.protobuf.BoolValue autoPublish_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autoPublishBuilder_;
+      /**
+       * <pre>
+       * Automatically publish stream when ready.
+       * Switches status from READY to ONAIR.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+       * @return Whether the autoPublish field is set.
+       */
+      public boolean hasAutoPublish() {
+        return autoPublishBuilder_ != null || autoPublish_ != null;
+      }
+      /**
+       * <pre>
+       * Automatically publish stream when ready.
+       * Switches status from READY to ONAIR.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+       * @return The autoPublish.
+       */
+      public com.google.protobuf.BoolValue getAutoPublish() {
+        if (autoPublishBuilder_ == null) {
+          return autoPublish_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoPublish_;
+        } else {
+          return autoPublishBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Automatically publish stream when ready.
+       * Switches status from READY to ONAIR.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+       */
+      public Builder setAutoPublish(com.google.protobuf.BoolValue value) {
+        if (autoPublishBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoPublish_ = value;
+          onChanged();
+        } else {
+          autoPublishBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatically publish stream when ready.
+       * Switches status from READY to ONAIR.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+       */
+      public Builder setAutoPublish(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (autoPublishBuilder_ == null) {
+          autoPublish_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoPublishBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatically publish stream when ready.
+       * Switches status from READY to ONAIR.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+       */
+      public Builder mergeAutoPublish(com.google.protobuf.BoolValue value) {
+        if (autoPublishBuilder_ == null) {
+          if (autoPublish_ != null) {
+            autoPublish_ =
+              com.google.protobuf.BoolValue.newBuilder(autoPublish_).mergeFrom(value).buildPartial();
+          } else {
+            autoPublish_ = value;
+          }
+          onChanged();
+        } else {
+          autoPublishBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatically publish stream when ready.
+       * Switches status from READY to ONAIR.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+       */
+      public Builder clearAutoPublish() {
+        if (autoPublishBuilder_ == null) {
+          autoPublish_ = null;
+          onChanged();
+        } else {
+          autoPublish_ = null;
+          autoPublishBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatically publish stream when ready.
+       * Switches status from READY to ONAIR.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAutoPublishBuilder() {
+        
+        onChanged();
+        return getAutoPublishFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Automatically publish stream when ready.
+       * Switches status from READY to ONAIR.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAutoPublishOrBuilder() {
+        if (autoPublishBuilder_ != null) {
+          return autoPublishBuilder_.getMessageOrBuilder();
+        } else {
+          return autoPublish_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : autoPublish_;
+        }
+      }
+      /**
+       * <pre>
+       * Automatically publish stream when ready.
+       * Switches status from READY to ONAIR.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAutoPublishFieldBuilder() {
+        if (autoPublishBuilder_ == null) {
+          autoPublishBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAutoPublish(),
+                  getParentForChildren(),
+                  isClean());
+          autoPublish_ = null;
+        }
+        return autoPublishBuilder_;
+      }
+
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamOuterClass.OnDemand, yandex.cloud.api.video.v1.StreamOuterClass.OnDemand.Builder, yandex.cloud.api.video.v1.StreamOuterClass.OnDemandOrBuilder> onDemandBuilder_;
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On-demand stream. Starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3379,7 +3657,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On-demand stream. Starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3401,7 +3679,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On-demand stream. Starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3421,7 +3699,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On-demand stream. Starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3439,7 +3717,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On-demand stream. Starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3465,7 +3743,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On-demand stream. Starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3488,7 +3766,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On-demand stream. Starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3498,7 +3776,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On-demand stream. Starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3516,7 +3794,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * On demand stream. It starts immediately when a signal appears.
+       * On-demand stream. Starts immediately when a signal appears.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.OnDemand on_demand = 1000;</code>
@@ -3544,7 +3822,7 @@ public final class StreamOuterClass {
           yandex.cloud.api.video.v1.StreamOuterClass.Schedule, yandex.cloud.api.video.v1.StreamOuterClass.Schedule.Builder, yandex.cloud.api.video.v1.StreamOuterClass.ScheduleOrBuilder> scheduleBuilder_;
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Schedule stream. Starts or finished at the specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3556,7 +3834,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Schedule stream. Starts or finished at the specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3578,7 +3856,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Schedule stream. Starts or finished at the specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3598,7 +3876,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Schedule stream. Starts or finished at the specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3616,7 +3894,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Schedule stream. Starts or finished at the specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3642,7 +3920,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Schedule stream. Starts or finished at the specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3665,7 +3943,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Schedule stream. Starts or finished at the specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3675,7 +3953,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Schedule stream. Starts or finished at the specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -3693,7 +3971,7 @@ public final class StreamOuterClass {
       }
       /**
        * <pre>
-       * Schedule stream. Determines when to start receiving the signal or finish time.
+       * Schedule stream. Starts or finished at the specified time.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.Schedule schedule = 1001;</code>
@@ -4244,7 +4522,8 @@ public final class StreamOuterClass {
   }
   /**
    * <pre>
-   * If "OnDemand" is used, client should start and finish explicitly.
+   * On-demand stream type.
+   * This type of streams should be started and finished explicitly.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.OnDemand}
@@ -4469,7 +4748,8 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * If "OnDemand" is used, client should start and finish explicitly.
+     * On-demand stream type.
+     * This type of streams should be started and finished explicitly.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.OnDemand}
@@ -4700,7 +4980,8 @@ public final class StreamOuterClass {
   }
   /**
    * <pre>
-   * If "Schedule" is used, stream automatically start and finish at this time.
+   * Schedule stream type.
+   * This type of streams start and finish automatically at the specified time.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.Schedule}
@@ -5035,7 +5316,8 @@ public final class StreamOuterClass {
     }
     /**
      * <pre>
-     * If "Schedule" is used, stream automatically start and finish at this time.
+     * Schedule stream type.
+     * This type of streams start and finish automatically at the specified time.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.Schedule}
@@ -5527,44 +5809,47 @@ public final class StreamOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"yandex/cloud/video/v1/stream.proto\022\025ya" +
       "ndex.cloud.video.v1\032\037google/protobuf/tim" +
-      "estamp.proto\"\223\006\n\006Stream\022\n\n\002id\030\001 \001(\t\022\022\n\nc" +
-      "hannel_id\030\002 \001(\t\022\017\n\007line_id\030\003 \001(\t\022\r\n\005titl" +
-      "e\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022\024\n\014thumbnai" +
-      "l_id\030\006 \001(\t\022:\n\006status\030\010 \001(\0162*.yandex.clou" +
-      "d.video.v1.Stream.StreamStatus\022.\n\nstart_" +
-      "time\030\t \001(\0132\032.google.protobuf.Timestamp\0220" +
-      "\n\014publish_time\030\n \001(\0132\032.google.protobuf.T" +
-      "imestamp\022/\n\013finish_time\030\013 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\0225\n\ton_demand\030\350\007 \001(\0132\037." +
-      "yandex.cloud.video.v1.OnDemandH\000\0224\n\010sche" +
-      "dule\030\351\007 \001(\0132\037.yandex.cloud.video.v1.Sche" +
-      "duleH\000\022.\n\ncreated_at\030d \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022.\n\nupdated_at\030e \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022:\n\006labels\030\310\001 \003(\0132" +
-      ").yandex.cloud.video.v1.Stream.LabelsEnt" +
-      "ry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"m\n\014StreamStatus\022\035\n\031STREAM_STAT" +
-      "US_UNSPECIFIED\020\000\022\013\n\007OFFLINE\020\001\022\r\n\tPREPARI" +
-      "NG\020\002\022\t\n\005READY\020\003\022\t\n\005ONAIR\020\004\022\014\n\010FINISHED\020\005" +
-      "B\r\n\013stream_typeJ\004\010\007\020\010J\004\010\014\020dJ\005\010f\020\310\001J\006\010\311\001\020" +
-      "\350\007\"\n\n\010OnDemand\"k\n\010Schedule\022.\n\nstart_time" +
-      "\030\001 \001(\0132\032.google.protobuf.Timestamp\022/\n\013fi" +
-      "nish_time\030\002 \001(\0132\032.google.protobuf.Timest" +
-      "ampB\\\n\031yandex.cloud.api.video.v1Z?github" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/video/v1;videob\006proto3"
+      "estamp.proto\032\036google/protobuf/wrappers.p" +
+      "roto\"\305\006\n\006Stream\022\n\n\002id\030\001 \001(\t\022\022\n\nchannel_i" +
+      "d\030\002 \001(\t\022\017\n\007line_id\030\003 \001(\t\022\r\n\005title\030\004 \001(\t\022" +
+      "\023\n\013description\030\005 \001(\t\022\024\n\014thumbnail_id\030\006 \001" +
+      "(\t\022:\n\006status\030\010 \001(\0162*.yandex.cloud.video." +
+      "v1.Stream.StreamStatus\022.\n\nstart_time\030\t \001" +
+      "(\0132\032.google.protobuf.Timestamp\0220\n\014publis" +
+      "h_time\030\n \001(\0132\032.google.protobuf.Timestamp" +
+      "\022/\n\013finish_time\030\013 \001(\0132\032.google.protobuf." +
+      "Timestamp\0220\n\014auto_publish\030\014 \001(\0132\032.google" +
+      ".protobuf.BoolValue\0225\n\ton_demand\030\350\007 \001(\0132" +
+      "\037.yandex.cloud.video.v1.OnDemandH\000\0224\n\010sc" +
+      "hedule\030\351\007 \001(\0132\037.yandex.cloud.video.v1.Sc" +
+      "heduleH\000\022.\n\ncreated_at\030d \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022.\n\nupdated_at\030e \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022:\n\006labels\030\310\001 \003(" +
+      "\0132).yandex.cloud.video.v1.Stream.LabelsE" +
+      "ntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\"m\n\014StreamStatus\022\035\n\031STREAM_ST" +
+      "ATUS_UNSPECIFIED\020\000\022\013\n\007OFFLINE\020\001\022\r\n\tPREPA" +
+      "RING\020\002\022\t\n\005READY\020\003\022\t\n\005ONAIR\020\004\022\014\n\010FINISHED" +
+      "\020\005B\r\n\013stream_typeJ\004\010\007\020\010J\004\010\r\020dJ\005\010f\020\310\001J\006\010\311" +
+      "\001\020\350\007\"\n\n\010OnDemand\"k\n\010Schedule\022.\n\nstart_ti" +
+      "me\030\001 \001(\0132\032.google.protobuf.Timestamp\022/\n\013" +
+      "finish_time\030\002 \001(\0132\032.google.protobuf.Time" +
+      "stampB\\\n\031yandex.cloud.api.video.v1Z?gith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_yandex_cloud_video_v1_Stream_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_video_v1_Stream_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Stream_descriptor,
-        new java.lang.String[] { "Id", "ChannelId", "LineId", "Title", "Description", "ThumbnailId", "Status", "StartTime", "PublishTime", "FinishTime", "OnDemand", "Schedule", "CreatedAt", "UpdatedAt", "Labels", "StreamType", });
+        new java.lang.String[] { "Id", "ChannelId", "LineId", "Title", "Description", "ThumbnailId", "Status", "StartTime", "PublishTime", "FinishTime", "AutoPublish", "OnDemand", "Schedule", "CreatedAt", "UpdatedAt", "Labels", "StreamType", });
     internal_static_yandex_cloud_video_v1_Stream_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_Stream_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_Stream_LabelsEntry_fieldAccessorTable = new
@@ -5584,6 +5869,7 @@ public final class StreamOuterClass {
         internal_static_yandex_cloud_video_v1_Schedule_descriptor,
         new java.lang.String[] { "StartTime", "FinishTime", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

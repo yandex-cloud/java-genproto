@@ -57,6 +57,33 @@ public final class EmbeddingService {
      */
     com.google.protobuf.ByteString
         getTextBytes();
+
+    /**
+     * <pre>
+     * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value dim = 3;</code>
+     * @return Whether the dim field is set.
+     */
+    boolean hasDim();
+    /**
+     * <pre>
+     * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value dim = 3;</code>
+     * @return The dim.
+     */
+    com.google.protobuf.Int64Value getDim();
+    /**
+     * <pre>
+     * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value dim = 3;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getDimOrBuilder();
   }
   /**
    * <pre>
@@ -119,6 +146,19 @@ public final class EmbeddingService {
               java.lang.String s = input.readStringRequireUtf8();
 
               text_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (dim_ != null) {
+                subBuilder = dim_.toBuilder();
+              }
+              dim_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dim_);
+                dim_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -245,6 +285,44 @@ public final class EmbeddingService {
       }
     }
 
+    public static final int DIM_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value dim_;
+    /**
+     * <pre>
+     * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value dim = 3;</code>
+     * @return Whether the dim field is set.
+     */
+    @java.lang.Override
+    public boolean hasDim() {
+      return dim_ != null;
+    }
+    /**
+     * <pre>
+     * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value dim = 3;</code>
+     * @return The dim.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getDim() {
+      return dim_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : dim_;
+    }
+    /**
+     * <pre>
+     * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value dim = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getDimOrBuilder() {
+      return getDim();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -265,6 +343,9 @@ public final class EmbeddingService {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
       }
+      if (dim_ != null) {
+        output.writeMessage(3, getDim());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -279,6 +360,10 @@ public final class EmbeddingService {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
+      }
+      if (dim_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDim());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -299,6 +384,11 @@ public final class EmbeddingService {
           .equals(other.getModelUri())) return false;
       if (!getText()
           .equals(other.getText())) return false;
+      if (hasDim() != other.hasDim()) return false;
+      if (hasDim()) {
+        if (!getDim()
+            .equals(other.getDim())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -314,6 +404,10 @@ public final class EmbeddingService {
       hash = (53 * hash) + getModelUri().hashCode();
       hash = (37 * hash) + TEXT_FIELD_NUMBER;
       hash = (53 * hash) + getText().hashCode();
+      if (hasDim()) {
+        hash = (37 * hash) + DIM_FIELD_NUMBER;
+        hash = (53 * hash) + getDim().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -455,6 +549,12 @@ public final class EmbeddingService {
 
         text_ = "";
 
+        if (dimBuilder_ == null) {
+          dim_ = null;
+        } else {
+          dim_ = null;
+          dimBuilder_ = null;
+        }
         return this;
       }
 
@@ -483,6 +583,11 @@ public final class EmbeddingService {
         yandex.cloud.api.ai.foundation_models.v1.EmbeddingService.TextEmbeddingRequest result = new yandex.cloud.api.ai.foundation_models.v1.EmbeddingService.TextEmbeddingRequest(this);
         result.modelUri_ = modelUri_;
         result.text_ = text_;
+        if (dimBuilder_ == null) {
+          result.dim_ = dim_;
+        } else {
+          result.dim_ = dimBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -538,6 +643,9 @@ public final class EmbeddingService {
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
           onChanged();
+        }
+        if (other.hasDim()) {
+          mergeDim(other.getDim());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -758,6 +866,161 @@ public final class EmbeddingService {
         text_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Int64Value dim_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> dimBuilder_;
+      /**
+       * <pre>
+       * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value dim = 3;</code>
+       * @return Whether the dim field is set.
+       */
+      public boolean hasDim() {
+        return dimBuilder_ != null || dim_ != null;
+      }
+      /**
+       * <pre>
+       * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value dim = 3;</code>
+       * @return The dim.
+       */
+      public com.google.protobuf.Int64Value getDim() {
+        if (dimBuilder_ == null) {
+          return dim_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : dim_;
+        } else {
+          return dimBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value dim = 3;</code>
+       */
+      public Builder setDim(com.google.protobuf.Int64Value value) {
+        if (dimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dim_ = value;
+          onChanged();
+        } else {
+          dimBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value dim = 3;</code>
+       */
+      public Builder setDim(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (dimBuilder_ == null) {
+          dim_ = builderForValue.build();
+          onChanged();
+        } else {
+          dimBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value dim = 3;</code>
+       */
+      public Builder mergeDim(com.google.protobuf.Int64Value value) {
+        if (dimBuilder_ == null) {
+          if (dim_ != null) {
+            dim_ =
+              com.google.protobuf.Int64Value.newBuilder(dim_).mergeFrom(value).buildPartial();
+          } else {
+            dim_ = value;
+          }
+          onChanged();
+        } else {
+          dimBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value dim = 3;</code>
+       */
+      public Builder clearDim() {
+        if (dimBuilder_ == null) {
+          dim_ = null;
+          onChanged();
+        } else {
+          dim_ = null;
+          dimBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value dim = 3;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getDimBuilder() {
+        
+        onChanged();
+        return getDimFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value dim = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getDimOrBuilder() {
+        if (dimBuilder_ != null) {
+          return dimBuilder_.getMessageOrBuilder();
+        } else {
+          return dim_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : dim_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional parameter to specify embedding dimension for models that support multi-dimensional outputs
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value dim = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getDimFieldBuilder() {
+        if (dimBuilder_ == null) {
+          dimBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getDim(),
+                  getParentForChildren(),
+                  isClean());
+          dim_ = null;
+        }
+        return dimBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1783,32 +2046,35 @@ public final class EmbeddingService {
       "\nFyandex/cloud/ai/foundation_models/v1/e" +
       "mbedding/embedding_service.proto\022$yandex" +
       ".cloud.ai.foundation_models.v1\032\034google/a" +
-      "pi/annotations.proto\"7\n\024TextEmbeddingReq" +
-      "uest\022\021\n\tmodel_uri\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\"U\n" +
-      "\025TextEmbeddingResponse\022\021\n\tembedding\030\001 \003(" +
-      "\001\022\022\n\nnum_tokens\030\002 \001(\003\022\025\n\rmodel_version\030\003" +
-      " \001(\t2\315\001\n\021EmbeddingsService\022\267\001\n\rTextEmbed" +
-      "ding\022:.yandex.cloud.ai.foundation_models" +
-      ".v1.TextEmbeddingRequest\032;.yandex.cloud." +
-      "ai.foundation_models.v1.TextEmbeddingRes" +
-      "ponse\"-\202\323\344\223\002\'\"\"/foundationModels/v1/text" +
-      "Embedding:\001*B\220\001\n(yandex.cloud.api.ai.fou" +
-      "ndation_models.v1Zdgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/ai/foundatio" +
-      "n_models/v1/embedding;foundation_modelsb" +
-      "\006proto3"
+      "pi/annotations.proto\032\036google/protobuf/wr" +
+      "appers.proto\"a\n\024TextEmbeddingRequest\022\021\n\t" +
+      "model_uri\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\022(\n\003dim\030\003 \001" +
+      "(\0132\033.google.protobuf.Int64Value\"U\n\025TextE" +
+      "mbeddingResponse\022\021\n\tembedding\030\001 \003(\001\022\022\n\nn" +
+      "um_tokens\030\002 \001(\003\022\025\n\rmodel_version\030\003 \001(\t2\315" +
+      "\001\n\021EmbeddingsService\022\267\001\n\rTextEmbedding\022:" +
+      ".yandex.cloud.ai.foundation_models.v1.Te" +
+      "xtEmbeddingRequest\032;.yandex.cloud.ai.fou" +
+      "ndation_models.v1.TextEmbeddingResponse\"" +
+      "-\202\323\344\223\002\'\"\"/foundationModels/v1/textEmbedd" +
+      "ing:\001*B\220\001\n(yandex.cloud.api.ai.foundatio" +
+      "n_models.v1Zdgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/ai/foundation_mode" +
+      "ls/v1/embedding;foundation_modelsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         });
     internal_static_yandex_cloud_ai_foundation_models_v1_TextEmbeddingRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_foundation_models_v1_TextEmbeddingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_TextEmbeddingRequest_descriptor,
-        new java.lang.String[] { "ModelUri", "Text", });
+        new java.lang.String[] { "ModelUri", "Text", "Dim", });
     internal_static_yandex_cloud_ai_foundation_models_v1_TextEmbeddingResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_ai_foundation_models_v1_TextEmbeddingResponse_fieldAccessorTable = new
@@ -1821,6 +2087,7 @@ public final class EmbeddingService {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

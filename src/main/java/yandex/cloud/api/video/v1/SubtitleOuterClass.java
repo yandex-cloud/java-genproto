@@ -40,7 +40,9 @@ public final class SubtitleOuterClass {
 
     /**
      * <pre>
-     * Subtitle language represented as a three-letter ISO 639-3 code.
+     * Subtitle language in any of the following formats:
+     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+     * * two-letter code according to ISO 639-1
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -49,7 +51,9 @@ public final class SubtitleOuterClass {
     java.lang.String getLanguage();
     /**
      * <pre>
-     * Subtitle language represented as a three-letter ISO 639-3 code.
+     * Subtitle language in any of the following formats:
+     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+     * * two-letter code according to ISO 639-1
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -96,6 +100,25 @@ public final class SubtitleOuterClass {
      * @return The status.
      */
     yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleStatus getStatus();
+
+    /**
+     * <pre>
+     * Source type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
+     * @return The enum numeric value on the wire for sourceType.
+     */
+    int getSourceTypeValue();
+    /**
+     * <pre>
+     * Source type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
+     * @return The sourceType.
+     */
+    yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType getSourceType();
 
     /**
      * <pre>
@@ -219,6 +242,7 @@ public final class SubtitleOuterClass {
       language_ = "";
       label_ = "";
       status_ = 0;
+      sourceType_ = 0;
       filename_ = "";
     }
 
@@ -280,6 +304,12 @@ public final class SubtitleOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               filename_ = s;
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              sourceType_ = rawValue;
               break;
             }
             case 802: {
@@ -487,6 +517,147 @@ public final class SubtitleOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.video.v1.Subtitle.SubtitleStatus)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.video.v1.Subtitle.SubtitleSourceType}
+     */
+    public enum SubtitleSourceType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Subtitle source type unspecified.
+       * </pre>
+       *
+       * <code>SUBTITLE_SOURCE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      SUBTITLE_SOURCE_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Manually uploaded subtitle.
+       * </pre>
+       *
+       * <code>MANUAL = 1;</code>
+       */
+      MANUAL(1),
+      /**
+       * <pre>
+       * Automatically generated subtitle.
+       * </pre>
+       *
+       * <code>GENERATED = 2;</code>
+       */
+      GENERATED(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Subtitle source type unspecified.
+       * </pre>
+       *
+       * <code>SUBTITLE_SOURCE_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int SUBTITLE_SOURCE_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Manually uploaded subtitle.
+       * </pre>
+       *
+       * <code>MANUAL = 1;</code>
+       */
+      public static final int MANUAL_VALUE = 1;
+      /**
+       * <pre>
+       * Automatically generated subtitle.
+       * </pre>
+       *
+       * <code>GENERATED = 2;</code>
+       */
+      public static final int GENERATED_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SubtitleSourceType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static SubtitleSourceType forNumber(int value) {
+        switch (value) {
+          case 0: return SUBTITLE_SOURCE_TYPE_UNSPECIFIED;
+          case 1: return MANUAL;
+          case 2: return GENERATED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<SubtitleSourceType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          SubtitleSourceType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<SubtitleSourceType>() {
+              public SubtitleSourceType findValueByNumber(int number) {
+                return SubtitleSourceType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final SubtitleSourceType[] VALUES = values();
+
+      public static SubtitleSourceType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private SubtitleSourceType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.video.v1.Subtitle.SubtitleSourceType)
+    }
+
     private int parentIdCase_ = 0;
     private java.lang.Object parentId_;
     public enum ParentIdCase
@@ -576,7 +747,9 @@ public final class SubtitleOuterClass {
     private volatile java.lang.Object language_;
     /**
      * <pre>
-     * Subtitle language represented as a three-letter ISO 639-3 code.
+     * Subtitle language in any of the following formats:
+     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+     * * two-letter code according to ISO 639-1
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -597,7 +770,9 @@ public final class SubtitleOuterClass {
     }
     /**
      * <pre>
-     * Subtitle language represented as a three-letter ISO 639-3 code.
+     * Subtitle language in any of the following formats:
+     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+     * * two-letter code according to ISO 639-1
      * </pre>
      *
      * <code>string language = 2;</code>
@@ -689,6 +864,33 @@ public final class SubtitleOuterClass {
       @SuppressWarnings("deprecation")
       yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleStatus result = yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleStatus.valueOf(status_);
       return result == null ? yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int SOURCE_TYPE_FIELD_NUMBER = 6;
+    private int sourceType_;
+    /**
+     * <pre>
+     * Source type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
+     * @return The enum numeric value on the wire for sourceType.
+     */
+    @java.lang.Override public int getSourceTypeValue() {
+      return sourceType_;
+    }
+    /**
+     * <pre>
+     * Source type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
+     * @return The sourceType.
+     */
+    @java.lang.Override public yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType getSourceType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType result = yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType.valueOf(sourceType_);
+      return result == null ? yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType.UNRECOGNIZED : result;
     }
 
     public static final int FILENAME_FIELD_NUMBER = 5;
@@ -906,6 +1108,9 @@ public final class SubtitleOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filename_);
       }
+      if (sourceType_ != yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType.SUBTITLE_SOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, sourceType_);
+      }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
       }
@@ -940,6 +1145,10 @@ public final class SubtitleOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filename_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filename_);
       }
+      if (sourceType_ != yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType.SUBTITLE_SOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, sourceType_);
+      }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(100, getCreatedAt());
@@ -973,6 +1182,7 @@ public final class SubtitleOuterClass {
       if (!getLabel()
           .equals(other.getLabel())) return false;
       if (status_ != other.status_) return false;
+      if (sourceType_ != other.sourceType_) return false;
       if (!getFilename()
           .equals(other.getFilename())) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
@@ -1013,6 +1223,8 @@ public final class SubtitleOuterClass {
       hash = (53 * hash) + getLabel().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + SOURCE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + sourceType_;
       hash = (37 * hash) + FILENAME_FIELD_NUMBER;
       hash = (53 * hash) + getFilename().hashCode();
       if (hasCreatedAt()) {
@@ -1172,6 +1384,8 @@ public final class SubtitleOuterClass {
 
         status_ = 0;
 
+        sourceType_ = 0;
+
         filename_ = "";
 
         if (createdAtBuilder_ == null) {
@@ -1218,6 +1432,7 @@ public final class SubtitleOuterClass {
         result.language_ = language_;
         result.label_ = label_;
         result.status_ = status_;
+        result.sourceType_ = sourceType_;
         result.filename_ = filename_;
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
@@ -1295,6 +1510,9 @@ public final class SubtitleOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.sourceType_ != 0) {
+          setSourceTypeValue(other.getSourceTypeValue());
         }
         if (!other.getFilename().isEmpty()) {
           filename_ = other.filename_;
@@ -1460,7 +1678,9 @@ public final class SubtitleOuterClass {
       private java.lang.Object language_ = "";
       /**
        * <pre>
-       * Subtitle language represented as a three-letter ISO 639-3 code.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1480,7 +1700,9 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language represented as a three-letter ISO 639-3 code.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1501,7 +1723,9 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language represented as a three-letter ISO 639-3 code.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1520,7 +1744,9 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language represented as a three-letter ISO 639-3 code.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1534,7 +1760,9 @@ public final class SubtitleOuterClass {
       }
       /**
        * <pre>
-       * Subtitle language represented as a three-letter ISO 639-3 code.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 2;</code>
@@ -1719,6 +1947,80 @@ public final class SubtitleOuterClass {
       public Builder clearStatus() {
         
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sourceType_ = 0;
+      /**
+       * <pre>
+       * Source type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
+       * @return The enum numeric value on the wire for sourceType.
+       */
+      @java.lang.Override public int getSourceTypeValue() {
+        return sourceType_;
+      }
+      /**
+       * <pre>
+       * Source type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
+       * @param value The enum numeric value on the wire for sourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceTypeValue(int value) {
+        
+        sourceType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Source type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
+       * @return The sourceType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType getSourceType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType result = yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType.valueOf(sourceType_);
+        return result == null ? yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Source type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
+       * @param value The sourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceType(yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle.SubtitleSourceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        sourceType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Source type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.Subtitle.SubtitleSourceType source_type = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceType() {
+        
+        sourceType_ = 0;
         onChanged();
         return this;
       }
@@ -2318,16 +2620,20 @@ public final class SubtitleOuterClass {
     java.lang.String[] descriptorData = {
       "\n$yandex/cloud/video/v1/subtitle.proto\022\025" +
       "yandex.cloud.video.v1\032\037google/protobuf/t" +
-      "imestamp.proto\"\355\002\n\010Subtitle\022\n\n\002id\030\001 \001(\t\022" +
+      "imestamp.proto\"\215\004\n\010Subtitle\022\n\n\002id\030\001 \001(\t\022" +
       "\020\n\010language\030\002 \001(\t\022\r\n\005label\030\003 \001(\t\022>\n\006stat" +
       "us\030\004 \001(\0162..yandex.cloud.video.v1.Subtitl" +
-      "e.SubtitleStatus\022\020\n\010filename\030\005 \001(\t\022.\n\ncr" +
-      "eated_at\030d \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022.\n\nupdated_at\030e \001(\0132\032.google.protobuf" +
-      ".Timestamp\022\023\n\010video_id\030\350\007 \001(\tH\000\"S\n\016Subti" +
-      "tleStatus\022\037\n\033SUBTITLE_STATUS_UNSPECIFIED" +
-      "\020\000\022\022\n\016WAIT_UPLOADING\020\001\022\014\n\010UPLOADED\020\002B\013\n\t" +
-      "parent_idJ\004\010\006\020dJ\005\010f\020\350\007B\\\n\031yandex.cloud.a" +
+      "e.SubtitleStatus\022G\n\013source_type\030\006 \001(\01622." +
+      "yandex.cloud.video.v1.Subtitle.SubtitleS" +
+      "ourceType\022\020\n\010filename\030\005 \001(\t\022.\n\ncreated_a" +
+      "t\030d \001(\0132\032.google.protobuf.Timestamp\022.\n\nu" +
+      "pdated_at\030e \001(\0132\032.google.protobuf.Timest" +
+      "amp\022\023\n\010video_id\030\350\007 \001(\tH\000\"S\n\016SubtitleStat" +
+      "us\022\037\n\033SUBTITLE_STATUS_UNSPECIFIED\020\000\022\022\n\016W" +
+      "AIT_UPLOADING\020\001\022\014\n\010UPLOADED\020\002\"U\n\022Subtitl" +
+      "eSourceType\022$\n SUBTITLE_SOURCE_TYPE_UNSP" +
+      "ECIFIED\020\000\022\n\n\006MANUAL\020\001\022\r\n\tGENERATED\020\002B\013\n\t" +
+      "parent_idJ\004\010\007\020dJ\005\010f\020\350\007B\\\n\031yandex.cloud.a" +
       "pi.video.v1Z?github.com/yandex-cloud/go-" +
       "genproto/yandex/cloud/video/v1;videob\006pr" +
       "oto3"
@@ -2342,7 +2648,7 @@ public final class SubtitleOuterClass {
     internal_static_yandex_cloud_video_v1_Subtitle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Subtitle_descriptor,
-        new java.lang.String[] { "Id", "Language", "Label", "Status", "Filename", "CreatedAt", "UpdatedAt", "VideoId", "ParentId", });
+        new java.lang.String[] { "Id", "Language", "Label", "Status", "SourceType", "Filename", "CreatedAt", "UpdatedAt", "VideoId", "ParentId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

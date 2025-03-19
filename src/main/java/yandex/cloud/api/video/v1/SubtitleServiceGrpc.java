@@ -226,7 +226,7 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Return a specific subtitle.
+     * Get a specific subtitle.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GetSubtitleRequest request,
@@ -334,7 +334,7 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Return a specific subtitle.
+     * Get a specific subtitle.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GetSubtitleRequest request,
@@ -407,7 +407,7 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Return a specific subtitle.
+     * Get a specific subtitle.
      * </pre>
      */
     public yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle get(yandex.cloud.api.video.v1.SubtitleServiceOuterClass.GetSubtitleRequest request) {
@@ -475,7 +475,7 @@ public final class SubtitleServiceGrpc {
 
     /**
      * <pre>
-     * Return a specific subtitle.
+     * Get a specific subtitle.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.SubtitleOuterClass.Subtitle> get(

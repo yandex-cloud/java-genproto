@@ -625,6 +625,7 @@ public final class SubtitleServiceOuterClass {
     /**
      * <pre>
      * The maximum number of the results per page to return.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -637,7 +638,7 @@ public final class SubtitleServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -646,7 +647,7 @@ public final class SubtitleServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -822,6 +823,7 @@ public final class SubtitleServiceOuterClass {
     /**
      * <pre>
      * The maximum number of the results per page to return.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -839,7 +841,7 @@ public final class SubtitleServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -860,7 +862,7 @@ public final class SubtitleServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -1321,6 +1323,7 @@ public final class SubtitleServiceOuterClass {
       /**
        * <pre>
        * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1333,6 +1336,7 @@ public final class SubtitleServiceOuterClass {
       /**
        * <pre>
        * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1348,6 +1352,7 @@ public final class SubtitleServiceOuterClass {
       /**
        * <pre>
        * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1366,7 +1371,7 @@ public final class SubtitleServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1386,7 +1391,7 @@ public final class SubtitleServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1407,7 +1412,7 @@ public final class SubtitleServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1426,7 +1431,7 @@ public final class SubtitleServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1440,7 +1445,7 @@ public final class SubtitleServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -2614,9 +2619,9 @@ public final class SubtitleServiceOuterClass {
 
     /**
      * <pre>
-     * The language of the subtitles, represented as a three-letter ISO 639 code.
-     * Supports ISO 639-2/T (terminological), ISO 639-2/B (bibliographical) variants and ISO 639-3.
-     * Valid ISO language code corresponding to the subtitle text must be provided.
+     * Subtitle language in any of the following formats:
+     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+     * * two-letter code according to ISO 639-1
      * </pre>
      *
      * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
@@ -2625,9 +2630,9 @@ public final class SubtitleServiceOuterClass {
     java.lang.String getLanguage();
     /**
      * <pre>
-     * The language of the subtitles, represented as a three-letter ISO 639 code.
-     * Supports ISO 639-2/T (terminological), ISO 639-2/B (bibliographical) variants and ISO 639-3.
-     * Valid ISO language code corresponding to the subtitle text must be provided.
+     * Subtitle language in any of the following formats:
+     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+     * * two-letter code according to ISO 639-1
      * </pre>
      *
      * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
@@ -2640,7 +2645,7 @@ public final class SubtitleServiceOuterClass {
      * <pre>
      * Contains the subtitle label (or title) that will be displayed on screen during video playback.
      * Should provide a concise and accurate representation of the spoken content.
-     * If not provided, will be auto-generated based on the specified language.
+     * If not provided, it will be auto-generated based on the specified language.
      * </pre>
      *
      * <code>string label = 2;</code>
@@ -2651,7 +2656,7 @@ public final class SubtitleServiceOuterClass {
      * <pre>
      * Contains the subtitle label (or title) that will be displayed on screen during video playback.
      * Should provide a concise and accurate representation of the spoken content.
-     * If not provided, will be auto-generated based on the specified language.
+     * If not provided, it will be auto-generated based on the specified language.
      * </pre>
      *
      * <code>string label = 2;</code>
@@ -2913,9 +2918,9 @@ public final class SubtitleServiceOuterClass {
     private volatile java.lang.Object language_;
     /**
      * <pre>
-     * The language of the subtitles, represented as a three-letter ISO 639 code.
-     * Supports ISO 639-2/T (terminological), ISO 639-2/B (bibliographical) variants and ISO 639-3.
-     * Valid ISO language code corresponding to the subtitle text must be provided.
+     * Subtitle language in any of the following formats:
+     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+     * * two-letter code according to ISO 639-1
      * </pre>
      *
      * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
@@ -2936,9 +2941,9 @@ public final class SubtitleServiceOuterClass {
     }
     /**
      * <pre>
-     * The language of the subtitles, represented as a three-letter ISO 639 code.
-     * Supports ISO 639-2/T (terminological), ISO 639-2/B (bibliographical) variants and ISO 639-3.
-     * Valid ISO language code corresponding to the subtitle text must be provided.
+     * Subtitle language in any of the following formats:
+     * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+     * * two-letter code according to ISO 639-1
      * </pre>
      *
      * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
@@ -2965,7 +2970,7 @@ public final class SubtitleServiceOuterClass {
      * <pre>
      * Contains the subtitle label (or title) that will be displayed on screen during video playback.
      * Should provide a concise and accurate representation of the spoken content.
-     * If not provided, will be auto-generated based on the specified language.
+     * If not provided, it will be auto-generated based on the specified language.
      * </pre>
      *
      * <code>string label = 2;</code>
@@ -2988,7 +2993,7 @@ public final class SubtitleServiceOuterClass {
      * <pre>
      * Contains the subtitle label (or title) that will be displayed on screen during video playback.
      * Should provide a concise and accurate representation of the spoken content.
-     * If not provided, will be auto-generated based on the specified language.
+     * If not provided, it will be auto-generated based on the specified language.
      * </pre>
      *
      * <code>string label = 2;</code>
@@ -3551,9 +3556,9 @@ public final class SubtitleServiceOuterClass {
       private java.lang.Object language_ = "";
       /**
        * <pre>
-       * The language of the subtitles, represented as a three-letter ISO 639 code.
-       * Supports ISO 639-2/T (terminological), ISO 639-2/B (bibliographical) variants and ISO 639-3.
-       * Valid ISO language code corresponding to the subtitle text must be provided.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
@@ -3573,9 +3578,9 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * The language of the subtitles, represented as a three-letter ISO 639 code.
-       * Supports ISO 639-2/T (terminological), ISO 639-2/B (bibliographical) variants and ISO 639-3.
-       * Valid ISO language code corresponding to the subtitle text must be provided.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
@@ -3596,9 +3601,9 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * The language of the subtitles, represented as a three-letter ISO 639 code.
-       * Supports ISO 639-2/T (terminological), ISO 639-2/B (bibliographical) variants and ISO 639-3.
-       * Valid ISO language code corresponding to the subtitle text must be provided.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
@@ -3617,9 +3622,9 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * The language of the subtitles, represented as a three-letter ISO 639 code.
-       * Supports ISO 639-2/T (terminological), ISO 639-2/B (bibliographical) variants and ISO 639-3.
-       * Valid ISO language code corresponding to the subtitle text must be provided.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
@@ -3633,9 +3638,9 @@ public final class SubtitleServiceOuterClass {
       }
       /**
        * <pre>
-       * The language of the subtitles, represented as a three-letter ISO 639 code.
-       * Supports ISO 639-2/T (terminological), ISO 639-2/B (bibliographical) variants and ISO 639-3.
-       * Valid ISO language code corresponding to the subtitle text must be provided.
+       * Subtitle language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3
+       * * two-letter code according to ISO 639-1
        * </pre>
        *
        * <code>string language = 1 [(.yandex.cloud.length) = "2-3"];</code>
@@ -3659,7 +3664,7 @@ public final class SubtitleServiceOuterClass {
        * <pre>
        * Contains the subtitle label (or title) that will be displayed on screen during video playback.
        * Should provide a concise and accurate representation of the spoken content.
-       * If not provided, will be auto-generated based on the specified language.
+       * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
        * <code>string label = 2;</code>
@@ -3681,7 +3686,7 @@ public final class SubtitleServiceOuterClass {
        * <pre>
        * Contains the subtitle label (or title) that will be displayed on screen during video playback.
        * Should provide a concise and accurate representation of the spoken content.
-       * If not provided, will be auto-generated based on the specified language.
+       * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
        * <code>string label = 2;</code>
@@ -3704,7 +3709,7 @@ public final class SubtitleServiceOuterClass {
        * <pre>
        * Contains the subtitle label (or title) that will be displayed on screen during video playback.
        * Should provide a concise and accurate representation of the spoken content.
-       * If not provided, will be auto-generated based on the specified language.
+       * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
        * <code>string label = 2;</code>
@@ -3725,7 +3730,7 @@ public final class SubtitleServiceOuterClass {
        * <pre>
        * Contains the subtitle label (or title) that will be displayed on screen during video playback.
        * Should provide a concise and accurate representation of the spoken content.
-       * If not provided, will be auto-generated based on the specified language.
+       * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
        * <code>string label = 2;</code>
@@ -3741,7 +3746,7 @@ public final class SubtitleServiceOuterClass {
        * <pre>
        * Contains the subtitle label (or title) that will be displayed on screen during video playback.
        * Should provide a concise and accurate representation of the spoken content.
-       * If not provided, will be auto-generated based on the specified language.
+       * If not provided, it will be auto-generated based on the specified language.
        * </pre>
        *
        * <code>string label = 2;</code>
@@ -7764,50 +7769,50 @@ public final class SubtitleServiceOuterClass {
       "eration.proto\032\035yandex/cloud/validation.p" +
       "roto\032$yandex/cloud/video/v1/subtitle.pro" +
       "to\"7\n\022GetSubtitleRequest\022!\n\013subtitle_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\222\001\n\024ListSubtitlesReq" +
-      "uest\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npa" +
-      "ge_token\030e \001(\tB\t\212\3101\005<=200\022\035\n\010video_id\030\350\007" +
-      " \001(\tB\010\212\3101\004<=50H\000B\021\n\tparent_id\022\004\300\3011\001J\004\010\001\020" +
-      "dJ\005\010f\020\350\007\"j\n\025ListSubtitlesResponse\0222\n\tsub" +
-      "titles\030\001 \003(\0132\037.yandex.cloud.video.v1.Sub" +
-      "title\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\322\001\n" +
-      "\025CreateSubtitleRequest\022\031\n\010language\030\001 \001(\t" +
-      "B\007\212\3101\0032-3\022\r\n\005label\030\002 \001(\t\022\035\n\010video_id\030\350\007 " +
-      "\001(\tB\010\212\3101\004<=50H\000\022>\n\006upload\030\314\010 \001(\0132+.yande" +
-      "x.cloud.video.v1.SubtitleUploadParamsH\001B" +
-      "\021\n\tparent_id\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001J\005\010\003\020\350" +
-      "\007J\006\010\351\007\020\314\010\".\n\024SubtitleUploadParams\022\026\n\010fil" +
-      "ename\030\001 \001(\tB\004\350\3071\001\"-\n\026CreateSubtitleMetad" +
-      "ata\022\023\n\013subtitle_id\030\001 \001(\t\"E\n GenerateSubt" +
-      "itleUploadURLRequest\022!\n\013subtitle_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"7\n!GenerateSubtitleUploa" +
-      "dURLResponse\022\022\n\nupload_url\030\001 \001(\t\":\n\025Dele" +
-      "teSubtitleRequest\022!\n\013subtitle_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"-\n\026DeleteSubtitleMetadata\022\023" +
-      "\n\013subtitle_id\030\001 \001(\t2\261\006\n\017SubtitleService\022" +
-      "|\n\003Get\022).yandex.cloud.video.v1.GetSubtit" +
-      "leRequest\032\037.yandex.cloud.video.v1.Subtit" +
-      "le\")\202\323\344\223\002#\022!/video/v1/subtitles/{subtitl" +
-      "e_id}\022~\n\004List\022+.yandex.cloud.video.v1.Li" +
-      "stSubtitlesRequest\032,.yandex.cloud.video." +
-      "v1.ListSubtitlesResponse\"\033\202\323\344\223\002\025\022\023/video" +
-      "/v1/subtitles\022\237\001\n\006Create\022,.yandex.cloud." +
-      "video.v1.CreateSubtitleRequest\032!.yandex." +
-      "cloud.operation.Operation\"D\202\323\344\223\002\030\"\023/vide" +
-      "o/v1/subtitles:\001*\262\322*\"\n\026CreateSubtitleMet" +
-      "adata\022\010Subtitle\022\303\001\n\021GenerateUploadURL\0227." +
-      "yandex.cloud.video.v1.GenerateSubtitleUp" +
-      "loadURLRequest\0328.yandex.cloud.video.v1.G" +
-      "enerateSubtitleUploadURLResponse\";\202\323\344\223\0025" +
-      "\0223/video/v1/subtitles/{subtitle_id}:gene" +
-      "rateUploadURL\022\267\001\n\006Delete\022,.yandex.cloud." +
-      "video.v1.DeleteSubtitleRequest\032!.yandex." +
-      "cloud.operation.Operation\"\\\202\323\344\223\002#*!/vide" +
-      "o/v1/subtitles/{subtitle_id}\262\322*/\n\026Delete" +
-      "SubtitleMetadata\022\025google.protobuf.EmptyB" +
-      "\\\n\031yandex.cloud.api.video.v1Z?github.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/v" +
-      "ideo/v1;videob\006proto3"
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\224\001\n\024ListSubtitlesReq" +
+      "uest\022\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\037\n\npa" +
+      "ge_token\030e \001(\tB\013\212\3101\007<=15000\022\035\n\010video_id\030" +
+      "\350\007 \001(\tB\010\212\3101\004<=50H\000B\021\n\tparent_id\022\004\300\3011\001J\004\010" +
+      "\001\020dJ\005\010f\020\350\007\"j\n\025ListSubtitlesResponse\0222\n\ts" +
+      "ubtitles\030\001 \003(\0132\037.yandex.cloud.video.v1.S" +
+      "ubtitle\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"\322" +
+      "\001\n\025CreateSubtitleRequest\022\031\n\010language\030\001 \001" +
+      "(\tB\007\212\3101\0032-3\022\r\n\005label\030\002 \001(\t\022\035\n\010video_id\030\350" +
+      "\007 \001(\tB\010\212\3101\004<=50H\000\022>\n\006upload\030\314\010 \001(\0132+.yan" +
+      "dex.cloud.video.v1.SubtitleUploadParamsH" +
+      "\001B\021\n\tparent_id\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001J\005\010\003" +
+      "\020\350\007J\006\010\351\007\020\314\010\".\n\024SubtitleUploadParams\022\026\n\010f" +
+      "ilename\030\001 \001(\tB\004\350\3071\001\"-\n\026CreateSubtitleMet" +
+      "adata\022\023\n\013subtitle_id\030\001 \001(\t\"E\n GenerateSu" +
+      "btitleUploadURLRequest\022!\n\013subtitle_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"7\n!GenerateSubtitleUpl" +
+      "oadURLResponse\022\022\n\nupload_url\030\001 \001(\t\":\n\025De" +
+      "leteSubtitleRequest\022!\n\013subtitle_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteSubtitleMetadata" +
+      "\022\023\n\013subtitle_id\030\001 \001(\t2\261\006\n\017SubtitleServic" +
+      "e\022|\n\003Get\022).yandex.cloud.video.v1.GetSubt" +
+      "itleRequest\032\037.yandex.cloud.video.v1.Subt" +
+      "itle\")\202\323\344\223\002#\022!/video/v1/subtitles/{subti" +
+      "tle_id}\022~\n\004List\022+.yandex.cloud.video.v1." +
+      "ListSubtitlesRequest\032,.yandex.cloud.vide" +
+      "o.v1.ListSubtitlesResponse\"\033\202\323\344\223\002\025\022\023/vid" +
+      "eo/v1/subtitles\022\237\001\n\006Create\022,.yandex.clou" +
+      "d.video.v1.CreateSubtitleRequest\032!.yande" +
+      "x.cloud.operation.Operation\"D\202\323\344\223\002\030\"\023/vi" +
+      "deo/v1/subtitles:\001*\262\322*\"\n\026CreateSubtitleM" +
+      "etadata\022\010Subtitle\022\303\001\n\021GenerateUploadURL\022" +
+      "7.yandex.cloud.video.v1.GenerateSubtitle" +
+      "UploadURLRequest\0328.yandex.cloud.video.v1" +
+      ".GenerateSubtitleUploadURLResponse\";\202\323\344\223" +
+      "\0025\0223/video/v1/subtitles/{subtitle_id}:ge" +
+      "nerateUploadURL\022\267\001\n\006Delete\022,.yandex.clou" +
+      "d.video.v1.DeleteSubtitleRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\\\202\323\344\223\002#*!/vi" +
+      "deo/v1/subtitles/{subtitle_id}\262\322*/\n\026Dele" +
+      "teSubtitleMetadata\022\025google.protobuf.Empt" +
+      "yB\\\n\031yandex.cloud.api.video.v1Z?github.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

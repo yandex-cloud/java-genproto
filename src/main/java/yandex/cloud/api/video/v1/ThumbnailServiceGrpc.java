@@ -257,7 +257,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific thumbnail.
+     * Get the specific thumbnail.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request,
@@ -287,7 +287,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate urls for download images.
+     * Generate urls for downloading images.
      * </pre>
      */
     public void batchGenerateDownloadURLs(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request,
@@ -297,7 +297,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate url for upload image.
+     * Generate url for uploading an image.
      * </pre>
      */
     public void generateUploadURL(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request,
@@ -382,7 +382,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific thumbnail.
+     * Get the specific thumbnail.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request,
@@ -415,7 +415,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate urls for download images.
+     * Generate urls for downloading images.
      * </pre>
      */
     public void batchGenerateDownloadURLs(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request,
@@ -426,7 +426,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate url for upload image.
+     * Generate url for uploading an image.
      * </pre>
      */
     public void generateUploadURL(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request,
@@ -466,7 +466,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific thumbnail.
+     * Get the specific thumbnail.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail get(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GetThumbnailRequest request) {
@@ -496,7 +496,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate urls for download images.
+     * Generate urls for downloading images.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsResponse batchGenerateDownloadURLs(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsRequest request) {
@@ -506,7 +506,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate url for upload image.
+     * Generate url for uploading an image.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse generateUploadURL(yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLRequest request) {
@@ -544,7 +544,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific thumbnail.
+     * Get the specific thumbnail.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailOuterClass.Thumbnail> get(
@@ -577,7 +577,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate urls for download images.
+     * Generate urls for downloading images.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.BatchGenerateDownloadURLsResponse> batchGenerateDownloadURLs(
@@ -588,7 +588,7 @@ public final class ThumbnailServiceGrpc {
 
     /**
      * <pre>
-     * Generate url for upload image.
+     * Generate url for uploading an image.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ThumbnailServiceOuterClass.GenerateThumbnailUploadURLResponse> generateUploadURL(

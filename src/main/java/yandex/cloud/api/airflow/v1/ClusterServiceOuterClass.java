@@ -3135,6 +3135,33 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getAdminPasswordBytes();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+     * @return Whether the maintenanceWindow field is set.
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+     * @return The maintenanceWindow.
+     */
+    yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.airflow.v1.CreateClusterRequest}
@@ -3285,6 +3312,19 @@ public final class ClusterServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               adminPassword_ = s;
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3827,6 +3867,44 @@ public final class ClusterServiceOuterClass {
       }
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 13;
+    private yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+     * @return Whether the maintenanceWindow field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+     * @return The maintenanceWindow.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3876,6 +3954,9 @@ public final class ClusterServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(adminPassword_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, adminPassword_);
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(13, getMaintenanceWindow());
       }
       unknownFields.writeTo(output);
     }
@@ -3931,6 +4012,10 @@ public final class ClusterServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(adminPassword_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, adminPassword_);
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getMaintenanceWindow());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3980,6 +4065,11 @@ public final class ClusterServiceOuterClass {
       }
       if (!getAdminPassword()
           .equals(other.getAdminPassword())) return false;
+      if (hasMaintenanceWindow() != other.hasMaintenanceWindow()) return false;
+      if (hasMaintenanceWindow()) {
+        if (!getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4024,6 +4114,10 @@ public final class ClusterServiceOuterClass {
       }
       hash = (37 * hash) + ADMIN_PASSWORD_FIELD_NUMBER;
       hash = (53 * hash) + getAdminPassword().hashCode();
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4216,6 +4310,12 @@ public final class ClusterServiceOuterClass {
         }
         adminPassword_ = "";
 
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
         return this;
       }
 
@@ -4271,6 +4371,11 @@ public final class ClusterServiceOuterClass {
           result.logging_ = loggingBuilder_.build();
         }
         result.adminPassword_ = adminPassword_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4355,6 +4460,9 @@ public final class ClusterServiceOuterClass {
         if (!other.getAdminPassword().isEmpty()) {
           adminPassword_ = other.adminPassword_;
           onChanged();
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5691,6 +5799,161 @@ public final class ClusterServiceOuterClass {
         adminPassword_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+       * @return Whether the maintenanceWindow field is set.
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+       * @return The maintenanceWindow.
+       */
+      public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9980,6 +10243,33 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.airflow.v1.LoggingConfig logging = 11;</code>
      */
     yandex.cloud.api.airflow.v1.ClusterOuterClass.LoggingConfigOrBuilder getLoggingOrBuilder();
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+     * @return Whether the maintenanceWindow field is set.
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+     * @return The maintenanceWindow.
+     */
+    yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+     */
+    yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.airflow.v1.UpdateClusterRequest}
@@ -10134,6 +10424,19 @@ public final class ClusterServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(logging_);
                 logging_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10678,6 +10981,44 @@ public final class ClusterServiceOuterClass {
       return getLogging();
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 12;
+    private yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+     * @return Whether the maintenanceWindow field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+     * @return The maintenanceWindow.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10727,6 +11068,9 @@ public final class ClusterServiceOuterClass {
       }
       if (logging_ != null) {
         output.writeMessage(11, getLogging());
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(12, getMaintenanceWindow());
       }
       unknownFields.writeTo(output);
     }
@@ -10783,6 +11127,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getLogging());
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getMaintenanceWindow());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10835,6 +11183,11 @@ public final class ClusterServiceOuterClass {
         if (!getLogging()
             .equals(other.getLogging())) return false;
       }
+      if (hasMaintenanceWindow() != other.hasMaintenanceWindow()) return false;
+      if (hasMaintenanceWindow()) {
+        if (!getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10880,6 +11233,10 @@ public final class ClusterServiceOuterClass {
       if (hasLogging()) {
         hash = (37 * hash) + LOGGING_FIELD_NUMBER;
         hash = (53 * hash) + getLogging().hashCode();
+      }
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11077,6 +11434,12 @@ public final class ClusterServiceOuterClass {
           logging_ = null;
           loggingBuilder_ = null;
         }
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
         return this;
       }
 
@@ -11135,6 +11498,11 @@ public final class ClusterServiceOuterClass {
           result.logging_ = logging_;
         } else {
           result.logging_ = loggingBuilder_.build();
+        }
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
         }
         onBuilt();
         return result;
@@ -11219,6 +11587,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasLogging()) {
           mergeLogging(other.getLogging());
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12628,6 +12999,161 @@ public final class ClusterServiceOuterClass {
           logging_ = null;
         }
         return loggingBuilder_;
+      }
+
+      private yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+       * @return Whether the maintenanceWindow field is set.
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+       * @return The maintenanceWindow.
+       */
+      public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+       */
+      public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+       */
+      public yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.airflow.v1.MaintenanceWindow maintenance_window = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.airflow.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19036,119 +19562,123 @@ public final class ClusterServiceOuterClass {
       "e.proto\022\027yandex.cloud.airflow.v1\032\034google" +
       "/api/annotations.proto\032 google/protobuf/" +
       "field_mask.proto\032%yandex/cloud/airflow/v" +
-      "1/cluster.proto\032&yandex/cloud/operation/" +
-      "operation.proto\032\035yandex/cloud/validation" +
-      ".proto\032 yandex/cloud/api/operation.proto" +
-      "\"5\n\021GetClusterRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersRequest\022" +
-      "\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
-      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=10" +
-      "00\"c\n\024ListClustersResponse\0222\n\010clusters\030\001" +
-      " \003(\0132 .yandex.cloud.airflow.v1.Cluster\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\235\005\n\024CreateCluste" +
-      "rRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z" +
-      "0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022" +
-      "\212\001\n\006labels\030\004 \003(\01329.yandex.cloud.airflow." +
-      "v1.CreateClusterRequest.LabelsEntryB?\202\3101" +
-      "\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\310" +
-      "1\022\022\020[a-z][-_0-9a-z]*\022<\n\006config\030\006 \001(\0132&.y" +
-      "andex.cloud.airflow.v1.ClusterConfigB\004\350\307" +
-      "1\001\0227\n\007network\030\007 \001(\0132&.yandex.cloud.airfl" +
-      "ow.v1.NetworkConfig\022:\n\tcode_sync\030\010 \001(\0132\'" +
-      ".yandex.cloud.airflow.v1.CodeSyncConfig\022" +
-      "\033\n\023deletion_protection\030\t \001(\010\022$\n\022service_" +
-      "account_id\030\n \001(\tB\010\212\3101\004<=50\0227\n\007logging\030\013 " +
-      "\001(\0132&.yandex.cloud.airflow.v1.LoggingCon" +
-      "fig\022%\n\016admin_password\030\014 \001(\tB\r\350\3071\001\212\3101\0058-1" +
-      "28\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001J\004\010\005\020\006\"+\n\025CreateClusterMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\"\355\003\n\027UpdateClusterCo" +
-      "nfigSpec\0227\n\007airflow\030\002 \001(\0132&.yandex.cloud" +
-      ".airflow.v1.AirflowConfig\022;\n\twebserver\030\003" +
-      " \001(\0132(.yandex.cloud.airflow.v1.Webserver" +
-      "Config\022;\n\tscheduler\030\004 \001(\0132(.yandex.cloud" +
-      ".airflow.v1.SchedulerConfig\022;\n\ttriggerer" +
-      "\030\005 \001(\0132(.yandex.cloud.airflow.v1.Trigger" +
-      "erConfig\0225\n\006worker\030\006 \001(\0132%.yandex.cloud." +
-      "airflow.v1.WorkerConfig\022;\n\014dependencies\030" +
-      "\007 \001(\0132%.yandex.cloud.airflow.v1.Dependen" +
-      "cies\0227\n\007lockbox\030\010 \001(\0132&.yandex.cloud.air" +
-      "flow.v1.LockboxConfig\022\027\n\017airflow_version" +
-      "\030\t \001(\t\022\026\n\016python_version\030\n \001(\tJ\004\010\001\020\002\"5\n\027" +
-      "UpdateNetworkConfigSpec\022\032\n\022security_grou" +
-      "p_ids\030\001 \003(\t\"\275\005\n\024UpdateClusterRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update" +
-      "_mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022" +
-      "/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}" +
-      "[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256" +
-      "\022\212\001\n\006labels\030\005 \003(\01329.yandex.cloud.airflow" +
-      ".v1.UpdateClusterRequest.LabelsEntryB?\202\310" +
-      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
-      "\3101\022\022\020[a-z][-_0-9a-z]*\022E\n\013config_spec\030\006 \001" +
-      "(\01320.yandex.cloud.airflow.v1.UpdateClust" +
-      "erConfigSpec\022:\n\tcode_sync\030\007 \001(\0132\'.yandex" +
-      ".cloud.airflow.v1.CodeSyncConfig\022F\n\014netw" +
-      "ork_spec\030\010 \001(\01320.yandex.cloud.airflow.v1" +
-      ".UpdateNetworkConfigSpec\022\033\n\023deletion_pro" +
-      "tection\030\t \001(\010\022$\n\022service_account_id\030\n \001(" +
-      "\tB\010\212\3101\004<=50\0227\n\007logging\030\013 \001(\0132&.yandex.cl" +
-      "oud.airflow.v1.LoggingConfig\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025U" +
-      "pdateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t" +
-      "\"8\n\024DeleteClusterRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClusterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartClusterR" +
-      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"*\n\024StartClusterMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\"6\n\022StopClusterRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"~\n\034ListClusterOp" +
-      "erationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000" +
-      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListC" +
-      "lusterOperationsResponse\0225\n\noperations\030\001" +
-      " \003(\0132!.yandex.cloud.operation.Operation\022" +
-      "\027\n\017next_page_token\030\002 \001(\t2\362\n\n\016ClusterServ" +
-      "ice\022\206\001\n\003Get\022*.yandex.cloud.airflow.v1.Ge" +
-      "tClusterRequest\032 .yandex.cloud.airflow.v" +
-      "1.Cluster\"1\202\323\344\223\002+\022)/managed-airflow/v1/c" +
-      "lusters/{cluster_id}\022\211\001\n\004List\022,.yandex.c" +
-      "loud.airflow.v1.ListClustersRequest\032-.ya" +
-      "ndex.cloud.airflow.v1.ListClustersRespon" +
-      "se\"$\202\323\344\223\002\036\022\034/managed-airflow/v1/clusters" +
-      "\022\247\001\n\006Create\022-.yandex.cloud.airflow.v1.Cr" +
-      "eateClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"K\202\323\344\223\002!\"\034/managed-airflow/" +
-      "v1/clusters:\001*\262\322* \n\025CreateClusterMetadat" +
-      "a\022\007Cluster\022\264\001\n\006Update\022-.yandex.cloud.air" +
-      "flow.v1.UpdateClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"X\202\323\344\223\002.2)/manage" +
-      "d-airflow/v1/clusters/{cluster_id}:\001*\262\322*" +
-      " \n\025UpdateClusterMetadata\022\007Cluster\022\277\001\n\006De" +
-      "lete\022-.yandex.cloud.airflow.v1.DeleteClu" +
+      "1/cluster.proto\032)yandex/cloud/airflow/v1" +
+      "/maintenance.proto\032&yandex/cloud/operati" +
+      "on/operation.proto\032\035yandex/cloud/validat" +
+      "ion.proto\032 yandex/cloud/api/operation.pr" +
+      "oto\"5\n\021GetClusterRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\023ListClustersReque" +
+      "st\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
+      "=1000\"c\n\024ListClustersResponse\0222\n\010cluster" +
+      "s\030\001 \003(\0132 .yandex.cloud.airflow.v1.Cluste" +
+      "r\022\027\n\017next_page_token\030\002 \001(\t\"\345\005\n\024CreateClu" +
+      "sterRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
+      "A-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=2" +
+      "56\022\212\001\n\006labels\030\004 \003(\01329.yandex.cloud.airfl" +
+      "ow.v1.CreateClusterRequest.LabelsEntryB?" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=6" +
+      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022<\n\006config\030\006 \001(\0132" +
+      "&.yandex.cloud.airflow.v1.ClusterConfigB" +
+      "\004\350\3071\001\0227\n\007network\030\007 \001(\0132&.yandex.cloud.ai" +
+      "rflow.v1.NetworkConfig\022:\n\tcode_sync\030\010 \001(" +
+      "\0132\'.yandex.cloud.airflow.v1.CodeSyncConf" +
+      "ig\022\033\n\023deletion_protection\030\t \001(\010\022$\n\022servi" +
+      "ce_account_id\030\n \001(\tB\010\212\3101\004<=50\0227\n\007logging" +
+      "\030\013 \001(\0132&.yandex.cloud.airflow.v1.Logging" +
+      "Config\022%\n\016admin_password\030\014 \001(\tB\r\350\3071\001\212\3101\005" +
+      "8-128\022F\n\022maintenance_window\030\r \001(\0132*.yand" +
+      "ex.cloud.airflow.v1.MaintenanceWindow\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001J\004\010\005\020\006\"+\n\025CreateClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"\355\003\n\027UpdateClusterConfigS" +
+      "pec\0227\n\007airflow\030\002 \001(\0132&.yandex.cloud.airf" +
+      "low.v1.AirflowConfig\022;\n\twebserver\030\003 \001(\0132" +
+      "(.yandex.cloud.airflow.v1.WebserverConfi" +
+      "g\022;\n\tscheduler\030\004 \001(\0132(.yandex.cloud.airf" +
+      "low.v1.SchedulerConfig\022;\n\ttriggerer\030\005 \001(" +
+      "\0132(.yandex.cloud.airflow.v1.TriggererCon" +
+      "fig\0225\n\006worker\030\006 \001(\0132%.yandex.cloud.airfl" +
+      "ow.v1.WorkerConfig\022;\n\014dependencies\030\007 \001(\013" +
+      "2%.yandex.cloud.airflow.v1.Dependencies\022" +
+      "7\n\007lockbox\030\010 \001(\0132&.yandex.cloud.airflow." +
+      "v1.LockboxConfig\022\027\n\017airflow_version\030\t \001(" +
+      "\t\022\026\n\016python_version\030\n \001(\tJ\004\010\001\020\002\"5\n\027Updat" +
+      "eNetworkConfigSpec\022\032\n\022security_group_ids" +
+      "\030\001 \003(\t\"\205\006\n\024UpdateClusterRequest\022 \n\nclust" +
+      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask" +
+      "\030\002 \001(\0132\032.google.protobuf.FieldMask\022/\n\004na" +
+      "me\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0" +
+      "-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\212\001\n\006" +
+      "labels\030\005 \003(\01329.yandex.cloud.airflow.v1.U" +
+      "pdateClusterRequest.LabelsEntryB?\202\3101\004<=6" +
+      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
+      "[a-z][-_0-9a-z]*\022E\n\013config_spec\030\006 \001(\01320." +
+      "yandex.cloud.airflow.v1.UpdateClusterCon" +
+      "figSpec\022:\n\tcode_sync\030\007 \001(\0132\'.yandex.clou" +
+      "d.airflow.v1.CodeSyncConfig\022F\n\014network_s" +
+      "pec\030\010 \001(\01320.yandex.cloud.airflow.v1.Upda" +
+      "teNetworkConfigSpec\022\033\n\023deletion_protecti" +
+      "on\030\t \001(\010\022$\n\022service_account_id\030\n \001(\tB\010\212\310" +
+      "1\004<=50\0227\n\007logging\030\013 \001(\0132&.yandex.cloud.a" +
+      "irflow.v1.LoggingConfig\022F\n\022maintenance_w" +
+      "indow\030\014 \001(\0132*.yandex.cloud.airflow.v1.Ma" +
+      "intenanceWindow\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterM" +
+      "etadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClu" +
+      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\ncluste" +
+      "r_id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClus" +
+      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopC" +
+      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\ncluste" +
+      "r_id\030\001 \001(\t\"~\n\034ListClusterOperationsReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
+      "n\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperati" +
+      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
+      ".cloud.operation.Operation\022\027\n\017next_page_" +
+      "token\030\002 \001(\t2\362\n\n\016ClusterService\022\206\001\n\003Get\022*" +
+      ".yandex.cloud.airflow.v1.GetClusterReque" +
+      "st\032 .yandex.cloud.airflow.v1.Cluster\"1\202\323" +
+      "\344\223\002+\022)/managed-airflow/v1/clusters/{clus" +
+      "ter_id}\022\211\001\n\004List\022,.yandex.cloud.airflow." +
+      "v1.ListClustersRequest\032-.yandex.cloud.ai" +
+      "rflow.v1.ListClustersResponse\"$\202\323\344\223\002\036\022\034/" +
+      "managed-airflow/v1/clusters\022\247\001\n\006Create\022-" +
+      ".yandex.cloud.airflow.v1.CreateClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"K\202\323\344\223\002!\"\034/managed-airflow/v1/clusters:\001" +
+      "*\262\322* \n\025CreateClusterMetadata\022\007Cluster\022\264\001" +
+      "\n\006Update\022-.yandex.cloud.airflow.v1.Updat" +
+      "eClusterRequest\032!.yandex.cloud.operation" +
+      ".Operation\"X\202\323\344\223\002.2)/managed-airflow/v1/" +
+      "clusters/{cluster_id}:\001*\262\322* \n\025UpdateClus" +
+      "terMetadata\022\007Cluster\022\277\001\n\006Delete\022-.yandex" +
+      ".cloud.airflow.v1.DeleteClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"c\202\323\344\223\002" +
+      "+*)/managed-airflow/v1/clusters/{cluster" +
+      "_id}\262\322*.\n\025DeleteClusterMetadata\022\025google." +
+      "protobuf.Empty\022\264\001\n\005Start\022,.yandex.cloud." +
+      "airflow.v1.StartClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"Z\202\323\344\223\0021\"//mana" +
+      "ged-airflow/v1/clusters/{cluster_id}:sta" +
+      "rt\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\260\001" +
+      "\n\004Stop\022+.yandex.cloud.airflow.v1.StopClu" +
       "sterRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"c\202\323\344\223\002+*)/managed-airflow/v1/clus" +
-      "ters/{cluster_id}\262\322*.\n\025DeleteClusterMeta" +
-      "data\022\025google.protobuf.Empty\022\264\001\n\005Start\022,." +
-      "yandex.cloud.airflow.v1.StartClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"Z" +
-      "\202\323\344\223\0021\"//managed-airflow/v1/clusters/{cl" +
-      "uster_id}:start\262\322*\037\n\024StartClusterMetadat" +
-      "a\022\007Cluster\022\260\001\n\004Stop\022+.yandex.cloud.airfl" +
-      "ow.v1.StopClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"X\202\323\344\223\0020\"./managed-ai" +
-      "rflow/v1/clusters/{cluster_id}:stop\262\322*\036\n" +
-      "\023StopClusterMetadata\022\007Cluster\022\275\001\n\016ListOp" +
-      "erations\0225.yandex.cloud.airflow.v1.ListC" +
-      "lusterOperationsRequest\0326.yandex.cloud.a" +
-      "irflow.v1.ListClusterOperationsResponse\"" +
-      "<\202\323\344\223\0026\0224/managed-airflow/v1/clusters/{c" +
-      "luster_id}/operationsBb\n\033yandex.cloud.ap" +
-      "i.airflow.v1ZCgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/airflow/v1;airflo" +
-      "wb\006proto3"
+      "ration\"X\202\323\344\223\0020\"./managed-airflow/v1/clus" +
+      "ters/{cluster_id}:stop\262\322*\036\n\023StopClusterM" +
+      "etadata\022\007Cluster\022\275\001\n\016ListOperations\0225.ya" +
+      "ndex.cloud.airflow.v1.ListClusterOperati" +
+      "onsRequest\0326.yandex.cloud.airflow.v1.Lis" +
+      "tClusterOperationsResponse\"<\202\323\344\223\0026\0224/man" +
+      "aged-airflow/v1/clusters/{cluster_id}/op" +
+      "erationsBb\n\033yandex.cloud.api.airflow.v1Z" +
+      "Cgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/airflow/v1;airflowb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19156,6 +19686,7 @@ public final class ClusterServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.airflow.v1.ClusterOuterClass.getDescriptor(),
+          yandex.cloud.api.airflow.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -19183,7 +19714,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_airflow_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Config", "Network", "CodeSync", "DeletionProtection", "ServiceAccountId", "Logging", "AdminPassword", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Config", "Network", "CodeSync", "DeletionProtection", "ServiceAccountId", "Logging", "AdminPassword", "MaintenanceWindow", });
     internal_static_yandex_cloud_airflow_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_airflow_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_airflow_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -19213,7 +19744,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_airflow_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_airflow_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "ConfigSpec", "CodeSync", "NetworkSpec", "DeletionProtection", "ServiceAccountId", "Logging", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Name", "Description", "Labels", "ConfigSpec", "CodeSync", "NetworkSpec", "DeletionProtection", "ServiceAccountId", "Logging", "MaintenanceWindow", });
     internal_static_yandex_cloud_airflow_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_airflow_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_airflow_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -19289,6 +19820,7 @@ public final class ClusterServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.airflow.v1.ClusterOuterClass.getDescriptor();
+    yandex.cloud.api.airflow.v1.Maintenance.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();

@@ -698,6 +698,10 @@ public final class TestOuterClass {
        * <code>LOST = 14;</code>
        */
       LOST(14),
+      /**
+       * <code>CANCELLED = 15;</code>
+       */
+      CANCELLED(15),
       UNRECOGNIZED(-1),
       ;
 
@@ -761,6 +765,10 @@ public final class TestOuterClass {
        * <code>LOST = 14;</code>
        */
       public static final int LOST_VALUE = 14;
+      /**
+       * <code>CANCELLED = 15;</code>
+       */
+      public static final int CANCELLED_VALUE = 15;
 
 
       public final int getNumber() {
@@ -802,6 +810,7 @@ public final class TestOuterClass {
           case 12: return WAITING;
           case 13: return DELETING;
           case 14: return LOST;
+          case 15: return CANCELLED;
           default: return null;
         }
       }
@@ -4538,7 +4547,7 @@ public final class TestOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/loadtesting/agent/v1/test" +
       ".proto\022!yandex.cloud.loadtesting.agent.v" +
-      "1\032\037google/protobuf/timestamp.proto\"\210\010\n\004T" +
+      "1\032\037google/protobuf/timestamp.proto\"\227\010\n\004T" +
       "est\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004na" +
       "me\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022C\n\006labels\030" +
       "\005 \003(\01323.yandex.cloud.loadtesting.agent.v" +
@@ -4556,18 +4565,19 @@ public final class TestOuterClass {
       "es\030\022 \003(\t\022>\n\006status\030\023 \001(\0162..yandex.cloud." +
       "loadtesting.agent.v1.Test.Status\022\016\n\006erro" +
       "rs\030\024 \003(\t\022\020\n\010favorite\030\025 \001(\010\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\343\001\n\006St" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\362\001\n\006St" +
       "atus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007CREATED\020" +
       "\001\022\r\n\tINITIATED\020\002\022\r\n\tPREPARING\020\003\022\013\n\007RUNNI" +
       "NG\020\004\022\r\n\tFINISHING\020\005\022\010\n\004DONE\020\006\022\023\n\017POST_PR" +
       "OCESSING\020\007\022\n\n\006FAILED\020\010\022\014\n\010STOPPING\020\t\022\013\n\007" +
       "STOPPED\020\n\022\017\n\013AUTOSTOPPED\020\013\022\013\n\007WAITING\020\014\022" +
-      "\014\n\010DELETING\020\r\022\010\n\004LOST\020\016\"L\n\tGenerator\022\031\n\025" +
-      "GENERATOR_UNSPECIFIED\020\000\022\013\n\007PANDORA\020\001\022\013\n\007" +
-      "PHANTOM\020\002\022\n\n\006JMETER\020\003B\006\n\004ammoBt\n%yandex." +
-      "cloud.api.loadtesting.agent.v1ZKgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/loadtesting/agent/v1;agentb\006proto3"
+      "\014\n\010DELETING\020\r\022\010\n\004LOST\020\016\022\r\n\tCANCELLED\020\017\"L" +
+      "\n\tGenerator\022\031\n\025GENERATOR_UNSPECIFIED\020\000\022\013" +
+      "\n\007PANDORA\020\001\022\013\n\007PHANTOM\020\002\022\n\n\006JMETER\020\003B\006\n\004" +
+      "ammoBt\n%yandex.cloud.api.loadtesting.age" +
+      "nt.v1ZKgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/loadtesting/agent/v1;age" +
+      "ntb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

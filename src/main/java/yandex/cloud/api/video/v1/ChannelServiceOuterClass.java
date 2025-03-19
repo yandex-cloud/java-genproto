@@ -644,7 +644,8 @@ public final class ChannelServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of the results per page to return. Default value: 100.
+     * The maximum number of the results per page to return.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -657,7 +658,7 @@ public final class ChannelServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -666,7 +667,7 @@ public final class ChannelServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -675,8 +676,9 @@ public final class ChannelServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -687,8 +689,9 @@ public final class ChannelServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -702,10 +705,11 @@ public final class ChannelServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -717,10 +721,11 @@ public final class ChannelServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -890,7 +895,8 @@ public final class ChannelServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of the results per page to return. Default value: 100.
+     * The maximum number of the results per page to return.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -908,7 +914,7 @@ public final class ChannelServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -929,7 +935,7 @@ public final class ChannelServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -952,8 +958,9 @@ public final class ChannelServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -976,8 +983,9 @@ public final class ChannelServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1005,10 +1013,11 @@ public final class ChannelServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1032,10 +1041,11 @@ public final class ChannelServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1527,7 +1537,8 @@ public final class ChannelServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of the results per page to return. Default value: 100.
+       * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1539,7 +1550,8 @@ public final class ChannelServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return. Default value: 100.
+       * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1554,7 +1566,8 @@ public final class ChannelServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return. Default value: 100.
+       * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1573,7 +1586,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1593,7 +1606,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1614,7 +1627,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1633,7 +1646,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1647,7 +1660,7 @@ public final class ChannelServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -1667,8 +1680,9 @@ public final class ChannelServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1690,8 +1704,9 @@ public final class ChannelServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1714,8 +1729,9 @@ public final class ChannelServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1736,8 +1752,9 @@ public final class ChannelServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1753,8 +1770,9 @@ public final class ChannelServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1779,10 +1797,11 @@ public final class ChannelServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1805,10 +1824,11 @@ public final class ChannelServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1832,10 +1852,11 @@ public final class ChannelServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1857,10 +1878,11 @@ public final class ChannelServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1877,10 +1899,11 @@ public final class ChannelServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -3072,7 +3095,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -3081,7 +3104,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -3112,7 +3135,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -3120,7 +3143,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -3135,7 +3158,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -3144,7 +3167,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -3155,11 +3178,38 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return Whether the settings field is set.
+     */
+    boolean hasSettings();
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return The settings.
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings();
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder getSettingsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.CreateChannelRequest}
@@ -3239,6 +3289,19 @@ public final class ChannelServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 1610: {
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder subBuilder = null;
+              if (settings_ != null) {
+                subBuilder = settings_.toBuilder();
+              }
+              settings_ = input.readMessage(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3338,7 +3401,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -3359,7 +3422,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -3454,7 +3517,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -3476,7 +3539,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3488,7 +3551,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3505,7 +3568,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -3518,6 +3581,44 @@ public final class ChannelServiceOuterClass {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
+    }
+
+    public static final int SETTINGS_FIELD_NUMBER = 201;
+    private yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings settings_;
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return Whether the settings field is set.
+     */
+    @java.lang.Override
+    public boolean hasSettings() {
+      return settings_ != null;
+    }
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return The settings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings() {
+      return settings_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance() : settings_;
+    }
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder getSettingsOrBuilder() {
+      return getSettings();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3549,6 +3650,9 @@ public final class ChannelServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           200);
+      if (settings_ != null) {
+        output.writeMessage(201, getSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3577,6 +3681,10 @@ public final class ChannelServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(200, labels__);
       }
+      if (settings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(201, getSettings());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3600,6 +3708,11 @@ public final class ChannelServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
+      if (hasSettings()) {
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3620,6 +3733,10 @@ public final class ChannelServiceOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasSettings()) {
+        hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getSettings().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3783,6 +3900,12 @@ public final class ChannelServiceOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -3815,6 +3938,11 @@ public final class ChannelServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (settingsBuilder_ == null) {
+          result.settings_ = settings_;
+        } else {
+          result.settings_ = settingsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3877,6 +4005,9 @@ public final class ChannelServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasSettings()) {
+          mergeSettings(other.getSettings());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4009,7 +4140,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -4029,7 +4160,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -4050,7 +4181,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -4069,7 +4200,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -4083,7 +4214,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -4226,7 +4357,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -4248,7 +4379,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4260,7 +4391,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4277,7 +4408,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -4302,7 +4433,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -4325,7 +4456,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -4344,7 +4475,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -4352,6 +4483,161 @@ public final class ChannelServiceOuterClass {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings settings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder> settingsBuilder_;
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       * @return Whether the settings field is set.
+       */
+      public boolean hasSettings() {
+        return settingsBuilder_ != null || settings_ != null;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       * @return The settings.
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings() {
+        if (settingsBuilder_ == null) {
+          return settings_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance() : settings_;
+        } else {
+          return settingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder setSettings(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings value) {
+        if (settingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder setSettings(
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder builderForValue) {
+        if (settingsBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder mergeSettings(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings value) {
+        if (settingsBuilder_ == null) {
+          if (settings_ != null) {
+            settings_ =
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.newBuilder(settings_).mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          settingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder clearSettings() {
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+          onChanged();
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder getSettingsBuilder() {
+        
+        onChanged();
+        return getSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder getSettingsOrBuilder() {
+        if (settingsBuilder_ != null) {
+          return settingsBuilder_.getMessageOrBuilder();
+        } else {
+          return settings_ == null ?
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance() : settings_;
+        }
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder> 
+          getSettingsFieldBuilder() {
+        if (settingsBuilder_ == null) {
+          settingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder>(
+                  getSettings(),
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        return settingsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5039,7 +5325,7 @@ public final class ChannelServiceOuterClass {
      * Field mask that specifies which fields of the channel are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the fieldMask field is set.
      */
     boolean hasFieldMask();
@@ -5048,7 +5334,7 @@ public final class ChannelServiceOuterClass {
      * Field mask that specifies which fields of the channel are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The fieldMask.
      */
     com.google.protobuf.FieldMask getFieldMask();
@@ -5057,7 +5343,7 @@ public final class ChannelServiceOuterClass {
      * Field mask that specifies which fields of the channel are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 
@@ -5066,7 +5352,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -5075,7 +5361,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -5106,7 +5392,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -5114,7 +5400,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -5129,7 +5415,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -5138,7 +5424,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -5149,11 +5435,38 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return Whether the settings field is set.
+     */
+    boolean hasSettings();
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return The settings.
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings();
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder getSettingsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.UpdateChannelRequest}
@@ -5246,6 +5559,19 @@ public final class ChannelServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 1610: {
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder subBuilder = null;
+              if (settings_ != null) {
+                subBuilder = settings_.toBuilder();
+              }
+              settings_ = input.readMessage(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5345,7 +5671,7 @@ public final class ChannelServiceOuterClass {
      * Field mask that specifies which fields of the channel are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the fieldMask field is set.
      */
     @java.lang.Override
@@ -5357,7 +5683,7 @@ public final class ChannelServiceOuterClass {
      * Field mask that specifies which fields of the channel are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The fieldMask.
      */
     @java.lang.Override
@@ -5369,7 +5695,7 @@ public final class ChannelServiceOuterClass {
      * Field mask that specifies which fields of the channel are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -5383,7 +5709,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -5404,7 +5730,7 @@ public final class ChannelServiceOuterClass {
      * Channel title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -5499,7 +5825,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -5521,7 +5847,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5533,7 +5859,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5550,7 +5876,7 @@ public final class ChannelServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5563,6 +5889,44 @@ public final class ChannelServiceOuterClass {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
+    }
+
+    public static final int SETTINGS_FIELD_NUMBER = 201;
+    private yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings settings_;
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return Whether the settings field is set.
+     */
+    @java.lang.Override
+    public boolean hasSettings() {
+      return settings_ != null;
+    }
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     * @return The settings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings() {
+      return settings_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance() : settings_;
+    }
+    /**
+     * <pre>
+     * Channel settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder getSettingsOrBuilder() {
+      return getSettings();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5597,6 +5961,9 @@ public final class ChannelServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           200);
+      if (settings_ != null) {
+        output.writeMessage(201, getSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5629,6 +5996,10 @@ public final class ChannelServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(200, labels__);
       }
+      if (settings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(201, getSettings());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5657,6 +6028,11 @@ public final class ChannelServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasSettings() != other.hasSettings()) return false;
+      if (hasSettings()) {
+        if (!getSettings()
+            .equals(other.getSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5681,6 +6057,10 @@ public final class ChannelServiceOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasSettings()) {
+        hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getSettings().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5850,6 +6230,12 @@ public final class ChannelServiceOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -5887,6 +6273,11 @@ public final class ChannelServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (settingsBuilder_ == null) {
+          result.settings_ = settings_;
+        } else {
+          result.settings_ = settingsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5952,6 +6343,9 @@ public final class ChannelServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasSettings()) {
+          mergeSettings(other.getSettings());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6086,7 +6480,7 @@ public final class ChannelServiceOuterClass {
        * Field mask that specifies which fields of the channel are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the fieldMask field is set.
        */
       public boolean hasFieldMask() {
@@ -6097,7 +6491,7 @@ public final class ChannelServiceOuterClass {
        * Field mask that specifies which fields of the channel are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return The fieldMask.
        */
       public com.google.protobuf.FieldMask getFieldMask() {
@@ -6112,7 +6506,7 @@ public final class ChannelServiceOuterClass {
        * Field mask that specifies which fields of the channel are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFieldMask(com.google.protobuf.FieldMask value) {
         if (fieldMaskBuilder_ == null) {
@@ -6132,7 +6526,7 @@ public final class ChannelServiceOuterClass {
        * Field mask that specifies which fields of the channel are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFieldMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -6150,7 +6544,7 @@ public final class ChannelServiceOuterClass {
        * Field mask that specifies which fields of the channel are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
         if (fieldMaskBuilder_ == null) {
@@ -6172,7 +6566,7 @@ public final class ChannelServiceOuterClass {
        * Field mask that specifies which fields of the channel are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFieldMask() {
         if (fieldMaskBuilder_ == null) {
@@ -6190,7 +6584,7 @@ public final class ChannelServiceOuterClass {
        * Field mask that specifies which fields of the channel are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
         
@@ -6202,7 +6596,7 @@ public final class ChannelServiceOuterClass {
        * Field mask that specifies which fields of the channel are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
         if (fieldMaskBuilder_ != null) {
@@ -6217,7 +6611,7 @@ public final class ChannelServiceOuterClass {
        * Field mask that specifies which fields of the channel are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
@@ -6239,7 +6633,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -6259,7 +6653,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -6280,7 +6674,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -6299,7 +6693,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -6313,7 +6707,7 @@ public final class ChannelServiceOuterClass {
        * Channel title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -6456,7 +6850,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -6478,7 +6872,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6490,7 +6884,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6507,7 +6901,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -6532,7 +6926,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -6555,7 +6949,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -6574,7 +6968,7 @@ public final class ChannelServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -6582,6 +6976,161 @@ public final class ChannelServiceOuterClass {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings settings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder> settingsBuilder_;
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       * @return Whether the settings field is set.
+       */
+      public boolean hasSettings() {
+        return settingsBuilder_ != null || settings_ != null;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       * @return The settings.
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings getSettings() {
+        if (settingsBuilder_ == null) {
+          return settings_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance() : settings_;
+        } else {
+          return settingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder setSettings(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings value) {
+        if (settingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder setSettings(
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder builderForValue) {
+        if (settingsBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          settingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder mergeSettings(yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings value) {
+        if (settingsBuilder_ == null) {
+          if (settings_ != null) {
+            settings_ =
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.newBuilder(settings_).mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          settingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public Builder clearSettings() {
+        if (settingsBuilder_ == null) {
+          settings_ = null;
+          onChanged();
+        } else {
+          settings_ = null;
+          settingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder getSettingsBuilder() {
+        
+        onChanged();
+        return getSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder getSettingsOrBuilder() {
+        if (settingsBuilder_ != null) {
+          return settingsBuilder_.getMessageOrBuilder();
+        } else {
+          return settings_ == null ?
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance() : settings_;
+        }
+      }
+      /**
+       * <pre>
+       * Channel settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.ChannelSettings settings = 201;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder> 
+          getSettingsFieldBuilder() {
+        if (settingsBuilder_ == null) {
+          settingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettingsOrBuilder>(
+                  getSettings(),
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        return settingsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10129,83 +10678,86 @@ public final class ChannelServiceOuterClass {
       "\032\035yandex/cloud/validation.proto\032#yandex/" +
       "cloud/video/v1/channel.proto\"5\n\021GetChann" +
       "elRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"\255\001\n\023ListChannelsRequest\022%\n\017organizat" +
+      "=50\"\257\001\n\023ListChannelsRequest\022%\n\017organizat" +
       "ion_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\tpage_size\030" +
-      "d \001(\003B\t\372\3071\005<=100\022\035\n\npage_token\030e \001(\tB\t\212\310" +
-      "1\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006filter\030g \001(" +
-      "\tB\n\212\3101\006<=1000J\004\010\002\020d\"g\n\024ListChannelsRespo" +
-      "nse\0220\n\010channels\030\001 \003(\0132\036.yandex.cloud.vid" +
-      "eo.v1.Channel\022\027\n\017next_page_token\030d \001(\tJ\004" +
-      "\010\002\020d\"\255\002\n\024CreateChannelRequest\022%\n\017organiz" +
-      "ation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005title\030\002 " +
-      "\001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\215\001\n\006label" +
-      "s\030\310\001 \003(\01327.yandex.cloud.video.v1.CreateC" +
-      "hannelRequest.LabelsEntryBC\202\3101\004<=64\212\3101\004<" +
-      "=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a" +
-      "-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010\004\020\310\001\"+\n\025CreateCh" +
-      "annelMetadata\022\022\n\nchannel_id\030\001 \001(\t\"\322\002\n\024Up" +
-      "dateChannelRequest\022 \n\nchannel_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(\0132\032.googl" +
-      "e.protobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013d" +
-      "escription\030\004 \001(\t\022\215\001\n\006labels\030\310\001 \003(\01327.yan" +
-      "dex.cloud.video.v1.UpdateChannelRequest." +
-      "LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_.@:/" +
-      "0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001J\005\010\005\020\310\001\"+\n\025UpdateChannelMetadata\022" +
-      "\022\n\nchannel_id\030\001 \001(\t\"8\n\024DeleteChannelRequ" +
-      "est\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n" +
-      "\025DeleteChannelMetadata\022\022\n\nchannel_id\030\001 \001" +
-      "(\t\"k\n\032BatchDeleteChannelsRequest\022%\n\017orga" +
-      "nization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\013chann" +
-      "el_ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"2\n\033Batch" +
-      "DeleteChannelsMetadata\022\023\n\013channel_ids\030\001 " +
-      "\003(\t2\370\014\n\016ChannelService\022x\n\003Get\022(.yandex.c" +
-      "loud.video.v1.GetChannelRequest\032\036.yandex" +
-      ".cloud.video.v1.Channel\"\'\202\323\344\223\002!\022\037/video/" +
-      "v1/channels/{channel_id}\022{\n\004List\022*.yande" +
-      "x.cloud.video.v1.ListChannelsRequest\032+.y" +
-      "andex.cloud.video.v1.ListChannelsRespons" +
-      "e\"\032\202\323\344\223\002\024\022\022/video/v1/channels\022\233\001\n\006Create" +
-      "\022+.yandex.cloud.video.v1.CreateChannelRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"A\202\323\344\223\002\027\"\022/video/v1/channels:\001*\262\322* \n\025Cre" +
-      "ateChannelMetadata\022\007Channel\022\250\001\n\006Update\022+" +
-      ".yandex.cloud.video.v1.UpdateChannelRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"N" +
-      "\202\323\344\223\002$2\037/video/v1/channels/{channel_id}:" +
-      "\001*\262\322* \n\025UpdateChannelMetadata\022\007Channel\022\263" +
-      "\001\n\006Delete\022+.yandex.cloud.video.v1.Delete" +
-      "ChannelRequest\032!.yandex.cloud.operation." +
-      "Operation\"Y\202\323\344\223\002!*\037/video/v1/channels/{c" +
-      "hannel_id}\262\322*.\n\025DeleteChannelMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\306\001\n\013BatchDelete\0221.y" +
-      "andex.cloud.video.v1.BatchDeleteChannels" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"a\202\323\344\223\002#\"\036/video/v1/channels:batchDele" +
-      "te:\001*\262\322*4\n\033BatchDeleteChannelsMetadata\022\025" +
-      "google.protobuf.Empty\022\262\001\n\022ListAccessBind" +
-      "ings\022..yandex.cloud.access.ListAccessBin" +
-      "dingsRequest\032/.yandex.cloud.access.ListA" +
-      "ccessBindingsResponse\";\202\323\344\223\0025\0223/video/v1" +
-      "/channels/{resource_id}:listAccessBindin" +
-      "gs\022\361\001\n\021SetAccessBindings\022-.yandex.cloud." +
-      "access.SetAccessBindingsRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\211\001\202\323\344\223\0027\"2/vi" +
-      "deo/v1/channels/{resource_id}:setAccessB" +
-      "indings:\001*\262\322*H\n access.SetAccessBindings" +
-      "Metadata\022$access.AccessBindingsOperation" +
-      "Result\022\375\001\n\024UpdateAccessBindings\0220.yandex" +
-      ".cloud.access.UpdateAccessBindingsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\217\001\202" +
-      "\323\344\223\002:25/video/v1/channels/{resource_id}:" +
-      "updateAccessBindings:\001*\262\322*K\n#access.Upda" +
-      "teAccessBindingsMetadata\022$access.AccessB" +
-      "indingsOperationResultB\\\n\031yandex.cloud.a" +
-      "pi.video.v1Z?github.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/video/v1;videob\006pr" +
-      "oto3"
+      "d \001(\003B\t\372\3071\005<=100\022\037\n\npage_token\030e \001(\tB\013\212\310" +
+      "1\007<=15000\022\020\n\010order_by\030f \001(\t\022\032\n\006filter\030g " +
+      "\001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"g\n\024ListChannelsRes" +
+      "ponse\0220\n\010channels\030\001 \003(\0132\036.yandex.cloud.v" +
+      "ideo.v1.Channel\022\027\n\017next_page_token\030d \001(\t" +
+      "J\004\010\002\020d\"\365\002\n\024CreateChannelRequest\022%\n\017organ" +
+      "ization_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\005title\030" +
+      "\002 \001(\tB\016\350\3071\001\212\3101\006<=2500\022\023\n\013description\030\003 \001" +
+      "(\t\022\220\001\n\006labels\030\310\001 \003(\01327.yandex.cloud.vide" +
+      "o.v1.CreateChannelRequest.LabelsEntryBF\202" +
+      "\3101\004<=64\212\3101\004<=63\362\3071\022[-_.@:/0-9a-zA-Z]*\262\3101" +
+      "\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\0229\n\010setting" +
+      "s\030\311\001 \001(\0132&.yandex.cloud.video.v1.Channel" +
+      "Settings\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001J\005\010\004\020\310\001\"+\n\025CreateChannelM" +
+      "etadata\022\022\n\nchannel_id\030\001 \001(\t\"\242\003\n\024UpdateCh" +
+      "annelRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\0224\n\nfield_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMaskB\004\350\3071\001\022\031\n\005title\030\003 \001(\tB\n\212\3101" +
+      "\006<=2500\022\023\n\013description\030\004 \001(\t\022\220\001\n\006labels\030" +
+      "\310\001 \003(\01327.yandex.cloud.video.v1.UpdateCha" +
+      "nnelRequest.LabelsEntryBF\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\022[-_.@:/0-9a-zA-Z]*\262\3101\006\032\004<=63\262\3101\022\022\020[" +
+      "a-z][-_0-9a-z]*\0229\n\010settings\030\311\001 \001(\0132&.yan" +
+      "dex.cloud.video.v1.ChannelSettings\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001J\005\010\005\020\310\001\"+\n\025UpdateChannelMetadata\022\022\n\ncha" +
+      "nnel_id\030\001 \001(\t\"8\n\024DeleteChannelRequest\022 \n" +
+      "\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Delet" +
+      "eChannelMetadata\022\022\n\nchannel_id\030\001 \001(\t\"k\n\032" +
+      "BatchDeleteChannelsRequest\022%\n\017organizati" +
+      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022&\n\013channel_ids" +
+      "\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"2\n\033BatchDelete" +
+      "ChannelsMetadata\022\023\n\013channel_ids\030\001 \003(\t2\370\014" +
+      "\n\016ChannelService\022x\n\003Get\022(.yandex.cloud.v" +
+      "ideo.v1.GetChannelRequest\032\036.yandex.cloud" +
+      ".video.v1.Channel\"\'\202\323\344\223\002!\022\037/video/v1/cha" +
+      "nnels/{channel_id}\022{\n\004List\022*.yandex.clou" +
+      "d.video.v1.ListChannelsRequest\032+.yandex." +
+      "cloud.video.v1.ListChannelsResponse\"\032\202\323\344" +
+      "\223\002\024\022\022/video/v1/channels\022\233\001\n\006Create\022+.yan" +
+      "dex.cloud.video.v1.CreateChannelRequest\032" +
+      "!.yandex.cloud.operation.Operation\"A\202\323\344\223" +
+      "\002\027\"\022/video/v1/channels:\001*\262\322* \n\025CreateCha" +
+      "nnelMetadata\022\007Channel\022\250\001\n\006Update\022+.yande" +
+      "x.cloud.video.v1.UpdateChannelRequest\032!." +
+      "yandex.cloud.operation.Operation\"N\202\323\344\223\002$" +
+      "2\037/video/v1/channels/{channel_id}:\001*\262\322* " +
+      "\n\025UpdateChannelMetadata\022\007Channel\022\263\001\n\006Del" +
+      "ete\022+.yandex.cloud.video.v1.DeleteChanne" +
+      "lRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"Y\202\323\344\223\002!*\037/video/v1/channels/{channel" +
+      "_id}\262\322*.\n\025DeleteChannelMetadata\022\025google." +
+      "protobuf.Empty\022\306\001\n\013BatchDelete\0221.yandex." +
+      "cloud.video.v1.BatchDeleteChannelsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"a\202\323" +
+      "\344\223\002#\"\036/video/v1/channels:batchDelete:\001*\262" +
+      "\322*4\n\033BatchDeleteChannelsMetadata\022\025google" +
+      ".protobuf.Empty\022\262\001\n\022ListAccessBindings\022." +
+      ".yandex.cloud.access.ListAccessBindingsR" +
+      "equest\032/.yandex.cloud.access.ListAccessB" +
+      "indingsResponse\";\202\323\344\223\0025\0223/video/v1/chann" +
+      "els/{resource_id}:listAccessBindings\022\361\001\n" +
+      "\021SetAccessBindings\022-.yandex.cloud.access" +
+      ".SetAccessBindingsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\211\001\202\323\344\223\0027\"2/video/v1" +
+      "/channels/{resource_id}:setAccessBinding" +
+      "s:\001*\262\322*H\n access.SetAccessBindingsMetada" +
+      "ta\022$access.AccessBindingsOperationResult" +
+      "\022\375\001\n\024UpdateAccessBindings\0220.yandex.cloud" +
+      ".access.UpdateAccessBindingsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\217\001\202\323\344\223\002:2" +
+      "5/video/v1/channels/{resource_id}:update" +
+      "AccessBindings:\001*\262\322*K\n#access.UpdateAcce" +
+      "ssBindingsMetadata\022$access.AccessBinding" +
+      "sOperationResultB\\\n\031yandex.cloud.api.vid" +
+      "eo.v1Z?github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10241,7 +10793,7 @@ public final class ChannelServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreateChannelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateChannelRequest_descriptor,
-        new java.lang.String[] { "OrganizationId", "Title", "Description", "Labels", });
+        new java.lang.String[] { "OrganizationId", "Title", "Description", "Labels", "Settings", });
     internal_static_yandex_cloud_video_v1_CreateChannelRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_CreateChannelRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_CreateChannelRequest_LabelsEntry_fieldAccessorTable = new
@@ -10259,7 +10811,7 @@ public final class ChannelServiceOuterClass {
     internal_static_yandex_cloud_video_v1_UpdateChannelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateChannelRequest_descriptor,
-        new java.lang.String[] { "ChannelId", "FieldMask", "Title", "Description", "Labels", });
+        new java.lang.String[] { "ChannelId", "FieldMask", "Title", "Description", "Labels", "Settings", });
     internal_static_yandex_cloud_video_v1_UpdateChannelRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_UpdateChannelRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_UpdateChannelRequest_LabelsEntry_fieldAccessorTable = new

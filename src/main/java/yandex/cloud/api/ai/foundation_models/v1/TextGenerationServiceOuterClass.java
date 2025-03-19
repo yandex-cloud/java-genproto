@@ -3763,6 +3763,3075 @@ public final class TextGenerationServiceOuterClass {
 
   }
 
+  public interface BatchCompletionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.BatchCompletionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for batch completion generation.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The modelUri.
+     */
+    java.lang.String getModelUri();
+    /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for batch completion generation.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The bytes for modelUri.
+     */
+    com.google.protobuf.ByteString
+        getModelUriBytes();
+
+    /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+     * @return Whether the completionOptions field is set.
+     */
+    boolean hasCompletionOptions();
+    /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+     * @return The completionOptions.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions getCompletionOptions();
+    /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+     */
+    yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptionsOrBuilder getCompletionOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * ID of the dataset containing the context for the completion model.
+     * </pre>
+     *
+     * <code>string source_dataset_id = 3;</code>
+     * @return Whether the sourceDatasetId field is set.
+     */
+    boolean hasSourceDatasetId();
+    /**
+     * <pre>
+     * ID of the dataset containing the context for the completion model.
+     * </pre>
+     *
+     * <code>string source_dataset_id = 3;</code>
+     * @return The sourceDatasetId.
+     */
+    java.lang.String getSourceDatasetId();
+    /**
+     * <pre>
+     * ID of the dataset containing the context for the completion model.
+     * </pre>
+     *
+     * <code>string source_dataset_id = 3;</code>
+     * @return The bytes for sourceDatasetId.
+     */
+    com.google.protobuf.ByteString
+        getSourceDatasetIdBytes();
+
+    public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest.RequestFormatCase getRequestFormatCase();
+  }
+  /**
+   * <pre>
+   * Request for the service to generate batch text completion.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.BatchCompletionRequest}
+   */
+  public static final class BatchCompletionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.BatchCompletionRequest)
+      BatchCompletionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchCompletionRequest.newBuilder() to construct.
+    private BatchCompletionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchCompletionRequest() {
+      modelUri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchCompletionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchCompletionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              modelUri_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.Builder subBuilder = null;
+              if (completionOptions_ != null) {
+                subBuilder = completionOptions_.toBuilder();
+              }
+              completionOptions_ = input.readMessage(yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(completionOptions_);
+                completionOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              requestFormatCase_ = 3;
+              requestFormat_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest.class, yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest.Builder.class);
+    }
+
+    private int requestFormatCase_ = 0;
+    private java.lang.Object requestFormat_;
+    public enum RequestFormatCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      SOURCE_DATASET_ID(3),
+      REQUESTFORMAT_NOT_SET(0);
+      private final int value;
+      private RequestFormatCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static RequestFormatCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static RequestFormatCase forNumber(int value) {
+        switch (value) {
+          case 3: return SOURCE_DATASET_ID;
+          case 0: return REQUESTFORMAT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public RequestFormatCase
+    getRequestFormatCase() {
+      return RequestFormatCase.forNumber(
+          requestFormatCase_);
+    }
+
+    public static final int MODEL_URI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object modelUri_;
+    /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for batch completion generation.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The modelUri.
+     */
+    @java.lang.Override
+    public java.lang.String getModelUri() {
+      java.lang.Object ref = modelUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modelUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for batch completion generation.
+     * </pre>
+     *
+     * <code>string model_uri = 1;</code>
+     * @return The bytes for modelUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelUriBytes() {
+      java.lang.Object ref = modelUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMPLETION_OPTIONS_FIELD_NUMBER = 2;
+    private yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions completionOptions_;
+    /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+     * @return Whether the completionOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasCompletionOptions() {
+      return completionOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+     * @return The completionOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions getCompletionOptions() {
+      return completionOptions_ == null ? yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.getDefaultInstance() : completionOptions_;
+    }
+    /**
+     * <pre>
+     * Configuration options for completion generation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptionsOrBuilder getCompletionOptionsOrBuilder() {
+      return getCompletionOptions();
+    }
+
+    public static final int SOURCE_DATASET_ID_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * ID of the dataset containing the context for the completion model.
+     * </pre>
+     *
+     * <code>string source_dataset_id = 3;</code>
+     * @return Whether the sourceDatasetId field is set.
+     */
+    public boolean hasSourceDatasetId() {
+      return requestFormatCase_ == 3;
+    }
+    /**
+     * <pre>
+     * ID of the dataset containing the context for the completion model.
+     * </pre>
+     *
+     * <code>string source_dataset_id = 3;</code>
+     * @return The sourceDatasetId.
+     */
+    public java.lang.String getSourceDatasetId() {
+      java.lang.Object ref = "";
+      if (requestFormatCase_ == 3) {
+        ref = requestFormat_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (requestFormatCase_ == 3) {
+          requestFormat_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the dataset containing the context for the completion model.
+     * </pre>
+     *
+     * <code>string source_dataset_id = 3;</code>
+     * @return The bytes for sourceDatasetId.
+     */
+    public com.google.protobuf.ByteString
+        getSourceDatasetIdBytes() {
+      java.lang.Object ref = "";
+      if (requestFormatCase_ == 3) {
+        ref = requestFormat_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (requestFormatCase_ == 3) {
+          requestFormat_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelUri_);
+      }
+      if (completionOptions_ != null) {
+        output.writeMessage(2, getCompletionOptions());
+      }
+      if (requestFormatCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, requestFormat_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelUri_);
+      }
+      if (completionOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCompletionOptions());
+      }
+      if (requestFormatCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, requestFormat_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest other = (yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest) obj;
+
+      if (!getModelUri()
+          .equals(other.getModelUri())) return false;
+      if (hasCompletionOptions() != other.hasCompletionOptions()) return false;
+      if (hasCompletionOptions()) {
+        if (!getCompletionOptions()
+            .equals(other.getCompletionOptions())) return false;
+      }
+      if (!getRequestFormatCase().equals(other.getRequestFormatCase())) return false;
+      switch (requestFormatCase_) {
+        case 3:
+          if (!getSourceDatasetId()
+              .equals(other.getSourceDatasetId())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODEL_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getModelUri().hashCode();
+      if (hasCompletionOptions()) {
+        hash = (37 * hash) + COMPLETION_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getCompletionOptions().hashCode();
+      }
+      switch (requestFormatCase_) {
+        case 3:
+          hash = (37 * hash) + SOURCE_DATASET_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getSourceDatasetId().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Request for the service to generate batch text completion.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.BatchCompletionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.BatchCompletionRequest)
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest.class, yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        modelUri_ = "";
+
+        if (completionOptionsBuilder_ == null) {
+          completionOptions_ = null;
+        } else {
+          completionOptions_ = null;
+          completionOptionsBuilder_ = null;
+        }
+        requestFormatCase_ = 0;
+        requestFormat_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest result = new yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest(this);
+        result.modelUri_ = modelUri_;
+        if (completionOptionsBuilder_ == null) {
+          result.completionOptions_ = completionOptions_;
+        } else {
+          result.completionOptions_ = completionOptionsBuilder_.build();
+        }
+        if (requestFormatCase_ == 3) {
+          result.requestFormat_ = requestFormat_;
+        }
+        result.requestFormatCase_ = requestFormatCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest.getDefaultInstance()) return this;
+        if (!other.getModelUri().isEmpty()) {
+          modelUri_ = other.modelUri_;
+          onChanged();
+        }
+        if (other.hasCompletionOptions()) {
+          mergeCompletionOptions(other.getCompletionOptions());
+        }
+        switch (other.getRequestFormatCase()) {
+          case SOURCE_DATASET_ID: {
+            requestFormatCase_ = 3;
+            requestFormat_ = other.requestFormat_;
+            onChanged();
+            break;
+          }
+          case REQUESTFORMAT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int requestFormatCase_ = 0;
+      private java.lang.Object requestFormat_;
+      public RequestFormatCase
+          getRequestFormatCase() {
+        return RequestFormatCase.forNumber(
+            requestFormatCase_);
+      }
+
+      public Builder clearRequestFormat() {
+        requestFormatCase_ = 0;
+        requestFormat_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object modelUri_ = "";
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for batch completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @return The modelUri.
+       */
+      public java.lang.String getModelUri() {
+        java.lang.Object ref = modelUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          modelUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for batch completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @return The bytes for modelUri.
+       */
+      public com.google.protobuf.ByteString
+          getModelUriBytes() {
+        java.lang.Object ref = modelUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for batch completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @param value The modelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        modelUri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for batch completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelUri() {
+        
+        modelUri_ = getDefaultInstance().getModelUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The [ID of the model](/docs/foundation-models/concepts/yandexgpt/models) to be used for batch completion generation.
+       * </pre>
+       *
+       * <code>string model_uri = 1;</code>
+       * @param value The bytes for modelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        modelUri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions completionOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions, yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptionsOrBuilder> completionOptionsBuilder_;
+      /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+       * @return Whether the completionOptions field is set.
+       */
+      public boolean hasCompletionOptions() {
+        return completionOptionsBuilder_ != null || completionOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+       * @return The completionOptions.
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions getCompletionOptions() {
+        if (completionOptionsBuilder_ == null) {
+          return completionOptions_ == null ? yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.getDefaultInstance() : completionOptions_;
+        } else {
+          return completionOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+       */
+      public Builder setCompletionOptions(yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions value) {
+        if (completionOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          completionOptions_ = value;
+          onChanged();
+        } else {
+          completionOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+       */
+      public Builder setCompletionOptions(
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.Builder builderForValue) {
+        if (completionOptionsBuilder_ == null) {
+          completionOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          completionOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+       */
+      public Builder mergeCompletionOptions(yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions value) {
+        if (completionOptionsBuilder_ == null) {
+          if (completionOptions_ != null) {
+            completionOptions_ =
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.newBuilder(completionOptions_).mergeFrom(value).buildPartial();
+          } else {
+            completionOptions_ = value;
+          }
+          onChanged();
+        } else {
+          completionOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+       */
+      public Builder clearCompletionOptions() {
+        if (completionOptionsBuilder_ == null) {
+          completionOptions_ = null;
+          onChanged();
+        } else {
+          completionOptions_ = null;
+          completionOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.Builder getCompletionOptionsBuilder() {
+        
+        onChanged();
+        return getCompletionOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+       */
+      public yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptionsOrBuilder getCompletionOptionsOrBuilder() {
+        if (completionOptionsBuilder_ != null) {
+          return completionOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return completionOptions_ == null ?
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.getDefaultInstance() : completionOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration options for completion generation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.CompletionOptions completion_options = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions, yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptionsOrBuilder> 
+          getCompletionOptionsFieldBuilder() {
+        if (completionOptionsBuilder_ == null) {
+          completionOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions, yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptions.Builder, yandex.cloud.api.ai.foundation_models.v1.TextCommon.CompletionOptionsOrBuilder>(
+                  getCompletionOptions(),
+                  getParentForChildren(),
+                  isClean());
+          completionOptions_ = null;
+        }
+        return completionOptionsBuilder_;
+      }
+
+      /**
+       * <pre>
+       * ID of the dataset containing the context for the completion model.
+       * </pre>
+       *
+       * <code>string source_dataset_id = 3;</code>
+       * @return Whether the sourceDatasetId field is set.
+       */
+      @java.lang.Override
+      public boolean hasSourceDatasetId() {
+        return requestFormatCase_ == 3;
+      }
+      /**
+       * <pre>
+       * ID of the dataset containing the context for the completion model.
+       * </pre>
+       *
+       * <code>string source_dataset_id = 3;</code>
+       * @return The sourceDatasetId.
+       */
+      @java.lang.Override
+      public java.lang.String getSourceDatasetId() {
+        java.lang.Object ref = "";
+        if (requestFormatCase_ == 3) {
+          ref = requestFormat_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (requestFormatCase_ == 3) {
+            requestFormat_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dataset containing the context for the completion model.
+       * </pre>
+       *
+       * <code>string source_dataset_id = 3;</code>
+       * @return The bytes for sourceDatasetId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSourceDatasetIdBytes() {
+        java.lang.Object ref = "";
+        if (requestFormatCase_ == 3) {
+          ref = requestFormat_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (requestFormatCase_ == 3) {
+            requestFormat_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dataset containing the context for the completion model.
+       * </pre>
+       *
+       * <code>string source_dataset_id = 3;</code>
+       * @param value The sourceDatasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceDatasetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  requestFormatCase_ = 3;
+        requestFormat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dataset containing the context for the completion model.
+       * </pre>
+       *
+       * <code>string source_dataset_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSourceDatasetId() {
+        if (requestFormatCase_ == 3) {
+          requestFormatCase_ = 0;
+          requestFormat_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dataset containing the context for the completion model.
+       * </pre>
+       *
+       * <code>string source_dataset_id = 3;</code>
+       * @param value The bytes for sourceDatasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSourceDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        requestFormatCase_ = 3;
+        requestFormat_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.BatchCompletionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.BatchCompletionRequest)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchCompletionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BatchCompletionRequest>() {
+      @java.lang.Override
+      public BatchCompletionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchCompletionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchCompletionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchCompletionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchCompletionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.BatchCompletionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The ID of the batch completion task.
+     * </pre>
+     *
+     * <code>string task_id = 1;</code>
+     * @return The taskId.
+     */
+    java.lang.String getTaskId();
+    /**
+     * <pre>
+     * The ID of the batch completion task.
+     * </pre>
+     *
+     * <code>string task_id = 1;</code>
+     * @return The bytes for taskId.
+     */
+    com.google.protobuf.ByteString
+        getTaskIdBytes();
+
+    /**
+     * <pre>
+     * The status of the batch completion task.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+     * @return The enum numeric value on the wire for taskStatus.
+     */
+    int getTaskStatusValue();
+    /**
+     * <pre>
+     * The status of the batch completion task.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+     * @return The taskStatus.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus getTaskStatus();
+
+    /**
+     * <pre>
+     * A number of currently completed batches of the completion task.
+     * </pre>
+     *
+     * <code>int64 completed_batches = 3;</code>
+     * @return The completedBatches.
+     */
+    long getCompletedBatches();
+
+    /**
+     * <pre>
+     * A number of total batches of the completion task.
+     * </pre>
+     *
+     * <code>int64 total_batches = 4;</code>
+     * @return The totalBatches.
+     */
+    long getTotalBatches();
+  }
+  /**
+   * <pre>
+   * Metadata of the batch completion operation.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.BatchCompletionMetadata}
+   */
+  public static final class BatchCompletionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.BatchCompletionMetadata)
+      BatchCompletionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchCompletionMetadata.newBuilder() to construct.
+    private BatchCompletionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchCompletionMetadata() {
+      taskId_ = "";
+      taskStatus_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchCompletionMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchCompletionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              taskId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              taskStatus_ = rawValue;
+              break;
+            }
+            case 24: {
+
+              completedBatches_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              totalBatches_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata.class, yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata.Builder.class);
+    }
+
+    public static final int TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object taskId_;
+    /**
+     * <pre>
+     * The ID of the batch completion task.
+     * </pre>
+     *
+     * <code>string task_id = 1;</code>
+     * @return The taskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTaskId() {
+      java.lang.Object ref = taskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        taskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the batch completion task.
+     * </pre>
+     *
+     * <code>string task_id = 1;</code>
+     * @return The bytes for taskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTaskIdBytes() {
+      java.lang.Object ref = taskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        taskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TASK_STATUS_FIELD_NUMBER = 2;
+    private int taskStatus_;
+    /**
+     * <pre>
+     * The status of the batch completion task.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+     * @return The enum numeric value on the wire for taskStatus.
+     */
+    @java.lang.Override public int getTaskStatusValue() {
+      return taskStatus_;
+    }
+    /**
+     * <pre>
+     * The status of the batch completion task.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+     * @return The taskStatus.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus getTaskStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus result = yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.valueOf(taskStatus_);
+      return result == null ? yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int COMPLETED_BATCHES_FIELD_NUMBER = 3;
+    private long completedBatches_;
+    /**
+     * <pre>
+     * A number of currently completed batches of the completion task.
+     * </pre>
+     *
+     * <code>int64 completed_batches = 3;</code>
+     * @return The completedBatches.
+     */
+    @java.lang.Override
+    public long getCompletedBatches() {
+      return completedBatches_;
+    }
+
+    public static final int TOTAL_BATCHES_FIELD_NUMBER = 4;
+    private long totalBatches_;
+    /**
+     * <pre>
+     * A number of total batches of the completion task.
+     * </pre>
+     *
+     * <code>int64 total_batches = 4;</code>
+     * @return The totalBatches.
+     */
+    @java.lang.Override
+    public long getTotalBatches() {
+      return totalBatches_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, taskId_);
+      }
+      if (taskStatus_ != yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.BATCH_INFERENCE_TASK_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, taskStatus_);
+      }
+      if (completedBatches_ != 0L) {
+        output.writeInt64(3, completedBatches_);
+      }
+      if (totalBatches_ != 0L) {
+        output.writeInt64(4, totalBatches_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, taskId_);
+      }
+      if (taskStatus_ != yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.BATCH_INFERENCE_TASK_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, taskStatus_);
+      }
+      if (completedBatches_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, completedBatches_);
+      }
+      if (totalBatches_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, totalBatches_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata other = (yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata) obj;
+
+      if (!getTaskId()
+          .equals(other.getTaskId())) return false;
+      if (taskStatus_ != other.taskStatus_) return false;
+      if (getCompletedBatches()
+          != other.getCompletedBatches()) return false;
+      if (getTotalBatches()
+          != other.getTotalBatches()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTaskId().hashCode();
+      hash = (37 * hash) + TASK_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + taskStatus_;
+      hash = (37 * hash) + COMPLETED_BATCHES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCompletedBatches());
+      hash = (37 * hash) + TOTAL_BATCHES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalBatches());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Metadata of the batch completion operation.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.BatchCompletionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.BatchCompletionMetadata)
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata.class, yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        taskId_ = "";
+
+        taskStatus_ = 0;
+
+        completedBatches_ = 0L;
+
+        totalBatches_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata result = new yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata(this);
+        result.taskId_ = taskId_;
+        result.taskStatus_ = taskStatus_;
+        result.completedBatches_ = completedBatches_;
+        result.totalBatches_ = totalBatches_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata.getDefaultInstance()) return this;
+        if (!other.getTaskId().isEmpty()) {
+          taskId_ = other.taskId_;
+          onChanged();
+        }
+        if (other.taskStatus_ != 0) {
+          setTaskStatusValue(other.getTaskStatusValue());
+        }
+        if (other.getCompletedBatches() != 0L) {
+          setCompletedBatches(other.getCompletedBatches());
+        }
+        if (other.getTotalBatches() != 0L) {
+          setTotalBatches(other.getTotalBatches());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object taskId_ = "";
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @return The taskId.
+       */
+      public java.lang.String getTaskId() {
+        java.lang.Object ref = taskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          taskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @return The bytes for taskId.
+       */
+      public com.google.protobuf.ByteString
+          getTaskIdBytes() {
+        java.lang.Object ref = taskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          taskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @param value The taskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        taskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTaskId() {
+        
+        taskId_ = getDefaultInstance().getTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @param value The bytes for taskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        taskId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int taskStatus_ = 0;
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @return The enum numeric value on the wire for taskStatus.
+       */
+      @java.lang.Override public int getTaskStatusValue() {
+        return taskStatus_;
+      }
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @param value The enum numeric value on the wire for taskStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskStatusValue(int value) {
+        
+        taskStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @return The taskStatus.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus getTaskStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus result = yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.valueOf(taskStatus_);
+        return result == null ? yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @param value The taskStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskStatus(yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        taskStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTaskStatus() {
+        
+        taskStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long completedBatches_ ;
+      /**
+       * <pre>
+       * A number of currently completed batches of the completion task.
+       * </pre>
+       *
+       * <code>int64 completed_batches = 3;</code>
+       * @return The completedBatches.
+       */
+      @java.lang.Override
+      public long getCompletedBatches() {
+        return completedBatches_;
+      }
+      /**
+       * <pre>
+       * A number of currently completed batches of the completion task.
+       * </pre>
+       *
+       * <code>int64 completed_batches = 3;</code>
+       * @param value The completedBatches to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompletedBatches(long value) {
+        
+        completedBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A number of currently completed batches of the completion task.
+       * </pre>
+       *
+       * <code>int64 completed_batches = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompletedBatches() {
+        
+        completedBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalBatches_ ;
+      /**
+       * <pre>
+       * A number of total batches of the completion task.
+       * </pre>
+       *
+       * <code>int64 total_batches = 4;</code>
+       * @return The totalBatches.
+       */
+      @java.lang.Override
+      public long getTotalBatches() {
+        return totalBatches_;
+      }
+      /**
+       * <pre>
+       * A number of total batches of the completion task.
+       * </pre>
+       *
+       * <code>int64 total_batches = 4;</code>
+       * @param value The totalBatches to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalBatches(long value) {
+        
+        totalBatches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A number of total batches of the completion task.
+       * </pre>
+       *
+       * <code>int64 total_batches = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalBatches() {
+        
+        totalBatches_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.BatchCompletionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.BatchCompletionMetadata)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchCompletionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<BatchCompletionMetadata>() {
+      @java.lang.Override
+      public BatchCompletionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchCompletionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchCompletionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchCompletionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchCompletionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.BatchCompletionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The ID of the batch completion task.
+     * </pre>
+     *
+     * <code>string task_id = 1;</code>
+     * @return The taskId.
+     */
+    java.lang.String getTaskId();
+    /**
+     * <pre>
+     * The ID of the batch completion task.
+     * </pre>
+     *
+     * <code>string task_id = 1;</code>
+     * @return The bytes for taskId.
+     */
+    com.google.protobuf.ByteString
+        getTaskIdBytes();
+
+    /**
+     * <pre>
+     * The status of the batch completion task.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+     * @return The enum numeric value on the wire for taskStatus.
+     */
+    int getTaskStatusValue();
+    /**
+     * <pre>
+     * The status of the batch completion task.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+     * @return The taskStatus.
+     */
+    yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus getTaskStatus();
+
+    /**
+     * <pre>
+     * The ID of the dataset containing completion results.
+     * </pre>
+     *
+     * <code>string result_dataset_id = 3;</code>
+     * @return The resultDatasetId.
+     */
+    java.lang.String getResultDatasetId();
+    /**
+     * <pre>
+     * The ID of the dataset containing completion results.
+     * </pre>
+     *
+     * <code>string result_dataset_id = 3;</code>
+     * @return The bytes for resultDatasetId.
+     */
+    com.google.protobuf.ByteString
+        getResultDatasetIdBytes();
+  }
+  /**
+   * <pre>
+   * Response containing information about completion task.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.BatchCompletionResponse}
+   */
+  public static final class BatchCompletionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.foundation_models.v1.BatchCompletionResponse)
+      BatchCompletionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchCompletionResponse.newBuilder() to construct.
+    private BatchCompletionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchCompletionResponse() {
+      taskId_ = "";
+      taskStatus_ = 0;
+      resultDatasetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchCompletionResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchCompletionResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              taskId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              taskStatus_ = rawValue;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resultDatasetId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse.class, yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse.Builder.class);
+    }
+
+    public static final int TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object taskId_;
+    /**
+     * <pre>
+     * The ID of the batch completion task.
+     * </pre>
+     *
+     * <code>string task_id = 1;</code>
+     * @return The taskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTaskId() {
+      java.lang.Object ref = taskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        taskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the batch completion task.
+     * </pre>
+     *
+     * <code>string task_id = 1;</code>
+     * @return The bytes for taskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTaskIdBytes() {
+      java.lang.Object ref = taskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        taskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TASK_STATUS_FIELD_NUMBER = 2;
+    private int taskStatus_;
+    /**
+     * <pre>
+     * The status of the batch completion task.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+     * @return The enum numeric value on the wire for taskStatus.
+     */
+    @java.lang.Override public int getTaskStatusValue() {
+      return taskStatus_;
+    }
+    /**
+     * <pre>
+     * The status of the batch completion task.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+     * @return The taskStatus.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus getTaskStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus result = yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.valueOf(taskStatus_);
+      return result == null ? yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int RESULT_DATASET_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object resultDatasetId_;
+    /**
+     * <pre>
+     * The ID of the dataset containing completion results.
+     * </pre>
+     *
+     * <code>string result_dataset_id = 3;</code>
+     * @return The resultDatasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getResultDatasetId() {
+      java.lang.Object ref = resultDatasetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resultDatasetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the dataset containing completion results.
+     * </pre>
+     *
+     * <code>string result_dataset_id = 3;</code>
+     * @return The bytes for resultDatasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResultDatasetIdBytes() {
+      java.lang.Object ref = resultDatasetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resultDatasetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, taskId_);
+      }
+      if (taskStatus_ != yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.BATCH_INFERENCE_TASK_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, taskStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resultDatasetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, resultDatasetId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, taskId_);
+      }
+      if (taskStatus_ != yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.BATCH_INFERENCE_TASK_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, taskStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resultDatasetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, resultDatasetId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse other = (yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse) obj;
+
+      if (!getTaskId()
+          .equals(other.getTaskId())) return false;
+      if (taskStatus_ != other.taskStatus_) return false;
+      if (!getResultDatasetId()
+          .equals(other.getResultDatasetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTaskId().hashCode();
+      hash = (37 * hash) + TASK_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + taskStatus_;
+      hash = (37 * hash) + RESULT_DATASET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResultDatasetId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Response containing information about completion task.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.BatchCompletionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.foundation_models.v1.BatchCompletionResponse)
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse.class, yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        taskId_ = "";
+
+        taskStatus_ = 0;
+
+        resultDatasetId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse build() {
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse buildPartial() {
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse result = new yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse(this);
+        result.taskId_ = taskId_;
+        result.taskStatus_ = taskStatus_;
+        result.resultDatasetId_ = resultDatasetId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse) {
+          return mergeFrom((yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse other) {
+        if (other == yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse.getDefaultInstance()) return this;
+        if (!other.getTaskId().isEmpty()) {
+          taskId_ = other.taskId_;
+          onChanged();
+        }
+        if (other.taskStatus_ != 0) {
+          setTaskStatusValue(other.getTaskStatusValue());
+        }
+        if (!other.getResultDatasetId().isEmpty()) {
+          resultDatasetId_ = other.resultDatasetId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object taskId_ = "";
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @return The taskId.
+       */
+      public java.lang.String getTaskId() {
+        java.lang.Object ref = taskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          taskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @return The bytes for taskId.
+       */
+      public com.google.protobuf.ByteString
+          getTaskIdBytes() {
+        java.lang.Object ref = taskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          taskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @param value The taskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        taskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTaskId() {
+        
+        taskId_ = getDefaultInstance().getTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the batch completion task.
+       * </pre>
+       *
+       * <code>string task_id = 1;</code>
+       * @param value The bytes for taskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        taskId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int taskStatus_ = 0;
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @return The enum numeric value on the wire for taskStatus.
+       */
+      @java.lang.Override public int getTaskStatusValue() {
+        return taskStatus_;
+      }
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @param value The enum numeric value on the wire for taskStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskStatusValue(int value) {
+        
+        taskStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @return The taskStatus.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus getTaskStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus result = yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.valueOf(taskStatus_);
+        return result == null ? yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @param value The taskStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTaskStatus(yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.BatchInferenceTaskStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        taskStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The status of the batch completion task.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.foundation_models.v1.BatchInferenceTaskStatus task_status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTaskStatus() {
+        
+        taskStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resultDatasetId_ = "";
+      /**
+       * <pre>
+       * The ID of the dataset containing completion results.
+       * </pre>
+       *
+       * <code>string result_dataset_id = 3;</code>
+       * @return The resultDatasetId.
+       */
+      public java.lang.String getResultDatasetId() {
+        java.lang.Object ref = resultDatasetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resultDatasetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the dataset containing completion results.
+       * </pre>
+       *
+       * <code>string result_dataset_id = 3;</code>
+       * @return The bytes for resultDatasetId.
+       */
+      public com.google.protobuf.ByteString
+          getResultDatasetIdBytes() {
+        java.lang.Object ref = resultDatasetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resultDatasetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the dataset containing completion results.
+       * </pre>
+       *
+       * <code>string result_dataset_id = 3;</code>
+       * @param value The resultDatasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultDatasetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resultDatasetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the dataset containing completion results.
+       * </pre>
+       *
+       * <code>string result_dataset_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResultDatasetId() {
+        
+        resultDatasetId_ = getDefaultInstance().getResultDatasetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the dataset containing completion results.
+       * </pre>
+       *
+       * <code>string result_dataset_id = 3;</code>
+       * @param value The bytes for resultDatasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resultDatasetId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.foundation_models.v1.BatchCompletionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.foundation_models.v1.BatchCompletionResponse)
+    private static final yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse();
+    }
+
+    public static yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchCompletionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BatchCompletionResponse>() {
+      @java.lang.Override
+      public BatchCompletionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchCompletionResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchCompletionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchCompletionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.foundation_models.v1.TextGenerationServiceOuterClass.BatchCompletionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface TokenizeRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.foundation_models.v1.TokenizeRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -5671,6 +8740,21 @@ public final class TextGenerationServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_foundation_models_v1_CompletionResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_foundation_models_v1_TokenizeRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5694,56 +8778,78 @@ public final class TextGenerationServiceOuterClass {
       "roto\022$yandex.cloud.ai.foundation_models." +
       "v1\032\034google/api/annotations.proto\0326yandex" +
       "/cloud/ai/foundation_models/v1/text_comm" +
-      "on.proto\032 yandex/cloud/api/operation.pro" +
-      "to\032&yandex/cloud/operation/operation.pro" +
-      "to\"\351\002\n\021CompletionRequest\022\021\n\tmodel_uri\030\001 " +
-      "\001(\t\022S\n\022completion_options\030\002 \001(\01327.yandex" +
-      ".cloud.ai.foundation_models.v1.Completio" +
-      "nOptions\022?\n\010messages\030\003 \003(\0132-.yandex.clou" +
-      "d.ai.foundation_models.v1.Message\0229\n\005too" +
-      "ls\030\004 \003(\0132*.yandex.cloud.ai.foundation_mo" +
-      "dels.v1.Tool\022\025\n\013json_object\030\005 \001(\010H\000\022G\n\013j" +
-      "son_schema\030\006 \001(\01320.yandex.cloud.ai.found" +
-      "ation_models.v1.JsonSchemaH\000B\020\n\016Response" +
-      "Format\"\267\001\n\022CompletionResponse\022G\n\014alterna" +
-      "tives\030\001 \003(\01321.yandex.cloud.ai.foundation" +
-      "_models.v1.Alternative\022A\n\005usage\030\002 \001(\01322." +
-      "yandex.cloud.ai.foundation_models.v1.Con" +
-      "tentUsage\022\025\n\rmodel_version\030\003 \001(\t\"2\n\017Toke" +
-      "nizeRequest\022\021\n\tmodel_uri\030\001 \001(\t\022\014\n\004text\030\002" +
-      " \001(\t\"f\n\020TokenizeResponse\022;\n\006tokens\030\001 \003(\013" +
-      "2+.yandex.cloud.ai.foundation_models.v1." +
-      "Token\022\025\n\rmodel_version\030\002 \001(\t2\307\001\n\025TextGen" +
-      "erationService\022\255\001\n\nCompletion\0227.yandex.c" +
-      "loud.ai.foundation_models.v1.CompletionR" +
-      "equest\0328.yandex.cloud.ai.foundation_mode" +
-      "ls.v1.CompletionResponse\"*\202\323\344\223\002$\"\037/found" +
-      "ationModels/v1/completion:\001*0\0012\320\001\n\032TextG" +
-      "enerationAsyncService\022\261\001\n\nCompletion\0227.y" +
-      "andex.cloud.ai.foundation_models.v1.Comp" +
-      "letionRequest\032!.yandex.cloud.operation.O" +
-      "peration\"G\262\322*\024\022\022CompletionResponse\202\323\344\223\002)" +
-      "\"$/foundationModels/v1/completionAsync:\001" +
-      "*2\364\002\n\020TokenizerService\022\243\001\n\010Tokenize\0225.ya" +
-      "ndex.cloud.ai.foundation_models.v1.Token" +
-      "izeRequest\0326.yandex.cloud.ai.foundation_" +
-      "models.v1.TokenizeResponse\"(\202\323\344\223\002\"\"\035/fou" +
-      "ndationModels/v1/tokenize:\001*\022\271\001\n\022Tokeniz" +
-      "eCompletion\0227.yandex.cloud.ai.foundation" +
-      "_models.v1.CompletionRequest\0326.yandex.cl" +
-      "oud.ai.foundation_models.v1.TokenizeResp" +
-      "onse\"2\202\323\344\223\002,\"\'/foundationModels/v1/token" +
-      "izeCompletion:\001*B\226\001\n(yandex.cloud.api.ai" +
-      ".foundation_models.v1Zjgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/ai/found" +
-      "ation_models/v1/text_generation;foundati" +
-      "on_modelsb\006proto3"
+      "on.proto\032Fyandex/cloud/ai/foundation_mod" +
+      "els/v1/batch_inference_task_status.proto" +
+      "\032 yandex/cloud/api/operation.proto\032&yand" +
+      "ex/cloud/operation/operation.proto\"\351\002\n\021C" +
+      "ompletionRequest\022\021\n\tmodel_uri\030\001 \001(\t\022S\n\022c" +
+      "ompletion_options\030\002 \001(\01327.yandex.cloud.a" +
+      "i.foundation_models.v1.CompletionOptions" +
+      "\022?\n\010messages\030\003 \003(\0132-.yandex.cloud.ai.fou" +
+      "ndation_models.v1.Message\0229\n\005tools\030\004 \003(\013" +
+      "2*.yandex.cloud.ai.foundation_models.v1." +
+      "Tool\022\025\n\013json_object\030\005 \001(\010H\000\022G\n\013json_sche" +
+      "ma\030\006 \001(\01320.yandex.cloud.ai.foundation_mo" +
+      "dels.v1.JsonSchemaH\000B\020\n\016ResponseFormat\"\267" +
+      "\001\n\022CompletionResponse\022G\n\014alternatives\030\001 " +
+      "\003(\01321.yandex.cloud.ai.foundation_models." +
+      "v1.Alternative\022A\n\005usage\030\002 \001(\01322.yandex.c" +
+      "loud.ai.foundation_models.v1.ContentUsag" +
+      "e\022\025\n\rmodel_version\030\003 \001(\t\"\257\001\n\026BatchComple" +
+      "tionRequest\022\021\n\tmodel_uri\030\001 \001(\t\022S\n\022comple" +
+      "tion_options\030\002 \001(\01327.yandex.cloud.ai.fou" +
+      "ndation_models.v1.CompletionOptions\022\033\n\021s" +
+      "ource_dataset_id\030\003 \001(\tH\000B\020\n\016request_form" +
+      "at\"\261\001\n\027BatchCompletionMetadata\022\017\n\007task_i" +
+      "d\030\001 \001(\t\022S\n\013task_status\030\002 \001(\0162>.yandex.cl" +
+      "oud.ai.foundation_models.v1.BatchInferen" +
+      "ceTaskStatus\022\031\n\021completed_batches\030\003 \001(\003\022" +
+      "\025\n\rtotal_batches\030\004 \001(\003\"\232\001\n\027BatchCompleti" +
+      "onResponse\022\017\n\007task_id\030\001 \001(\t\022S\n\013task_stat" +
+      "us\030\002 \001(\0162>.yandex.cloud.ai.foundation_mo" +
+      "dels.v1.BatchInferenceTaskStatus\022\031\n\021resu" +
+      "lt_dataset_id\030\003 \001(\t\"2\n\017TokenizeRequest\022\021" +
+      "\n\tmodel_uri\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\"f\n\020Token" +
+      "izeResponse\022;\n\006tokens\030\001 \003(\0132+.yandex.clo" +
+      "ud.ai.foundation_models.v1.Token\022\025\n\rmode" +
+      "l_version\030\002 \001(\t2\307\001\n\025TextGenerationServic" +
+      "e\022\255\001\n\nCompletion\0227.yandex.cloud.ai.found" +
+      "ation_models.v1.CompletionRequest\0328.yand" +
+      "ex.cloud.ai.foundation_models.v1.Complet" +
+      "ionResponse\"*\202\323\344\223\002$\"\037/foundationModels/v" +
+      "1/completion:\001*0\0012\320\001\n\032TextGenerationAsyn" +
+      "cService\022\261\001\n\nCompletion\0227.yandex.cloud.a" +
+      "i.foundation_models.v1.CompletionRequest" +
+      "\032!.yandex.cloud.operation.Operation\"G\262\322*" +
+      "\024\022\022CompletionResponse\202\323\344\223\002)\"$/foundation" +
+      "Models/v1/completionAsync:\001*2\363\001\n\032TextGen" +
+      "erationBatchService\022\324\001\n\nCompletion\022<.yan" +
+      "dex.cloud.ai.foundation_models.v1.BatchC" +
+      "ompletionRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"e\262\322*2\n\027BatchCompletionMetada" +
+      "ta\022\027BatchCompletionResponse\202\323\344\223\002)\"$/foun" +
+      "dationModels/v1/completionBatch:\001*2\364\002\n\020T" +
+      "okenizerService\022\243\001\n\010Tokenize\0225.yandex.cl" +
+      "oud.ai.foundation_models.v1.TokenizeRequ" +
+      "est\0326.yandex.cloud.ai.foundation_models." +
+      "v1.TokenizeResponse\"(\202\323\344\223\002\"\"\035/foundation" +
+      "Models/v1/tokenize:\001*\022\271\001\n\022TokenizeComple" +
+      "tion\0227.yandex.cloud.ai.foundation_models" +
+      ".v1.CompletionRequest\0326.yandex.cloud.ai." +
+      "foundation_models.v1.TokenizeResponse\"2\202" +
+      "\323\344\223\002,\"\'/foundationModels/v1/tokenizeComp" +
+      "letion:\001*B\226\001\n(yandex.cloud.api.ai.founda" +
+      "tion_models.v1Zjgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/ai/foundation_m" +
+      "odels/v1/text_generation;foundation_mode" +
+      "lsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.ai.foundation_models.v1.TextCommon.getDescriptor(),
+          yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
         });
@@ -5759,14 +8865,32 @@ public final class TextGenerationServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_CompletionResponse_descriptor,
         new java.lang.String[] { "Alternatives", "Usage", "ModelVersion", });
-    internal_static_yandex_cloud_ai_foundation_models_v1_TokenizeRequest_descriptor =
+    internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionRequest_descriptor,
+        new java.lang.String[] { "ModelUri", "CompletionOptions", "SourceDatasetId", "RequestFormat", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionMetadata_descriptor,
+        new java.lang.String[] { "TaskId", "TaskStatus", "CompletedBatches", "TotalBatches", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_foundation_models_v1_BatchCompletionResponse_descriptor,
+        new java.lang.String[] { "TaskId", "TaskStatus", "ResultDatasetId", });
+    internal_static_yandex_cloud_ai_foundation_models_v1_TokenizeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_ai_foundation_models_v1_TokenizeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_TokenizeRequest_descriptor,
         new java.lang.String[] { "ModelUri", "Text", });
     internal_static_yandex_cloud_ai_foundation_models_v1_TokenizeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_ai_foundation_models_v1_TokenizeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_TokenizeResponse_descriptor,
@@ -5779,6 +8903,7 @@ public final class TextGenerationServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.ai.foundation_models.v1.TextCommon.getDescriptor();
+    yandex.cloud.api.ai.foundation_models.v1.BatchInferenceTaskStatusOuterClass.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
   }

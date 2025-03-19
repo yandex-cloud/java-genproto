@@ -40,7 +40,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * ID of the channel where the line was created.
+     * ID of the channel to which this stream line belongs.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -49,7 +49,7 @@ public final class StreamLineOuterClass {
     java.lang.String getChannelId();
     /**
      * <pre>
-     * ID of the channel where the line was created.
+     * ID of the channel to which this stream line belongs.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -60,7 +60,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Line title.
+     * Title of the stream line.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -69,7 +69,7 @@ public final class StreamLineOuterClass {
     java.lang.String getTitle();
     /**
      * <pre>
-     * Line title.
+     * Title of the stream line.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -80,7 +80,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image associated with the stream line..
      * </pre>
      *
      * <code>string thumbnail_id = 4;</code>
@@ -89,7 +89,7 @@ public final class StreamLineOuterClass {
     java.lang.String getThumbnailId();
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image associated with the stream line..
      * </pre>
      *
      * <code>string thumbnail_id = 4;</code>
@@ -100,7 +100,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * RTMP push input type.
+     * Real-Time Messaging Protocol (RTMP) push input settings.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -109,7 +109,7 @@ public final class StreamLineOuterClass {
     boolean hasRtmpPush();
     /**
      * <pre>
-     * RTMP push input type.
+     * Real-Time Messaging Protocol (RTMP) push input settings.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -118,7 +118,7 @@ public final class StreamLineOuterClass {
     yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInput getRtmpPush();
     /**
      * <pre>
-     * RTMP push input type.
+     * Real-Time Messaging Protocol (RTMP) push input settings.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -127,34 +127,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * SRT push input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-     * @return Whether the srtPush field is set.
-     */
-    boolean hasSrtPush();
-    /**
-     * <pre>
-     * SRT push input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-     * @return The srtPush.
-     */
-    yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput getSrtPush();
-    /**
-     * <pre>
-     * SRT push input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-     */
-    yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInputOrBuilder getSrtPushOrBuilder();
-
-    /**
-     * <pre>
-     * RTMP pull input type.
+     * Real-Time Messaging Protocol (RTMP) pull input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -163,7 +136,7 @@ public final class StreamLineOuterClass {
     boolean hasRtmpPull();
     /**
      * <pre>
-     * RTMP pull input type.
+     * Real-Time Messaging Protocol (RTMP) pull input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -172,93 +145,12 @@ public final class StreamLineOuterClass {
     yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInput getRtmpPull();
     /**
      * <pre>
-     * RTMP pull input type.
+     * Real-Time Messaging Protocol (RTMP) pull input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
      */
     yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInputOrBuilder getRtmpPullOrBuilder();
-
-    /**
-     * <pre>
-     * SRT pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-     * @return Whether the srtPull field is set.
-     */
-    boolean hasSrtPull();
-    /**
-     * <pre>
-     * SRT pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-     * @return The srtPull.
-     */
-    yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput getSrtPull();
-    /**
-     * <pre>
-     * SRT pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-     */
-    yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInputOrBuilder getSrtPullOrBuilder();
-
-    /**
-     * <pre>
-     * TCP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-     * @return Whether the tcpPull field is set.
-     */
-    boolean hasTcpPull();
-    /**
-     * <pre>
-     * TCP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-     * @return The tcpPull.
-     */
-    yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput getTcpPull();
-    /**
-     * <pre>
-     * TCP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-     */
-    yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInputOrBuilder getTcpPullOrBuilder();
-
-    /**
-     * <pre>
-     * RTSP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-     * @return Whether the rtspPull field is set.
-     */
-    boolean hasRtspPull();
-    /**
-     * <pre>
-     * RTSP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-     * @return The rtspPull.
-     */
-    yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput getRtspPull();
-    /**
-     * <pre>
-     * RTSP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-     */
-    yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInputOrBuilder getRtspPullOrBuilder();
 
     /**
      * <pre>
@@ -316,7 +208,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Time when line was created.
+     * Time when the stream line was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -325,7 +217,7 @@ public final class StreamLineOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Time when line was created.
+     * Time when the stream line was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -334,7 +226,7 @@ public final class StreamLineOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Time when line was created.
+     * Time when the stream line was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -343,7 +235,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Time of last line update.
+     * Time when the stream line was last updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -352,7 +244,7 @@ public final class StreamLineOuterClass {
     boolean hasUpdatedAt();
     /**
      * <pre>
-     * Time of last line update.
+     * Time when the stream line was last updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -361,7 +253,7 @@ public final class StreamLineOuterClass {
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
      * <pre>
-     * Time of last line update.
+     * Time when the stream line was last updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -557,20 +449,6 @@ public final class StreamLineOuterClass {
               inputTypeCase_ = 1000;
               break;
             }
-            case 8010: {
-              yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.Builder subBuilder = null;
-              if (inputTypeCase_ == 1001) {
-                subBuilder = ((yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_).toBuilder();
-              }
-              inputType_ =
-                  input.readMessage(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_);
-                inputType_ = subBuilder.buildPartial();
-              }
-              inputTypeCase_ = 1001;
-              break;
-            }
             case 8018: {
               yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInput.Builder subBuilder = null;
               if (inputTypeCase_ == 1002) {
@@ -583,48 +461,6 @@ public final class StreamLineOuterClass {
                 inputType_ = subBuilder.buildPartial();
               }
               inputTypeCase_ = 1002;
-              break;
-            }
-            case 8026: {
-              yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.Builder subBuilder = null;
-              if (inputTypeCase_ == 1003) {
-                subBuilder = ((yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_).toBuilder();
-              }
-              inputType_ =
-                  input.readMessage(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_);
-                inputType_ = subBuilder.buildPartial();
-              }
-              inputTypeCase_ = 1003;
-              break;
-            }
-            case 8034: {
-              yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.Builder subBuilder = null;
-              if (inputTypeCase_ == 1004) {
-                subBuilder = ((yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_).toBuilder();
-              }
-              inputType_ =
-                  input.readMessage(yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_);
-                inputType_ = subBuilder.buildPartial();
-              }
-              inputTypeCase_ = 1004;
-              break;
-            }
-            case 8050: {
-              yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.Builder subBuilder = null;
-              if (inputTypeCase_ == 1006) {
-                subBuilder = ((yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_).toBuilder();
-              }
-              inputType_ =
-                  input.readMessage(yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_);
-                inputType_ = subBuilder.buildPartial();
-              }
-              inputTypeCase_ = 1006;
               break;
             }
             case 16002: {
@@ -705,11 +541,7 @@ public final class StreamLineOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RTMP_PUSH(1000),
-      SRT_PUSH(1001),
       RTMP_PULL(1002),
-      SRT_PULL(1003),
-      TCP_PULL(1004),
-      RTSP_PULL(1006),
       INPUTTYPE_NOT_SET(0);
       private final int value;
       private InputTypeCase(int value) {
@@ -728,11 +560,7 @@ public final class StreamLineOuterClass {
       public static InputTypeCase forNumber(int value) {
         switch (value) {
           case 1000: return RTMP_PUSH;
-          case 1001: return SRT_PUSH;
           case 1002: return RTMP_PULL;
-          case 1003: return SRT_PULL;
-          case 1004: return TCP_PULL;
-          case 1006: return RTSP_PULL;
           case 0: return INPUTTYPE_NOT_SET;
           default: return null;
         }
@@ -839,7 +667,7 @@ public final class StreamLineOuterClass {
     private volatile java.lang.Object channelId_;
     /**
      * <pre>
-     * ID of the channel where the line was created.
+     * ID of the channel to which this stream line belongs.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -860,7 +688,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * ID of the channel where the line was created.
+     * ID of the channel to which this stream line belongs.
      * </pre>
      *
      * <code>string channel_id = 2;</code>
@@ -885,7 +713,7 @@ public final class StreamLineOuterClass {
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Line title.
+     * Title of the stream line.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -906,7 +734,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Line title.
+     * Title of the stream line.
      * </pre>
      *
      * <code>string title = 3;</code>
@@ -931,7 +759,7 @@ public final class StreamLineOuterClass {
     private volatile java.lang.Object thumbnailId_;
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image associated with the stream line..
      * </pre>
      *
      * <code>string thumbnail_id = 4;</code>
@@ -952,7 +780,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * ID of the thumbnail.
+     * ID of the thumbnail image associated with the stream line..
      * </pre>
      *
      * <code>string thumbnail_id = 4;</code>
@@ -976,7 +804,7 @@ public final class StreamLineOuterClass {
     public static final int RTMP_PUSH_FIELD_NUMBER = 1000;
     /**
      * <pre>
-     * RTMP push input type.
+     * Real-Time Messaging Protocol (RTMP) push input settings.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -988,7 +816,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * RTMP push input type.
+     * Real-Time Messaging Protocol (RTMP) push input settings.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -1003,7 +831,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * RTMP push input type.
+     * Real-Time Messaging Protocol (RTMP) push input settings.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -1016,53 +844,10 @@ public final class StreamLineOuterClass {
       return yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInput.getDefaultInstance();
     }
 
-    public static final int SRT_PUSH_FIELD_NUMBER = 1001;
-    /**
-     * <pre>
-     * SRT push input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-     * @return Whether the srtPush field is set.
-     */
-    @java.lang.Override
-    public boolean hasSrtPush() {
-      return inputTypeCase_ == 1001;
-    }
-    /**
-     * <pre>
-     * SRT push input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-     * @return The srtPush.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput getSrtPush() {
-      if (inputTypeCase_ == 1001) {
-         return (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_;
-      }
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * SRT push input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInputOrBuilder getSrtPushOrBuilder() {
-      if (inputTypeCase_ == 1001) {
-         return (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_;
-      }
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.getDefaultInstance();
-    }
-
     public static final int RTMP_PULL_FIELD_NUMBER = 1002;
     /**
      * <pre>
-     * RTMP pull input type.
+     * Real-Time Messaging Protocol (RTMP) pull input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -1074,7 +859,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * RTMP pull input type.
+     * Real-Time Messaging Protocol (RTMP) pull input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -1089,7 +874,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * RTMP pull input type.
+     * Real-Time Messaging Protocol (RTMP) pull input type.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -1100,135 +885,6 @@ public final class StreamLineOuterClass {
          return (yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInput) inputType_;
       }
       return yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInput.getDefaultInstance();
-    }
-
-    public static final int SRT_PULL_FIELD_NUMBER = 1003;
-    /**
-     * <pre>
-     * SRT pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-     * @return Whether the srtPull field is set.
-     */
-    @java.lang.Override
-    public boolean hasSrtPull() {
-      return inputTypeCase_ == 1003;
-    }
-    /**
-     * <pre>
-     * SRT pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-     * @return The srtPull.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput getSrtPull() {
-      if (inputTypeCase_ == 1003) {
-         return (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_;
-      }
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * SRT pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInputOrBuilder getSrtPullOrBuilder() {
-      if (inputTypeCase_ == 1003) {
-         return (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_;
-      }
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.getDefaultInstance();
-    }
-
-    public static final int TCP_PULL_FIELD_NUMBER = 1004;
-    /**
-     * <pre>
-     * TCP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-     * @return Whether the tcpPull field is set.
-     */
-    @java.lang.Override
-    public boolean hasTcpPull() {
-      return inputTypeCase_ == 1004;
-    }
-    /**
-     * <pre>
-     * TCP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-     * @return The tcpPull.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput getTcpPull() {
-      if (inputTypeCase_ == 1004) {
-         return (yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_;
-      }
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * TCP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInputOrBuilder getTcpPullOrBuilder() {
-      if (inputTypeCase_ == 1004) {
-         return (yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_;
-      }
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.getDefaultInstance();
-    }
-
-    public static final int RTSP_PULL_FIELD_NUMBER = 1006;
-    /**
-     * <pre>
-     * RTSP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-     * @return Whether the rtspPull field is set.
-     */
-    @java.lang.Override
-    public boolean hasRtspPull() {
-      return inputTypeCase_ == 1006;
-    }
-    /**
-     * <pre>
-     * RTSP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-     * @return The rtspPull.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput getRtspPull() {
-      if (inputTypeCase_ == 1006) {
-         return (yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_;
-      }
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * RTSP pull input type.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInputOrBuilder getRtspPullOrBuilder() {
-      if (inputTypeCase_ == 1006) {
-         return (yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_;
-      }
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.getDefaultInstance();
     }
 
     public static final int MANUAL_LINE_FIELD_NUMBER = 2000;
@@ -1321,7 +977,7 @@ public final class StreamLineOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Time when line was created.
+     * Time when the stream line was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1333,7 +989,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Time when line was created.
+     * Time when the stream line was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1345,7 +1001,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Time when line was created.
+     * Time when the stream line was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -1359,7 +1015,7 @@ public final class StreamLineOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <pre>
-     * Time of last line update.
+     * Time when the stream line was last updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1371,7 +1027,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Time of last line update.
+     * Time when the stream line was last updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1383,7 +1039,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Time of last line update.
+     * Time when the stream line was last updated.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -1531,20 +1187,8 @@ public final class StreamLineOuterClass {
       if (inputTypeCase_ == 1000) {
         output.writeMessage(1000, (yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInput) inputType_);
       }
-      if (inputTypeCase_ == 1001) {
-        output.writeMessage(1001, (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_);
-      }
       if (inputTypeCase_ == 1002) {
         output.writeMessage(1002, (yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInput) inputType_);
-      }
-      if (inputTypeCase_ == 1003) {
-        output.writeMessage(1003, (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_);
-      }
-      if (inputTypeCase_ == 1004) {
-        output.writeMessage(1004, (yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_);
-      }
-      if (inputTypeCase_ == 1006) {
-        output.writeMessage(1006, (yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_);
       }
       if (lineTypeCase_ == 2000) {
         output.writeMessage(2000, (yandex.cloud.api.video.v1.StreamLineOuterClass.ManualLine) lineType_);
@@ -1595,25 +1239,9 @@ public final class StreamLineOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1000, (yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInput) inputType_);
       }
-      if (inputTypeCase_ == 1001) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1001, (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_);
-      }
       if (inputTypeCase_ == 1002) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1002, (yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInput) inputType_);
-      }
-      if (inputTypeCase_ == 1003) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1003, (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_);
-      }
-      if (inputTypeCase_ == 1004) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1004, (yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_);
-      }
-      if (inputTypeCase_ == 1006) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1006, (yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_);
       }
       if (lineTypeCase_ == 2000) {
         size += com.google.protobuf.CodedOutputStream
@@ -1664,25 +1292,9 @@ public final class StreamLineOuterClass {
           if (!getRtmpPush()
               .equals(other.getRtmpPush())) return false;
           break;
-        case 1001:
-          if (!getSrtPush()
-              .equals(other.getSrtPush())) return false;
-          break;
         case 1002:
           if (!getRtmpPull()
               .equals(other.getRtmpPull())) return false;
-          break;
-        case 1003:
-          if (!getSrtPull()
-              .equals(other.getSrtPull())) return false;
-          break;
-        case 1004:
-          if (!getTcpPull()
-              .equals(other.getTcpPull())) return false;
-          break;
-        case 1006:
-          if (!getRtspPull()
-              .equals(other.getRtspPull())) return false;
           break;
         case 0:
         default:
@@ -1736,25 +1348,9 @@ public final class StreamLineOuterClass {
           hash = (37 * hash) + RTMP_PUSH_FIELD_NUMBER;
           hash = (53 * hash) + getRtmpPush().hashCode();
           break;
-        case 1001:
-          hash = (37 * hash) + SRT_PUSH_FIELD_NUMBER;
-          hash = (53 * hash) + getSrtPush().hashCode();
-          break;
         case 1002:
           hash = (37 * hash) + RTMP_PULL_FIELD_NUMBER;
           hash = (53 * hash) + getRtmpPull().hashCode();
-          break;
-        case 1003:
-          hash = (37 * hash) + SRT_PULL_FIELD_NUMBER;
-          hash = (53 * hash) + getSrtPull().hashCode();
-          break;
-        case 1004:
-          hash = (37 * hash) + TCP_PULL_FIELD_NUMBER;
-          hash = (53 * hash) + getTcpPull().hashCode();
-          break;
-        case 1006:
-          hash = (37 * hash) + RTSP_PULL_FIELD_NUMBER;
-          hash = (53 * hash) + getRtspPull().hashCode();
           break;
         case 0:
         default:
@@ -1993,39 +1589,11 @@ public final class StreamLineOuterClass {
             result.inputType_ = rtmpPushBuilder_.build();
           }
         }
-        if (inputTypeCase_ == 1001) {
-          if (srtPushBuilder_ == null) {
-            result.inputType_ = inputType_;
-          } else {
-            result.inputType_ = srtPushBuilder_.build();
-          }
-        }
         if (inputTypeCase_ == 1002) {
           if (rtmpPullBuilder_ == null) {
             result.inputType_ = inputType_;
           } else {
             result.inputType_ = rtmpPullBuilder_.build();
-          }
-        }
-        if (inputTypeCase_ == 1003) {
-          if (srtPullBuilder_ == null) {
-            result.inputType_ = inputType_;
-          } else {
-            result.inputType_ = srtPullBuilder_.build();
-          }
-        }
-        if (inputTypeCase_ == 1004) {
-          if (tcpPullBuilder_ == null) {
-            result.inputType_ = inputType_;
-          } else {
-            result.inputType_ = tcpPullBuilder_.build();
-          }
-        }
-        if (inputTypeCase_ == 1006) {
-          if (rtspPullBuilder_ == null) {
-            result.inputType_ = inputType_;
-          } else {
-            result.inputType_ = rtspPullBuilder_.build();
           }
         }
         if (lineTypeCase_ == 2000) {
@@ -2133,24 +1701,8 @@ public final class StreamLineOuterClass {
             mergeRtmpPush(other.getRtmpPush());
             break;
           }
-          case SRT_PUSH: {
-            mergeSrtPush(other.getSrtPush());
-            break;
-          }
           case RTMP_PULL: {
             mergeRtmpPull(other.getRtmpPull());
-            break;
-          }
-          case SRT_PULL: {
-            mergeSrtPull(other.getSrtPull());
-            break;
-          }
-          case TCP_PULL: {
-            mergeTcpPull(other.getTcpPull());
-            break;
-          }
-          case RTSP_PULL: {
-            mergeRtspPull(other.getRtspPull());
             break;
           }
           case INPUTTYPE_NOT_SET: {
@@ -2329,7 +1881,7 @@ public final class StreamLineOuterClass {
       private java.lang.Object channelId_ = "";
       /**
        * <pre>
-       * ID of the channel where the line was created.
+       * ID of the channel to which this stream line belongs.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2349,7 +1901,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the line was created.
+       * ID of the channel to which this stream line belongs.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2370,7 +1922,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the line was created.
+       * ID of the channel to which this stream line belongs.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2389,7 +1941,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the line was created.
+       * ID of the channel to which this stream line belongs.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2403,7 +1955,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * ID of the channel where the line was created.
+       * ID of the channel to which this stream line belongs.
        * </pre>
        *
        * <code>string channel_id = 2;</code>
@@ -2425,7 +1977,7 @@ public final class StreamLineOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Line title.
+       * Title of the stream line.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -2445,7 +1997,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Line title.
+       * Title of the stream line.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -2466,7 +2018,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Line title.
+       * Title of the stream line.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -2485,7 +2037,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Line title.
+       * Title of the stream line.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -2499,7 +2051,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Line title.
+       * Title of the stream line.
        * </pre>
        *
        * <code>string title = 3;</code>
@@ -2521,7 +2073,7 @@ public final class StreamLineOuterClass {
       private java.lang.Object thumbnailId_ = "";
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image associated with the stream line..
        * </pre>
        *
        * <code>string thumbnail_id = 4;</code>
@@ -2541,7 +2093,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image associated with the stream line..
        * </pre>
        *
        * <code>string thumbnail_id = 4;</code>
@@ -2562,7 +2114,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image associated with the stream line..
        * </pre>
        *
        * <code>string thumbnail_id = 4;</code>
@@ -2581,7 +2133,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image associated with the stream line..
        * </pre>
        *
        * <code>string thumbnail_id = 4;</code>
@@ -2595,7 +2147,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * ID of the thumbnail.
+       * ID of the thumbnail image associated with the stream line..
        * </pre>
        *
        * <code>string thumbnail_id = 4;</code>
@@ -2618,7 +2170,7 @@ public final class StreamLineOuterClass {
           yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInput, yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPushInputOrBuilder> rtmpPushBuilder_;
       /**
        * <pre>
-       * RTMP push input type.
+       * Real-Time Messaging Protocol (RTMP) push input settings.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2630,7 +2182,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP push input type.
+       * Real-Time Messaging Protocol (RTMP) push input settings.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2652,7 +2204,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP push input type.
+       * Real-Time Messaging Protocol (RTMP) push input settings.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2672,7 +2224,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP push input type.
+       * Real-Time Messaging Protocol (RTMP) push input settings.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2690,7 +2242,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP push input type.
+       * Real-Time Messaging Protocol (RTMP) push input settings.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2716,7 +2268,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP push input type.
+       * Real-Time Messaging Protocol (RTMP) push input settings.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2739,7 +2291,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP push input type.
+       * Real-Time Messaging Protocol (RTMP) push input settings.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2749,7 +2301,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP push input type.
+       * Real-Time Messaging Protocol (RTMP) push input settings.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2767,7 +2319,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP push input type.
+       * Real-Time Messaging Protocol (RTMP) push input settings.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPushInput rtmp_push = 1000;</code>
@@ -2792,187 +2344,10 @@ public final class StreamLineOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInputOrBuilder> srtPushBuilder_;
-      /**
-       * <pre>
-       * SRT push input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-       * @return Whether the srtPush field is set.
-       */
-      @java.lang.Override
-      public boolean hasSrtPush() {
-        return inputTypeCase_ == 1001;
-      }
-      /**
-       * <pre>
-       * SRT push input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-       * @return The srtPush.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput getSrtPush() {
-        if (srtPushBuilder_ == null) {
-          if (inputTypeCase_ == 1001) {
-            return (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_;
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.getDefaultInstance();
-        } else {
-          if (inputTypeCase_ == 1001) {
-            return srtPushBuilder_.getMessage();
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * SRT push input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-       */
-      public Builder setSrtPush(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput value) {
-        if (srtPushBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          inputType_ = value;
-          onChanged();
-        } else {
-          srtPushBuilder_.setMessage(value);
-        }
-        inputTypeCase_ = 1001;
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT push input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-       */
-      public Builder setSrtPush(
-          yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.Builder builderForValue) {
-        if (srtPushBuilder_ == null) {
-          inputType_ = builderForValue.build();
-          onChanged();
-        } else {
-          srtPushBuilder_.setMessage(builderForValue.build());
-        }
-        inputTypeCase_ = 1001;
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT push input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-       */
-      public Builder mergeSrtPush(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput value) {
-        if (srtPushBuilder_ == null) {
-          if (inputTypeCase_ == 1001 &&
-              inputType_ != yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.getDefaultInstance()) {
-            inputType_ = yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.newBuilder((yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            inputType_ = value;
-          }
-          onChanged();
-        } else {
-          if (inputTypeCase_ == 1001) {
-            srtPushBuilder_.mergeFrom(value);
-          }
-          srtPushBuilder_.setMessage(value);
-        }
-        inputTypeCase_ = 1001;
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT push input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-       */
-      public Builder clearSrtPush() {
-        if (srtPushBuilder_ == null) {
-          if (inputTypeCase_ == 1001) {
-            inputTypeCase_ = 0;
-            inputType_ = null;
-            onChanged();
-          }
-        } else {
-          if (inputTypeCase_ == 1001) {
-            inputTypeCase_ = 0;
-            inputType_ = null;
-          }
-          srtPushBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT push input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-       */
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.Builder getSrtPushBuilder() {
-        return getSrtPushFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * SRT push input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInputOrBuilder getSrtPushOrBuilder() {
-        if ((inputTypeCase_ == 1001) && (srtPushBuilder_ != null)) {
-          return srtPushBuilder_.getMessageOrBuilder();
-        } else {
-          if (inputTypeCase_ == 1001) {
-            return (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_;
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * SRT push input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPushInput srt_push = 1001;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInputOrBuilder> 
-          getSrtPushFieldBuilder() {
-        if (srtPushBuilder_ == null) {
-          if (!(inputTypeCase_ == 1001)) {
-            inputType_ = yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.getDefaultInstance();
-          }
-          srtPushBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInputOrBuilder>(
-                  (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) inputType_,
-                  getParentForChildren(),
-                  isClean());
-          inputType_ = null;
-        }
-        inputTypeCase_ = 1001;
-        onChanged();;
-        return srtPushBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.RTMPPullInputOrBuilder> rtmpPullBuilder_;
       /**
        * <pre>
-       * RTMP pull input type.
+       * Real-Time Messaging Protocol (RTMP) pull input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -2984,7 +2359,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP pull input type.
+       * Real-Time Messaging Protocol (RTMP) pull input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -3006,7 +2381,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP pull input type.
+       * Real-Time Messaging Protocol (RTMP) pull input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -3026,7 +2401,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP pull input type.
+       * Real-Time Messaging Protocol (RTMP) pull input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -3044,7 +2419,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP pull input type.
+       * Real-Time Messaging Protocol (RTMP) pull input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -3070,7 +2445,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP pull input type.
+       * Real-Time Messaging Protocol (RTMP) pull input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -3093,7 +2468,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP pull input type.
+       * Real-Time Messaging Protocol (RTMP) pull input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -3103,7 +2478,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP pull input type.
+       * Real-Time Messaging Protocol (RTMP) pull input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -3121,7 +2496,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * RTMP pull input type.
+       * Real-Time Messaging Protocol (RTMP) pull input type.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.RTMPPullInput rtmp_pull = 1002;</code>
@@ -3143,537 +2518,6 @@ public final class StreamLineOuterClass {
         inputTypeCase_ = 1002;
         onChanged();;
         return rtmpPullBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInputOrBuilder> srtPullBuilder_;
-      /**
-       * <pre>
-       * SRT pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-       * @return Whether the srtPull field is set.
-       */
-      @java.lang.Override
-      public boolean hasSrtPull() {
-        return inputTypeCase_ == 1003;
-      }
-      /**
-       * <pre>
-       * SRT pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-       * @return The srtPull.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput getSrtPull() {
-        if (srtPullBuilder_ == null) {
-          if (inputTypeCase_ == 1003) {
-            return (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_;
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.getDefaultInstance();
-        } else {
-          if (inputTypeCase_ == 1003) {
-            return srtPullBuilder_.getMessage();
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * SRT pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-       */
-      public Builder setSrtPull(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput value) {
-        if (srtPullBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          inputType_ = value;
-          onChanged();
-        } else {
-          srtPullBuilder_.setMessage(value);
-        }
-        inputTypeCase_ = 1003;
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-       */
-      public Builder setSrtPull(
-          yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.Builder builderForValue) {
-        if (srtPullBuilder_ == null) {
-          inputType_ = builderForValue.build();
-          onChanged();
-        } else {
-          srtPullBuilder_.setMessage(builderForValue.build());
-        }
-        inputTypeCase_ = 1003;
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-       */
-      public Builder mergeSrtPull(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput value) {
-        if (srtPullBuilder_ == null) {
-          if (inputTypeCase_ == 1003 &&
-              inputType_ != yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.getDefaultInstance()) {
-            inputType_ = yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.newBuilder((yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            inputType_ = value;
-          }
-          onChanged();
-        } else {
-          if (inputTypeCase_ == 1003) {
-            srtPullBuilder_.mergeFrom(value);
-          }
-          srtPullBuilder_.setMessage(value);
-        }
-        inputTypeCase_ = 1003;
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-       */
-      public Builder clearSrtPull() {
-        if (srtPullBuilder_ == null) {
-          if (inputTypeCase_ == 1003) {
-            inputTypeCase_ = 0;
-            inputType_ = null;
-            onChanged();
-          }
-        } else {
-          if (inputTypeCase_ == 1003) {
-            inputTypeCase_ = 0;
-            inputType_ = null;
-          }
-          srtPullBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-       */
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.Builder getSrtPullBuilder() {
-        return getSrtPullFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * SRT pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInputOrBuilder getSrtPullOrBuilder() {
-        if ((inputTypeCase_ == 1003) && (srtPullBuilder_ != null)) {
-          return srtPullBuilder_.getMessageOrBuilder();
-        } else {
-          if (inputTypeCase_ == 1003) {
-            return (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_;
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * SRT pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.SRTPullInput srt_pull = 1003;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInputOrBuilder> 
-          getSrtPullFieldBuilder() {
-        if (srtPullBuilder_ == null) {
-          if (!(inputTypeCase_ == 1003)) {
-            inputType_ = yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.getDefaultInstance();
-          }
-          srtPullBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInputOrBuilder>(
-                  (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) inputType_,
-                  getParentForChildren(),
-                  isClean());
-          inputType_ = null;
-        }
-        inputTypeCase_ = 1003;
-        onChanged();;
-        return srtPullBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInputOrBuilder> tcpPullBuilder_;
-      /**
-       * <pre>
-       * TCP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-       * @return Whether the tcpPull field is set.
-       */
-      @java.lang.Override
-      public boolean hasTcpPull() {
-        return inputTypeCase_ == 1004;
-      }
-      /**
-       * <pre>
-       * TCP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-       * @return The tcpPull.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput getTcpPull() {
-        if (tcpPullBuilder_ == null) {
-          if (inputTypeCase_ == 1004) {
-            return (yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_;
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.getDefaultInstance();
-        } else {
-          if (inputTypeCase_ == 1004) {
-            return tcpPullBuilder_.getMessage();
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * TCP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-       */
-      public Builder setTcpPull(yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput value) {
-        if (tcpPullBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          inputType_ = value;
-          onChanged();
-        } else {
-          tcpPullBuilder_.setMessage(value);
-        }
-        inputTypeCase_ = 1004;
-        return this;
-      }
-      /**
-       * <pre>
-       * TCP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-       */
-      public Builder setTcpPull(
-          yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.Builder builderForValue) {
-        if (tcpPullBuilder_ == null) {
-          inputType_ = builderForValue.build();
-          onChanged();
-        } else {
-          tcpPullBuilder_.setMessage(builderForValue.build());
-        }
-        inputTypeCase_ = 1004;
-        return this;
-      }
-      /**
-       * <pre>
-       * TCP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-       */
-      public Builder mergeTcpPull(yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput value) {
-        if (tcpPullBuilder_ == null) {
-          if (inputTypeCase_ == 1004 &&
-              inputType_ != yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.getDefaultInstance()) {
-            inputType_ = yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.newBuilder((yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            inputType_ = value;
-          }
-          onChanged();
-        } else {
-          if (inputTypeCase_ == 1004) {
-            tcpPullBuilder_.mergeFrom(value);
-          }
-          tcpPullBuilder_.setMessage(value);
-        }
-        inputTypeCase_ = 1004;
-        return this;
-      }
-      /**
-       * <pre>
-       * TCP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-       */
-      public Builder clearTcpPull() {
-        if (tcpPullBuilder_ == null) {
-          if (inputTypeCase_ == 1004) {
-            inputTypeCase_ = 0;
-            inputType_ = null;
-            onChanged();
-          }
-        } else {
-          if (inputTypeCase_ == 1004) {
-            inputTypeCase_ = 0;
-            inputType_ = null;
-          }
-          tcpPullBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * TCP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-       */
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.Builder getTcpPullBuilder() {
-        return getTcpPullFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * TCP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInputOrBuilder getTcpPullOrBuilder() {
-        if ((inputTypeCase_ == 1004) && (tcpPullBuilder_ != null)) {
-          return tcpPullBuilder_.getMessageOrBuilder();
-        } else {
-          if (inputTypeCase_ == 1004) {
-            return (yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_;
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * TCP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.TCPPullInput tcp_pull = 1004;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInputOrBuilder> 
-          getTcpPullFieldBuilder() {
-        if (tcpPullBuilder_ == null) {
-          if (!(inputTypeCase_ == 1004)) {
-            inputType_ = yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.getDefaultInstance();
-          }
-          tcpPullBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInputOrBuilder>(
-                  (yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) inputType_,
-                  getParentForChildren(),
-                  isClean());
-          inputType_ = null;
-        }
-        inputTypeCase_ = 1004;
-        onChanged();;
-        return tcpPullBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInputOrBuilder> rtspPullBuilder_;
-      /**
-       * <pre>
-       * RTSP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-       * @return Whether the rtspPull field is set.
-       */
-      @java.lang.Override
-      public boolean hasRtspPull() {
-        return inputTypeCase_ == 1006;
-      }
-      /**
-       * <pre>
-       * RTSP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-       * @return The rtspPull.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput getRtspPull() {
-        if (rtspPullBuilder_ == null) {
-          if (inputTypeCase_ == 1006) {
-            return (yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_;
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.getDefaultInstance();
-        } else {
-          if (inputTypeCase_ == 1006) {
-            return rtspPullBuilder_.getMessage();
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * RTSP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-       */
-      public Builder setRtspPull(yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput value) {
-        if (rtspPullBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          inputType_ = value;
-          onChanged();
-        } else {
-          rtspPullBuilder_.setMessage(value);
-        }
-        inputTypeCase_ = 1006;
-        return this;
-      }
-      /**
-       * <pre>
-       * RTSP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-       */
-      public Builder setRtspPull(
-          yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.Builder builderForValue) {
-        if (rtspPullBuilder_ == null) {
-          inputType_ = builderForValue.build();
-          onChanged();
-        } else {
-          rtspPullBuilder_.setMessage(builderForValue.build());
-        }
-        inputTypeCase_ = 1006;
-        return this;
-      }
-      /**
-       * <pre>
-       * RTSP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-       */
-      public Builder mergeRtspPull(yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput value) {
-        if (rtspPullBuilder_ == null) {
-          if (inputTypeCase_ == 1006 &&
-              inputType_ != yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.getDefaultInstance()) {
-            inputType_ = yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.newBuilder((yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            inputType_ = value;
-          }
-          onChanged();
-        } else {
-          if (inputTypeCase_ == 1006) {
-            rtspPullBuilder_.mergeFrom(value);
-          }
-          rtspPullBuilder_.setMessage(value);
-        }
-        inputTypeCase_ = 1006;
-        return this;
-      }
-      /**
-       * <pre>
-       * RTSP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-       */
-      public Builder clearRtspPull() {
-        if (rtspPullBuilder_ == null) {
-          if (inputTypeCase_ == 1006) {
-            inputTypeCase_ = 0;
-            inputType_ = null;
-            onChanged();
-          }
-        } else {
-          if (inputTypeCase_ == 1006) {
-            inputTypeCase_ = 0;
-            inputType_ = null;
-          }
-          rtspPullBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * RTSP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-       */
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.Builder getRtspPullBuilder() {
-        return getRtspPullFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * RTSP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInputOrBuilder getRtspPullOrBuilder() {
-        if ((inputTypeCase_ == 1006) && (rtspPullBuilder_ != null)) {
-          return rtspPullBuilder_.getMessageOrBuilder();
-        } else {
-          if (inputTypeCase_ == 1006) {
-            return (yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_;
-          }
-          return yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * RTSP pull input type.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.RTSPPullInput rtsp_pull = 1006;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInputOrBuilder> 
-          getRtspPullFieldBuilder() {
-        if (rtspPullBuilder_ == null) {
-          if (!(inputTypeCase_ == 1006)) {
-            inputType_ = yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.getDefaultInstance();
-          }
-          rtspPullBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput, yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.Builder, yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInputOrBuilder>(
-                  (yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) inputType_,
-                  getParentForChildren(),
-                  isClean());
-          inputType_ = null;
-        }
-        inputTypeCase_ = 1006;
-        onChanged();;
-        return rtspPullBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4035,7 +2879,7 @@ public final class StreamLineOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Time when line was created.
+       * Time when the stream line was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4046,7 +2890,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when line was created.
+       * Time when the stream line was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4061,7 +2905,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when line was created.
+       * Time when the stream line was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4081,7 +2925,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when line was created.
+       * Time when the stream line was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4099,7 +2943,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when line was created.
+       * Time when the stream line was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4121,7 +2965,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when line was created.
+       * Time when the stream line was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4139,7 +2983,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when line was created.
+       * Time when the stream line was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4151,7 +2995,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when line was created.
+       * Time when the stream line was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4166,7 +3010,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time when line was created.
+       * Time when the stream line was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 100;</code>
@@ -4190,7 +3034,7 @@ public final class StreamLineOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <pre>
-       * Time of last line update.
+       * Time when the stream line was last updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4201,7 +3045,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time of last line update.
+       * Time when the stream line was last updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4216,7 +3060,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time of last line update.
+       * Time when the stream line was last updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4236,7 +3080,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time of last line update.
+       * Time when the stream line was last updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4254,7 +3098,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time of last line update.
+       * Time when the stream line was last updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4276,7 +3120,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time of last line update.
+       * Time when the stream line was last updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4294,7 +3138,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time of last line update.
+       * Time when the stream line was last updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4306,7 +3150,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time of last line update.
+       * Time when the stream line was last updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4321,7 +3165,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Time of last line update.
+       * Time when the stream line was last updated.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp updated_at = 101;</code>
@@ -4557,7 +3401,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Unique stream key.
+     * The unique stream key.
      * </pre>
      *
      * <code>string key = 1;</code>
@@ -4566,7 +3410,7 @@ public final class StreamLineOuterClass {
     java.lang.String getKey();
     /**
      * <pre>
-     * Unique stream key.
+     * The unique stream key.
      * </pre>
      *
      * <code>string key = 1;</code>
@@ -4577,7 +3421,7 @@ public final class StreamLineOuterClass {
   }
   /**
    * <pre>
-   * Push stream key.
+   * Represents the stream key used for pushing video streams.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.PushStreamKey}
@@ -4667,7 +3511,7 @@ public final class StreamLineOuterClass {
     private volatile java.lang.Object key_;
     /**
      * <pre>
-     * Unique stream key.
+     * The unique stream key.
      * </pre>
      *
      * <code>string key = 1;</code>
@@ -4688,7 +3532,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Unique stream key.
+     * The unique stream key.
      * </pre>
      *
      * <code>string key = 1;</code>
@@ -4865,7 +3709,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Push stream key.
+     * Represents the stream key used for pushing video streams.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.PushStreamKey}
@@ -5018,7 +3862,7 @@ public final class StreamLineOuterClass {
       private java.lang.Object key_ = "";
       /**
        * <pre>
-       * Unique stream key.
+       * The unique stream key.
        * </pre>
        *
        * <code>string key = 1;</code>
@@ -5038,7 +3882,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Unique stream key.
+       * The unique stream key.
        * </pre>
        *
        * <code>string key = 1;</code>
@@ -5059,7 +3903,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Unique stream key.
+       * The unique stream key.
        * </pre>
        *
        * <code>string key = 1;</code>
@@ -5078,7 +3922,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Unique stream key.
+       * The unique stream key.
        * </pre>
        *
        * <code>string key = 1;</code>
@@ -5092,7 +3936,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Unique stream key.
+       * The unique stream key.
        * </pre>
        *
        * <code>string key = 1;</code>
@@ -5188,6 +4032,12 @@ public final class StreamLineOuterClass {
         getUrlBytes();
   }
   /**
+   * <pre>
+   * Settings for an RTMP (Real-Time Messaging Protocol) push input.
+   * Used when the video stream is pushed to an RTMP server.
+   * &#64;see https://en.wikipedia.org/wiki/Real-Time_Messaging_Protocol
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.RTMPPushInput}
    */
   public static final class RTMPPushInput extends
@@ -5472,6 +4322,12 @@ public final class StreamLineOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Settings for an RTMP (Real-Time Messaging Protocol) push input.
+     * Used when the video stream is pushed to an RTMP server.
+     * &#64;see https://en.wikipedia.org/wiki/Real-Time_Messaging_Protocol
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.RTMPPushInput}
      */
     public static final class Builder extends
@@ -5767,610 +4623,6 @@ public final class StreamLineOuterClass {
 
   }
 
-  public interface SRTPushInputOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.SRTPushInput)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * SRT server url.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    java.lang.String getUrl();
-    /**
-     * <pre>
-     * SRT server url.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    com.google.protobuf.ByteString
-        getUrlBytes();
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.video.v1.SRTPushInput}
-   */
-  public static final class SRTPushInput extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.SRTPushInput)
-      SRTPushInputOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SRTPushInput.newBuilder() to construct.
-    private SRTPushInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SRTPushInput() {
-      url_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SRTPushInput();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SRTPushInput(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              url_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPushInput_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPushInput_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.class, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.Builder.class);
-    }
-
-    public static final int URL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object url_;
-    /**
-     * <pre>
-     * SRT server url.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    @java.lang.Override
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * SRT server url.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput other = (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) obj;
-
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.video.v1.SRTPushInput}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.SRTPushInput)
-        yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInputOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPushInput_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPushInput_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.class, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        url_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPushInput_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput getDefaultInstanceForType() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput build() {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput buildPartial() {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput result = new yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput(this);
-        result.url_ = url_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) {
-          return mergeFrom((yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput other) {
-        if (other == yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput.getDefaultInstance()) return this;
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object url_ = "";
-      /**
-       * <pre>
-       * SRT server url.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return The url.
-       */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * SRT server url.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return The bytes for url.
-       */
-      public com.google.protobuf.ByteString
-          getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * SRT server url.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @param value The url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT server url.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUrl() {
-        
-        url_ = getDefaultInstance().getUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT server url.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @param value The bytes for url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.SRTPushInput)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.SRTPushInput)
-    private static final yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput();
-    }
-
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SRTPushInput>
-        PARSER = new com.google.protobuf.AbstractParser<SRTPushInput>() {
-      @java.lang.Override
-      public SRTPushInput parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SRTPushInput(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<SRTPushInput> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SRTPushInput> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPushInput getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface RTMPPullInputOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.RTMPPullInput)
       com.google.protobuf.MessageOrBuilder {
@@ -6396,6 +4648,12 @@ public final class StreamLineOuterClass {
         getUrlBytes();
   }
   /**
+   * <pre>
+   * Settings for an RTMP pull input.
+   * Used when the service pulls the video stream from an RTMP source.
+   * &#64;see https://en.wikipedia.org/wiki/Real-Time_Messaging_Protocol
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.video.v1.RTMPPullInput}
    */
   public static final class RTMPPullInput extends
@@ -6680,6 +4938,12 @@ public final class StreamLineOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Settings for an RTMP pull input.
+     * Used when the service pulls the video stream from an RTMP source.
+     * &#64;see https://en.wikipedia.org/wiki/Real-Time_Messaging_Protocol
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.video.v1.RTMPPullInput}
      */
     public static final class Builder extends
@@ -6975,1825 +5239,14 @@ public final class StreamLineOuterClass {
 
   }
 
-  public interface SRTPullInputOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.SRTPullInput)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * SRT url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    java.lang.String getUrl();
-    /**
-     * <pre>
-     * SRT url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    com.google.protobuf.ByteString
-        getUrlBytes();
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.video.v1.SRTPullInput}
-   */
-  public static final class SRTPullInput extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.SRTPullInput)
-      SRTPullInputOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SRTPullInput.newBuilder() to construct.
-    private SRTPullInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SRTPullInput() {
-      url_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SRTPullInput();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SRTPullInput(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              url_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPullInput_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPullInput_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.class, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.Builder.class);
-    }
-
-    public static final int URL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object url_;
-    /**
-     * <pre>
-     * SRT url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    @java.lang.Override
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * SRT url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput other = (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) obj;
-
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.video.v1.SRTPullInput}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.SRTPullInput)
-        yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInputOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPullInput_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPullInput_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.class, yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        url_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_SRTPullInput_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput getDefaultInstanceForType() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput build() {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput buildPartial() {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput result = new yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput(this);
-        result.url_ = url_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) {
-          return mergeFrom((yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput other) {
-        if (other == yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput.getDefaultInstance()) return this;
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object url_ = "";
-      /**
-       * <pre>
-       * SRT url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return The url.
-       */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * SRT url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return The bytes for url.
-       */
-      public com.google.protobuf.ByteString
-          getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * SRT url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @param value The url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUrl() {
-        
-        url_ = getDefaultInstance().getUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * SRT url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @param value The bytes for url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.SRTPullInput)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.SRTPullInput)
-    private static final yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput();
-    }
-
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SRTPullInput>
-        PARSER = new com.google.protobuf.AbstractParser<SRTPullInput>() {
-      @java.lang.Override
-      public SRTPullInput parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SRTPullInput(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<SRTPullInput> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SRTPullInput> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.SRTPullInput getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TCPPullInputOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.TCPPullInput)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * TCP url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    java.lang.String getUrl();
-    /**
-     * <pre>
-     * TCP url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    com.google.protobuf.ByteString
-        getUrlBytes();
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.video.v1.TCPPullInput}
-   */
-  public static final class TCPPullInput extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.TCPPullInput)
-      TCPPullInputOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TCPPullInput.newBuilder() to construct.
-    private TCPPullInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private TCPPullInput() {
-      url_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TCPPullInput();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TCPPullInput(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              url_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_TCPPullInput_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_TCPPullInput_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.class, yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.Builder.class);
-    }
-
-    public static final int URL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object url_;
-    /**
-     * <pre>
-     * TCP url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    @java.lang.Override
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * TCP url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput other = (yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) obj;
-
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.video.v1.TCPPullInput}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.TCPPullInput)
-        yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInputOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_TCPPullInput_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_TCPPullInput_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.class, yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        url_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_TCPPullInput_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput getDefaultInstanceForType() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput build() {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput buildPartial() {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput result = new yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput(this);
-        result.url_ = url_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) {
-          return mergeFrom((yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput other) {
-        if (other == yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput.getDefaultInstance()) return this;
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object url_ = "";
-      /**
-       * <pre>
-       * TCP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return The url.
-       */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * TCP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return The bytes for url.
-       */
-      public com.google.protobuf.ByteString
-          getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * TCP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @param value The url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * TCP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUrl() {
-        
-        url_ = getDefaultInstance().getUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * TCP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @param value The bytes for url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.TCPPullInput)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.TCPPullInput)
-    private static final yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput();
-    }
-
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<TCPPullInput>
-        PARSER = new com.google.protobuf.AbstractParser<TCPPullInput>() {
-      @java.lang.Override
-      public TCPPullInput parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TCPPullInput(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<TCPPullInput> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TCPPullInput> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.TCPPullInput getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface RTSPPullInputOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.RTSPPullInput)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * RTSP url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    java.lang.String getUrl();
-    /**
-     * <pre>
-     * RTSP url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    com.google.protobuf.ByteString
-        getUrlBytes();
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.video.v1.RTSPPullInput}
-   */
-  public static final class RTSPPullInput extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.RTSPPullInput)
-      RTSPPullInputOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RTSPPullInput.newBuilder() to construct.
-    private RTSPPullInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private RTSPPullInput() {
-      url_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RTSPPullInput();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private RTSPPullInput(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              url_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_RTSPPullInput_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_RTSPPullInput_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.class, yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.Builder.class);
-    }
-
-    public static final int URL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object url_;
-    /**
-     * <pre>
-     * RTSP url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The url.
-     */
-    @java.lang.Override
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        url_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * RTSP url for receiving video signal.
-     * </pre>
-     *
-     * <code>string url = 1;</code>
-     * @return The bytes for url.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        url_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput other = (yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) obj;
-
-      if (!getUrl()
-          .equals(other.getUrl())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + URL_FIELD_NUMBER;
-      hash = (53 * hash) + getUrl().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.video.v1.RTSPPullInput}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.RTSPPullInput)
-        yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInputOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_RTSPPullInput_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_RTSPPullInput_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.class, yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        url_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.internal_static_yandex_cloud_video_v1_RTSPPullInput_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput getDefaultInstanceForType() {
-        return yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput build() {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput buildPartial() {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput result = new yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput(this);
-        result.url_ = url_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) {
-          return mergeFrom((yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput other) {
-        if (other == yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput.getDefaultInstance()) return this;
-        if (!other.getUrl().isEmpty()) {
-          url_ = other.url_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object url_ = "";
-      /**
-       * <pre>
-       * RTSP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return The url.
-       */
-      public java.lang.String getUrl() {
-        java.lang.Object ref = url_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          url_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * RTSP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return The bytes for url.
-       */
-      public com.google.protobuf.ByteString
-          getUrlBytes() {
-        java.lang.Object ref = url_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          url_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * RTSP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @param value The url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrl(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * RTSP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUrl() {
-        
-        url_ = getDefaultInstance().getUrl();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * RTSP url for receiving video signal.
-       * </pre>
-       *
-       * <code>string url = 1;</code>
-       * @param value The bytes for url to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUrlBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        url_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.RTSPPullInput)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.RTSPPullInput)
-    private static final yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput();
-    }
-
-    public static yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<RTSPPullInput>
-        PARSER = new com.google.protobuf.AbstractParser<RTSPPullInput>() {
-      @java.lang.Override
-      public RTSPPullInput parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RTSPPullInput(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<RTSPPullInput> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RTSPPullInput> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.StreamLineOuterClass.RTSPPullInput getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface ManualLineOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.ManualLine)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
    * <pre>
-   * Manual line type.
+   * Represents a manual line type where the stream control is handled manually.
+   * This means that stream start/stop actions are performed by the user.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.ManualLine}
@@ -9018,7 +5471,8 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Manual line type.
+     * Represents a manual line type where the stream control is handled manually.
+     * This means that stream start/stop actions are performed by the user.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.ManualLine}
@@ -9219,7 +5673,7 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Status of auto line.
+     * The status of the automatic line.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine.AutoLineStatus status = 1;</code>
@@ -9228,7 +5682,7 @@ public final class StreamLineOuterClass {
     int getStatusValue();
     /**
      * <pre>
-     * Status of auto line.
+     * The status of the automatic line.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine.AutoLineStatus status = 1;</code>
@@ -9238,7 +5692,7 @@ public final class StreamLineOuterClass {
   }
   /**
    * <pre>
-   * Auto line type.
+   * Represents an automatic line type where the stream control is handled automatically.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.video.v1.AutoLine}
@@ -9326,7 +5780,8 @@ public final class StreamLineOuterClass {
 
     /**
      * <pre>
-     * Auto line status.
+     * Enum representing the status of an automatic stream line.
+     * Indicates whether the automatic line is active or deactivated.
      * </pre>
      *
      * Protobuf enum {@code yandex.cloud.video.v1.AutoLine.AutoLineStatus}
@@ -9343,7 +5798,7 @@ public final class StreamLineOuterClass {
       AUTO_LINE_STATUS_UNSPECIFIED(0),
       /**
        * <pre>
-       * Auto line deactivated.
+       * The automatic line is deactivated and not currently active.
        * </pre>
        *
        * <code>DEACTIVATED = 1;</code>
@@ -9351,7 +5806,7 @@ public final class StreamLineOuterClass {
       DEACTIVATED(1),
       /**
        * <pre>
-       * Auto line active.
+       * The automatic line is active and operational.
        * </pre>
        *
        * <code>ACTIVE = 2;</code>
@@ -9370,7 +5825,7 @@ public final class StreamLineOuterClass {
       public static final int AUTO_LINE_STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Auto line deactivated.
+       * The automatic line is deactivated and not currently active.
        * </pre>
        *
        * <code>DEACTIVATED = 1;</code>
@@ -9378,7 +5833,7 @@ public final class StreamLineOuterClass {
       public static final int DEACTIVATED_VALUE = 1;
       /**
        * <pre>
-       * Auto line active.
+       * The automatic line is active and operational.
        * </pre>
        *
        * <code>ACTIVE = 2;</code>
@@ -9473,7 +5928,7 @@ public final class StreamLineOuterClass {
     private int status_;
     /**
      * <pre>
-     * Status of auto line.
+     * The status of the automatic line.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine.AutoLineStatus status = 1;</code>
@@ -9484,7 +5939,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Status of auto line.
+     * The status of the automatic line.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.AutoLine.AutoLineStatus status = 1;</code>
@@ -9652,7 +6107,7 @@ public final class StreamLineOuterClass {
     }
     /**
      * <pre>
-     * Auto line type.
+     * Represents an automatic line type where the stream control is handled automatically.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.video.v1.AutoLine}
@@ -9804,7 +6259,7 @@ public final class StreamLineOuterClass {
       private int status_ = 0;
       /**
        * <pre>
-       * Status of auto line.
+       * The status of the automatic line.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine.AutoLineStatus status = 1;</code>
@@ -9815,7 +6270,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Status of auto line.
+       * The status of the automatic line.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine.AutoLineStatus status = 1;</code>
@@ -9830,7 +6285,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Status of auto line.
+       * The status of the automatic line.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine.AutoLineStatus status = 1;</code>
@@ -9844,7 +6299,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Status of auto line.
+       * The status of the automatic line.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine.AutoLineStatus status = 1;</code>
@@ -9862,7 +6317,7 @@ public final class StreamLineOuterClass {
       }
       /**
        * <pre>
-       * Status of auto line.
+       * The status of the automatic line.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.AutoLine.AutoLineStatus status = 1;</code>
@@ -9948,30 +6403,10 @@ public final class StreamLineOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_RTMPPushInput_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_video_v1_SRTPushInput_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_video_v1_SRTPushInput_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_RTMPPullInput_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_RTMPPullInput_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_video_v1_SRTPullInput_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_video_v1_SRTPullInput_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_video_v1_TCPPullInput_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_video_v1_TCPPullInput_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_video_v1_RTSPPullInput_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_video_v1_RTSPPullInput_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_ManualLine_descriptor;
   private static final 
@@ -9993,40 +6428,31 @@ public final class StreamLineOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'yandex/cloud/video/v1/stream_line.prot" +
       "o\022\025yandex.cloud.video.v1\032\037google/protobu" +
-      "f/timestamp.proto\"\264\006\n\nStreamLine\022\n\n\002id\030\001" +
+      "f/timestamp.proto\"\312\004\n\nStreamLine\022\n\n\002id\030\001" +
       " \001(\t\022\022\n\nchannel_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022" +
       "\024\n\014thumbnail_id\030\004 \001(\t\022:\n\trtmp_push\030\350\007 \001(" +
       "\0132$.yandex.cloud.video.v1.RTMPPushInputH" +
-      "\000\0228\n\010srt_push\030\351\007 \001(\0132#.yandex.cloud.vide" +
-      "o.v1.SRTPushInputH\000\022:\n\trtmp_pull\030\352\007 \001(\0132" +
-      "$.yandex.cloud.video.v1.RTMPPullInputH\000\022" +
-      "8\n\010srt_pull\030\353\007 \001(\0132#.yandex.cloud.video." +
-      "v1.SRTPullInputH\000\0228\n\010tcp_pull\030\354\007 \001(\0132#.y" +
-      "andex.cloud.video.v1.TCPPullInputH\000\022:\n\tr" +
-      "tsp_pull\030\356\007 \001(\0132$.yandex.cloud.video.v1." +
-      "RTSPPullInputH\000\0229\n\013manual_line\030\320\017 \001(\0132!." +
-      "yandex.cloud.video.v1.ManualLineH\001\0225\n\tau" +
-      "to_line\030\321\017 \001(\0132\037.yandex.cloud.video.v1.A" +
-      "utoLineH\001\022.\n\ncreated_at\030d \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022.\n\nupdated_at\030e \001(\0132\032." +
-      "google.protobuf.Timestamp\022>\n\006labels\030\310\001 \003" +
-      "(\0132-.yandex.cloud.video.v1.StreamLine.La" +
-      "belsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001B\014\n\ninput_typeB\013\n\tline_t" +
-      "ypeJ\004\010\005\020dJ\005\010f\020\310\001J\006\010\311\001\020\350\007J\006\010\355\007\020\356\007J\006\010\357\007\020\320\017" +
-      "\"\034\n\rPushStreamKey\022\013\n\003key\030\001 \001(\t\"\034\n\rRTMPPu" +
-      "shInput\022\013\n\003url\030\001 \001(\t\"\033\n\014SRTPushInput\022\013\n\003" +
-      "url\030\001 \001(\t\"\034\n\rRTMPPullInput\022\013\n\003url\030\001 \001(\t\"" +
-      "\033\n\014SRTPullInput\022\013\n\003url\030\001 \001(\t\"\033\n\014TCPPullI" +
-      "nput\022\013\n\003url\030\001 \001(\t\"\034\n\rRTSPPullInput\022\013\n\003ur" +
-      "l\030\001 \001(\t\"\014\n\nManualLine\"\233\001\n\010AutoLine\022>\n\006st" +
-      "atus\030\001 \001(\0162..yandex.cloud.video.v1.AutoL" +
-      "ine.AutoLineStatus\"O\n\016AutoLineStatus\022 \n\034" +
-      "AUTO_LINE_STATUS_UNSPECIFIED\020\000\022\017\n\013DEACTI" +
-      "VATED\020\001\022\n\n\006ACTIVE\020\002B\\\n\031yandex.cloud.api." +
-      "video.v1Z?github.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/video/v1;videob\006proto" +
-      "3"
+      "\000\022:\n\trtmp_pull\030\352\007 \001(\0132$.yandex.cloud.vid" +
+      "eo.v1.RTMPPullInputH\000\0229\n\013manual_line\030\320\017 " +
+      "\001(\0132!.yandex.cloud.video.v1.ManualLineH\001" +
+      "\0225\n\tauto_line\030\321\017 \001(\0132\037.yandex.cloud.vide" +
+      "o.v1.AutoLineH\001\022.\n\ncreated_at\030d \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022.\n\nupdated_at\030e " +
+      "\001(\0132\032.google.protobuf.Timestamp\022>\n\006label" +
+      "s\030\310\001 \003(\0132-.yandex.cloud.video.v1.StreamL" +
+      "ine.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\ninput_typeB\013\n\t" +
+      "line_typeJ\004\010\005\020dJ\005\010f\020\310\001J\006\010\311\001\020\350\007J\006\010\351\007\020\352\007J\006" +
+      "\010\353\007\020\320\017\"\034\n\rPushStreamKey\022\013\n\003key\030\001 \001(\t\"\034\n\r" +
+      "RTMPPushInput\022\013\n\003url\030\001 \001(\t\"\034\n\rRTMPPullIn" +
+      "put\022\013\n\003url\030\001 \001(\t\"\014\n\nManualLine\"\233\001\n\010AutoL" +
+      "ine\022>\n\006status\030\001 \001(\0162..yandex.cloud.video" +
+      ".v1.AutoLine.AutoLineStatus\"O\n\016AutoLineS" +
+      "tatus\022 \n\034AUTO_LINE_STATUS_UNSPECIFIED\020\000\022" +
+      "\017\n\013DEACTIVATED\020\001\022\n\n\006ACTIVE\020\002B\\\n\031yandex.c" +
+      "loud.api.video.v1Z?github.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/video/v1;vid" +
+      "eob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10038,7 +6464,7 @@ public final class StreamLineOuterClass {
     internal_static_yandex_cloud_video_v1_StreamLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_StreamLine_descriptor,
-        new java.lang.String[] { "Id", "ChannelId", "Title", "ThumbnailId", "RtmpPush", "SrtPush", "RtmpPull", "SrtPull", "TcpPull", "RtspPull", "ManualLine", "AutoLine", "CreatedAt", "UpdatedAt", "Labels", "InputType", "LineType", });
+        new java.lang.String[] { "Id", "ChannelId", "Title", "ThumbnailId", "RtmpPush", "RtmpPull", "ManualLine", "AutoLine", "CreatedAt", "UpdatedAt", "Labels", "InputType", "LineType", });
     internal_static_yandex_cloud_video_v1_StreamLine_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_StreamLine_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_StreamLine_LabelsEntry_fieldAccessorTable = new
@@ -10057,44 +6483,20 @@ public final class StreamLineOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_RTMPPushInput_descriptor,
         new java.lang.String[] { "Url", });
-    internal_static_yandex_cloud_video_v1_SRTPushInput_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_yandex_cloud_video_v1_SRTPushInput_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_video_v1_SRTPushInput_descriptor,
-        new java.lang.String[] { "Url", });
     internal_static_yandex_cloud_video_v1_RTMPPullInput_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_video_v1_RTMPPullInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_RTMPPullInput_descriptor,
         new java.lang.String[] { "Url", });
-    internal_static_yandex_cloud_video_v1_SRTPullInput_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_yandex_cloud_video_v1_SRTPullInput_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_video_v1_SRTPullInput_descriptor,
-        new java.lang.String[] { "Url", });
-    internal_static_yandex_cloud_video_v1_TCPPullInput_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_yandex_cloud_video_v1_TCPPullInput_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_video_v1_TCPPullInput_descriptor,
-        new java.lang.String[] { "Url", });
-    internal_static_yandex_cloud_video_v1_RTSPPullInput_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_yandex_cloud_video_v1_RTSPPullInput_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_video_v1_RTSPPullInput_descriptor,
-        new java.lang.String[] { "Url", });
     internal_static_yandex_cloud_video_v1_ManualLine_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_video_v1_ManualLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ManualLine_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_AutoLine_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_video_v1_AutoLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_AutoLine_descriptor,

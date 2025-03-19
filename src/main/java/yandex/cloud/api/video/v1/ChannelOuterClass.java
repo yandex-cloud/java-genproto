@@ -2390,6 +2390,33 @@ public final class ChannelOuterClass {
      * <code>.yandex.cloud.video.v1.AdvertisementSettings advertisement = 1;</code>
      */
     yandex.cloud.api.video.v1.ChannelOuterClass.AdvertisementSettingsOrBuilder getAdvertisementOrBuilder();
+
+    /**
+     * <pre>
+     * Referer verification settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+     * @return Whether the refererVerification field is set.
+     */
+    boolean hasRefererVerification();
+    /**
+     * <pre>
+     * Referer verification settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+     * @return The refererVerification.
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings getRefererVerification();
+    /**
+     * <pre>
+     * Referer verification settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+     */
+    yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettingsOrBuilder getRefererVerificationOrBuilder();
   }
   /**
    * <pre>
@@ -2449,6 +2476,19 @@ public final class ChannelOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(advertisement_);
                 advertisement_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.Builder subBuilder = null;
+              if (refererVerification_ != null) {
+                subBuilder = refererVerification_.toBuilder();
+              }
+              refererVerification_ = input.readMessage(yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(refererVerification_);
+                refererVerification_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2523,6 +2563,44 @@ public final class ChannelOuterClass {
       return getAdvertisement();
     }
 
+    public static final int REFERER_VERIFICATION_FIELD_NUMBER = 3;
+    private yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings refererVerification_;
+    /**
+     * <pre>
+     * Referer verification settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+     * @return Whether the refererVerification field is set.
+     */
+    @java.lang.Override
+    public boolean hasRefererVerification() {
+      return refererVerification_ != null;
+    }
+    /**
+     * <pre>
+     * Referer verification settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+     * @return The refererVerification.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings getRefererVerification() {
+      return refererVerification_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.getDefaultInstance() : refererVerification_;
+    }
+    /**
+     * <pre>
+     * Referer verification settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettingsOrBuilder getRefererVerificationOrBuilder() {
+      return getRefererVerification();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2540,6 +2618,9 @@ public final class ChannelOuterClass {
       if (advertisement_ != null) {
         output.writeMessage(1, getAdvertisement());
       }
+      if (refererVerification_ != null) {
+        output.writeMessage(3, getRefererVerification());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2552,6 +2633,10 @@ public final class ChannelOuterClass {
       if (advertisement_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAdvertisement());
+      }
+      if (refererVerification_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRefererVerification());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2573,6 +2658,11 @@ public final class ChannelOuterClass {
         if (!getAdvertisement()
             .equals(other.getAdvertisement())) return false;
       }
+      if (hasRefererVerification() != other.hasRefererVerification()) return false;
+      if (hasRefererVerification()) {
+        if (!getRefererVerification()
+            .equals(other.getRefererVerification())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2587,6 +2677,10 @@ public final class ChannelOuterClass {
       if (hasAdvertisement()) {
         hash = (37 * hash) + ADVERTISEMENT_FIELD_NUMBER;
         hash = (53 * hash) + getAdvertisement().hashCode();
+      }
+      if (hasRefererVerification()) {
+        hash = (37 * hash) + REFERER_VERIFICATION_FIELD_NUMBER;
+        hash = (53 * hash) + getRefererVerification().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2731,6 +2825,12 @@ public final class ChannelOuterClass {
           advertisement_ = null;
           advertisementBuilder_ = null;
         }
+        if (refererVerificationBuilder_ == null) {
+          refererVerification_ = null;
+        } else {
+          refererVerification_ = null;
+          refererVerificationBuilder_ = null;
+        }
         return this;
       }
 
@@ -2761,6 +2861,11 @@ public final class ChannelOuterClass {
           result.advertisement_ = advertisement_;
         } else {
           result.advertisement_ = advertisementBuilder_.build();
+        }
+        if (refererVerificationBuilder_ == null) {
+          result.refererVerification_ = refererVerification_;
+        } else {
+          result.refererVerification_ = refererVerificationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2812,6 +2917,9 @@ public final class ChannelOuterClass {
         if (other == yandex.cloud.api.video.v1.ChannelOuterClass.ChannelSettings.getDefaultInstance()) return this;
         if (other.hasAdvertisement()) {
           mergeAdvertisement(other.getAdvertisement());
+        }
+        if (other.hasRefererVerification()) {
+          mergeRefererVerification(other.getRefererVerification());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2995,6 +3103,161 @@ public final class ChannelOuterClass {
           advertisement_ = null;
         }
         return advertisementBuilder_;
+      }
+
+      private yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings refererVerification_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettingsOrBuilder> refererVerificationBuilder_;
+      /**
+       * <pre>
+       * Referer verification settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+       * @return Whether the refererVerification field is set.
+       */
+      public boolean hasRefererVerification() {
+        return refererVerificationBuilder_ != null || refererVerification_ != null;
+      }
+      /**
+       * <pre>
+       * Referer verification settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+       * @return The refererVerification.
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings getRefererVerification() {
+        if (refererVerificationBuilder_ == null) {
+          return refererVerification_ == null ? yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.getDefaultInstance() : refererVerification_;
+        } else {
+          return refererVerificationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Referer verification settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+       */
+      public Builder setRefererVerification(yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings value) {
+        if (refererVerificationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          refererVerification_ = value;
+          onChanged();
+        } else {
+          refererVerificationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Referer verification settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+       */
+      public Builder setRefererVerification(
+          yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.Builder builderForValue) {
+        if (refererVerificationBuilder_ == null) {
+          refererVerification_ = builderForValue.build();
+          onChanged();
+        } else {
+          refererVerificationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Referer verification settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+       */
+      public Builder mergeRefererVerification(yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings value) {
+        if (refererVerificationBuilder_ == null) {
+          if (refererVerification_ != null) {
+            refererVerification_ =
+              yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.newBuilder(refererVerification_).mergeFrom(value).buildPartial();
+          } else {
+            refererVerification_ = value;
+          }
+          onChanged();
+        } else {
+          refererVerificationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Referer verification settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+       */
+      public Builder clearRefererVerification() {
+        if (refererVerificationBuilder_ == null) {
+          refererVerification_ = null;
+          onChanged();
+        } else {
+          refererVerification_ = null;
+          refererVerificationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Referer verification settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.Builder getRefererVerificationBuilder() {
+        
+        onChanged();
+        return getRefererVerificationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Referer verification settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+       */
+      public yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettingsOrBuilder getRefererVerificationOrBuilder() {
+        if (refererVerificationBuilder_ != null) {
+          return refererVerificationBuilder_.getMessageOrBuilder();
+        } else {
+          return refererVerification_ == null ?
+              yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.getDefaultInstance() : refererVerification_;
+        }
+      }
+      /**
+       * <pre>
+       * Referer verification settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.RefererVerificationSettings referer_verification = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettingsOrBuilder> 
+          getRefererVerificationFieldBuilder() {
+        if (refererVerificationBuilder_ == null) {
+          refererVerificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.Builder, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettingsOrBuilder>(
+                  getRefererVerification(),
+                  getParentForChildren(),
+                  isClean());
+          refererVerification_ = null;
+        }
+        return refererVerificationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4474,6 +4737,811 @@ public final class ChannelOuterClass {
 
   }
 
+  public interface RefererVerificationSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.RefererVerificationSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Enable verification
+     * </pre>
+     *
+     * <code>bool enable = 1;</code>
+     * @return The enable.
+     */
+    boolean getEnable();
+
+    /**
+     * <pre>
+     * List of available domains
+     * </pre>
+     *
+     * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+     * @return A list containing the allowedDomains.
+     */
+    java.util.List<java.lang.String>
+        getAllowedDomainsList();
+    /**
+     * <pre>
+     * List of available domains
+     * </pre>
+     *
+     * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+     * @return The count of allowedDomains.
+     */
+    int getAllowedDomainsCount();
+    /**
+     * <pre>
+     * List of available domains
+     * </pre>
+     *
+     * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedDomains at the given index.
+     */
+    java.lang.String getAllowedDomains(int index);
+    /**
+     * <pre>
+     * List of available domains
+     * </pre>
+     *
+     * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedDomains at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAllowedDomainsBytes(int index);
+  }
+  /**
+   * <pre>
+   * Referer verification settings.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.video.v1.RefererVerificationSettings}
+   */
+  public static final class RefererVerificationSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.RefererVerificationSettings)
+      RefererVerificationSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RefererVerificationSettings.newBuilder() to construct.
+    private RefererVerificationSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RefererVerificationSettings() {
+      allowedDomains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RefererVerificationSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RefererVerificationSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enable_ = input.readBool();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                allowedDomains_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              allowedDomains_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          allowedDomains_ = allowedDomains_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_RefererVerificationSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_RefererVerificationSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.class, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.Builder.class);
+    }
+
+    public static final int ENABLE_FIELD_NUMBER = 1;
+    private boolean enable_;
+    /**
+     * <pre>
+     * Enable verification
+     * </pre>
+     *
+     * <code>bool enable = 1;</code>
+     * @return The enable.
+     */
+    @java.lang.Override
+    public boolean getEnable() {
+      return enable_;
+    }
+
+    public static final int ALLOWED_DOMAINS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList allowedDomains_;
+    /**
+     * <pre>
+     * List of available domains
+     * </pre>
+     *
+     * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+     * @return A list containing the allowedDomains.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAllowedDomainsList() {
+      return allowedDomains_;
+    }
+    /**
+     * <pre>
+     * List of available domains
+     * </pre>
+     *
+     * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+     * @return The count of allowedDomains.
+     */
+    public int getAllowedDomainsCount() {
+      return allowedDomains_.size();
+    }
+    /**
+     * <pre>
+     * List of available domains
+     * </pre>
+     *
+     * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+     * @param index The index of the element to return.
+     * @return The allowedDomains at the given index.
+     */
+    public java.lang.String getAllowedDomains(int index) {
+      return allowedDomains_.get(index);
+    }
+    /**
+     * <pre>
+     * List of available domains
+     * </pre>
+     *
+     * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the allowedDomains at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAllowedDomainsBytes(int index) {
+      return allowedDomains_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enable_ != false) {
+        output.writeBool(1, enable_);
+      }
+      for (int i = 0; i < allowedDomains_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, allowedDomains_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enable_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < allowedDomains_.size(); i++) {
+          dataSize += computeStringSizeNoTag(allowedDomains_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAllowedDomainsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings other = (yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings) obj;
+
+      if (getEnable()
+          != other.getEnable()) return false;
+      if (!getAllowedDomainsList()
+          .equals(other.getAllowedDomainsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnable());
+      if (getAllowedDomainsCount() > 0) {
+        hash = (37 * hash) + ALLOWED_DOMAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedDomainsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Referer verification settings.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.video.v1.RefererVerificationSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.RefererVerificationSettings)
+        yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_RefererVerificationSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_RefererVerificationSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.class, yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enable_ = false;
+
+        allowedDomains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.internal_static_yandex_cloud_video_v1_RefererVerificationSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings build() {
+        yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings buildPartial() {
+        yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings result = new yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings(this);
+        int from_bitField0_ = bitField0_;
+        result.enable_ = enable_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          allowedDomains_ = allowedDomains_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.allowedDomains_ = allowedDomains_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings) {
+          return mergeFrom((yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings other) {
+        if (other == yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings.getDefaultInstance()) return this;
+        if (other.getEnable() != false) {
+          setEnable(other.getEnable());
+        }
+        if (!other.allowedDomains_.isEmpty()) {
+          if (allowedDomains_.isEmpty()) {
+            allowedDomains_ = other.allowedDomains_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureAllowedDomainsIsMutable();
+            allowedDomains_.addAll(other.allowedDomains_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enable_ ;
+      /**
+       * <pre>
+       * Enable verification
+       * </pre>
+       *
+       * <code>bool enable = 1;</code>
+       * @return The enable.
+       */
+      @java.lang.Override
+      public boolean getEnable() {
+        return enable_;
+      }
+      /**
+       * <pre>
+       * Enable verification
+       * </pre>
+       *
+       * <code>bool enable = 1;</code>
+       * @param value The enable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnable(boolean value) {
+        
+        enable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable verification
+       * </pre>
+       *
+       * <code>bool enable = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnable() {
+        
+        enable_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList allowedDomains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureAllowedDomainsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          allowedDomains_ = new com.google.protobuf.LazyStringArrayList(allowedDomains_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of available domains
+       * </pre>
+       *
+       * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+       * @return A list containing the allowedDomains.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAllowedDomainsList() {
+        return allowedDomains_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of available domains
+       * </pre>
+       *
+       * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+       * @return The count of allowedDomains.
+       */
+      public int getAllowedDomainsCount() {
+        return allowedDomains_.size();
+      }
+      /**
+       * <pre>
+       * List of available domains
+       * </pre>
+       *
+       * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+       * @param index The index of the element to return.
+       * @return The allowedDomains at the given index.
+       */
+      public java.lang.String getAllowedDomains(int index) {
+        return allowedDomains_.get(index);
+      }
+      /**
+       * <pre>
+       * List of available domains
+       * </pre>
+       *
+       * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the allowedDomains at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAllowedDomainsBytes(int index) {
+        return allowedDomains_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of available domains
+       * </pre>
+       *
+       * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+       * @param index The index to set the value at.
+       * @param value The allowedDomains to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowedDomains(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAllowedDomainsIsMutable();
+        allowedDomains_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of available domains
+       * </pre>
+       *
+       * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+       * @param value The allowedDomains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedDomains(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAllowedDomainsIsMutable();
+        allowedDomains_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of available domains
+       * </pre>
+       *
+       * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+       * @param values The allowedDomains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAllowedDomains(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAllowedDomainsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, allowedDomains_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of available domains
+       * </pre>
+       *
+       * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowedDomains() {
+        allowedDomains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of available domains
+       * </pre>
+       *
+       * <code>repeated string allowed_domains = 2 [(.yandex.cloud.pattern) = "^(?:&#92;&#92;*&#92;&#92;.)?(?:[a-zA-Z0-9-]*&#92;&#92;.)+[a-zA-Z]{2,}$|^&#92;&#92;*&#92;&#92;.[a-zA-Z]{2,}$", (.yandex.cloud.size) = "&lt;=100", (.yandex.cloud.length) = "4-255"];</code>
+       * @param value The bytes of the allowedDomains to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllowedDomainsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureAllowedDomainsIsMutable();
+        allowedDomains_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.RefererVerificationSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.RefererVerificationSettings)
+    private static final yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings();
+    }
+
+    public static yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RefererVerificationSettings>
+        PARSER = new com.google.protobuf.AbstractParser<RefererVerificationSettings>() {
+      @java.lang.Override
+      public RefererVerificationSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RefererVerificationSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RefererVerificationSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RefererVerificationSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.ChannelOuterClass.RefererVerificationSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_Channel_descriptor;
   private static final 
@@ -4499,6 +5567,11 @@ public final class ChannelOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_RefererVerificationSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_RefererVerificationSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4510,30 +5583,38 @@ public final class ChannelOuterClass {
     java.lang.String[] descriptorData = {
       "\n#yandex/cloud/video/v1/channel.proto\022\025y" +
       "andex.cloud.video.v1\032\037google/protobuf/ti" +
-      "mestamp.proto\"\346\002\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n" +
-      "\017organization_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n" +
-      "\013description\030\004 \001(\t\022.\n\ncreated_at\030d \001(\0132\032" +
-      ".google.protobuf.Timestamp\022.\n\nupdated_at" +
-      "\030e \001(\0132\032.google.protobuf.Timestamp\022;\n\006la" +
-      "bels\030\310\001 \003(\0132*.yandex.cloud.video.v1.Chan" +
-      "nel.LabelsEntry\0229\n\010settings\030\311\001 \001(\0132&.yan" +
-      "dex.cloud.video.v1.ChannelSettings\032-\n\013La" +
-      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001J\004\010\005\020dJ\005\010f\020\310\001\"V\n\017ChannelSettings\022C\n\radv" +
-      "ertisement\030\001 \001(\0132,.yandex.cloud.video.v1" +
-      ".AdvertisementSettings\"\300\001\n\025Advertisement" +
+      "mestamp.proto\032\035yandex/cloud/validation.p" +
+      "roto\"\346\002\n\007Channel\022\n\n\002id\030\001 \001(\t\022\027\n\017organiza" +
+      "tion_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013descript" +
+      "ion\030\004 \001(\t\022.\n\ncreated_at\030d \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022.\n\nupdated_at\030e \001(\0132\032." +
+      "google.protobuf.Timestamp\022;\n\006labels\030\310\001 \003" +
+      "(\0132*.yandex.cloud.video.v1.Channel.Label" +
+      "sEntry\0229\n\010settings\030\311\001 \001(\0132&.yandex.cloud" +
+      ".video.v1.ChannelSettings\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\005\020dJ\005" +
+      "\010f\020\310\001\"\256\001\n\017ChannelSettings\022C\n\radvertiseme" +
+      "nt\030\001 \001(\0132,.yandex.cloud.video.v1.Adverti" +
+      "sementSettings\022P\n\024referer_verification\030\003" +
+      " \001(\01322.yandex.cloud.video.v1.RefererVeri" +
+      "ficationSettingsJ\004\010\002\020\003\"\300\001\n\025Advertisement" +
       "Settings\022R\n\ryandex_direct\030d \001(\01329.yandex" +
       ".cloud.video.v1.AdvertisementSettings.Ya" +
       "ndexDirectH\000\032A\n\014YandexDirect\022\016\n\006enable\030\001" +
       " \001(\010\022\017\n\007page_id\030\002 \001(\003\022\020\n\010category\030\003 \001(\003B" +
-      "\n\n\010providerJ\004\010\001\020dB\\\n\031yandex.cloud.api.vi" +
-      "deo.v1Z?github.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/video/v1;videob\006proto3"
+      "\n\n\010providerJ\004\010\001\020d\"\234\001\n\033RefererVerificatio" +
+      "nSettings\022\016\n\006enable\030\001 \001(\010\022m\n\017allowed_dom" +
+      "ains\030\002 \003(\tBT\362\3071>^(?:\\*\\.)?(?:[a-zA-Z0-9-" +
+      "]*\\.)+[a-zA-Z]{2,}$|^\\*\\.[a-zA-Z]{2,}$\212\310" +
+      "1\0054-255\202\3101\005<=100B\\\n\031yandex.cloud.api.vid" +
+      "eo.v1Z?github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_video_v1_Channel_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4552,7 +5633,7 @@ public final class ChannelOuterClass {
     internal_static_yandex_cloud_video_v1_ChannelSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_ChannelSettings_descriptor,
-        new java.lang.String[] { "Advertisement", });
+        new java.lang.String[] { "Advertisement", "RefererVerification", });
     internal_static_yandex_cloud_video_v1_AdvertisementSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_video_v1_AdvertisementSettings_fieldAccessorTable = new
@@ -4565,7 +5646,21 @@ public final class ChannelOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_AdvertisementSettings_YandexDirect_descriptor,
         new java.lang.String[] { "Enable", "PageId", "Category", });
+    internal_static_yandex_cloud_video_v1_RefererVerificationSettings_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_video_v1_RefererVerificationSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_RefererVerificationSettings_descriptor,
+        new java.lang.String[] { "Enable", "AllowedDomains", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.pattern);
+    registry.add(yandex.cloud.api.Validation.size);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -145,6 +145,64 @@ public final class TuningTaskOuterClass {
      */
     com.google.protobuf.ByteString
         getTargetModelUriBytes();
+
+    /**
+     * <code>string name = 12 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 12 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string description = 13;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 13;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; labels = 14;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>map&lt;string, string&gt; labels = 14;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <code>map&lt;string, string&gt; labels = 14;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <code>map&lt;string, string&gt; labels = 14;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; labels = 14;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.tuning.v1.TuningTask}
@@ -166,6 +224,8 @@ public final class TuningTaskOuterClass {
       createdBy_ = "";
       sourceModelUri_ = "";
       targetModelUri_ = "";
+      name_ = "";
+      description_ = "";
     }
 
     @java.lang.Override
@@ -188,6 +248,7 @@ public final class TuningTaskOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -279,6 +340,31 @@ public final class TuningTaskOuterClass {
               targetModelUri_ = s;
               break;
             }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -303,6 +389,18 @@ public final class TuningTaskOuterClass {
       return yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TuningTask_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 14:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -789,6 +887,163 @@ public final class TuningTaskOuterClass {
       }
     }
 
+    public static final int NAME_FIELD_NUMBER = 12;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 12 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 12 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 13;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>string description = 13;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 13;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 14;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TuningTask_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 14;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 14;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 14;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 14;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -833,6 +1088,18 @@ public final class TuningTaskOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetModelUri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, targetModelUri_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          14);
       unknownFields.writeTo(output);
     }
 
@@ -875,6 +1142,22 @@ public final class TuningTaskOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetModelUri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, targetModelUri_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(14, labels__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -919,6 +1202,12 @@ public final class TuningTaskOuterClass {
           .equals(other.getSourceModelUri())) return false;
       if (!getTargetModelUri()
           .equals(other.getTargetModelUri())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -956,6 +1245,14 @@ public final class TuningTaskOuterClass {
       hash = (53 * hash) + getSourceModelUri().hashCode();
       hash = (37 * hash) + TARGET_MODEL_URI_FIELD_NUMBER;
       hash = (53 * hash) + getTargetModelUri().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1063,6 +1360,28 @@ public final class TuningTaskOuterClass {
         return yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TuningTask_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 14:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 14:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -1121,6 +1440,11 @@ public final class TuningTaskOuterClass {
 
         targetModelUri_ = "";
 
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
         return this;
       }
 
@@ -1147,6 +1471,7 @@ public final class TuningTaskOuterClass {
       @java.lang.Override
       public yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask buildPartial() {
         yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask result = new yandex.cloud.api.ai.tuning.v1.TuningTaskOuterClass.TuningTask(this);
+        int from_bitField0_ = bitField0_;
         result.taskId_ = taskId_;
         result.operationId_ = operationId_;
         result.status_ = status_;
@@ -1169,6 +1494,10 @@ public final class TuningTaskOuterClass {
         }
         result.sourceModelUri_ = sourceModelUri_;
         result.targetModelUri_ = targetModelUri_;
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -1253,6 +1582,16 @@ public final class TuningTaskOuterClass {
           targetModelUri_ = other.targetModelUri_;
           onChanged();
         }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1281,6 +1620,7 @@ public final class TuningTaskOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object taskId_ = "";
       /**
@@ -2148,6 +2488,289 @@ public final class TuningTaskOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 12 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 12 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 12 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 12 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 12 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 13;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 13;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 13;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 13;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 14;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 14;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 14;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 14;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 14;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 14;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 14;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2206,6 +2829,11 @@ public final class TuningTaskOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_tuning_v1_TuningTask_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_TuningTask_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_TuningTask_LabelsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2217,35 +2845,53 @@ public final class TuningTaskOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/ai/tuning/v1/tuning_task." +
       "proto\022\031yandex.cloud.ai.tuning.v1\032\037google" +
-      "/protobuf/timestamp.proto\"\331\003\n\nTuningTask" +
-      "\022\017\n\007task_id\030\001 \001(\t\022\024\n\014operation_id\030\003 \001(\t\022" +
-      "<\n\006status\030\004 \001(\0162,.yandex.cloud.ai.tuning" +
-      ".v1.TuningTask.Status\022\021\n\tfolder_id\030\005 \001(\t" +
-      "\022\022\n\ncreated_by\030\006 \001(\t\022.\n\ncreated_at\030\007 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022.\n\nstarted_" +
-      "at\030\010 \001(\0132\032.google.protobuf.Timestamp\022/\n\013" +
-      "finished_at\030\t \001(\0132\032.google.protobuf.Time" +
-      "stamp\022\030\n\020source_model_uri\030\n \001(\t\022\030\n\020targe" +
-      "t_model_uri\030\013 \001(\t\"t\n\006Status\022\026\n\022STATUS_UN" +
-      "SPECIFIED\020\000\022\013\n\007CREATED\020\001\022\013\n\007PENDING\020\002\022\017\n" +
-      "\013IN_PROGRESS\020\003\022\r\n\tCOMPLETED\020\004\022\n\n\006FAILED\020" +
-      "\005\022\014\n\010CANCELED\020\006J\004\010\002\020\003Bc\n\035yandex.cloud.ap" +
-      "i.ai.tuning.v1ZBgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/ai/tuning/v1;fo" +
-      "mob\006proto3"
+      "/protobuf/timestamp.proto\032\035yandex/cloud/" +
+      "validation.proto\"\213\005\n\nTuningTask\022\017\n\007task_" +
+      "id\030\001 \001(\t\022\024\n\014operation_id\030\003 \001(\t\022<\n\006status" +
+      "\030\004 \001(\0162,.yandex.cloud.ai.tuning.v1.Tunin" +
+      "gTask.Status\022\021\n\tfolder_id\030\005 \001(\t\022\022\n\ncreat" +
+      "ed_by\030\006 \001(\t\022.\n\ncreated_at\030\007 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022.\n\nstarted_at\030\010 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022/\n\013finished_" +
+      "at\030\t \001(\0132\032.google.protobuf.Timestamp\022\030\n\020" +
+      "source_model_uri\030\n \001(\t\022\030\n\020target_model_u" +
+      "ri\030\013 \001(\t\022)\n\004name\030\014 \001(\tB\033\362\3071\027^[A-Za-z0-9 " +
+      "_-]{3,100}$\022\023\n\013description\030\r \001(\t\022A\n\006labe" +
+      "ls\030\016 \003(\01321.yandex.cloud.ai.tuning.v1.Tun" +
+      "ingTask.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"t\n\006Status\022\026\n\022" +
+      "STATUS_UNSPECIFIED\020\000\022\013\n\007CREATED\020\001\022\013\n\007PEN" +
+      "DING\020\002\022\017\n\013IN_PROGRESS\020\003\022\r\n\tCOMPLETED\020\004\022\n" +
+      "\n\006FAILED\020\005\022\014\n\010CANCELED\020\006J\004\010\002\020\003Bc\n\035yandex" +
+      ".cloud.api.ai.tuning.v1ZBgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/ai/tun" +
+      "ing/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_ai_tuning_v1_TuningTask_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_ai_tuning_v1_TuningTask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_TuningTask_descriptor,
-        new java.lang.String[] { "TaskId", "OperationId", "Status", "FolderId", "CreatedBy", "CreatedAt", "StartedAt", "FinishedAt", "SourceModelUri", "TargetModelUri", });
+        new java.lang.String[] { "TaskId", "OperationId", "Status", "FolderId", "CreatedBy", "CreatedAt", "StartedAt", "FinishedAt", "SourceModelUri", "TargetModelUri", "Name", "Description", "Labels", });
+    internal_static_yandex_cloud_ai_tuning_v1_TuningTask_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_ai_tuning_v1_TuningTask_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ai_tuning_v1_TuningTask_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_TuningTask_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.pattern);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

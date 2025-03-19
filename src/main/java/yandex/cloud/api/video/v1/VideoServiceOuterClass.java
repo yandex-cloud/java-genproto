@@ -644,7 +644,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of the results per page to return. Default value: 100.
+     * The maximum number of the results per page to return.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -657,7 +658,7 @@ public final class VideoServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -666,7 +667,7 @@ public final class VideoServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -675,8 +676,9 @@ public final class VideoServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -687,8 +689,9 @@ public final class VideoServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -702,10 +705,11 @@ public final class VideoServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title", "status", "visibility_status"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title", "status", "visibilityStatus"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -717,10 +721,11 @@ public final class VideoServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title", "status", "visibility_status"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title", "status", "visibilityStatus"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -890,7 +895,8 @@ public final class VideoServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of the results per page to return. Default value: 100.
+     * The maximum number of the results per page to return.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -908,7 +914,7 @@ public final class VideoServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -929,7 +935,7 @@ public final class VideoServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -952,8 +958,9 @@ public final class VideoServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -976,8 +983,9 @@ public final class VideoServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "title", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1005,10 +1013,11 @@ public final class VideoServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title", "status", "visibility_status"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title", "status", "visibilityStatus"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1032,10 +1041,11 @@ public final class VideoServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title", "status", "visibility_status"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title", "status", "visibilityStatus"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1527,7 +1537,8 @@ public final class VideoServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of the results per page to return. Default value: 100.
+       * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1539,7 +1550,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return. Default value: 100.
+       * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1554,7 +1566,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return. Default value: 100.
+       * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1573,7 +1586,7 @@ public final class VideoServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1593,7 +1606,7 @@ public final class VideoServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1614,7 +1627,7 @@ public final class VideoServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1633,7 +1646,7 @@ public final class VideoServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1647,7 +1660,7 @@ public final class VideoServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -1667,8 +1680,9 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1690,8 +1704,9 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1714,8 +1729,9 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1736,8 +1752,9 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1753,8 +1770,9 @@ public final class VideoServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "title", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1779,10 +1797,11 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title", "status", "visibility_status"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title", "status", "visibilityStatus"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1805,10 +1824,11 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title", "status", "visibility_status"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title", "status", "visibilityStatus"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1832,10 +1852,11 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title", "status", "visibility_status"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title", "status", "visibilityStatus"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1857,10 +1878,11 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title", "status", "visibility_status"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title", "status", "visibilityStatus"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1877,10 +1899,11 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title", "status", "visibility_status"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title", "status", "visibilityStatus"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -4757,7 +4780,7 @@ public final class VideoServiceOuterClass {
      * Video title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -4766,7 +4789,7 @@ public final class VideoServiceOuterClass {
      * Video title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -4833,9 +4856,39 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
+     * Automatically publish video after transcoding.
+     * Switches visibility status to PUBLISHED.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+     * @return Whether the autoPublish field is set.
+     */
+    boolean hasAutoPublish();
+    /**
+     * <pre>
+     * Automatically publish video after transcoding.
+     * Switches visibility status to PUBLISHED.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+     * @return The autoPublish.
+     */
+    com.google.protobuf.BoolValue getAutoPublish();
+    /**
+     * <pre>
+     * Automatically publish video after transcoding.
+     * Switches visibility status to PUBLISHED.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAutoPublishOrBuilder();
+
+    /**
+     * <pre>
      * Enable advertisement for this video.
      * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -4846,7 +4899,7 @@ public final class VideoServiceOuterClass {
      * <pre>
      * Enable advertisement for this video.
      * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -4857,7 +4910,7 @@ public final class VideoServiceOuterClass {
      * <pre>
      * Enable advertisement for this video.
      * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -4869,7 +4922,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -4877,7 +4930,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -4892,7 +4945,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -4901,7 +4954,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -4912,7 +4965,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -4947,7 +5000,8 @@ public final class VideoServiceOuterClass {
 
     /**
      * <pre>
-     * Video is available to everyone.
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -4956,7 +5010,8 @@ public final class VideoServiceOuterClass {
     boolean hasPublicAccess();
     /**
      * <pre>
-     * Video is available to everyone.
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -4965,39 +5020,13 @@ public final class VideoServiceOuterClass {
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams getPublicAccess();
     /**
      * <pre>
-     * Video is available to everyone.
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParamsOrBuilder getPublicAccessOrBuilder();
-
-    /**
-     * <pre>
-     * Checking access rights using the authorization system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     * @return Whether the authSystemAccess field is set.
-     */
-    boolean hasAuthSystemAccess();
-    /**
-     * <pre>
-     * Checking access rights using the authorization system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     * @return The authSystemAccess.
-     */
-    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getAuthSystemAccess();
-    /**
-     * <pre>
-     * Checking access rights using the authorization system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     */
-    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder();
 
     /**
      * <pre>
@@ -5111,6 +5140,19 @@ public final class VideoServiceOuterClass {
               autoTranscode_ = rawValue;
               break;
             }
+            case 58: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (autoPublish_ != null) {
+                subBuilder = autoPublish_.toBuilder();
+              }
+              autoPublish_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoPublish_);
+                autoPublish_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             case 66: {
               com.google.protobuf.BoolValue.Builder subBuilder = null;
               if (enableAd_ != null) {
@@ -5163,20 +5205,6 @@ public final class VideoServiceOuterClass {
                 accessRights_ = subBuilder.buildPartial();
               }
               accessRightsCase_ = 2000;
-              break;
-            }
-            case 16018: {
-              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder subBuilder = null;
-              if (accessRightsCase_ == 2002) {
-                subBuilder = ((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_).toBuilder();
-              }
-              accessRights_ =
-                  input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_);
-                accessRights_ = subBuilder.buildPartial();
-              }
-              accessRightsCase_ = 2002;
               break;
             }
             case 16026: {
@@ -5282,7 +5310,6 @@ public final class VideoServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PUBLIC_ACCESS(2000),
-      AUTH_SYSTEM_ACCESS(2002),
       SIGN_URL_ACCESS(2003),
       ACCESSRIGHTS_NOT_SET(0);
       private final int value;
@@ -5302,7 +5329,6 @@ public final class VideoServiceOuterClass {
       public static AccessRightsCase forNumber(int value) {
         switch (value) {
           case 2000: return PUBLIC_ACCESS;
-          case 2002: return AUTH_SYSTEM_ACCESS;
           case 2003: return SIGN_URL_ACCESS;
           case 0: return ACCESSRIGHTS_NOT_SET;
           default: return null;
@@ -5372,7 +5398,7 @@ public final class VideoServiceOuterClass {
      * Video title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -5393,7 +5419,7 @@ public final class VideoServiceOuterClass {
      * Video title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -5530,13 +5556,54 @@ public final class VideoServiceOuterClass {
       return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.UNRECOGNIZED : result;
     }
 
+    public static final int AUTO_PUBLISH_FIELD_NUMBER = 7;
+    private com.google.protobuf.BoolValue autoPublish_;
+    /**
+     * <pre>
+     * Automatically publish video after transcoding.
+     * Switches visibility status to PUBLISHED.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+     * @return Whether the autoPublish field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoPublish() {
+      return autoPublish_ != null;
+    }
+    /**
+     * <pre>
+     * Automatically publish video after transcoding.
+     * Switches visibility status to PUBLISHED.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+     * @return The autoPublish.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAutoPublish() {
+      return autoPublish_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoPublish_;
+    }
+    /**
+     * <pre>
+     * Automatically publish video after transcoding.
+     * Switches visibility status to PUBLISHED.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAutoPublishOrBuilder() {
+      return getAutoPublish();
+    }
+
     public static final int ENABLE_AD_FIELD_NUMBER = 8;
     private com.google.protobuf.BoolValue enableAd_;
     /**
      * <pre>
      * Enable advertisement for this video.
      * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -5550,7 +5617,7 @@ public final class VideoServiceOuterClass {
      * <pre>
      * Enable advertisement for this video.
      * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -5564,7 +5631,7 @@ public final class VideoServiceOuterClass {
      * <pre>
      * Enable advertisement for this video.
      * Default: true.
-     * Use this to disable advertisement for a specific video.
+     * Set explicitly to false to disable advertisements for a specific video.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -5605,7 +5672,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -5627,7 +5694,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5639,7 +5706,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5656,7 +5723,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -5717,7 +5784,8 @@ public final class VideoServiceOuterClass {
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 2000;
     /**
      * <pre>
-     * Video is available to everyone.
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -5729,7 +5797,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video is available to everyone.
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -5744,7 +5813,8 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * Video is available to everyone.
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
      * </pre>
      *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -5755,49 +5825,6 @@ public final class VideoServiceOuterClass {
          return (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams) accessRights_;
       }
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.getDefaultInstance();
-    }
-
-    public static final int AUTH_SYSTEM_ACCESS_FIELD_NUMBER = 2002;
-    /**
-     * <pre>
-     * Checking access rights using the authorization system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     * @return Whether the authSystemAccess field is set.
-     */
-    @java.lang.Override
-    public boolean hasAuthSystemAccess() {
-      return accessRightsCase_ == 2002;
-    }
-    /**
-     * <pre>
-     * Checking access rights using the authorization system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     * @return The authSystemAccess.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getAuthSystemAccess() {
-      if (accessRightsCase_ == 2002) {
-         return (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_;
-      }
-      return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-    }
-    /**
-     * <pre>
-     * Checking access rights using the authorization system.
-     * </pre>
-     *
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder() {
-      if (accessRightsCase_ == 2002) {
-         return (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_;
-      }
-      return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
     }
 
     public static final int SIGN_URL_ACCESS_FIELD_NUMBER = 2003;
@@ -5872,6 +5899,9 @@ public final class VideoServiceOuterClass {
       if (autoTranscode_ != yandex.cloud.api.video.v1.VideoOuterClass.AutoTranscode.AUTO_TRANSCODE_UNSPECIFIED.getNumber()) {
         output.writeEnum(5, autoTranscode_);
       }
+      if (autoPublish_ != null) {
+        output.writeMessage(7, getAutoPublish());
+      }
       if (enableAd_ != null) {
         output.writeMessage(8, getEnableAd());
       }
@@ -5886,9 +5916,6 @@ public final class VideoServiceOuterClass {
       }
       if (accessRightsCase_ == 2000) {
         output.writeMessage(2000, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams) accessRights_);
-      }
-      if (accessRightsCase_ == 2002) {
-        output.writeMessage(2002, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_);
       }
       if (accessRightsCase_ == 2003) {
         output.writeMessage(2003, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams) accessRights_);
@@ -5918,6 +5945,10 @@ public final class VideoServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, autoTranscode_);
       }
+      if (autoPublish_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getAutoPublish());
+      }
       if (enableAd_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getEnableAd());
@@ -5939,10 +5970,6 @@ public final class VideoServiceOuterClass {
       if (accessRightsCase_ == 2000) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2000, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams) accessRights_);
-      }
-      if (accessRightsCase_ == 2002) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2002, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_);
       }
       if (accessRightsCase_ == 2003) {
         size += com.google.protobuf.CodedOutputStream
@@ -5972,6 +5999,11 @@ public final class VideoServiceOuterClass {
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
       if (autoTranscode_ != other.autoTranscode_) return false;
+      if (hasAutoPublish() != other.hasAutoPublish()) return false;
+      if (hasAutoPublish()) {
+        if (!getAutoPublish()
+            .equals(other.getAutoPublish())) return false;
+      }
       if (hasEnableAd() != other.hasEnableAd()) return false;
       if (hasEnableAd()) {
         if (!getEnableAd()
@@ -5993,10 +6025,6 @@ public final class VideoServiceOuterClass {
         case 2000:
           if (!getPublicAccess()
               .equals(other.getPublicAccess())) return false;
-          break;
-        case 2002:
-          if (!getAuthSystemAccess()
-              .equals(other.getAuthSystemAccess())) return false;
           break;
         case 2003:
           if (!getSignUrlAccess()
@@ -6026,6 +6054,10 @@ public final class VideoServiceOuterClass {
       hash = (53 * hash) + getThumbnailId().hashCode();
       hash = (37 * hash) + AUTO_TRANSCODE_FIELD_NUMBER;
       hash = (53 * hash) + autoTranscode_;
+      if (hasAutoPublish()) {
+        hash = (37 * hash) + AUTO_PUBLISH_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoPublish().hashCode();
+      }
       if (hasEnableAd()) {
         hash = (37 * hash) + ENABLE_AD_FIELD_NUMBER;
         hash = (53 * hash) + getEnableAd().hashCode();
@@ -6046,10 +6078,6 @@ public final class VideoServiceOuterClass {
         case 2000:
           hash = (37 * hash) + PUBLIC_ACCESS_FIELD_NUMBER;
           hash = (53 * hash) + getPublicAccess().hashCode();
-          break;
-        case 2002:
-          hash = (37 * hash) + AUTH_SYSTEM_ACCESS_FIELD_NUMBER;
-          hash = (53 * hash) + getAuthSystemAccess().hashCode();
           break;
         case 2003:
           hash = (37 * hash) + SIGN_URL_ACCESS_FIELD_NUMBER;
@@ -6223,6 +6251,12 @@ public final class VideoServiceOuterClass {
 
         autoTranscode_ = 0;
 
+        if (autoPublishBuilder_ == null) {
+          autoPublish_ = null;
+        } else {
+          autoPublish_ = null;
+          autoPublishBuilder_ = null;
+        }
         if (enableAdBuilder_ == null) {
           enableAd_ = null;
         } else {
@@ -6266,6 +6300,11 @@ public final class VideoServiceOuterClass {
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
         result.autoTranscode_ = autoTranscode_;
+        if (autoPublishBuilder_ == null) {
+          result.autoPublish_ = autoPublish_;
+        } else {
+          result.autoPublish_ = autoPublishBuilder_.build();
+        }
         if (enableAdBuilder_ == null) {
           result.enableAd_ = enableAd_;
         } else {
@@ -6285,13 +6324,6 @@ public final class VideoServiceOuterClass {
             result.accessRights_ = accessRights_;
           } else {
             result.accessRights_ = publicAccessBuilder_.build();
-          }
-        }
-        if (accessRightsCase_ == 2002) {
-          if (authSystemAccessBuilder_ == null) {
-            result.accessRights_ = accessRights_;
-          } else {
-            result.accessRights_ = authSystemAccessBuilder_.build();
           }
         }
         if (accessRightsCase_ == 2003) {
@@ -6370,6 +6402,9 @@ public final class VideoServiceOuterClass {
         if (other.autoTranscode_ != 0) {
           setAutoTranscodeValue(other.getAutoTranscodeValue());
         }
+        if (other.hasAutoPublish()) {
+          mergeAutoPublish(other.getAutoPublish());
+        }
         if (other.hasEnableAd()) {
           mergeEnableAd(other.getEnableAd());
         }
@@ -6387,10 +6422,6 @@ public final class VideoServiceOuterClass {
         switch (other.getAccessRightsCase()) {
           case PUBLIC_ACCESS: {
             mergePublicAccess(other.getPublicAccess());
-            break;
-          }
-          case AUTH_SYSTEM_ACCESS: {
-            mergeAuthSystemAccess(other.getAuthSystemAccess());
             break;
           }
           case SIGN_URL_ACCESS: {
@@ -6563,7 +6594,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -6583,7 +6614,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -6604,7 +6635,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -6623,7 +6654,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -6637,7 +6668,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -6919,6 +6950,170 @@ public final class VideoServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.BoolValue autoPublish_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autoPublishBuilder_;
+      /**
+       * <pre>
+       * Automatically publish video after transcoding.
+       * Switches visibility status to PUBLISHED.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+       * @return Whether the autoPublish field is set.
+       */
+      public boolean hasAutoPublish() {
+        return autoPublishBuilder_ != null || autoPublish_ != null;
+      }
+      /**
+       * <pre>
+       * Automatically publish video after transcoding.
+       * Switches visibility status to PUBLISHED.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+       * @return The autoPublish.
+       */
+      public com.google.protobuf.BoolValue getAutoPublish() {
+        if (autoPublishBuilder_ == null) {
+          return autoPublish_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoPublish_;
+        } else {
+          return autoPublishBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Automatically publish video after transcoding.
+       * Switches visibility status to PUBLISHED.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+       */
+      public Builder setAutoPublish(com.google.protobuf.BoolValue value) {
+        if (autoPublishBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoPublish_ = value;
+          onChanged();
+        } else {
+          autoPublishBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatically publish video after transcoding.
+       * Switches visibility status to PUBLISHED.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+       */
+      public Builder setAutoPublish(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (autoPublishBuilder_ == null) {
+          autoPublish_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoPublishBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatically publish video after transcoding.
+       * Switches visibility status to PUBLISHED.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+       */
+      public Builder mergeAutoPublish(com.google.protobuf.BoolValue value) {
+        if (autoPublishBuilder_ == null) {
+          if (autoPublish_ != null) {
+            autoPublish_ =
+              com.google.protobuf.BoolValue.newBuilder(autoPublish_).mergeFrom(value).buildPartial();
+          } else {
+            autoPublish_ = value;
+          }
+          onChanged();
+        } else {
+          autoPublishBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatically publish video after transcoding.
+       * Switches visibility status to PUBLISHED.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+       */
+      public Builder clearAutoPublish() {
+        if (autoPublishBuilder_ == null) {
+          autoPublish_ = null;
+          onChanged();
+        } else {
+          autoPublish_ = null;
+          autoPublishBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Automatically publish video after transcoding.
+       * Switches visibility status to PUBLISHED.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAutoPublishBuilder() {
+        
+        onChanged();
+        return getAutoPublishFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Automatically publish video after transcoding.
+       * Switches visibility status to PUBLISHED.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAutoPublishOrBuilder() {
+        if (autoPublishBuilder_ != null) {
+          return autoPublishBuilder_.getMessageOrBuilder();
+        } else {
+          return autoPublish_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : autoPublish_;
+        }
+      }
+      /**
+       * <pre>
+       * Automatically publish video after transcoding.
+       * Switches visibility status to PUBLISHED.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_publish = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAutoPublishFieldBuilder() {
+        if (autoPublishBuilder_ == null) {
+          autoPublishBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAutoPublish(),
+                  getParentForChildren(),
+                  isClean());
+          autoPublish_ = null;
+        }
+        return autoPublishBuilder_;
+      }
+
       private com.google.protobuf.BoolValue enableAd_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableAdBuilder_;
@@ -6926,7 +7121,7 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Enable advertisement for this video.
        * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -6939,7 +7134,7 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Enable advertisement for this video.
        * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -6956,7 +7151,7 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Enable advertisement for this video.
        * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -6978,7 +7173,7 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Enable advertisement for this video.
        * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -6998,7 +7193,7 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Enable advertisement for this video.
        * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7022,7 +7217,7 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Enable advertisement for this video.
        * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7042,7 +7237,7 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Enable advertisement for this video.
        * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7056,7 +7251,7 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Enable advertisement for this video.
        * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7073,7 +7268,7 @@ public final class VideoServiceOuterClass {
        * <pre>
        * Enable advertisement for this video.
        * Default: true.
-       * Use this to disable advertisement for a specific video.
+       * Set explicitly to false to disable advertisements for a specific video.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue enable_ad = 8;</code>
@@ -7123,7 +7318,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -7145,7 +7340,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -7157,7 +7352,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -7174,7 +7369,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -7199,7 +7394,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -7222,7 +7417,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -7241,7 +7436,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -7432,7 +7627,8 @@ public final class VideoServiceOuterClass {
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParamsOrBuilder> publicAccessBuilder_;
       /**
        * <pre>
-       * Video is available to everyone.
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7444,7 +7640,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video is available to everyone.
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7466,7 +7663,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video is available to everyone.
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7486,7 +7684,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video is available to everyone.
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7504,7 +7703,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video is available to everyone.
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7530,7 +7730,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video is available to everyone.
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7553,7 +7754,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video is available to everyone.
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7563,7 +7765,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video is available to everyone.
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7581,7 +7784,8 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * Video is available to everyone.
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
        * </pre>
        *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
@@ -7603,183 +7807,6 @@ public final class VideoServiceOuterClass {
         accessRightsCase_ = 2000;
         onChanged();;
         return publicAccessBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder> authSystemAccessBuilder_;
-      /**
-       * <pre>
-       * Checking access rights using the authorization system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       * @return Whether the authSystemAccess field is set.
-       */
-      @java.lang.Override
-      public boolean hasAuthSystemAccess() {
-        return accessRightsCase_ == 2002;
-      }
-      /**
-       * <pre>
-       * Checking access rights using the authorization system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       * @return The authSystemAccess.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getAuthSystemAccess() {
-        if (authSystemAccessBuilder_ == null) {
-          if (accessRightsCase_ == 2002) {
-            return (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_;
-          }
-          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-        } else {
-          if (accessRightsCase_ == 2002) {
-            return authSystemAccessBuilder_.getMessage();
-          }
-          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Checking access rights using the authorization system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public Builder setAuthSystemAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams value) {
-        if (authSystemAccessBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          accessRights_ = value;
-          onChanged();
-        } else {
-          authSystemAccessBuilder_.setMessage(value);
-        }
-        accessRightsCase_ = 2002;
-        return this;
-      }
-      /**
-       * <pre>
-       * Checking access rights using the authorization system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public Builder setAuthSystemAccess(
-          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder builderForValue) {
-        if (authSystemAccessBuilder_ == null) {
-          accessRights_ = builderForValue.build();
-          onChanged();
-        } else {
-          authSystemAccessBuilder_.setMessage(builderForValue.build());
-        }
-        accessRightsCase_ = 2002;
-        return this;
-      }
-      /**
-       * <pre>
-       * Checking access rights using the authorization system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public Builder mergeAuthSystemAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams value) {
-        if (authSystemAccessBuilder_ == null) {
-          if (accessRightsCase_ == 2002 &&
-              accessRights_ != yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance()) {
-            accessRights_ = yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.newBuilder((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            accessRights_ = value;
-          }
-          onChanged();
-        } else {
-          if (accessRightsCase_ == 2002) {
-            authSystemAccessBuilder_.mergeFrom(value);
-          }
-          authSystemAccessBuilder_.setMessage(value);
-        }
-        accessRightsCase_ = 2002;
-        return this;
-      }
-      /**
-       * <pre>
-       * Checking access rights using the authorization system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public Builder clearAuthSystemAccess() {
-        if (authSystemAccessBuilder_ == null) {
-          if (accessRightsCase_ == 2002) {
-            accessRightsCase_ = 0;
-            accessRights_ = null;
-            onChanged();
-          }
-        } else {
-          if (accessRightsCase_ == 2002) {
-            accessRightsCase_ = 0;
-            accessRights_ = null;
-          }
-          authSystemAccessBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Checking access rights using the authorization system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder getAuthSystemAccessBuilder() {
-        return getAuthSystemAccessFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Checking access rights using the authorization system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder() {
-        if ((accessRightsCase_ == 2002) && (authSystemAccessBuilder_ != null)) {
-          return authSystemAccessBuilder_.getMessageOrBuilder();
-        } else {
-          if (accessRightsCase_ == 2002) {
-            return (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_;
-          }
-          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * Checking access rights using the authorization system.
-       * </pre>
-       *
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder> 
-          getAuthSystemAccessFieldBuilder() {
-        if (authSystemAccessBuilder_ == null) {
-          if (!(accessRightsCase_ == 2002)) {
-            accessRights_ = yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-          }
-          authSystemAccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder>(
-                  (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_,
-                  getParentForChildren(),
-                  isClean());
-          accessRights_ = null;
-        }
-        accessRightsCase_ = 2002;
-        onChanged();;
-        return authSystemAccessBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9124,424 +9151,6 @@ public final class VideoServiceOuterClass {
 
   }
 
-  public interface VideoAuthSystemAccessParamsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoAuthSystemAccessParams)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.video.v1.VideoAuthSystemAccessParams}
-   */
-  public static final class VideoAuthSystemAccessParams extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoAuthSystemAccessParams)
-      VideoAuthSystemAccessParamsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use VideoAuthSystemAccessParams.newBuilder() to construct.
-    private VideoAuthSystemAccessParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private VideoAuthSystemAccessParams() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new VideoAuthSystemAccessParams();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private VideoAuthSystemAccessParams(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) obj;
-
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.video.v1.VideoAuthSystemAccessParams}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoAuthSystemAccessParams)
-        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getDefaultInstanceForType() {
-        return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams build() {
-        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams buildPartial() {
-        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) {
-          return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams other) {
-        if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoAuthSystemAccessParams)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoAuthSystemAccessParams)
-    private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams();
-    }
-
-    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<VideoAuthSystemAccessParams>
-        PARSER = new com.google.protobuf.AbstractParser<VideoAuthSystemAccessParams>() {
-      @java.lang.Override
-      public VideoAuthSystemAccessParams parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new VideoAuthSystemAccessParams(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<VideoAuthSystemAccessParams> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<VideoAuthSystemAccessParams> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface VideoSignURLAccessParamsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoSignURLAccessParams)
       com.google.protobuf.MessageOrBuilder {
@@ -10593,7 +10202,7 @@ public final class VideoServiceOuterClass {
      * Field mask that specifies which fields of the video are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the fieldMask field is set.
      */
     boolean hasFieldMask();
@@ -10602,7 +10211,7 @@ public final class VideoServiceOuterClass {
      * Field mask that specifies which fields of the video are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The fieldMask.
      */
     com.google.protobuf.FieldMask getFieldMask();
@@ -10611,7 +10220,7 @@ public final class VideoServiceOuterClass {
      * Field mask that specifies which fields of the video are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 
@@ -10620,7 +10229,7 @@ public final class VideoServiceOuterClass {
      * Video title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -10629,7 +10238,7 @@ public final class VideoServiceOuterClass {
      * Video title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -10732,7 +10341,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
@@ -10740,7 +10349,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -10755,7 +10364,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
@@ -10764,7 +10373,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
@@ -10775,53 +10384,65 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
 
     /**
+     * <pre>
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      * @return Whether the publicAccess field is set.
      */
     boolean hasPublicAccess();
     /**
+     * <pre>
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      * @return The publicAccess.
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams getPublicAccess();
     /**
+     * <pre>
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParamsOrBuilder getPublicAccessOrBuilder();
 
     /**
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     * @return Whether the authSystemAccess field is set.
-     */
-    boolean hasAuthSystemAccess();
-    /**
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     * @return The authSystemAccess.
-     */
-    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getAuthSystemAccess();
-    /**
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     */
-    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder();
-
-    /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
      * @return Whether the signUrlAccess field is set.
      */
     boolean hasSignUrlAccess();
     /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
      * @return The signUrlAccess.
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams getSignUrlAccess();
     /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
      */
     yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParamsOrBuilder getSignUrlAccessOrBuilder();
@@ -10962,20 +10583,6 @@ public final class VideoServiceOuterClass {
               accessRightsCase_ = 2000;
               break;
             }
-            case 16018: {
-              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder subBuilder = null;
-              if (accessRightsCase_ == 2002) {
-                subBuilder = ((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_).toBuilder();
-              }
-              accessRights_ =
-                  input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_);
-                accessRights_ = subBuilder.buildPartial();
-              }
-              accessRightsCase_ = 2002;
-              break;
-            }
             case 16026: {
               yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams.Builder subBuilder = null;
               if (accessRightsCase_ == 2003) {
@@ -11040,7 +10647,6 @@ public final class VideoServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PUBLIC_ACCESS(2000),
-      AUTH_SYSTEM_ACCESS(2002),
       SIGN_URL_ACCESS(2003),
       ACCESSRIGHTS_NOT_SET(0);
       private final int value;
@@ -11060,7 +10666,6 @@ public final class VideoServiceOuterClass {
       public static AccessRightsCase forNumber(int value) {
         switch (value) {
           case 2000: return PUBLIC_ACCESS;
-          case 2002: return AUTH_SYSTEM_ACCESS;
           case 2003: return SIGN_URL_ACCESS;
           case 0: return ACCESSRIGHTS_NOT_SET;
           default: return null;
@@ -11130,7 +10735,7 @@ public final class VideoServiceOuterClass {
      * Field mask that specifies which fields of the video are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the fieldMask field is set.
      */
     @java.lang.Override
@@ -11142,7 +10747,7 @@ public final class VideoServiceOuterClass {
      * Field mask that specifies which fields of the video are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The fieldMask.
      */
     @java.lang.Override
@@ -11154,7 +10759,7 @@ public final class VideoServiceOuterClass {
      * Field mask that specifies which fields of the video are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -11168,7 +10773,7 @@ public final class VideoServiceOuterClass {
      * Video title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -11189,7 +10794,7 @@ public final class VideoServiceOuterClass {
      * Video title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -11401,7 +11006,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     @java.lang.Override
@@ -11423,7 +11028,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -11435,7 +11040,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -11452,7 +11057,7 @@ public final class VideoServiceOuterClass {
      * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     @java.lang.Override
 
@@ -11469,6 +11074,11 @@ public final class VideoServiceOuterClass {
 
     public static final int PUBLIC_ACCESS_FIELD_NUMBER = 2000;
     /**
+     * <pre>
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      * @return Whether the publicAccess field is set.
      */
@@ -11477,6 +11087,11 @@ public final class VideoServiceOuterClass {
       return accessRightsCase_ == 2000;
     }
     /**
+     * <pre>
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      * @return The publicAccess.
      */
@@ -11488,6 +11103,11 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Publicly accessible video available for viewing by anyone with the direct link.
+     * No additional authorization or access control is applied.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
      */
     @java.lang.Override
@@ -11498,39 +11118,12 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.getDefaultInstance();
     }
 
-    public static final int AUTH_SYSTEM_ACCESS_FIELD_NUMBER = 2002;
-    /**
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     * @return Whether the authSystemAccess field is set.
-     */
-    @java.lang.Override
-    public boolean hasAuthSystemAccess() {
-      return accessRightsCase_ == 2002;
-    }
-    /**
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     * @return The authSystemAccess.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getAuthSystemAccess() {
-      if (accessRightsCase_ == 2002) {
-         return (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_;
-      }
-      return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-    }
-    /**
-     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder() {
-      if (accessRightsCase_ == 2002) {
-         return (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_;
-      }
-      return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-    }
-
     public static final int SIGN_URL_ACCESS_FIELD_NUMBER = 2003;
     /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
      * @return Whether the signUrlAccess field is set.
      */
@@ -11539,6 +11132,10 @@ public final class VideoServiceOuterClass {
       return accessRightsCase_ == 2003;
     }
     /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
      * @return The signUrlAccess.
      */
@@ -11550,6 +11147,10 @@ public final class VideoServiceOuterClass {
       return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Checking access rights using url's signature.
+     * </pre>
+     *
      * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
      */
     @java.lang.Override
@@ -11604,9 +11205,6 @@ public final class VideoServiceOuterClass {
       if (accessRightsCase_ == 2000) {
         output.writeMessage(2000, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams) accessRights_);
       }
-      if (accessRightsCase_ == 2002) {
-        output.writeMessage(2002, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_);
-      }
       if (accessRightsCase_ == 2003) {
         output.writeMessage(2003, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams) accessRights_);
       }
@@ -11657,10 +11255,6 @@ public final class VideoServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2000, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams) accessRights_);
       }
-      if (accessRightsCase_ == 2002) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2002, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_);
-      }
       if (accessRightsCase_ == 2003) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2003, (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams) accessRights_);
@@ -11707,10 +11301,6 @@ public final class VideoServiceOuterClass {
           if (!getPublicAccess()
               .equals(other.getPublicAccess())) return false;
           break;
-        case 2002:
-          if (!getAuthSystemAccess()
-              .equals(other.getAuthSystemAccess())) return false;
-          break;
         case 2003:
           if (!getSignUrlAccess()
               .equals(other.getSignUrlAccess())) return false;
@@ -11755,10 +11345,6 @@ public final class VideoServiceOuterClass {
         case 2000:
           hash = (37 * hash) + PUBLIC_ACCESS_FIELD_NUMBER;
           hash = (53 * hash) + getPublicAccess().hashCode();
-          break;
-        case 2002:
-          hash = (37 * hash) + AUTH_SYSTEM_ACCESS_FIELD_NUMBER;
-          hash = (53 * hash) + getAuthSystemAccess().hashCode();
           break;
         case 2003:
           hash = (37 * hash) + SIGN_URL_ACCESS_FIELD_NUMBER;
@@ -11998,13 +11584,6 @@ public final class VideoServiceOuterClass {
             result.accessRights_ = publicAccessBuilder_.build();
           }
         }
-        if (accessRightsCase_ == 2002) {
-          if (authSystemAccessBuilder_ == null) {
-            result.accessRights_ = accessRights_;
-          } else {
-            result.accessRights_ = authSystemAccessBuilder_.build();
-          }
-        }
         if (accessRightsCase_ == 2003) {
           if (signUrlAccessBuilder_ == null) {
             result.accessRights_ = accessRights_;
@@ -12091,10 +11670,6 @@ public final class VideoServiceOuterClass {
         switch (other.getAccessRightsCase()) {
           case PUBLIC_ACCESS: {
             mergePublicAccess(other.getPublicAccess());
-            break;
-          }
-          case AUTH_SYSTEM_ACCESS: {
-            mergeAuthSystemAccess(other.getAuthSystemAccess());
             break;
           }
           case SIGN_URL_ACCESS: {
@@ -12254,7 +11829,7 @@ public final class VideoServiceOuterClass {
        * Field mask that specifies which fields of the video are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the fieldMask field is set.
        */
       public boolean hasFieldMask() {
@@ -12265,7 +11840,7 @@ public final class VideoServiceOuterClass {
        * Field mask that specifies which fields of the video are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return The fieldMask.
        */
       public com.google.protobuf.FieldMask getFieldMask() {
@@ -12280,7 +11855,7 @@ public final class VideoServiceOuterClass {
        * Field mask that specifies which fields of the video are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFieldMask(com.google.protobuf.FieldMask value) {
         if (fieldMaskBuilder_ == null) {
@@ -12300,7 +11875,7 @@ public final class VideoServiceOuterClass {
        * Field mask that specifies which fields of the video are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFieldMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -12318,7 +11893,7 @@ public final class VideoServiceOuterClass {
        * Field mask that specifies which fields of the video are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
         if (fieldMaskBuilder_ == null) {
@@ -12340,7 +11915,7 @@ public final class VideoServiceOuterClass {
        * Field mask that specifies which fields of the video are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFieldMask() {
         if (fieldMaskBuilder_ == null) {
@@ -12358,7 +11933,7 @@ public final class VideoServiceOuterClass {
        * Field mask that specifies which fields of the video are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
         
@@ -12370,7 +11945,7 @@ public final class VideoServiceOuterClass {
        * Field mask that specifies which fields of the video are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
         if (fieldMaskBuilder_ != null) {
@@ -12385,7 +11960,7 @@ public final class VideoServiceOuterClass {
        * Field mask that specifies which fields of the video are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
@@ -12407,7 +11982,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -12427,7 +12002,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -12448,7 +12023,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -12467,7 +12042,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -12481,7 +12056,7 @@ public final class VideoServiceOuterClass {
        * Video title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -12967,7 +12542,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       @java.lang.Override
@@ -12989,7 +12564,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -13001,7 +12576,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -13018,7 +12593,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       @java.lang.Override
 
@@ -13043,7 +12618,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -13066,7 +12641,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -13085,7 +12660,7 @@ public final class VideoServiceOuterClass {
        * Custom labels as `` key:value `` pairs. Maximum 64 per resource.
        * </pre>
        *
-       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       * <code>map&lt;string, string&gt; labels = 200 [(.yandex.cloud.pattern) = "[-_.&#64;:/0-9a-zA-Z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -13098,6 +12673,11 @@ public final class VideoServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParamsOrBuilder> publicAccessBuilder_;
       /**
+       * <pre>
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        * @return Whether the publicAccess field is set.
        */
@@ -13106,6 +12686,11 @@ public final class VideoServiceOuterClass {
         return accessRightsCase_ == 2000;
       }
       /**
+       * <pre>
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        * @return The publicAccess.
        */
@@ -13124,6 +12709,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public Builder setPublicAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams value) {
@@ -13140,6 +12730,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public Builder setPublicAccess(
@@ -13154,6 +12749,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public Builder mergePublicAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams value) {
@@ -13176,6 +12776,11 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public Builder clearPublicAccess() {
@@ -13195,12 +12800,22 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPublicAccessParams.Builder getPublicAccessBuilder() {
         return getPublicAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       @java.lang.Override
@@ -13215,6 +12830,11 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publicly accessible video available for viewing by anyone with the direct link.
+       * No additional authorization or access control is applied.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoPublicAccessParams public_access = 2000;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -13237,149 +12857,12 @@ public final class VideoServiceOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder> authSystemAccessBuilder_;
-      /**
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       * @return Whether the authSystemAccess field is set.
-       */
-      @java.lang.Override
-      public boolean hasAuthSystemAccess() {
-        return accessRightsCase_ == 2002;
-      }
-      /**
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       * @return The authSystemAccess.
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams getAuthSystemAccess() {
-        if (authSystemAccessBuilder_ == null) {
-          if (accessRightsCase_ == 2002) {
-            return (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_;
-          }
-          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-        } else {
-          if (accessRightsCase_ == 2002) {
-            return authSystemAccessBuilder_.getMessage();
-          }
-          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public Builder setAuthSystemAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams value) {
-        if (authSystemAccessBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          accessRights_ = value;
-          onChanged();
-        } else {
-          authSystemAccessBuilder_.setMessage(value);
-        }
-        accessRightsCase_ = 2002;
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public Builder setAuthSystemAccess(
-          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder builderForValue) {
-        if (authSystemAccessBuilder_ == null) {
-          accessRights_ = builderForValue.build();
-          onChanged();
-        } else {
-          authSystemAccessBuilder_.setMessage(builderForValue.build());
-        }
-        accessRightsCase_ = 2002;
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public Builder mergeAuthSystemAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams value) {
-        if (authSystemAccessBuilder_ == null) {
-          if (accessRightsCase_ == 2002 &&
-              accessRights_ != yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance()) {
-            accessRights_ = yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.newBuilder((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            accessRights_ = value;
-          }
-          onChanged();
-        } else {
-          if (accessRightsCase_ == 2002) {
-            authSystemAccessBuilder_.mergeFrom(value);
-          }
-          authSystemAccessBuilder_.setMessage(value);
-        }
-        accessRightsCase_ = 2002;
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public Builder clearAuthSystemAccess() {
-        if (authSystemAccessBuilder_ == null) {
-          if (accessRightsCase_ == 2002) {
-            accessRightsCase_ = 0;
-            accessRights_ = null;
-            onChanged();
-          }
-        } else {
-          if (accessRightsCase_ == 2002) {
-            accessRightsCase_ = 0;
-            accessRights_ = null;
-          }
-          authSystemAccessBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder getAuthSystemAccessBuilder() {
-        return getAuthSystemAccessFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      @java.lang.Override
-      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder() {
-        if ((accessRightsCase_ == 2002) && (authSystemAccessBuilder_ != null)) {
-          return authSystemAccessBuilder_.getMessageOrBuilder();
-        } else {
-          if (accessRightsCase_ == 2002) {
-            return (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_;
-          }
-          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessParams auth_system_access = 2002;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder> 
-          getAuthSystemAccessFieldBuilder() {
-        if (authSystemAccessBuilder_ == null) {
-          if (!(accessRightsCase_ == 2002)) {
-            accessRights_ = yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.getDefaultInstance();
-          }
-          authSystemAccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParamsOrBuilder>(
-                  (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoAuthSystemAccessParams) accessRights_,
-                  getParentForChildren(),
-                  isClean());
-          accessRights_ = null;
-        }
-        accessRightsCase_ = 2002;
-        onChanged();;
-        return authSystemAccessBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParamsOrBuilder> signUrlAccessBuilder_;
       /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
        * @return Whether the signUrlAccess field is set.
        */
@@ -13388,6 +12871,10 @@ public final class VideoServiceOuterClass {
         return accessRightsCase_ == 2003;
       }
       /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
        * @return The signUrlAccess.
        */
@@ -13406,6 +12893,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
        */
       public Builder setSignUrlAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams value) {
@@ -13422,6 +12913,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
        */
       public Builder setSignUrlAccess(
@@ -13436,6 +12931,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
        */
       public Builder mergeSignUrlAccess(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams value) {
@@ -13458,6 +12957,10 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
        */
       public Builder clearSignUrlAccess() {
@@ -13477,12 +12980,20 @@ public final class VideoServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
        */
       public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSignURLAccessParams.Builder getSignUrlAccessBuilder() {
         return getSignUrlAccessFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
        */
       @java.lang.Override
@@ -13497,6 +13008,10 @@ public final class VideoServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Checking access rights using url's signature.
+       * </pre>
+       *
        * <code>.yandex.cloud.video.v1.VideoSignURLAccessParams sign_url_access = 2003;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -14204,7 +13719,7 @@ public final class VideoServiceOuterClass {
      * are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the fieldMask field is set.
      */
     boolean hasFieldMask();
@@ -14214,7 +13729,7 @@ public final class VideoServiceOuterClass {
      * are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The fieldMask.
      */
     com.google.protobuf.FieldMask getFieldMask();
@@ -14224,13 +13739,13 @@ public final class VideoServiceOuterClass {
      * are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 
     /**
      * <pre>
-     * IDs of active video subtitles.
+     * IDs of active manually uploaded video subtitles.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14240,7 +13755,7 @@ public final class VideoServiceOuterClass {
         getSubtitleIdsList();
     /**
      * <pre>
-     * IDs of active video subtitles.
+     * IDs of active manually uploaded video subtitles.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14249,7 +13764,7 @@ public final class VideoServiceOuterClass {
     int getSubtitleIdsCount();
     /**
      * <pre>
-     * IDs of active video subtitles.
+     * IDs of active manually uploaded video subtitles.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14259,7 +13774,7 @@ public final class VideoServiceOuterClass {
     java.lang.String getSubtitleIds(int index);
     /**
      * <pre>
-     * IDs of active video subtitles.
+     * IDs of active manually uploaded video subtitles.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14268,6 +13783,60 @@ public final class VideoServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getSubtitleIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Video translation settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+     * @return Whether the translationSettings field is set.
+     */
+    boolean hasTranslationSettings();
+    /**
+     * <pre>
+     * Video translation settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+     * @return The translationSettings.
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings getTranslationSettings();
+    /**
+     * <pre>
+     * Video translation settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettingsOrBuilder getTranslationSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Video summarization settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+     * @return Whether the summarizationSettings field is set.
+     */
+    boolean hasSummarizationSettings();
+    /**
+     * <pre>
+     * Video summarization settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+     * @return The summarizationSettings.
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings getSummarizationSettings();
+    /**
+     * <pre>
+     * Video summarization settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettingsOrBuilder getSummarizationSettingsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.video.v1.TranscodeVideoRequest}
@@ -14343,6 +13912,32 @@ public final class VideoServiceOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               subtitleIds_.add(s);
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.Builder subBuilder = null;
+              if (translationSettings_ != null) {
+                subBuilder = translationSettings_.toBuilder();
+              }
+              translationSettings_ = input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(translationSettings_);
+                translationSettings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.Builder subBuilder = null;
+              if (summarizationSettings_ != null) {
+                subBuilder = summarizationSettings_.toBuilder();
+              }
+              summarizationSettings_ = input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(summarizationSettings_);
+                summarizationSettings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -14434,7 +14029,7 @@ public final class VideoServiceOuterClass {
      * are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the fieldMask field is set.
      */
     @java.lang.Override
@@ -14447,7 +14042,7 @@ public final class VideoServiceOuterClass {
      * are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The fieldMask.
      */
     @java.lang.Override
@@ -14460,7 +14055,7 @@ public final class VideoServiceOuterClass {
      * are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -14471,7 +14066,7 @@ public final class VideoServiceOuterClass {
     private com.google.protobuf.LazyStringList subtitleIds_;
     /**
      * <pre>
-     * IDs of active video subtitles.
+     * IDs of active manually uploaded video subtitles.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14483,7 +14078,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of active video subtitles.
+     * IDs of active manually uploaded video subtitles.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14494,7 +14089,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of active video subtitles.
+     * IDs of active manually uploaded video subtitles.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14506,7 +14101,7 @@ public final class VideoServiceOuterClass {
     }
     /**
      * <pre>
-     * IDs of active video subtitles.
+     * IDs of active manually uploaded video subtitles.
      * </pre>
      *
      * <code>repeated string subtitle_ids = 3;</code>
@@ -14516,6 +14111,82 @@ public final class VideoServiceOuterClass {
     public com.google.protobuf.ByteString
         getSubtitleIdsBytes(int index) {
       return subtitleIds_.getByteString(index);
+    }
+
+    public static final int TRANSLATION_SETTINGS_FIELD_NUMBER = 4;
+    private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings translationSettings_;
+    /**
+     * <pre>
+     * Video translation settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+     * @return Whether the translationSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasTranslationSettings() {
+      return translationSettings_ != null;
+    }
+    /**
+     * <pre>
+     * Video translation settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+     * @return The translationSettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings getTranslationSettings() {
+      return translationSettings_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.getDefaultInstance() : translationSettings_;
+    }
+    /**
+     * <pre>
+     * Video translation settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettingsOrBuilder getTranslationSettingsOrBuilder() {
+      return getTranslationSettings();
+    }
+
+    public static final int SUMMARIZATION_SETTINGS_FIELD_NUMBER = 5;
+    private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings summarizationSettings_;
+    /**
+     * <pre>
+     * Video summarization settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+     * @return Whether the summarizationSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasSummarizationSettings() {
+      return summarizationSettings_ != null;
+    }
+    /**
+     * <pre>
+     * Video summarization settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+     * @return The summarizationSettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings getSummarizationSettings() {
+      return summarizationSettings_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.getDefaultInstance() : summarizationSettings_;
+    }
+    /**
+     * <pre>
+     * Video summarization settings.
+     * </pre>
+     *
+     * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettingsOrBuilder getSummarizationSettingsOrBuilder() {
+      return getSummarizationSettings();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -14541,6 +14212,12 @@ public final class VideoServiceOuterClass {
       for (int i = 0; i < subtitleIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, subtitleIds_.getRaw(i));
       }
+      if (translationSettings_ != null) {
+        output.writeMessage(4, getTranslationSettings());
+      }
+      if (summarizationSettings_ != null) {
+        output.writeMessage(5, getSummarizationSettings());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14564,6 +14241,14 @@ public final class VideoServiceOuterClass {
         }
         size += dataSize;
         size += 1 * getSubtitleIdsList().size();
+      }
+      if (translationSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTranslationSettings());
+      }
+      if (summarizationSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSummarizationSettings());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14589,6 +14274,16 @@ public final class VideoServiceOuterClass {
       }
       if (!getSubtitleIdsList()
           .equals(other.getSubtitleIdsList())) return false;
+      if (hasTranslationSettings() != other.hasTranslationSettings()) return false;
+      if (hasTranslationSettings()) {
+        if (!getTranslationSettings()
+            .equals(other.getTranslationSettings())) return false;
+      }
+      if (hasSummarizationSettings() != other.hasSummarizationSettings()) return false;
+      if (hasSummarizationSettings()) {
+        if (!getSummarizationSettings()
+            .equals(other.getSummarizationSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14609,6 +14304,14 @@ public final class VideoServiceOuterClass {
       if (getSubtitleIdsCount() > 0) {
         hash = (37 * hash) + SUBTITLE_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSubtitleIdsList().hashCode();
+      }
+      if (hasTranslationSettings()) {
+        hash = (37 * hash) + TRANSLATION_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTranslationSettings().hashCode();
+      }
+      if (hasSummarizationSettings()) {
+        hash = (37 * hash) + SUMMARIZATION_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getSummarizationSettings().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -14753,6 +14456,18 @@ public final class VideoServiceOuterClass {
         }
         subtitleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (translationSettingsBuilder_ == null) {
+          translationSettings_ = null;
+        } else {
+          translationSettings_ = null;
+          translationSettingsBuilder_ = null;
+        }
+        if (summarizationSettingsBuilder_ == null) {
+          summarizationSettings_ = null;
+        } else {
+          summarizationSettings_ = null;
+          summarizationSettingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -14791,6 +14506,16 @@ public final class VideoServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.subtitleIds_ = subtitleIds_;
+        if (translationSettingsBuilder_ == null) {
+          result.translationSettings_ = translationSettings_;
+        } else {
+          result.translationSettings_ = translationSettingsBuilder_.build();
+        }
+        if (summarizationSettingsBuilder_ == null) {
+          result.summarizationSettings_ = summarizationSettings_;
+        } else {
+          result.summarizationSettings_ = summarizationSettingsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -14855,6 +14580,12 @@ public final class VideoServiceOuterClass {
             subtitleIds_.addAll(other.subtitleIds_);
           }
           onChanged();
+        }
+        if (other.hasTranslationSettings()) {
+          mergeTranslationSettings(other.getTranslationSettings());
+        }
+        if (other.hasSummarizationSettings()) {
+          mergeSummarizationSettings(other.getSummarizationSettings());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14991,7 +14722,7 @@ public final class VideoServiceOuterClass {
        * are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the fieldMask field is set.
        */
       public boolean hasFieldMask() {
@@ -15003,7 +14734,7 @@ public final class VideoServiceOuterClass {
        * are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return The fieldMask.
        */
       public com.google.protobuf.FieldMask getFieldMask() {
@@ -15019,7 +14750,7 @@ public final class VideoServiceOuterClass {
        * are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFieldMask(com.google.protobuf.FieldMask value) {
         if (fieldMaskBuilder_ == null) {
@@ -15040,7 +14771,7 @@ public final class VideoServiceOuterClass {
        * are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFieldMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -15059,7 +14790,7 @@ public final class VideoServiceOuterClass {
        * are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
         if (fieldMaskBuilder_ == null) {
@@ -15082,7 +14813,7 @@ public final class VideoServiceOuterClass {
        * are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFieldMask() {
         if (fieldMaskBuilder_ == null) {
@@ -15101,7 +14832,7 @@ public final class VideoServiceOuterClass {
        * are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
         
@@ -15114,7 +14845,7 @@ public final class VideoServiceOuterClass {
        * are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
         if (fieldMaskBuilder_ != null) {
@@ -15130,7 +14861,7 @@ public final class VideoServiceOuterClass {
        * are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
@@ -15155,7 +14886,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active video subtitles.
+       * IDs of active manually uploaded video subtitles.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15167,7 +14898,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active video subtitles.
+       * IDs of active manually uploaded video subtitles.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15178,7 +14909,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active video subtitles.
+       * IDs of active manually uploaded video subtitles.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15190,7 +14921,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active video subtitles.
+       * IDs of active manually uploaded video subtitles.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15203,7 +14934,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active video subtitles.
+       * IDs of active manually uploaded video subtitles.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15223,7 +14954,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active video subtitles.
+       * IDs of active manually uploaded video subtitles.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15242,7 +14973,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active video subtitles.
+       * IDs of active manually uploaded video subtitles.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15259,7 +14990,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active video subtitles.
+       * IDs of active manually uploaded video subtitles.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15273,7 +15004,7 @@ public final class VideoServiceOuterClass {
       }
       /**
        * <pre>
-       * IDs of active video subtitles.
+       * IDs of active manually uploaded video subtitles.
        * </pre>
        *
        * <code>repeated string subtitle_ids = 3;</code>
@@ -15290,6 +15021,316 @@ public final class VideoServiceOuterClass {
         subtitleIds_.add(value);
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings translationSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettingsOrBuilder> translationSettingsBuilder_;
+      /**
+       * <pre>
+       * Video translation settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+       * @return Whether the translationSettings field is set.
+       */
+      public boolean hasTranslationSettings() {
+        return translationSettingsBuilder_ != null || translationSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Video translation settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+       * @return The translationSettings.
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings getTranslationSettings() {
+        if (translationSettingsBuilder_ == null) {
+          return translationSettings_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.getDefaultInstance() : translationSettings_;
+        } else {
+          return translationSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Video translation settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+       */
+      public Builder setTranslationSettings(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings value) {
+        if (translationSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          translationSettings_ = value;
+          onChanged();
+        } else {
+          translationSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Video translation settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+       */
+      public Builder setTranslationSettings(
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.Builder builderForValue) {
+        if (translationSettingsBuilder_ == null) {
+          translationSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          translationSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Video translation settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+       */
+      public Builder mergeTranslationSettings(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings value) {
+        if (translationSettingsBuilder_ == null) {
+          if (translationSettings_ != null) {
+            translationSettings_ =
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.newBuilder(translationSettings_).mergeFrom(value).buildPartial();
+          } else {
+            translationSettings_ = value;
+          }
+          onChanged();
+        } else {
+          translationSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Video translation settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+       */
+      public Builder clearTranslationSettings() {
+        if (translationSettingsBuilder_ == null) {
+          translationSettings_ = null;
+          onChanged();
+        } else {
+          translationSettings_ = null;
+          translationSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Video translation settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.Builder getTranslationSettingsBuilder() {
+        
+        onChanged();
+        return getTranslationSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Video translation settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettingsOrBuilder getTranslationSettingsOrBuilder() {
+        if (translationSettingsBuilder_ != null) {
+          return translationSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return translationSettings_ == null ?
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.getDefaultInstance() : translationSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Video translation settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings translation_settings = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettingsOrBuilder> 
+          getTranslationSettingsFieldBuilder() {
+        if (translationSettingsBuilder_ == null) {
+          translationSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettingsOrBuilder>(
+                  getTranslationSettings(),
+                  getParentForChildren(),
+                  isClean());
+          translationSettings_ = null;
+        }
+        return translationSettingsBuilder_;
+      }
+
+      private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings summarizationSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettingsOrBuilder> summarizationSettingsBuilder_;
+      /**
+       * <pre>
+       * Video summarization settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+       * @return Whether the summarizationSettings field is set.
+       */
+      public boolean hasSummarizationSettings() {
+        return summarizationSettingsBuilder_ != null || summarizationSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Video summarization settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+       * @return The summarizationSettings.
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings getSummarizationSettings() {
+        if (summarizationSettingsBuilder_ == null) {
+          return summarizationSettings_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.getDefaultInstance() : summarizationSettings_;
+        } else {
+          return summarizationSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Video summarization settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+       */
+      public Builder setSummarizationSettings(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings value) {
+        if (summarizationSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          summarizationSettings_ = value;
+          onChanged();
+        } else {
+          summarizationSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Video summarization settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+       */
+      public Builder setSummarizationSettings(
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.Builder builderForValue) {
+        if (summarizationSettingsBuilder_ == null) {
+          summarizationSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          summarizationSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Video summarization settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+       */
+      public Builder mergeSummarizationSettings(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings value) {
+        if (summarizationSettingsBuilder_ == null) {
+          if (summarizationSettings_ != null) {
+            summarizationSettings_ =
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.newBuilder(summarizationSettings_).mergeFrom(value).buildPartial();
+          } else {
+            summarizationSettings_ = value;
+          }
+          onChanged();
+        } else {
+          summarizationSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Video summarization settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+       */
+      public Builder clearSummarizationSettings() {
+        if (summarizationSettingsBuilder_ == null) {
+          summarizationSettings_ = null;
+          onChanged();
+        } else {
+          summarizationSettings_ = null;
+          summarizationSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Video summarization settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.Builder getSummarizationSettingsBuilder() {
+        
+        onChanged();
+        return getSummarizationSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Video summarization settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettingsOrBuilder getSummarizationSettingsOrBuilder() {
+        if (summarizationSettingsBuilder_ != null) {
+          return summarizationSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return summarizationSettings_ == null ?
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.getDefaultInstance() : summarizationSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Video summarization settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings summarization_settings = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettingsOrBuilder> 
+          getSummarizationSettingsFieldBuilder() {
+        if (summarizationSettingsBuilder_ == null) {
+          summarizationSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettingsOrBuilder>(
+                  getSummarizationSettings(),
+                  getParentForChildren(),
+                  isClean());
+          summarizationSettings_ = null;
+        }
+        return summarizationSettingsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15339,6 +15380,7333 @@ public final class VideoServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.video.v1.VideoServiceOuterClass.TranscodeVideoRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VideoTranslationSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoTranslationSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack> 
+        getTracksList();
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack getTracks(int index);
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    int getTracksCount();
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder> 
+        getTracksOrBuilderList();
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder getTracksOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings}
+   */
+  public static final class VideoTranslationSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoTranslationSettings)
+      VideoTranslationSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VideoTranslationSettings.newBuilder() to construct.
+    private VideoTranslationSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VideoTranslationSettings() {
+      tracks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VideoTranslationSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VideoTranslationSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tracks_ = new java.util.ArrayList<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tracks_.add(
+                  input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          tracks_ = java.util.Collections.unmodifiableList(tracks_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.Builder.class);
+    }
+
+    public interface TranslationTrackOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the inputTrack field is set.
+       */
+      boolean hasInputTrack();
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The inputTrack.
+       */
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack getInputTrack();
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrackOrBuilder getInputTrackOrBuilder();
+
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack> 
+          getSubtitlesList();
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack getSubtitles(int index);
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      int getSubtitlesCount();
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder> 
+          getSubtitlesOrBuilderList();
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder getSubtitlesOrBuilder(
+          int index);
+
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack> 
+          getAudioList();
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack getAudio(int index);
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      int getAudioCount();
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder> 
+          getAudioOrBuilderList();
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder getAudioOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack}
+     */
+    public static final class TranslationTrack extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack)
+        TranslationTrackOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use TranslationTrack.newBuilder() to construct.
+      private TranslationTrack(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private TranslationTrack() {
+        subtitles_ = java.util.Collections.emptyList();
+        audio_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new TranslationTrack();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private TranslationTrack(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.Builder subBuilder = null;
+                if (inputTrack_ != null) {
+                  subBuilder = inputTrack_.toBuilder();
+                }
+                inputTrack_ = input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(inputTrack_);
+                  inputTrack_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 18: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  subtitles_ = new java.util.ArrayList<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                subtitles_.add(
+                    input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.parser(), extensionRegistry));
+                break;
+              }
+              case 26: {
+                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                  audio_ = new java.util.ArrayList<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                audio_.add(
+                    input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.parser(), extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            subtitles_ = java.util.Collections.unmodifiableList(subtitles_);
+          }
+          if (((mutable_bitField0_ & 0x00000002) != 0)) {
+            audio_ = java.util.Collections.unmodifiableList(audio_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder.class);
+      }
+
+      public static final int INPUT_TRACK_FIELD_NUMBER = 1;
+      private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack inputTrack_;
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the inputTrack field is set.
+       */
+      @java.lang.Override
+      public boolean hasInputTrack() {
+        return inputTrack_ != null;
+      }
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The inputTrack.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack getInputTrack() {
+        return inputTrack_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.getDefaultInstance() : inputTrack_;
+      }
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrackOrBuilder getInputTrackOrBuilder() {
+        return getInputTrack();
+      }
+
+      public static final int SUBTITLES_FIELD_NUMBER = 2;
+      private java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack> subtitles_;
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack> getSubtitlesList() {
+        return subtitles_;
+      }
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder> 
+          getSubtitlesOrBuilderList() {
+        return subtitles_;
+      }
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      @java.lang.Override
+      public int getSubtitlesCount() {
+        return subtitles_.size();
+      }
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack getSubtitles(int index) {
+        return subtitles_.get(index);
+      }
+      /**
+       * <pre>
+       * Settings for target subtitle tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder getSubtitlesOrBuilder(
+          int index) {
+        return subtitles_.get(index);
+      }
+
+      public static final int AUDIO_FIELD_NUMBER = 3;
+      private java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack> audio_;
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      @java.lang.Override
+      public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack> getAudioList() {
+        return audio_;
+      }
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder> 
+          getAudioOrBuilderList() {
+        return audio_;
+      }
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      @java.lang.Override
+      public int getAudioCount() {
+        return audio_.size();
+      }
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack getAudio(int index) {
+        return audio_.get(index);
+      }
+      /**
+       * <pre>
+       * Settings for target audio tracks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder getAudioOrBuilder(
+          int index) {
+        return audio_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (inputTrack_ != null) {
+          output.writeMessage(1, getInputTrack());
+        }
+        for (int i = 0; i < subtitles_.size(); i++) {
+          output.writeMessage(2, subtitles_.get(i));
+        }
+        for (int i = 0; i < audio_.size(); i++) {
+          output.writeMessage(3, audio_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (inputTrack_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getInputTrack());
+        }
+        for (int i = 0; i < subtitles_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, subtitles_.get(i));
+        }
+        for (int i = 0; i < audio_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, audio_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack) obj;
+
+        if (hasInputTrack() != other.hasInputTrack()) return false;
+        if (hasInputTrack()) {
+          if (!getInputTrack()
+              .equals(other.getInputTrack())) return false;
+        }
+        if (!getSubtitlesList()
+            .equals(other.getSubtitlesList())) return false;
+        if (!getAudioList()
+            .equals(other.getAudioList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasInputTrack()) {
+          hash = (37 * hash) + INPUT_TRACK_FIELD_NUMBER;
+          hash = (53 * hash) + getInputTrack().hashCode();
+        }
+        if (getSubtitlesCount() > 0) {
+          hash = (37 * hash) + SUBTITLES_FIELD_NUMBER;
+          hash = (53 * hash) + getSubtitlesList().hashCode();
+        }
+        if (getAudioCount() > 0) {
+          hash = (37 * hash) + AUDIO_FIELD_NUMBER;
+          hash = (53 * hash) + getAudioList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack)
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getSubtitlesFieldBuilder();
+            getAudioFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (inputTrackBuilder_ == null) {
+            inputTrack_ = null;
+          } else {
+            inputTrack_ = null;
+            inputTrackBuilder_ = null;
+          }
+          if (subtitlesBuilder_ == null) {
+            subtitles_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            subtitlesBuilder_.clear();
+          }
+          if (audioBuilder_ == null) {
+            audio_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            audioBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack getDefaultInstanceForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack build() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack buildPartial() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack(this);
+          int from_bitField0_ = bitField0_;
+          if (inputTrackBuilder_ == null) {
+            result.inputTrack_ = inputTrack_;
+          } else {
+            result.inputTrack_ = inputTrackBuilder_.build();
+          }
+          if (subtitlesBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              subtitles_ = java.util.Collections.unmodifiableList(subtitles_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.subtitles_ = subtitles_;
+          } else {
+            result.subtitles_ = subtitlesBuilder_.build();
+          }
+          if (audioBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) != 0)) {
+              audio_ = java.util.Collections.unmodifiableList(audio_);
+              bitField0_ = (bitField0_ & ~0x00000002);
+            }
+            result.audio_ = audio_;
+          } else {
+            result.audio_ = audioBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack) {
+            return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack other) {
+          if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.getDefaultInstance()) return this;
+          if (other.hasInputTrack()) {
+            mergeInputTrack(other.getInputTrack());
+          }
+          if (subtitlesBuilder_ == null) {
+            if (!other.subtitles_.isEmpty()) {
+              if (subtitles_.isEmpty()) {
+                subtitles_ = other.subtitles_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureSubtitlesIsMutable();
+                subtitles_.addAll(other.subtitles_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.subtitles_.isEmpty()) {
+              if (subtitlesBuilder_.isEmpty()) {
+                subtitlesBuilder_.dispose();
+                subtitlesBuilder_ = null;
+                subtitles_ = other.subtitles_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                subtitlesBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getSubtitlesFieldBuilder() : null;
+              } else {
+                subtitlesBuilder_.addAllMessages(other.subtitles_);
+              }
+            }
+          }
+          if (audioBuilder_ == null) {
+            if (!other.audio_.isEmpty()) {
+              if (audio_.isEmpty()) {
+                audio_ = other.audio_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+              } else {
+                ensureAudioIsMutable();
+                audio_.addAll(other.audio_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.audio_.isEmpty()) {
+              if (audioBuilder_.isEmpty()) {
+                audioBuilder_.dispose();
+                audioBuilder_ = null;
+                audio_ = other.audio_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                audioBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getAudioFieldBuilder() : null;
+              } else {
+                audioBuilder_.addAllMessages(other.audio_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack inputTrack_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrackOrBuilder> inputTrackBuilder_;
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the inputTrack field is set.
+         */
+        public boolean hasInputTrack() {
+          return inputTrackBuilder_ != null || inputTrack_ != null;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The inputTrack.
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack getInputTrack() {
+          if (inputTrackBuilder_ == null) {
+            return inputTrack_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.getDefaultInstance() : inputTrack_;
+          } else {
+            return inputTrackBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setInputTrack(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack value) {
+          if (inputTrackBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            inputTrack_ = value;
+            onChanged();
+          } else {
+            inputTrackBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setInputTrack(
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.Builder builderForValue) {
+          if (inputTrackBuilder_ == null) {
+            inputTrack_ = builderForValue.build();
+            onChanged();
+          } else {
+            inputTrackBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder mergeInputTrack(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack value) {
+          if (inputTrackBuilder_ == null) {
+            if (inputTrack_ != null) {
+              inputTrack_ =
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.newBuilder(inputTrack_).mergeFrom(value).buildPartial();
+            } else {
+              inputTrack_ = value;
+            }
+            onChanged();
+          } else {
+            inputTrackBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder clearInputTrack() {
+          if (inputTrackBuilder_ == null) {
+            inputTrack_ = null;
+            onChanged();
+          } else {
+            inputTrack_ = null;
+            inputTrackBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.Builder getInputTrackBuilder() {
+          
+          onChanged();
+          return getInputTrackFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrackOrBuilder getInputTrackOrBuilder() {
+          if (inputTrackBuilder_ != null) {
+            return inputTrackBuilder_.getMessageOrBuilder();
+          } else {
+            return inputTrack_ == null ?
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.getDefaultInstance() : inputTrack_;
+          }
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoTranslationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrackOrBuilder> 
+            getInputTrackFieldBuilder() {
+          if (inputTrackBuilder_ == null) {
+            inputTrackBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrackOrBuilder>(
+                    getInputTrack(),
+                    getParentForChildren(),
+                    isClean());
+            inputTrack_ = null;
+          }
+          return inputTrackBuilder_;
+        }
+
+        private java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack> subtitles_ =
+          java.util.Collections.emptyList();
+        private void ensureSubtitlesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            subtitles_ = new java.util.ArrayList<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack>(subtitles_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder> subtitlesBuilder_;
+
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack> getSubtitlesList() {
+          if (subtitlesBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(subtitles_);
+          } else {
+            return subtitlesBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public int getSubtitlesCount() {
+          if (subtitlesBuilder_ == null) {
+            return subtitles_.size();
+          } else {
+            return subtitlesBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack getSubtitles(int index) {
+          if (subtitlesBuilder_ == null) {
+            return subtitles_.get(index);
+          } else {
+            return subtitlesBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public Builder setSubtitles(
+            int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack value) {
+          if (subtitlesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureSubtitlesIsMutable();
+            subtitles_.set(index, value);
+            onChanged();
+          } else {
+            subtitlesBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public Builder setSubtitles(
+            int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder builderForValue) {
+          if (subtitlesBuilder_ == null) {
+            ensureSubtitlesIsMutable();
+            subtitles_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            subtitlesBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public Builder addSubtitles(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack value) {
+          if (subtitlesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureSubtitlesIsMutable();
+            subtitles_.add(value);
+            onChanged();
+          } else {
+            subtitlesBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public Builder addSubtitles(
+            int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack value) {
+          if (subtitlesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureSubtitlesIsMutable();
+            subtitles_.add(index, value);
+            onChanged();
+          } else {
+            subtitlesBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public Builder addSubtitles(
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder builderForValue) {
+          if (subtitlesBuilder_ == null) {
+            ensureSubtitlesIsMutable();
+            subtitles_.add(builderForValue.build());
+            onChanged();
+          } else {
+            subtitlesBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public Builder addSubtitles(
+            int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder builderForValue) {
+          if (subtitlesBuilder_ == null) {
+            ensureSubtitlesIsMutable();
+            subtitles_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            subtitlesBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public Builder addAllSubtitles(
+            java.lang.Iterable<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack> values) {
+          if (subtitlesBuilder_ == null) {
+            ensureSubtitlesIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, subtitles_);
+            onChanged();
+          } else {
+            subtitlesBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public Builder clearSubtitles() {
+          if (subtitlesBuilder_ == null) {
+            subtitles_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            subtitlesBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public Builder removeSubtitles(int index) {
+          if (subtitlesBuilder_ == null) {
+            ensureSubtitlesIsMutable();
+            subtitles_.remove(index);
+            onChanged();
+          } else {
+            subtitlesBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder getSubtitlesBuilder(
+            int index) {
+          return getSubtitlesFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder getSubtitlesOrBuilder(
+            int index) {
+          if (subtitlesBuilder_ == null) {
+            return subtitles_.get(index);  } else {
+            return subtitlesBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder> 
+             getSubtitlesOrBuilderList() {
+          if (subtitlesBuilder_ != null) {
+            return subtitlesBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(subtitles_);
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder addSubtitlesBuilder() {
+          return getSubtitlesFieldBuilder().addBuilder(
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder addSubtitlesBuilder(
+            int index) {
+          return getSubtitlesFieldBuilder().addBuilder(
+              index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Settings for target subtitle tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack subtitles = 2;</code>
+         */
+        public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder> 
+             getSubtitlesBuilderList() {
+          return getSubtitlesFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder> 
+            getSubtitlesFieldBuilder() {
+          if (subtitlesBuilder_ == null) {
+            subtitlesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder>(
+                    subtitles_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            subtitles_ = null;
+          }
+          return subtitlesBuilder_;
+        }
+
+        private java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack> audio_ =
+          java.util.Collections.emptyList();
+        private void ensureAudioIsMutable() {
+          if (!((bitField0_ & 0x00000002) != 0)) {
+            audio_ = new java.util.ArrayList<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack>(audio_);
+            bitField0_ |= 0x00000002;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder> audioBuilder_;
+
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack> getAudioList() {
+          if (audioBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(audio_);
+          } else {
+            return audioBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public int getAudioCount() {
+          if (audioBuilder_ == null) {
+            return audio_.size();
+          } else {
+            return audioBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack getAudio(int index) {
+          if (audioBuilder_ == null) {
+            return audio_.get(index);
+          } else {
+            return audioBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public Builder setAudio(
+            int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack value) {
+          if (audioBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAudioIsMutable();
+            audio_.set(index, value);
+            onChanged();
+          } else {
+            audioBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public Builder setAudio(
+            int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder builderForValue) {
+          if (audioBuilder_ == null) {
+            ensureAudioIsMutable();
+            audio_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            audioBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public Builder addAudio(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack value) {
+          if (audioBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAudioIsMutable();
+            audio_.add(value);
+            onChanged();
+          } else {
+            audioBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public Builder addAudio(
+            int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack value) {
+          if (audioBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAudioIsMutable();
+            audio_.add(index, value);
+            onChanged();
+          } else {
+            audioBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public Builder addAudio(
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder builderForValue) {
+          if (audioBuilder_ == null) {
+            ensureAudioIsMutable();
+            audio_.add(builderForValue.build());
+            onChanged();
+          } else {
+            audioBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public Builder addAudio(
+            int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder builderForValue) {
+          if (audioBuilder_ == null) {
+            ensureAudioIsMutable();
+            audio_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            audioBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public Builder addAllAudio(
+            java.lang.Iterable<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack> values) {
+          if (audioBuilder_ == null) {
+            ensureAudioIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, audio_);
+            onChanged();
+          } else {
+            audioBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public Builder clearAudio() {
+          if (audioBuilder_ == null) {
+            audio_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000002);
+            onChanged();
+          } else {
+            audioBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public Builder removeAudio(int index) {
+          if (audioBuilder_ == null) {
+            ensureAudioIsMutable();
+            audio_.remove(index);
+            onChanged();
+          } else {
+            audioBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder getAudioBuilder(
+            int index) {
+          return getAudioFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder getAudioOrBuilder(
+            int index) {
+          if (audioBuilder_ == null) {
+            return audio_.get(index);  } else {
+            return audioBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder> 
+             getAudioOrBuilderList() {
+          if (audioBuilder_ != null) {
+            return audioBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(audio_);
+          }
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder addAudioBuilder() {
+          return getAudioFieldBuilder().addBuilder(
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder addAudioBuilder(
+            int index) {
+          return getAudioFieldBuilder().addBuilder(
+              index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Settings for target audio tracks.
+         * </pre>
+         *
+         * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack audio = 3;</code>
+         */
+        public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder> 
+             getAudioBuilderList() {
+          return getAudioFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder> 
+            getAudioFieldBuilder() {
+          if (audioBuilder_ == null) {
+            audioBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder>(
+                    audio_,
+                    ((bitField0_ & 0x00000002) != 0),
+                    getParentForChildren(),
+                    isClean());
+            audio_ = null;
+          }
+          return audioBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack)
+      private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack();
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<TranslationTrack>
+          PARSER = new com.google.protobuf.AbstractParser<TranslationTrack>() {
+        @java.lang.Override
+        public TranslationTrack parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new TranslationTrack(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<TranslationTrack> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<TranslationTrack> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface InputTrackOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoTranslationSettings.InputTrack)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Input audio track index (one-based).
+       * </pre>
+       *
+       * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The trackIndex.
+       */
+      long getTrackIndex();
+
+      /**
+       * <pre>
+       * Source track language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * Track language will be deduced automatically if not provided.
+       * In the latter case the deduction accuracy is not guaranteed.
+       * For better performance please do specify the source track language when possible.
+       * </pre>
+       *
+       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The srcLang.
+       */
+      java.lang.String getSrcLang();
+      /**
+       * <pre>
+       * Source track language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * Track language will be deduced automatically if not provided.
+       * In the latter case the deduction accuracy is not guaranteed.
+       * For better performance please do specify the source track language when possible.
+       * </pre>
+       *
+       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The bytes for srcLang.
+       */
+      com.google.protobuf.ByteString
+          getSrcLangBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings.InputTrack}
+     */
+    public static final class InputTrack extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoTranslationSettings.InputTrack)
+        InputTrackOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use InputTrack.newBuilder() to construct.
+      private InputTrack(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private InputTrack() {
+        srcLang_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new InputTrack();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private InputTrack(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                trackIndex_ = input.readInt64();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                srcLang_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.Builder.class);
+      }
+
+      public static final int TRACK_INDEX_FIELD_NUMBER = 1;
+      private long trackIndex_;
+      /**
+       * <pre>
+       * Input audio track index (one-based).
+       * </pre>
+       *
+       * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The trackIndex.
+       */
+      @java.lang.Override
+      public long getTrackIndex() {
+        return trackIndex_;
+      }
+
+      public static final int SRC_LANG_FIELD_NUMBER = 2;
+      private volatile java.lang.Object srcLang_;
+      /**
+       * <pre>
+       * Source track language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * Track language will be deduced automatically if not provided.
+       * In the latter case the deduction accuracy is not guaranteed.
+       * For better performance please do specify the source track language when possible.
+       * </pre>
+       *
+       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The srcLang.
+       */
+      @java.lang.Override
+      public java.lang.String getSrcLang() {
+        java.lang.Object ref = srcLang_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          srcLang_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Source track language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * Track language will be deduced automatically if not provided.
+       * In the latter case the deduction accuracy is not guaranteed.
+       * For better performance please do specify the source track language when possible.
+       * </pre>
+       *
+       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The bytes for srcLang.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSrcLangBytes() {
+        java.lang.Object ref = srcLang_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          srcLang_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (trackIndex_ != 0L) {
+          output.writeInt64(1, trackIndex_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcLang_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, srcLang_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (trackIndex_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, trackIndex_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcLang_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, srcLang_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack) obj;
+
+        if (getTrackIndex()
+            != other.getTrackIndex()) return false;
+        if (!getSrcLang()
+            .equals(other.getSrcLang())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TRACK_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTrackIndex());
+        hash = (37 * hash) + SRC_LANG_FIELD_NUMBER;
+        hash = (53 * hash) + getSrcLang().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings.InputTrack}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoTranslationSettings.InputTrack)
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrackOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          trackIndex_ = 0L;
+
+          srcLang_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack getDefaultInstanceForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack build() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack buildPartial() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack(this);
+          result.trackIndex_ = trackIndex_;
+          result.srcLang_ = srcLang_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack) {
+            return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack other) {
+          if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack.getDefaultInstance()) return this;
+          if (other.getTrackIndex() != 0L) {
+            setTrackIndex(other.getTrackIndex());
+          }
+          if (!other.getSrcLang().isEmpty()) {
+            srcLang_ = other.srcLang_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long trackIndex_ ;
+        /**
+         * <pre>
+         * Input audio track index (one-based).
+         * </pre>
+         *
+         * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return The trackIndex.
+         */
+        @java.lang.Override
+        public long getTrackIndex() {
+          return trackIndex_;
+        }
+        /**
+         * <pre>
+         * Input audio track index (one-based).
+         * </pre>
+         *
+         * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @param value The trackIndex to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTrackIndex(long value) {
+          
+          trackIndex_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Input audio track index (one-based).
+         * </pre>
+         *
+         * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTrackIndex() {
+          
+          trackIndex_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object srcLang_ = "";
+        /**
+         * <pre>
+         * Source track language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * Track language will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @return The srcLang.
+         */
+        public java.lang.String getSrcLang() {
+          java.lang.Object ref = srcLang_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            srcLang_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Source track language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * Track language will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @return The bytes for srcLang.
+         */
+        public com.google.protobuf.ByteString
+            getSrcLangBytes() {
+          java.lang.Object ref = srcLang_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            srcLang_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Source track language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * Track language will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @param value The srcLang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSrcLang(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          srcLang_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Source track language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * Track language will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSrcLang() {
+          
+          srcLang_ = getDefaultInstance().getSrcLang();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Source track language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * Track language will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @param value The bytes for srcLang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSrcLangBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          srcLang_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoTranslationSettings.InputTrack)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoTranslationSettings.InputTrack)
+      private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack();
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<InputTrack>
+          PARSER = new com.google.protobuf.AbstractParser<InputTrack>() {
+        @java.lang.Override
+        public InputTrack parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new InputTrack(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<InputTrack> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<InputTrack> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.InputTrack getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface SubtitleTrackOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Target language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * </pre>
+       *
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * @return The dstLang.
+       */
+      java.lang.String getDstLang();
+      /**
+       * <pre>
+       * Target language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * </pre>
+       *
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * @return The bytes for dstLang.
+       */
+      com.google.protobuf.ByteString
+          getDstLangBytes();
+
+      /**
+       * <pre>
+       * Track label to be displayed on the screen during video playback.
+       * </pre>
+       *
+       * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The label.
+       */
+      java.lang.String getLabel();
+      /**
+       * <pre>
+       * Track label to be displayed on the screen during video playback.
+       * </pre>
+       *
+       * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for label.
+       */
+      com.google.protobuf.ByteString
+          getLabelBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack}
+     */
+    public static final class SubtitleTrack extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack)
+        SubtitleTrackOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SubtitleTrack.newBuilder() to construct.
+      private SubtitleTrack(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SubtitleTrack() {
+        dstLang_ = "";
+        label_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SubtitleTrack();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SubtitleTrack(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                dstLang_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                label_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder.class);
+      }
+
+      public static final int DST_LANG_FIELD_NUMBER = 1;
+      private volatile java.lang.Object dstLang_;
+      /**
+       * <pre>
+       * Target language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * </pre>
+       *
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * @return The dstLang.
+       */
+      @java.lang.Override
+      public java.lang.String getDstLang() {
+        java.lang.Object ref = dstLang_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dstLang_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Target language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * </pre>
+       *
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * @return The bytes for dstLang.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDstLangBytes() {
+        java.lang.Object ref = dstLang_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dstLang_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int LABEL_FIELD_NUMBER = 2;
+      private volatile java.lang.Object label_;
+      /**
+       * <pre>
+       * Track label to be displayed on the screen during video playback.
+       * </pre>
+       *
+       * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The label.
+       */
+      @java.lang.Override
+      public java.lang.String getLabel() {
+        java.lang.Object ref = label_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          label_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Track label to be displayed on the screen during video playback.
+       * </pre>
+       *
+       * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for label.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLabelBytes() {
+        java.lang.Object ref = label_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          label_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstLang_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dstLang_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, label_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstLang_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dstLang_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, label_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack) obj;
+
+        if (!getDstLang()
+            .equals(other.getDstLang())) return false;
+        if (!getLabel()
+            .equals(other.getLabel())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + DST_LANG_FIELD_NUMBER;
+        hash = (53 * hash) + getDstLang().hashCode();
+        hash = (37 * hash) + LABEL_FIELD_NUMBER;
+        hash = (53 * hash) + getLabel().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack)
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrackOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          dstLang_ = "";
+
+          label_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack getDefaultInstanceForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack build() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack buildPartial() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack(this);
+          result.dstLang_ = dstLang_;
+          result.label_ = label_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack) {
+            return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack other) {
+          if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack.getDefaultInstance()) return this;
+          if (!other.getDstLang().isEmpty()) {
+            dstLang_ = other.dstLang_;
+            onChanged();
+          }
+          if (!other.getLabel().isEmpty()) {
+            label_ = other.label_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object dstLang_ = "";
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @return The dstLang.
+         */
+        public java.lang.String getDstLang() {
+          java.lang.Object ref = dstLang_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            dstLang_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @return The bytes for dstLang.
+         */
+        public com.google.protobuf.ByteString
+            getDstLangBytes() {
+          java.lang.Object ref = dstLang_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            dstLang_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @param value The dstLang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDstLang(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          dstLang_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDstLang() {
+          
+          dstLang_ = getDefaultInstance().getDstLang();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @param value The bytes for dstLang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDstLangBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          dstLang_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object label_ = "";
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The label.
+         */
+        public java.lang.String getLabel() {
+          java.lang.Object ref = label_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            label_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The bytes for label.
+         */
+        public com.google.protobuf.ByteString
+            getLabelBytes() {
+          java.lang.Object ref = label_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            label_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The label to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLabel(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          label_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLabel() {
+          
+          label_ = getDefaultInstance().getLabel();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The bytes for label to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLabelBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          label_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoTranslationSettings.SubtitleTrack)
+      private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack();
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SubtitleTrack>
+          PARSER = new com.google.protobuf.AbstractParser<SubtitleTrack>() {
+        @java.lang.Override
+        public SubtitleTrack parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SubtitleTrack(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SubtitleTrack> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SubtitleTrack> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.SubtitleTrack getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AudioTrackOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Target language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * </pre>
+       *
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * @return The dstLang.
+       */
+      java.lang.String getDstLang();
+      /**
+       * <pre>
+       * Target language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * </pre>
+       *
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * @return The bytes for dstLang.
+       */
+      com.google.protobuf.ByteString
+          getDstLangBytes();
+
+      /**
+       * <pre>
+       * Track label to be displayed on the screen during video playback.
+       * </pre>
+       *
+       * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The label.
+       */
+      java.lang.String getLabel();
+      /**
+       * <pre>
+       * Track label to be displayed on the screen during video playback.
+       * </pre>
+       *
+       * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for label.
+       */
+      com.google.protobuf.ByteString
+          getLabelBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack}
+     */
+    public static final class AudioTrack extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack)
+        AudioTrackOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AudioTrack.newBuilder() to construct.
+      private AudioTrack(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AudioTrack() {
+        dstLang_ = "";
+        label_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AudioTrack();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AudioTrack(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                dstLang_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                label_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder.class);
+      }
+
+      public static final int DST_LANG_FIELD_NUMBER = 1;
+      private volatile java.lang.Object dstLang_;
+      /**
+       * <pre>
+       * Target language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * </pre>
+       *
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * @return The dstLang.
+       */
+      @java.lang.Override
+      public java.lang.String getDstLang() {
+        java.lang.Object ref = dstLang_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dstLang_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Target language in any of the following formats:
+       * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+       * * two-letter code according to ISO 639-1                          
+       * </pre>
+       *
+       * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+       * @return The bytes for dstLang.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDstLangBytes() {
+        java.lang.Object ref = dstLang_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dstLang_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int LABEL_FIELD_NUMBER = 2;
+      private volatile java.lang.Object label_;
+      /**
+       * <pre>
+       * Track label to be displayed on the screen during video playback.
+       * </pre>
+       *
+       * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The label.
+       */
+      @java.lang.Override
+      public java.lang.String getLabel() {
+        java.lang.Object ref = label_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          label_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Track label to be displayed on the screen during video playback.
+       * </pre>
+       *
+       * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for label.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getLabelBytes() {
+        java.lang.Object ref = label_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          label_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstLang_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dstLang_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, label_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dstLang_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dstLang_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, label_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack) obj;
+
+        if (!getDstLang()
+            .equals(other.getDstLang())) return false;
+        if (!getLabel()
+            .equals(other.getLabel())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + DST_LANG_FIELD_NUMBER;
+        hash = (53 * hash) + getDstLang().hashCode();
+        hash = (37 * hash) + LABEL_FIELD_NUMBER;
+        hash = (53 * hash) + getLabel().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack)
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrackOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          dstLang_ = "";
+
+          label_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack getDefaultInstanceForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack build() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack buildPartial() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack(this);
+          result.dstLang_ = dstLang_;
+          result.label_ = label_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack) {
+            return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack other) {
+          if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack.getDefaultInstance()) return this;
+          if (!other.getDstLang().isEmpty()) {
+            dstLang_ = other.dstLang_;
+            onChanged();
+          }
+          if (!other.getLabel().isEmpty()) {
+            label_ = other.label_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object dstLang_ = "";
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @return The dstLang.
+         */
+        public java.lang.String getDstLang() {
+          java.lang.Object ref = dstLang_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            dstLang_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @return The bytes for dstLang.
+         */
+        public com.google.protobuf.ByteString
+            getDstLangBytes() {
+          java.lang.Object ref = dstLang_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            dstLang_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @param value The dstLang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDstLang(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          dstLang_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDstLang() {
+          
+          dstLang_ = getDefaultInstance().getDstLang();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Target language in any of the following formats:
+         * * three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3 
+         * * two-letter code according to ISO 639-1                          
+         * </pre>
+         *
+         * <code>string dst_lang = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "2-3"];</code>
+         * @param value The bytes for dstLang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDstLangBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          dstLang_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object label_ = "";
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The label.
+         */
+        public java.lang.String getLabel() {
+          java.lang.Object ref = label_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            label_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return The bytes for label.
+         */
+        public com.google.protobuf.ByteString
+            getLabelBytes() {
+          java.lang.Object ref = label_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            label_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The label to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLabel(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          label_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLabel() {
+          
+          label_ = getDefaultInstance().getLabel();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Track label to be displayed on the screen during video playback.
+         * </pre>
+         *
+         * <code>string label = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         * @param value The bytes for label to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLabelBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          label_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoTranslationSettings.AudioTrack)
+      private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack();
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AudioTrack>
+          PARSER = new com.google.protobuf.AbstractParser<AudioTrack>() {
+        @java.lang.Override
+        public AudioTrack parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AudioTrack(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AudioTrack> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AudioTrack> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.AudioTrack getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int TRACKS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack> tracks_;
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack> getTracksList() {
+      return tracks_;
+    }
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder> 
+        getTracksOrBuilderList() {
+      return tracks_;
+    }
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    @java.lang.Override
+    public int getTracksCount() {
+      return tracks_.size();
+    }
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack getTracks(int index) {
+      return tracks_.get(index);
+    }
+    /**
+     * <pre>
+     * Translation settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder getTracksOrBuilder(
+        int index) {
+      return tracks_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < tracks_.size(); i++) {
+        output.writeMessage(1, tracks_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < tracks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, tracks_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings) obj;
+
+      if (!getTracksList()
+          .equals(other.getTracksList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTracksCount() > 0) {
+        hash = (37 * hash) + TRACKS_FIELD_NUMBER;
+        hash = (53 * hash) + getTracksList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.VideoTranslationSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoTranslationSettings)
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTracksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (tracksBuilder_ == null) {
+          tracks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          tracksBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings build() {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings buildPartial() {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings(this);
+        int from_bitField0_ = bitField0_;
+        if (tracksBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            tracks_ = java.util.Collections.unmodifiableList(tracks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.tracks_ = tracks_;
+        } else {
+          result.tracks_ = tracksBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings) {
+          return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings other) {
+        if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.getDefaultInstance()) return this;
+        if (tracksBuilder_ == null) {
+          if (!other.tracks_.isEmpty()) {
+            if (tracks_.isEmpty()) {
+              tracks_ = other.tracks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTracksIsMutable();
+              tracks_.addAll(other.tracks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tracks_.isEmpty()) {
+            if (tracksBuilder_.isEmpty()) {
+              tracksBuilder_.dispose();
+              tracksBuilder_ = null;
+              tracks_ = other.tracks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              tracksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTracksFieldBuilder() : null;
+            } else {
+              tracksBuilder_.addAllMessages(other.tracks_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack> tracks_ =
+        java.util.Collections.emptyList();
+      private void ensureTracksIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          tracks_ = new java.util.ArrayList<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack>(tracks_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder> tracksBuilder_;
+
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack> getTracksList() {
+        if (tracksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tracks_);
+        } else {
+          return tracksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public int getTracksCount() {
+        if (tracksBuilder_ == null) {
+          return tracks_.size();
+        } else {
+          return tracksBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack getTracks(int index) {
+        if (tracksBuilder_ == null) {
+          return tracks_.get(index);
+        } else {
+          return tracksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public Builder setTracks(
+          int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack value) {
+        if (tracksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTracksIsMutable();
+          tracks_.set(index, value);
+          onChanged();
+        } else {
+          tracksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public Builder setTracks(
+          int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder builderForValue) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          tracks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tracksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public Builder addTracks(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack value) {
+        if (tracksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTracksIsMutable();
+          tracks_.add(value);
+          onChanged();
+        } else {
+          tracksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public Builder addTracks(
+          int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack value) {
+        if (tracksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTracksIsMutable();
+          tracks_.add(index, value);
+          onChanged();
+        } else {
+          tracksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public Builder addTracks(
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder builderForValue) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          tracks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tracksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public Builder addTracks(
+          int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder builderForValue) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          tracks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tracksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public Builder addAllTracks(
+          java.lang.Iterable<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack> values) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tracks_);
+          onChanged();
+        } else {
+          tracksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public Builder clearTracks() {
+        if (tracksBuilder_ == null) {
+          tracks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          tracksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public Builder removeTracks(int index) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          tracks_.remove(index);
+          onChanged();
+        } else {
+          tracksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder getTracksBuilder(
+          int index) {
+        return getTracksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder getTracksOrBuilder(
+          int index) {
+        if (tracksBuilder_ == null) {
+          return tracks_.get(index);  } else {
+          return tracksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder> 
+           getTracksOrBuilderList() {
+        if (tracksBuilder_ != null) {
+          return tracksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tracks_);
+        }
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder addTracksBuilder() {
+        return getTracksFieldBuilder().addBuilder(
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder addTracksBuilder(
+          int index) {
+        return getTracksFieldBuilder().addBuilder(
+            index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Translation settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoTranslationSettings.TranslationTrack tracks = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder> 
+           getTracksBuilderList() {
+        return getTracksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder> 
+          getTracksFieldBuilder() {
+        if (tracksBuilder_ == null) {
+          tracksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings.TranslationTrackOrBuilder>(
+                  tracks_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tracks_ = null;
+        }
+        return tracksBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoTranslationSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoTranslationSettings)
+    private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings();
+    }
+
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VideoTranslationSettings>
+        PARSER = new com.google.protobuf.AbstractParser<VideoTranslationSettings>() {
+      @java.lang.Override
+      public VideoTranslationSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VideoTranslationSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VideoTranslationSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VideoTranslationSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoTranslationSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VideoSummarizationSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoSummarizationSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack> 
+        getTracksList();
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack getTracks(int index);
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    int getTracksCount();
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder> 
+        getTracksOrBuilderList();
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder getTracksOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Summarize all available tracks.
+     * If enabled, `tracks` parameter is ignored.
+     * Enables automatic source language deduction for each track
+     * and thus may lead to performance degradation.
+     * </pre>
+     *
+     * <code>bool process_all_tracks = 3;</code>
+     * @return The processAllTracks.
+     */
+    boolean getProcessAllTracks();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.VideoSummarizationSettings}
+   */
+  public static final class VideoSummarizationSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoSummarizationSettings)
+      VideoSummarizationSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VideoSummarizationSettings.newBuilder() to construct.
+    private VideoSummarizationSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VideoSummarizationSettings() {
+      tracks_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VideoSummarizationSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VideoSummarizationSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tracks_ = new java.util.ArrayList<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tracks_.add(
+                  input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.parser(), extensionRegistry));
+              break;
+            }
+            case 24: {
+
+              processAllTracks_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          tracks_ = java.util.Collections.unmodifiableList(tracks_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.Builder.class);
+    }
+
+    public interface SummarizationTrackOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the inputTrack field is set.
+       */
+      boolean hasInputTrack();
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The inputTrack.
+       */
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack getInputTrack();
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrackOrBuilder getInputTrackOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack}
+     */
+    public static final class SummarizationTrack extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack)
+        SummarizationTrackOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SummarizationTrack.newBuilder() to construct.
+      private SummarizationTrack(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SummarizationTrack() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SummarizationTrack();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SummarizationTrack(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.Builder subBuilder = null;
+                if (inputTrack_ != null) {
+                  subBuilder = inputTrack_.toBuilder();
+                }
+                inputTrack_ = input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(inputTrack_);
+                  inputTrack_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder.class);
+      }
+
+      public static final int INPUT_TRACK_FIELD_NUMBER = 1;
+      private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack inputTrack_;
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the inputTrack field is set.
+       */
+      @java.lang.Override
+      public boolean hasInputTrack() {
+        return inputTrack_ != null;
+      }
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The inputTrack.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack getInputTrack() {
+        return inputTrack_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.getDefaultInstance() : inputTrack_;
+      }
+      /**
+       * <pre>
+       * Input track settings.
+       * </pre>
+       *
+       * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrackOrBuilder getInputTrackOrBuilder() {
+        return getInputTrack();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (inputTrack_ != null) {
+          output.writeMessage(1, getInputTrack());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (inputTrack_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getInputTrack());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack) obj;
+
+        if (hasInputTrack() != other.hasInputTrack()) return false;
+        if (hasInputTrack()) {
+          if (!getInputTrack()
+              .equals(other.getInputTrack())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasInputTrack()) {
+          hash = (37 * hash) + INPUT_TRACK_FIELD_NUMBER;
+          hash = (53 * hash) + getInputTrack().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack)
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (inputTrackBuilder_ == null) {
+            inputTrack_ = null;
+          } else {
+            inputTrack_ = null;
+            inputTrackBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack getDefaultInstanceForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack build() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack buildPartial() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack(this);
+          if (inputTrackBuilder_ == null) {
+            result.inputTrack_ = inputTrack_;
+          } else {
+            result.inputTrack_ = inputTrackBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack) {
+            return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack other) {
+          if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.getDefaultInstance()) return this;
+          if (other.hasInputTrack()) {
+            mergeInputTrack(other.getInputTrack());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack inputTrack_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrackOrBuilder> inputTrackBuilder_;
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         * @return Whether the inputTrack field is set.
+         */
+        public boolean hasInputTrack() {
+          return inputTrackBuilder_ != null || inputTrack_ != null;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         * @return The inputTrack.
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack getInputTrack() {
+          if (inputTrackBuilder_ == null) {
+            return inputTrack_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.getDefaultInstance() : inputTrack_;
+          } else {
+            return inputTrackBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setInputTrack(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack value) {
+          if (inputTrackBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            inputTrack_ = value;
+            onChanged();
+          } else {
+            inputTrackBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setInputTrack(
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.Builder builderForValue) {
+          if (inputTrackBuilder_ == null) {
+            inputTrack_ = builderForValue.build();
+            onChanged();
+          } else {
+            inputTrackBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder mergeInputTrack(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack value) {
+          if (inputTrackBuilder_ == null) {
+            if (inputTrack_ != null) {
+              inputTrack_ =
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.newBuilder(inputTrack_).mergeFrom(value).buildPartial();
+            } else {
+              inputTrack_ = value;
+            }
+            onChanged();
+          } else {
+            inputTrackBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder clearInputTrack() {
+          if (inputTrackBuilder_ == null) {
+            inputTrack_ = null;
+            onChanged();
+          } else {
+            inputTrack_ = null;
+            inputTrackBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.Builder getInputTrackBuilder() {
+          
+          onChanged();
+          return getInputTrackFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrackOrBuilder getInputTrackOrBuilder() {
+          if (inputTrackBuilder_ != null) {
+            return inputTrackBuilder_.getMessageOrBuilder();
+          } else {
+            return inputTrack_ == null ?
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.getDefaultInstance() : inputTrack_;
+          }
+        }
+        /**
+         * <pre>
+         * Input track settings.
+         * </pre>
+         *
+         * <code>.yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack input_track = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrackOrBuilder> 
+            getInputTrackFieldBuilder() {
+          if (inputTrackBuilder_ == null) {
+            inputTrackBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrackOrBuilder>(
+                    getInputTrack(),
+                    getParentForChildren(),
+                    isClean());
+            inputTrack_ = null;
+          }
+          return inputTrackBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack)
+      private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack();
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SummarizationTrack>
+          PARSER = new com.google.protobuf.AbstractParser<SummarizationTrack>() {
+        @java.lang.Override
+        public SummarizationTrack parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SummarizationTrack(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SummarizationTrack> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SummarizationTrack> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface InputTrackOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Input audio track index (one-based).
+       * </pre>
+       *
+       * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The trackIndex.
+       */
+      long getTrackIndex();
+
+      /**
+       * <pre>
+       * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+       * It will be deduced automatically if not provided.
+       * In the latter case the deduction accuracy is not guaranteed.
+       * For better performance please do specify the source track language when possible.
+       * </pre>
+       *
+       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The srcLang.
+       */
+      java.lang.String getSrcLang();
+      /**
+       * <pre>
+       * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+       * It will be deduced automatically if not provided.
+       * In the latter case the deduction accuracy is not guaranteed.
+       * For better performance please do specify the source track language when possible.
+       * </pre>
+       *
+       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The bytes for srcLang.
+       */
+      com.google.protobuf.ByteString
+          getSrcLangBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack}
+     */
+    public static final class InputTrack extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack)
+        InputTrackOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use InputTrack.newBuilder() to construct.
+      private InputTrack(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private InputTrack() {
+        srcLang_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new InputTrack();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private InputTrack(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                trackIndex_ = input.readInt64();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                srcLang_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.Builder.class);
+      }
+
+      public static final int TRACK_INDEX_FIELD_NUMBER = 1;
+      private long trackIndex_;
+      /**
+       * <pre>
+       * Input audio track index (one-based).
+       * </pre>
+       *
+       * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+       * @return The trackIndex.
+       */
+      @java.lang.Override
+      public long getTrackIndex() {
+        return trackIndex_;
+      }
+
+      public static final int SRC_LANG_FIELD_NUMBER = 2;
+      private volatile java.lang.Object srcLang_;
+      /**
+       * <pre>
+       * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+       * It will be deduced automatically if not provided.
+       * In the latter case the deduction accuracy is not guaranteed.
+       * For better performance please do specify the source track language when possible.
+       * </pre>
+       *
+       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The srcLang.
+       */
+      @java.lang.Override
+      public java.lang.String getSrcLang() {
+        java.lang.Object ref = srcLang_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          srcLang_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+       * It will be deduced automatically if not provided.
+       * In the latter case the deduction accuracy is not guaranteed.
+       * For better performance please do specify the source track language when possible.
+       * </pre>
+       *
+       * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+       * @return The bytes for srcLang.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSrcLangBytes() {
+        java.lang.Object ref = srcLang_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          srcLang_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (trackIndex_ != 0L) {
+          output.writeInt64(1, trackIndex_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcLang_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, srcLang_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (trackIndex_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, trackIndex_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(srcLang_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, srcLang_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack) obj;
+
+        if (getTrackIndex()
+            != other.getTrackIndex()) return false;
+        if (!getSrcLang()
+            .equals(other.getSrcLang())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + TRACK_INDEX_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getTrackIndex());
+        hash = (37 * hash) + SRC_LANG_FIELD_NUMBER;
+        hash = (53 * hash) + getSrcLang().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack)
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrackOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          trackIndex_ = 0L;
+
+          srcLang_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack getDefaultInstanceForType() {
+          return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack build() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack buildPartial() {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack(this);
+          result.trackIndex_ = trackIndex_;
+          result.srcLang_ = srcLang_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack) {
+            return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack other) {
+          if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack.getDefaultInstance()) return this;
+          if (other.getTrackIndex() != 0L) {
+            setTrackIndex(other.getTrackIndex());
+          }
+          if (!other.getSrcLang().isEmpty()) {
+            srcLang_ = other.srcLang_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private long trackIndex_ ;
+        /**
+         * <pre>
+         * Input audio track index (one-based).
+         * </pre>
+         *
+         * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return The trackIndex.
+         */
+        @java.lang.Override
+        public long getTrackIndex() {
+          return trackIndex_;
+        }
+        /**
+         * <pre>
+         * Input audio track index (one-based).
+         * </pre>
+         *
+         * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @param value The trackIndex to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTrackIndex(long value) {
+          
+          trackIndex_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Input audio track index (one-based).
+         * </pre>
+         *
+         * <code>int64 track_index = 1 [(.yandex.cloud.value) = "&gt;=1"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTrackIndex() {
+          
+          trackIndex_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object srcLang_ = "";
+        /**
+         * <pre>
+         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * It will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @return The srcLang.
+         */
+        public java.lang.String getSrcLang() {
+          java.lang.Object ref = srcLang_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            srcLang_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * It will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @return The bytes for srcLang.
+         */
+        public com.google.protobuf.ByteString
+            getSrcLangBytes() {
+          java.lang.Object ref = srcLang_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            srcLang_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * It will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @param value The srcLang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSrcLang(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          srcLang_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * It will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSrcLang() {
+          
+          srcLang_ = getDefaultInstance().getSrcLang();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Source track language (three-letter code according to ISO 639-2/T, ISO 639-2/B, or ISO 639-3).
+         * It will be deduced automatically if not provided.
+         * In the latter case the deduction accuracy is not guaranteed.
+         * For better performance please do specify the source track language when possible.
+         * </pre>
+         *
+         * <code>string src_lang = 2 [(.yandex.cloud.length) = "&lt;=3"];</code>
+         * @param value The bytes for srcLang to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSrcLangBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          srcLang_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoSummarizationSettings.InputTrack)
+      private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack();
+      }
+
+      public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<InputTrack>
+          PARSER = new com.google.protobuf.AbstractParser<InputTrack>() {
+        @java.lang.Override
+        public InputTrack parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new InputTrack(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<InputTrack> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<InputTrack> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.InputTrack getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int TRACKS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack> tracks_;
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack> getTracksList() {
+      return tracks_;
+    }
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder> 
+        getTracksOrBuilderList() {
+      return tracks_;
+    }
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    @java.lang.Override
+    public int getTracksCount() {
+      return tracks_.size();
+    }
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack getTracks(int index) {
+      return tracks_.get(index);
+    }
+    /**
+     * <pre>
+     * Summarization settings for each track.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder getTracksOrBuilder(
+        int index) {
+      return tracks_.get(index);
+    }
+
+    public static final int PROCESS_ALL_TRACKS_FIELD_NUMBER = 3;
+    private boolean processAllTracks_;
+    /**
+     * <pre>
+     * Summarize all available tracks.
+     * If enabled, `tracks` parameter is ignored.
+     * Enables automatic source language deduction for each track
+     * and thus may lead to performance degradation.
+     * </pre>
+     *
+     * <code>bool process_all_tracks = 3;</code>
+     * @return The processAllTracks.
+     */
+    @java.lang.Override
+    public boolean getProcessAllTracks() {
+      return processAllTracks_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < tracks_.size(); i++) {
+        output.writeMessage(2, tracks_.get(i));
+      }
+      if (processAllTracks_ != false) {
+        output.writeBool(3, processAllTracks_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < tracks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, tracks_.get(i));
+      }
+      if (processAllTracks_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, processAllTracks_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings) obj;
+
+      if (!getTracksList()
+          .equals(other.getTracksList())) return false;
+      if (getProcessAllTracks()
+          != other.getProcessAllTracks()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTracksCount() > 0) {
+        hash = (37 * hash) + TRACKS_FIELD_NUMBER;
+        hash = (53 * hash) + getTracksList().hashCode();
+      }
+      hash = (37 * hash) + PROCESS_ALL_TRACKS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getProcessAllTracks());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.VideoSummarizationSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoSummarizationSettings)
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTracksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (tracksBuilder_ == null) {
+          tracks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          tracksBuilder_.clear();
+        }
+        processAllTracks_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings build() {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings buildPartial() {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings(this);
+        int from_bitField0_ = bitField0_;
+        if (tracksBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            tracks_ = java.util.Collections.unmodifiableList(tracks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.tracks_ = tracks_;
+        } else {
+          result.tracks_ = tracksBuilder_.build();
+        }
+        result.processAllTracks_ = processAllTracks_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings) {
+          return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings other) {
+        if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.getDefaultInstance()) return this;
+        if (tracksBuilder_ == null) {
+          if (!other.tracks_.isEmpty()) {
+            if (tracks_.isEmpty()) {
+              tracks_ = other.tracks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTracksIsMutable();
+              tracks_.addAll(other.tracks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tracks_.isEmpty()) {
+            if (tracksBuilder_.isEmpty()) {
+              tracksBuilder_.dispose();
+              tracksBuilder_ = null;
+              tracks_ = other.tracks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              tracksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTracksFieldBuilder() : null;
+            } else {
+              tracksBuilder_.addAllMessages(other.tracks_);
+            }
+          }
+        }
+        if (other.getProcessAllTracks() != false) {
+          setProcessAllTracks(other.getProcessAllTracks());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack> tracks_ =
+        java.util.Collections.emptyList();
+      private void ensureTracksIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          tracks_ = new java.util.ArrayList<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack>(tracks_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder> tracksBuilder_;
+
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack> getTracksList() {
+        if (tracksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tracks_);
+        } else {
+          return tracksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public int getTracksCount() {
+        if (tracksBuilder_ == null) {
+          return tracks_.size();
+        } else {
+          return tracksBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack getTracks(int index) {
+        if (tracksBuilder_ == null) {
+          return tracks_.get(index);
+        } else {
+          return tracksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public Builder setTracks(
+          int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack value) {
+        if (tracksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTracksIsMutable();
+          tracks_.set(index, value);
+          onChanged();
+        } else {
+          tracksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public Builder setTracks(
+          int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder builderForValue) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          tracks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tracksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public Builder addTracks(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack value) {
+        if (tracksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTracksIsMutable();
+          tracks_.add(value);
+          onChanged();
+        } else {
+          tracksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public Builder addTracks(
+          int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack value) {
+        if (tracksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTracksIsMutable();
+          tracks_.add(index, value);
+          onChanged();
+        } else {
+          tracksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public Builder addTracks(
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder builderForValue) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          tracks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tracksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public Builder addTracks(
+          int index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder builderForValue) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          tracks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tracksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public Builder addAllTracks(
+          java.lang.Iterable<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack> values) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tracks_);
+          onChanged();
+        } else {
+          tracksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public Builder clearTracks() {
+        if (tracksBuilder_ == null) {
+          tracks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          tracksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public Builder removeTracks(int index) {
+        if (tracksBuilder_ == null) {
+          ensureTracksIsMutable();
+          tracks_.remove(index);
+          onChanged();
+        } else {
+          tracksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder getTracksBuilder(
+          int index) {
+        return getTracksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder getTracksOrBuilder(
+          int index) {
+        if (tracksBuilder_ == null) {
+          return tracks_.get(index);  } else {
+          return tracksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder> 
+           getTracksOrBuilderList() {
+        if (tracksBuilder_ != null) {
+          return tracksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tracks_);
+        }
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder addTracksBuilder() {
+        return getTracksFieldBuilder().addBuilder(
+            yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder addTracksBuilder(
+          int index) {
+        return getTracksFieldBuilder().addBuilder(
+            index, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Summarization settings for each track.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.video.v1.VideoSummarizationSettings.SummarizationTrack tracks = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder> 
+           getTracksBuilderList() {
+        return getTracksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder> 
+          getTracksFieldBuilder() {
+        if (tracksBuilder_ == null) {
+          tracksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrack.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings.SummarizationTrackOrBuilder>(
+                  tracks_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tracks_ = null;
+        }
+        return tracksBuilder_;
+      }
+
+      private boolean processAllTracks_ ;
+      /**
+       * <pre>
+       * Summarize all available tracks.
+       * If enabled, `tracks` parameter is ignored.
+       * Enables automatic source language deduction for each track
+       * and thus may lead to performance degradation.
+       * </pre>
+       *
+       * <code>bool process_all_tracks = 3;</code>
+       * @return The processAllTracks.
+       */
+      @java.lang.Override
+      public boolean getProcessAllTracks() {
+        return processAllTracks_;
+      }
+      /**
+       * <pre>
+       * Summarize all available tracks.
+       * If enabled, `tracks` parameter is ignored.
+       * Enables automatic source language deduction for each track
+       * and thus may lead to performance degradation.
+       * </pre>
+       *
+       * <code>bool process_all_tracks = 3;</code>
+       * @param value The processAllTracks to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessAllTracks(boolean value) {
+        
+        processAllTracks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Summarize all available tracks.
+       * If enabled, `tracks` parameter is ignored.
+       * Enables automatic source language deduction for each track
+       * and thus may lead to performance degradation.
+       * </pre>
+       *
+       * <code>bool process_all_tracks = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProcessAllTracks() {
+        
+        processAllTracks_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoSummarizationSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoSummarizationSettings)
+    private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings();
+    }
+
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VideoSummarizationSettings>
+        PARSER = new com.google.protobuf.AbstractParser<VideoSummarizationSettings>() {
+      @java.lang.Override
+      public VideoSummarizationSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VideoSummarizationSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VideoSummarizationSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VideoSummarizationSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoSummarizationSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -23878,6 +31246,2002 @@ public final class VideoServiceOuterClass {
 
   }
 
+  public interface BatchGetVideoPlayerURLsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchGetVideoPlayerURLsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The channelId.
+     */
+    java.lang.String getChannelId();
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for channelId.
+     */
+    com.google.protobuf.ByteString
+        getChannelIdBytes();
+
+    /**
+     * <pre>
+     * List of requested video IDs.
+     * </pre>
+     *
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the videoIds.
+     */
+    java.util.List<java.lang.String>
+        getVideoIdsList();
+    /**
+     * <pre>
+     * List of requested video IDs.
+     * </pre>
+     *
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of videoIds.
+     */
+    int getVideoIdsCount();
+    /**
+     * <pre>
+     * List of requested video IDs.
+     * </pre>
+     *
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The videoIds at the given index.
+     */
+    java.lang.String getVideoIds(int index);
+    /**
+     * <pre>
+     * List of requested video IDs.
+     * </pre>
+     *
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the videoIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getVideoIdsBytes(int index);
+
+    /**
+     * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+     * @return The params.
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams getParams();
+    /**
+     * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+     */
+    yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+     * @return Whether the signedUrlExpirationDuration field is set.
+     */
+    boolean hasSignedUrlExpirationDuration();
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+     * @return The signedUrlExpirationDuration.
+     */
+    com.google.protobuf.Duration getSignedUrlExpirationDuration();
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+     */
+    com.google.protobuf.DurationOrBuilder getSignedUrlExpirationDurationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchGetVideoPlayerURLsRequest}
+   */
+  public static final class BatchGetVideoPlayerURLsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchGetVideoPlayerURLsRequest)
+      BatchGetVideoPlayerURLsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchGetVideoPlayerURLsRequest.newBuilder() to construct.
+    private BatchGetVideoPlayerURLsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchGetVideoPlayerURLsRequest() {
+      channelId_ = "";
+      videoIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchGetVideoPlayerURLsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchGetVideoPlayerURLsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              channelId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                videoIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              videoIds_.add(s);
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder subBuilder = null;
+              if (params_ != null) {
+                subBuilder = params_.toBuilder();
+              }
+              params_ = input.readMessage(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(params_);
+                params_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (signedUrlExpirationDuration_ != null) {
+                subBuilder = signedUrlExpirationDuration_.toBuilder();
+              }
+              signedUrlExpirationDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(signedUrlExpirationDuration_);
+                signedUrlExpirationDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          videoIds_ = videoIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest.Builder.class);
+    }
+
+    public static final int CHANNEL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object channelId_;
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The channelId.
+     */
+    @java.lang.Override
+    public java.lang.String getChannelId() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        channelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the channel.
+     * </pre>
+     *
+     * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for channelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChannelIdBytes() {
+      java.lang.Object ref = channelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        channelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VIDEO_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList videoIds_;
+    /**
+     * <pre>
+     * List of requested video IDs.
+     * </pre>
+     *
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return A list containing the videoIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getVideoIdsList() {
+      return videoIds_;
+    }
+    /**
+     * <pre>
+     * List of requested video IDs.
+     * </pre>
+     *
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The count of videoIds.
+     */
+    public int getVideoIdsCount() {
+      return videoIds_.size();
+    }
+    /**
+     * <pre>
+     * List of requested video IDs.
+     * </pre>
+     *
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the element to return.
+     * @return The videoIds at the given index.
+     */
+    public java.lang.String getVideoIds(int index) {
+      return videoIds_.get(index);
+    }
+    /**
+     * <pre>
+     * List of requested video IDs.
+     * </pre>
+     *
+     * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the videoIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getVideoIdsBytes(int index) {
+      return videoIds_.getByteString(index);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 3;
+    private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams params_;
+    /**
+     * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams getParams() {
+      return params_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder getParamsOrBuilder() {
+      return getParams();
+    }
+
+    public static final int SIGNED_URL_EXPIRATION_DURATION_FIELD_NUMBER = 4;
+    private com.google.protobuf.Duration signedUrlExpirationDuration_;
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+     * @return Whether the signedUrlExpirationDuration field is set.
+     */
+    @java.lang.Override
+    public boolean hasSignedUrlExpirationDuration() {
+      return signedUrlExpirationDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+     * @return The signedUrlExpirationDuration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getSignedUrlExpirationDuration() {
+      return signedUrlExpirationDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : signedUrlExpirationDuration_;
+    }
+    /**
+     * <pre>
+     * Optional field, used to set custom url expiration duration for videos with sign_url_access
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getSignedUrlExpirationDurationOrBuilder() {
+      return getSignedUrlExpirationDuration();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, channelId_);
+      }
+      for (int i = 0; i < videoIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, videoIds_.getRaw(i));
+      }
+      if (params_ != null) {
+        output.writeMessage(3, getParams());
+      }
+      if (signedUrlExpirationDuration_ != null) {
+        output.writeMessage(4, getSignedUrlExpirationDuration());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, channelId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < videoIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(videoIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getVideoIdsList().size();
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getParams());
+      }
+      if (signedUrlExpirationDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSignedUrlExpirationDuration());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest) obj;
+
+      if (!getChannelId()
+          .equals(other.getChannelId())) return false;
+      if (!getVideoIdsList()
+          .equals(other.getVideoIdsList())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasSignedUrlExpirationDuration() != other.hasSignedUrlExpirationDuration()) return false;
+      if (hasSignedUrlExpirationDuration()) {
+        if (!getSignedUrlExpirationDuration()
+            .equals(other.getSignedUrlExpirationDuration())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHANNEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChannelId().hashCode();
+      if (getVideoIdsCount() > 0) {
+        hash = (37 * hash) + VIDEO_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getVideoIdsList().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasSignedUrlExpirationDuration()) {
+        hash = (37 * hash) + SIGNED_URL_EXPIRATION_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSignedUrlExpirationDuration().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchGetVideoPlayerURLsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchGetVideoPlayerURLsRequest)
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        channelId_ = "";
+
+        videoIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (paramsBuilder_ == null) {
+          params_ = null;
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDuration_ = null;
+        } else {
+          signedUrlExpirationDuration_ = null;
+          signedUrlExpirationDurationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest build() {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest buildPartial() {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.channelId_ = channelId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          videoIds_ = videoIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.videoIds_ = videoIds_;
+        if (paramsBuilder_ == null) {
+          result.params_ = params_;
+        } else {
+          result.params_ = paramsBuilder_.build();
+        }
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          result.signedUrlExpirationDuration_ = signedUrlExpirationDuration_;
+        } else {
+          result.signedUrlExpirationDuration_ = signedUrlExpirationDurationBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest) {
+          return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest other) {
+        if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest.getDefaultInstance()) return this;
+        if (!other.getChannelId().isEmpty()) {
+          channelId_ = other.channelId_;
+          onChanged();
+        }
+        if (!other.videoIds_.isEmpty()) {
+          if (videoIds_.isEmpty()) {
+            videoIds_ = other.videoIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureVideoIdsIsMutable();
+            videoIds_.addAll(other.videoIds_);
+          }
+          onChanged();
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasSignedUrlExpirationDuration()) {
+          mergeSignedUrlExpirationDuration(other.getSignedUrlExpirationDuration());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object channelId_ = "";
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The channelId.
+       */
+      public java.lang.String getChannelId() {
+        java.lang.Object ref = channelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          channelId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for channelId.
+       */
+      public com.google.protobuf.ByteString
+          getChannelIdBytes() {
+        java.lang.Object ref = channelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          channelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        channelId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChannelId() {
+        
+        channelId_ = getDefaultInstance().getChannelId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the channel.
+       * </pre>
+       *
+       * <code>string channel_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for channelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChannelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        channelId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList videoIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureVideoIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          videoIds_ = new com.google.protobuf.LazyStringArrayList(videoIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of requested video IDs.
+       * </pre>
+       *
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return A list containing the videoIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getVideoIdsList() {
+        return videoIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of requested video IDs.
+       * </pre>
+       *
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The count of videoIds.
+       */
+      public int getVideoIdsCount() {
+        return videoIds_.size();
+      }
+      /**
+       * <pre>
+       * List of requested video IDs.
+       * </pre>
+       *
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the element to return.
+       * @return The videoIds at the given index.
+       */
+      public java.lang.String getVideoIds(int index) {
+        return videoIds_.get(index);
+      }
+      /**
+       * <pre>
+       * List of requested video IDs.
+       * </pre>
+       *
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the videoIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getVideoIdsBytes(int index) {
+        return videoIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of requested video IDs.
+       * </pre>
+       *
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param index The index to set the value at.
+       * @param value The videoIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVideoIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureVideoIdsIsMutable();
+        videoIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested video IDs.
+       * </pre>
+       *
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The videoIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addVideoIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureVideoIdsIsMutable();
+        videoIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested video IDs.
+       * </pre>
+       *
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param values The videoIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllVideoIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureVideoIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, videoIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested video IDs.
+       * </pre>
+       *
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVideoIds() {
+        videoIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of requested video IDs.
+       * </pre>
+       *
+       * <code>repeated string video_ids = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes of the videoIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addVideoIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureVideoIdsIsMutable();
+        videoIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return paramsBuilder_ != null || params_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+       * @return The params.
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+       */
+      public Builder setParams(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+       */
+      public Builder setParams(
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+       */
+      public Builder mergeParams(yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams value) {
+        if (paramsBuilder_ == null) {
+          if (params_ != null) {
+            params_ =
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.newBuilder(params_).mergeFrom(value).buildPartial();
+          } else {
+            params_ = value;
+          }
+          onChanged();
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+       */
+      public Builder clearParams() {
+        if (paramsBuilder_ == null) {
+          params_ = null;
+          onChanged();
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder getParamsBuilder() {
+        
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoPlayerParams params = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParams.Builder, yandex.cloud.api.video.v1.VideoServiceOuterClass.VideoPlayerParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.google.protobuf.Duration signedUrlExpirationDuration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> signedUrlExpirationDurationBuilder_;
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+       * @return Whether the signedUrlExpirationDuration field is set.
+       */
+      public boolean hasSignedUrlExpirationDuration() {
+        return signedUrlExpirationDurationBuilder_ != null || signedUrlExpirationDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+       * @return The signedUrlExpirationDuration.
+       */
+      public com.google.protobuf.Duration getSignedUrlExpirationDuration() {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          return signedUrlExpirationDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : signedUrlExpirationDuration_;
+        } else {
+          return signedUrlExpirationDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+       */
+      public Builder setSignedUrlExpirationDuration(com.google.protobuf.Duration value) {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          signedUrlExpirationDuration_ = value;
+          onChanged();
+        } else {
+          signedUrlExpirationDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+       */
+      public Builder setSignedUrlExpirationDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          signedUrlExpirationDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+       */
+      public Builder mergeSignedUrlExpirationDuration(com.google.protobuf.Duration value) {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          if (signedUrlExpirationDuration_ != null) {
+            signedUrlExpirationDuration_ =
+              com.google.protobuf.Duration.newBuilder(signedUrlExpirationDuration_).mergeFrom(value).buildPartial();
+          } else {
+            signedUrlExpirationDuration_ = value;
+          }
+          onChanged();
+        } else {
+          signedUrlExpirationDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+       */
+      public Builder clearSignedUrlExpirationDuration() {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDuration_ = null;
+          onChanged();
+        } else {
+          signedUrlExpirationDuration_ = null;
+          signedUrlExpirationDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+       */
+      public com.google.protobuf.Duration.Builder getSignedUrlExpirationDurationBuilder() {
+        
+        onChanged();
+        return getSignedUrlExpirationDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getSignedUrlExpirationDurationOrBuilder() {
+        if (signedUrlExpirationDurationBuilder_ != null) {
+          return signedUrlExpirationDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return signedUrlExpirationDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : signedUrlExpirationDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional field, used to set custom url expiration duration for videos with sign_url_access
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration signed_url_expiration_duration = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getSignedUrlExpirationDurationFieldBuilder() {
+        if (signedUrlExpirationDurationBuilder_ == null) {
+          signedUrlExpirationDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getSignedUrlExpirationDuration(),
+                  getParentForChildren(),
+                  isClean());
+          signedUrlExpirationDuration_ = null;
+        }
+        return signedUrlExpirationDurationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchGetVideoPlayerURLsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchGetVideoPlayerURLsRequest)
+    private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest();
+    }
+
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchGetVideoPlayerURLsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BatchGetVideoPlayerURLsRequest>() {
+      @java.lang.Override
+      public BatchGetVideoPlayerURLsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchGetVideoPlayerURLsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchGetVideoPlayerURLsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchGetVideoPlayerURLsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BatchGetVideoPlayerURLsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.BatchGetVideoPlayerURLsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string player_urls = 1;</code>
+     * @return A list containing the playerUrls.
+     */
+    java.util.List<java.lang.String>
+        getPlayerUrlsList();
+    /**
+     * <code>repeated string player_urls = 1;</code>
+     * @return The count of playerUrls.
+     */
+    int getPlayerUrlsCount();
+    /**
+     * <code>repeated string player_urls = 1;</code>
+     * @param index The index of the element to return.
+     * @return The playerUrls at the given index.
+     */
+    java.lang.String getPlayerUrls(int index);
+    /**
+     * <code>repeated string player_urls = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the playerUrls at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPlayerUrlsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.BatchGetVideoPlayerURLsResponse}
+   */
+  public static final class BatchGetVideoPlayerURLsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.BatchGetVideoPlayerURLsResponse)
+      BatchGetVideoPlayerURLsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BatchGetVideoPlayerURLsResponse.newBuilder() to construct.
+    private BatchGetVideoPlayerURLsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BatchGetVideoPlayerURLsResponse() {
+      playerUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BatchGetVideoPlayerURLsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BatchGetVideoPlayerURLsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                playerUrls_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              playerUrls_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          playerUrls_ = playerUrls_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse.Builder.class);
+    }
+
+    public static final int PLAYER_URLS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList playerUrls_;
+    /**
+     * <code>repeated string player_urls = 1;</code>
+     * @return A list containing the playerUrls.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPlayerUrlsList() {
+      return playerUrls_;
+    }
+    /**
+     * <code>repeated string player_urls = 1;</code>
+     * @return The count of playerUrls.
+     */
+    public int getPlayerUrlsCount() {
+      return playerUrls_.size();
+    }
+    /**
+     * <code>repeated string player_urls = 1;</code>
+     * @param index The index of the element to return.
+     * @return The playerUrls at the given index.
+     */
+    public java.lang.String getPlayerUrls(int index) {
+      return playerUrls_.get(index);
+    }
+    /**
+     * <code>repeated string player_urls = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the playerUrls at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPlayerUrlsBytes(int index) {
+      return playerUrls_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < playerUrls_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, playerUrls_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < playerUrls_.size(); i++) {
+          dataSize += computeStringSizeNoTag(playerUrls_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPlayerUrlsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse other = (yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse) obj;
+
+      if (!getPlayerUrlsList()
+          .equals(other.getPlayerUrlsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPlayerUrlsCount() > 0) {
+        hash = (37 * hash) + PLAYER_URLS_FIELD_NUMBER;
+        hash = (53 * hash) + getPlayerUrlsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.BatchGetVideoPlayerURLsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.BatchGetVideoPlayerURLsResponse)
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse.class, yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        playerUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse build() {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse buildPartial() {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse result = new yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          playerUrls_ = playerUrls_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.playerUrls_ = playerUrls_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse) {
+          return mergeFrom((yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse other) {
+        if (other == yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse.getDefaultInstance()) return this;
+        if (!other.playerUrls_.isEmpty()) {
+          if (playerUrls_.isEmpty()) {
+            playerUrls_ = other.playerUrls_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePlayerUrlsIsMutable();
+            playerUrls_.addAll(other.playerUrls_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList playerUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensurePlayerUrlsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          playerUrls_ = new com.google.protobuf.LazyStringArrayList(playerUrls_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string player_urls = 1;</code>
+       * @return A list containing the playerUrls.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPlayerUrlsList() {
+        return playerUrls_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string player_urls = 1;</code>
+       * @return The count of playerUrls.
+       */
+      public int getPlayerUrlsCount() {
+        return playerUrls_.size();
+      }
+      /**
+       * <code>repeated string player_urls = 1;</code>
+       * @param index The index of the element to return.
+       * @return The playerUrls at the given index.
+       */
+      public java.lang.String getPlayerUrls(int index) {
+        return playerUrls_.get(index);
+      }
+      /**
+       * <code>repeated string player_urls = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the playerUrls at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPlayerUrlsBytes(int index) {
+        return playerUrls_.getByteString(index);
+      }
+      /**
+       * <code>repeated string player_urls = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The playerUrls to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlayerUrls(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePlayerUrlsIsMutable();
+        playerUrls_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string player_urls = 1;</code>
+       * @param value The playerUrls to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPlayerUrls(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePlayerUrlsIsMutable();
+        playerUrls_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string player_urls = 1;</code>
+       * @param values The playerUrls to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPlayerUrls(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePlayerUrlsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, playerUrls_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string player_urls = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlayerUrls() {
+        playerUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string player_urls = 1;</code>
+       * @param value The bytes of the playerUrls to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPlayerUrlsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensurePlayerUrlsIsMutable();
+        playerUrls_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.BatchGetVideoPlayerURLsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.BatchGetVideoPlayerURLsResponse)
+    private static final yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse();
+    }
+
+    public static yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BatchGetVideoPlayerURLsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<BatchGetVideoPlayerURLsResponse>() {
+      @java.lang.Override
+      public BatchGetVideoPlayerURLsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BatchGetVideoPlayerURLsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BatchGetVideoPlayerURLsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BatchGetVideoPlayerURLsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoServiceOuterClass.BatchGetVideoPlayerURLsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetVideoManifestsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.GetVideoManifestsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -25321,11 +34685,6 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_VideoPublicAccessParams_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_VideoSignURLAccessParams_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -25355,6 +34714,46 @@ public final class VideoServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_TranscodeVideoRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_VideoTranslationSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_TranscodeVideoMetadata_descriptor;
   private static final 
@@ -25416,6 +34815,16 @@ public final class VideoServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_GetVideoPlayerURLResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_GetVideoManifestsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -25444,139 +34853,175 @@ public final class VideoServiceOuterClass {
       "ud/validation.proto\032$yandex/cloud/video/" +
       "v1/manifest.proto\032!yandex/cloud/video/v1" +
       "/video.proto\"1\n\017GetVideoRequest\022\036\n\010video" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\245\001\n\020ListVideoReq" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\247\001\n\020ListVideoReq" +
       "uest\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034" +
-      "\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npage_tok" +
-      "en\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n" +
-      "\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"`\n\021ListV" +
-      "ideoResponse\022,\n\006videos\030\001 \003(\0132\034.yandex.cl" +
-      "oud.video.v1.Video\022\027\n\017next_page_token\030d " +
-      "\001(\tJ\004\010\002\020d\"_\n\025BatchGetVideosRequest\022 \n\nch" +
-      "annel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_id" +
-      "s\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"F\n\026BatchGetVi" +
-      "deosResponse\022,\n\006videos\030\001 \003(\0132\034.yandex.cl" +
-      "oud.video.v1.Video\"\231\006\n\022CreateVideoReques" +
-      "t\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\023\n\005t" +
-      "itle\030\002 \001(\tB\004\350\3071\001\022\023\n\013description\030\003 \001(\t\022\036\n" +
-      "\014thumbnail_id\030\004 \001(\tB\010\212\3101\004<=50\022<\n\016auto_tr" +
-      "anscode\030\005 \001(\0162$.yandex.cloud.video.v1.Au" +
-      "toTranscode\022-\n\tenable_ad\030\010 \001(\0132\032.google." +
-      "protobuf.BoolValue\022\213\001\n\006labels\030\310\001 \003(\01325.y" +
-      "andex.cloud.video.v1.CreateVideoRequest." +
-      "LabelsEntryBC\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_.@:/" +
-      "0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video.v1." +
-      "VideoTUSDParamsH\000\022H\n\rpublic_access\030\320\017 \001(" +
-      "\0132..yandex.cloud.video.v1.VideoPublicAcc" +
-      "essParamsH\001\022Q\n\022auth_system_access\030\322\017 \001(\013" +
-      "22.yandex.cloud.video.v1.VideoAuthSystem" +
-      "AccessParamsH\001\022K\n\017sign_url_access\030\323\017 \001(\013" +
-      "2/.yandex.cloud.video.v1.VideoSignURLAcc" +
-      "essParamsH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001B\016\n\006source\022\004\300\3011\001B\025\n\rac" +
-      "cess_rights\022\004\300\3011\001J\006\010\321\017\020\322\017J\004\010\006\020\010J\005\010\t\020\310\001J\006" +
-      "\010\311\001\020\350\007J\006\010\351\007\020\320\017\"?\n\017VideoTUSDParams\022\031\n\tfil" +
-      "e_size\030\001 \001(\003B\006\372\3071\002>0\022\021\n\tfile_name\030\002 \001(\t\"" +
-      "\031\n\027VideoPublicAccessParams\"\035\n\033VideoAuthS" +
-      "ystemAccessParams\"\032\n\030VideoSignURLAccessP" +
-      "arams\"\'\n\023CreateVideoMetadata\022\020\n\010video_id" +
-      "\030\001 \001(\t\"\352\005\n\022UpdateVideoRequest\022\036\n\010video_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfield_mask\030\002 \001(" +
-      "\0132\032.google.protobuf.FieldMask\022\r\n\005title\030\003" +
-      " \001(\t\022\023\n\013description\030\004 \001(\t\022\036\n\014thumbnail_i" +
-      "d\030\005 \001(\tB\010\212\3101\004<=50\022<\n\016auto_transcode\030\006 \001(" +
-      "\0162$.yandex.cloud.video.v1.AutoTranscode\022" +
-      "-\n\tenable_ad\030\010 \001(\0132\032.google.protobuf.Boo" +
-      "lValue\022\213\001\n\006labels\030\310\001 \003(\01325.yandex.cloud." +
-      "video.v1.UpdateVideoRequest.LabelsEntryB" +
-      "C\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_.@:/0-9a-z]*\262\3101\006" +
-      "\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022H\n\rpublic_a" +
-      "ccess\030\320\017 \001(\0132..yandex.cloud.video.v1.Vid" +
-      "eoPublicAccessParamsH\000\022Q\n\022auth_system_ac" +
-      "cess\030\322\017 \001(\01322.yandex.cloud.video.v1.Vide" +
-      "oAuthSystemAccessParamsH\000\022K\n\017sign_url_ac" +
-      "cess\030\323\017 \001(\0132/.yandex.cloud.video.v1.Vide" +
-      "oSignURLAccessParamsH\000\032-\n\013LabelsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\raccess_" +
-      "rightsJ\006\010\321\017\020\322\017J\004\010\007\020\010J\005\010\t\020\310\001J\006\010\311\001\020\320\017\"\'\n\023U" +
-      "pdateVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"o\n\025" +
-      "TranscodeVideoRequest\022\020\n\010video_id\030\001 \001(\t\022" +
-      ".\n\nfield_mask\030\002 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\022\024\n\014subtitle_ids\030\003 \003(\t\"*\n\026Transco" +
-      "deVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"4\n\022Del" +
-      "eteVideoRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\"\'\n\023DeleteVideoMetadata\022\020\n\010video_" +
-      "id\030\001 \001(\t\"b\n\030BatchDeleteVideosRequest\022 \n\n" +
+      "\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\037\n\npage_tok" +
+      "en\030e \001(\tB\013\212\3101\007<=15000\022\020\n\010order_by\030f \001(\t\022" +
+      "\032\n\006filter\030g \001(\tB\n\212\3101\006<=1000J\004\010\002\020d\"`\n\021Lis" +
+      "tVideoResponse\022,\n\006videos\030\001 \003(\0132\034.yandex." +
+      "cloud.video.v1.Video\022\027\n\017next_page_token\030" +
+      "d \001(\tJ\004\010\002\020d\"_\n\025BatchGetVideosRequest\022 \n\n" +
       "channel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_" +
-      "ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\".\n\031BatchDel" +
-      "eteVideosMetadata\022\021\n\tvideo_ids\030\001 \003(\t\"\324\001\n" +
-      "\031PerformVideoActionRequest\022\036\n\010video_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\007publish\030\350\007 \001(\0132).y" +
-      "andex.cloud.video.v1.PublishVideoActionH" +
-      "\000\022A\n\tunpublish\030\351\007 \001(\0132+.yandex.cloud.vid" +
-      "eo.v1.UnpublishVideoActionH\000B\016\n\006action\022\004" +
-      "\300\3011\001J\005\010\002\020\350\007\"\024\n\022PublishVideoAction\"\026\n\024Unp" +
-      "ublishVideoAction\".\n\032PerformVideoActionM" +
-      "etadata\022\020\n\010video_id\030\001 \001(\t\"\267\001\n\030GetVideoPl" +
-      "ayerURLRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\0228\n\006params\030\002 \001(\0132(.yandex.cloud.vi" +
-      "deo.v1.VideoPlayerParams\022A\n\036signed_url_e" +
-      "xpiration_duration\030\003 \001(\0132\031.google.protob" +
-      "uf.Duration\"C\n\021VideoPlayerParams\022\014\n\004mute" +
-      "\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010" +
-      "\"=\n\031GetVideoPlayerURLResponse\022\022\n\nplayer_" +
-      "url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\":\n\030GetVideoManif" +
-      "estsRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"O\n\031GetVideoManifestsResponse\0222\n\tmani" +
-      "fests\030\001 \003(\0132\037.yandex.cloud.video.v1.Mani" +
-      "fest2\361\r\n\014VideoService\022p\n\003Get\022&.yandex.cl" +
-      "oud.video.v1.GetVideoRequest\032\034.yandex.cl" +
-      "oud.video.v1.Video\"#\202\323\344\223\002\035\022\033/video/v1/vi" +
-      "deos/{video_id}\022s\n\004List\022\'.yandex.cloud.v" +
-      "ideo.v1.ListVideoRequest\032(.yandex.cloud." +
-      "video.v1.ListVideoResponse\"\030\202\323\344\223\002\022\022\020/vid" +
-      "eo/v1/videos\022\215\001\n\010BatchGet\022,.yandex.cloud" +
-      ".video.v1.BatchGetVideosRequest\032-.yandex" +
-      ".cloud.video.v1.BatchGetVideosResponse\"$" +
-      "\202\323\344\223\002\036\"\031/video/v1/videos:batchGet:\001*\022\223\001\n" +
-      "\006Create\022).yandex.cloud.video.v1.CreateVi" +
-      "deoRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\";\202\323\344\223\002\025\"\020/video/v1/videos:\001*\262\322*\034\n\023" +
-      "CreateVideoMetadata\022\005Video\022\236\001\n\006Update\022)." +
-      "yandex.cloud.video.v1.UpdateVideoRequest" +
-      "\032!.yandex.cloud.operation.Operation\"F\202\323\344" +
-      "\223\002 2\033/video/v1/videos/{video_id}:\001*\262\322*\034\n" +
-      "\023UpdateVideoMetadata\022\005Video\022\261\001\n\tTranscod" +
-      "e\022,.yandex.cloud.video.v1.TranscodeVideo" +
+      "ids\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\"F\n\026BatchGet" +
+      "VideosResponse\022,\n\006videos\030\001 \003(\0132\034.yandex." +
+      "cloud.video.v1.Video\"\207\006\n\022CreateVideoRequ" +
+      "est\022 \n\nchannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
+      "\005title\030\002 \001(\tB\016\350\3071\001\212\3101\006<=2500\022\023\n\013descript" +
+      "ion\030\003 \001(\t\022\036\n\014thumbnail_id\030\004 \001(\tB\010\212\3101\004<=5" +
+      "0\022<\n\016auto_transcode\030\005 \001(\0162$.yandex.cloud" +
+      ".video.v1.AutoTranscode\0220\n\014auto_publish\030" +
+      "\007 \001(\0132\032.google.protobuf.BoolValue\022-\n\tena" +
+      "ble_ad\030\010 \001(\0132\032.google.protobuf.BoolValue" +
+      "\022\216\001\n\006labels\030\310\001 \003(\01325.yandex.cloud.video." +
+      "v1.CreateVideoRequest.LabelsEntryBF\202\3101\004<" +
+      "=64\212\3101\004<=63\362\3071\022[-_.@:/0-9a-zA-Z]*\262\3101\006\032\004<" +
+      "=63\262\3101\022\022\020[a-z][-_0-9a-z]*\0227\n\004tusd\030\350\007 \001(\013" +
+      "2&.yandex.cloud.video.v1.VideoTUSDParams" +
+      "H\000\022H\n\rpublic_access\030\320\017 \001(\0132..yandex.clou" +
+      "d.video.v1.VideoPublicAccessParamsH\001\022K\n\017" +
+      "sign_url_access\030\323\017 \001(\0132/.yandex.cloud.vi" +
+      "deo.v1.VideoSignURLAccessParamsH\001\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "B\016\n\006source\022\004\300\3011\001B\017\n\raccess_rightsJ\006\010\321\017\020\322" +
+      "\017J\006\010\322\017\020\323\017J\004\010\006\020\007J\005\010\t\020\310\001J\006\010\311\001\020\350\007J\006\010\351\007\020\320\017\"?" +
+      "\n\017VideoTUSDParams\022\031\n\tfile_size\030\001 \001(\003B\006\372\307" +
+      "1\002>0\022\021\n\tfile_name\030\002 \001(\t\"\031\n\027VideoPublicAc" +
+      "cessParams\"\032\n\030VideoSignURLAccessParams\"\'" +
+      "\n\023CreateVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"" +
+      "\264\005\n\022UpdateVideoRequest\022\036\n\010video_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\0224\n\nfield_mask\030\002 \001(\0132\032.goo" +
+      "gle.protobuf.FieldMaskB\004\350\3071\001\022\031\n\005title\030\003 " +
+      "\001(\tB\n\212\3101\006<=2500\022\023\n\013description\030\004 \001(\t\022\036\n\014" +
+      "thumbnail_id\030\005 \001(\tB\010\212\3101\004<=50\022<\n\016auto_tra" +
+      "nscode\030\006 \001(\0162$.yandex.cloud.video.v1.Aut" +
+      "oTranscode\022-\n\tenable_ad\030\010 \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022\216\001\n\006labels\030\310\001 \003(\01325.ya" +
+      "ndex.cloud.video.v1.UpdateVideoRequest.L" +
+      "abelsEntryBF\202\3101\004<=64\212\3101\004<=63\362\3071\022[-_.@:/0" +
+      "-9a-zA-Z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z" +
+      "]*\022H\n\rpublic_access\030\320\017 \001(\0132..yandex.clou" +
+      "d.video.v1.VideoPublicAccessParamsH\000\022K\n\017" +
+      "sign_url_access\030\323\017 \001(\0132/.yandex.cloud.vi" +
+      "deo.v1.VideoSignURLAccessParamsH\000\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "B\017\n\raccess_rightsJ\006\010\321\017\020\322\017J\006\010\322\017\020\323\017J\004\010\007\020\010J" +
+      "\005\010\t\020\310\001J\006\010\311\001\020\320\017\"\'\n\023UpdateVideoMetadata\022\020\n" +
+      "\010video_id\030\001 \001(\t\"\227\002\n\025TranscodeVideoReques" +
+      "t\022\020\n\010video_id\030\001 \001(\t\0224\n\nfield_mask\030\002 \001(\0132" +
+      "\032.google.protobuf.FieldMaskB\004\350\3071\001\022\024\n\014sub" +
+      "title_ids\030\003 \003(\t\022M\n\024translation_settings\030" +
+      "\004 \001(\0132/.yandex.cloud.video.v1.VideoTrans" +
+      "lationSettings\022Q\n\026summarization_settings" +
+      "\030\005 \001(\01321.yandex.cloud.video.v1.VideoSumm" +
+      "arizationSettings\"\323\004\n\030VideoTranslationSe" +
+      "ttings\022P\n\006tracks\030\001 \003(\0132@.yandex.cloud.vi" +
+      "deo.v1.VideoTranslationSettings.Translat" +
+      "ionTrack\032\206\002\n\020TranslationTrack\022U\n\013input_t" +
+      "rack\030\001 \001(\0132:.yandex.cloud.video.v1.Video" +
+      "TranslationSettings.InputTrackB\004\350\3071\001\022P\n\t" +
+      "subtitles\030\002 \003(\0132=.yandex.cloud.video.v1." +
+      "VideoTranslationSettings.SubtitleTrack\022I" +
+      "\n\005audio\030\003 \003(\0132:.yandex.cloud.video.v1.Vi" +
+      "deoTranslationSettings.AudioTrack\032E\n\nInp" +
+      "utTrack\022\034\n\013track_index\030\001 \001(\003B\007\372\3071\003>=1\022\031\n" +
+      "\010src_lang\030\002 \001(\tB\007\212\3101\003<=3\032K\n\rSubtitleTrac" +
+      "k\022\035\n\010dst_lang\030\001 \001(\tB\013\350\3071\001\212\3101\0032-3\022\033\n\005labe" +
+      "l\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\032H\n\nAudioTrack\022\035\n\010d" +
+      "st_lang\030\001 \001(\tB\013\350\3071\001\212\3101\0032-3\022\033\n\005label\030\002 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"\312\002\n\032VideoSummarizationSe" +
+      "ttings\022T\n\006tracks\030\002 \003(\0132D.yandex.cloud.vi" +
+      "deo.v1.VideoSummarizationSettings.Summar" +
+      "izationTrack\022\032\n\022process_all_tracks\030\003 \001(\010" +
+      "\032m\n\022SummarizationTrack\022W\n\013input_track\030\001 " +
+      "\001(\0132<.yandex.cloud.video.v1.VideoSummari" +
+      "zationSettings.InputTrackB\004\350\3071\001\032E\n\nInput" +
+      "Track\022\034\n\013track_index\030\001 \001(\003B\007\372\3071\003>=1\022\031\n\010s" +
+      "rc_lang\030\002 \001(\tB\007\212\3101\003<=3J\004\010\001\020\002\"*\n\026Transcod" +
+      "eVideoMetadata\022\020\n\010video_id\030\001 \001(\t\"4\n\022Dele" +
+      "teVideoRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\"\'\n\023DeleteVideoMetadata\022\020\n\010video_i" +
+      "d\030\001 \001(\t\"b\n\030BatchDeleteVideosRequest\022 \n\nc" +
+      "hannel_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022$\n\tvideo_i" +
+      "ds\030\002 \003(\tB\021\202\3101\0051-100\212\3101\004<=50\".\n\031BatchDele" +
+      "teVideosMetadata\022\021\n\tvideo_ids\030\001 \003(\t\"\324\001\n\031" +
+      "PerformVideoActionRequest\022\036\n\010video_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022=\n\007publish\030\350\007 \001(\0132).ya" +
+      "ndex.cloud.video.v1.PublishVideoActionH\000" +
+      "\022A\n\tunpublish\030\351\007 \001(\0132+.yandex.cloud.vide" +
+      "o.v1.UnpublishVideoActionH\000B\016\n\006action\022\004\300" +
+      "\3011\001J\005\010\002\020\350\007\"\024\n\022PublishVideoAction\"\026\n\024Unpu" +
+      "blishVideoAction\".\n\032PerformVideoActionMe" +
+      "tadata\022\020\n\010video_id\030\001 \001(\t\"\267\001\n\030GetVideoPla" +
+      "yerURLRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\0228\n\006params\030\002 \001(\0132(.yandex.cloud.vid" +
+      "eo.v1.VideoPlayerParams\022A\n\036signed_url_ex" +
+      "piration_duration\030\003 \001(\0132\031.google.protobu" +
+      "f.Duration\"C\n\021VideoPlayerParams\022\014\n\004mute\030" +
+      "\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\"" +
+      "=\n\031GetVideoPlayerURLResponse\022\022\n\nplayer_u" +
+      "rl\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\"\345\001\n\036BatchGetVideo" +
+      "PlayerURLsRequest\022 \n\nchannel_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022$\n\tvideo_ids\030\002 \003(\tB\021\202\3101\0051-10" +
+      "0\212\3101\004<=50\0228\n\006params\030\003 \001(\0132(.yandex.cloud" +
+      ".video.v1.VideoPlayerParams\022A\n\036signed_ur" +
+      "l_expiration_duration\030\004 \001(\0132\031.google.pro" +
+      "tobuf.Duration\"6\n\037BatchGetVideoPlayerURL" +
+      "sResponse\022\023\n\013player_urls\030\001 \003(\t\":\n\030GetVid" +
+      "eoManifestsRequest\022\036\n\010video_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"O\n\031GetVideoManifestsResponse\022" +
+      "2\n\tmanifests\030\001 \003(\0132\037.yandex.cloud.video." +
+      "v1.Manifest2\247\017\n\014VideoService\022p\n\003Get\022&.ya" +
+      "ndex.cloud.video.v1.GetVideoRequest\032\034.ya" +
+      "ndex.cloud.video.v1.Video\"#\202\323\344\223\002\035\022\033/vide" +
+      "o/v1/videos/{video_id}\022s\n\004List\022\'.yandex." +
+      "cloud.video.v1.ListVideoRequest\032(.yandex" +
+      ".cloud.video.v1.ListVideoResponse\"\030\202\323\344\223\002" +
+      "\022\022\020/video/v1/videos\022\215\001\n\010BatchGet\022,.yande" +
+      "x.cloud.video.v1.BatchGetVideosRequest\032-" +
+      ".yandex.cloud.video.v1.BatchGetVideosRes" +
+      "ponse\"$\202\323\344\223\002\036\"\031/video/v1/videos:batchGet" +
+      ":\001*\022\223\001\n\006Create\022).yandex.cloud.video.v1.C" +
+      "reateVideoRequest\032!.yandex.cloud.operati" +
+      "on.Operation\";\202\323\344\223\002\025\"\020/video/v1/videos:\001" +
+      "*\262\322*\034\n\023CreateVideoMetadata\022\005Video\022\236\001\n\006Up" +
+      "date\022).yandex.cloud.video.v1.UpdateVideo" +
       "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"S\202\323\344\223\002*\"%/video/v1/videos/{video_id}:" +
-      "transcode:\001*\262\322*\037\n\026TranscodeVideoMetadata" +
-      "\022\005Video\022\253\001\n\006Delete\022).yandex.cloud.video." +
-      "v1.DeleteVideoRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"S\202\323\344\223\002\035*\033/video/v1/vide" +
-      "os/{video_id}\262\322*,\n\023DeleteVideoMetadata\022\025" +
-      "google.protobuf.Empty\022\300\001\n\013BatchDelete\022/." +
-      "yandex.cloud.video.v1.BatchDeleteVideosR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"]\202\323\344\223\002!\"\034/video/v1/videos:batchDelete:" +
-      "\001*\262\322*2\n\031BatchDeleteVideosMetadata\022\025googl" +
-      "e.protobuf.Empty\022\301\001\n\rPerformAction\0220.yan" +
-      "dex.cloud.video.v1.PerformVideoActionReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "[\202\323\344\223\002.\")/video/v1/videos/{video_id}:per" +
-      "formAction:\001*\262\322*#\n\032PerformVideoActionMet" +
-      "adata\022\005Video\022\243\001\n\014GetPlayerURL\022/.yandex.c" +
-      "loud.video.v1.GetVideoPlayerURLRequest\0320" +
-      ".yandex.cloud.video.v1.GetVideoPlayerURL" +
-      "Response\"0\202\323\344\223\002*\022(/video/v1/videos/{vide" +
-      "o_id}:getPlayerURL\022\243\001\n\014GetManifests\022/.ya" +
-      "ndex.cloud.video.v1.GetVideoManifestsReq" +
-      "uest\0320.yandex.cloud.video.v1.GetVideoMan" +
-      "ifestsResponse\"0\202\323\344\223\002*\022(/video/v1/videos" +
-      "/{video_id}:getManifestsB\\\n\031yandex.cloud" +
-      ".api.video.v1Z?github.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/video/v1;videob\006" +
-      "proto3"
+      "on\"F\202\323\344\223\002 2\033/video/v1/videos/{video_id}:" +
+      "\001*\262\322*\034\n\023UpdateVideoMetadata\022\005Video\022\261\001\n\tT" +
+      "ranscode\022,.yandex.cloud.video.v1.Transco" +
+      "deVideoRequest\032!.yandex.cloud.operation." +
+      "Operation\"S\202\323\344\223\002*\"%/video/v1/videos/{vid" +
+      "eo_id}:transcode:\001*\262\322*\037\n\026TranscodeVideoM" +
+      "etadata\022\005Video\022\253\001\n\006Delete\022).yandex.cloud" +
+      ".video.v1.DeleteVideoRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"S\202\323\344\223\002\035*\033/video/" +
+      "v1/videos/{video_id}\262\322*,\n\023DeleteVideoMet" +
+      "adata\022\025google.protobuf.Empty\022\300\001\n\013BatchDe" +
+      "lete\022/.yandex.cloud.video.v1.BatchDelete" +
+      "VideosRequest\032!.yandex.cloud.operation.O" +
+      "peration\"]\202\323\344\223\002!\"\034/video/v1/videos:batch" +
+      "Delete:\001*\262\322*2\n\031BatchDeleteVideosMetadata" +
+      "\022\025google.protobuf.Empty\022\301\001\n\rPerformActio" +
+      "n\0220.yandex.cloud.video.v1.PerformVideoAc" +
+      "tionRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"[\202\323\344\223\002.\")/video/v1/videos/{video_" +
+      "id}:performAction:\001*\262\322*#\n\032PerformVideoAc" +
+      "tionMetadata\022\005Video\022\243\001\n\014GetPlayerURL\022/.y" +
+      "andex.cloud.video.v1.GetVideoPlayerURLRe" +
+      "quest\0320.yandex.cloud.video.v1.GetVideoPl" +
+      "ayerURLResponse\"0\202\323\344\223\002*\022(/video/v1/video" +
+      "s/{video_id}:getPlayerURL\022\263\001\n\022BatchGetPl" +
+      "ayerURLs\0225.yandex.cloud.video.v1.BatchGe" +
+      "tVideoPlayerURLsRequest\0326.yandex.cloud.v" +
+      "ideo.v1.BatchGetVideoPlayerURLsResponse\"" +
+      ".\202\323\344\223\002(\"#/video/v1/videos:batchGetPlayer" +
+      "URLs:\001*\022\243\001\n\014GetManifests\022/.yandex.cloud." +
+      "video.v1.GetVideoManifestsRequest\0320.yand" +
+      "ex.cloud.video.v1.GetVideoManifestsRespo" +
+      "nse\"0\202\323\344\223\002*\022(/video/v1/videos/{video_id}" +
+      ":getManifestsB\\\n\031yandex.cloud.api.video." +
+      "v1Z?github.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25626,7 +35071,7 @@ public final class VideoServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor,
-        new java.lang.String[] { "ChannelId", "Title", "Description", "ThumbnailId", "AutoTranscode", "EnableAd", "Labels", "Tusd", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "Source", "AccessRights", });
+        new java.lang.String[] { "ChannelId", "Title", "Description", "ThumbnailId", "AutoTranscode", "AutoPublish", "EnableAd", "Labels", "Tusd", "PublicAccess", "SignUrlAccess", "Source", "AccessRights", });
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_CreateVideoRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_CreateVideoRequest_LabelsEntry_fieldAccessorTable = new
@@ -25645,30 +35090,24 @@ public final class VideoServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_VideoPublicAccessParams_descriptor,
         new java.lang.String[] { });
-    internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessParams_descriptor,
-        new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_VideoSignURLAccessParams_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_video_v1_VideoSignURLAccessParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_VideoSignURLAccessParams_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_CreateVideoMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_video_v1_CreateVideoMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateVideoMetadata_descriptor,
         new java.lang.String[] { "VideoId", });
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor,
-        new java.lang.String[] { "VideoId", "FieldMask", "Title", "Description", "ThumbnailId", "AutoTranscode", "EnableAd", "Labels", "PublicAccess", "AuthSystemAccess", "SignUrlAccess", "AccessRights", });
+        new java.lang.String[] { "VideoId", "FieldMask", "Title", "Description", "ThumbnailId", "AutoTranscode", "EnableAd", "Labels", "PublicAccess", "SignUrlAccess", "AccessRights", });
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_video_v1_UpdateVideoRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_fieldAccessorTable = new
@@ -25676,97 +35115,157 @@ public final class VideoServiceOuterClass {
         internal_static_yandex_cloud_video_v1_UpdateVideoRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_video_v1_UpdateVideoMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_video_v1_UpdateVideoMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateVideoMetadata_descriptor,
         new java.lang.String[] { "VideoId", });
     internal_static_yandex_cloud_video_v1_TranscodeVideoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_video_v1_TranscodeVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_TranscodeVideoRequest_descriptor,
-        new java.lang.String[] { "VideoId", "FieldMask", "SubtitleIds", });
-    internal_static_yandex_cloud_video_v1_TranscodeVideoMetadata_descriptor =
+        new java.lang.String[] { "VideoId", "FieldMask", "SubtitleIds", "TranslationSettings", "SummarizationSettings", });
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor,
+        new java.lang.String[] { "Tracks", });
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_descriptor =
+      internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_VideoTranslationSettings_TranslationTrack_descriptor,
+        new java.lang.String[] { "InputTrack", "Subtitles", "Audio", });
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_descriptor =
+      internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_VideoTranslationSettings_InputTrack_descriptor,
+        new java.lang.String[] { "TrackIndex", "SrcLang", });
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_descriptor =
+      internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_VideoTranslationSettings_SubtitleTrack_descriptor,
+        new java.lang.String[] { "DstLang", "Label", });
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_descriptor =
+      internal_static_yandex_cloud_video_v1_VideoTranslationSettings_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_VideoTranslationSettings_AudioTrack_descriptor,
+        new java.lang.String[] { "DstLang", "Label", });
+    internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_descriptor =
       getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_descriptor,
+        new java.lang.String[] { "Tracks", "ProcessAllTracks", });
+    internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_descriptor =
+      internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_SummarizationTrack_descriptor,
+        new java.lang.String[] { "InputTrack", });
+    internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_descriptor =
+      internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_VideoSummarizationSettings_InputTrack_descriptor,
+        new java.lang.String[] { "TrackIndex", "SrcLang", });
+    internal_static_yandex_cloud_video_v1_TranscodeVideoMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_video_v1_TranscodeVideoMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_TranscodeVideoMetadata_descriptor,
         new java.lang.String[] { "VideoId", });
     internal_static_yandex_cloud_video_v1_DeleteVideoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_video_v1_DeleteVideoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeleteVideoRequest_descriptor,
         new java.lang.String[] { "VideoId", });
     internal_static_yandex_cloud_video_v1_DeleteVideoMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_video_v1_DeleteVideoMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeleteVideoMetadata_descriptor,
         new java.lang.String[] { "VideoId", });
     internal_static_yandex_cloud_video_v1_BatchDeleteVideosRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_video_v1_BatchDeleteVideosRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_BatchDeleteVideosRequest_descriptor,
         new java.lang.String[] { "ChannelId", "VideoIds", });
     internal_static_yandex_cloud_video_v1_BatchDeleteVideosMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_video_v1_BatchDeleteVideosMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_BatchDeleteVideosMetadata_descriptor,
         new java.lang.String[] { "VideoIds", });
     internal_static_yandex_cloud_video_v1_PerformVideoActionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_video_v1_PerformVideoActionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PerformVideoActionRequest_descriptor,
         new java.lang.String[] { "VideoId", "Publish", "Unpublish", "Action", });
     internal_static_yandex_cloud_video_v1_PublishVideoAction_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_video_v1_PublishVideoAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PublishVideoAction_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_UnpublishVideoAction_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_video_v1_UnpublishVideoAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UnpublishVideoAction_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_PerformVideoActionMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_video_v1_PerformVideoActionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PerformVideoActionMetadata_descriptor,
         new java.lang.String[] { "VideoId", });
     internal_static_yandex_cloud_video_v1_GetVideoPlayerURLRequest_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_video_v1_GetVideoPlayerURLRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetVideoPlayerURLRequest_descriptor,
         new java.lang.String[] { "VideoId", "Params", "SignedUrlExpirationDuration", });
     internal_static_yandex_cloud_video_v1_VideoPlayerParams_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_video_v1_VideoPlayerParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_VideoPlayerParams_descriptor,
         new java.lang.String[] { "Mute", "Autoplay", "Hidden", });
     internal_static_yandex_cloud_video_v1_GetVideoPlayerURLResponse_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_video_v1_GetVideoPlayerURLResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetVideoPlayerURLResponse_descriptor,
         new java.lang.String[] { "PlayerUrl", "Html", });
+    internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsRequest_descriptor,
+        new java.lang.String[] { "ChannelId", "VideoIds", "Params", "SignedUrlExpirationDuration", });
+    internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_BatchGetVideoPlayerURLsResponse_descriptor,
+        new java.lang.String[] { "PlayerUrls", });
     internal_static_yandex_cloud_video_v1_GetVideoManifestsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_video_v1_GetVideoManifestsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetVideoManifestsRequest_descriptor,
         new java.lang.String[] { "VideoId", });
     internal_static_yandex_cloud_video_v1_GetVideoManifestsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_video_v1_GetVideoManifestsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetVideoManifestsResponse_descriptor,

@@ -682,7 +682,8 @@ public final class EpisodeServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of the results per page to return. Default value: 100.
+     * The maximum number of the results per page to return.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -695,7 +696,7 @@ public final class EpisodeServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -704,7 +705,7 @@ public final class EpisodeServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -713,8 +714,9 @@ public final class EpisodeServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -725,8 +727,9 @@ public final class EpisodeServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -740,10 +743,11 @@ public final class EpisodeServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -755,10 +759,11 @@ public final class EpisodeServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1058,7 +1063,8 @@ public final class EpisodeServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of the results per page to return. Default value: 100.
+     * The maximum number of the results per page to return.
+     * Default value: 100.
      * </pre>
      *
      * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1076,7 +1082,7 @@ public final class EpisodeServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -1097,7 +1103,7 @@ public final class EpisodeServiceOuterClass {
      * Page token for getting the next page of the result.
      * </pre>
      *
-     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -1120,8 +1126,9 @@ public final class EpisodeServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1144,8 +1151,9 @@ public final class EpisodeServiceOuterClass {
     /**
      * <pre>
      * By which column the listing should be ordered and in which direction,
-     * format is "createdAt desc". "id asc" if omitted.
-     * Possible fields: ["id", "createdAt", "updatedAt"]
+     * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+     * Default: "id asc".
+     * Possible fields: ["id", "createdAt", "updatedAt"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1173,10 +1181,11 @@ public final class EpisodeServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1200,10 +1209,11 @@ public final class EpisodeServiceOuterClass {
      * <pre>
      * Filter expression that filters resources listed in the response.
      * Expressions are composed of terms connected by logic operators.
-     * Value in quotes: `'` or `"`
-     * Example: "key1='value' AND key2='value'"
-     * Supported operators: ["AND"].
-     * Supported fields: ["title"]
+     * If value contains spaces or quotes,
+     * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+     * Example: "key1='value' AND key2='value'".
+     * Supported operators: ["AND", "OR"].
+     * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1902,7 +1912,8 @@ public final class EpisodeServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of the results per page to return. Default value: 100.
+       * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1914,7 +1925,8 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return. Default value: 100.
+       * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1929,7 +1941,8 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of the results per page to return. Default value: 100.
+       * The maximum number of the results per page to return.
+       * Default value: 100.
        * </pre>
        *
        * <code>int64 page_size = 100 [(.yandex.cloud.value) = "&lt;=100"];</code>
@@ -1948,7 +1961,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1968,7 +1981,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1989,7 +2002,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -2008,7 +2021,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -2022,7 +2035,7 @@ public final class EpisodeServiceOuterClass {
        * Page token for getting the next page of the result.
        * </pre>
        *
-       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * <code>string page_token = 101 [(.yandex.cloud.length) = "&lt;=15000"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -2042,8 +2055,9 @@ public final class EpisodeServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -2065,8 +2079,9 @@ public final class EpisodeServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -2089,8 +2104,9 @@ public final class EpisodeServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -2111,8 +2127,9 @@ public final class EpisodeServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -2128,8 +2145,9 @@ public final class EpisodeServiceOuterClass {
       /**
        * <pre>
        * By which column the listing should be ordered and in which direction,
-       * format is "createdAt desc". "id asc" if omitted.
-       * Possible fields: ["id", "createdAt", "updatedAt"]
+       * format is "&lt;field&gt; &lt;order&gt;" (e.g. "createdAt desc").
+       * Default: "id asc".
+       * Possible fields: ["id", "createdAt", "updatedAt"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -2154,10 +2172,11 @@ public final class EpisodeServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -2180,10 +2199,11 @@ public final class EpisodeServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -2207,10 +2227,11 @@ public final class EpisodeServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -2232,10 +2253,11 @@ public final class EpisodeServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -2252,10 +2274,11 @@ public final class EpisodeServiceOuterClass {
        * <pre>
        * Filter expression that filters resources listed in the response.
        * Expressions are composed of terms connected by logic operators.
-       * Value in quotes: `'` or `"`
-       * Example: "key1='value' AND key2='value'"
-       * Supported operators: ["AND"].
-       * Supported fields: ["title"]
+       * If value contains spaces or quotes,
+       * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
+       * Example: "key1='value' AND key2='value'".
+       * Supported operators: ["AND", "OR"].
+       * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -5282,7 +5305,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -5291,7 +5314,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -5393,8 +5416,9 @@ public final class EpisodeServiceOuterClass {
 
     /**
      * <pre>
-     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-     * possible values:
+     * Enables episode DVR mode.
+     * Determines how many last seconds of the stream are available.
+     * Possible values:
      *  * `0`: infinite dvr size, the full length of the stream allowed to display
      *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
      * </pre>
@@ -5891,7 +5915,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -5912,7 +5936,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -6102,8 +6126,9 @@ public final class EpisodeServiceOuterClass {
     private long dvrSeconds_;
     /**
      * <pre>
-     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-     * possible values:
+     * Enables episode DVR mode.
+     * Determines how many last seconds of the stream are available.
+     * Possible values:
      *  * `0`: infinite dvr size, the full length of the stream allowed to display
      *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
      * </pre>
@@ -7095,7 +7120,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -7115,7 +7140,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -7136,7 +7161,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -7155,7 +7180,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -7169,7 +7194,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>string title = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -7690,8 +7715,9 @@ public final class EpisodeServiceOuterClass {
       private long dvrSeconds_ ;
       /**
        * <pre>
-       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-       * possible values:
+       * Enables episode DVR mode.
+       * Determines how many last seconds of the stream are available.
+       * Possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
        * </pre>
@@ -7705,8 +7731,9 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-       * possible values:
+       * Enables episode DVR mode.
+       * Determines how many last seconds of the stream are available.
+       * Possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
        * </pre>
@@ -7723,8 +7750,9 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-       * possible values:
+       * Enables episode DVR mode.
+       * Determines how many last seconds of the stream are available.
+       * Possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
        * </pre>
@@ -10209,7 +10237,7 @@ public final class EpisodeServiceOuterClass {
      * Field mask that specifies which fields of the episode are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the fieldMask field is set.
      */
     boolean hasFieldMask();
@@ -10218,7 +10246,7 @@ public final class EpisodeServiceOuterClass {
      * Field mask that specifies which fields of the episode are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The fieldMask.
      */
     com.google.protobuf.FieldMask getFieldMask();
@@ -10227,7 +10255,7 @@ public final class EpisodeServiceOuterClass {
      * Field mask that specifies which fields of the episode are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder();
 
@@ -10236,7 +10264,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     java.lang.String getTitle();
@@ -10245,7 +10273,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -10335,8 +10363,9 @@ public final class EpisodeServiceOuterClass {
 
     /**
      * <pre>
-     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-     * possible values:
+     * Enables episode DVR mode.
+     * Determines how many last seconds of the stream are available.
+     * Possible values:
      *  * `0`: infinite dvr size, the full length of the stream allowed to display
      *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
      * </pre>
@@ -10716,7 +10745,7 @@ public final class EpisodeServiceOuterClass {
      * Field mask that specifies which fields of the episode are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return Whether the fieldMask field is set.
      */
     @java.lang.Override
@@ -10728,7 +10757,7 @@ public final class EpisodeServiceOuterClass {
      * Field mask that specifies which fields of the episode are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      * @return The fieldMask.
      */
     @java.lang.Override
@@ -10740,7 +10769,7 @@ public final class EpisodeServiceOuterClass {
      * Field mask that specifies which fields of the episode are going to be updated.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+     * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
@@ -10754,7 +10783,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The title.
      */
     @java.lang.Override
@@ -10775,7 +10804,7 @@ public final class EpisodeServiceOuterClass {
      * Episode title.
      * </pre>
      *
-     * <code>string title = 3;</code>
+     * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -10953,8 +10982,9 @@ public final class EpisodeServiceOuterClass {
     private long dvrSeconds_;
     /**
      * <pre>
-     * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-     * possible values:
+     * Enables episode DVR mode.
+     * Determines how many last seconds of the stream are available.
+     * Possible values:
      *  * `0`: infinite dvr size, the full length of the stream allowed to display
      *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
      * </pre>
@@ -11771,7 +11801,7 @@ public final class EpisodeServiceOuterClass {
        * Field mask that specifies which fields of the episode are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return Whether the fieldMask field is set.
        */
       public boolean hasFieldMask() {
@@ -11782,7 +11812,7 @@ public final class EpisodeServiceOuterClass {
        * Field mask that specifies which fields of the episode are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        * @return The fieldMask.
        */
       public com.google.protobuf.FieldMask getFieldMask() {
@@ -11797,7 +11827,7 @@ public final class EpisodeServiceOuterClass {
        * Field mask that specifies which fields of the episode are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFieldMask(com.google.protobuf.FieldMask value) {
         if (fieldMaskBuilder_ == null) {
@@ -11817,7 +11847,7 @@ public final class EpisodeServiceOuterClass {
        * Field mask that specifies which fields of the episode are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFieldMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -11835,7 +11865,7 @@ public final class EpisodeServiceOuterClass {
        * Field mask that specifies which fields of the episode are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
         if (fieldMaskBuilder_ == null) {
@@ -11857,7 +11887,7 @@ public final class EpisodeServiceOuterClass {
        * Field mask that specifies which fields of the episode are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFieldMask() {
         if (fieldMaskBuilder_ == null) {
@@ -11875,7 +11905,7 @@ public final class EpisodeServiceOuterClass {
        * Field mask that specifies which fields of the episode are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
         
@@ -11887,7 +11917,7 @@ public final class EpisodeServiceOuterClass {
        * Field mask that specifies which fields of the episode are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
         if (fieldMaskBuilder_ != null) {
@@ -11902,7 +11932,7 @@ public final class EpisodeServiceOuterClass {
        * Field mask that specifies which fields of the episode are going to be updated.
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask field_mask = 2;</code>
+       * <code>.google.protobuf.FieldMask field_mask = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
@@ -11924,7 +11954,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -11944,7 +11974,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -11965,7 +11995,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -11984,7 +12014,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -11998,7 +12028,7 @@ public final class EpisodeServiceOuterClass {
        * Episode title.
        * </pre>
        *
-       * <code>string title = 3;</code>
+       * <code>string title = 3 [(.yandex.cloud.length) = "&lt;=2500"];</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -12483,8 +12513,9 @@ public final class EpisodeServiceOuterClass {
       private long dvrSeconds_ ;
       /**
        * <pre>
-       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-       * possible values:
+       * Enables episode DVR mode.
+       * Determines how many last seconds of the stream are available.
+       * Possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
        * </pre>
@@ -12498,8 +12529,9 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-       * possible values:
+       * Enables episode DVR mode.
+       * Determines how many last seconds of the stream are available.
+       * Possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
        * </pre>
@@ -12516,8 +12548,9 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Enables episode DVR mode. DVR seconds determines how many last seconds of the stream are available.
-       * possible values:
+       * Enables episode DVR mode.
+       * Determines how many last seconds of the stream are available.
+       * Possible values:
        *  * `0`: infinite dvr size, the full length of the stream allowed to display
        *  * `&gt;0`: size of dvr window in seconds, the minimum value is 30s
        * </pre>
@@ -21104,7 +21137,7 @@ public final class EpisodeServiceOuterClass {
 
     /**
      * <pre>
-     * Direct link to the video.
+     * Direct link to the episode.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -21113,7 +21146,7 @@ public final class EpisodeServiceOuterClass {
     java.lang.String getPlayerUrl();
     /**
      * <pre>
-     * Direct link to the video.
+     * Direct link to the episode.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -21237,7 +21270,7 @@ public final class EpisodeServiceOuterClass {
     private volatile java.lang.Object playerUrl_;
     /**
      * <pre>
-     * Direct link to the video.
+     * Direct link to the episode.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -21258,7 +21291,7 @@ public final class EpisodeServiceOuterClass {
     }
     /**
      * <pre>
-     * Direct link to the video.
+     * Direct link to the episode.
      * </pre>
      *
      * <code>string player_url = 1;</code>
@@ -21647,7 +21680,7 @@ public final class EpisodeServiceOuterClass {
       private java.lang.Object playerUrl_ = "";
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct link to the episode.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -21667,7 +21700,7 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct link to the episode.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -21688,7 +21721,7 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct link to the episode.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -21707,7 +21740,7 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct link to the episode.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -21721,7 +21754,7 @@ public final class EpisodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Direct link to the video.
+       * Direct link to the episode.
        * </pre>
        *
        * <code>string player_url = 1;</code>
@@ -23429,125 +23462,125 @@ public final class EpisodeServiceOuterClass {
       "cloud/validation.proto\032#yandex/cloud/vid" +
       "eo/v1/episode.proto\032$yandex/cloud/video/" +
       "v1/manifest.proto\"5\n\021GetEpisodeRequest\022 " +
-      "\n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\325\001\n\023Lis" +
+      "\n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\327\001\n\023Lis" +
       "tEpisodesRequest\022\035\n\tstream_id\030\001 \001(\tB\010\212\3101" +
       "\004<=50H\000\022\033\n\007line_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022\034\n\t" +
-      "page_size\030d \001(\003B\t\372\3071\005<=100\022\035\n\npage_token" +
-      "\030e \001(\tB\t\212\3101\005<=200\022\020\n\010order_by\030f \001(\t\022\032\n\006f" +
-      "ilter\030g \001(\tB\n\212\3101\006<=1000B\021\n\tparent_id\022\004\300\301" +
-      "1\001J\004\010\003\020d\"g\n\024ListEpisodesResponse\0220\n\010epis" +
-      "odes\030\001 \003(\0132\036.yandex.cloud.video.v1.Episo" +
-      "de\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"c\n\027Bat" +
-      "chGetEpisodesRequest\022 \n\nchannel_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022&\n\013episode_ids\030\002 \003(\tB\021\202\3101" +
-      "\0051-100\212\3101\004<=50\"L\n\030BatchGetEpisodesRespon" +
-      "se\0220\n\010episodes\030\001 \003(\0132\036.yandex.cloud.vide" +
-      "o.v1.Episode\"\307\004\n\024CreateEpisodeRequest\022\035\n" +
-      "\tstream_id\030d \001(\tB\010\212\3101\004<=50H\000\022\033\n\007line_id\030" +
-      "e \001(\tB\010\212\3101\004<=50H\000\022\023\n\005title\030\002 \001(\tB\004\350\3071\001\022\023" +
-      "\n\013description\030\003 \001(\t\022\036\n\014thumbnail_id\030\004 \001(" +
-      "\tB\010\212\3101\004<=50\022.\n\nstart_time\030\005 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022/\n\013finish_time\030\006 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022\023\n\013dvr_seco" +
-      "nds\030\007 \001(\003\022J\n\rpublic_access\030\350\007 \001(\01320.yand" +
-      "ex.cloud.video.v1.EpisodePublicAccessPar" +
-      "amsH\001\022S\n\022auth_system_access\030\352\007 \001(\01324.yan" +
-      "dex.cloud.video.v1.EpisodeAuthSystemAcce" +
-      "ssParamsH\001\022M\n\017sign_url_access\030\353\007 \001(\01321.y" +
-      "andex.cloud.video.v1.EpisodeSignURLAcces" +
-      "sParamsH\001B\021\n\tparent_id\022\004\300\3011\001B\025\n\raccess_r" +
-      "ights\022\004\300\3011\001J\006\010\351\007\020\352\007J\004\010\001\020\002J\004\010\010\020dJ\005\010f\020\350\007\"\033" +
-      "\n\031EpisodePublicAccessParams\"\037\n\035EpisodeAu" +
-      "thSystemAccessParams\"\034\n\032EpisodeSignURLAc" +
-      "cessParams\"+\n\025CreateEpisodeMetadata\022\022\n\ne" +
-      "pisode_id\030\001 \001(\t\"\262\004\n\024UpdateEpisodeRequest" +
-      "\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022.\n\nfi" +
-      "eld_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
-      "sk\022\r\n\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\036" +
-      "\n\014thumbnail_id\030\005 \001(\tB\010\212\3101\004<=50\022.\n\nstart_" +
-      "time\030\006 \001(\0132\032.google.protobuf.Timestamp\022/" +
-      "\n\013finish_time\030\007 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022\023\n\013dvr_seconds\030\010 \001(\003\022J\n\rpublic_a" +
-      "ccess\030\350\007 \001(\01320.yandex.cloud.video.v1.Epi" +
-      "sodePublicAccessParamsH\000\022S\n\022auth_system_" +
-      "access\030\352\007 \001(\01324.yandex.cloud.video.v1.Ep" +
-      "isodeAuthSystemAccessParamsH\000\022M\n\017sign_ur" +
-      "l_access\030\353\007 \001(\01321.yandex.cloud.video.v1." +
-      "EpisodeSignURLAccessParamsH\000B\017\n\raccess_r" +
-      "ightsJ\006\010\351\007\020\352\007J\005\010\t\020\350\007\"+\n\025UpdateEpisodeMet" +
-      "adata\022\022\n\nepisode_id\030\001 \001(\t\"8\n\024DeleteEpiso" +
-      "deRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"+\n\025DeleteEpisodeMetadata\022\022\n\nepisode_" +
-      "id\030\001 \001(\t\"\222\001\n\032BatchDeleteEpisodesRequest\022" +
+      "page_size\030d \001(\003B\t\372\3071\005<=100\022\037\n\npage_token" +
+      "\030e \001(\tB\013\212\3101\007<=15000\022\020\n\010order_by\030f \001(\t\022\032\n" +
+      "\006filter\030g \001(\tB\n\212\3101\006<=1000B\021\n\tparent_id\022\004" +
+      "\300\3011\001J\004\010\003\020d\"g\n\024ListEpisodesResponse\0220\n\010ep" +
+      "isodes\030\001 \003(\0132\036.yandex.cloud.video.v1.Epi" +
+      "sode\022\027\n\017next_page_token\030d \001(\tJ\004\010\002\020d\"c\n\027B" +
+      "atchGetEpisodesRequest\022 \n\nchannel_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022&\n\013episode_ids\030\002 \003(\tB\021\202" +
+      "\3101\0051-100\212\3101\004<=50\"L\n\030BatchGetEpisodesResp" +
+      "onse\0220\n\010episodes\030\001 \003(\0132\036.yandex.cloud.vi" +
+      "deo.v1.Episode\"\321\004\n\024CreateEpisodeRequest\022" +
       "\035\n\tstream_id\030d \001(\tB\010\212\3101\004<=50H\000\022\033\n\007line_i" +
-      "d\030e \001(\tB\010\212\3101\004<=50H\000\022&\n\013episode_ids\030\001 \003(\t" +
-      "B\021\202\3101\0051-100\212\3101\004<=50B\n\n\002id\022\004\300\3011\001J\004\010\002\020d\"2\n" +
-      "\033BatchDeleteEpisodesMetadata\022\023\n\013episode_" +
-      "ids\030\001 \003(\t\"\354\001\n\033PerformEpisodeActionReques" +
-      "t\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\007p" +
-      "ublish\030\352\007 \001(\0132+.yandex.cloud.video.v1.Pu" +
-      "blishEpisodeActionH\000\022C\n\tunpublish\030\353\007 \001(\013" +
-      "2-.yandex.cloud.video.v1.UnpublishEpisod" +
-      "eActionH\000B\016\n\006action\022\004\300\3011\001J\006\010\350\007\020\351\007J\006\010\351\007\020\352" +
-      "\007J\005\010\002\020\350\007\"\026\n\024PublishEpisodeAction\"\030\n\026Unpu" +
-      "blishEpisodeAction\"2\n\034PerformEpisodeActi" +
-      "onMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\275\001\n\032GetEp" +
-      "isodePlayerURLRequest\022 \n\nepisode_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022:\n\006params\030\002 \001(\0132*.yandex" +
-      ".cloud.video.v1.EpisodePlayerParams\022A\n\036s" +
-      "igned_url_expiration_duration\030\003 \001(\0132\031.go" +
-      "ogle.protobuf.Duration\"E\n\023EpisodePlayerP" +
-      "arams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n" +
-      "\006hidden\030\003 \001(\010\"?\n\033GetEpisodePlayerURLResp" +
-      "onse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\">" +
-      "\n\032GetEpisodeManifestsRequest\022 \n\nepisode_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"Q\n\033GetEpisodeMani" +
-      "festsResponse\0222\n\tmanifests\030\001 \003(\0132\037.yande" +
-      "x.cloud.video.v1.Manifest2\346\014\n\016EpisodeSer" +
-      "vice\022x\n\003Get\022(.yandex.cloud.video.v1.GetE" +
-      "pisodeRequest\032\036.yandex.cloud.video.v1.Ep" +
-      "isode\"\'\202\323\344\223\002!\022\037/video/v1/episodes/{episo" +
-      "de_id}\022{\n\004List\022*.yandex.cloud.video.v1.L" +
-      "istEpisodesRequest\032+.yandex.cloud.video." +
-      "v1.ListEpisodesResponse\"\032\202\323\344\223\002\024\022\022/video/" +
-      "v1/episodes\022\223\001\n\010BatchGet\022..yandex.cloud." +
-      "video.v1.BatchGetEpisodesRequest\032/.yande" +
-      "x.cloud.video.v1.BatchGetEpisodesRespons" +
-      "e\"&\202\323\344\223\002 \"\033/video/v1/episodes:batchGet:\001" +
-      "*\022\233\001\n\006Create\022+.yandex.cloud.video.v1.Cre" +
-      "ateEpisodeRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"A\202\323\344\223\002\027\"\022/video/v1/episodes" +
-      ":\001*\262\322* \n\025CreateEpisodeMetadata\022\007Episode\022" +
-      "\250\001\n\006Update\022+.yandex.cloud.video.v1.Updat" +
-      "eEpisodeRequest\032!.yandex.cloud.operation" +
-      ".Operation\"N\202\323\344\223\002$2\037/video/v1/episodes/{" +
-      "episode_id}:\001*\262\322* \n\025UpdateEpisodeMetadat" +
-      "a\022\007Episode\022\263\001\n\006Delete\022+.yandex.cloud.vid" +
-      "eo.v1.DeleteEpisodeRequest\032!.yandex.clou" +
-      "d.operation.Operation\"Y\202\323\344\223\002!*\037/video/v1" +
-      "/episodes/{episode_id}\262\322*.\n\025DeleteEpisod" +
-      "eMetadata\022\025google.protobuf.Empty\022\235\001\n\013Bat" +
-      "chDelete\0221.yandex.cloud.video.v1.BatchDe" +
-      "leteEpisodesRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"8\262\322*4\n\033BatchDeleteEpisode" +
-      "sMetadata\022\025google.protobuf.Empty\022\313\001\n\rPer" +
-      "formAction\0222.yandex.cloud.video.v1.Perfo" +
-      "rmEpisodeActionRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"c\202\323\344\223\0022\"-/video/v1/epi" +
-      "sodes/{episode_id}:performAction:\001*\262\322*\'\n" +
-      "\034PerformEpisodeActionMetadata\022\007Episode\022\253" +
-      "\001\n\014GetPlayerURL\0221.yandex.cloud.video.v1." +
-      "GetEpisodePlayerURLRequest\0322.yandex.clou" +
-      "d.video.v1.GetEpisodePlayerURLResponse\"4" +
-      "\202\323\344\223\002.\022,/video/v1/episodes/{episode_id}:" +
-      "getPlayerUrl\022\253\001\n\014GetManifests\0221.yandex.c" +
-      "loud.video.v1.GetEpisodeManifestsRequest" +
-      "\0322.yandex.cloud.video.v1.GetEpisodeManif" +
-      "estsResponse\"4\202\323\344\223\002.\022,/video/v1/episodes" +
-      "/{episode_id}:getManifestsB\\\n\031yandex.clo" +
-      "ud.api.video.v1Z?github.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/video/v1;video" +
-      "b\006proto3"
+      "d\030e \001(\tB\010\212\3101\004<=50H\000\022\035\n\005title\030\002 \001(\tB\016\350\3071\001" +
+      "\212\3101\006<=2500\022\023\n\013description\030\003 \001(\t\022\036\n\014thumb" +
+      "nail_id\030\004 \001(\tB\010\212\3101\004<=50\022.\n\nstart_time\030\005 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022/\n\013finis" +
+      "h_time\030\006 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\023\n\013dvr_seconds\030\007 \001(\003\022J\n\rpublic_access\030\350" +
+      "\007 \001(\01320.yandex.cloud.video.v1.EpisodePub" +
+      "licAccessParamsH\001\022S\n\022auth_system_access\030" +
+      "\352\007 \001(\01324.yandex.cloud.video.v1.EpisodeAu" +
+      "thSystemAccessParamsH\001\022M\n\017sign_url_acces" +
+      "s\030\353\007 \001(\01321.yandex.cloud.video.v1.Episode" +
+      "SignURLAccessParamsH\001B\021\n\tparent_id\022\004\300\3011\001" +
+      "B\025\n\raccess_rights\022\004\300\3011\001J\006\010\351\007\020\352\007J\004\010\001\020\002J\004\010" +
+      "\010\020dJ\005\010f\020\350\007\"\033\n\031EpisodePublicAccessParams\"" +
+      "\037\n\035EpisodeAuthSystemAccessParams\"\034\n\032Epis" +
+      "odeSignURLAccessParams\"+\n\025CreateEpisodeM" +
+      "etadata\022\022\n\nepisode_id\030\001 \001(\t\"\304\004\n\024UpdateEp" +
+      "isodeRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\0224\n\nfield_mask\030\002 \001(\0132\032.google.prot" +
+      "obuf.FieldMaskB\004\350\3071\001\022\031\n\005title\030\003 \001(\tB\n\212\3101" +
+      "\006<=2500\022\023\n\013description\030\004 \001(\t\022\036\n\014thumbnai" +
+      "l_id\030\005 \001(\tB\010\212\3101\004<=50\022.\n\nstart_time\030\006 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022/\n\013finish_t" +
+      "ime\030\007 \001(\0132\032.google.protobuf.Timestamp\022\023\n" +
+      "\013dvr_seconds\030\010 \001(\003\022J\n\rpublic_access\030\350\007 \001" +
+      "(\01320.yandex.cloud.video.v1.EpisodePublic" +
+      "AccessParamsH\000\022S\n\022auth_system_access\030\352\007 " +
+      "\001(\01324.yandex.cloud.video.v1.EpisodeAuthS" +
+      "ystemAccessParamsH\000\022M\n\017sign_url_access\030\353" +
+      "\007 \001(\01321.yandex.cloud.video.v1.EpisodeSig" +
+      "nURLAccessParamsH\000B\017\n\raccess_rightsJ\006\010\351\007" +
+      "\020\352\007J\005\010\t\020\350\007\"+\n\025UpdateEpisodeMetadata\022\022\n\ne" +
+      "pisode_id\030\001 \001(\t\"8\n\024DeleteEpisodeRequest\022" +
+      " \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
+      "eteEpisodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\222" +
+      "\001\n\032BatchDeleteEpisodesRequest\022\035\n\tstream_" +
+      "id\030d \001(\tB\010\212\3101\004<=50H\000\022\033\n\007line_id\030e \001(\tB\010\212" +
+      "\3101\004<=50H\000\022&\n\013episode_ids\030\001 \003(\tB\021\202\3101\0051-10" +
+      "0\212\3101\004<=50B\n\n\002id\022\004\300\3011\001J\004\010\002\020d\"2\n\033BatchDele" +
+      "teEpisodesMetadata\022\023\n\013episode_ids\030\001 \003(\t\"" +
+      "\354\001\n\033PerformEpisodeActionRequest\022 \n\nepiso" +
+      "de_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\007publish\030\352\007 " +
+      "\001(\0132+.yandex.cloud.video.v1.PublishEpiso" +
+      "deActionH\000\022C\n\tunpublish\030\353\007 \001(\0132-.yandex." +
+      "cloud.video.v1.UnpublishEpisodeActionH\000B" +
+      "\016\n\006action\022\004\300\3011\001J\006\010\350\007\020\351\007J\006\010\351\007\020\352\007J\005\010\002\020\350\007\"\026" +
+      "\n\024PublishEpisodeAction\"\030\n\026UnpublishEpiso" +
+      "deAction\"2\n\034PerformEpisodeActionMetadata" +
+      "\022\022\n\nepisode_id\030\001 \001(\t\"\275\001\n\032GetEpisodePlaye" +
+      "rURLRequest\022 \n\nepisode_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022:\n\006params\030\002 \001(\0132*.yandex.cloud.vid" +
+      "eo.v1.EpisodePlayerParams\022A\n\036signed_url_" +
+      "expiration_duration\030\003 \001(\0132\031.google.proto" +
+      "buf.Duration\"E\n\023EpisodePlayerParams\022\014\n\004m" +
+      "ute\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 " +
+      "\001(\010\"?\n\033GetEpisodePlayerURLResponse\022\022\n\npl" +
+      "ayer_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t\">\n\032GetEpiso" +
+      "deManifestsRequest\022 \n\nepisode_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"Q\n\033GetEpisodeManifestsRespo" +
+      "nse\0222\n\tmanifests\030\001 \003(\0132\037.yandex.cloud.vi" +
+      "deo.v1.Manifest2\346\014\n\016EpisodeService\022x\n\003Ge" +
+      "t\022(.yandex.cloud.video.v1.GetEpisodeRequ" +
+      "est\032\036.yandex.cloud.video.v1.Episode\"\'\202\323\344" +
+      "\223\002!\022\037/video/v1/episodes/{episode_id}\022{\n\004" +
+      "List\022*.yandex.cloud.video.v1.ListEpisode" +
+      "sRequest\032+.yandex.cloud.video.v1.ListEpi" +
+      "sodesResponse\"\032\202\323\344\223\002\024\022\022/video/v1/episode" +
+      "s\022\223\001\n\010BatchGet\022..yandex.cloud.video.v1.B" +
+      "atchGetEpisodesRequest\032/.yandex.cloud.vi" +
+      "deo.v1.BatchGetEpisodesResponse\"&\202\323\344\223\002 \"" +
+      "\033/video/v1/episodes:batchGet:\001*\022\233\001\n\006Crea" +
+      "te\022+.yandex.cloud.video.v1.CreateEpisode" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"A\202\323\344\223\002\027\"\022/video/v1/episodes:\001*\262\322* \n\025C" +
+      "reateEpisodeMetadata\022\007Episode\022\250\001\n\006Update" +
+      "\022+.yandex.cloud.video.v1.UpdateEpisodeRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"N\202\323\344\223\002$2\037/video/v1/episodes/{episode_id" +
+      "}:\001*\262\322* \n\025UpdateEpisodeMetadata\022\007Episode" +
+      "\022\263\001\n\006Delete\022+.yandex.cloud.video.v1.Dele" +
+      "teEpisodeRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"Y\202\323\344\223\002!*\037/video/v1/episodes/" +
+      "{episode_id}\262\322*.\n\025DeleteEpisodeMetadata\022" +
+      "\025google.protobuf.Empty\022\235\001\n\013BatchDelete\0221" +
+      ".yandex.cloud.video.v1.BatchDeleteEpisod" +
+      "esRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"8\262\322*4\n\033BatchDeleteEpisodesMetadata\022" +
+      "\025google.protobuf.Empty\022\313\001\n\rPerformAction" +
+      "\0222.yandex.cloud.video.v1.PerformEpisodeA" +
+      "ctionRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"c\202\323\344\223\0022\"-/video/v1/episodes/{epi" +
+      "sode_id}:performAction:\001*\262\322*\'\n\034PerformEp" +
+      "isodeActionMetadata\022\007Episode\022\253\001\n\014GetPlay" +
+      "erURL\0221.yandex.cloud.video.v1.GetEpisode" +
+      "PlayerURLRequest\0322.yandex.cloud.video.v1" +
+      ".GetEpisodePlayerURLResponse\"4\202\323\344\223\002.\022,/v" +
+      "ideo/v1/episodes/{episode_id}:getPlayerU" +
+      "rl\022\253\001\n\014GetManifests\0221.yandex.cloud.video" +
+      ".v1.GetEpisodeManifestsRequest\0322.yandex." +
+      "cloud.video.v1.GetEpisodeManifestsRespon" +
+      "se\"4\202\323\344\223\002.\022,/video/v1/episodes/{episode_" +
+      "id}:getManifestsB\\\n\031yandex.cloud.api.vid" +
+      "eo.v1Z?github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/video/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

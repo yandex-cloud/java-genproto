@@ -381,7 +381,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific stream line.
+     * Get the specific stream line.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request,
@@ -461,7 +461,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Returns unique stream key.
+     * Get unique stream key.
      * </pre>
      */
     public void getStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request,
@@ -471,7 +471,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Change stream key.
+     * Update stream key.
      * </pre>
      */
     public void updateStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request,
@@ -574,7 +574,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific stream line.
+     * Get the specific stream line.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request,
@@ -662,7 +662,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Returns unique stream key.
+     * Get unique stream key.
      * </pre>
      */
     public void getStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request,
@@ -673,7 +673,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Change stream key.
+     * Update stream key.
      * </pre>
      */
     public void updateStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request,
@@ -702,7 +702,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific stream line.
+     * Get the specific stream line.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine get(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamLineRequest request) {
@@ -782,7 +782,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Returns unique stream key.
+     * Get unique stream key.
      * </pre>
      */
     public yandex.cloud.api.video.v1.StreamLineOuterClass.PushStreamKey getStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.GetStreamKeyRequest request) {
@@ -792,7 +792,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Change stream key.
+     * Update stream key.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateStreamKey(yandex.cloud.api.video.v1.StreamLineServiceOuterClass.UpdateStreamKeyRequest request) {
@@ -820,7 +820,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific stream line.
+     * Get the specific stream line.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineOuterClass.StreamLine> get(
@@ -908,7 +908,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Returns unique stream key.
+     * Get unique stream key.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.StreamLineOuterClass.PushStreamKey> getStreamKey(
@@ -919,7 +919,7 @@ public final class StreamLineServiceGrpc {
 
     /**
      * <pre>
-     * Change stream key.
+     * Update stream key.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateStreamKey(

@@ -410,6 +410,33 @@ public final class DashboardOuterClass {
     com.google.protobuf.ByteString
         getManagedLinkBytes();
 
+    /**
+     * <pre>
+     * Refresh and time window settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * @return Whether the timeline field is set.
+     */
+    boolean hasTimeline();
+    /**
+     * <pre>
+     * Refresh and time window settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * @return The timeline.
+     */
+    yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline getTimeline();
+    /**
+     * <pre>
+     * Refresh and time window settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     */
+    yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder();
+
     public yandex.cloud.api.monitoring.v3.DashboardOuterClass.Dashboard.ContainerCase getContainerCase();
   }
   /**
@@ -591,6 +618,19 @@ public final class DashboardOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               managedLink_ = s;
+              break;
+            }
+            case 274: {
+              yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder subBuilder = null;
+              if (timeline_ != null) {
+                subBuilder = timeline_.toBuilder();
+              }
+              timeline_ = input.readMessage(yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timeline_);
+                timeline_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1432,6 +1472,44 @@ public final class DashboardOuterClass {
       }
     }
 
+    public static final int TIMELINE_FIELD_NUMBER = 34;
+    private yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline timeline_;
+    /**
+     * <pre>
+     * Refresh and time window settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * @return Whether the timeline field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimeline() {
+      return timeline_ != null;
+    }
+    /**
+     * <pre>
+     * Refresh and time window settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     * @return The timeline.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline getTimeline() {
+      return timeline_ == null ? yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.getDefaultInstance() : timeline_;
+    }
+    /**
+     * <pre>
+     * Refresh and time window settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder() {
+      return getTimeline();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1493,6 +1571,9 @@ public final class DashboardOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 33, managedLink_);
+      }
+      if (timeline_ != null) {
+        output.writeMessage(34, getTimeline());
       }
       unknownFields.writeTo(output);
     }
@@ -1559,6 +1640,10 @@ public final class DashboardOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, managedLink_);
       }
+      if (timeline_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, getTimeline());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1611,6 +1696,11 @@ public final class DashboardOuterClass {
           .equals(other.getManagedBy())) return false;
       if (!getManagedLink()
           .equals(other.getManagedLink())) return false;
+      if (hasTimeline() != other.hasTimeline()) return false;
+      if (hasTimeline()) {
+        if (!getTimeline()
+            .equals(other.getTimeline())) return false;
+      }
       if (!getContainerCase().equals(other.getContainerCase())) return false;
       switch (containerCase_) {
         case 3:
@@ -1669,6 +1759,10 @@ public final class DashboardOuterClass {
       hash = (53 * hash) + getManagedBy().hashCode();
       hash = (37 * hash) + MANAGED_LINK_FIELD_NUMBER;
       hash = (53 * hash) + getManagedLink().hashCode();
+      if (hasTimeline()) {
+        hash = (37 * hash) + TIMELINE_FIELD_NUMBER;
+        hash = (53 * hash) + getTimeline().hashCode();
+      }
       switch (containerCase_) {
         case 3:
           hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
@@ -1880,6 +1974,12 @@ public final class DashboardOuterClass {
 
         managedLink_ = "";
 
+        if (timelineBuilder_ == null) {
+          timeline_ = null;
+        } else {
+          timeline_ = null;
+          timelineBuilder_ = null;
+        }
         containerCase_ = 0;
         container_ = null;
         return this;
@@ -1947,6 +2047,11 @@ public final class DashboardOuterClass {
         result.etag_ = etag_;
         result.managedBy_ = managedBy_;
         result.managedLink_ = managedLink_;
+        if (timelineBuilder_ == null) {
+          result.timeline_ = timeline_;
+        } else {
+          result.timeline_ = timelineBuilder_.build();
+        }
         result.containerCase_ = containerCase_;
         onBuilt();
         return result;
@@ -2068,6 +2173,9 @@ public final class DashboardOuterClass {
         if (!other.getManagedLink().isEmpty()) {
           managedLink_ = other.managedLink_;
           onChanged();
+        }
+        if (other.hasTimeline()) {
+          mergeTimeline(other.getTimeline());
         }
         switch (other.getContainerCase()) {
           case FOLDER_ID: {
@@ -4055,6 +4163,161 @@ public final class DashboardOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline timeline_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline, yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder, yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder> timelineBuilder_;
+      /**
+       * <pre>
+       * Refresh and time window settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * @return Whether the timeline field is set.
+       */
+      public boolean hasTimeline() {
+        return timelineBuilder_ != null || timeline_ != null;
+      }
+      /**
+       * <pre>
+       * Refresh and time window settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       * @return The timeline.
+       */
+      public yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline getTimeline() {
+        if (timelineBuilder_ == null) {
+          return timeline_ == null ? yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.getDefaultInstance() : timeline_;
+        } else {
+          return timelineBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Refresh and time window settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       */
+      public Builder setTimeline(yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline value) {
+        if (timelineBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timeline_ = value;
+          onChanged();
+        } else {
+          timelineBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Refresh and time window settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       */
+      public Builder setTimeline(
+          yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder builderForValue) {
+        if (timelineBuilder_ == null) {
+          timeline_ = builderForValue.build();
+          onChanged();
+        } else {
+          timelineBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Refresh and time window settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       */
+      public Builder mergeTimeline(yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline value) {
+        if (timelineBuilder_ == null) {
+          if (timeline_ != null) {
+            timeline_ =
+              yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.newBuilder(timeline_).mergeFrom(value).buildPartial();
+          } else {
+            timeline_ = value;
+          }
+          onChanged();
+        } else {
+          timelineBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Refresh and time window settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       */
+      public Builder clearTimeline() {
+        if (timelineBuilder_ == null) {
+          timeline_ = null;
+          onChanged();
+        } else {
+          timeline_ = null;
+          timelineBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Refresh and time window settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder getTimelineBuilder() {
+        
+        onChanged();
+        return getTimelineFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Refresh and time window settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder() {
+        if (timelineBuilder_ != null) {
+          return timelineBuilder_.getMessageOrBuilder();
+        } else {
+          return timeline_ == null ?
+              yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.getDefaultInstance() : timeline_;
+        }
+      }
+      /**
+       * <pre>
+       * Refresh and time window settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline, yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder, yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder> 
+          getTimelineFieldBuilder() {
+        if (timelineBuilder_ == null) {
+          timelineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline, yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder, yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder>(
+                  getTimeline(),
+                  getParentForChildren(),
+                  isClean());
+          timeline_ = null;
+        }
+        return timelineBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4131,24 +4394,27 @@ public final class DashboardOuterClass {
       "roto\022\032yandex.cloud.monitoring.v3\032\037google" +
       "/protobuf/timestamp.proto\0320yandex/cloud/" +
       "monitoring/v3/parametrization.proto\032\'yan" +
-      "dex/cloud/monitoring/v3/widget.proto\"\254\004\n" +
-      "\tDashboard\022\n\n\002id\030\001 \001(\t\022\023\n\tfolder_id\030\003 \001(" +
-      "\tH\000\022.\n\ncreated_at\030\024 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022/\n\013modified_at\030\025 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022\022\n\ncreated_by\030\026 \001(\t" +
-      "\022\023\n\013modified_by\030\027 \001(\t\022\014\n\004name\030\030 \001(\t\022\023\n\013d" +
-      "escription\030\031 \001(\t\022A\n\006labels\030\032 \003(\01321.yande" +
-      "x.cloud.monitoring.v3.Dashboard.LabelsEn" +
-      "try\022\r\n\005title\030\033 \001(\t\0223\n\007widgets\030\034 \003(\0132\".ya" +
-      "ndex.cloud.monitoring.v3.Widget\022D\n\017param" +
-      "etrization\030\035 \001(\0132+.yandex.cloud.monitori" +
-      "ng.v3.Parametrization\022\014\n\004etag\030\036 \001(\t\022\022\n\nm" +
-      "anaged_by\030  \001(\t\022\024\n\014managed_link\030! \001(\t\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001B\013\n\tcontainerJ\004\010\004\020\024J\004\010\002\020\003J\004\010\037\020 Bk\n\036y" +
-      "andex.cloud.api.monitoring.v3ZIgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "monitoring/v3;monitoringb\006proto3"
+      "dex/cloud/monitoring/v3/widget.proto\032)ya" +
+      "ndex/cloud/monitoring/v3/timeline.proto\"" +
+      "\344\004\n\tDashboard\022\n\n\002id\030\001 \001(\t\022\023\n\tfolder_id\030\003" +
+      " \001(\tH\000\022.\n\ncreated_at\030\024 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022/\n\013modified_at\030\025 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\022\n\ncreated_by\030\026 " +
+      "\001(\t\022\023\n\013modified_by\030\027 \001(\t\022\014\n\004name\030\030 \001(\t\022\023" +
+      "\n\013description\030\031 \001(\t\022A\n\006labels\030\032 \003(\01321.ya" +
+      "ndex.cloud.monitoring.v3.Dashboard.Label" +
+      "sEntry\022\r\n\005title\030\033 \001(\t\0223\n\007widgets\030\034 \003(\0132\"" +
+      ".yandex.cloud.monitoring.v3.Widget\022D\n\017pa" +
+      "rametrization\030\035 \001(\0132+.yandex.cloud.monit" +
+      "oring.v3.Parametrization\022\014\n\004etag\030\036 \001(\t\022\022" +
+      "\n\nmanaged_by\030  \001(\t\022\024\n\014managed_link\030! \001(\t" +
+      "\0226\n\010timeline\030\" \001(\0132$.yandex.cloud.monito" +
+      "ring.v3.Timeline\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\013\n\tcontainerJ\004\010\004" +
+      "\020\024J\004\010\002\020\003J\004\010\037\020 Bk\n\036yandex.cloud.api.monit" +
+      "oring.v3ZIgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/monitoring/v3;monitor" +
+      "ingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4156,13 +4422,14 @@ public final class DashboardOuterClass {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.WidgetOuterClass.getDescriptor(),
+          yandex.cloud.api.monitoring.v3.TimelineOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_monitoring_v3_Dashboard_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_Dashboard_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_Dashboard_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "ModifiedAt", "CreatedBy", "ModifiedBy", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "Etag", "ManagedBy", "ManagedLink", "Container", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "ModifiedAt", "CreatedBy", "ModifiedBy", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "Etag", "ManagedBy", "ManagedLink", "Timeline", "Container", });
     internal_static_yandex_cloud_monitoring_v3_Dashboard_LabelsEntry_descriptor =
       internal_static_yandex_cloud_monitoring_v3_Dashboard_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_Dashboard_LabelsEntry_fieldAccessorTable = new
@@ -4172,6 +4439,7 @@ public final class DashboardOuterClass {
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.monitoring.v3.ParametrizationOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.WidgetOuterClass.getDescriptor();
+    yandex.cloud.api.monitoring.v3.TimelineOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

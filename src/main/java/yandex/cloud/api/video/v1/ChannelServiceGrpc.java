@@ -350,7 +350,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific channel.
+     * Get the specific channel.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request,
@@ -410,7 +410,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Lists existing access bindings for the specified channel.
+     * List existing access bindings for the specified channel.
      * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
@@ -420,7 +420,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Sets access bindings for the channel.
+     * Set access bindings for the channel.
      * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
@@ -430,7 +430,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Updates access bindings for the specified channel.
+     * Update access bindings for the specified channel.
      * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
@@ -526,7 +526,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific channel.
+     * Get the specific channel.
      * </pre>
      */
     public void get(yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request,
@@ -592,7 +592,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Lists existing access bindings for the specified channel.
+     * List existing access bindings for the specified channel.
      * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
@@ -603,7 +603,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Sets access bindings for the channel.
+     * Set access bindings for the channel.
      * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
@@ -614,7 +614,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Updates access bindings for the specified channel.
+     * Update access bindings for the specified channel.
      * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
@@ -643,7 +643,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific channel.
+     * Get the specific channel.
      * </pre>
      */
     public yandex.cloud.api.video.v1.ChannelOuterClass.Channel get(yandex.cloud.api.video.v1.ChannelServiceOuterClass.GetChannelRequest request) {
@@ -703,7 +703,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Lists existing access bindings for the specified channel.
+     * List existing access bindings for the specified channel.
      * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
@@ -713,7 +713,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Sets access bindings for the channel.
+     * Set access bindings for the channel.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
@@ -723,7 +723,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Updates access bindings for the specified channel.
+     * Update access bindings for the specified channel.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
@@ -751,7 +751,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specific channel.
+     * Get the specific channel.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.video.v1.ChannelOuterClass.Channel> get(
@@ -817,7 +817,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Lists existing access bindings for the specified channel.
+     * List existing access bindings for the specified channel.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
@@ -828,7 +828,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Sets access bindings for the channel.
+     * Set access bindings for the channel.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
@@ -839,7 +839,7 @@ public final class ChannelServiceGrpc {
 
     /**
      * <pre>
-     * Updates access bindings for the specified channel.
+     * Update access bindings for the specified channel.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
