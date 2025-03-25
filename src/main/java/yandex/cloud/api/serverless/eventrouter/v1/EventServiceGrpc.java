@@ -49,6 +49,37 @@ public final class EventServiceGrpc {
     return getPutMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest,
+      com.google.protobuf.Empty> getSendMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Send",
+      requestType = yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest,
+      com.google.protobuf.Empty> getSendMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest, com.google.protobuf.Empty> getSendMethod;
+    if ((getSendMethod = EventServiceGrpc.getSendMethod) == null) {
+      synchronized (EventServiceGrpc.class) {
+        if ((getSendMethod = EventServiceGrpc.getSendMethod) == null) {
+          EventServiceGrpc.getSendMethod = getSendMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Send"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new EventServiceMethodDescriptorSupplier("Send"))
+              .build();
+        }
+      }
+    }
+    return getSendMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -110,6 +141,16 @@ public final class EventServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPutMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Send events to bus.
+     * </pre>
+     */
+    public void send(yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -119,6 +160,13 @@ public final class EventServiceGrpc {
                 yandex.cloud.api.serverless.eventrouter.v1.PERES.PutEventRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_PUT)))
+          .addMethod(
+            getSendMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest,
+                com.google.protobuf.Empty>(
+                  this, METHODID_SEND)))
           .build();
     }
   }
@@ -150,6 +198,17 @@ public final class EventServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPutMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Send events to bus.
+     * </pre>
+     */
+    public void send(yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -177,6 +236,16 @@ public final class EventServiceGrpc {
     public com.google.protobuf.Empty put(yandex.cloud.api.serverless.eventrouter.v1.PERES.PutEventRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPutMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Send events to bus.
+     * </pre>
+     */
+    public com.google.protobuf.Empty send(yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendMethod(), getCallOptions(), request);
     }
   }
 
@@ -207,9 +276,21 @@ public final class EventServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPutMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Send events to bus.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> send(
+        yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PUT = 0;
+  private static final int METHODID_SEND = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -230,6 +311,10 @@ public final class EventServiceGrpc {
       switch (methodId) {
         case METHODID_PUT:
           serviceImpl.put((yandex.cloud.api.serverless.eventrouter.v1.PERES.PutEventRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_SEND:
+          serviceImpl.send((yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
@@ -294,6 +379,7 @@ public final class EventServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new EventServiceFileDescriptorSupplier())
               .addMethod(getPutMethod())
+              .addMethod(getSendMethod())
               .build();
         }
       }

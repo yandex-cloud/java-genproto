@@ -65038,6 +65038,3387 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface RestartOpenSearchRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. Host to restart OpenSearch service on.
+     * </pre>
+     *
+     * <code>string host = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The host.
+     */
+    java.lang.String getHost();
+    /**
+     * <pre>
+     * Required. Host to restart OpenSearch service on.
+     * </pre>
+     *
+     * <code>string host = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for host.
+     */
+    com.google.protobuf.ByteString
+        getHostBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.RestartOpenSearchRequest}
+   */
+  public static final class RestartOpenSearchRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchRequest)
+      RestartOpenSearchRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RestartOpenSearchRequest.newBuilder() to construct.
+    private RestartOpenSearchRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RestartOpenSearchRequest() {
+      clusterId_ = "";
+      host_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RestartOpenSearchRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RestartOpenSearchRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              host_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_FIELD_NUMBER = 2;
+    private volatile java.lang.Object host_;
+    /**
+     * <pre>
+     * Required. Host to restart OpenSearch service on.
+     * </pre>
+     *
+     * <code>string host = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The host.
+     */
+    @java.lang.Override
+    public java.lang.String getHost() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        host_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. Host to restart OpenSearch service on.
+     * </pre>
+     *
+     * <code>string host = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for host.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostBytes() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        host_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, host_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, host_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest other = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getHost()
+          .equals(other.getHost())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + HOST_FIELD_NUMBER;
+      hash = (53 * hash) + getHost().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.RestartOpenSearchRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchRequest)
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        host_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest build() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest result = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest(this);
+        result.clusterId_ = clusterId_;
+        result.host_ = host_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getHost().isEmpty()) {
+          host_ = other.host_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object host_ = "";
+      /**
+       * <pre>
+       * Required. Host to restart OpenSearch service on.
+       * </pre>
+       *
+       * <code>string host = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The host.
+       */
+      public java.lang.String getHost() {
+        java.lang.Object ref = host_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          host_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Host to restart OpenSearch service on.
+       * </pre>
+       *
+       * <code>string host = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for host.
+       */
+      public com.google.protobuf.ByteString
+          getHostBytes() {
+        java.lang.Object ref = host_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          host_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Host to restart OpenSearch service on.
+       * </pre>
+       *
+       * <code>string host = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The host to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHost(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        host_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Host to restart OpenSearch service on.
+       * </pre>
+       *
+       * <code>string host = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHost() {
+        
+        host_ = getDefaultInstance().getHost();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Host to restart OpenSearch service on.
+       * </pre>
+       *
+       * <code>string host = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for host to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        host_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchRequest)
+    private static final yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RestartOpenSearchRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RestartOpenSearchRequest>() {
+      @java.lang.Override
+      public RestartOpenSearchRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RestartOpenSearchRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RestartOpenSearchRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RestartOpenSearchRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RestartOpenSearchMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. Host where OpenSearch will be restarted.
+     * </pre>
+     *
+     * <code>string host = 2;</code>
+     * @return The host.
+     */
+    java.lang.String getHost();
+    /**
+     * <pre>
+     * Required. Host where OpenSearch will be restarted.
+     * </pre>
+     *
+     * <code>string host = 2;</code>
+     * @return The bytes for host.
+     */
+    com.google.protobuf.ByteString
+        getHostBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.RestartOpenSearchMetadata}
+   */
+  public static final class RestartOpenSearchMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchMetadata)
+      RestartOpenSearchMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RestartOpenSearchMetadata.newBuilder() to construct.
+    private RestartOpenSearchMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RestartOpenSearchMetadata() {
+      clusterId_ = "";
+      host_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RestartOpenSearchMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RestartOpenSearchMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              host_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_FIELD_NUMBER = 2;
+    private volatile java.lang.Object host_;
+    /**
+     * <pre>
+     * Required. Host where OpenSearch will be restarted.
+     * </pre>
+     *
+     * <code>string host = 2;</code>
+     * @return The host.
+     */
+    @java.lang.Override
+    public java.lang.String getHost() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        host_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. Host where OpenSearch will be restarted.
+     * </pre>
+     *
+     * <code>string host = 2;</code>
+     * @return The bytes for host.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostBytes() {
+      java.lang.Object ref = host_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        host_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, host_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, host_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata other = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getHost()
+          .equals(other.getHost())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + HOST_FIELD_NUMBER;
+      hash = (53 * hash) + getHost().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.RestartOpenSearchMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchMetadata)
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        host_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata build() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata result = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata(this);
+        result.clusterId_ = clusterId_;
+        result.host_ = host_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getHost().isEmpty()) {
+          host_ = other.host_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object host_ = "";
+      /**
+       * <pre>
+       * Required. Host where OpenSearch will be restarted.
+       * </pre>
+       *
+       * <code>string host = 2;</code>
+       * @return The host.
+       */
+      public java.lang.String getHost() {
+        java.lang.Object ref = host_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          host_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Host where OpenSearch will be restarted.
+       * </pre>
+       *
+       * <code>string host = 2;</code>
+       * @return The bytes for host.
+       */
+      public com.google.protobuf.ByteString
+          getHostBytes() {
+        java.lang.Object ref = host_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          host_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Host where OpenSearch will be restarted.
+       * </pre>
+       *
+       * <code>string host = 2;</code>
+       * @param value The host to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHost(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        host_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Host where OpenSearch will be restarted.
+       * </pre>
+       *
+       * <code>string host = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHost() {
+        
+        host_ = getDefaultInstance().getHost();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Host where OpenSearch will be restarted.
+       * </pre>
+       *
+       * <code>string host = 2;</code>
+       * @param value The bytes for host to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        host_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.RestartOpenSearchMetadata)
+    private static final yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RestartOpenSearchMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RestartOpenSearchMetadata>() {
+      @java.lang.Override
+      public RestartOpenSearchMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RestartOpenSearchMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RestartOpenSearchMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RestartOpenSearchMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SwitchMasterRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.SwitchMasterRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Hosts list which are forbidden to be masters after operation.
+     * If no hosts given, then current master will be switched.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @return A list containing the fromHosts.
+     */
+    java.util.List<java.lang.String>
+        getFromHostsList();
+    /**
+     * <pre>
+     * Hosts list which are forbidden to be masters after operation.
+     * If no hosts given, then current master will be switched.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @return The count of fromHosts.
+     */
+    int getFromHostsCount();
+    /**
+     * <pre>
+     * Hosts list which are forbidden to be masters after operation.
+     * If no hosts given, then current master will be switched.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @param index The index of the element to return.
+     * @return The fromHosts at the given index.
+     */
+    java.lang.String getFromHosts(int index);
+    /**
+     * <pre>
+     * Hosts list which are forbidden to be masters after operation.
+     * If no hosts given, then current master will be switched.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fromHosts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFromHostsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.SwitchMasterRequest}
+   */
+  public static final class SwitchMasterRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.SwitchMasterRequest)
+      SwitchMasterRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SwitchMasterRequest.newBuilder() to construct.
+    private SwitchMasterRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SwitchMasterRequest() {
+      clusterId_ = "";
+      fromHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SwitchMasterRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SwitchMasterRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fromHosts_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fromHosts_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fromHosts_ = fromHosts_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FROM_HOSTS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList fromHosts_;
+    /**
+     * <pre>
+     * Hosts list which are forbidden to be masters after operation.
+     * If no hosts given, then current master will be switched.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @return A list containing the fromHosts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFromHostsList() {
+      return fromHosts_;
+    }
+    /**
+     * <pre>
+     * Hosts list which are forbidden to be masters after operation.
+     * If no hosts given, then current master will be switched.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @return The count of fromHosts.
+     */
+    public int getFromHostsCount() {
+      return fromHosts_.size();
+    }
+    /**
+     * <pre>
+     * Hosts list which are forbidden to be masters after operation.
+     * If no hosts given, then current master will be switched.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @param index The index of the element to return.
+     * @return The fromHosts at the given index.
+     */
+    public java.lang.String getFromHosts(int index) {
+      return fromHosts_.get(index);
+    }
+    /**
+     * <pre>
+     * Hosts list which are forbidden to be masters after operation.
+     * If no hosts given, then current master will be switched.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fromHosts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFromHostsBytes(int index) {
+      return fromHosts_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      for (int i = 0; i < fromHosts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fromHosts_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < fromHosts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(fromHosts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFromHostsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest other = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getFromHostsList()
+          .equals(other.getFromHostsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (getFromHostsCount() > 0) {
+        hash = (37 * hash) + FROM_HOSTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFromHostsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.SwitchMasterRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.SwitchMasterRequest)
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        fromHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest build() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest result = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.clusterId_ = clusterId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          fromHosts_ = fromHosts_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.fromHosts_ = fromHosts_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.fromHosts_.isEmpty()) {
+          if (fromHosts_.isEmpty()) {
+            fromHosts_ = other.fromHosts_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFromHostsIsMutable();
+            fromHosts_.addAll(other.fromHosts_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList fromHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFromHostsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fromHosts_ = new com.google.protobuf.LazyStringArrayList(fromHosts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Hosts list which are forbidden to be masters after operation.
+       * If no hosts given, then current master will be switched.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @return A list containing the fromHosts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFromHostsList() {
+        return fromHosts_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Hosts list which are forbidden to be masters after operation.
+       * If no hosts given, then current master will be switched.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @return The count of fromHosts.
+       */
+      public int getFromHostsCount() {
+        return fromHosts_.size();
+      }
+      /**
+       * <pre>
+       * Hosts list which are forbidden to be masters after operation.
+       * If no hosts given, then current master will be switched.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param index The index of the element to return.
+       * @return The fromHosts at the given index.
+       */
+      public java.lang.String getFromHosts(int index) {
+        return fromHosts_.get(index);
+      }
+      /**
+       * <pre>
+       * Hosts list which are forbidden to be masters after operation.
+       * If no hosts given, then current master will be switched.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fromHosts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFromHostsBytes(int index) {
+        return fromHosts_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Hosts list which are forbidden to be masters after operation.
+       * If no hosts given, then current master will be switched.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The fromHosts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromHosts(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFromHostsIsMutable();
+        fromHosts_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hosts list which are forbidden to be masters after operation.
+       * If no hosts given, then current master will be switched.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param value The fromHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFromHosts(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFromHostsIsMutable();
+        fromHosts_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hosts list which are forbidden to be masters after operation.
+       * If no hosts given, then current master will be switched.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param values The fromHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFromHosts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFromHostsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fromHosts_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hosts list which are forbidden to be masters after operation.
+       * If no hosts given, then current master will be switched.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFromHosts() {
+        fromHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hosts list which are forbidden to be masters after operation.
+       * If no hosts given, then current master will be switched.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param value The bytes of the fromHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFromHostsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFromHostsIsMutable();
+        fromHosts_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.SwitchMasterRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.SwitchMasterRequest)
+    private static final yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SwitchMasterRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SwitchMasterRequest>() {
+      @java.lang.Override
+      public SwitchMasterRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SwitchMasterRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SwitchMasterRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SwitchMasterRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SwitchMasterMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.SwitchMasterMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Host where masters will be expelled.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @return A list containing the fromHosts.
+     */
+    java.util.List<java.lang.String>
+        getFromHostsList();
+    /**
+     * <pre>
+     * Host where masters will be expelled.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @return The count of fromHosts.
+     */
+    int getFromHostsCount();
+    /**
+     * <pre>
+     * Host where masters will be expelled.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @param index The index of the element to return.
+     * @return The fromHosts at the given index.
+     */
+    java.lang.String getFromHosts(int index);
+    /**
+     * <pre>
+     * Host where masters will be expelled.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fromHosts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFromHostsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.SwitchMasterMetadata}
+   */
+  public static final class SwitchMasterMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.SwitchMasterMetadata)
+      SwitchMasterMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SwitchMasterMetadata.newBuilder() to construct.
+    private SwitchMasterMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SwitchMasterMetadata() {
+      clusterId_ = "";
+      fromHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SwitchMasterMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SwitchMasterMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fromHosts_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fromHosts_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fromHosts_ = fromHosts_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the OpenSearch cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FROM_HOSTS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList fromHosts_;
+    /**
+     * <pre>
+     * Host where masters will be expelled.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @return A list containing the fromHosts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFromHostsList() {
+      return fromHosts_;
+    }
+    /**
+     * <pre>
+     * Host where masters will be expelled.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @return The count of fromHosts.
+     */
+    public int getFromHostsCount() {
+      return fromHosts_.size();
+    }
+    /**
+     * <pre>
+     * Host where masters will be expelled.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @param index The index of the element to return.
+     * @return The fromHosts at the given index.
+     */
+    public java.lang.String getFromHosts(int index) {
+      return fromHosts_.get(index);
+    }
+    /**
+     * <pre>
+     * Host where masters will be expelled.
+     * </pre>
+     *
+     * <code>repeated string from_hosts = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fromHosts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFromHostsBytes(int index) {
+      return fromHosts_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      for (int i = 0; i < fromHosts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fromHosts_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < fromHosts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(fromHosts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFromHostsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata other = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata) obj;
+
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (!getFromHostsList()
+          .equals(other.getFromHostsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (getFromHostsCount() > 0) {
+        hash = (37 * hash) + FROM_HOSTS_FIELD_NUMBER;
+        hash = (53 * hash) + getFromHostsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.SwitchMasterMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.SwitchMasterMetadata)
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata.class, yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        fromHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata build() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata result = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata(this);
+        int from_bitField0_ = bitField0_;
+        result.clusterId_ = clusterId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          fromHosts_ = fromHosts_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.fromHosts_ = fromHosts_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.fromHosts_.isEmpty()) {
+          if (fromHosts_.isEmpty()) {
+            fromHosts_ = other.fromHosts_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFromHostsIsMutable();
+            fromHosts_.addAll(other.fromHosts_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the OpenSearch cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList fromHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFromHostsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fromHosts_ = new com.google.protobuf.LazyStringArrayList(fromHosts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Host where masters will be expelled.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @return A list containing the fromHosts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFromHostsList() {
+        return fromHosts_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Host where masters will be expelled.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @return The count of fromHosts.
+       */
+      public int getFromHostsCount() {
+        return fromHosts_.size();
+      }
+      /**
+       * <pre>
+       * Host where masters will be expelled.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param index The index of the element to return.
+       * @return The fromHosts at the given index.
+       */
+      public java.lang.String getFromHosts(int index) {
+        return fromHosts_.get(index);
+      }
+      /**
+       * <pre>
+       * Host where masters will be expelled.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fromHosts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFromHostsBytes(int index) {
+        return fromHosts_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Host where masters will be expelled.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The fromHosts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromHosts(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFromHostsIsMutable();
+        fromHosts_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host where masters will be expelled.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param value The fromHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFromHosts(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFromHostsIsMutable();
+        fromHosts_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host where masters will be expelled.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param values The fromHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFromHosts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFromHostsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fromHosts_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host where masters will be expelled.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFromHosts() {
+        fromHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host where masters will be expelled.
+       * </pre>
+       *
+       * <code>repeated string from_hosts = 2;</code>
+       * @param value The bytes of the fromHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFromHostsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFromHostsIsMutable();
+        fromHosts_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.SwitchMasterMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.SwitchMasterMetadata)
+    private static final yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SwitchMasterMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<SwitchMasterMetadata>() {
+      @java.lang.Override
+      public SwitchMasterMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SwitchMasterMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SwitchMasterMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SwitchMasterMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_opensearch_v1_GetClusterRequest_descriptor;
   private static final 
@@ -65343,6 +68724,26 @@ public final class ClusterServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_opensearch_v1_UpdateAuthSettingsMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -65610,143 +69011,161 @@ public final class ClusterServiceOuterClass {
       "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\010settings\030\002 \001" +
       "(\0132,.yandex.cloud.mdb.opensearch.v1.Auth" +
       "Settings\"0\n\032UpdateAuthSettingsMetadata\022\022" +
-      "\n\ncluster_id\030\001 \001(\t2\266)\n\016ClusterService\022\227\001" +
-      "\n\003Get\0221.yandex.cloud.mdb.opensearch.v1.G" +
-      "etClusterRequest\032\'.yandex.cloud.mdb.open" +
-      "search.v1.Cluster\"4\202\323\344\223\002.\022,/managed-open" +
-      "search/v1/clusters/{cluster_id}\022\232\001\n\004List" +
-      "\0223.yandex.cloud.mdb.opensearch.v1.ListCl" +
-      "ustersRequest\0324.yandex.cloud.mdb.opensea" +
-      "rch.v1.ListClustersResponse\"\'\202\323\344\223\002!\022\037/ma" +
-      "naged-opensearch/v1/clusters\022\261\001\n\006Create\022" +
-      "4.yandex.cloud.mdb.opensearch.v1.CreateC" +
-      "lusterRequest\032!.yandex.cloud.operation.O" +
-      "peration\"N\202\323\344\223\002$\"\037/managed-opensearch/v1" +
-      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
-      "\007Cluster\022\276\001\n\006Update\0224.yandex.cloud.mdb.o" +
-      "pensearch.v1.UpdateClusterRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"[\202\323\344\223\00212,/m" +
-      "anaged-opensearch/v1/clusters/{cluster_i" +
-      "d}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluste" +
-      "r\022\311\001\n\006Delete\0224.yandex.cloud.mdb.opensear" +
-      "ch.v1.DeleteClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"f\202\323\344\223\002.*,/managed-" +
-      "opensearch/v1/clusters/{cluster_id}\262\322*.\n" +
-      "\025DeleteClusterMetadata\022\025google.protobuf." +
-      "Empty\022\302\001\n\006Backup\0224.yandex.cloud.mdb.open" +
-      "search.v1.BackupClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"_\202\323\344\223\0025\"3/mana" +
-      "ged-opensearch/v1/clusters/{cluster_id}:" +
-      "backup\262\322* \n\025BackupClusterMetadata\022\007Clust" +
-      "er\022\341\001\n\014DeleteBackup\0223.yandex.cloud.mdb.o" +
-      "pensearch.v1.DeleteBackupRequest\032!.yande" +
-      "x.cloud.operation.Operation\"y\202\323\344\223\002B*@/ma" +
+      "\n\ncluster_id\030\001 \001(\t\"P\n\030RestartOpenSearchR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\022\n\004host\030\002 \001(\tB\004\350\3071\001\"=\n\031RestartOpenSearc" +
+      "hMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004host\030\002 " +
+      "\001(\t\"K\n\023SwitchMasterRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\nfrom_hosts\030\002 \003(\t" +
+      "\">\n\024SwitchMasterMetadata\022\022\n\ncluster_id\030\001" +
+      " \001(\t\022\022\n\nfrom_hosts\030\002 \003(\t2\202-\n\016ClusterServ" +
+      "ice\022\227\001\n\003Get\0221.yandex.cloud.mdb.opensearc" +
+      "h.v1.GetClusterRequest\032\'.yandex.cloud.md" +
+      "b.opensearch.v1.Cluster\"4\202\323\344\223\002.\022,/manage" +
+      "d-opensearch/v1/clusters/{cluster_id}\022\232\001" +
+      "\n\004List\0223.yandex.cloud.mdb.opensearch.v1." +
+      "ListClustersRequest\0324.yandex.cloud.mdb.o" +
+      "pensearch.v1.ListClustersResponse\"\'\202\323\344\223\002" +
+      "!\022\037/managed-opensearch/v1/clusters\022\261\001\n\006C" +
+      "reate\0224.yandex.cloud.mdb.opensearch.v1.C" +
+      "reateClusterRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"N\202\323\344\223\002$\"\037/managed-opensea" +
+      "rch/v1/clusters:\001*\262\322* \n\025CreateClusterMet" +
+      "adata\022\007Cluster\022\276\001\n\006Update\0224.yandex.cloud" +
+      ".mdb.opensearch.v1.UpdateClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"[\202\323\344\223" +
+      "\00212,/managed-opensearch/v1/clusters/{clu" +
+      "ster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007" +
+      "Cluster\022\311\001\n\006Delete\0224.yandex.cloud.mdb.op" +
+      "ensearch.v1.DeleteClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"f\202\323\344\223\002.*,/ma" +
       "naged-opensearch/v1/clusters/{cluster_id" +
-      "}/backups/{backup_id}\262\322*-\n\024DeleteBackupM" +
-      "etadata\022\025google.protobuf.Empty\022\274\001\n\007Resto" +
-      "re\0225.yandex.cloud.mdb.opensearch.v1.Rest" +
-      "oreClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"W\202\323\344\223\002,\"\'/managed-opensearc" +
-      "h/v1/clusters:restore:\001*\262\322*!\n\026RestoreClu" +
-      "sterMetadata\022\007Cluster\022\363\001\n\025RescheduleMain" +
-      "tenance\022<.yandex.cloud.mdb.opensearch.v1" +
-      ".RescheduleMaintenanceRequest\032!.yandex.c" +
-      "loud.operation.Operation\"y\202\323\344\223\002G\"B/manag" +
-      "ed-opensearch/v1/clusters/{cluster_id}:r" +
-      "escheduleMaintenance:\001*\262\322*(\n\035RescheduleM" +
-      "aintenanceMetadata\022\007Cluster\022\302\001\n\013ListBack" +
-      "ups\0229.yandex.cloud.mdb.opensearch.v1.Lis" +
-      "tClusterBackupsRequest\032:.yandex.cloud.md" +
-      "b.opensearch.v1.ListClusterBackupsRespon" +
-      "se\"<\202\323\344\223\0026\0224/managed-opensearch/v1/clust" +
-      "ers/{cluster_id}/backups\022\275\001\n\004Move\0222.yand" +
-      "ex.cloud.mdb.opensearch.v1.MoveClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"^\202\323\344\223\0026\"1/managed-opensearch/v1/cluster" +
-      "s/{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterM" +
-      "etadata\022\007Cluster\022\276\001\n\005Start\0223.yandex.clou" +
-      "d.mdb.opensearch.v1.StartClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"]\202\323\344\223" +
-      "\0024\"2/managed-opensearch/v1/clusters/{clu" +
-      "ster_id}:start\262\322*\037\n\024StartClusterMetadata" +
-      "\022\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb.op" +
-      "ensearch.v1.StopClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"[\202\323\344\223\0023\"1/mana" +
-      "ged-opensearch/v1/clusters/{cluster_id}:" +
-      "stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\266" +
-      "\001\n\010ListLogs\0226.yandex.cloud.mdb.opensearc" +
-      "h.v1.ListClusterLogsRequest\0327.yandex.clo" +
-      "ud.mdb.opensearch.v1.ListClusterLogsResp" +
-      "onse\"9\202\323\344\223\0023\0221/managed-opensearch/v1/clu" +
-      "sters/{cluster_id}:logs\022\273\001\n\nStreamLogs\0228" +
-      ".yandex.cloud.mdb.opensearch.v1.StreamCl" +
-      "usterLogsRequest\032/.yandex.cloud.mdb.open" +
-      "search.v1.StreamLogRecord\"@\202\323\344\223\002:\0228/mana" +
-      "ged-opensearch/v1/clusters/{cluster_id}:" +
-      "stream_logs0\001\022\316\001\n\016ListOperations\022<.yande" +
-      "x.cloud.mdb.opensearch.v1.ListClusterOpe" +
-      "rationsRequest\032=.yandex.cloud.mdb.opense" +
-      "arch.v1.ListClusterOperationsResponse\"?\202" +
-      "\323\344\223\0029\0227/managed-opensearch/v1/clusters/{" +
-      "cluster_id}/operations\022\272\001\n\tListHosts\0227.y" +
-      "andex.cloud.mdb.opensearch.v1.ListCluste" +
-      "rHostsRequest\0328.yandex.cloud.mdb.opensea" +
-      "rch.v1.ListClusterHostsResponse\":\202\323\344\223\0024\022" +
-      "2/managed-opensearch/v1/clusters/{cluste" +
-      "r_id}/hosts\022\373\001\n\026AddOpenSearchNodeGroup\022=" +
-      ".yandex.cloud.mdb.opensearch.v1.AddOpenS" +
-      "earchNodeGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\177\202\323\344\223\002H\"C/managed-opens" +
-      "earch/v1/clusters/{cluster_id}/opensearc" +
-      "h/node_groups:\001*\262\322*-\n\024AddNodeGroupMetada" +
-      "ta\022\025google.protobuf.Empty\022\211\002\n\031DeleteOpen" +
-      "SearchNodeGroup\022@.yandex.cloud.mdb.opens" +
-      "earch.v1.DeleteOpenSearchNodeGroupReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\206\001\202" +
-      "\323\344\223\002L*J/managed-opensearch/v1/clusters/{" +
-      "cluster_id}/opensearch/node_groups/{name" +
-      "}\262\322*0\n\027DeleteNodeGroupMetadata\022\025google.p" +
-      "rotobuf.Empty\022\214\002\n\031UpdateOpenSearchNodeGr" +
-      "oup\022@.yandex.cloud.mdb.opensearch.v1.Upd" +
-      "ateOpenSearchNodeGroupRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\211\001\202\323\344\223\002O2J/mana" +
-      "ged-opensearch/v1/clusters/{cluster_id}/" +
-      "opensearch/node_groups/{name}:\001*\262\322*0\n\027Up" +
-      "dateNodeGroupMetadata\022\025google.protobuf.E" +
-      "mpty\022\373\001\n\026AddDashboardsNodeGroup\022=.yandex" +
-      ".cloud.mdb.opensearch.v1.AddDashboardsNo" +
-      "deGroupRequest\032!.yandex.cloud.operation." +
-      "Operation\"\177\202\323\344\223\002H\"C/managed-opensearch/v" +
-      "1/clusters/{cluster_id}/dashboards/node_" +
-      "groups:\001*\262\322*-\n\024AddNodeGroupMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\211\002\n\031DeleteDashboardsN" +
-      "odeGroup\022@.yandex.cloud.mdb.opensearch.v" +
-      "1.DeleteDashboardsNodeGroupRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"\206\001\202\323\344\223\002L*J" +
+      "}\262\322*.\n\025DeleteClusterMetadata\022\025google.pro" +
+      "tobuf.Empty\022\302\001\n\006Backup\0224.yandex.cloud.md" +
+      "b.opensearch.v1.BackupClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"_\202\323\344\223\0025\"" +
+      "3/managed-opensearch/v1/clusters/{cluste" +
+      "r_id}:backup\262\322* \n\025BackupClusterMetadata\022" +
+      "\007Cluster\022\341\001\n\014DeleteBackup\0223.yandex.cloud" +
+      ".mdb.opensearch.v1.DeleteBackupRequest\032!" +
+      ".yandex.cloud.operation.Operation\"y\202\323\344\223\002" +
+      "B*@/managed-opensearch/v1/clusters/{clus" +
+      "ter_id}/backups/{backup_id}\262\322*-\n\024DeleteB" +
+      "ackupMetadata\022\025google.protobuf.Empty\022\274\001\n" +
+      "\007Restore\0225.yandex.cloud.mdb.opensearch.v" +
+      "1.RestoreClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"W\202\323\344\223\002,\"\'/managed-ope" +
+      "nsearch/v1/clusters:restore:\001*\262\322*!\n\026Rest" +
+      "oreClusterMetadata\022\007Cluster\022\363\001\n\025Reschedu" +
+      "leMaintenance\022<.yandex.cloud.mdb.opensea" +
+      "rch.v1.RescheduleMaintenanceRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"y\202\323\344\223\002G\"B" +
       "/managed-opensearch/v1/clusters/{cluster" +
-      "_id}/dashboards/node_groups/{name}\262\322*0\n\027" +
-      "DeleteNodeGroupMetadata\022\025google.protobuf" +
-      ".Empty\022\214\002\n\031UpdateDashboardsNodeGroup\022@.y" +
-      "andex.cloud.mdb.opensearch.v1.UpdateDash" +
-      "boardsNodeGroupRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"\211\001\202\323\344\223\002O2J/managed-ope" +
-      "nsearch/v1/clusters/{cluster_id}/dashboa" +
-      "rds/node_groups/{name}:\001*\262\322*0\n\027UpdateNod" +
-      "eGroupMetadata\022\025google.protobuf.Empty\022\262\001" +
-      "\n\017GetAuthSettings\0226.yandex.cloud.mdb.ope" +
-      "nsearch.v1.GetAuthSettingsRequest\032,.yand" +
-      "ex.cloud.mdb.opensearch.v1.AuthSettings\"" +
-      "9\202\323\344\223\0023\0221/managed-opensearch/v1/clusters" +
-      "/{cluster_id}/auth\022\336\001\n\022UpdateAuthSetting" +
-      "s\0229.yandex.cloud.mdb.opensearch.v1.Updat" +
-      "eAuthSettingsRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"j\202\323\344\223\0026\0321/managed-opense" +
-      "arch/v1/clusters/{cluster_id}/auth:\001*\262\322*" +
-      "*\n\032UpdateAuthSettingsMetadata\022\014AuthSetti" +
-      "ngsBs\n\"yandex.cloud.api.mdb.opensearch.v" +
-      "1ZMgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/mdb/opensearch/v1;opensearch" +
-      "b\006proto3"
+      "_id}:rescheduleMaintenance:\001*\262\322*(\n\035Resch" +
+      "eduleMaintenanceMetadata\022\007Cluster\022\302\001\n\013Li" +
+      "stBackups\0229.yandex.cloud.mdb.opensearch." +
+      "v1.ListClusterBackupsRequest\032:.yandex.cl" +
+      "oud.mdb.opensearch.v1.ListClusterBackups" +
+      "Response\"<\202\323\344\223\0026\0224/managed-opensearch/v1" +
+      "/clusters/{cluster_id}/backups\022\275\001\n\004Move\022" +
+      "2.yandex.cloud.mdb.opensearch.v1.MoveClu" +
+      "sterRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"^\202\323\344\223\0026\"1/managed-opensearch/v1/c" +
+      "lusters/{cluster_id}:move:\001*\262\322*\036\n\023MoveCl" +
+      "usterMetadata\022\007Cluster\022\276\001\n\005Start\0223.yande" +
+      "x.cloud.mdb.opensearch.v1.StartClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"]\202\323\344\223\0024\"2/managed-opensearch/v1/cluster" +
+      "s/{cluster_id}:start\262\322*\037\n\024StartClusterMe" +
+      "tadata\022\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud." +
+      "mdb.opensearch.v1.StopClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"[\202\323\344\223\0023\"" +
+      "1/managed-opensearch/v1/clusters/{cluste" +
+      "r_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clu" +
+      "ster\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb.ope" +
+      "nsearch.v1.ListClusterLogsRequest\0327.yand" +
+      "ex.cloud.mdb.opensearch.v1.ListClusterLo" +
+      "gsResponse\"9\202\323\344\223\0023\0221/managed-opensearch/" +
+      "v1/clusters/{cluster_id}:logs\022\273\001\n\nStream" +
+      "Logs\0228.yandex.cloud.mdb.opensearch.v1.St" +
+      "reamClusterLogsRequest\032/.yandex.cloud.md" +
+      "b.opensearch.v1.StreamLogRecord\"@\202\323\344\223\002:\022" +
+      "8/managed-opensearch/v1/clusters/{cluste" +
+      "r_id}:stream_logs0\001\022\316\001\n\016ListOperations\022<" +
+      ".yandex.cloud.mdb.opensearch.v1.ListClus" +
+      "terOperationsRequest\032=.yandex.cloud.mdb." +
+      "opensearch.v1.ListClusterOperationsRespo" +
+      "nse\"?\202\323\344\223\0029\0227/managed-opensearch/v1/clus" +
+      "ters/{cluster_id}/operations\022\272\001\n\tListHos" +
+      "ts\0227.yandex.cloud.mdb.opensearch.v1.List" +
+      "ClusterHostsRequest\0328.yandex.cloud.mdb.o" +
+      "pensearch.v1.ListClusterHostsResponse\":\202" +
+      "\323\344\223\0024\0222/managed-opensearch/v1/clusters/{" +
+      "cluster_id}/hosts\022\373\001\n\026AddOpenSearchNodeG" +
+      "roup\022=.yandex.cloud.mdb.opensearch.v1.Ad" +
+      "dOpenSearchNodeGroupRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\177\202\323\344\223\002H\"C/managed" +
+      "-opensearch/v1/clusters/{cluster_id}/ope" +
+      "nsearch/node_groups:\001*\262\322*-\n\024AddNodeGroup" +
+      "Metadata\022\025google.protobuf.Empty\022\211\002\n\031Dele" +
+      "teOpenSearchNodeGroup\022@.yandex.cloud.mdb" +
+      ".opensearch.v1.DeleteOpenSearchNodeGroup" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"\206\001\202\323\344\223\002L*J/managed-opensearch/v1/clus" +
+      "ters/{cluster_id}/opensearch/node_groups" +
+      "/{name}\262\322*0\n\027DeleteNodeGroupMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\214\002\n\031UpdateOpenSearch" +
+      "NodeGroup\022@.yandex.cloud.mdb.opensearch." +
+      "v1.UpdateOpenSearchNodeGroupRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\211\001\202\323\344\223\002O2" +
+      "J/managed-opensearch/v1/clusters/{cluste" +
+      "r_id}/opensearch/node_groups/{name}:\001*\262\322" +
+      "*0\n\027UpdateNodeGroupMetadata\022\025google.prot" +
+      "obuf.Empty\022\373\001\n\026AddDashboardsNodeGroup\022=." +
+      "yandex.cloud.mdb.opensearch.v1.AddDashbo" +
+      "ardsNodeGroupRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"\177\202\323\344\223\002H\"C/managed-opense" +
+      "arch/v1/clusters/{cluster_id}/dashboards" +
+      "/node_groups:\001*\262\322*-\n\024AddNodeGroupMetadat" +
+      "a\022\025google.protobuf.Empty\022\211\002\n\031DeleteDashb" +
+      "oardsNodeGroup\022@.yandex.cloud.mdb.opense" +
+      "arch.v1.DeleteDashboardsNodeGroupRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\206\001\202\323" +
+      "\344\223\002L*J/managed-opensearch/v1/clusters/{c" +
+      "luster_id}/dashboards/node_groups/{name}" +
+      "\262\322*0\n\027DeleteNodeGroupMetadata\022\025google.pr" +
+      "otobuf.Empty\022\214\002\n\031UpdateDashboardsNodeGro" +
+      "up\022@.yandex.cloud.mdb.opensearch.v1.Upda" +
+      "teDashboardsNodeGroupRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"\211\001\202\323\344\223\002O2J/manag" +
+      "ed-opensearch/v1/clusters/{cluster_id}/d" +
+      "ashboards/node_groups/{name}:\001*\262\322*0\n\027Upd" +
+      "ateNodeGroupMetadata\022\025google.protobuf.Em" +
+      "pty\022\262\001\n\017GetAuthSettings\0226.yandex.cloud.m" +
+      "db.opensearch.v1.GetAuthSettingsRequest\032" +
+      ",.yandex.cloud.mdb.opensearch.v1.AuthSet" +
+      "tings\"9\202\323\344\223\0023\0221/managed-opensearch/v1/cl" +
+      "usters/{cluster_id}/auth\022\336\001\n\022UpdateAuthS" +
+      "ettings\0229.yandex.cloud.mdb.opensearch.v1" +
+      ".UpdateAuthSettingsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"j\202\323\344\223\0026\0321/managed-" +
+      "opensearch/v1/clusters/{cluster_id}/auth" +
+      ":\001*\262\322**\n\032UpdateAuthSettingsMetadata\022\014Aut" +
+      "hSettings\022\350\001\n\021RestartOpenSearch\0228.yandex" +
+      ".cloud.mdb.opensearch.v1.RestartOpenSear",
+      "chRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"v\202\323\344\223\002:\"8/managed-opensearch/v1/clu" +
+      "sters/{cluster_id}/host/{host}\262\322*2\n\031Rest" +
+      "artOpenSearchMetadata\022\025google.protobuf.E" +
+      "mpty\022\336\001\n\014SwitchMaster\0223.yandex.cloud.mdb" +
+      ".opensearch.v1.SwitchMasterRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"v\202\323\344\223\002?\":/" +
+      "managed-opensearch/v1/clusters/{cluster_" +
+      "id}:switch_master:\001*\262\322*-\n\024SwitchMasterMe" +
+      "tadata\022\025google.protobuf.EmptyBs\n\"yandex." +
+      "cloud.api.mdb.opensearch.v1ZMgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/md" +
+      "b/opensearch/v1;opensearchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -66129,6 +69548,30 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_UpdateAuthSettingsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_descriptor =
+      getDescriptor().getMessageTypes().get(55);
+    internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "Host", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(56);
+    internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_RestartOpenSearchMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "Host", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_descriptor =
+      getDescriptor().getMessageTypes().get(57);
+    internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "FromHosts", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(58);
+    internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_SwitchMasterMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "FromHosts", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

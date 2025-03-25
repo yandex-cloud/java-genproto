@@ -2029,6 +2029,36 @@ public final class BackupServiceOuterClass {
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType();
 
+    /**
+     * <pre>
+     * Number of results per page. 
+     * </pre>
+     *
+     * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Token for the results page. Not allowed to use if listing is performed by specific policy ID.
+     * </pre>
+     *
+     * <code>string page_token = 11 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Token for the results page. Not allowed to use if listing is performed by specific policy ID.
+     * </pre>
+     *
+     * <code>string page_token = 11 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
     public yandex.cloud.api.backup.v1.BackupServiceOuterClass.ListBackupsRequest.IdCase getIdCase();
   }
   /**
@@ -2047,6 +2077,7 @@ public final class BackupServiceOuterClass {
       orderBy_ = "";
       filter_ = "";
       type_ = 0;
+      pageToken_ = "";
     }
 
     @java.lang.Override
@@ -2147,6 +2178,17 @@ public final class BackupServiceOuterClass {
               int rawValue = input.readEnum();
 
               type_ = rawValue;
+              break;
+            }
+            case 80: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
               break;
             }
             default: {
@@ -4281,6 +4323,67 @@ public final class BackupServiceOuterClass {
       return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
     }
 
+    public static final int PAGE_SIZE_FIELD_NUMBER = 10;
+    private long pageSize_;
+    /**
+     * <pre>
+     * Number of results per page. 
+     * </pre>
+     *
+     * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 11;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Token for the results page. Not allowed to use if listing is performed by specific policy ID.
+     * </pre>
+     *
+     * <code>string page_token = 11 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token for the results page. Not allowed to use if listing is performed by specific policy ID.
+     * </pre>
+     *
+     * <code>string page_token = 11 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4322,6 +4425,12 @@ public final class BackupServiceOuterClass {
       if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(9, type_);
       }
+      if (pageSize_ != 0L) {
+        output.writeInt64(10, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, pageToken_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4361,6 +4470,13 @@ public final class BackupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(9, type_);
       }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(10, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, pageToken_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4381,6 +4497,10 @@ public final class BackupServiceOuterClass {
       if (!getFilter()
           .equals(other.getFilter())) return false;
       if (type_ != other.type_) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
       if (!getIdCase().equals(other.getIdCase())) return false;
       switch (idCase_) {
         case 1:
@@ -4427,6 +4547,11 @@ public final class BackupServiceOuterClass {
       hash = (53 * hash) + getFilter().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
       switch (idCase_) {
         case 1:
           hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
@@ -4594,6 +4719,10 @@ public final class BackupServiceOuterClass {
 
         type_ = 0;
 
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
         idCase_ = 0;
         id_ = null;
         return this;
@@ -4651,6 +4780,8 @@ public final class BackupServiceOuterClass {
         result.orderBy_ = orderBy_;
         result.filter_ = filter_;
         result.type_ = type_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
         result.idCase_ = idCase_;
         onBuilt();
         return result;
@@ -4710,6 +4841,13 @@ public final class BackupServiceOuterClass {
         }
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
         }
         switch (other.getIdCase()) {
           case COMPUTE_INSTANCE_ID: {
@@ -5920,6 +6058,145 @@ public final class BackupServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * Number of results per page. 
+       * </pre>
+       *
+       * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * Number of results per page. 
+       * </pre>
+       *
+       * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of results per page. 
+       * </pre>
+       *
+       * <code>int64 page_size = 10 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Token for the results page. Not allowed to use if listing is performed by specific policy ID.
+       * </pre>
+       *
+       * <code>string page_token = 11 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for the results page. Not allowed to use if listing is performed by specific policy ID.
+       * </pre>
+       *
+       * <code>string page_token = 11 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for the results page. Not allowed to use if listing is performed by specific policy ID.
+       * </pre>
+       *
+       * <code>string page_token = 11 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for the results page. Not allowed to use if listing is performed by specific policy ID.
+       * </pre>
+       *
+       * <code>string page_token = 11 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for the results page. Not allowed to use if listing is performed by specific policy ID.
+       * </pre>
+       *
+       * <code>string page_token = 11 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6000,6 +6277,26 @@ public final class BackupServiceOuterClass {
      */
     yandex.cloud.api.backup.v1.BackupOuterClass.BackupOrBuilder getBackupsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.ListBackupsResponse}
@@ -6015,6 +6312,7 @@ public final class BackupServiceOuterClass {
     }
     private ListBackupsResponse() {
       backups_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
     }
 
     @java.lang.Override
@@ -6055,6 +6353,12 @@ public final class BackupServiceOuterClass {
               }
               backups_.add(
                   input.readMessage(yandex.cloud.api.backup.v1.BackupOuterClass.Backup.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
               break;
             }
             default: {
@@ -6132,6 +6436,52 @@ public final class BackupServiceOuterClass {
       return backups_.get(index);
     }
 
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6149,6 +6499,9 @@ public final class BackupServiceOuterClass {
       for (int i = 0; i < backups_.size(); i++) {
         output.writeMessage(1, backups_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6161,6 +6514,9 @@ public final class BackupServiceOuterClass {
       for (int i = 0; i < backups_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, backups_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6179,6 +6535,8 @@ public final class BackupServiceOuterClass {
 
       if (!getBackupsList()
           .equals(other.getBackupsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6194,6 +6552,8 @@ public final class BackupServiceOuterClass {
         hash = (37 * hash) + BACKUPS_FIELD_NUMBER;
         hash = (53 * hash) + getBackupsList().hashCode();
       }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6334,6 +6694,8 @@ public final class BackupServiceOuterClass {
         } else {
           backupsBuilder_.clear();
         }
+        nextPageToken_ = "";
+
         return this;
       }
 
@@ -6370,6 +6732,7 @@ public final class BackupServiceOuterClass {
         } else {
           result.backups_ = backupsBuilder_.build();
         }
+        result.nextPageToken_ = nextPageToken_;
         onBuilt();
         return result;
       }
@@ -6443,6 +6806,10 @@ public final class BackupServiceOuterClass {
               backupsBuilder_.addAllMessages(other.backups_);
             }
           }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6712,6 +7079,102 @@ public final class BackupServiceOuterClass {
           backups_ = null;
         }
         return backupsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19435,7 +19898,7 @@ public final class BackupServiceOuterClass {
       "(\tH\000\022\035\n\023compute_instance_id\030\002 \001(\tH\000B\n\n\002i" +
       "d\022\004\300\3011\001\"I\n\024ListArchivesResponse\0221\n\010archi" +
       "ves\030\001 \003(\0132\037.yandex.cloud.backup.v1.Archi" +
-      "ve\"\207\004\n\022ListBackupsRequest\022\035\n\023compute_ins" +
+      "ve\"\305\004\n\022ListBackupsRequest\022\035\n\023compute_ins" +
       "tance_id\030\001 \001(\tH\000\022O\n\007archive\030\002 \001(\0132<.yand" +
       "ex.cloud.backup.v1.ListBackupsRequest.Ar" +
       "chiveParametersH\000\022\023\n\tfolder_id\030\003 \001(\tH\000\022T" +
@@ -19444,87 +19907,89 @@ public final class BackupServiceOuterClass {
       "cyH\000\022\025\n\013resource_id\030\006 \001(\tH\000\022\023\n\tpolicy_id" +
       "\030\007 \001(\tH\000\022\020\n\010order_by\030\005 \001(\t\022\016\n\006filter\030\010 \001" +
       "(\t\0222\n\004type\030\t \001(\0162$.yandex.cloud.backup.v" +
-      "1.ResourceType\032F\n\021ArchiveParameters\022\030\n\na" +
-      "rchive_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\t" +
-      "B\004\350\3071\001\032@\n\016InstancePolicy\022\033\n\023compute_inst" +
-      "ance_id\030\001 \001(\t\022\021\n\tpolicy_id\030\002 \001(\tB\n\n\002id\022\004" +
-      "\300\3011\001\"F\n\023ListBackupsResponse\022/\n\007backups\030\001" +
-      " \003(\0132\036.yandex.cloud.backup.v1.Backup\"]\n\020" +
-      "ListFilesRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tsource_id\030" +
-      "\003 \001(\tB\004\350\3071\000\"F\n\021ListFilesResponse\0221\n\005file" +
-      "s\030\001 \003(\0132\".yandex.cloud.backup.v1.BackupF" +
-      "ile\"D\n\020GetBackupRequest\022\027\n\tbackup_id\030\001 \001" +
-      "(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\"Z\n\024Sta" +
-      "rtRecoveryRequest\022)\n\023compute_instance_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbackup_id\030\002 \001(\tB" +
-      "\004\350\3071\001\"l\n\025StartRecoveryMetadata\022\033\n\023progre" +
-      "ss_percentage\030\001 \001(\001\022\025\n\rsrc_backup_id\030\002 \001" +
-      "(\t\022\037\n\027dst_compute_instance_id\030\003 \001(\t\"\024\n\022T" +
-      "argetPathOriginal\" \n\020TargetPathCustom\022\014\n" +
-      "\004path\030\001 \001(\t\"\373\002\n\024FilesRecoveryOptions\022O\n\t" +
-      "overwrite\030\001 \001(\01626.yandex.cloud.backup.v1" +
-      ".FilesRecoveryOptions.OverwriteB\004\350\3071\000\022\036\n" +
-      "\020reboot_if_needed\030\002 \001(\010B\004\350\3071\000\022>\n\010origina" +
-      "l\030d \001(\0132*.yandex.cloud.backup.v1.TargetP" +
-      "athOriginalH\000\022:\n\006custom\030e \001(\0132(.yandex.c" +
-      "loud.backup.v1.TargetPathCustomH\000\"b\n\tOve" +
-      "rwrite\022\031\n\025OVERWRITE_UNSPECIFIED\020\000\022\021\n\rOVE" +
-      "RWRITE_ALL\020\001\022\023\n\017OVERWRITE_OLDER\020\002\022\022\n\016OVE" +
-      "RWRITE_NONE\020\003B\014\n\004type\022\004\300\3011\001J\004\010\003\020d\"\265\001\n\031St" +
-      "artFilesRecoveryRequest\022!\n\023compute_insta" +
-      "nce_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350" +
-      "\3071\001\022@\n\004opts\030\003 \001(\0132,.yandex.cloud.backup." +
-      "v1.FilesRecoveryOptionsB\004\350\3071\001\022\032\n\nsource_" +
-      "ids\030\004 \003(\tB\006\202\3101\002>0\"\221\001\n\032StartFilesRecovery" +
-      "Metadata\022\033\n\023progress_percentage\030\001 \001(\001\022!\n" +
-      "\023compute_instance_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tback" +
-      "up_id\030\003 \001(\tB\004\350\3071\001\022\032\n\nsource_ids\030\004 \003(\tB\006\202" +
-      "\3101\002>0\"Y\n\023DeleteBackupRequest\022)\n\023compute_" +
-      "instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbacku" +
-      "p_id\030\002 \001(\tB\004\350\3071\001\"F\n\024DeleteBackupMetadata" +
-      "\022\033\n\023compute_instance_id\030\001 \001(\t\022\021\n\tbackup_" +
-      "id\030\002 \001(\t\"\225\001\n\024DeleteArchiveRequest\022\030\n\narc" +
-      "hive_id\030\001 \001(\tB\004\350\3071\000\022\037\n\tfolder_id\030\002 \001(\tB\014" +
-      "\350\3071\000\212\3101\004<=50\022!\n\013instance_id\030\003 \001(\tB\014\350\3071\000\212" +
-      "\3101\004<=50\022\037\n\tpolicy_id\030\004 \001(\tB\014\350\3071\000\212\3101\004<=50" +
-      "\">\n\025DeleteArchiveMetadata\022\022\n\narchive_id\030" +
-      "\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t2\222\n\n\rBackupServi" +
-      "ce\022{\n\004List\022*.yandex.cloud.backup.v1.List" +
-      "BackupsRequest\032+.yandex.cloud.backup.v1." +
-      "ListBackupsResponse\"\032\202\323\344\223\002\024\022\022/backup/v1/" +
-      "backups\022\244\001\n\014ListArchives\022+.yandex.cloud." +
-      "backup.v1.ListArchivesRequest\032,.yandex.c" +
-      "loud.backup.v1.ListArchivesResponse\"9\202\323\344" +
-      "\223\0023\0221/backup/v1/backups/{compute_instanc" +
-      "e_id}/archives\022\216\001\n\tListFiles\022(.yandex.cl" +
-      "oud.backup.v1.ListFilesRequest\032).yandex." +
-      "cloud.backup.v1.ListFilesResponse\",\202\323\344\223\002" +
-      "&\022$/backup/v1/backups/{backup_id}/files\022" +
-      "w\n\003Get\022(.yandex.cloud.backup.v1.GetBacku" +
-      "pRequest\032\036.yandex.cloud.backup.v1.Backup" +
-      "\"&\202\323\344\223\002 \022\036/backup/v1/backups/{backup_id}" +
-      "\022\313\001\n\rStartRecovery\022,.yandex.cloud.backup" +
-      ".v1.StartRecoveryRequest\032!.yandex.cloud." +
-      "operation.Operation\"i\202\323\344\223\0021\",/backup/v1/" +
-      "backups/{backup_id}:startRecovery:\001*\262\322*." +
-      "\n\025StartRecoveryMetadata\022\025google.protobuf" +
-      ".Empty\022\243\001\n\022StartFilesRecovery\0221.yandex.c" +
-      "loud.backup.v1.StartFilesRecoveryRequest" +
-      "\032!.yandex.cloud.operation.Operation\"7\262\322*" +
-      "3\n\032StartFilesRecoveryMetadata\022\025google.pr" +
-      "otobuf.Empty\022\307\001\n\006Delete\022+.yandex.cloud.b" +
-      "ackup.v1.DeleteBackupRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"m\202\323\344\223\0026*4/backup" +
-      "/v1/backups/{compute_instance_id}/{backu" +
-      "p_id}\262\322*-\n\024DeleteBackupMetadata\022\025google." +
-      "protobuf.Empty\022\224\001\n\rDeleteArchive\022,.yande" +
-      "x.cloud.backup.v1.DeleteArchiveRequest\032!" +
-      ".yandex.cloud.operation.Operation\"2\262\322*.\n" +
-      "\025DeleteArchiveMetadata\022\025google.protobuf." +
-      "EmptyB_\n\032yandex.cloud.api.backup.v1ZAgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/backup/v1;backupb\006proto3"
+      "1.ResourceType\022\035\n\tpage_size\030\n \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\013 \001(\tB\t\212\3101\005<=100\032F\n\021" +
+      "ArchiveParameters\022\030\n\narchive_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001\032@\n\016Instance" +
+      "Policy\022\033\n\023compute_instance_id\030\001 \001(\t\022\021\n\tp" +
+      "olicy_id\030\002 \001(\tB\n\n\002id\022\004\300\3011\001\"_\n\023ListBackup" +
+      "sResponse\022/\n\007backups\030\001 \003(\0132\036.yandex.clou" +
+      "d.backup.v1.Backup\022\027\n\017next_page_token\030\002 " +
+      "\001(\t\"]\n\020ListFilesRequest\022\027\n\tfolder_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022\027\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\022\027\n\tsou" +
+      "rce_id\030\003 \001(\tB\004\350\3071\000\"F\n\021ListFilesResponse\022" +
+      "1\n\005files\030\001 \003(\0132\".yandex.cloud.backup.v1." +
+      "BackupFile\"D\n\020GetBackupRequest\022\027\n\tbackup" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tfolder_id\030\002 \001(\tB\004\350\3071\001" +
+      "\"Z\n\024StartRecoveryRequest\022)\n\023compute_inst" +
+      "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\tbackup_id" +
+      "\030\002 \001(\tB\004\350\3071\001\"l\n\025StartRecoveryMetadata\022\033\n" +
+      "\023progress_percentage\030\001 \001(\001\022\025\n\rsrc_backup" +
+      "_id\030\002 \001(\t\022\037\n\027dst_compute_instance_id\030\003 \001" +
+      "(\t\"\024\n\022TargetPathOriginal\" \n\020TargetPathCu" +
+      "stom\022\014\n\004path\030\001 \001(\t\"\373\002\n\024FilesRecoveryOpti" +
+      "ons\022O\n\toverwrite\030\001 \001(\01626.yandex.cloud.ba" +
+      "ckup.v1.FilesRecoveryOptions.OverwriteB\004" +
+      "\350\3071\000\022\036\n\020reboot_if_needed\030\002 \001(\010B\004\350\3071\000\022>\n\010" +
+      "original\030d \001(\0132*.yandex.cloud.backup.v1." +
+      "TargetPathOriginalH\000\022:\n\006custom\030e \001(\0132(.y" +
+      "andex.cloud.backup.v1.TargetPathCustomH\000" +
+      "\"b\n\tOverwrite\022\031\n\025OVERWRITE_UNSPECIFIED\020\000" +
+      "\022\021\n\rOVERWRITE_ALL\020\001\022\023\n\017OVERWRITE_OLDER\020\002" +
+      "\022\022\n\016OVERWRITE_NONE\020\003B\014\n\004type\022\004\300\3011\001J\004\010\003\020d" +
+      "\"\265\001\n\031StartFilesRecoveryRequest\022!\n\023comput" +
+      "e_instance_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tbackup_id\030\002" +
+      " \001(\tB\004\350\3071\001\022@\n\004opts\030\003 \001(\0132,.yandex.cloud." +
+      "backup.v1.FilesRecoveryOptionsB\004\350\3071\001\022\032\n\n" +
+      "source_ids\030\004 \003(\tB\006\202\3101\002>0\"\221\001\n\032StartFilesR" +
+      "ecoveryMetadata\022\033\n\023progress_percentage\030\001" +
+      " \001(\001\022!\n\023compute_instance_id\030\002 \001(\tB\004\350\3071\001\022" +
+      "\027\n\tbackup_id\030\003 \001(\tB\004\350\3071\001\022\032\n\nsource_ids\030\004" +
+      " \003(\tB\006\202\3101\002>0\"Y\n\023DeleteBackupRequest\022)\n\023c" +
+      "ompute_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\027" +
+      "\n\tbackup_id\030\002 \001(\tB\004\350\3071\001\"F\n\024DeleteBackupM" +
+      "etadata\022\033\n\023compute_instance_id\030\001 \001(\t\022\021\n\t" +
+      "backup_id\030\002 \001(\t\"\225\001\n\024DeleteArchiveRequest" +
+      "\022\030\n\narchive_id\030\001 \001(\tB\004\350\3071\000\022\037\n\tfolder_id\030" +
+      "\002 \001(\tB\014\350\3071\000\212\3101\004<=50\022!\n\013instance_id\030\003 \001(\t" +
+      "B\014\350\3071\000\212\3101\004<=50\022\037\n\tpolicy_id\030\004 \001(\tB\014\350\3071\000\212" +
+      "\3101\004<=50\">\n\025DeleteArchiveMetadata\022\022\n\narch" +
+      "ive_id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t2\222\n\n\rBack" +
+      "upService\022{\n\004List\022*.yandex.cloud.backup." +
+      "v1.ListBackupsRequest\032+.yandex.cloud.bac" +
+      "kup.v1.ListBackupsResponse\"\032\202\323\344\223\002\024\022\022/bac" +
+      "kup/v1/backups\022\244\001\n\014ListArchives\022+.yandex" +
+      ".cloud.backup.v1.ListArchivesRequest\032,.y" +
+      "andex.cloud.backup.v1.ListArchivesRespon" +
+      "se\"9\202\323\344\223\0023\0221/backup/v1/backups/{compute_" +
+      "instance_id}/archives\022\216\001\n\tListFiles\022(.ya" +
+      "ndex.cloud.backup.v1.ListFilesRequest\032)." +
+      "yandex.cloud.backup.v1.ListFilesResponse" +
+      "\",\202\323\344\223\002&\022$/backup/v1/backups/{backup_id}" +
+      "/files\022w\n\003Get\022(.yandex.cloud.backup.v1.G" +
+      "etBackupRequest\032\036.yandex.cloud.backup.v1" +
+      ".Backup\"&\202\323\344\223\002 \022\036/backup/v1/backups/{bac" +
+      "kup_id}\022\313\001\n\rStartRecovery\022,.yandex.cloud" +
+      ".backup.v1.StartRecoveryRequest\032!.yandex" +
+      ".cloud.operation.Operation\"i\202\323\344\223\0021\",/bac" +
+      "kup/v1/backups/{backup_id}:startRecovery" +
+      ":\001*\262\322*.\n\025StartRecoveryMetadata\022\025google.p" +
+      "rotobuf.Empty\022\243\001\n\022StartFilesRecovery\0221.y" +
+      "andex.cloud.backup.v1.StartFilesRecovery" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"7\262\322*3\n\032StartFilesRecoveryMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\307\001\n\006Delete\022+.yandex." +
+      "cloud.backup.v1.DeleteBackupRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"m\202\323\344\223\0026*4" +
+      "/backup/v1/backups/{compute_instance_id}" +
+      "/{backup_id}\262\322*-\n\024DeleteBackupMetadata\022\025" +
+      "google.protobuf.Empty\022\224\001\n\rDeleteArchive\022" +
+      ",.yandex.cloud.backup.v1.DeleteArchiveRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"2\262\322*.\n\025DeleteArchiveMetadata\022\025google.pr" +
+      "otobuf.EmptyB_\n\032yandex.cloud.api.backup." +
+      "v1ZAgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/backup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19553,7 +20018,7 @@ public final class BackupServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ListBackupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ListBackupsRequest_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", "Archive", "FolderId", "InstancePolicy", "ResourceId", "PolicyId", "OrderBy", "Filter", "Type", "Id", });
+        new java.lang.String[] { "ComputeInstanceId", "Archive", "FolderId", "InstancePolicy", "ResourceId", "PolicyId", "OrderBy", "Filter", "Type", "PageSize", "PageToken", "Id", });
     internal_static_yandex_cloud_backup_v1_ListBackupsRequest_ArchiveParameters_descriptor =
       internal_static_yandex_cloud_backup_v1_ListBackupsRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_backup_v1_ListBackupsRequest_ArchiveParameters_fieldAccessorTable = new
@@ -19571,7 +20036,7 @@ public final class BackupServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_ListBackupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_ListBackupsResponse_descriptor,
-        new java.lang.String[] { "Backups", });
+        new java.lang.String[] { "Backups", "NextPageToken", });
     internal_static_yandex_cloud_backup_v1_ListFilesRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_backup_v1_ListFilesRequest_fieldAccessorTable = new
@@ -19664,6 +20129,7 @@ public final class BackupServiceOuterClass {
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();

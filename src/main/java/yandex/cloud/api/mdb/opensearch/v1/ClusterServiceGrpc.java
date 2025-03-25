@@ -793,6 +793,68 @@ public final class ClusterServiceGrpc {
     return getUpdateAuthSettingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRestartOpenSearchMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RestartOpenSearch",
+      requestType = yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRestartOpenSearchMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRestartOpenSearchMethod;
+    if ((getRestartOpenSearchMethod = ClusterServiceGrpc.getRestartOpenSearchMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getRestartOpenSearchMethod = ClusterServiceGrpc.getRestartOpenSearchMethod) == null) {
+          ClusterServiceGrpc.getRestartOpenSearchMethod = getRestartOpenSearchMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RestartOpenSearch"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("RestartOpenSearch"))
+              .build();
+        }
+      }
+    }
+    return getRestartOpenSearchMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSwitchMasterMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SwitchMaster",
+      requestType = yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSwitchMasterMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSwitchMasterMethod;
+    if ((getSwitchMasterMethod = ClusterServiceGrpc.getSwitchMasterMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getSwitchMasterMethod = ClusterServiceGrpc.getSwitchMasterMethod) == null) {
+          ClusterServiceGrpc.getSwitchMasterMethod = getSwitchMasterMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SwitchMaster"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("SwitchMaster"))
+              .build();
+        }
+      }
+    }
+    return getSwitchMasterMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -978,6 +1040,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified OpenSearch cluster.
+     * For detailed description, see the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developer's guide.
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -1093,6 +1156,26 @@ public final class ClusterServiceGrpc {
     public void updateAuthSettings(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.UpdateAuthSettingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthSettingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Restarts OpenSearch on specified host.
+     * </pre>
+     */
+    public void restartOpenSearch(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRestartOpenSearchMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Switches current master or ensures that master not on specified hosts.
+     * </pre>
+     */
+    public void switchMaster(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSwitchMasterMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -1272,6 +1355,20 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.UpdateAuthSettingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_AUTH_SETTINGS)))
+          .addMethod(
+            getRestartOpenSearchMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESTART_OPEN_SEARCH)))
+          .addMethod(
+            getSwitchMasterMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SWITCH_MASTER)))
           .build();
     }
   }
@@ -1440,6 +1537,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified OpenSearch cluster.
+     * For detailed description, see the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developer's guide.
      * </pre>
      */
     public void listLogs(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request,
@@ -1567,6 +1665,28 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAuthSettingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Restarts OpenSearch on specified host.
+     * </pre>
+     */
+    public void restartOpenSearch(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRestartOpenSearchMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Switches current master or ensures that master not on specified hosts.
+     * </pre>
+     */
+    public void switchMaster(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSwitchMasterMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1721,6 +1841,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified OpenSearch cluster.
+     * For detailed description, see the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developer's guide.
      * </pre>
      */
     public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse listLogs(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsRequest request) {
@@ -1837,6 +1958,26 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAuthSettings(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.UpdateAuthSettingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAuthSettingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Restarts OpenSearch on specified host.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation restartOpenSearch(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRestartOpenSearchMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Switches current master or ensures that master not on specified hosts.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation switchMaster(yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSwitchMasterMethod(), getCallOptions(), request);
     }
   }
 
@@ -2004,6 +2145,7 @@ public final class ClusterServiceGrpc {
     /**
      * <pre>
      * Retrieves logs for the specified OpenSearch cluster.
+     * For detailed description, see the [Logs](/yandex-mdb-guide/concepts/logs.html) section in the developer's guide.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.ListClusterLogsResponse> listLogs(
@@ -2121,6 +2263,28 @@ public final class ClusterServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAuthSettingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Restarts OpenSearch on specified host.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restartOpenSearch(
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRestartOpenSearchMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Switches current master or ensures that master not on specified hosts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> switchMaster(
+        yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSwitchMasterMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -2148,6 +2312,8 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_UPDATE_DASHBOARDS_NODE_GROUP = 22;
   private static final int METHODID_GET_AUTH_SETTINGS = 23;
   private static final int METHODID_UPDATE_AUTH_SETTINGS = 24;
+  private static final int METHODID_RESTART_OPEN_SEARCH = 25;
+  private static final int METHODID_SWITCH_MASTER = 26;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2266,6 +2432,14 @@ public final class ClusterServiceGrpc {
           serviceImpl.updateAuthSettings((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.UpdateAuthSettingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_RESTART_OPEN_SEARCH:
+          serviceImpl.restartOpenSearch((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.RestartOpenSearchRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_SWITCH_MASTER:
+          serviceImpl.switchMaster((yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.SwitchMasterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -2352,6 +2526,8 @@ public final class ClusterServiceGrpc {
               .addMethod(getUpdateDashboardsNodeGroupMethod())
               .addMethod(getGetAuthSettingsMethod())
               .addMethod(getUpdateAuthSettingsMethod())
+              .addMethod(getRestartOpenSearchMethod())
+              .addMethod(getSwitchMasterMethod())
               .build();
         }
       }

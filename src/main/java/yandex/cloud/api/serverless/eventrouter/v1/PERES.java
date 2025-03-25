@@ -804,11 +804,908 @@ public final class PERES {
 
   }
 
+  public interface SendEventsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.eventrouter.v1.SendEventsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the connector to send events.
+     * </pre>
+     *
+     * <code>string connector_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The connectorId.
+     */
+    java.lang.String getConnectorId();
+    /**
+     * <pre>
+     * ID of the connector to send events.
+     * </pre>
+     *
+     * <code>string connector_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for connectorId.
+     */
+    com.google.protobuf.ByteString
+        getConnectorIdBytes();
+
+    /**
+     * <pre>
+     * Batch of events bodies.
+     * </pre>
+     *
+     * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+     * @return A list containing the message.
+     */
+    java.util.List<java.lang.String>
+        getMessageList();
+    /**
+     * <pre>
+     * Batch of events bodies.
+     * </pre>
+     *
+     * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+     * @return The count of message.
+     */
+    int getMessageCount();
+    /**
+     * <pre>
+     * Batch of events bodies.
+     * </pre>
+     *
+     * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+     * @param index The index of the element to return.
+     * @return The message at the given index.
+     */
+    java.lang.String getMessage(int index);
+    /**
+     * <pre>
+     * Batch of events bodies.
+     * </pre>
+     *
+     * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the message at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.eventrouter.v1.SendEventsRequest}
+   */
+  public static final class SendEventsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.eventrouter.v1.SendEventsRequest)
+      SendEventsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SendEventsRequest.newBuilder() to construct.
+    private SendEventsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SendEventsRequest() {
+      connectorId_ = "";
+      message_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SendEventsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SendEventsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectorId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                message_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              message_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          message_ = message_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.eventrouter.v1.PERES.internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.eventrouter.v1.PERES.internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest.class, yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest.Builder.class);
+    }
+
+    public static final int CONNECTOR_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object connectorId_;
+    /**
+     * <pre>
+     * ID of the connector to send events.
+     * </pre>
+     *
+     * <code>string connector_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The connectorId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectorId() {
+      java.lang.Object ref = connectorId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectorId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the connector to send events.
+     * </pre>
+     *
+     * <code>string connector_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for connectorId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectorIdBytes() {
+      java.lang.Object ref = connectorId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectorId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList message_;
+    /**
+     * <pre>
+     * Batch of events bodies.
+     * </pre>
+     *
+     * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+     * @return A list containing the message.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMessageList() {
+      return message_;
+    }
+    /**
+     * <pre>
+     * Batch of events bodies.
+     * </pre>
+     *
+     * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+     * @return The count of message.
+     */
+    public int getMessageCount() {
+      return message_.size();
+    }
+    /**
+     * <pre>
+     * Batch of events bodies.
+     * </pre>
+     *
+     * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+     * @param index The index of the element to return.
+     * @return The message at the given index.
+     */
+    public java.lang.String getMessage(int index) {
+      return message_.get(index);
+    }
+    /**
+     * <pre>
+     * Batch of events bodies.
+     * </pre>
+     *
+     * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the message at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMessageBytes(int index) {
+      return message_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectorId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectorId_);
+      }
+      for (int i = 0; i < message_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectorId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectorId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < message_.size(); i++) {
+          dataSize += computeStringSizeNoTag(message_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMessageList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest other = (yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest) obj;
+
+      if (!getConnectorId()
+          .equals(other.getConnectorId())) return false;
+      if (!getMessageList()
+          .equals(other.getMessageList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONNECTOR_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectorId().hashCode();
+      if (getMessageCount() > 0) {
+        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getMessageList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.eventrouter.v1.SendEventsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.eventrouter.v1.SendEventsRequest)
+        yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERES.internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERES.internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest.class, yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        connectorId_ = "";
+
+        message_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERES.internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest build() {
+        yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest buildPartial() {
+        yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest result = new yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.connectorId_ = connectorId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          message_ = message_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.message_ = message_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest) {
+          return mergeFrom((yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest other) {
+        if (other == yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest.getDefaultInstance()) return this;
+        if (!other.getConnectorId().isEmpty()) {
+          connectorId_ = other.connectorId_;
+          onChanged();
+        }
+        if (!other.message_.isEmpty()) {
+          if (message_.isEmpty()) {
+            message_ = other.message_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureMessageIsMutable();
+            message_.addAll(other.message_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object connectorId_ = "";
+      /**
+       * <pre>
+       * ID of the connector to send events.
+       * </pre>
+       *
+       * <code>string connector_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The connectorId.
+       */
+      public java.lang.String getConnectorId() {
+        java.lang.Object ref = connectorId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectorId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the connector to send events.
+       * </pre>
+       *
+       * <code>string connector_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for connectorId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectorIdBytes() {
+        java.lang.Object ref = connectorId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectorId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the connector to send events.
+       * </pre>
+       *
+       * <code>string connector_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The connectorId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectorId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectorId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the connector to send events.
+       * </pre>
+       *
+       * <code>string connector_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectorId() {
+        
+        connectorId_ = getDefaultInstance().getConnectorId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the connector to send events.
+       * </pre>
+       *
+       * <code>string connector_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for connectorId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectorIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectorId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList message_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureMessageIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          message_ = new com.google.protobuf.LazyStringArrayList(message_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Batch of events bodies.
+       * </pre>
+       *
+       * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+       * @return A list containing the message.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMessageList() {
+        return message_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Batch of events bodies.
+       * </pre>
+       *
+       * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+       * @return The count of message.
+       */
+      public int getMessageCount() {
+        return message_.size();
+      }
+      /**
+       * <pre>
+       * Batch of events bodies.
+       * </pre>
+       *
+       * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+       * @param index The index of the element to return.
+       * @return The message at the given index.
+       */
+      public java.lang.String getMessage(int index) {
+        return message_.get(index);
+      }
+      /**
+       * <pre>
+       * Batch of events bodies.
+       * </pre>
+       *
+       * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the message at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes(int index) {
+        return message_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Batch of events bodies.
+       * </pre>
+       *
+       * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+       * @param index The index to set the value at.
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessageIsMutable();
+        message_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch of events bodies.
+       * </pre>
+       *
+       * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+       * @param value The message to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMessageIsMutable();
+        message_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch of events bodies.
+       * </pre>
+       *
+       * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+       * @param values The message to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMessage(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMessageIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, message_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch of events bodies.
+       * </pre>
+       *
+       * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        message_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch of events bodies.
+       * </pre>
+       *
+       * <code>repeated string message = 2 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "&lt;=262144"];</code>
+       * @param value The bytes of the message to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureMessageIsMutable();
+        message_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.eventrouter.v1.SendEventsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.eventrouter.v1.SendEventsRequest)
+    private static final yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest();
+    }
+
+    public static yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SendEventsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SendEventsRequest>() {
+      @java.lang.Override
+      public SendEventsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SendEventsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SendEventsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SendEventsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.eventrouter.v1.PERES.SendEventsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_eventrouter_v1_PutEventRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_eventrouter_v1_PutEventRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -824,15 +1721,21 @@ public final class PERES {
       "ions.proto\032\033google/protobuf/empty.proto\032" +
       "\035yandex/cloud/validation.proto\"G\n\017PutEve" +
       "ntRequest\022\024\n\006bus_id\030\001 \001(\tB\004\350\3071\001\022\036\n\004body\030" +
-      "\002 \001(\tB\020\350\3071\001\212\3101\010<=2621442\227\001\n\014EventService" +
-      "\022\206\001\n\003Put\0227.yandex.cloud.serverless.event" +
-      "router.v1.PutEventRequest\032\026.google.proto" +
-      "buf.Empty\".\202\323\344\223\002(\"#/eventrouter/v1/event" +
-      "s/{bus_id}:put:\001*B\213\001\n*yandex.cloud.api.s" +
-      "erverless.eventrouter.v1B\005PERESZVgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/serverless/eventrouter/v1;eventrouterb" +
-      "\006proto3"
+      "\002 \001(\tB\020\350\3071\001\212\3101\010<=262144\"W\n\021SendEventsReq" +
+      "uest\022\032\n\014connector_id\030\001 \001(\tB\004\350\3071\001\022&\n\007mess" +
+      "age\030\002 \003(\tB\025\202\3101\0051-100\212\3101\010<=2621442\252\002\n\014Eve" +
+      "ntService\022\206\001\n\003Put\0227.yandex.cloud.serverl" +
+      "ess.eventrouter.v1.PutEventRequest\032\026.goo" +
+      "gle.protobuf.Empty\".\202\323\344\223\002(\"#/eventrouter" +
+      "/v1/events/{bus_id}:put:\001*\022\220\001\n\004Send\0229.ya" +
+      "ndex.cloud.serverless.eventrouter.v1.Sen" +
+      "dEventsRequest\032\026.google.protobuf.Empty\"5" +
+      "\202\323\344\223\002/\"*/eventrouter/v1/events/{connecto" +
+      "r_id}:send:\001*B\213\001\n*yandex.cloud.api.serve" +
+      "rless.eventrouter.v1B\005PERESZVgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/se" +
+      "rverless/eventrouter/v1;eventrouterb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -847,11 +1750,18 @@ public final class PERES {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_eventrouter_v1_PutEventRequest_descriptor,
         new java.lang.String[] { "BusId", "Body", });
+    internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_eventrouter_v1_SendEventsRequest_descriptor,
+        new java.lang.String[] { "ConnectorId", "Message", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
