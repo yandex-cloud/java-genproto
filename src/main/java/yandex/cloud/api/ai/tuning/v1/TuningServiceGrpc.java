@@ -232,6 +232,130 @@ public final class TuningServiceGrpc {
     return getListErrorsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest,
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse> getCreateDraftMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateDraft",
+      requestType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.class,
+      responseType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest,
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse> getCreateDraftMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse> getCreateDraftMethod;
+    if ((getCreateDraftMethod = TuningServiceGrpc.getCreateDraftMethod) == null) {
+      synchronized (TuningServiceGrpc.class) {
+        if ((getCreateDraftMethod = TuningServiceGrpc.getCreateDraftMethod) == null) {
+          TuningServiceGrpc.getCreateDraftMethod = getCreateDraftMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateDraft"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TuningServiceMethodDescriptorSupplier("CreateDraft"))
+              .build();
+        }
+      }
+    }
+    return getCreateDraftMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest,
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse> getUpdateDraftMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateDraft",
+      requestType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.class,
+      responseType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest,
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse> getUpdateDraftMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse> getUpdateDraftMethod;
+    if ((getUpdateDraftMethod = TuningServiceGrpc.getUpdateDraftMethod) == null) {
+      synchronized (TuningServiceGrpc.class) {
+        if ((getUpdateDraftMethod = TuningServiceGrpc.getUpdateDraftMethod) == null) {
+          TuningServiceGrpc.getUpdateDraftMethod = getUpdateDraftMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDraft"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TuningServiceMethodDescriptorSupplier("UpdateDraft"))
+              .build();
+        }
+      }
+    }
+    return getUpdateDraftMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest,
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse> getDeleteDraftMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteDraft",
+      requestType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest.class,
+      responseType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest,
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse> getDeleteDraftMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse> getDeleteDraftMethod;
+    if ((getDeleteDraftMethod = TuningServiceGrpc.getDeleteDraftMethod) == null) {
+      synchronized (TuningServiceGrpc.class) {
+        if ((getDeleteDraftMethod = TuningServiceGrpc.getDeleteDraftMethod) == null) {
+          TuningServiceGrpc.getDeleteDraftMethod = getDeleteDraftMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDraft"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TuningServiceMethodDescriptorSupplier("DeleteDraft"))
+              .build();
+        }
+      }
+    }
+    return getDeleteDraftMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getTuneDraftMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TuneDraft",
+      requestType = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getTuneDraftMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getTuneDraftMethod;
+    if ((getTuneDraftMethod = TuningServiceGrpc.getTuneDraftMethod) == null) {
+      synchronized (TuningServiceGrpc.class) {
+        if ((getTuneDraftMethod = TuningServiceGrpc.getTuneDraftMethod) == null) {
+          TuningServiceGrpc.getTuneDraftMethod = getTuneDraftMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TuneDraft"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new TuningServiceMethodDescriptorSupplier("TuneDraft"))
+              .build();
+        }
+      }
+    }
+    return getTuneDraftMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -329,6 +453,34 @@ public final class TuningServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListErrorsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void createDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDraftMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void updateDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDraftMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void deleteDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDraftMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void tuneDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTuneDraftMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -380,6 +532,34 @@ public final class TuningServiceGrpc {
                 yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest,
                 yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse>(
                   this, METHODID_LIST_ERRORS)))
+          .addMethod(
+            getCreateDraftMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest,
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse>(
+                  this, METHODID_CREATE_DRAFT)))
+          .addMethod(
+            getUpdateDraftMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest,
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse>(
+                  this, METHODID_UPDATE_DRAFT)))
+          .addMethod(
+            getDeleteDraftMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest,
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse>(
+                  this, METHODID_DELETE_DRAFT)))
+          .addMethod(
+            getTuneDraftMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_TUNE_DRAFT)))
           .build();
     }
   }
@@ -453,6 +633,38 @@ public final class TuningServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListErrorsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void createDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateDraftMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updateDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateDraftMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteDraftMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void tuneDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTuneDraftMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -516,6 +728,34 @@ public final class TuningServiceGrpc {
     public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse listErrors(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListErrorsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse createDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateDraftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse updateDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateDraftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse deleteDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDraftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation tuneDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTuneDraftMethod(), getCallOptions(), request);
     }
   }
 
@@ -588,6 +828,38 @@ public final class TuningServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListErrorsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse> createDraft(
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateDraftMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse> updateDraft(
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateDraftMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse> deleteDraft(
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteDraftMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> tuneDraft(
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTuneDraftMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TUNE = 0;
@@ -597,6 +869,10 @@ public final class TuningServiceGrpc {
   private static final int METHODID_GET_METRICS_URL = 4;
   private static final int METHODID_GET_OPTIONS = 5;
   private static final int METHODID_LIST_ERRORS = 6;
+  private static final int METHODID_CREATE_DRAFT = 7;
+  private static final int METHODID_UPDATE_DRAFT = 8;
+  private static final int METHODID_DELETE_DRAFT = 9;
+  private static final int METHODID_TUNE_DRAFT = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -642,6 +918,22 @@ public final class TuningServiceGrpc {
         case METHODID_LIST_ERRORS:
           serviceImpl.listErrors((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.ListErrorsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_DRAFT:
+          serviceImpl.createDraft((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_DRAFT:
+          serviceImpl.updateDraft((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_DRAFT:
+          serviceImpl.deleteDraft((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse>) responseObserver);
+          break;
+        case METHODID_TUNE_DRAFT:
+          serviceImpl.tuneDraft((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -711,6 +1003,10 @@ public final class TuningServiceGrpc {
               .addMethod(getGetMetricsUrlMethod())
               .addMethod(getGetOptionsMethod())
               .addMethod(getListErrorsMethod())
+              .addMethod(getCreateDraftMethod())
+              .addMethod(getUpdateDraftMethod())
+              .addMethod(getDeleteDraftMethod())
+              .addMethod(getTuneDraftMethod())
               .build();
         }
       }

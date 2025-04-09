@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for managing Data Proc clusters.
+ * A set of methods for managing Yandex Data Processing clusters.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -374,7 +374,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc clusters.
+   * A set of methods for managing Yandex Data Processing clusters.
    * </pre>
    */
   public static abstract class ClusterServiceImplBase implements io.grpc.BindableService {
@@ -472,7 +472,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of links to web interfaces being proxied by Data Proc UI Proxy.
+     * Retrieves a list of links to web interfaces being proxied by Yandex Data Processing UI Proxy.
      * </pre>
      */
     public void listUILinks(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest request,
@@ -558,7 +558,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc clusters.
+   * A set of methods for managing Yandex Data Processing clusters.
    * </pre>
    */
   public static final class ClusterServiceStub extends io.grpc.stub.AbstractAsyncStub<ClusterServiceStub> {
@@ -675,7 +675,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of links to web interfaces being proxied by Data Proc UI Proxy.
+     * Retrieves a list of links to web interfaces being proxied by Yandex Data Processing UI Proxy.
      * </pre>
      */
     public void listUILinks(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest request,
@@ -687,7 +687,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc clusters.
+   * A set of methods for managing Yandex Data Processing clusters.
    * </pre>
    */
   public static final class ClusterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ClusterServiceBlockingStub> {
@@ -795,7 +795,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of links to web interfaces being proxied by Data Proc UI Proxy.
+     * Retrieves a list of links to web interfaces being proxied by Yandex Data Processing UI Proxy.
      * </pre>
      */
     public yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse listUILinks(yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksRequest request) {
@@ -806,7 +806,7 @@ public final class ClusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc clusters.
+   * A set of methods for managing Yandex Data Processing clusters.
    * </pre>
    */
   public static final class ClusterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ClusterServiceFutureStub> {
@@ -923,7 +923,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves a list of links to web interfaces being proxied by Data Proc UI Proxy.
+     * Retrieves a list of links to web interfaces being proxied by Yandex Data Processing UI Proxy.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dataproc.v1.ClusterServiceOuterClass.ListUILinksResponse> listUILinks(

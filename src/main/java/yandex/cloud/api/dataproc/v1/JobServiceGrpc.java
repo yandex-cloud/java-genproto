@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for managing Data Proc jobs.
+ * A set of methods for managing Yandex Data Processing jobs.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -219,7 +219,7 @@ public final class JobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc jobs.
+   * A set of methods for managing Yandex Data Processing jobs.
    * </pre>
    */
   public static abstract class JobServiceImplBase implements io.grpc.BindableService {
@@ -266,7 +266,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Cancels the specified Dataproc job.
+     * Cancels the specified Yandex Data Processing job.
      * </pre>
      */
     public void cancel(yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest request,
@@ -317,7 +317,7 @@ public final class JobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc jobs.
+   * A set of methods for managing Yandex Data Processing jobs.
    * </pre>
    */
   public static final class JobServiceStub extends io.grpc.stub.AbstractAsyncStub<JobServiceStub> {
@@ -378,7 +378,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Cancels the specified Dataproc job.
+     * Cancels the specified Yandex Data Processing job.
      * </pre>
      */
     public void cancel(yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest request,
@@ -390,7 +390,7 @@ public final class JobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc jobs.
+   * A set of methods for managing Yandex Data Processing jobs.
    * </pre>
    */
   public static final class JobServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<JobServiceBlockingStub> {
@@ -447,7 +447,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Cancels the specified Dataproc job.
+     * Cancels the specified Yandex Data Processing job.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation cancel(yandex.cloud.api.dataproc.v1.PHJS.CancelJobRequest request) {
@@ -458,7 +458,7 @@ public final class JobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc jobs.
+   * A set of methods for managing Yandex Data Processing jobs.
    * </pre>
    */
   public static final class JobServiceFutureStub extends io.grpc.stub.AbstractFutureStub<JobServiceFutureStub> {
@@ -519,7 +519,7 @@ public final class JobServiceGrpc {
 
     /**
      * <pre>
-     * Cancels the specified Dataproc job.
+     * Cancels the specified Yandex Data Processing job.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> cancel(

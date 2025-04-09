@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for managing Data Proc subclusters.
+ * A set of methods for managing Yandex Data Processing subclusters.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -219,7 +219,7 @@ public final class SubclusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc subclusters.
+   * A set of methods for managing Yandex Data Processing subclusters.
    * </pre>
    */
   public static abstract class SubclusterServiceImplBase implements io.grpc.BindableService {
@@ -318,7 +318,7 @@ public final class SubclusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc subclusters.
+   * A set of methods for managing Yandex Data Processing subclusters.
    * </pre>
    */
   public static final class SubclusterServiceStub extends io.grpc.stub.AbstractAsyncStub<SubclusterServiceStub> {
@@ -392,7 +392,7 @@ public final class SubclusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc subclusters.
+   * A set of methods for managing Yandex Data Processing subclusters.
    * </pre>
    */
   public static final class SubclusterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SubclusterServiceBlockingStub> {
@@ -461,7 +461,7 @@ public final class SubclusterServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Data Proc subclusters.
+   * A set of methods for managing Yandex Data Processing subclusters.
    * </pre>
    */
   public static final class SubclusterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SubclusterServiceFutureStub> {

@@ -5880,7 +5880,7 @@ public final class PHJS {
 
     /**
      * <pre>
-     * Required. ID of the Dataproc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5889,7 +5889,7 @@ public final class PHJS {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the Dataproc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5900,7 +5900,7 @@ public final class PHJS {
 
     /**
      * <pre>
-     * Required. ID of the Dataproc job to cancel.
+     * Required. ID of the Yandex Data Processing job to cancel.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5909,7 +5909,7 @@ public final class PHJS {
     java.lang.String getJobId();
     /**
      * <pre>
-     * Required. ID of the Dataproc job to cancel.
+     * Required. ID of the Yandex Data Processing job to cancel.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6013,7 +6013,7 @@ public final class PHJS {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the Dataproc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6034,7 +6034,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Required. ID of the Dataproc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6059,7 +6059,7 @@ public final class PHJS {
     private volatile java.lang.Object jobId_;
     /**
      * <pre>
-     * Required. ID of the Dataproc job to cancel.
+     * Required. ID of the Yandex Data Processing job to cancel.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6080,7 +6080,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Required. ID of the Dataproc job to cancel.
+     * Required. ID of the Yandex Data Processing job to cancel.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6423,7 +6423,7 @@ public final class PHJS {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6443,7 +6443,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6464,7 +6464,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6483,7 +6483,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6497,7 +6497,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6519,7 +6519,7 @@ public final class PHJS {
       private java.lang.Object jobId_ = "";
       /**
        * <pre>
-       * Required. ID of the Dataproc job to cancel.
+       * Required. ID of the Yandex Data Processing job to cancel.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6539,7 +6539,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc job to cancel.
+       * Required. ID of the Yandex Data Processing job to cancel.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6560,7 +6560,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc job to cancel.
+       * Required. ID of the Yandex Data Processing job to cancel.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6579,7 +6579,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc job to cancel.
+       * Required. ID of the Yandex Data Processing job to cancel.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6593,7 +6593,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Required. ID of the Dataproc job to cancel.
+       * Required. ID of the Yandex Data Processing job to cancel.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7761,7 +7761,7 @@ public final class PHJS {
 
     /**
      * <pre>
-     * Requested part of Data Proc Job log.
+     * Requested part of Yandex Data Processing Job log.
      * </pre>
      *
      * <code>string content = 1;</code>
@@ -7770,7 +7770,7 @@ public final class PHJS {
     java.lang.String getContent();
     /**
      * <pre>
-     * Requested part of Data Proc Job log.
+     * Requested part of Yandex Data Processing Job log.
      * </pre>
      *
      * <code>string content = 1;</code>
@@ -7902,7 +7902,7 @@ public final class PHJS {
     private volatile java.lang.Object content_;
     /**
      * <pre>
-     * Requested part of Data Proc Job log.
+     * Requested part of Yandex Data Processing Job log.
      * </pre>
      *
      * <code>string content = 1;</code>
@@ -7923,7 +7923,7 @@ public final class PHJS {
     }
     /**
      * <pre>
-     * Requested part of Data Proc Job log.
+     * Requested part of Yandex Data Processing Job log.
      * </pre>
      *
      * <code>string content = 1;</code>
@@ -8320,7 +8320,7 @@ public final class PHJS {
       private java.lang.Object content_ = "";
       /**
        * <pre>
-       * Requested part of Data Proc Job log.
+       * Requested part of Yandex Data Processing Job log.
        * </pre>
        *
        * <code>string content = 1;</code>
@@ -8340,7 +8340,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested part of Data Proc Job log.
+       * Requested part of Yandex Data Processing Job log.
        * </pre>
        *
        * <code>string content = 1;</code>
@@ -8361,7 +8361,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested part of Data Proc Job log.
+       * Requested part of Yandex Data Processing Job log.
        * </pre>
        *
        * <code>string content = 1;</code>
@@ -8380,7 +8380,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested part of Data Proc Job log.
+       * Requested part of Yandex Data Processing Job log.
        * </pre>
        *
        * <code>string content = 1;</code>
@@ -8394,7 +8394,7 @@ public final class PHJS {
       }
       /**
        * <pre>
-       * Requested part of Data Proc Job log.
+       * Requested part of Yandex Data Processing Job log.
        * </pre>
        *
        * <code>string content = 1;</code>

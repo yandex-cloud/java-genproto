@@ -442,6 +442,10 @@ public final class TuningTaskOuterClass {
        * <code>CANCELED = 6;</code>
        */
       CANCELED(6),
+      /**
+       * <code>DRAFT = 7;</code>
+       */
+      DRAFT(7),
       UNRECOGNIZED(-1),
       ;
 
@@ -473,6 +477,10 @@ public final class TuningTaskOuterClass {
        * <code>CANCELED = 6;</code>
        */
       public static final int CANCELED_VALUE = 6;
+      /**
+       * <code>DRAFT = 7;</code>
+       */
+      public static final int DRAFT_VALUE = 7;
 
 
       public final int getNumber() {
@@ -506,6 +514,7 @@ public final class TuningTaskOuterClass {
           case 4: return COMPLETED;
           case 5: return FAILED;
           case 6: return CANCELED;
+          case 7: return DRAFT;
           default: return null;
         }
       }
@@ -2846,7 +2855,7 @@ public final class TuningTaskOuterClass {
       "\n+yandex/cloud/ai/tuning/v1/tuning_task." +
       "proto\022\031yandex.cloud.ai.tuning.v1\032\037google" +
       "/protobuf/timestamp.proto\032\035yandex/cloud/" +
-      "validation.proto\"\213\005\n\nTuningTask\022\017\n\007task_" +
+      "validation.proto\"\226\005\n\nTuningTask\022\017\n\007task_" +
       "id\030\001 \001(\t\022\024\n\014operation_id\030\003 \001(\t\022<\n\006status" +
       "\030\004 \001(\0162,.yandex.cloud.ai.tuning.v1.Tunin" +
       "gTask.Status\022\021\n\tfolder_id\030\005 \001(\t\022\022\n\ncreat" +
@@ -2859,13 +2868,13 @@ public final class TuningTaskOuterClass {
       "_-]{3,100}$\022\023\n\013description\030\r \001(\t\022A\n\006labe" +
       "ls\030\016 \003(\01321.yandex.cloud.ai.tuning.v1.Tun" +
       "ingTask.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"t\n\006Status\022\026\n\022" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\177\n\006Status\022\026\n\022" +
       "STATUS_UNSPECIFIED\020\000\022\013\n\007CREATED\020\001\022\013\n\007PEN" +
       "DING\020\002\022\017\n\013IN_PROGRESS\020\003\022\r\n\tCOMPLETED\020\004\022\n" +
-      "\n\006FAILED\020\005\022\014\n\010CANCELED\020\006J\004\010\002\020\003Bc\n\035yandex" +
-      ".cloud.api.ai.tuning.v1ZBgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/ai/tun" +
-      "ing/v1;fomob\006proto3"
+      "\n\006FAILED\020\005\022\014\n\010CANCELED\020\006\022\t\n\005DRAFT\020\007J\004\010\002\020" +
+      "\003Bc\n\035yandex.cloud.api.ai.tuning.v1ZBgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/ai/tuning/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

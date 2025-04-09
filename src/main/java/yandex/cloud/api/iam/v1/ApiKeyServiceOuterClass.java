@@ -2750,6 +2750,7 @@ public final class ApiKeyServiceOuterClass {
 
     /**
      * <pre>
+     * Draft
      * Scope of the API key.
      * </pre>
      *
@@ -2760,6 +2761,7 @@ public final class ApiKeyServiceOuterClass {
     @java.lang.Deprecated java.lang.String getScope();
     /**
      * <pre>
+     * Draft
      * Scope of the API key.
      * </pre>
      *
@@ -3063,6 +3065,7 @@ public final class ApiKeyServiceOuterClass {
     private volatile java.lang.Object scope_;
     /**
      * <pre>
+     * Draft
      * Scope of the API key.
      * </pre>
      *
@@ -3085,6 +3088,7 @@ public final class ApiKeyServiceOuterClass {
     }
     /**
      * <pre>
+     * Draft
      * Scope of the API key.
      * </pre>
      *
@@ -3803,6 +3807,7 @@ public final class ApiKeyServiceOuterClass {
       private java.lang.Object scope_ = "";
       /**
        * <pre>
+       * Draft
        * Scope of the API key.
        * </pre>
        *
@@ -3824,6 +3829,7 @@ public final class ApiKeyServiceOuterClass {
       }
       /**
        * <pre>
+       * Draft
        * Scope of the API key.
        * </pre>
        *
@@ -3846,6 +3852,7 @@ public final class ApiKeyServiceOuterClass {
       }
       /**
        * <pre>
+       * Draft
        * Scope of the API key.
        * </pre>
        *
@@ -3866,6 +3873,7 @@ public final class ApiKeyServiceOuterClass {
       }
       /**
        * <pre>
+       * Draft
        * Scope of the API key.
        * </pre>
        *
@@ -3881,6 +3889,7 @@ public final class ApiKeyServiceOuterClass {
       }
       /**
        * <pre>
+       * Draft
        * Scope of the API key.
        * </pre>
        *

@@ -179,6 +179,16 @@ public final class BackupOuterClass {
      * @return The status.
      */
     yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup.BackupStatus getStatus();
+
+    /**
+     * <pre>
+     * Size of the journal associated with backup, in bytes.
+     * </pre>
+     *
+     * <code>int64 journal_size = 9;</code>
+     * @return The journalSize.
+     */
+    long getJournalSize();
   }
   /**
    * <pre>
@@ -294,6 +304,11 @@ public final class BackupOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 72: {
+
+              journalSize_ = input.readInt64();
               break;
             }
             default: {
@@ -480,7 +495,7 @@ public final class BackupOuterClass {
       DONE(1),
       /**
        * <pre>
-       * Backup is creating    
+       * Backup is creating
        * </pre>
        *
        * <code>CREATING = 2;</code>
@@ -503,7 +518,7 @@ public final class BackupOuterClass {
       public static final int DONE_VALUE = 1;
       /**
        * <pre>
-       * Backup is creating    
+       * Backup is creating
        * </pre>
        *
        * <code>CREATING = 2;</code>
@@ -877,6 +892,21 @@ public final class BackupOuterClass {
       return result == null ? yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup.BackupStatus.UNRECOGNIZED : result;
     }
 
+    public static final int JOURNAL_SIZE_FIELD_NUMBER = 9;
+    private long journalSize_;
+    /**
+     * <pre>
+     * Size of the journal associated with backup, in bytes.
+     * </pre>
+     *
+     * <code>int64 journal_size = 9;</code>
+     * @return The journalSize.
+     */
+    @java.lang.Override
+    public long getJournalSize() {
+      return journalSize_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -914,6 +944,9 @@ public final class BackupOuterClass {
       }
       if (status_ != yandex.cloud.api.mdb.mysql.v1.BackupOuterClass.Backup.BackupStatus.BACKUP_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(8, status_);
+      }
+      if (journalSize_ != 0L) {
+        output.writeInt64(9, journalSize_);
       }
       unknownFields.writeTo(output);
     }
@@ -953,6 +986,10 @@ public final class BackupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, status_);
       }
+      if (journalSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, journalSize_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -988,6 +1025,8 @@ public final class BackupOuterClass {
           != other.getSize()) return false;
       if (type_ != other.type_) return false;
       if (status_ != other.status_) return false;
+      if (getJournalSize()
+          != other.getJournalSize()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1020,6 +1059,9 @@ public final class BackupOuterClass {
       hash = (53 * hash) + type_;
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + JOURNAL_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getJournalSize());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1182,6 +1224,8 @@ public final class BackupOuterClass {
 
         status_ = 0;
 
+        journalSize_ = 0L;
+
         return this;
       }
 
@@ -1224,6 +1268,7 @@ public final class BackupOuterClass {
         result.size_ = size_;
         result.type_ = type_;
         result.status_ = status_;
+        result.journalSize_ = journalSize_;
         onBuilt();
         return result;
       }
@@ -1298,6 +1343,9 @@ public final class BackupOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.getJournalSize() != 0L) {
+          setJournalSize(other.getJournalSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2116,6 +2164,49 @@ public final class BackupOuterClass {
         onChanged();
         return this;
       }
+
+      private long journalSize_ ;
+      /**
+       * <pre>
+       * Size of the journal associated with backup, in bytes.
+       * </pre>
+       *
+       * <code>int64 journal_size = 9;</code>
+       * @return The journalSize.
+       */
+      @java.lang.Override
+      public long getJournalSize() {
+        return journalSize_;
+      }
+      /**
+       * <pre>
+       * Size of the journal associated with backup, in bytes.
+       * </pre>
+       *
+       * <code>int64 journal_size = 9;</code>
+       * @param value The journalSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJournalSize(long value) {
+        
+        journalSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of the journal associated with backup, in bytes.
+       * </pre>
+       *
+       * <code>int64 journal_size = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJournalSize() {
+        
+        journalSize_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2186,7 +2277,7 @@ public final class BackupOuterClass {
       "\n&yandex/cloud/mdb/mysql/v1/backup.proto" +
       "\022\031yandex.cloud.mdb.mysql.v1\032\035yandex/clou" +
       "d/validation.proto\032\037google/protobuf/time" +
-      "stamp.proto\"\330\003\n\006Backup\022\020\n\002id\030\001 \001(\tB\004\350\3071\001" +
+      "stamp.proto\"\356\003\n\006Backup\022\020\n\002id\030\001 \001(\tB\004\350\3071\001" +
       "\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132" +
       "\032.google.protobuf.Timestamp\022\031\n\021source_cl" +
       "uster_id\030\004 \001(\t\022.\n\nstarted_at\030\005 \001(\0132\032.goo" +
@@ -2194,13 +2285,14 @@ public final class BackupOuterClass {
       "type\030\007 \001(\01624.yandex.cloud.mdb.mysql.v1.B" +
       "ackup.BackupCreationType\022>\n\006status\030\010 \001(\016" +
       "2..yandex.cloud.mdb.mysql.v1.Backup.Back" +
-      "upStatus\"U\n\022BackupCreationType\022$\n BACKUP" +
-      "_CREATION_TYPE_UNSPECIFIED\020\000\022\r\n\tAUTOMATE" +
-      "D\020\001\022\n\n\006MANUAL\020\002\"E\n\014BackupStatus\022\035\n\031BACKU" +
-      "P_STATUS_UNSPECIFIED\020\000\022\010\n\004DONE\020\001\022\014\n\010CREA" +
-      "TING\020\002Bd\n\035yandex.cloud.api.mdb.mysql.v1Z" +
-      "Cgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/mdb/mysql/v1;mysqlb\006proto3"
+      "upStatus\022\024\n\014journal_size\030\t \001(\003\"U\n\022Backup" +
+      "CreationType\022$\n BACKUP_CREATION_TYPE_UNS" +
+      "PECIFIED\020\000\022\r\n\tAUTOMATED\020\001\022\n\n\006MANUAL\020\002\"E\n" +
+      "\014BackupStatus\022\035\n\031BACKUP_STATUS_UNSPECIFI" +
+      "ED\020\000\022\010\n\004DONE\020\001\022\014\n\010CREATING\020\002Bd\n\035yandex.c" +
+      "loud.api.mdb.mysql.v1ZCgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/mdb/mysq" +
+      "l/v1;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2213,7 +2305,7 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Status", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Status", "JournalSize", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.required);

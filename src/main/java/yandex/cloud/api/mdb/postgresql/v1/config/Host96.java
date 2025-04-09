@@ -946,17 +946,17 @@ public final class Host96 {
     com.google.protobuf.Int64ValueOrBuilder getEffectiveIoConcurrencyOrBuilder();
 
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      * @return Whether the effectiveCacheSize field is set.
      */
     boolean hasEffectiveCacheSize();
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      * @return The effectiveCacheSize.
      */
     com.google.protobuf.Int64Value getEffectiveCacheSize();
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getEffectiveCacheSizeOrBuilder();
   }
@@ -4515,7 +4515,7 @@ public final class Host96 {
     public static final int EFFECTIVE_CACHE_SIZE_FIELD_NUMBER = 55;
     private com.google.protobuf.Int64Value effectiveCacheSize_;
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      * @return Whether the effectiveCacheSize field is set.
      */
     @java.lang.Override
@@ -4523,7 +4523,7 @@ public final class Host96 {
       return effectiveCacheSize_ != null;
     }
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      * @return The effectiveCacheSize.
      */
     @java.lang.Override
@@ -4531,7 +4531,7 @@ public final class Host96 {
       return effectiveCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveCacheSize_;
     }
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getEffectiveCacheSizeOrBuilder() {
@@ -12409,14 +12409,14 @@ public final class Host96 {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> effectiveCacheSizeBuilder_;
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        * @return Whether the effectiveCacheSize field is set.
        */
       public boolean hasEffectiveCacheSize() {
         return effectiveCacheSizeBuilder_ != null || effectiveCacheSize_ != null;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        * @return The effectiveCacheSize.
        */
       public com.google.protobuf.Int64Value getEffectiveCacheSize() {
@@ -12427,7 +12427,7 @@ public final class Host96 {
         }
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public Builder setEffectiveCacheSize(com.google.protobuf.Int64Value value) {
         if (effectiveCacheSizeBuilder_ == null) {
@@ -12443,7 +12443,7 @@ public final class Host96 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public Builder setEffectiveCacheSize(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -12457,7 +12457,7 @@ public final class Host96 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public Builder mergeEffectiveCacheSize(com.google.protobuf.Int64Value value) {
         if (effectiveCacheSizeBuilder_ == null) {
@@ -12475,7 +12475,7 @@ public final class Host96 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public Builder clearEffectiveCacheSize() {
         if (effectiveCacheSizeBuilder_ == null) {
@@ -12489,7 +12489,7 @@ public final class Host96 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getEffectiveCacheSizeBuilder() {
         
@@ -12497,7 +12497,7 @@ public final class Host96 {
         return getEffectiveCacheSizeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getEffectiveCacheSizeOrBuilder() {
         if (effectiveCacheSizeBuilder_ != null) {
@@ -12508,7 +12508,7 @@ public final class Host96 {
         }
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 55 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -12593,7 +12593,7 @@ public final class Host96 {
       "\n3yandex/cloud/mdb/postgresql/v1/config/" +
       "host9_6.proto\022%yandex.cloud.mdb.postgres" +
       "ql.v1.config\032\036google/protobuf/wrappers.p" +
-      "roto\032\035yandex/cloud/validation.proto\"\366)\n\027" +
+      "roto\032\035yandex/cloud/validation.proto\"\374)\n\027" +
       "PostgresqlHostConfig9_6\022=\n\030recovery_min_" +
       "apply_delay\030\001 \001(\0132\033.google.protobuf.Int6" +
       "4Value\0223\n\016shared_buffers\030\002 \001(\0132\033.google." +
@@ -12687,51 +12687,51 @@ public final class Host96 {
       "protobuf.DoubleValue\0223\n\017sql_inheritance\030" +
       "5 \001(\0132\032.google.protobuf.BoolValue\022I\n\030eff" +
       "ective_io_concurrency\0306 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\n\372\3071\0060-1000\022M\n\024effectiv" +
+      "tobuf.Int64ValueB\n\372\3071\0060-1000\022S\n\024effectiv" +
       "e_cache_size\0307 \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\022\372\3071\0160-549755813888\"\232\001\n\023Constrai" +
-      "ntExclusion\022$\n CONSTRAINT_EXCLUSION_UNSP" +
-      "ECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034" +
-      "\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAI" +
-      "NT_EXCLUSION_PARTITION\020\003\"\222\001\n\021ForceParall" +
-      "elMode\022#\n\037FORCE_PARALLEL_MODE_UNSPECIFIE" +
-      "D\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE" +
-      "_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_M" +
-      "ODE_REGRESS\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_" +
-      "UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020L" +
-      "OG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022" +
-      "\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG" +
-      "1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTI" +
-      "CE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL" +
-      "_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEV" +
-      "EL_PANIC\020\013\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_" +
-      "ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERR" +
-      "OR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOS" +
-      "ITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VER" +
-      "BOSE\020\003\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT" +
-      "_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025" +
-      "\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_M" +
-      "OD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Transact" +
-      "ionIsolation\022%\n!TRANSACTION_ISOLATION_UN" +
-      "SPECIFIED\020\000\022*\n&TRANSACTION_ISOLATION_REA" +
-      "D_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISOLATION" +
-      "_READ_COMMITTED\020\002\022)\n%TRANSACTION_ISOLATI" +
-      "ON_REPEATABLE_READ\020\003\022&\n\"TRANSACTION_ISOL" +
-      "ATION_SERIALIZABLE\020\004\"[\n\013ByteaOutput\022\034\n\030B" +
-      "YTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPU" +
-      "T_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"R\n\tXml" +
-      "Binary\022\032\n\026XML_BINARY_UNSPECIFIED\020\000\022\025\n\021XM" +
-      "L_BINARY_BASE64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n" +
-      "\tXmlOption\022\032\n\026XML_OPTION_UNSPECIFIED\020\000\022\027" +
-      "\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPTION_CO" +
-      "NTENT\020\002\"\232\001\n\016BackslashQuote\022\037\n\033BACKSLASH_" +
-      "QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_QUOTE\020\001" +
-      "\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLASH_QU" +
-      "OTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_ENCODI" +
-      "NG\020\004B\201\001\n)yandex.cloud.api.mdb.postgresql" +
-      ".v1.configZTgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/mdb/postgresql/v1/c" +
-      "onfig;postgresqlb\006proto3"
+      "64ValueB\030\372\3071\0241048576-549755813888\"\232\001\n\023Co" +
+      "nstraintExclusion\022$\n CONSTRAINT_EXCLUSIO" +
+      "N_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_" +
+      "ON\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CO" +
+      "NSTRAINT_EXCLUSION_PARTITION\020\003\"\222\001\n\021Force" +
+      "ParallelMode\022#\n\037FORCE_PARALLEL_MODE_UNSP" +
+      "ECIFIED\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n" +
+      "\027FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARA" +
+      "LLEL_MODE_REGRESS\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_" +
+      "LEVEL_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020" +
+      "\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEB" +
+      "UG3\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL" +
+      "_DEBUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVE" +
+      "L_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG" +
+      "_LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017L" +
+      "OG_LEVEL_PANIC\020\013\"\231\001\n\021LogErrorVerbosity\022#" +
+      "\n\037LOG_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031L" +
+      "OG_ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_" +
+      "VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSI" +
+      "TY_VERBOSE\020\003\"\212\001\n\014LogStatement\022\035\n\031LOG_STA" +
+      "TEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NO" +
+      "NE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATE" +
+      "MENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024Tr" +
+      "ansactionIsolation\022%\n!TRANSACTION_ISOLAT" +
+      "ION_UNSPECIFIED\020\000\022*\n&TRANSACTION_ISOLATI" +
+      "ON_READ_UNCOMMITTED\020\001\022(\n$TRANSACTION_ISO" +
+      "LATION_READ_COMMITTED\020\002\022)\n%TRANSACTION_I" +
+      "SOLATION_REPEATABLE_READ\020\003\022&\n\"TRANSACTIO" +
+      "N_ISOLATION_SERIALIZABLE\020\004\"[\n\013ByteaOutpu" +
+      "t\022\034\n\030BYTEA_OUTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA" +
+      "_OUTPUT_HEX\020\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"" +
+      "R\n\tXmlBinary\022\032\n\026XML_BINARY_UNSPECIFIED\020\000" +
+      "\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BINARY_HE" +
+      "X\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNSPECIFI" +
+      "ED\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_OPT" +
+      "ION_CONTENT\020\002\"\232\001\n\016BackslashQuote\022\037\n\033BACK" +
+      "SLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_Q" +
+      "UOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSL" +
+      "ASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_" +
+      "ENCODING\020\004B\201\001\n)yandex.cloud.api.mdb.post" +
+      "gresql.v1.configZTgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/postgresq" +
+      "l/v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

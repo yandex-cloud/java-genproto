@@ -1804,17 +1804,17 @@ public final class Postgresql15 {
     com.google.protobuf.Int64ValueOrBuilder getEffectiveIoConcurrencyOrBuilder();
 
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      * @return Whether the effectiveCacheSize field is set.
      */
     boolean hasEffectiveCacheSize();
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      * @return The effectiveCacheSize.
      */
     com.google.protobuf.Int64Value getEffectiveCacheSize();
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getEffectiveCacheSizeOrBuilder();
 
@@ -10039,7 +10039,7 @@ public final class Postgresql15 {
     public static final int EFFECTIVE_CACHE_SIZE_FIELD_NUMBER = 110;
     private com.google.protobuf.Int64Value effectiveCacheSize_;
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      * @return Whether the effectiveCacheSize field is set.
      */
     @java.lang.Override
@@ -10047,7 +10047,7 @@ public final class Postgresql15 {
       return effectiveCacheSize_ != null;
     }
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      * @return The effectiveCacheSize.
      */
     @java.lang.Override
@@ -10055,7 +10055,7 @@ public final class Postgresql15 {
       return effectiveCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : effectiveCacheSize_;
     }
     /**
-     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+     * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getEffectiveCacheSizeOrBuilder() {
@@ -28842,14 +28842,14 @@ public final class Postgresql15 {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> effectiveCacheSizeBuilder_;
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        * @return Whether the effectiveCacheSize field is set.
        */
       public boolean hasEffectiveCacheSize() {
         return effectiveCacheSizeBuilder_ != null || effectiveCacheSize_ != null;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        * @return The effectiveCacheSize.
        */
       public com.google.protobuf.Int64Value getEffectiveCacheSize() {
@@ -28860,7 +28860,7 @@ public final class Postgresql15 {
         }
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public Builder setEffectiveCacheSize(com.google.protobuf.Int64Value value) {
         if (effectiveCacheSizeBuilder_ == null) {
@@ -28876,7 +28876,7 @@ public final class Postgresql15 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public Builder setEffectiveCacheSize(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -28890,7 +28890,7 @@ public final class Postgresql15 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public Builder mergeEffectiveCacheSize(com.google.protobuf.Int64Value value) {
         if (effectiveCacheSizeBuilder_ == null) {
@@ -28908,7 +28908,7 @@ public final class Postgresql15 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public Builder clearEffectiveCacheSize() {
         if (effectiveCacheSizeBuilder_ == null) {
@@ -28922,7 +28922,7 @@ public final class Postgresql15 {
         return this;
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getEffectiveCacheSizeBuilder() {
         
@@ -28930,7 +28930,7 @@ public final class Postgresql15 {
         return getEffectiveCacheSizeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getEffectiveCacheSizeOrBuilder() {
         if (effectiveCacheSizeBuilder_ != null) {
@@ -28941,7 +28941,7 @@ public final class Postgresql15 {
         }
       }
       /**
-       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "0-549755813888"];</code>
+       * <code>.google.protobuf.Int64Value effective_cache_size = 110 [(.yandex.cloud.value) = "1048576-549755813888"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -37318,7 +37318,7 @@ public final class Postgresql15 {
       "postgresql15.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\355l\n\022PostgresqlConfig15\0224\n\017max_connectio" +
+      "\"\363l\n\022PostgresqlConfig15\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -37493,190 +37493,190 @@ public final class Postgresql15 {
       "x.cloud.mdb.postgresql.v1.config.Postgre" +
       "sqlConfig15.PlanCacheMode\022I\n\030effective_i" +
       "o_concurrency\030m \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\n\372\3071\0060-1000\022M\n\024effective_cache_" +
+      "t64ValueB\n\372\3071\0060-1000\022S\n\024effective_cache_" +
       "size\030n \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\022\372\3071\0160-549755813888\022r\n\030shared_preload_li" +
-      "braries\030o \003(\0162P.yandex.cloud.mdb.postgre" +
-      "sql.v1.config.PostgresqlConfig15.SharedP" +
-      "reloadLibraries\022U\n\035auto_explain_log_min_" +
-      "duration\030p \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\021\372\3071\r-1-2147483647\022<\n\030auto_explain_l" +
-      "og_analyze\030q \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022<\n\030auto_explain_log_buffers\030r \001(\0132\032" +
-      ".google.protobuf.BoolValue\022;\n\027auto_expla" +
-      "in_log_timing\030s \001(\0132\032.google.protobuf.Bo" +
-      "olValue\022=\n\031auto_explain_log_triggers\030t \001" +
-      "(\0132\032.google.protobuf.BoolValue\022<\n\030auto_e" +
-      "xplain_log_verbose\030u \001(\0132\032.google.protob" +
-      "uf.BoolValue\022F\n\"auto_explain_log_nested_" +
-      "statements\030v \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022K\n\030auto_explain_sample_rate\030w \001(\0132\034" +
-      ".google.protobuf.DoubleValueB\013\372\3071\0070.0-1." +
-      "0\022<\n\030pg_hint_plan_enable_hint\030x \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022B\n\036pg_hint_plan_" +
-      "enable_hint_table\030y \001(\0132\032.google.protobu" +
-      "f.BoolValue\022p\n\030pg_hint_plan_debug_print\030" +
-      "z \001(\0162N.yandex.cloud.mdb.postgresql.v1.c" +
-      "onfig.PostgresqlConfig15.PgHintPlanDebug" +
-      "Print\022f\n\032pg_hint_plan_message_level\030{ \001(" +
-      "\0162B.yandex.cloud.mdb.postgresql.v1.confi" +
-      "g.PostgresqlConfig15.LogLevel\022I\n\023hash_me" +
-      "m_multiplier\030| \001(\0132\034.google.protobuf.Dou" +
-      "bleValueB\016\372\3071\n0.0-1000.0\022W\n\031logical_deco" +
-      "ding_work_mem\030~ \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\027\372\3071\02365536-1099511627776\022K\n\032mai" +
-      "ntenance_io_concurrency\030\177 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\n\372\3071\0060-1000\022U\n\026max_sl" +
-      "ot_wal_keep_size\030\200\001 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\027\372\3071\023-1-2251799812636672\022L\n" +
-      "\rwal_keep_size\030\201\001 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\027\372\3071\023-1-2251799812636672\022<\n\027e" +
-      "nable_incremental_sort\030\202\001 \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022[\n\"autovacuum_vacuum_i" +
-      "nsert_threshold\030\203\001 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\021\372\3071\r-1-2147483647\022[\n%autova" +
-      "cuum_vacuum_insert_scale_factor\030\204\001 \001(\0132\034" +
-      ".google.protobuf.DoubleValueB\r\372\3071\t0.0-10" +
-      "0.0\022P\n\027log_min_duration_sample\030\205\001 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\021\372\3071\r-1-21474" +
-      "83647\022M\n\031log_statement_sample_rate\030\206\001 \001(" +
-      "\0132\034.google.protobuf.DoubleValueB\013\372\3071\0070.0" +
-      "-1.0\022Q\n\030log_parameter_max_length\030\207\001 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\021\372\3071\r-1-214" +
-      "7483647\022Z\n!log_parameter_max_length_on_e" +
-      "rror\030\210\001 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\021\372\3071\r-1-2147483647\022Y\n client_connection" +
-      "_check_interval\030\211\001 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\021\372\3071\r-1-2147483647\0228\n\023enable" +
-      "_async_append\030\212\001 \001(\0132\032.google.protobuf.B" +
-      "oolValue\0227\n\022enable_gathermerge\030\213\001 \001(\0132\032." +
-      "google.protobuf.BoolValue\0223\n\016enable_memo" +
-      "ize\030\214\001 \001(\0132\032.google.protobuf.BoolValue\022@" +
-      "\n\033log_recovery_conflict_waits\030\215\001 \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\022L\n\023vacuum_fails" +
-      "afe_age\030\216\001 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\021\372\3071\r-1-2147483647\022V\n\035vacuum_multixa" +
-      "ct_failsafe_age\030\217\001 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\021\372\3071\r-1-2147483647\0229\n\024pg_qua" +
-      "lstats_enabled\030\220\001 \001(\0132\032.google.protobuf." +
-      "BoolValue\022A\n\034pg_qualstats_track_constant" +
-      "s\030\221\001 \001(\0132\032.google.protobuf.BoolValue\0226\n\020" +
-      "pg_qualstats_max\030\222\001 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022>\n\031pg_qualstats_resolve_oid" +
-      "s\030\223\001 \001(\0132\032.google.protobuf.BoolValue\022?\n\030" +
-      "pg_qualstats_sample_rate\030\224\001 \001(\0132\034.google" +
-      ".protobuf.DoubleValue\022J\n\017max_stack_depth" +
-      "\030\226\001 \001(\0132\033.google.protobuf.Int64ValueB\023\372\307" +
-      "1\01765536-134217728\022?\n\032enable_group_by_reo" +
-      "rdering\030\227\001 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022)\n\004geqo\030\230\001 \001(\0132\032.google.protobuf.Bool" +
-      "Value\022F\n\016geqo_threshold\030\231\001 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\020\372\3071\0142-2147483647\022;\n" +
-      "\013geqo_effort\030\232\001 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\010\372\3071\0041-10\0224\n\016geqo_pool_size\030\233\001 " +
-      "\001(\0132\033.google.protobuf.Int64Value\0226\n\020geqo" +
-      "_generations\030\234\001 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022G\n\023geqo_selection_bias\030\235\001 \001(\0132\034" +
-      ".google.protobuf.DoubleValueB\013\372\3071\0071.5-2." +
-      "0\022=\n\tgeqo_seed\030\236\001 \001(\0132\034.google.protobuf." +
-      "DoubleValueB\013\372\3071\0070.0-1.0\022P\n\034pg_trgm_simi" +
-      "larity_threshold\030\237\001 \001(\0132\034.google.protobu" +
-      "f.DoubleValueB\013\372\3071\0070.0-1.0\022U\n!pg_trgm_wo" +
-      "rd_similarity_threshold\030\240\001 \001(\0132\034.google." +
-      "protobuf.DoubleValueB\013\372\3071\0070.0-1.0\022\\\n(pg_" +
-      "trgm_strict_word_similarity_threshold\030\241\001" +
+      "\030\372\3071\0241048576-549755813888\022r\n\030shared_prel" +
+      "oad_libraries\030o \003(\0162P.yandex.cloud.mdb.p" +
+      "ostgresql.v1.config.PostgresqlConfig15.S" +
+      "haredPreloadLibraries\022U\n\035auto_explain_lo" +
+      "g_min_duration\030p \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\021\372\3071\r-1-2147483647\022<\n\030auto_exp" +
+      "lain_log_analyze\030q \001(\0132\032.google.protobuf" +
+      ".BoolValue\022<\n\030auto_explain_log_buffers\030r" +
+      " \001(\0132\032.google.protobuf.BoolValue\022;\n\027auto" +
+      "_explain_log_timing\030s \001(\0132\032.google.proto" +
+      "buf.BoolValue\022=\n\031auto_explain_log_trigge" +
+      "rs\030t \001(\0132\032.google.protobuf.BoolValue\022<\n\030" +
+      "auto_explain_log_verbose\030u \001(\0132\032.google." +
+      "protobuf.BoolValue\022F\n\"auto_explain_log_n" +
+      "ested_statements\030v \001(\0132\032.google.protobuf" +
+      ".BoolValue\022K\n\030auto_explain_sample_rate\030w" +
       " \001(\0132\034.google.protobuf.DoubleValueB\013\372\3071\007" +
-      "0.0-1.0\022?\n\031max_standby_archive_delay\030\242\001 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022P\n\030sess" +
-      "ion_duration_timeout\030\243\001 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\020\372\3071\0140-2147483647\022=\n\030lo" +
-      "g_replication_commands\030\244\001 \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022T\n\033log_autovacuum_min_" +
-      "duration\030\245\001 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\021\372\3071\r-1-2147483647\022j\n\023password_encr" +
-      "yption\030\247\001 \001(\0162L.yandex.cloud.mdb.postgre" +
-      "sql.v1.config.PostgresqlConfig15.Passwor" +
-      "dEncryption\"\232\001\n\016BackslashQuote\022\037\n\033BACKSL" +
-      "ASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLASH_QUO" +
-      "TE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BACKSLAS" +
-      "H_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_SAFE_EN" +
-      "CODING\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPUT_" +
-      "UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024B" +
-      "YTEA_OUTPUT_ESCAPED\020\002\"\232\001\n\023ConstraintExcl" +
-      "usion\022$\n CONSTRAINT_EXCLUSION_UNSPECIFIE" +
-      "D\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CONS" +
-      "TRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_EXC" +
-      "LUSION_PARTITION\020\003\"\222\001\n\021ForceParallelMode" +
-      "\022#\n\037FORCE_PARALLEL_MODE_UNSPECIFIED\020\000\022\032\n" +
-      "\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_PARAL" +
-      "LEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_MODE_RE" +
-      "GRESS\020\003\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_ERR" +
-      "OR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERROR_" +
-      "VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSITY" +
-      "_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERBOS" +
-      "E\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIE" +
-      "D\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL_D" +
-      "EBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_LEV" +
-      "EL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rLOG" +
-      "_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021LO" +
-      "G_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t\022\023" +
-      "\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC\020\013" +
-      "\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPE" +
-      "CIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_" +
-      "STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025" +
-      "\n\021LOG_STATEMENT_ALL\020\004\"}\n\022PasswordEncrypt" +
-      "ion\022#\n\037PASSWORD_ENCRYPTION_UNSPECIFIED\020\000" +
-      "\022\033\n\027PASSWORD_ENCRYPTION_MD5\020\001\022%\n!PASSWOR" +
-      "D_ENCRYPTION_SCRAM_SHA_256\020\002\"\320\001\n\024PgHintP" +
-      "lanDebugPrint\022(\n$PG_HINT_PLAN_DEBUG_PRIN" +
-      "T_UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PR" +
-      "INT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PRINT_ON" +
-      "\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT_DETAILED\020" +
-      "\003\022$\n PG_HINT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"" +
-      "\231\001\n\rPlanCacheMode\022\037\n\033PLAN_CACHE_MODE_UNS" +
-      "PECIFIED\020\000\022\030\n\024PLAN_CACHE_MODE_AUTO\020\001\022%\n!" +
-      "PLAN_CACHE_MODE_FORCE_CUSTOM_PLAN\020\002\022&\n\"P" +
-      "LAN_CACHE_MODE_FORCE_GENERIC_PLAN\020\003\"\255\003\n\026" +
-      "SharedPreloadLibraries\022(\n$SHARED_PRELOAD" +
-      "_LIBRARIES_UNSPECIFIED\020\000\022)\n%SHARED_PRELO" +
-      "AD_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%SHARED_PR" +
-      "ELOAD_LIBRARIES_PG_HINT_PLAN\020\002\022(\n$SHARED" +
-      "_PRELOAD_LIBRARIES_TIMESCALEDB\020\003\022)\n%SHAR" +
-      "ED_PRELOAD_LIBRARIES_PG_QUALSTATS\020\004\022$\n S" +
-      "HARED_PRELOAD_LIBRARIES_PG_CRON\020\005\022&\n\"SHA" +
-      "RED_PRELOAD_LIBRARIES_PGLOGICAL\020\006\022\'\n#SHA" +
-      "RED_PRELOAD_LIBRARIES_PG_PREWARM\020\007\022$\n SH" +
-      "ARED_PRELOAD_LIBRARIES_PGAUDIT\020\010\022!\n\035SHAR" +
-      "ED_PRELOAD_LIBRARIES_ANON\020\t\"\326\001\n\021Synchron" +
-      "ousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIF" +
-      "IED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNC" +
-      "HRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMM" +
-      "IT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_" +
-      "WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APP" +
-      "LY\020\005\"\346\001\n\024TransactionIsolation\022%\n!TRANSAC" +
-      "TION_ISOLATION_UNSPECIFIED\020\000\022*\n&TRANSACT" +
-      "ION_ISOLATION_READ_UNCOMMITTED\020\001\022(\n$TRAN" +
-      "SACTION_ISOLATION_READ_COMMITTED\020\002\022)\n%TR" +
-      "ANSACTION_ISOLATION_REPEATABLE_READ\020\003\022&\n" +
-      "\"TRANSACTION_ISOLATION_SERIALIZABLE\020\004\"S\n" +
-      "\010WalLevel\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000\022\025\n\021" +
-      "WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOGICAL" +
-      "\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINARY_UNSPECIFIE" +
-      "D\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_BINARY" +
-      "_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_UNSPEC" +
-      "IFIED\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026\n\022XML_" +
-      "OPTION_CONTENT\020\002J\004\010N\020PJ\004\010j\020kJ\004\010}\020~J\006\010\225\001\020" +
-      "\226\001J\006\010\246\001\020\247\001J\004\010@\020A\"\217\002\n\025PostgresqlConfigSet" +
-      "15\022S\n\020effective_config\030\001 \001(\01329.yandex.cl" +
-      "oud.mdb.postgresql.v1.config.PostgresqlC" +
-      "onfig15\022N\n\013user_config\030\002 \001(\01329.yandex.cl" +
-      "oud.mdb.postgresql.v1.config.PostgresqlC" +
-      "onfig15\022Q\n\016default_config\030\003 \001(\01329.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlConfig15B\201\001\n)yandex.cloud.api.mdb.post" +
-      "gresql.v1.configZTgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/postgresq" +
-      "l/v1/config;postgresqlb\006proto3"
+      "0.0-1.0\022<\n\030pg_hint_plan_enable_hint\030x \001(" +
+      "\0132\032.google.protobuf.BoolValue\022B\n\036pg_hint" +
+      "_plan_enable_hint_table\030y \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022p\n\030pg_hint_plan_debug_" +
+      "print\030z \001(\0162N.yandex.cloud.mdb.postgresq" +
+      "l.v1.config.PostgresqlConfig15.PgHintPla" +
+      "nDebugPrint\022f\n\032pg_hint_plan_message_leve" +
+      "l\030{ \001(\0162B.yandex.cloud.mdb.postgresql.v1" +
+      ".config.PostgresqlConfig15.LogLevel\022I\n\023h" +
+      "ash_mem_multiplier\030| \001(\0132\034.google.protob" +
+      "uf.DoubleValueB\016\372\3071\n0.0-1000.0\022W\n\031logica" +
+      "l_decoding_work_mem\030~ \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\027\372\3071\02365536-1099511627776\022" +
+      "K\n\032maintenance_io_concurrency\030\177 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\n\372\3071\0060-1000\022U\n\026" +
+      "max_slot_wal_keep_size\030\200\001 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\027\372\3071\023-1-2251799812636" +
+      "672\022L\n\rwal_keep_size\030\201\001 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\027\372\3071\023-1-225179981263667" +
+      "2\022<\n\027enable_incremental_sort\030\202\001 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022[\n\"autovacuum_va" +
+      "cuum_insert_threshold\030\203\001 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\021\372\3071\r-1-2147483647\022[\n%" +
+      "autovacuum_vacuum_insert_scale_factor\030\204\001" +
+      " \001(\0132\034.google.protobuf.DoubleValueB\r\372\3071\t" +
+      "0.0-100.0\022P\n\027log_min_duration_sample\030\205\001 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\021\372\3071\r-1" +
+      "-2147483647\022M\n\031log_statement_sample_rate" +
+      "\030\206\001 \001(\0132\034.google.protobuf.DoubleValueB\013\372" +
+      "\3071\0070.0-1.0\022Q\n\030log_parameter_max_length\030\207" +
+      "\001 \001(\0132\033.google.protobuf.Int64ValueB\021\372\3071\r" +
+      "-1-2147483647\022Z\n!log_parameter_max_lengt" +
+      "h_on_error\030\210\001 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\021\372\3071\r-1-2147483647\022Y\n client_conn" +
+      "ection_check_interval\030\211\001 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\021\372\3071\r-1-2147483647\0228\n\023" +
+      "enable_async_append\030\212\001 \001(\0132\032.google.prot" +
+      "obuf.BoolValue\0227\n\022enable_gathermerge\030\213\001 " +
+      "\001(\0132\032.google.protobuf.BoolValue\0223\n\016enabl" +
+      "e_memoize\030\214\001 \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022@\n\033log_recovery_conflict_waits\030\215\001 \001" +
+      "(\0132\032.google.protobuf.BoolValue\022L\n\023vacuum" +
+      "_failsafe_age\030\216\001 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\021\372\3071\r-1-2147483647\022V\n\035vacuum_m" +
+      "ultixact_failsafe_age\030\217\001 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\021\372\3071\r-1-2147483647\0229\n\024" +
+      "pg_qualstats_enabled\030\220\001 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022A\n\034pg_qualstats_track_co" +
+      "nstants\030\221\001 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\0226\n\020pg_qualstats_max\030\222\001 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022>\n\031pg_qualstats_resol" +
+      "ve_oids\030\223\001 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022?\n\030pg_qualstats_sample_rate\030\224\001 \001(\0132\034." +
+      "google.protobuf.DoubleValue\022J\n\017max_stack" +
+      "_depth\030\226\001 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\023\372\3071\01765536-134217728\022?\n\032enable_group_" +
+      "by_reordering\030\227\001 \001(\0132\032.google.protobuf.B" +
+      "oolValue\022)\n\004geqo\030\230\001 \001(\0132\032.google.protobu" +
+      "f.BoolValue\022F\n\016geqo_threshold\030\231\001 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\020\372\3071\0142-2147483" +
+      "647\022;\n\013geqo_effort\030\232\001 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\010\372\3071\0041-10\0224\n\016geqo_pool_si" +
+      "ze\030\233\001 \001(\0132\033.google.protobuf.Int64Value\0226" +
+      "\n\020geqo_generations\030\234\001 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022G\n\023geqo_selection_bias\030\235\001" +
+      " \001(\0132\034.google.protobuf.DoubleValueB\013\372\3071\007" +
+      "1.5-2.0\022=\n\tgeqo_seed\030\236\001 \001(\0132\034.google.pro" +
+      "tobuf.DoubleValueB\013\372\3071\0070.0-1.0\022P\n\034pg_trg" +
+      "m_similarity_threshold\030\237\001 \001(\0132\034.google.p" +
+      "rotobuf.DoubleValueB\013\372\3071\0070.0-1.0\022U\n!pg_t" +
+      "rgm_word_similarity_threshold\030\240\001 \001(\0132\034.g" +
+      "oogle.protobuf.DoubleValueB\013\372\3071\0070.0-1.0\022" +
+      "\\\n(pg_trgm_strict_word_similarity_thresh" +
+      "old\030\241\001 \001(\0132\034.google.protobuf.DoubleValue" +
+      "B\013\372\3071\0070.0-1.0\022?\n\031max_standby_archive_del" +
+      "ay\030\242\001 \001(\0132\033.google.protobuf.Int64Value\022P" +
+      "\n\030session_duration_timeout\030\243\001 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\020\372\3071\0140-2147483647" +
+      "\022=\n\030log_replication_commands\030\244\001 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022T\n\033log_autovacuu" +
+      "m_min_duration\030\245\001 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\021\372\3071\r-1-2147483647\022j\n\023passwor" +
+      "d_encryption\030\247\001 \001(\0162L.yandex.cloud.mdb.p" +
+      "ostgresql.v1.config.PostgresqlConfig15.P" +
+      "asswordEncryption\"\232\001\n\016BackslashQuote\022\037\n\033" +
+      "BACKSLASH_QUOTE_UNSPECIFIED\020\000\022\023\n\017BACKSLA" +
+      "SH_QUOTE\020\001\022\026\n\022BACKSLASH_QUOTE_ON\020\002\022\027\n\023BA" +
+      "CKSLASH_QUOTE_OFF\020\003\022!\n\035BACKSLASH_QUOTE_S" +
+      "AFE_ENCODING\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_O" +
+      "UTPUT_UNSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020" +
+      "\001\022\030\n\024BYTEA_OUTPUT_ESCAPED\020\002\"\232\001\n\023Constrai" +
+      "ntExclusion\022$\n CONSTRAINT_EXCLUSION_UNSP" +
+      "ECIFIED\020\000\022\033\n\027CONSTRAINT_EXCLUSION_ON\020\001\022\034" +
+      "\n\030CONSTRAINT_EXCLUSION_OFF\020\002\022\"\n\036CONSTRAI" +
+      "NT_EXCLUSION_PARTITION\020\003\"\222\001\n\021ForceParall" +
+      "elMode\022#\n\037FORCE_PARALLEL_MODE_UNSPECIFIE" +
+      "D\020\000\022\032\n\026FORCE_PARALLEL_MODE_ON\020\001\022\033\n\027FORCE" +
+      "_PARALLEL_MODE_OFF\020\002\022\037\n\033FORCE_PARALLEL_M" +
+      "ODE_REGRESS\020\003\"\231\001\n\021LogErrorVerbosity\022#\n\037L" +
+      "OG_ERROR_VERBOSITY_UNSPECIFIED\020\000\022\035\n\031LOG_" +
+      "ERROR_VERBOSITY_TERSE\020\001\022\037\n\033LOG_ERROR_VER" +
+      "BOSITY_DEFAULT\020\002\022\037\n\033LOG_ERROR_VERBOSITY_" +
+      "VERBOSE\020\003\"\222\002\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSP" +
+      "ECIFIED\020\000\022\024\n\020LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_L" +
+      "EVEL_DEBUG4\020\002\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020L" +
+      "OG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022" +
+      "\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007" +
+      "\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023\n\017LOG_LEVEL_ERR" +
+      "OR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_P" +
+      "ANIC\020\013\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT" +
+      "_UNSPECIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025" +
+      "\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_M" +
+      "OD\020\003\022\025\n\021LOG_STATEMENT_ALL\020\004\"}\n\022PasswordE" +
+      "ncryption\022#\n\037PASSWORD_ENCRYPTION_UNSPECI" +
+      "FIED\020\000\022\033\n\027PASSWORD_ENCRYPTION_MD5\020\001\022%\n!P" +
+      "ASSWORD_ENCRYPTION_SCRAM_SHA_256\020\002\"\320\001\n\024P" +
+      "gHintPlanDebugPrint\022(\n$PG_HINT_PLAN_DEBU" +
+      "G_PRINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN_DE" +
+      "BUG_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PR" +
+      "INT_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT_DET" +
+      "AILED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT_VERB" +
+      "OSE\020\004\"\231\001\n\rPlanCacheMode\022\037\n\033PLAN_CACHE_MO" +
+      "DE_UNSPECIFIED\020\000\022\030\n\024PLAN_CACHE_MODE_AUTO" +
+      "\020\001\022%\n!PLAN_CACHE_MODE_FORCE_CUSTOM_PLAN\020" +
+      "\002\022&\n\"PLAN_CACHE_MODE_FORCE_GENERIC_PLAN\020" +
+      "\003\"\255\003\n\026SharedPreloadLibraries\022(\n$SHARED_P" +
+      "RELOAD_LIBRARIES_UNSPECIFIED\020\000\022)\n%SHARED" +
+      "_PRELOAD_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%SHA" +
+      "RED_PRELOAD_LIBRARIES_PG_HINT_PLAN\020\002\022(\n$" +
+      "SHARED_PRELOAD_LIBRARIES_TIMESCALEDB\020\003\022)" +
+      "\n%SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS\020" +
+      "\004\022$\n SHARED_PRELOAD_LIBRARIES_PG_CRON\020\005\022" +
+      "&\n\"SHARED_PRELOAD_LIBRARIES_PGLOGICAL\020\006\022" +
+      "\'\n#SHARED_PRELOAD_LIBRARIES_PG_PREWARM\020\007" +
+      "\022$\n SHARED_PRELOAD_LIBRARIES_PGAUDIT\020\010\022!" +
+      "\n\035SHARED_PRELOAD_LIBRARIES_ANON\020\t\"\326\001\n\021Sy" +
+      "nchronousCommit\022\"\n\036SYNCHRONOUS_COMMIT_UN" +
+      "SPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032" +
+      "\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOU" +
+      "S_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_R" +
+      "EMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMO" +
+      "TE_APPLY\020\005\"\346\001\n\024TransactionIsolation\022%\n!T" +
+      "RANSACTION_ISOLATION_UNSPECIFIED\020\000\022*\n&TR" +
+      "ANSACTION_ISOLATION_READ_UNCOMMITTED\020\001\022(" +
+      "\n$TRANSACTION_ISOLATION_READ_COMMITTED\020\002" +
+      "\022)\n%TRANSACTION_ISOLATION_REPEATABLE_REA" +
+      "D\020\003\022&\n\"TRANSACTION_ISOLATION_SERIALIZABL" +
+      "E\020\004\"S\n\010WalLevel\022\031\n\025WAL_LEVEL_UNSPECIFIED" +
+      "\020\000\022\025\n\021WAL_LEVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_L" +
+      "OGICAL\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINARY_UNSP" +
+      "ECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022\022\n\016XML_" +
+      "BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_OPTION_" +
+      "UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOCUMENT\020\001\022\026" +
+      "\n\022XML_OPTION_CONTENT\020\002J\004\010N\020PJ\004\010j\020kJ\004\010}\020~" +
+      "J\006\010\225\001\020\226\001J\006\010\246\001\020\247\001J\004\010@\020A\"\217\002\n\025PostgresqlCon" +
+      "figSet15\022S\n\020effective_config\030\001 \001(\01329.yan" +
+      "dex.cloud.mdb.postgresql.v1.config.Postg" +
+      "resqlConfig15\022N\n\013user_config\030\002 \001(\01329.yan" +
+      "dex.cloud.mdb.postgresql.v1.config.Postg" +
+      "resqlConfig15\022Q\n\016default_config\030\003 \001(\01329." +
+      "yandex.cloud.mdb.postgresql.v1.config.Po" +
+      "stgresqlConfig15B\201\001\n)yandex.cloud.api.md" +
+      "b.postgresql.v1.configZTgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/pos" +
+      "tgresql/v1/config;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

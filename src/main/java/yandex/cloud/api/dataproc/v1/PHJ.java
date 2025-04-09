@@ -40,7 +40,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * ID of the Data Proc cluster that the job belongs to.
+     * ID of the Yandex Data Processing cluster that the job belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -49,7 +49,7 @@ public final class PHJ {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Data Proc cluster that the job belongs to.
+     * ID of the Yandex Data Processing cluster that the job belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -337,7 +337,7 @@ public final class PHJ {
   }
   /**
    * <pre>
-   * A Data Proc job. For details about the concept, see [documentation](/docs/data-proc/concepts/jobs).
+   * A Yandex Data Processing job. For details about the concept, see [documentation](/docs/data-proc/concepts/jobs).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Job}
@@ -872,7 +872,7 @@ public final class PHJ {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Data Proc cluster that the job belongs to.
+     * ID of the Yandex Data Processing cluster that the job belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -893,7 +893,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * ID of the Data Proc cluster that the job belongs to.
+     * ID of the Yandex Data Processing cluster that the job belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -1686,7 +1686,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * A Data Proc job. For details about the concept, see [documentation](/docs/data-proc/concepts/jobs).
+     * A Yandex Data Processing job. For details about the concept, see [documentation](/docs/data-proc/concepts/jobs).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Job}
@@ -2085,7 +2085,7 @@ public final class PHJ {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Data Proc cluster that the job belongs to.
+       * ID of the Yandex Data Processing cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2105,7 +2105,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the job belongs to.
+       * ID of the Yandex Data Processing cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2126,7 +2126,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the job belongs to.
+       * ID of the Yandex Data Processing cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2145,7 +2145,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the job belongs to.
+       * ID of the Yandex Data Processing cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2159,7 +2159,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the job belongs to.
+       * ID of the Yandex Data Processing cluster that the job belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -5752,7 +5752,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5762,7 +5762,7 @@ public final class PHJ {
         getJarFileUrisList();
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5771,7 +5771,7 @@ public final class PHJ {
     int getJarFileUrisCount();
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5781,7 +5781,7 @@ public final class PHJ {
     java.lang.String getJarFileUris(int index);
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -5793,7 +5793,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -5804,7 +5804,7 @@ public final class PHJ {
         getFileUrisList();
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -5814,7 +5814,7 @@ public final class PHJ {
     int getFileUrisCount();
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -5825,7 +5825,7 @@ public final class PHJ {
     java.lang.String getFileUris(int index);
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -5838,7 +5838,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5848,7 +5848,7 @@ public final class PHJ {
         getArchiveUrisList();
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5857,7 +5857,7 @@ public final class PHJ {
     int getArchiveUrisCount();
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5867,7 +5867,7 @@ public final class PHJ {
     java.lang.String getArchiveUris(int index);
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5879,7 +5879,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and MapReduce.
+     * Property names and values, used to configure Yandex Data Processing and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5887,7 +5887,7 @@ public final class PHJ {
     int getPropertiesCount();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and MapReduce.
+     * Property names and values, used to configure Yandex Data Processing and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5902,7 +5902,7 @@ public final class PHJ {
     getProperties();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and MapReduce.
+     * Property names and values, used to configure Yandex Data Processing and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5911,7 +5911,7 @@ public final class PHJ {
     getPropertiesMap();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and MapReduce.
+     * Property names and values, used to configure Yandex Data Processing and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5922,7 +5922,7 @@ public final class PHJ {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and MapReduce.
+     * Property names and values, used to configure Yandex Data Processing and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -6254,7 +6254,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList jarFileUris_;
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -6266,7 +6266,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -6277,7 +6277,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -6289,7 +6289,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -6305,7 +6305,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList fileUris_;
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -6318,7 +6318,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -6330,7 +6330,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -6343,7 +6343,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -6360,7 +6360,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList archiveUris_;
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -6372,7 +6372,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -6383,7 +6383,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -6395,7 +6395,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -6435,7 +6435,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and MapReduce.
+     * Property names and values, used to configure Yandex Data Processing and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -6457,7 +6457,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and MapReduce.
+     * Property names and values, used to configure Yandex Data Processing and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -6469,7 +6469,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and MapReduce.
+     * Property names and values, used to configure Yandex Data Processing and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -6486,7 +6486,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and MapReduce.
+     * Property names and values, used to configure Yandex Data Processing and MapReduce.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7337,7 +7337,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -7349,7 +7349,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -7360,7 +7360,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -7372,7 +7372,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -7385,7 +7385,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -7405,7 +7405,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -7424,7 +7424,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -7441,7 +7441,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -7455,7 +7455,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -7483,7 +7483,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -7496,7 +7496,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -7508,7 +7508,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -7521,7 +7521,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -7535,7 +7535,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -7556,7 +7556,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -7576,7 +7576,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -7594,7 +7594,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -7609,7 +7609,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -7638,7 +7638,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7650,7 +7650,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7661,7 +7661,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7673,7 +7673,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7686,7 +7686,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7706,7 +7706,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7725,7 +7725,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7742,7 +7742,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7756,7 +7756,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7803,7 +7803,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and MapReduce.
+       * Property names and values, used to configure Yandex Data Processing and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7825,7 +7825,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and MapReduce.
+       * Property names and values, used to configure Yandex Data Processing and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7837,7 +7837,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and MapReduce.
+       * Property names and values, used to configure Yandex Data Processing and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7854,7 +7854,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and MapReduce.
+       * Property names and values, used to configure Yandex Data Processing and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7879,7 +7879,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and MapReduce.
+       * Property names and values, used to configure Yandex Data Processing and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7902,7 +7902,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and MapReduce.
+       * Property names and values, used to configure Yandex Data Processing and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7921,7 +7921,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and MapReduce.
+       * Property names and values, used to configure Yandex Data Processing and MapReduce.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8275,7 +8275,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8285,7 +8285,7 @@ public final class PHJ {
         getJarFileUrisList();
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8294,7 +8294,7 @@ public final class PHJ {
     int getJarFileUrisCount();
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8304,7 +8304,7 @@ public final class PHJ {
     java.lang.String getJarFileUris(int index);
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8316,7 +8316,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -8327,7 +8327,7 @@ public final class PHJ {
         getFileUrisList();
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -8337,7 +8337,7 @@ public final class PHJ {
     int getFileUrisCount();
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -8348,7 +8348,7 @@ public final class PHJ {
     java.lang.String getFileUris(int index);
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -8361,7 +8361,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8371,7 +8371,7 @@ public final class PHJ {
         getArchiveUrisList();
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8380,7 +8380,7 @@ public final class PHJ {
     int getArchiveUrisCount();
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8390,7 +8390,7 @@ public final class PHJ {
     java.lang.String getArchiveUris(int index);
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8402,7 +8402,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Spark.
+     * Property names and values, used to configure Yandex Data Processing and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8410,7 +8410,7 @@ public final class PHJ {
     int getPropertiesCount();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Spark.
+     * Property names and values, used to configure Yandex Data Processing and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8425,7 +8425,7 @@ public final class PHJ {
     getProperties();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Spark.
+     * Property names and values, used to configure Yandex Data Processing and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8434,7 +8434,7 @@ public final class PHJ {
     getPropertiesMap();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Spark.
+     * Property names and values, used to configure Yandex Data Processing and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8445,7 +8445,7 @@ public final class PHJ {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Spark.
+     * Property names and values, used to configure Yandex Data Processing and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8880,7 +8880,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList jarFileUris_;
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8892,7 +8892,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8903,7 +8903,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8915,7 +8915,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8931,7 +8931,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList fileUris_;
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -8944,7 +8944,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -8956,7 +8956,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -8969,7 +8969,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -8986,7 +8986,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList archiveUris_;
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8998,7 +8998,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -9009,7 +9009,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -9021,7 +9021,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -9061,7 +9061,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Spark.
+     * Property names and values, used to configure Yandex Data Processing and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9083,7 +9083,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Spark.
+     * Property names and values, used to configure Yandex Data Processing and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9095,7 +9095,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Spark.
+     * Property names and values, used to configure Yandex Data Processing and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9112,7 +9112,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Spark.
+     * Property names and values, used to configure Yandex Data Processing and Spark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10138,7 +10138,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10150,7 +10150,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10161,7 +10161,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10173,7 +10173,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10186,7 +10186,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10206,7 +10206,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10225,7 +10225,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10242,7 +10242,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10256,7 +10256,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10284,7 +10284,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -10297,7 +10297,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -10309,7 +10309,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -10322,7 +10322,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -10336,7 +10336,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -10357,7 +10357,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -10377,7 +10377,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -10395,7 +10395,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -10410,7 +10410,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -10439,7 +10439,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10451,7 +10451,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10462,7 +10462,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10474,7 +10474,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10487,7 +10487,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10507,7 +10507,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10526,7 +10526,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10543,7 +10543,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10557,7 +10557,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10604,7 +10604,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Spark.
+       * Property names and values, used to configure Yandex Data Processing and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10626,7 +10626,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Spark.
+       * Property names and values, used to configure Yandex Data Processing and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10638,7 +10638,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Spark.
+       * Property names and values, used to configure Yandex Data Processing and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10655,7 +10655,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Spark.
+       * Property names and values, used to configure Yandex Data Processing and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10680,7 +10680,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Spark.
+       * Property names and values, used to configure Yandex Data Processing and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10703,7 +10703,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Spark.
+       * Property names and values, used to configure Yandex Data Processing and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10722,7 +10722,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Spark.
+       * Property names and values, used to configure Yandex Data Processing and Spark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11464,7 +11464,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11474,7 +11474,7 @@ public final class PHJ {
         getJarFileUrisList();
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11483,7 +11483,7 @@ public final class PHJ {
     int getJarFileUrisCount();
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11493,7 +11493,7 @@ public final class PHJ {
     java.lang.String getJarFileUris(int index);
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11505,7 +11505,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -11516,7 +11516,7 @@ public final class PHJ {
         getFileUrisList();
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -11526,7 +11526,7 @@ public final class PHJ {
     int getFileUrisCount();
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -11537,7 +11537,7 @@ public final class PHJ {
     java.lang.String getFileUris(int index);
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -11550,7 +11550,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11560,7 +11560,7 @@ public final class PHJ {
         getArchiveUrisList();
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11569,7 +11569,7 @@ public final class PHJ {
     int getArchiveUrisCount();
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11579,7 +11579,7 @@ public final class PHJ {
     java.lang.String getArchiveUris(int index);
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11591,7 +11591,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and PySpark.
+     * Property names and values, used to configure Yandex Data Processing and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11599,7 +11599,7 @@ public final class PHJ {
     int getPropertiesCount();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and PySpark.
+     * Property names and values, used to configure Yandex Data Processing and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11614,7 +11614,7 @@ public final class PHJ {
     getProperties();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and PySpark.
+     * Property names and values, used to configure Yandex Data Processing and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11623,7 +11623,7 @@ public final class PHJ {
     getPropertiesMap();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and PySpark.
+     * Property names and values, used to configure Yandex Data Processing and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11634,7 +11634,7 @@ public final class PHJ {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and PySpark.
+     * Property names and values, used to configure Yandex Data Processing and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -12096,7 +12096,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList jarFileUris_;
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -12108,7 +12108,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -12119,7 +12119,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -12131,7 +12131,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+     * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -12147,7 +12147,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList fileUris_;
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -12160,7 +12160,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -12172,7 +12172,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -12185,7 +12185,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of resource files to be copied to the working directory of Data Proc drivers
+     * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
      * and distributed Hadoop tasks.
      * </pre>
      *
@@ -12202,7 +12202,7 @@ public final class PHJ {
     private com.google.protobuf.LazyStringList archiveUris_;
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -12214,7 +12214,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -12225,7 +12225,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -12237,7 +12237,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -12277,7 +12277,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and PySpark.
+     * Property names and values, used to configure Yandex Data Processing and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -12299,7 +12299,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and PySpark.
+     * Property names and values, used to configure Yandex Data Processing and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -12311,7 +12311,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and PySpark.
+     * Property names and values, used to configure Yandex Data Processing and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -12328,7 +12328,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and PySpark.
+     * Property names and values, used to configure Yandex Data Processing and PySpark.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13376,7 +13376,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13388,7 +13388,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13399,7 +13399,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13411,7 +13411,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13424,7 +13424,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13444,7 +13444,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13463,7 +13463,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13480,7 +13480,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13494,7 +13494,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * JAR file URIs to add to CLASSPATH of the Data Proc driver and each task.
+       * JAR file URIs to add to CLASSPATH of the Yandex Data Processing driver and each task.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13522,7 +13522,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -13535,7 +13535,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -13547,7 +13547,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -13560,7 +13560,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -13574,7 +13574,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -13595,7 +13595,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -13615,7 +13615,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -13633,7 +13633,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -13648,7 +13648,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of resource files to be copied to the working directory of Data Proc drivers
+       * URIs of resource files to be copied to the working directory of Yandex Data Processing drivers
        * and distributed Hadoop tasks.
        * </pre>
        *
@@ -13677,7 +13677,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13689,7 +13689,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13700,7 +13700,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13712,7 +13712,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13725,7 +13725,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13745,7 +13745,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13764,7 +13764,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13781,7 +13781,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13795,7 +13795,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted to the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted to the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13842,7 +13842,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and PySpark.
+       * Property names and values, used to configure Yandex Data Processing and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13864,7 +13864,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and PySpark.
+       * Property names and values, used to configure Yandex Data Processing and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13876,7 +13876,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and PySpark.
+       * Property names and values, used to configure Yandex Data Processing and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13893,7 +13893,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and PySpark.
+       * Property names and values, used to configure Yandex Data Processing and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13918,7 +13918,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and PySpark.
+       * Property names and values, used to configure Yandex Data Processing and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13941,7 +13941,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and PySpark.
+       * Property names and values, used to configure Yandex Data Processing and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13960,7 +13960,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and PySpark.
+       * Property names and values, used to configure Yandex Data Processing and PySpark.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -15417,7 +15417,7 @@ public final class PHJ {
 
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Hive.
+     * Property names and values, used to configure Yandex Data Processing and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -15425,7 +15425,7 @@ public final class PHJ {
     int getPropertiesCount();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Hive.
+     * Property names and values, used to configure Yandex Data Processing and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -15440,7 +15440,7 @@ public final class PHJ {
     getProperties();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Hive.
+     * Property names and values, used to configure Yandex Data Processing and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -15449,7 +15449,7 @@ public final class PHJ {
     getPropertiesMap();
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Hive.
+     * Property names and values, used to configure Yandex Data Processing and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -15460,7 +15460,7 @@ public final class PHJ {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Hive.
+     * Property names and values, used to configure Yandex Data Processing and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -15857,7 +15857,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Hive.
+     * Property names and values, used to configure Yandex Data Processing and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -15879,7 +15879,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Hive.
+     * Property names and values, used to configure Yandex Data Processing and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -15891,7 +15891,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Hive.
+     * Property names and values, used to configure Yandex Data Processing and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -15908,7 +15908,7 @@ public final class PHJ {
     }
     /**
      * <pre>
-     * Property names and values, used to configure Data Proc and Hive.
+     * Property names and values, used to configure Yandex Data Processing and Hive.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -16724,7 +16724,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Hive.
+       * Property names and values, used to configure Yandex Data Processing and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -16746,7 +16746,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Hive.
+       * Property names and values, used to configure Yandex Data Processing and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -16758,7 +16758,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Hive.
+       * Property names and values, used to configure Yandex Data Processing and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -16775,7 +16775,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Hive.
+       * Property names and values, used to configure Yandex Data Processing and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -16800,7 +16800,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Hive.
+       * Property names and values, used to configure Yandex Data Processing and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -16823,7 +16823,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Hive.
+       * Property names and values, used to configure Yandex Data Processing and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>
@@ -16842,7 +16842,7 @@ public final class PHJ {
       }
       /**
        * <pre>
-       * Property names and values, used to configure Data Proc and Hive.
+       * Property names and values, used to configure Yandex Data Processing and Hive.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 1;</code>

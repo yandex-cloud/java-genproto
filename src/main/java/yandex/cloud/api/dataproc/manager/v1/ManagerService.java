@@ -11618,8 +11618,8 @@ public final class ManagerService {
 
     /**
      * <pre>
-     * Report count is incremented every time report is sent by Dataproc Agent.
-     * So Worker can use this property to make sure that Dataproc Agent got data sent by Worker through Dataproc Manager
+     * Report count is incremented every time report is sent by Yandex Data Processing Agent.
+     * So Worker can use this property to make sure that Yandex Data Processing Agent got data sent by Worker through Yandex Data Processing Manager
      * for synchronization purposes
      * </pre>
      *
@@ -12004,8 +12004,8 @@ public final class ManagerService {
     private long reportCount_;
     /**
      * <pre>
-     * Report count is incremented every time report is sent by Dataproc Agent.
-     * So Worker can use this property to make sure that Dataproc Agent got data sent by Worker through Dataproc Manager
+     * Report count is incremented every time report is sent by Yandex Data Processing Agent.
+     * So Worker can use this property to make sure that Yandex Data Processing Agent got data sent by Worker through Yandex Data Processing Manager
      * for synchronization purposes
      * </pre>
      *
@@ -13329,8 +13329,8 @@ public final class ManagerService {
       private long reportCount_ ;
       /**
        * <pre>
-       * Report count is incremented every time report is sent by Dataproc Agent.
-       * So Worker can use this property to make sure that Dataproc Agent got data sent by Worker through Dataproc Manager
+       * Report count is incremented every time report is sent by Yandex Data Processing Agent.
+       * So Worker can use this property to make sure that Yandex Data Processing Agent got data sent by Worker through Yandex Data Processing Manager
        * for synchronization purposes
        * </pre>
        *
@@ -13343,8 +13343,8 @@ public final class ManagerService {
       }
       /**
        * <pre>
-       * Report count is incremented every time report is sent by Dataproc Agent.
-       * So Worker can use this property to make sure that Dataproc Agent got data sent by Worker through Dataproc Manager
+       * Report count is incremented every time report is sent by Yandex Data Processing Agent.
+       * So Worker can use this property to make sure that Yandex Data Processing Agent got data sent by Worker through Yandex Data Processing Manager
        * for synchronization purposes
        * </pre>
        *
@@ -13360,8 +13360,8 @@ public final class ManagerService {
       }
       /**
        * <pre>
-       * Report count is incremented every time report is sent by Dataproc Agent.
-       * So Worker can use this property to make sure that Dataproc Agent got data sent by Worker through Dataproc Manager
+       * Report count is incremented every time report is sent by Yandex Data Processing Agent.
+       * So Worker can use this property to make sure that Yandex Data Processing Agent got data sent by Worker through Yandex Data Processing Manager
        * for synchronization purposes
        * </pre>
        *

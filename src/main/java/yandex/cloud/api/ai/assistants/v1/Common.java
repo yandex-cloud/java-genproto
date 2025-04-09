@@ -7832,6 +7832,39 @@ public final class Common {
      * <code>.google.protobuf.Int64Value max_num_results = 2;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxNumResultsOrBuilder();
+
+    /**
+     * <pre>
+     * Options for rephrasing user queries.
+     * Used to rewrite the last user message for search,
+     * incorporating context from the previous conversation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+     * @return Whether the rephraserOptions field is set.
+     */
+    boolean hasRephraserOptions();
+    /**
+     * <pre>
+     * Options for rephrasing user queries.
+     * Used to rewrite the last user message for search,
+     * incorporating context from the previous conversation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+     * @return The rephraserOptions.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions getRephraserOptions();
+    /**
+     * <pre>
+     * Options for rephrasing user queries.
+     * Used to rewrite the last user message for search,
+     * incorporating context from the previous conversation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.RephraserOptionsOrBuilder getRephraserOptionsOrBuilder();
   }
   /**
    * <pre>
@@ -7902,6 +7935,19 @@ public final class Common {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(maxNumResults_);
                 maxNumResults_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.Builder subBuilder = null;
+              if (rephraserOptions_ != null) {
+                subBuilder = rephraserOptions_.toBuilder();
+              }
+              rephraserOptions_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rephraserOptions_);
+                rephraserOptions_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8036,6 +8082,50 @@ public final class Common {
       return getMaxNumResults();
     }
 
+    public static final int REPHRASER_OPTIONS_FIELD_NUMBER = 3;
+    private yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions rephraserOptions_;
+    /**
+     * <pre>
+     * Options for rephrasing user queries.
+     * Used to rewrite the last user message for search,
+     * incorporating context from the previous conversation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+     * @return Whether the rephraserOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasRephraserOptions() {
+      return rephraserOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Options for rephrasing user queries.
+     * Used to rewrite the last user message for search,
+     * incorporating context from the previous conversation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+     * @return The rephraserOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions getRephraserOptions() {
+      return rephraserOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.getDefaultInstance() : rephraserOptions_;
+    }
+    /**
+     * <pre>
+     * Options for rephrasing user queries.
+     * Used to rewrite the last user message for search,
+     * incorporating context from the previous conversation.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.RephraserOptionsOrBuilder getRephraserOptionsOrBuilder() {
+      return getRephraserOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8055,6 +8145,9 @@ public final class Common {
       }
       if (maxNumResults_ != null) {
         output.writeMessage(2, getMaxNumResults());
+      }
+      if (rephraserOptions_ != null) {
+        output.writeMessage(3, getRephraserOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -8076,6 +8169,10 @@ public final class Common {
       if (maxNumResults_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMaxNumResults());
+      }
+      if (rephraserOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRephraserOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8099,6 +8196,11 @@ public final class Common {
         if (!getMaxNumResults()
             .equals(other.getMaxNumResults())) return false;
       }
+      if (hasRephraserOptions() != other.hasRephraserOptions()) return false;
+      if (hasRephraserOptions()) {
+        if (!getRephraserOptions()
+            .equals(other.getRephraserOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8117,6 +8219,10 @@ public final class Common {
       if (hasMaxNumResults()) {
         hash = (37 * hash) + MAX_NUM_RESULTS_FIELD_NUMBER;
         hash = (53 * hash) + getMaxNumResults().hashCode();
+      }
+      if (hasRephraserOptions()) {
+        hash = (37 * hash) + REPHRASER_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRephraserOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8263,6 +8369,12 @@ public final class Common {
           maxNumResults_ = null;
           maxNumResultsBuilder_ = null;
         }
+        if (rephraserOptionsBuilder_ == null) {
+          rephraserOptions_ = null;
+        } else {
+          rephraserOptions_ = null;
+          rephraserOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -8299,6 +8411,11 @@ public final class Common {
           result.maxNumResults_ = maxNumResults_;
         } else {
           result.maxNumResults_ = maxNumResultsBuilder_.build();
+        }
+        if (rephraserOptionsBuilder_ == null) {
+          result.rephraserOptions_ = rephraserOptions_;
+        } else {
+          result.rephraserOptions_ = rephraserOptionsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8360,6 +8477,9 @@ public final class Common {
         }
         if (other.hasMaxNumResults()) {
           mergeMaxNumResults(other.getMaxNumResults());
+        }
+        if (other.hasRephraserOptions()) {
+          mergeRephraserOptions(other.getRephraserOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8708,6 +8828,179 @@ public final class Common {
           maxNumResults_ = null;
         }
         return maxNumResultsBuilder_;
+      }
+
+      private yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions rephraserOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions, yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.RephraserOptionsOrBuilder> rephraserOptionsBuilder_;
+      /**
+       * <pre>
+       * Options for rephrasing user queries.
+       * Used to rewrite the last user message for search,
+       * incorporating context from the previous conversation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+       * @return Whether the rephraserOptions field is set.
+       */
+      public boolean hasRephraserOptions() {
+        return rephraserOptionsBuilder_ != null || rephraserOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Options for rephrasing user queries.
+       * Used to rewrite the last user message for search,
+       * incorporating context from the previous conversation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+       * @return The rephraserOptions.
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions getRephraserOptions() {
+        if (rephraserOptionsBuilder_ == null) {
+          return rephraserOptions_ == null ? yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.getDefaultInstance() : rephraserOptions_;
+        } else {
+          return rephraserOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Options for rephrasing user queries.
+       * Used to rewrite the last user message for search,
+       * incorporating context from the previous conversation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+       */
+      public Builder setRephraserOptions(yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions value) {
+        if (rephraserOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rephraserOptions_ = value;
+          onChanged();
+        } else {
+          rephraserOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for rephrasing user queries.
+       * Used to rewrite the last user message for search,
+       * incorporating context from the previous conversation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+       */
+      public Builder setRephraserOptions(
+          yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.Builder builderForValue) {
+        if (rephraserOptionsBuilder_ == null) {
+          rephraserOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          rephraserOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for rephrasing user queries.
+       * Used to rewrite the last user message for search,
+       * incorporating context from the previous conversation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+       */
+      public Builder mergeRephraserOptions(yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions value) {
+        if (rephraserOptionsBuilder_ == null) {
+          if (rephraserOptions_ != null) {
+            rephraserOptions_ =
+              yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.newBuilder(rephraserOptions_).mergeFrom(value).buildPartial();
+          } else {
+            rephraserOptions_ = value;
+          }
+          onChanged();
+        } else {
+          rephraserOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for rephrasing user queries.
+       * Used to rewrite the last user message for search,
+       * incorporating context from the previous conversation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+       */
+      public Builder clearRephraserOptions() {
+        if (rephraserOptionsBuilder_ == null) {
+          rephraserOptions_ = null;
+          onChanged();
+        } else {
+          rephraserOptions_ = null;
+          rephraserOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for rephrasing user queries.
+       * Used to rewrite the last user message for search,
+       * incorporating context from the previous conversation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.Builder getRephraserOptionsBuilder() {
+        
+        onChanged();
+        return getRephraserOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Options for rephrasing user queries.
+       * Used to rewrite the last user message for search,
+       * incorporating context from the previous conversation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.RephraserOptionsOrBuilder getRephraserOptionsOrBuilder() {
+        if (rephraserOptionsBuilder_ != null) {
+          return rephraserOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return rephraserOptions_ == null ?
+              yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.getDefaultInstance() : rephraserOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Options for rephrasing user queries.
+       * Used to rewrite the last user message for search,
+       * incorporating context from the previous conversation.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions, yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.RephraserOptionsOrBuilder> 
+          getRephraserOptionsFieldBuilder() {
+        if (rephraserOptionsBuilder_ == null) {
+          rephraserOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions, yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.Builder, yandex.cloud.api.ai.assistants.v1.Common.RephraserOptionsOrBuilder>(
+                  getRephraserOptions(),
+                  getParentForChildren(),
+                  isClean());
+          rephraserOptions_ = null;
+        }
+        return rephraserOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11668,6 +11961,618 @@ public final class Common {
 
   }
 
+  public interface RephraserOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.RephraserOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The ID of the model used to rephrase the last user message for search.
+     * </pre>
+     *
+     * <code>string rephraser_uri = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The rephraserUri.
+     */
+    java.lang.String getRephraserUri();
+    /**
+     * <pre>
+     * The ID of the model used to rephrase the last user message for search.
+     * </pre>
+     *
+     * <code>string rephraser_uri = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for rephraserUri.
+     */
+    com.google.protobuf.ByteString
+        getRephraserUriBytes();
+  }
+  /**
+   * <pre>
+   * Options for configuring the rephrasing the last user message for search using context from previous conversation.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.RephraserOptions}
+   */
+  public static final class RephraserOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.RephraserOptions)
+      RephraserOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RephraserOptions.newBuilder() to construct.
+    private RephraserOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RephraserOptions() {
+      rephraserUri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RephraserOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RephraserOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              rephraserUri_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.class, yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.Builder.class);
+    }
+
+    public static final int REPHRASER_URI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object rephraserUri_;
+    /**
+     * <pre>
+     * The ID of the model used to rephrase the last user message for search.
+     * </pre>
+     *
+     * <code>string rephraser_uri = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The rephraserUri.
+     */
+    @java.lang.Override
+    public java.lang.String getRephraserUri() {
+      java.lang.Object ref = rephraserUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rephraserUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of the model used to rephrase the last user message for search.
+     * </pre>
+     *
+     * <code>string rephraser_uri = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for rephraserUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRephraserUriBytes() {
+      java.lang.Object ref = rephraserUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rephraserUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rephraserUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rephraserUri_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rephraserUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rephraserUri_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions other = (yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions) obj;
+
+      if (!getRephraserUri()
+          .equals(other.getRephraserUri())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REPHRASER_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getRephraserUri().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Options for configuring the rephrasing the last user message for search using context from previous conversation.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.RephraserOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.RephraserOptions)
+        yandex.cloud.api.ai.assistants.v1.Common.RephraserOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.class, yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        rephraserUri_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions build() {
+        yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions result = new yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions(this);
+        result.rephraserUri_ = rephraserUri_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions.getDefaultInstance()) return this;
+        if (!other.getRephraserUri().isEmpty()) {
+          rephraserUri_ = other.rephraserUri_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object rephraserUri_ = "";
+      /**
+       * <pre>
+       * The ID of the model used to rephrase the last user message for search.
+       * </pre>
+       *
+       * <code>string rephraser_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The rephraserUri.
+       */
+      public java.lang.String getRephraserUri() {
+        java.lang.Object ref = rephraserUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rephraserUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the model used to rephrase the last user message for search.
+       * </pre>
+       *
+       * <code>string rephraser_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for rephraserUri.
+       */
+      public com.google.protobuf.ByteString
+          getRephraserUriBytes() {
+        java.lang.Object ref = rephraserUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rephraserUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of the model used to rephrase the last user message for search.
+       * </pre>
+       *
+       * <code>string rephraser_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The rephraserUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRephraserUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        rephraserUri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the model used to rephrase the last user message for search.
+       * </pre>
+       *
+       * <code>string rephraser_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRephraserUri() {
+        
+        rephraserUri_ = getDefaultInstance().getRephraserUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of the model used to rephrase the last user message for search.
+       * </pre>
+       *
+       * <code>string rephraser_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for rephraserUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRephraserUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        rephraserUri_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.RephraserOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.RephraserOptions)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RephraserOptions>
+        PARSER = new com.google.protobuf.AbstractParser<RephraserOptions>() {
+      @java.lang.Override
+      public RephraserOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RephraserOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RephraserOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RephraserOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.RephraserOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_descriptor;
   private static final 
@@ -11733,6 +12638,11 @@ public final class Common {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11745,50 +12655,55 @@ public final class Common {
       "\n*yandex/cloud/ai/assistants/v1/common.p" +
       "roto\022\035yandex.cloud.ai.assistants.v1\032\034goo" +
       "gle/protobuf/struct.proto\032\036google/protob" +
-      "uf/wrappers.proto\"\362\002\n\027PromptTruncationOp" +
-      "tions\0226\n\021max_prompt_tokens\030\001 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022\\\n\rauto_strategy\030\002" +
-      " \001(\0132C.yandex.cloud.ai.assistants.v1.Pro" +
-      "mptTruncationOptions.AutoStrategyH\000\022m\n\026l" +
-      "ast_messages_strategy\030\003 \001(\0132K.yandex.clo" +
-      "ud.ai.assistants.v1.PromptTruncationOpti" +
-      "ons.LastMessagesStrategyH\000\032\016\n\014AutoStrate" +
-      "gy\032,\n\024LastMessagesStrategy\022\024\n\014num_messag" +
-      "es\030\001 \001(\003B\024\n\022TruncationStrategy\"w\n\021Comple" +
-      "tionOptions\022/\n\nmax_tokens\030\002 \001(\0132\033.google" +
-      ".protobuf.Int64Value\0221\n\013temperature\030\003 \001(" +
-      "\0132\034.google.protobuf.DoubleValue\"\233\001\n\004Tool" +
-      "\022F\n\014search_index\030\001 \001(\0132..yandex.cloud.ai" +
-      ".assistants.v1.SearchIndexToolH\000\022?\n\010func" +
-      "tion\030\002 \001(\0132+.yandex.cloud.ai.assistants." +
-      "v1.FunctionToolH\000B\n\n\010ToolType\"`\n\010ToolCal" +
-      "l\022D\n\rfunction_call\030\001 \001(\0132+.yandex.cloud." +
-      "ai.assistants.v1.FunctionCallH\000B\016\n\014ToolC" +
-      "allType\"K\n\014ToolCallList\022;\n\ntool_calls\030\001 " +
-      "\003(\0132\'.yandex.cloud.ai.assistants.v1.Tool" +
-      "Call\"h\n\nToolResult\022H\n\017function_result\030\001 " +
-      "\001(\0132-.yandex.cloud.ai.assistants.v1.Func" +
-      "tionResultH\000B\020\n\016ToolResultType\"Q\n\016ToolRe" +
-      "sultList\022?\n\014tool_results\030\001 \003(\0132).yandex." +
-      "cloud.ai.assistants.v1.ToolResult\"a\n\017Sea" +
-      "rchIndexTool\022\030\n\020search_index_ids\030\001 \003(\t\0224" +
-      "\n\017max_num_results\030\002 \001(\0132\033.google.protobu" +
-      "f.Int64Value\"^\n\014FunctionTool\022\014\n\004name\030\001 \001" +
-      "(\t\022\023\n\013description\030\002 \001(\t\022+\n\nparameters\030\003 " +
-      "\001(\0132\027.google.protobuf.Struct\"H\n\014Function" +
-      "Call\022\014\n\004name\030\001 \001(\t\022*\n\targuments\030\002 \001(\0132\027." +
-      "google.protobuf.Struct\"@\n\016FunctionResult" +
-      "\022\014\n\004name\030\001 \001(\t\022\021\n\007content\030\002 \001(\tH\000B\r\n\013Con" +
-      "tentTypeBq\n!yandex.cloud.api.ai.assistan" +
-      "ts.v1ZLgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/ai/assistants/v1;assista" +
-      "ntsb\006proto3"
+      "uf/wrappers.proto\032\035yandex/cloud/validati" +
+      "on.proto\"\362\002\n\027PromptTruncationOptions\0226\n\021" +
+      "max_prompt_tokens\030\001 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022\\\n\rauto_strategy\030\002 \001(\0132C.ya" +
+      "ndex.cloud.ai.assistants.v1.PromptTrunca" +
+      "tionOptions.AutoStrategyH\000\022m\n\026last_messa" +
+      "ges_strategy\030\003 \001(\0132K.yandex.cloud.ai.ass" +
+      "istants.v1.PromptTruncationOptions.LastM" +
+      "essagesStrategyH\000\032\016\n\014AutoStrategy\032,\n\024Las" +
+      "tMessagesStrategy\022\024\n\014num_messages\030\001 \001(\003B" +
+      "\024\n\022TruncationStrategy\"w\n\021CompletionOptio" +
+      "ns\022/\n\nmax_tokens\030\002 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0221\n\013temperature\030\003 \001(\0132\034.googl" +
+      "e.protobuf.DoubleValue\"\233\001\n\004Tool\022F\n\014searc" +
+      "h_index\030\001 \001(\0132..yandex.cloud.ai.assistan" +
+      "ts.v1.SearchIndexToolH\000\022?\n\010function\030\002 \001(" +
+      "\0132+.yandex.cloud.ai.assistants.v1.Functi" +
+      "onToolH\000B\n\n\010ToolType\"`\n\010ToolCall\022D\n\rfunc" +
+      "tion_call\030\001 \001(\0132+.yandex.cloud.ai.assist" +
+      "ants.v1.FunctionCallH\000B\016\n\014ToolCallType\"K" +
+      "\n\014ToolCallList\022;\n\ntool_calls\030\001 \003(\0132\'.yan" +
+      "dex.cloud.ai.assistants.v1.ToolCall\"h\n\nT" +
+      "oolResult\022H\n\017function_result\030\001 \001(\0132-.yan" +
+      "dex.cloud.ai.assistants.v1.FunctionResul" +
+      "tH\000B\020\n\016ToolResultType\"Q\n\016ToolResultList\022" +
+      "?\n\014tool_results\030\001 \003(\0132).yandex.cloud.ai." +
+      "assistants.v1.ToolResult\"\255\001\n\017SearchIndex" +
+      "Tool\022\030\n\020search_index_ids\030\001 \003(\t\0224\n\017max_nu" +
+      "m_results\030\002 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022J\n\021rephraser_options\030\003 \001(\0132/.yandex" +
+      ".cloud.ai.assistants.v1.RephraserOptions" +
+      "\"^\n\014FunctionTool\022\014\n\004name\030\001 \001(\t\022\023\n\013descri" +
+      "ption\030\002 \001(\t\022+\n\nparameters\030\003 \001(\0132\027.google" +
+      ".protobuf.Struct\"H\n\014FunctionCall\022\014\n\004name" +
+      "\030\001 \001(\t\022*\n\targuments\030\002 \001(\0132\027.google.proto" +
+      "buf.Struct\"@\n\016FunctionResult\022\014\n\004name\030\001 \001" +
+      "(\t\022\021\n\007content\030\002 \001(\tH\000B\r\n\013ContentType\"/\n\020" +
+      "RephraserOptions\022\033\n\rrephraser_uri\030\001 \001(\tB" +
+      "\004\350\3071\001Bq\n!yandex.cloud.api.ai.assistants." +
+      "v1ZLgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/ai/assistants/v1;assistants" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.StructProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_ai_assistants_v1_PromptTruncationOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -11849,7 +12764,7 @@ public final class Common {
     internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_descriptor,
-        new java.lang.String[] { "SearchIndexIds", "MaxNumResults", });
+        new java.lang.String[] { "SearchIndexIds", "MaxNumResults", "RephraserOptions", });
     internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_fieldAccessorTable = new
@@ -11868,8 +12783,20 @@ public final class Common {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_descriptor,
         new java.lang.String[] { "Name", "Content", "ContentType", });
+    internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_descriptor,
+        new java.lang.String[] { "RephraserUri", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.required);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.StructProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

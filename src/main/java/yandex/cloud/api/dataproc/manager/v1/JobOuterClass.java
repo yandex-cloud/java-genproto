@@ -20,8 +20,8 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * Unique ID of the Data Proc job.
-     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * Unique ID of the Yandex Data Processing job.
+     * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -30,8 +30,8 @@ public final class JobOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * Unique ID of the Data Proc job.
-     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * Unique ID of the Yandex Data Processing job.
+     * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -42,7 +42,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * ID of the Data Proc cluster.
+     * ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -51,7 +51,7 @@ public final class JobOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Data Proc cluster.
+     * ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -62,7 +62,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -71,7 +71,7 @@ public final class JobOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -80,7 +80,7 @@ public final class JobOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -89,7 +89,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -98,7 +98,7 @@ public final class JobOuterClass {
     boolean hasStartedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -107,7 +107,7 @@ public final class JobOuterClass {
     com.google.protobuf.Timestamp getStartedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -116,7 +116,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -125,7 +125,7 @@ public final class JobOuterClass {
     boolean hasFinishedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -134,7 +134,7 @@ public final class JobOuterClass {
     com.google.protobuf.Timestamp getFinishedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -143,7 +143,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * Name of the Data Proc job.
+     * Name of the Yandex Data Processing job.
      * </pre>
      *
      * <code>string name = 6;</code>
@@ -152,7 +152,7 @@ public final class JobOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Data Proc job.
+     * Name of the Yandex Data Processing job.
      * </pre>
      *
      * <code>string name = 6;</code>
@@ -291,7 +291,7 @@ public final class JobOuterClass {
   }
   /**
    * <pre>
-   * Data Proc job.
+   * Yandex Data Processing job.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.Job}
@@ -780,8 +780,8 @@ public final class JobOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Unique ID of the Data Proc job.
-     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * Unique ID of the Yandex Data Processing job.
+     * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -802,8 +802,8 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Unique ID of the Data Proc job.
-     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * Unique ID of the Yandex Data Processing job.
+     * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -828,7 +828,7 @@ public final class JobOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Data Proc cluster.
+     * ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -849,7 +849,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * ID of the Data Proc cluster.
+     * ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -874,7 +874,7 @@ public final class JobOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -886,7 +886,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -898,7 +898,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -912,7 +912,7 @@ public final class JobOuterClass {
     private com.google.protobuf.Timestamp startedAt_;
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -924,7 +924,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -936,7 +936,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -950,7 +950,7 @@ public final class JobOuterClass {
     private com.google.protobuf.Timestamp finishedAt_;
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -962,7 +962,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -974,7 +974,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -988,7 +988,7 @@ public final class JobOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Data Proc job.
+     * Name of the Yandex Data Processing job.
      * </pre>
      *
      * <code>string name = 6;</code>
@@ -1009,7 +1009,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Name of the Data Proc job.
+     * Name of the Yandex Data Processing job.
      * </pre>
      *
      * <code>string name = 6;</code>
@@ -1594,7 +1594,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Data Proc job.
+     * Yandex Data Processing job.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.manager.v1.Job}
@@ -1897,8 +1897,8 @@ public final class JobOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1918,8 +1918,8 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1940,8 +1940,8 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1960,8 +1960,8 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1975,8 +1975,8 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1998,7 +1998,7 @@ public final class JobOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Data Proc cluster.
+       * ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2018,7 +2018,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster.
+       * ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2039,7 +2039,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster.
+       * ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2058,7 +2058,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster.
+       * ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2072,7 +2072,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster.
+       * ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -2096,7 +2096,7 @@ public final class JobOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2107,7 +2107,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2122,7 +2122,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2142,7 +2142,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2160,7 +2160,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2182,7 +2182,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2200,7 +2200,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2212,7 +2212,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2227,7 +2227,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -2251,7 +2251,7 @@ public final class JobOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2262,7 +2262,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2277,7 +2277,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2297,7 +2297,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2315,7 +2315,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2337,7 +2337,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2355,7 +2355,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2367,7 +2367,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2382,7 +2382,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -2406,7 +2406,7 @@ public final class JobOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishedAtBuilder_;
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2417,7 +2417,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2432,7 +2432,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2452,7 +2452,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2470,7 +2470,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2492,7 +2492,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2510,7 +2510,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2522,7 +2522,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2537,7 +2537,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -2559,7 +2559,7 @@ public final class JobOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Data Proc job.
+       * Name of the Yandex Data Processing job.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -2579,7 +2579,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Name of the Data Proc job.
+       * Name of the Yandex Data Processing job.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -2600,7 +2600,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Name of the Data Proc job.
+       * Name of the Yandex Data Processing job.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -2619,7 +2619,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Name of the Data Proc job.
+       * Name of the Yandex Data Processing job.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -2633,7 +2633,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Name of the Data Proc job.
+       * Name of the Yandex Data Processing job.
        * </pre>
        *
        * <code>string name = 6;</code>
@@ -5562,7 +5562,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5572,7 +5572,7 @@ public final class JobOuterClass {
         getFileUrisList();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5581,7 +5581,7 @@ public final class JobOuterClass {
     int getFileUrisCount();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5591,7 +5591,7 @@ public final class JobOuterClass {
     java.lang.String getFileUris(int index);
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -5603,7 +5603,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5613,7 +5613,7 @@ public final class JobOuterClass {
         getArchiveUrisList();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5622,7 +5622,7 @@ public final class JobOuterClass {
     int getArchiveUrisCount();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5632,7 +5632,7 @@ public final class JobOuterClass {
     java.lang.String getArchiveUris(int index);
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -5644,7 +5644,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5652,7 +5652,7 @@ public final class JobOuterClass {
     int getPropertiesCount();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5667,7 +5667,7 @@ public final class JobOuterClass {
     getProperties();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5676,7 +5676,7 @@ public final class JobOuterClass {
     getPropertiesMap();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -5687,7 +5687,7 @@ public final class JobOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -6070,7 +6070,7 @@ public final class JobOuterClass {
     private com.google.protobuf.LazyStringList fileUris_;
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -6082,7 +6082,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -6093,7 +6093,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -6105,7 +6105,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -6121,7 +6121,7 @@ public final class JobOuterClass {
     private com.google.protobuf.LazyStringList archiveUris_;
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -6133,7 +6133,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -6144,7 +6144,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -6156,7 +6156,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -6196,7 +6196,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -6218,7 +6218,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -6230,7 +6230,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -6247,7 +6247,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7244,7 +7244,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -7256,7 +7256,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -7267,7 +7267,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -7279,7 +7279,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -7292,7 +7292,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -7312,7 +7312,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -7331,7 +7331,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -7348,7 +7348,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -7362,7 +7362,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -7390,7 +7390,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7402,7 +7402,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7413,7 +7413,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7425,7 +7425,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7438,7 +7438,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7458,7 +7458,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7477,7 +7477,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7494,7 +7494,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7508,7 +7508,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -7555,7 +7555,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7577,7 +7577,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7589,7 +7589,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7606,7 +7606,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7631,7 +7631,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7654,7 +7654,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -7673,7 +7673,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8027,7 +8027,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8037,7 +8037,7 @@ public final class JobOuterClass {
         getJarFileUrisList();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8046,7 +8046,7 @@ public final class JobOuterClass {
     int getJarFileUrisCount();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8056,7 +8056,7 @@ public final class JobOuterClass {
     java.lang.String getJarFileUris(int index);
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8068,7 +8068,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -8078,7 +8078,7 @@ public final class JobOuterClass {
         getFileUrisList();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -8087,7 +8087,7 @@ public final class JobOuterClass {
     int getFileUrisCount();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -8097,7 +8097,7 @@ public final class JobOuterClass {
     java.lang.String getFileUris(int index);
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -8109,7 +8109,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8119,7 +8119,7 @@ public final class JobOuterClass {
         getArchiveUrisList();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8128,7 +8128,7 @@ public final class JobOuterClass {
     int getArchiveUrisCount();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8138,7 +8138,7 @@ public final class JobOuterClass {
     java.lang.String getArchiveUris(int index);
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8150,7 +8150,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8158,7 +8158,7 @@ public final class JobOuterClass {
     int getPropertiesCount();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8173,7 +8173,7 @@ public final class JobOuterClass {
     getProperties();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8182,7 +8182,7 @@ public final class JobOuterClass {
     getPropertiesMap();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8193,7 +8193,7 @@ public final class JobOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8628,7 +8628,7 @@ public final class JobOuterClass {
     private com.google.protobuf.LazyStringList jarFileUris_;
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8640,7 +8640,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8651,7 +8651,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8663,7 +8663,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -8679,7 +8679,7 @@ public final class JobOuterClass {
     private com.google.protobuf.LazyStringList fileUris_;
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -8691,7 +8691,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -8702,7 +8702,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -8714,7 +8714,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -8730,7 +8730,7 @@ public final class JobOuterClass {
     private com.google.protobuf.LazyStringList archiveUris_;
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8742,7 +8742,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8753,7 +8753,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8765,7 +8765,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -8805,7 +8805,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8827,7 +8827,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8839,7 +8839,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -8856,7 +8856,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -9882,7 +9882,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -9894,7 +9894,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -9905,7 +9905,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -9917,7 +9917,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -9930,7 +9930,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -9950,7 +9950,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -9969,7 +9969,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -9986,7 +9986,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10000,7 +10000,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -10028,7 +10028,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -10040,7 +10040,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -10051,7 +10051,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -10063,7 +10063,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -10076,7 +10076,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -10096,7 +10096,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -10115,7 +10115,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -10132,7 +10132,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -10146,7 +10146,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -10174,7 +10174,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10186,7 +10186,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10197,7 +10197,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10209,7 +10209,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10222,7 +10222,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10242,7 +10242,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10261,7 +10261,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10278,7 +10278,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10292,7 +10292,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -10339,7 +10339,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10361,7 +10361,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10373,7 +10373,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10390,7 +10390,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10415,7 +10415,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10438,7 +10438,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -10457,7 +10457,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11199,7 +11199,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11209,7 +11209,7 @@ public final class JobOuterClass {
         getJarFileUrisList();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11218,7 +11218,7 @@ public final class JobOuterClass {
     int getJarFileUrisCount();
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11228,7 +11228,7 @@ public final class JobOuterClass {
     java.lang.String getJarFileUris(int index);
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11240,7 +11240,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -11250,7 +11250,7 @@ public final class JobOuterClass {
         getFileUrisList();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -11259,7 +11259,7 @@ public final class JobOuterClass {
     int getFileUrisCount();
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -11269,7 +11269,7 @@ public final class JobOuterClass {
     java.lang.String getFileUris(int index);
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -11281,7 +11281,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11291,7 +11291,7 @@ public final class JobOuterClass {
         getArchiveUrisList();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11300,7 +11300,7 @@ public final class JobOuterClass {
     int getArchiveUrisCount();
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11310,7 +11310,7 @@ public final class JobOuterClass {
     java.lang.String getArchiveUris(int index);
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11322,7 +11322,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11330,7 +11330,7 @@ public final class JobOuterClass {
     int getPropertiesCount();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11345,7 +11345,7 @@ public final class JobOuterClass {
     getProperties();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11354,7 +11354,7 @@ public final class JobOuterClass {
     getPropertiesMap();
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11365,7 +11365,7 @@ public final class JobOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -11827,7 +11827,7 @@ public final class JobOuterClass {
     private com.google.protobuf.LazyStringList jarFileUris_;
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11839,7 +11839,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11850,7 +11850,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11862,7 +11862,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+     * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
      * </pre>
      *
      * <code>repeated string jar_file_uris = 2;</code>
@@ -11878,7 +11878,7 @@ public final class JobOuterClass {
     private com.google.protobuf.LazyStringList fileUris_;
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -11890,7 +11890,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -11901,7 +11901,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -11913,7 +11913,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+     * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
      * </pre>
      *
      * <code>repeated string file_uris = 3;</code>
@@ -11929,7 +11929,7 @@ public final class JobOuterClass {
     private com.google.protobuf.LazyStringList archiveUris_;
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11941,7 +11941,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11952,7 +11952,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -11964,7 +11964,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+     * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
      * </pre>
      *
      * <code>repeated string archive_uris = 4;</code>
@@ -12004,7 +12004,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -12026,7 +12026,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -12038,7 +12038,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -12055,7 +12055,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * A mapping of property names to values, used to configure Data Proc.
+     * A mapping of property names to values, used to configure Yandex Data Processing.
      * </pre>
      *
      * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13103,7 +13103,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13115,7 +13115,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13126,7 +13126,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13138,7 +13138,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13151,7 +13151,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13171,7 +13171,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13190,7 +13190,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13207,7 +13207,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13221,7 +13221,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Jar file URIs to add to the CLASSPATHs of the Data Proc driver and tasks.
+       * Jar file URIs to add to the CLASSPATHs of the Yandex Data Processing driver and tasks.
        * </pre>
        *
        * <code>repeated string jar_file_uris = 2;</code>
@@ -13249,7 +13249,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -13261,7 +13261,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -13272,7 +13272,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -13284,7 +13284,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -13297,7 +13297,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -13317,7 +13317,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -13336,7 +13336,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -13353,7 +13353,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -13367,7 +13367,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of files to be copied to the working directory of Data Proc drivers and distributed tasks.
+       * URIs of files to be copied to the working directory of Yandex Data Processing drivers and distributed tasks.
        * </pre>
        *
        * <code>repeated string file_uris = 3;</code>
@@ -13395,7 +13395,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13407,7 +13407,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13418,7 +13418,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13430,7 +13430,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13443,7 +13443,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13463,7 +13463,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13482,7 +13482,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13499,7 +13499,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13513,7 +13513,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * URIs of archives to be extracted in the working directory of Data Proc drivers and tasks.
+       * URIs of archives to be extracted in the working directory of Yandex Data Processing drivers and tasks.
        * </pre>
        *
        * <code>repeated string archive_uris = 4;</code>
@@ -13560,7 +13560,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13582,7 +13582,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13594,7 +13594,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13611,7 +13611,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13636,7 +13636,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13659,7 +13659,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -13678,7 +13678,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * A mapping of property names to values, used to configure Data Proc.
+       * A mapping of property names to values, used to configure Yandex Data Processing.
        * </pre>
        *
        * <code>map&lt;string, string&gt; properties = 5;</code>
@@ -17149,8 +17149,8 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc job.
-     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * Required. Unique ID of the Yandex Data Processing job.
+     * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -17159,8 +17159,8 @@ public final class JobOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc job.
-     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * Required. Unique ID of the Yandex Data Processing job.
+     * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -17171,7 +17171,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc cluster.
+     * Required. Unique ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -17180,7 +17180,7 @@ public final class JobOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc cluster.
+     * Required. Unique ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -17191,7 +17191,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -17200,7 +17200,7 @@ public final class JobOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -17209,7 +17209,7 @@ public final class JobOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -17218,7 +17218,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -17227,7 +17227,7 @@ public final class JobOuterClass {
     boolean hasStartedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -17236,7 +17236,7 @@ public final class JobOuterClass {
     com.google.protobuf.Timestamp getStartedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -17245,7 +17245,7 @@ public final class JobOuterClass {
 
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -17254,7 +17254,7 @@ public final class JobOuterClass {
     boolean hasFinishedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -17263,7 +17263,7 @@ public final class JobOuterClass {
     com.google.protobuf.Timestamp getFinishedAt();
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -17341,7 +17341,7 @@ public final class JobOuterClass {
   }
   /**
    * <pre>
-   * Data Proc support job.
+   * Yandex Data Processing support job.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.manager.v1.SupportJob}
@@ -17721,8 +17721,8 @@ public final class JobOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc job.
-     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * Required. Unique ID of the Yandex Data Processing job.
+     * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -17743,8 +17743,8 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc job.
-     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * Required. Unique ID of the Yandex Data Processing job.
+     * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -17769,7 +17769,7 @@ public final class JobOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc cluster.
+     * Required. Unique ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -17790,7 +17790,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Required. Unique ID of the Data Proc cluster.
+     * Required. Unique ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -17815,7 +17815,7 @@ public final class JobOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -17827,7 +17827,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -17839,7 +17839,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was created.
+     * The time when the Yandex Data Processing job was created.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -17853,7 +17853,7 @@ public final class JobOuterClass {
     private com.google.protobuf.Timestamp startedAt_;
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -17865,7 +17865,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -17877,7 +17877,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was started.
+     * The time when the Yandex Data Processing job was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -17891,7 +17891,7 @@ public final class JobOuterClass {
     private com.google.protobuf.Timestamp finishedAt_;
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -17903,7 +17903,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -17915,7 +17915,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * The time when the Data Proc job was finished.
+     * The time when the Yandex Data Processing job was finished.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -18315,7 +18315,7 @@ public final class JobOuterClass {
     }
     /**
      * <pre>
-     * Data Proc support job.
+     * Yandex Data Processing support job.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.manager.v1.SupportJob}
@@ -18543,8 +18543,8 @@ public final class JobOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Required. Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -18564,8 +18564,8 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Required. Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -18586,8 +18586,8 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Required. Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -18606,8 +18606,8 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Required. Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -18621,8 +18621,8 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc job.
-       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * Required. Unique ID of the Yandex Data Processing job.
+       * This ID is assigned by MDB in the process of creating Yandex Data Processing job.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -18644,7 +18644,7 @@ public final class JobOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * Required. Unique ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -18664,7 +18664,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * Required. Unique ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -18685,7 +18685,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * Required. Unique ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -18704,7 +18704,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * Required. Unique ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -18718,7 +18718,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * Required. Unique ID of the Data Proc cluster.
+       * Required. Unique ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -18742,7 +18742,7 @@ public final class JobOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -18753,7 +18753,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -18768,7 +18768,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -18788,7 +18788,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -18806,7 +18806,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -18828,7 +18828,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -18846,7 +18846,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -18858,7 +18858,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -18873,7 +18873,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was created.
+       * The time when the Yandex Data Processing job was created.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
@@ -18897,7 +18897,7 @@ public final class JobOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -18908,7 +18908,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -18923,7 +18923,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -18943,7 +18943,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -18961,7 +18961,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -18983,7 +18983,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -19001,7 +19001,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -19013,7 +19013,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -19028,7 +19028,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was started.
+       * The time when the Yandex Data Processing job was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
@@ -19052,7 +19052,7 @@ public final class JobOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishedAtBuilder_;
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -19063,7 +19063,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -19078,7 +19078,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -19098,7 +19098,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -19116,7 +19116,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -19138,7 +19138,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -19156,7 +19156,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -19168,7 +19168,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
@@ -19183,7 +19183,7 @@ public final class JobOuterClass {
       }
       /**
        * <pre>
-       * The time when the Data Proc job was finished.
+       * The time when the Yandex Data Processing job was finished.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>

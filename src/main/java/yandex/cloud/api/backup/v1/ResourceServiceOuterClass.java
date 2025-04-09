@@ -2152,6 +2152,16 @@ public final class ResourceServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getComputeInstanceIdBytes();
+
+    /**
+     * <pre>
+     * If flag is set tenant informantion would be added to the response.
+     * </pre>
+     *
+     * <code>bool include_tenant_info = 2;</code>
+     * @return The includeTenantInfo.
+     */
+    boolean getIncludeTenantInfo();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.GetResourceRequest}
@@ -2203,6 +2213,11 @@ public final class ResourceServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               computeInstanceId_ = s;
+              break;
+            }
+            case 16: {
+
+              includeTenantInfo_ = input.readBool();
               break;
             }
             default: {
@@ -2283,6 +2298,21 @@ public final class ResourceServiceOuterClass {
       }
     }
 
+    public static final int INCLUDE_TENANT_INFO_FIELD_NUMBER = 2;
+    private boolean includeTenantInfo_;
+    /**
+     * <pre>
+     * If flag is set tenant informantion would be added to the response.
+     * </pre>
+     *
+     * <code>bool include_tenant_info = 2;</code>
+     * @return The includeTenantInfo.
+     */
+    @java.lang.Override
+    public boolean getIncludeTenantInfo() {
+      return includeTenantInfo_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2300,6 +2330,9 @@ public final class ResourceServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, computeInstanceId_);
       }
+      if (includeTenantInfo_ != false) {
+        output.writeBool(2, includeTenantInfo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2311,6 +2344,10 @@ public final class ResourceServiceOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(computeInstanceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, computeInstanceId_);
+      }
+      if (includeTenantInfo_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, includeTenantInfo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2329,6 +2366,8 @@ public final class ResourceServiceOuterClass {
 
       if (!getComputeInstanceId()
           .equals(other.getComputeInstanceId())) return false;
+      if (getIncludeTenantInfo()
+          != other.getIncludeTenantInfo()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2342,6 +2381,9 @@ public final class ResourceServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + COMPUTE_INSTANCE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getComputeInstanceId().hashCode();
+      hash = (37 * hash) + INCLUDE_TENANT_INFO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIncludeTenantInfo());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2477,6 +2519,8 @@ public final class ResourceServiceOuterClass {
         super.clear();
         computeInstanceId_ = "";
 
+        includeTenantInfo_ = false;
+
         return this;
       }
 
@@ -2504,6 +2548,7 @@ public final class ResourceServiceOuterClass {
       public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetResourceRequest buildPartial() {
         yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetResourceRequest result = new yandex.cloud.api.backup.v1.ResourceServiceOuterClass.GetResourceRequest(this);
         result.computeInstanceId_ = computeInstanceId_;
+        result.includeTenantInfo_ = includeTenantInfo_;
         onBuilt();
         return result;
       }
@@ -2555,6 +2600,9 @@ public final class ResourceServiceOuterClass {
         if (!other.getComputeInstanceId().isEmpty()) {
           computeInstanceId_ = other.computeInstanceId_;
           onChanged();
+        }
+        if (other.getIncludeTenantInfo() != false) {
+          setIncludeTenantInfo(other.getIncludeTenantInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2677,6 +2725,49 @@ public final class ResourceServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         computeInstanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean includeTenantInfo_ ;
+      /**
+       * <pre>
+       * If flag is set tenant informantion would be added to the response.
+       * </pre>
+       *
+       * <code>bool include_tenant_info = 2;</code>
+       * @return The includeTenantInfo.
+       */
+      @java.lang.Override
+      public boolean getIncludeTenantInfo() {
+        return includeTenantInfo_;
+      }
+      /**
+       * <pre>
+       * If flag is set tenant informantion would be added to the response.
+       * </pre>
+       *
+       * <code>bool include_tenant_info = 2;</code>
+       * @param value The includeTenantInfo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIncludeTenantInfo(boolean value) {
+        
+        includeTenantInfo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If flag is set tenant informantion would be added to the response.
+       * </pre>
+       *
+       * <code>bool include_tenant_info = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIncludeTenantInfo() {
+        
+        includeTenantInfo_ = false;
         onChanged();
         return this;
       }
@@ -13471,71 +13562,72 @@ public final class ResourceServiceOuterClass {
       "p.v1.ResourceType\"e\n\025ListResourcesRespon" +
       "se\0223\n\tresources\030\001 \003(\0132 .yandex.cloud.bac" +
       "kup.v1.Resource\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"?\n\022GetResourceRequest\022)\n\023compute_instan" +
-      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"I\n\023GetResource" +
-      "Response\0222\n\010resource\030\001 \001(\0132 .yandex.clou" +
-      "d.backup.v1.Resource\"]\n\025DeleteResourceRe" +
-      "quest\022)\n\023compute_instance_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022\031\n\013resource_id\030\002 \001(\tB\004\350\3071\001\"5\n\026D" +
-      "eleteResourceMetadata\022\033\n\023compute_instanc" +
-      "e_id\030\001 \001(\t\"{\n\020ListTasksRequest\022)\n\023comput" +
-      "e_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
-      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
-      " \001(\tB\t\212\3101\005<=100\"Y\n\021ListTasksResponse\022+\n\005" +
-      "tasks\030\001 \003(\0132\034.yandex.cloud.backup.v1.Tas" +
-      "k\022\027\n\017next_page_token\030\002 \001(\t\"n\n\024ListDirect" +
-      "oryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022!\n\023compute_instance_id\030\002 \001(\tB\004\350\3071\001\022\022" +
-      "\n\004path\030\003 \001(\tB\004\350\3071\000\"\375\002\n\025ListDirectoryResp" +
-      "onse\022K\n\005items\030\001 \003(\0132<.yandex.cloud.backu" +
-      "p.v1.ListDirectoryResponse.FilesystemIte" +
-      "m\032\226\002\n\016FilesystemItem\022\014\n\004name\030\001 \001(\t\022O\n\004ty" +
-      "pe\030\002 \001(\0162A.yandex.cloud.backup.v1.ListDi" +
-      "rectoryResponse.FilesystemItem.Type\022T\n\tf" +
-      "ile_type\030\003 \001(\0162A.yandex.cloud.backup.v1." +
-      "ListDirectoryResponse.FilesystemItem.Typ" +
-      "e\022\014\n\004size\030\004 \001(\003\"A\n\004Type\022\024\n\020TYPE_UNSPECIF" +
-      "IED\020\000\022\n\n\006VOLUME\020\001\022\r\n\tDIRECTORY\020\002\022\010\n\004FILE" +
-      "\020\003\"p\n\026CreateDirectoryRequest\022\037\n\tfolder_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023compute_instanc" +
-      "e_id\030\002 \001(\tB\004\350\3071\001\022\022\n\004path\030\003 \001(\tB\004\350\3071\001\"D\n\027" +
-      "CreateDirectoryMetadata\022\033\n\023compute_insta" +
-      "nce_id\030\001 \001(\t\022\014\n\004path\030\002 \001(\t\"\210\001\n\035ListResou" +
-      "rceOperationsRequest\022)\n\023compute_instance" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\"p\n\036ListResourceOperationsResponse\022" +
-      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
-      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t2" +
-      "\227\010\n\017ResourceService\022\201\001\n\004List\022,.yandex.cl" +
-      "oud.backup.v1.ListResourcesRequest\032-.yan" +
-      "dex.cloud.backup.v1.ListResourcesRespons" +
-      "e\"\034\202\323\344\223\002\026\022\024/backup/v1/resources\022\222\001\n\003Get\022" +
-      "*.yandex.cloud.backup.v1.GetResourceRequ" +
-      "est\032+.yandex.cloud.backup.v1.GetResource" +
-      "Response\"2\202\323\344\223\002,\022*/backup/v1/resources/{" +
-      "compute_instance_id}\022\301\001\n\006Delete\022-.yandex" +
-      ".cloud.backup.v1.DeleteResourceRequest\032!" +
-      ".yandex.cloud.operation.Operation\"e\202\323\344\223\002" +
-      ",**/backup/v1/resources/{compute_instanc" +
-      "e_id}\262\322*/\n\026DeleteResourceMetadata\022\025googl" +
-      "e.protobuf.Empty\022\232\001\n\tListTasks\022(.yandex." +
-      "cloud.backup.v1.ListTasksRequest\032).yande" +
-      "x.cloud.backup.v1.ListTasksResponse\"8\202\323\344" +
-      "\223\0022\0220/backup/v1/resources/{compute_insta" +
-      "nce_id}/tasks\022l\n\rListDirectory\022,.yandex." +
-      "cloud.backup.v1.ListDirectoryRequest\032-.y" +
-      "andex.cloud.backup.v1.ListDirectoryRespo" +
-      "nse\022\232\001\n\017CreateDirectory\022..yandex.cloud.b" +
-      "ackup.v1.CreateDirectoryRequest\032!.yandex" +
-      ".cloud.operation.Operation\"4\262\322*0\n\027Create" +
-      "DirectoryMetadata\022\025google.protobuf.Empty" +
-      "\022\177\n\016ListOperations\0225.yandex.cloud.backup" +
-      ".v1.ListResourceOperationsRequest\0326.yand" +
-      "ex.cloud.backup.v1.ListResourceOperation" +
-      "sResponseB_\n\032yandex.cloud.api.backup.v1Z" +
-      "Agithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/backup/v1;backupb\006proto3"
+      "\"\\\n\022GetResourceRequest\022)\n\023compute_instan" +
+      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\023include_ten" +
+      "ant_info\030\002 \001(\010\"I\n\023GetResourceResponse\0222\n" +
+      "\010resource\030\001 \001(\0132 .yandex.cloud.backup.v1" +
+      ".Resource\"]\n\025DeleteResourceRequest\022)\n\023co" +
+      "mpute_instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n" +
+      "\013resource_id\030\002 \001(\tB\004\350\3071\001\"5\n\026DeleteResour" +
+      "ceMetadata\022\033\n\023compute_instance_id\030\001 \001(\t\"" +
+      "{\n\020ListTasksRequest\022)\n\023compute_instance_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
+      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
+      "=100\"Y\n\021ListTasksResponse\022+\n\005tasks\030\001 \003(\013" +
+      "2\034.yandex.cloud.backup.v1.Task\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"n\n\024ListDirectoryRequest\022" +
+      "\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023comp" +
+      "ute_instance_id\030\002 \001(\tB\004\350\3071\001\022\022\n\004path\030\003 \001(" +
+      "\tB\004\350\3071\000\"\375\002\n\025ListDirectoryResponse\022K\n\005ite" +
+      "ms\030\001 \003(\0132<.yandex.cloud.backup.v1.ListDi" +
+      "rectoryResponse.FilesystemItem\032\226\002\n\016Files" +
+      "ystemItem\022\014\n\004name\030\001 \001(\t\022O\n\004type\030\002 \001(\0162A." +
+      "yandex.cloud.backup.v1.ListDirectoryResp" +
+      "onse.FilesystemItem.Type\022T\n\tfile_type\030\003 " +
+      "\001(\0162A.yandex.cloud.backup.v1.ListDirecto" +
+      "ryResponse.FilesystemItem.Type\022\014\n\004size\030\004" +
+      " \001(\003\"A\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006VO" +
+      "LUME\020\001\022\r\n\tDIRECTORY\020\002\022\010\n\004FILE\020\003\"p\n\026Creat" +
+      "eDirectoryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022!\n\023compute_instance_id\030\002 \001(\tB" +
+      "\004\350\3071\001\022\022\n\004path\030\003 \001(\tB\004\350\3071\001\"D\n\027CreateDirec" +
+      "toryMetadata\022\033\n\023compute_instance_id\030\001 \001(" +
+      "\t\022\014\n\004path\030\002 \001(\t\"\210\001\n\035ListResourceOperatio" +
+      "nsRequest\022)\n\023compute_instance_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036Li" +
+      "stResourceOperationsResponse\0225\n\noperatio" +
+      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
+      "ion\022\027\n\017next_page_token\030\002 \001(\t2\227\010\n\017Resourc" +
+      "eService\022\201\001\n\004List\022,.yandex.cloud.backup." +
+      "v1.ListResourcesRequest\032-.yandex.cloud.b" +
+      "ackup.v1.ListResourcesResponse\"\034\202\323\344\223\002\026\022\024" +
+      "/backup/v1/resources\022\222\001\n\003Get\022*.yandex.cl" +
+      "oud.backup.v1.GetResourceRequest\032+.yande" +
+      "x.cloud.backup.v1.GetResourceResponse\"2\202" +
+      "\323\344\223\002,\022*/backup/v1/resources/{compute_ins" +
+      "tance_id}\022\301\001\n\006Delete\022-.yandex.cloud.back" +
+      "up.v1.DeleteResourceRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"e\202\323\344\223\002,**/backup/" +
+      "v1/resources/{compute_instance_id}\262\322*/\n\026" +
+      "DeleteResourceMetadata\022\025google.protobuf." +
+      "Empty\022\232\001\n\tListTasks\022(.yandex.cloud.backu" +
+      "p.v1.ListTasksRequest\032).yandex.cloud.bac" +
+      "kup.v1.ListTasksResponse\"8\202\323\344\223\0022\0220/backu" +
+      "p/v1/resources/{compute_instance_id}/tas" +
+      "ks\022l\n\rListDirectory\022,.yandex.cloud.backu" +
+      "p.v1.ListDirectoryRequest\032-.yandex.cloud" +
+      ".backup.v1.ListDirectoryResponse\022\232\001\n\017Cre" +
+      "ateDirectory\022..yandex.cloud.backup.v1.Cr" +
+      "eateDirectoryRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"4\262\322*0\n\027CreateDirectoryMe" +
+      "tadata\022\025google.protobuf.Empty\022\177\n\016ListOpe" +
+      "rations\0225.yandex.cloud.backup.v1.ListRes" +
+      "ourceOperationsRequest\0326.yandex.cloud.ba" +
+      "ckup.v1.ListResourceOperationsResponseB_" +
+      "\n\032yandex.cloud.api.backup.v1ZAgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/b" +
+      "ackup/v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13563,7 +13655,7 @@ public final class ResourceServiceOuterClass {
     internal_static_yandex_cloud_backup_v1_GetResourceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_GetResourceRequest_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", });
+        new java.lang.String[] { "ComputeInstanceId", "IncludeTenantInfo", });
     internal_static_yandex_cloud_backup_v1_GetResourceResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_backup_v1_GetResourceResponse_fieldAccessorTable = new

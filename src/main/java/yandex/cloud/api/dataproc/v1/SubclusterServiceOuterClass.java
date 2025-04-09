@@ -20,7 +20,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Data Proc cluster that the subcluster belongs to.
+     * ID of the Yandex Data Processing cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,7 +29,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Data Proc cluster that the subcluster belongs to.
+     * ID of the Yandex Data Processing cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -155,7 +155,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Data Proc cluster that the subcluster belongs to.
+     * ID of the Yandex Data Processing cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -176,7 +176,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Data Proc cluster that the subcluster belongs to.
+     * ID of the Yandex Data Processing cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -567,7 +567,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -587,7 +587,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -608,7 +608,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -627,7 +627,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -641,7 +641,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -819,7 +819,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Data Proc cluster to list subclusters in.
+     * ID of the Yandex Data Processing cluster to list subclusters in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -828,7 +828,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Data Proc cluster to list subclusters in.
+     * ID of the Yandex Data Processing cluster to list subclusters in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1009,7 +1009,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Data Proc cluster to list subclusters in.
+     * ID of the Yandex Data Processing cluster to list subclusters in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1030,7 +1030,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Data Proc cluster to list subclusters in.
+     * ID of the Yandex Data Processing cluster to list subclusters in.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1530,7 +1530,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Data Proc cluster to list subclusters in.
+       * ID of the Yandex Data Processing cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1550,7 +1550,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster to list subclusters in.
+       * ID of the Yandex Data Processing cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1571,7 +1571,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster to list subclusters in.
+       * ID of the Yandex Data Processing cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1590,7 +1590,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster to list subclusters in.
+       * ID of the Yandex Data Processing cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1604,7 +1604,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster to list subclusters in.
+       * ID of the Yandex Data Processing cluster to list subclusters in.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3073,7 +3073,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Data Proc cluster to create a subcluster in.
+     * ID of the Yandex Data Processing cluster to create a subcluster in.
      * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
@@ -3083,7 +3083,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Data Proc cluster to create a subcluster in.
+     * ID of the Yandex Data Processing cluster to create a subcluster in.
      * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
@@ -3358,7 +3358,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Data Proc cluster to create a subcluster in.
+     * ID of the Yandex Data Processing cluster to create a subcluster in.
      * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
@@ -3380,7 +3380,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Data Proc cluster to create a subcluster in.
+     * ID of the Yandex Data Processing cluster to create a subcluster in.
      * To get a cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
@@ -4047,7 +4047,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Data Proc cluster to create a subcluster in.
+       * ID of the Yandex Data Processing cluster to create a subcluster in.
        * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
@@ -4068,7 +4068,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster to create a subcluster in.
+       * ID of the Yandex Data Processing cluster to create a subcluster in.
        * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
@@ -4090,7 +4090,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster to create a subcluster in.
+       * ID of the Yandex Data Processing cluster to create a subcluster in.
        * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
@@ -4110,7 +4110,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster to create a subcluster in.
+       * ID of the Yandex Data Processing cluster to create a subcluster in.
        * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
@@ -4125,7 +4125,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster to create a subcluster in.
+       * ID of the Yandex Data Processing cluster to create a subcluster in.
        * To get a cluster ID, make a [ClusterService.List] request.
        * </pre>
        *

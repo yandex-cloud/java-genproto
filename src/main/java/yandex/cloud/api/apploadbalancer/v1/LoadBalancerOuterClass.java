@@ -461,6 +461,16 @@ public final class LoadBalancerOuterClass {
      * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 15;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder getLogOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies whether application load balancer is available to zonal shift.
+     * </pre>
+     *
+     * <code>bool allow_zonal_shift = 16;</code>
+     * @return The allowZonalShift.
+     */
+    boolean getAllowZonalShift();
   }
   /**
    * <pre>
@@ -652,6 +662,11 @@ public final class LoadBalancerOuterClass {
                 logOptions_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 128: {
+
+              allowZonalShift_ = input.readBool();
               break;
             }
             default: {
@@ -1651,6 +1666,21 @@ public final class LoadBalancerOuterClass {
       return getLogOptions();
     }
 
+    public static final int ALLOW_ZONAL_SHIFT_FIELD_NUMBER = 16;
+    private boolean allowZonalShift_;
+    /**
+     * <pre>
+     * Specifies whether application load balancer is available to zonal shift.
+     * </pre>
+     *
+     * <code>bool allow_zonal_shift = 16;</code>
+     * @return The allowZonalShift.
+     */
+    @java.lang.Override
+    public boolean getAllowZonalShift() {
+      return allowZonalShift_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1712,6 +1742,9 @@ public final class LoadBalancerOuterClass {
       }
       if (logOptions_ != null) {
         output.writeMessage(15, getLogOptions());
+      }
+      if (allowZonalShift_ != false) {
+        output.writeBool(16, allowZonalShift_);
       }
       unknownFields.writeTo(output);
     }
@@ -1785,6 +1818,10 @@ public final class LoadBalancerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getLogOptions());
       }
+      if (allowZonalShift_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(16, allowZonalShift_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1841,6 +1878,8 @@ public final class LoadBalancerOuterClass {
         if (!getLogOptions()
             .equals(other.getLogOptions())) return false;
       }
+      if (getAllowZonalShift()
+          != other.getAllowZonalShift()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1896,6 +1935,9 @@ public final class LoadBalancerOuterClass {
         hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getLogOptions().hashCode();
       }
+      hash = (37 * hash) + ALLOW_ZONAL_SHIFT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowZonalShift());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2106,6 +2148,8 @@ public final class LoadBalancerOuterClass {
           logOptions_ = null;
           logOptionsBuilder_ = null;
         }
+        allowZonalShift_ = false;
+
         return this;
       }
 
@@ -2177,6 +2221,7 @@ public final class LoadBalancerOuterClass {
         } else {
           result.logOptions_ = logOptionsBuilder_.build();
         }
+        result.allowZonalShift_ = allowZonalShift_;
         onBuilt();
         return result;
       }
@@ -2305,6 +2350,9 @@ public final class LoadBalancerOuterClass {
         }
         if (other.hasLogOptions()) {
           mergeLogOptions(other.getLogOptions());
+        }
+        if (other.getAllowZonalShift() != false) {
+          setAllowZonalShift(other.getAllowZonalShift());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4419,6 +4467,49 @@ public final class LoadBalancerOuterClass {
           logOptions_ = null;
         }
         return logOptionsBuilder_;
+      }
+
+      private boolean allowZonalShift_ ;
+      /**
+       * <pre>
+       * Specifies whether application load balancer is available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 16;</code>
+       * @return The allowZonalShift.
+       */
+      @java.lang.Override
+      public boolean getAllowZonalShift() {
+        return allowZonalShift_;
+      }
+      /**
+       * <pre>
+       * Specifies whether application load balancer is available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 16;</code>
+       * @param value The allowZonalShift to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowZonalShift(boolean value) {
+        
+        allowZonalShift_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether application load balancer is available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowZonalShift() {
+        
+        allowZonalShift_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7932,6 +8023,16 @@ public final class LoadBalancerOuterClass {
      * @return The disableTraffic.
      */
     boolean getDisableTraffic();
+
+    /**
+     * <pre>
+     * Show zonal shift status for the location.
+     * </pre>
+     *
+     * <code>bool zonal_shift_active = 4;</code>
+     * @return The zonalShiftActive.
+     */
+    boolean getZonalShiftActive();
   }
   /**
    * <pre>
@@ -8000,6 +8101,11 @@ public final class LoadBalancerOuterClass {
             case 24: {
 
               disableTraffic_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              zonalShiftActive_ = input.readBool();
               break;
             }
             default: {
@@ -8146,6 +8252,21 @@ public final class LoadBalancerOuterClass {
       return disableTraffic_;
     }
 
+    public static final int ZONAL_SHIFT_ACTIVE_FIELD_NUMBER = 4;
+    private boolean zonalShiftActive_;
+    /**
+     * <pre>
+     * Show zonal shift status for the location.
+     * </pre>
+     *
+     * <code>bool zonal_shift_active = 4;</code>
+     * @return The zonalShiftActive.
+     */
+    @java.lang.Override
+    public boolean getZonalShiftActive() {
+      return zonalShiftActive_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8169,6 +8290,9 @@ public final class LoadBalancerOuterClass {
       if (disableTraffic_ != false) {
         output.writeBool(3, disableTraffic_);
       }
+      if (zonalShiftActive_ != false) {
+        output.writeBool(4, zonalShiftActive_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8187,6 +8311,10 @@ public final class LoadBalancerOuterClass {
       if (disableTraffic_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, disableTraffic_);
+      }
+      if (zonalShiftActive_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, zonalShiftActive_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8209,6 +8337,8 @@ public final class LoadBalancerOuterClass {
           .equals(other.getSubnetId())) return false;
       if (getDisableTraffic()
           != other.getDisableTraffic()) return false;
+      if (getZonalShiftActive()
+          != other.getZonalShiftActive()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8227,6 +8357,9 @@ public final class LoadBalancerOuterClass {
       hash = (37 * hash) + DISABLE_TRAFFIC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDisableTraffic());
+      hash = (37 * hash) + ZONAL_SHIFT_ACTIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getZonalShiftActive());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8371,6 +8504,8 @@ public final class LoadBalancerOuterClass {
 
         disableTraffic_ = false;
 
+        zonalShiftActive_ = false;
+
         return this;
       }
 
@@ -8400,6 +8535,7 @@ public final class LoadBalancerOuterClass {
         result.zoneId_ = zoneId_;
         result.subnetId_ = subnetId_;
         result.disableTraffic_ = disableTraffic_;
+        result.zonalShiftActive_ = zonalShiftActive_;
         onBuilt();
         return result;
       }
@@ -8458,6 +8594,9 @@ public final class LoadBalancerOuterClass {
         }
         if (other.getDisableTraffic() != false) {
           setDisableTraffic(other.getDisableTraffic());
+        }
+        if (other.getZonalShiftActive() != false) {
+          setZonalShiftActive(other.getZonalShiftActive());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8733,6 +8872,49 @@ public final class LoadBalancerOuterClass {
       public Builder clearDisableTraffic() {
         
         disableTraffic_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean zonalShiftActive_ ;
+      /**
+       * <pre>
+       * Show zonal shift status for the location.
+       * </pre>
+       *
+       * <code>bool zonal_shift_active = 4;</code>
+       * @return The zonalShiftActive.
+       */
+      @java.lang.Override
+      public boolean getZonalShiftActive() {
+        return zonalShiftActive_;
+      }
+      /**
+       * <pre>
+       * Show zonal shift status for the location.
+       * </pre>
+       *
+       * <code>bool zonal_shift_active = 4;</code>
+       * @param value The zonalShiftActive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZonalShiftActive(boolean value) {
+        
+        zonalShiftActive_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Show zonal shift status for the location.
+       * </pre>
+       *
+       * <code>bool zonal_shift_active = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZonalShiftActive() {
+        
+        zonalShiftActive_ = false;
         onChanged();
         return this;
       }
@@ -25299,7 +25481,7 @@ public final class LoadBalancerOuterClass {
       "cloud/validation.proto\032-yandex/cloud/app" +
       "loadbalancer/v1/logging.proto\0322yandex/cl" +
       "oud/apploadbalancer/v1/target_group.prot" +
-      "o\"\247\006\n\014LoadBalancer\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002" +
+      "o\"\302\006\n\014LoadBalancer\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002" +
       " \001(\t\022\023\n\013description\030\003 \001(\t\022\021\n\tfolder_id\030\004" +
       " \001(\t\022I\n\006labels\030\005 \003(\01329.yandex.cloud.appl" +
       "oadbalancer.v1.LoadBalancer.LabelsEntry\022" +
@@ -25315,82 +25497,84 @@ public final class LoadBalancerOuterClass {
       "_policy\030\016 \001(\01320.yandex.cloud.apploadbala" +
       "ncer.v1.AutoScalePolicy\022@\n\013log_options\030\017" +
       " \001(\0132+.yandex.cloud.apploadbalancer.v1.L" +
-      "ogOptions\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\"q\n\006Status\022\026\n\022STATUS_UNS" +
-      "PECIFIED\020\000\022\014\n\010CREATING\020\001\022\014\n\010STARTING\020\002\022\n" +
-      "\n\006ACTIVE\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n" +
-      "\010DELETING\020\006\"\237\002\n\007Address\022U\n\025external_ipv4" +
-      "_address\030\001 \001(\01324.yandex.cloud.apploadbal" +
-      "ancer.v1.ExternalIpv4AddressH\000\022U\n\025intern" +
-      "al_ipv4_address\030\002 \001(\01324.yandex.cloud.app" +
-      "loadbalancer.v1.InternalIpv4AddressH\000\022U\n" +
-      "\025external_ipv6_address\030\003 \001(\01324.yandex.cl" +
-      "oud.apploadbalancer.v1.ExternalIpv6Addre" +
-      "ssH\000B\017\n\007address\022\004\300\3011\001\"&\n\023ExternalIpv4Add" +
-      "ress\022\017\n\007address\030\001 \001(\t\"9\n\023InternalIpv4Add" +
-      "ress\022\017\n\007address\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t" +
-      "\"&\n\023ExternalIpv6Address\022\017\n\007address\030\001 \001(\t" +
-      "\"M\n\010Location\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\ts" +
-      "ubnet_id\030\002 \001(\t\022\027\n\017disable_traffic\030\003 \001(\010\"" +
-      "]\n\020AllocationPolicy\022I\n\tlocations\030\001 \003(\0132)" +
-      ".yandex.cloud.apploadbalancer.v1.Locatio" +
-      "nB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Listener\022\022\n\004name\030\001 \001(" +
-      "\tB\004\350\3071\001\022<\n\tendpoints\030\002 \003(\0132).yandex.clou" +
-      "d.apploadbalancer.v1.Endpoint\022=\n\004http\030\003 " +
-      "\001(\0132-.yandex.cloud.apploadbalancer.v1.Ht" +
-      "tpListenerH\000\022;\n\003tls\030\004 \001(\0132,.yandex.cloud" +
-      ".apploadbalancer.v1.TlsListenerH\000\022A\n\006str" +
-      "eam\030\005 \001(\0132/.yandex.cloud.apploadbalancer" +
-      ".v1.StreamListenerH\000B\020\n\010listener\022\004\300\3011\001\"q" +
-      "\n\010Endpoint\022C\n\taddresses\030\001 \003(\0132(.yandex.c" +
-      "loud.apploadbalancer.v1.AddressB\006\202\3101\002>0\022" +
-      " \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-65535\"\214\001\n\014Ht" +
-      "tpListener\022=\n\007handler\030\001 \001(\0132,.yandex.clo" +
-      "ud.apploadbalancer.v1.HttpHandler\022=\n\tred" +
-      "irects\030\002 \001(\0132*.yandex.cloud.apploadbalan" +
-      "cer.v1.Redirects\"\232\001\n\013TlsListener\022J\n\017defa" +
-      "ult_handler\030\001 \001(\0132+.yandex.cloud.appload" +
-      "balancer.v1.TlsHandlerB\004\350\3071\001\022?\n\014sni_hand" +
-      "lers\030\002 \003(\0132).yandex.cloud.apploadbalance" +
-      "r.v1.SniMatch\"W\n\016StreamListener\022E\n\007handl" +
-      "er\030\001 \001(\0132..yandex.cloud.apploadbalancer." +
-      "v1.StreamHandlerB\004\350\3071\001\".\n\014Http2Options\022\036" +
-      "\n\026max_concurrent_streams\030\001 \001(\003\"`\n\rStream" +
-      "Handler\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "/\n\014idle_timeout\030\002 \001(\0132\031.google.protobuf." +
-      "Duration\"\266\001\n\013HttpHandler\022\026\n\016http_router_" +
-      "id\030\001 \001(\t\022F\n\rhttp2_options\030\002 \001(\0132-.yandex" +
-      ".cloud.apploadbalancer.v1.Http2OptionsH\000" +
-      "\022\026\n\014allow_http10\030\003 \001(\010H\000\022\032\n\022rewrite_requ" +
-      "est_id\030\004 \001(\010B\023\n\021protocol_settings\"\"\n\tRed" +
-      "irects\022\025\n\rhttp_to_https\030\001 \001(\010\"\200\001\n\010SniMat" +
-      "ch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n\014server_names\030\002" +
-      " \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003 \001(\0132+.yandex.c" +
-      "loud.apploadbalancer.v1.TlsHandlerB\004\350\3071\001" +
-      "\"\316\001\n\nTlsHandler\022D\n\014http_handler\030\002 \001(\0132,." +
-      "yandex.cloud.apploadbalancer.v1.HttpHand" +
-      "lerH\000\022H\n\016stream_handler\030\004 \001(\0132..yandex.c" +
-      "loud.apploadbalancer.v1.StreamHandlerH\000\022" +
-      "\037\n\017certificate_ids\030\003 \003(\tB\006\202\3101\002>0B\017\n\007hand" +
-      "ler\022\004\300\3011\001\"\214\004\n\013TargetState\022N\n\006status\030\001 \001(" +
-      "\0132>.yandex.cloud.apploadbalancer.v1.Targ" +
-      "etState.HealthcheckStatus\022=\n\006target\030\002 \001(" +
-      "\0132\'.yandex.cloud.apploadbalancer.v1.Targ" +
-      "etB\004\350\3071\001\032n\n\021HealthcheckStatus\022Y\n\rzone_st" +
-      "atuses\030\001 \003(\0132B.yandex.cloud.apploadbalan" +
-      "cer.v1.TargetState.ZoneHealthcheckStatus" +
-      "\032\215\001\n\025ZoneHealthcheckStatus\022\025\n\007zone_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\01623.yandex.cloud" +
-      ".apploadbalancer.v1.TargetState.Status\022\030" +
-      "\n\020failed_active_hc\030\003 \001(\010\"n\n\006Status\022\026\n\022ST" +
-      "ATUS_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\025\n\021PARTI" +
-      "ALLY_HEALTHY\020\002\022\r\n\tUNHEALTHY\020\003\022\014\n\010DRAININ" +
-      "G\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoScalePolicy\022!\n\rm" +
-      "in_zone_size\030\001 \001(\003B\n\372\3071\0060-1000\022\034\n\010max_si" +
-      "ze\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#yandex.cloud.api" +
-      ".apploadbalancer.v1ZSgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/apploadbal" +
-      "ancer/v1;apploadbalancerb\006proto3"
+      "ogOptions\022\031\n\021allow_zonal_shift\030\020 \001(\010\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"q\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n" +
+      "\010CREATING\020\001\022\014\n\010STARTING\020\002\022\n\n\006ACTIVE\020\003\022\014\n" +
+      "\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DELETING\020\006\"\237" +
+      "\002\n\007Address\022U\n\025external_ipv4_address\030\001 \001(" +
+      "\01324.yandex.cloud.apploadbalancer.v1.Exte" +
+      "rnalIpv4AddressH\000\022U\n\025internal_ipv4_addre" +
+      "ss\030\002 \001(\01324.yandex.cloud.apploadbalancer." +
+      "v1.InternalIpv4AddressH\000\022U\n\025external_ipv" +
+      "6_address\030\003 \001(\01324.yandex.cloud.apploadba" +
+      "lancer.v1.ExternalIpv6AddressH\000B\017\n\007addre" +
+      "ss\022\004\300\3011\001\"&\n\023ExternalIpv4Address\022\017\n\007addre" +
+      "ss\030\001 \001(\t\"9\n\023InternalIpv4Address\022\017\n\007addre" +
+      "ss\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t\"&\n\023ExternalI" +
+      "pv6Address\022\017\n\007address\030\001 \001(\t\"i\n\010Location\022" +
+      "\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002 \001(" +
+      "\t\022\027\n\017disable_traffic\030\003 \001(\010\022\032\n\022zonal_shif" +
+      "t_active\030\004 \001(\010\"]\n\020AllocationPolicy\022I\n\tlo" +
+      "cations\030\001 \003(\0132).yandex.cloud.apploadbala" +
+      "ncer.v1.LocationB\013\202\3101\003>=1\220\3101\001\"\255\002\n\010Listen" +
+      "er\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022<\n\tendpoints\030\002 \003(" +
+      "\0132).yandex.cloud.apploadbalancer.v1.Endp" +
+      "oint\022=\n\004http\030\003 \001(\0132-.yandex.cloud.apploa" +
+      "dbalancer.v1.HttpListenerH\000\022;\n\003tls\030\004 \001(\013" +
+      "2,.yandex.cloud.apploadbalancer.v1.TlsLi" +
+      "stenerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.cloud." +
+      "apploadbalancer.v1.StreamListenerH\000B\020\n\010l" +
+      "istener\022\004\300\3011\001\"q\n\010Endpoint\022C\n\taddresses\030\001" +
+      " \003(\0132(.yandex.cloud.apploadbalancer.v1.A" +
+      "ddressB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0\372\3071" +
+      "\0071-65535\"\214\001\n\014HttpListener\022=\n\007handler\030\001 \001" +
+      "(\0132,.yandex.cloud.apploadbalancer.v1.Htt" +
+      "pHandler\022=\n\tredirects\030\002 \001(\0132*.yandex.clo" +
+      "ud.apploadbalancer.v1.Redirects\"\232\001\n\013TlsL" +
+      "istener\022J\n\017default_handler\030\001 \001(\0132+.yande" +
+      "x.cloud.apploadbalancer.v1.TlsHandlerB\004\350" +
+      "\3071\001\022?\n\014sni_handlers\030\002 \003(\0132).yandex.cloud" +
+      ".apploadbalancer.v1.SniMatch\"W\n\016StreamLi" +
+      "stener\022E\n\007handler\030\001 \001(\0132..yandex.cloud.a" +
+      "pploadbalancer.v1.StreamHandlerB\004\350\3071\001\".\n" +
+      "\014Http2Options\022\036\n\026max_concurrent_streams\030" +
+      "\001 \001(\003\"`\n\rStreamHandler\022\036\n\020backend_group_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022/\n\014idle_timeout\030\002 \001(\0132\031.g" +
+      "oogle.protobuf.Duration\"\266\001\n\013HttpHandler\022" +
+      "\026\n\016http_router_id\030\001 \001(\t\022F\n\rhttp2_options" +
+      "\030\002 \001(\0132-.yandex.cloud.apploadbalancer.v1" +
+      ".Http2OptionsH\000\022\026\n\014allow_http10\030\003 \001(\010H\000\022" +
+      "\032\n\022rewrite_request_id\030\004 \001(\010B\023\n\021protocol_" +
+      "settings\"\"\n\tRedirects\022\025\n\rhttp_to_https\030\001" +
+      " \001(\010\"\200\001\n\010SniMatch\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\034\n" +
+      "\014server_names\030\002 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\003" +
+      " \001(\0132+.yandex.cloud.apploadbalancer.v1.T" +
+      "lsHandlerB\004\350\3071\001\"\316\001\n\nTlsHandler\022D\n\014http_h" +
+      "andler\030\002 \001(\0132,.yandex.cloud.apploadbalan" +
+      "cer.v1.HttpHandlerH\000\022H\n\016stream_handler\030\004" +
+      " \001(\0132..yandex.cloud.apploadbalancer.v1.S" +
+      "treamHandlerH\000\022\037\n\017certificate_ids\030\003 \003(\tB" +
+      "\006\202\3101\002>0B\017\n\007handler\022\004\300\3011\001\"\214\004\n\013TargetState" +
+      "\022N\n\006status\030\001 \001(\0132>.yandex.cloud.apploadb" +
+      "alancer.v1.TargetState.HealthcheckStatus" +
+      "\022=\n\006target\030\002 \001(\0132\'.yandex.cloud.apploadb" +
+      "alancer.v1.TargetB\004\350\3071\001\032n\n\021HealthcheckSt" +
+      "atus\022Y\n\rzone_statuses\030\001 \003(\0132B.yandex.clo" +
+      "ud.apploadbalancer.v1.TargetState.ZoneHe" +
+      "althcheckStatus\032\215\001\n\025ZoneHealthcheckStatu" +
+      "s\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022C\n\006status\030\002 \001(\016" +
+      "23.yandex.cloud.apploadbalancer.v1.Targe" +
+      "tState.Status\022\030\n\020failed_active_hc\030\003 \001(\010\"" +
+      "n\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\013\n\007HEA" +
+      "LTHY\020\001\022\025\n\021PARTIALLY_HEALTHY\020\002\022\r\n\tUNHEALT" +
+      "HY\020\003\022\014\n\010DRAINING\020\004\022\013\n\007TIMEOUT\020\005\"R\n\017AutoS" +
+      "calePolicy\022!\n\rmin_zone_size\030\001 \001(\003B\n\372\3071\0060" +
+      "-1000\022\034\n\010max_size\030\002 \001(\003B\n\372\3071\0060-1000Bz\n#y" +
+      "andex.cloud.api.apploadbalancer.v1ZSgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/apploadbalancer/v1;apploadbalancerb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25406,7 +25590,7 @@ public final class LoadBalancerOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "Labels", "Status", "RegionId", "NetworkId", "Listeners", "AllocationPolicy", "LogGroupId", "SecurityGroupIds", "CreatedAt", "AutoScalePolicy", "LogOptions", });
+        new java.lang.String[] { "Id", "Name", "Description", "FolderId", "Labels", "Status", "RegionId", "NetworkId", "Listeners", "AllocationPolicy", "LogGroupId", "SecurityGroupIds", "CreatedAt", "AutoScalePolicy", "LogOptions", "AllowZonalShift", });
     internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancer_LabelsEntry_fieldAccessorTable = new
@@ -25442,7 +25626,7 @@ public final class LoadBalancerOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_Location_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_Location_descriptor,
-        new java.lang.String[] { "ZoneId", "SubnetId", "DisableTraffic", });
+        new java.lang.String[] { "ZoneId", "SubnetId", "DisableTraffic", "ZonalShiftActive", });
     internal_static_yandex_cloud_apploadbalancer_v1_AllocationPolicy_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_apploadbalancer_v1_AllocationPolicy_fieldAccessorTable = new

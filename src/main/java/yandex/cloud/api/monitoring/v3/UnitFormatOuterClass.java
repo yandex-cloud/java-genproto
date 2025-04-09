@@ -743,6 +743,38 @@ public final class UnitFormatOuterClass {
      * <code>UNIT_MESSAGES_PER_SECOND = 90;</code>
      */
     UNIT_MESSAGES_PER_SECOND(90),
+    /**
+     * <pre>
+     * == UNIT_VIRTUAL_CPU
+     * </pre>
+     *
+     * <code>UNIT_NANOCORE_CPU = 91;</code>
+     */
+    UNIT_NANOCORE_CPU(91),
+    /**
+     * <pre>
+     * == 1000 UNIT_NANOCORE_CPU
+     * </pre>
+     *
+     * <code>UNIT_MICROCORE_CPU = 92;</code>
+     */
+    UNIT_MICROCORE_CPU(92),
+    /**
+     * <pre>
+     * == 1000 UNIT_MICROCORE_CPU
+     * </pre>
+     *
+     * <code>UNIT_MILLICORE_CPU = 93;</code>
+     */
+    UNIT_MILLICORE_CPU(93),
+    /**
+     * <pre>
+     * == 1000 UNIT_MILLICORE_CPU
+     * </pre>
+     *
+     * <code>UNIT_CORE_CPU = 94;</code>
+     */
+    UNIT_CORE_CPU(94),
     UNRECOGNIZED(-1),
     ;
 
@@ -1470,6 +1502,38 @@ public final class UnitFormatOuterClass {
      * <code>UNIT_MESSAGES_PER_SECOND = 90;</code>
      */
     public static final int UNIT_MESSAGES_PER_SECOND_VALUE = 90;
+    /**
+     * <pre>
+     * == UNIT_VIRTUAL_CPU
+     * </pre>
+     *
+     * <code>UNIT_NANOCORE_CPU = 91;</code>
+     */
+    public static final int UNIT_NANOCORE_CPU_VALUE = 91;
+    /**
+     * <pre>
+     * == 1000 UNIT_NANOCORE_CPU
+     * </pre>
+     *
+     * <code>UNIT_MICROCORE_CPU = 92;</code>
+     */
+    public static final int UNIT_MICROCORE_CPU_VALUE = 92;
+    /**
+     * <pre>
+     * == 1000 UNIT_MICROCORE_CPU
+     * </pre>
+     *
+     * <code>UNIT_MILLICORE_CPU = 93;</code>
+     */
+    public static final int UNIT_MILLICORE_CPU_VALUE = 93;
+    /**
+     * <pre>
+     * == 1000 UNIT_MILLICORE_CPU
+     * </pre>
+     *
+     * <code>UNIT_CORE_CPU = 94;</code>
+     */
+    public static final int UNIT_CORE_CPU_VALUE = 94;
 
 
     public final int getNumber() {
@@ -1587,6 +1651,10 @@ public final class UnitFormatOuterClass {
         case 88: return UNIT_DBM;
         case 89: return UNIT_VIRTUAL_CPU;
         case 90: return UNIT_MESSAGES_PER_SECOND;
+        case 91: return UNIT_NANOCORE_CPU;
+        case 92: return UNIT_MICROCORE_CPU;
+        case 93: return UNIT_MILLICORE_CPU;
+        case 94: return UNIT_CORE_CPU;
         default: return null;
       }
     }
@@ -1653,7 +1721,7 @@ public final class UnitFormatOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/monitoring/v3/unit_format" +
-      ".proto\022\032yandex.cloud.monitoring.v3*\240\021\n\nU" +
+      ".proto\022\032yandex.cloud.monitoring.v3*\372\021\n\nU" +
       "nitFormat\022\033\n\027UNIT_FORMAT_UNSPECIFIED\020\000\022\r" +
       "\n\tUNIT_NONE\020\001\022\016\n\nUNIT_COUNT\020\002\022\020\n\014UNIT_PE" +
       "RCENT\020\003\022\025\n\021UNIT_PERCENT_UNIT\020\004\022\024\n\020UNIT_N" +
@@ -1709,10 +1777,12 @@ public final class UnitFormatOuterClass {
       "\014\n\010UNIT_PPM\020U\022\032\n\026UNIT_EVENTS_PER_SECOND\020" +
       "V\022\020\n\014UNIT_PACKETS\020W\022\014\n\010UNIT_DBM\020X\022\024\n\020UNI" +
       "T_VIRTUAL_CPU\020Y\022\034\n\030UNIT_MESSAGES_PER_SEC" +
-      "OND\020ZBk\n\036yandex.cloud.api.monitoring.v3Z" +
-      "Igithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/monitoring/v3;monitoringb\006prot" +
-      "o3"
+      "OND\020Z\022\025\n\021UNIT_NANOCORE_CPU\020[\022\026\n\022UNIT_MIC" +
+      "ROCORE_CPU\020\\\022\026\n\022UNIT_MILLICORE_CPU\020]\022\021\n\r" +
+      "UNIT_CORE_CPU\020^Bk\n\036yandex.cloud.api.moni" +
+      "toring.v3ZIgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/monitoring/v3;monito" +
+      "ringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

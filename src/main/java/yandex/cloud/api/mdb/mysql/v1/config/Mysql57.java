@@ -2585,6 +2585,105 @@ public final class Mysql57 {
      * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxExecutionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * The policy controlling how the audit log plugin writes events to its log file
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/audit-log-reference.html#sysvar_audit_log_policy)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy audit_log_policy = 88;</code>
+     * @return The enum numeric value on the wire for auditLogPolicy.
+     */
+    int getAuditLogPolicyValue();
+    /**
+     * <pre>
+     * The policy controlling how the audit log plugin writes events to its log file
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/audit-log-reference.html#sysvar_audit_log_policy)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy audit_log_policy = 88;</code>
+     * @return The auditLogPolicy.
+     */
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy getAuditLogPolicy();
+
+    /**
+     * <pre>
+     * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+     * @return Whether the innodbLruScanDepth field is set.
+     */
+    boolean hasInnodbLruScanDepth();
+    /**
+     * <pre>
+     * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+     * @return The innodbLruScanDepth.
+     */
+    com.google.protobuf.Int64Value getInnodbLruScanDepth();
+    /**
+     * <pre>
+     * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInnodbLruScanDepthOrBuilder();
+
+    /**
+     * <pre>
+     * Force ssl on all hosts (require_secure_transport)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+     * @return Whether the mdbForceSsl field is set.
+     */
+    boolean hasMdbForceSsl();
+    /**
+     * <pre>
+     * Force ssl on all hosts (require_secure_transport)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+     * @return The mdbForceSsl.
+     */
+    com.google.protobuf.BoolValue getMdbForceSsl();
+    /**
+     * <pre>
+     * Force ssl on all hosts (require_secure_transport)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getMdbForceSslOrBuilder();
+
+    /**
+     * <pre>
+     * An optimization for change buffering
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering innodb_change_buffering = 91;</code>
+     * @return The enum numeric value on the wire for innodbChangeBuffering.
+     */
+    int getInnodbChangeBufferingValue();
+    /**
+     * <pre>
+     * An optimization for change buffering
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering innodb_change_buffering = 91;</code>
+     * @return The innodbChangeBuffering.
+     */
+    yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering getInnodbChangeBuffering();
   }
   /**
    * <pre>
@@ -2615,6 +2714,8 @@ public final class Mysql57 {
       logSlowFilter_ = java.util.Collections.emptyList();
       binlogTransactionDependencyTracking_ = 0;
       optimizerSwitch_ = "";
+      auditLogPolicy_ = 0;
+      innodbChangeBuffering_ = 0;
     }
 
     @java.lang.Override
@@ -3727,6 +3828,44 @@ public final class Mysql57 {
                 maxExecutionTime_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 704: {
+              int rawValue = input.readEnum();
+
+              auditLogPolicy_ = rawValue;
+              break;
+            }
+            case 714: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (innodbLruScanDepth_ != null) {
+                subBuilder = innodbLruScanDepth_.toBuilder();
+              }
+              innodbLruScanDepth_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(innodbLruScanDepth_);
+                innodbLruScanDepth_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 722: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (mdbForceSsl_ != null) {
+                subBuilder = mdbForceSsl_.toBuilder();
+              }
+              mdbForceSsl_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mdbForceSsl_);
+                mdbForceSsl_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 728: {
+              int rawValue = input.readEnum();
+
+              innodbChangeBuffering_ = rawValue;
               break;
             }
             default: {
@@ -5085,6 +5224,294 @@ public final class Mysql57 {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.BinlogTransactionDependencyTracking)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy}
+     */
+    public enum AuditLogPolicy
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>AUDIT_LOG_POLICY_UNSPECIFIED = 0;</code>
+       */
+      AUDIT_LOG_POLICY_UNSPECIFIED(0),
+      /**
+       * <code>ALL = 1;</code>
+       */
+      ALL(1),
+      /**
+       * <code>LOGINS = 2;</code>
+       */
+      LOGINS(2),
+      /**
+       * <code>QUERIES = 3;</code>
+       */
+      QUERIES(3),
+      /**
+       * <code>NONE = 4;</code>
+       */
+      NONE(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>AUDIT_LOG_POLICY_UNSPECIFIED = 0;</code>
+       */
+      public static final int AUDIT_LOG_POLICY_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>ALL = 1;</code>
+       */
+      public static final int ALL_VALUE = 1;
+      /**
+       * <code>LOGINS = 2;</code>
+       */
+      public static final int LOGINS_VALUE = 2;
+      /**
+       * <code>QUERIES = 3;</code>
+       */
+      public static final int QUERIES_VALUE = 3;
+      /**
+       * <code>NONE = 4;</code>
+       */
+      public static final int NONE_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AuditLogPolicy valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static AuditLogPolicy forNumber(int value) {
+        switch (value) {
+          case 0: return AUDIT_LOG_POLICY_UNSPECIFIED;
+          case 1: return ALL;
+          case 2: return LOGINS;
+          case 3: return QUERIES;
+          case 4: return NONE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<AuditLogPolicy>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          AuditLogPolicy> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<AuditLogPolicy>() {
+              public AuditLogPolicy findValueByNumber(int number) {
+                return AuditLogPolicy.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.getDescriptor().getEnumTypes().get(8);
+      }
+
+      private static final AuditLogPolicy[] VALUES = values();
+
+      public static AuditLogPolicy valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private AuditLogPolicy(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering}
+     */
+    public enum InnodbChangeBuffering
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_UNSPECIFIED = 0;</code>
+       */
+      INNODB_CHANGE_BUFFERING_UNSPECIFIED(0),
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_NONE = 1;</code>
+       */
+      INNODB_CHANGE_BUFFERING_NONE(1),
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_INSERTS = 2;</code>
+       */
+      INNODB_CHANGE_BUFFERING_INSERTS(2),
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_DELETES = 3;</code>
+       */
+      INNODB_CHANGE_BUFFERING_DELETES(3),
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_CHANGES = 4;</code>
+       */
+      INNODB_CHANGE_BUFFERING_CHANGES(4),
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_PURGES = 5;</code>
+       */
+      INNODB_CHANGE_BUFFERING_PURGES(5),
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_ALL = 6;</code>
+       */
+      INNODB_CHANGE_BUFFERING_ALL(6),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_UNSPECIFIED = 0;</code>
+       */
+      public static final int INNODB_CHANGE_BUFFERING_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_NONE = 1;</code>
+       */
+      public static final int INNODB_CHANGE_BUFFERING_NONE_VALUE = 1;
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_INSERTS = 2;</code>
+       */
+      public static final int INNODB_CHANGE_BUFFERING_INSERTS_VALUE = 2;
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_DELETES = 3;</code>
+       */
+      public static final int INNODB_CHANGE_BUFFERING_DELETES_VALUE = 3;
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_CHANGES = 4;</code>
+       */
+      public static final int INNODB_CHANGE_BUFFERING_CHANGES_VALUE = 4;
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_PURGES = 5;</code>
+       */
+      public static final int INNODB_CHANGE_BUFFERING_PURGES_VALUE = 5;
+      /**
+       * <code>INNODB_CHANGE_BUFFERING_ALL = 6;</code>
+       */
+      public static final int INNODB_CHANGE_BUFFERING_ALL_VALUE = 6;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static InnodbChangeBuffering valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static InnodbChangeBuffering forNumber(int value) {
+        switch (value) {
+          case 0: return INNODB_CHANGE_BUFFERING_UNSPECIFIED;
+          case 1: return INNODB_CHANGE_BUFFERING_NONE;
+          case 2: return INNODB_CHANGE_BUFFERING_INSERTS;
+          case 3: return INNODB_CHANGE_BUFFERING_DELETES;
+          case 4: return INNODB_CHANGE_BUFFERING_CHANGES;
+          case 5: return INNODB_CHANGE_BUFFERING_PURGES;
+          case 6: return INNODB_CHANGE_BUFFERING_ALL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<InnodbChangeBuffering>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          InnodbChangeBuffering> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<InnodbChangeBuffering>() {
+              public InnodbChangeBuffering findValueByNumber(int number) {
+                return InnodbChangeBuffering.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.getDescriptor().getEnumTypes().get(9);
+      }
+
+      private static final InnodbChangeBuffering[] VALUES = values();
+
+      public static InnodbChangeBuffering valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private InnodbChangeBuffering(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering)
     }
 
     public static final int INNODB_BUFFER_POOL_SIZE_FIELD_NUMBER = 1;
@@ -8690,6 +9117,143 @@ public final class Mysql57 {
       return getMaxExecutionTime();
     }
 
+    public static final int AUDIT_LOG_POLICY_FIELD_NUMBER = 88;
+    private int auditLogPolicy_;
+    /**
+     * <pre>
+     * The policy controlling how the audit log plugin writes events to its log file
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/audit-log-reference.html#sysvar_audit_log_policy)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy audit_log_policy = 88;</code>
+     * @return The enum numeric value on the wire for auditLogPolicy.
+     */
+    @java.lang.Override public int getAuditLogPolicyValue() {
+      return auditLogPolicy_;
+    }
+    /**
+     * <pre>
+     * The policy controlling how the audit log plugin writes events to its log file
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/audit-log-reference.html#sysvar_audit_log_policy)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy audit_log_policy = 88;</code>
+     * @return The auditLogPolicy.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy getAuditLogPolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy.valueOf(auditLogPolicy_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy.UNRECOGNIZED : result;
+    }
+
+    public static final int INNODB_LRU_SCAN_DEPTH_FIELD_NUMBER = 89;
+    private com.google.protobuf.Int64Value innodbLruScanDepth_;
+    /**
+     * <pre>
+     * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+     * @return Whether the innodbLruScanDepth field is set.
+     */
+    @java.lang.Override
+    public boolean hasInnodbLruScanDepth() {
+      return innodbLruScanDepth_ != null;
+    }
+    /**
+     * <pre>
+     * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+     * @return The innodbLruScanDepth.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getInnodbLruScanDepth() {
+      return innodbLruScanDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbLruScanDepth_;
+    }
+    /**
+     * <pre>
+     * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getInnodbLruScanDepthOrBuilder() {
+      return getInnodbLruScanDepth();
+    }
+
+    public static final int MDB_FORCE_SSL_FIELD_NUMBER = 90;
+    private com.google.protobuf.BoolValue mdbForceSsl_;
+    /**
+     * <pre>
+     * Force ssl on all hosts (require_secure_transport)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+     * @return Whether the mdbForceSsl field is set.
+     */
+    @java.lang.Override
+    public boolean hasMdbForceSsl() {
+      return mdbForceSsl_ != null;
+    }
+    /**
+     * <pre>
+     * Force ssl on all hosts (require_secure_transport)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+     * @return The mdbForceSsl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getMdbForceSsl() {
+      return mdbForceSsl_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : mdbForceSsl_;
+    }
+    /**
+     * <pre>
+     * Force ssl on all hosts (require_secure_transport)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getMdbForceSslOrBuilder() {
+      return getMdbForceSsl();
+    }
+
+    public static final int INNODB_CHANGE_BUFFERING_FIELD_NUMBER = 91;
+    private int innodbChangeBuffering_;
+    /**
+     * <pre>
+     * An optimization for change buffering
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering innodb_change_buffering = 91;</code>
+     * @return The enum numeric value on the wire for innodbChangeBuffering.
+     */
+    @java.lang.Override public int getInnodbChangeBufferingValue() {
+      return innodbChangeBuffering_;
+    }
+    /**
+     * <pre>
+     * An optimization for change buffering
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering innodb_change_buffering = 91;</code>
+     * @return The innodbChangeBuffering.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering getInnodbChangeBuffering() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering.valueOf(innodbChangeBuffering_);
+      return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8973,6 +9537,18 @@ public final class Mysql57 {
       }
       if (maxExecutionTime_ != null) {
         output.writeMessage(87, getMaxExecutionTime());
+      }
+      if (auditLogPolicy_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy.AUDIT_LOG_POLICY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(88, auditLogPolicy_);
+      }
+      if (innodbLruScanDepth_ != null) {
+        output.writeMessage(89, getInnodbLruScanDepth());
+      }
+      if (mdbForceSsl_ != null) {
+        output.writeMessage(90, getMdbForceSsl());
+      }
+      if (innodbChangeBuffering_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering.INNODB_CHANGE_BUFFERING_UNSPECIFIED.getNumber()) {
+        output.writeEnum(91, innodbChangeBuffering_);
       }
       unknownFields.writeTo(output);
     }
@@ -9342,6 +9918,22 @@ public final class Mysql57 {
       if (maxExecutionTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(87, getMaxExecutionTime());
+      }
+      if (auditLogPolicy_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy.AUDIT_LOG_POLICY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(88, auditLogPolicy_);
+      }
+      if (innodbLruScanDepth_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(89, getInnodbLruScanDepth());
+      }
+      if (mdbForceSsl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(90, getMdbForceSsl());
+      }
+      if (innodbChangeBuffering_ != yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering.INNODB_CHANGE_BUFFERING_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(91, innodbChangeBuffering_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9749,6 +10341,18 @@ public final class Mysql57 {
         if (!getMaxExecutionTime()
             .equals(other.getMaxExecutionTime())) return false;
       }
+      if (auditLogPolicy_ != other.auditLogPolicy_) return false;
+      if (hasInnodbLruScanDepth() != other.hasInnodbLruScanDepth()) return false;
+      if (hasInnodbLruScanDepth()) {
+        if (!getInnodbLruScanDepth()
+            .equals(other.getInnodbLruScanDepth())) return false;
+      }
+      if (hasMdbForceSsl() != other.hasMdbForceSsl()) return false;
+      if (hasMdbForceSsl()) {
+        if (!getMdbForceSsl()
+            .equals(other.getMdbForceSsl())) return false;
+      }
+      if (innodbChangeBuffering_ != other.innodbChangeBuffering_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10088,6 +10692,18 @@ public final class Mysql57 {
         hash = (37 * hash) + MAX_EXECUTION_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getMaxExecutionTime().hashCode();
       }
+      hash = (37 * hash) + AUDIT_LOG_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + auditLogPolicy_;
+      if (hasInnodbLruScanDepth()) {
+        hash = (37 * hash) + INNODB_LRU_SCAN_DEPTH_FIELD_NUMBER;
+        hash = (53 * hash) + getInnodbLruScanDepth().hashCode();
+      }
+      if (hasMdbForceSsl()) {
+        hash = (37 * hash) + MDB_FORCE_SSL_FIELD_NUMBER;
+        hash = (53 * hash) + getMdbForceSsl().hashCode();
+      }
+      hash = (37 * hash) + INNODB_CHANGE_BUFFERING_FIELD_NUMBER;
+      hash = (53 * hash) + innodbChangeBuffering_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10699,6 +11315,22 @@ public final class Mysql57 {
           maxExecutionTime_ = null;
           maxExecutionTimeBuilder_ = null;
         }
+        auditLogPolicy_ = 0;
+
+        if (innodbLruScanDepthBuilder_ == null) {
+          innodbLruScanDepth_ = null;
+        } else {
+          innodbLruScanDepth_ = null;
+          innodbLruScanDepthBuilder_ = null;
+        }
+        if (mdbForceSslBuilder_ == null) {
+          mdbForceSsl_ = null;
+        } else {
+          mdbForceSsl_ = null;
+          mdbForceSslBuilder_ = null;
+        }
+        innodbChangeBuffering_ = 0;
+
         return this;
       }
 
@@ -11121,6 +11753,18 @@ public final class Mysql57 {
         } else {
           result.maxExecutionTime_ = maxExecutionTimeBuilder_.build();
         }
+        result.auditLogPolicy_ = auditLogPolicy_;
+        if (innodbLruScanDepthBuilder_ == null) {
+          result.innodbLruScanDepth_ = innodbLruScanDepth_;
+        } else {
+          result.innodbLruScanDepth_ = innodbLruScanDepthBuilder_.build();
+        }
+        if (mdbForceSslBuilder_ == null) {
+          result.mdbForceSsl_ = mdbForceSsl_;
+        } else {
+          result.mdbForceSsl_ = mdbForceSslBuilder_.build();
+        }
+        result.innodbChangeBuffering_ = innodbChangeBuffering_;
         onBuilt();
         return result;
       }
@@ -11447,6 +12091,18 @@ public final class Mysql57 {
         }
         if (other.hasMaxExecutionTime()) {
           mergeMaxExecutionTime(other.getMaxExecutionTime());
+        }
+        if (other.auditLogPolicy_ != 0) {
+          setAuditLogPolicyValue(other.getAuditLogPolicyValue());
+        }
+        if (other.hasInnodbLruScanDepth()) {
+          mergeInnodbLruScanDepth(other.getInnodbLruScanDepth());
+        }
+        if (other.hasMdbForceSsl()) {
+          mergeMdbForceSsl(other.getMdbForceSsl());
+        }
+        if (other.innodbChangeBuffering_ != 0) {
+          setInnodbChangeBufferingValue(other.getInnodbChangeBufferingValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -25042,6 +25698,483 @@ public final class Mysql57 {
         }
         return maxExecutionTimeBuilder_;
       }
+
+      private int auditLogPolicy_ = 0;
+      /**
+       * <pre>
+       * The policy controlling how the audit log plugin writes events to its log file
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/audit-log-reference.html#sysvar_audit_log_policy)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy audit_log_policy = 88;</code>
+       * @return The enum numeric value on the wire for auditLogPolicy.
+       */
+      @java.lang.Override public int getAuditLogPolicyValue() {
+        return auditLogPolicy_;
+      }
+      /**
+       * <pre>
+       * The policy controlling how the audit log plugin writes events to its log file
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/audit-log-reference.html#sysvar_audit_log_policy)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy audit_log_policy = 88;</code>
+       * @param value The enum numeric value on the wire for auditLogPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuditLogPolicyValue(int value) {
+        
+        auditLogPolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The policy controlling how the audit log plugin writes events to its log file
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/audit-log-reference.html#sysvar_audit_log_policy)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy audit_log_policy = 88;</code>
+       * @return The auditLogPolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy getAuditLogPolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy.valueOf(auditLogPolicy_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The policy controlling how the audit log plugin writes events to its log file
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/audit-log-reference.html#sysvar_audit_log_policy)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy audit_log_policy = 88;</code>
+       * @param value The auditLogPolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuditLogPolicy(yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.AuditLogPolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        auditLogPolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The policy controlling how the audit log plugin writes events to its log file
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/audit-log-reference.html#sysvar_audit_log_policy)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.AuditLogPolicy audit_log_policy = 88;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuditLogPolicy() {
+        
+        auditLogPolicy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value innodbLruScanDepth_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> innodbLruScanDepthBuilder_;
+      /**
+       * <pre>
+       * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+       * @return Whether the innodbLruScanDepth field is set.
+       */
+      public boolean hasInnodbLruScanDepth() {
+        return innodbLruScanDepthBuilder_ != null || innodbLruScanDepth_ != null;
+      }
+      /**
+       * <pre>
+       * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+       * @return The innodbLruScanDepth.
+       */
+      public com.google.protobuf.Int64Value getInnodbLruScanDepth() {
+        if (innodbLruScanDepthBuilder_ == null) {
+          return innodbLruScanDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : innodbLruScanDepth_;
+        } else {
+          return innodbLruScanDepthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+       */
+      public Builder setInnodbLruScanDepth(com.google.protobuf.Int64Value value) {
+        if (innodbLruScanDepthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          innodbLruScanDepth_ = value;
+          onChanged();
+        } else {
+          innodbLruScanDepthBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+       */
+      public Builder setInnodbLruScanDepth(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (innodbLruScanDepthBuilder_ == null) {
+          innodbLruScanDepth_ = builderForValue.build();
+          onChanged();
+        } else {
+          innodbLruScanDepthBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+       */
+      public Builder mergeInnodbLruScanDepth(com.google.protobuf.Int64Value value) {
+        if (innodbLruScanDepthBuilder_ == null) {
+          if (innodbLruScanDepth_ != null) {
+            innodbLruScanDepth_ =
+              com.google.protobuf.Int64Value.newBuilder(innodbLruScanDepth_).mergeFrom(value).buildPartial();
+          } else {
+            innodbLruScanDepth_ = value;
+          }
+          onChanged();
+        } else {
+          innodbLruScanDepthBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+       */
+      public Builder clearInnodbLruScanDepth() {
+        if (innodbLruScanDepthBuilder_ == null) {
+          innodbLruScanDepth_ = null;
+          onChanged();
+        } else {
+          innodbLruScanDepth_ = null;
+          innodbLruScanDepthBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInnodbLruScanDepthBuilder() {
+        
+        onChanged();
+        return getInnodbLruScanDepthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInnodbLruScanDepthOrBuilder() {
+        if (innodbLruScanDepthBuilder_ != null) {
+          return innodbLruScanDepthBuilder_.getMessageOrBuilder();
+        } else {
+          return innodbLruScanDepth_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : innodbLruScanDepth_;
+        }
+      }
+      /**
+       * <pre>
+       * A parameter that influences the algorithms and heuristics for the flush operation for the InnoDB buffer pool
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_lru_scan_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value innodb_lru_scan_depth = 89 [(.yandex.cloud.value) = "100-4294967295"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInnodbLruScanDepthFieldBuilder() {
+        if (innodbLruScanDepthBuilder_ == null) {
+          innodbLruScanDepthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInnodbLruScanDepth(),
+                  getParentForChildren(),
+                  isClean());
+          innodbLruScanDepth_ = null;
+        }
+        return innodbLruScanDepthBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue mdbForceSsl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> mdbForceSslBuilder_;
+      /**
+       * <pre>
+       * Force ssl on all hosts (require_secure_transport)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+       * @return Whether the mdbForceSsl field is set.
+       */
+      public boolean hasMdbForceSsl() {
+        return mdbForceSslBuilder_ != null || mdbForceSsl_ != null;
+      }
+      /**
+       * <pre>
+       * Force ssl on all hosts (require_secure_transport)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+       * @return The mdbForceSsl.
+       */
+      public com.google.protobuf.BoolValue getMdbForceSsl() {
+        if (mdbForceSslBuilder_ == null) {
+          return mdbForceSsl_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : mdbForceSsl_;
+        } else {
+          return mdbForceSslBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Force ssl on all hosts (require_secure_transport)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+       */
+      public Builder setMdbForceSsl(com.google.protobuf.BoolValue value) {
+        if (mdbForceSslBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mdbForceSsl_ = value;
+          onChanged();
+        } else {
+          mdbForceSslBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Force ssl on all hosts (require_secure_transport)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+       */
+      public Builder setMdbForceSsl(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (mdbForceSslBuilder_ == null) {
+          mdbForceSsl_ = builderForValue.build();
+          onChanged();
+        } else {
+          mdbForceSslBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Force ssl on all hosts (require_secure_transport)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+       */
+      public Builder mergeMdbForceSsl(com.google.protobuf.BoolValue value) {
+        if (mdbForceSslBuilder_ == null) {
+          if (mdbForceSsl_ != null) {
+            mdbForceSsl_ =
+              com.google.protobuf.BoolValue.newBuilder(mdbForceSsl_).mergeFrom(value).buildPartial();
+          } else {
+            mdbForceSsl_ = value;
+          }
+          onChanged();
+        } else {
+          mdbForceSslBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Force ssl on all hosts (require_secure_transport)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+       */
+      public Builder clearMdbForceSsl() {
+        if (mdbForceSslBuilder_ == null) {
+          mdbForceSsl_ = null;
+          onChanged();
+        } else {
+          mdbForceSsl_ = null;
+          mdbForceSslBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Force ssl on all hosts (require_secure_transport)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getMdbForceSslBuilder() {
+        
+        onChanged();
+        return getMdbForceSslFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Force ssl on all hosts (require_secure_transport)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getMdbForceSslOrBuilder() {
+        if (mdbForceSslBuilder_ != null) {
+          return mdbForceSslBuilder_.getMessageOrBuilder();
+        } else {
+          return mdbForceSsl_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : mdbForceSsl_;
+        }
+      }
+      /**
+       * <pre>
+       * Force ssl on all hosts (require_secure_transport)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue mdb_force_ssl = 90;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getMdbForceSslFieldBuilder() {
+        if (mdbForceSslBuilder_ == null) {
+          mdbForceSslBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getMdbForceSsl(),
+                  getParentForChildren(),
+                  isClean());
+          mdbForceSsl_ = null;
+        }
+        return mdbForceSslBuilder_;
+      }
+
+      private int innodbChangeBuffering_ = 0;
+      /**
+       * <pre>
+       * An optimization for change buffering
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering innodb_change_buffering = 91;</code>
+       * @return The enum numeric value on the wire for innodbChangeBuffering.
+       */
+      @java.lang.Override public int getInnodbChangeBufferingValue() {
+        return innodbChangeBuffering_;
+      }
+      /**
+       * <pre>
+       * An optimization for change buffering
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering innodb_change_buffering = 91;</code>
+       * @param value The enum numeric value on the wire for innodbChangeBuffering to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInnodbChangeBufferingValue(int value) {
+        
+        innodbChangeBuffering_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optimization for change buffering
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering innodb_change_buffering = 91;</code>
+       * @return The innodbChangeBuffering.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering getInnodbChangeBuffering() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering result = yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering.valueOf(innodbChangeBuffering_);
+        return result == null ? yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * An optimization for change buffering
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering innodb_change_buffering = 91;</code>
+       * @param value The innodbChangeBuffering to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInnodbChangeBuffering(yandex.cloud.api.mdb.mysql.v1.config.Mysql57.MysqlConfig5_7.InnodbChangeBuffering value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        innodbChangeBuffering_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optimization for change buffering
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_change_buffering).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig5_7.InnodbChangeBuffering innodb_change_buffering = 91;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInnodbChangeBuffering() {
+        
+        innodbChangeBuffering_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -26339,7 +27472,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\345<\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\245B\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -26496,54 +27629,72 @@ public final class Mysql57 {
       "ue\022,\n\010userstat\030V \001(\0132\032.google.protobuf.B" +
       "oolValue\022I\n\022max_execution_time\030W \001(\0132\033.g" +
       "oogle.protobuf.Int64ValueB\020\372\3071\0140-4294967" +
-      "295\"\231\005\n\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020\000" +
-      "\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTES" +
-      "\020\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023HI" +
-      "GH_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n" +
-      "\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH" +
-      "_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022\033" +
-      "\n\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_D" +
-      "ATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_FIELD_O" +
-      "PTIONS\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020NO_TABLE" +
-      "_OPTIONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PA" +
-      "D_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONC" +
-      "AT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TA" +
-      "BLES\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010\n\004ANSI\020" +
-      "\025\022\017\n\013TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t" +
-      "\n\005MSSQL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006" +
-      "ORACLE\020\034\022\016\n\nPOSTGRESQL\020\035\022\027\n\023NO_AUTO_CREA" +
-      "TE_USER\020\036\022\024\n\020NO_DIR_IN_CREATE\020\037\"\243\001\n\nAuth" +
-      "Plugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025M" +
-      "YSQL_NATIVE_PASSWORD\020\001\022\035\n\025CACHING_SHA2_P" +
-      "ASSWORD\020\002\032\002\010\001\022\023\n\017SHA256_PASSWORD\020\003\022\022\n\016MY" +
-      "SQL_NO_LOGIN\020\004\022\025\n\021MDB_IAMPROXY_AUTH\020\005\"x\n" +
-      "\024TransactionIsolation\022%\n!TRANSACTION_ISO" +
-      "LATION_UNSPECIFIED\020\000\022\022\n\016READ_COMMITTED\020\001" +
-      "\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"" +
-      "U\n\016BinlogRowImage\022 \n\034BINLOG_ROW_IMAGE_UN" +
-      "SPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NO" +
-      "BLOB\020\003\"Y\n\021SlaveParallelType\022#\n\037SLAVE_PAR" +
-      "ALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021" +
-      "\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowRateType\022\"\n\036" +
-      "LOG_SLOW_RATE_TYPE_UNSPECIFIED\020\000\022\013\n\007SESS" +
-      "ION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilterType\022$" +
-      "\n LOG_SLOW_FILTER_TYPE_UNSPECIFIED\020\000\022\r\n\t" +
-      "FULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP_TABLE\020" +
-      "\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILESORT\020\005\022\024" +
-      "\n\020FILESORT_ON_DISK\020\006\"\223\001\n#BinlogTransacti" +
-      "onDependencyTracking\0226\n2BINLOG_TRANSACTI" +
-      "ON_DEPENDENCY_TRACKING_UNSPECIFIED\020\000\022\020\n\014" +
-      "COMMIT_ORDER\020\001\022\014\n\010WRITESET\020\002\022\024\n\020WRITESET" +
-      "_SESSION\020\003\"\360\001\n\021MysqlConfigSet5_7\022J\n\020effe" +
-      "ctive_config\030\001 \001(\01320.yandex.cloud.mdb.my" +
-      "sql.v1.config.MysqlConfig5_7\022E\n\013user_con" +
-      "fig\030\002 \001(\01320.yandex.cloud.mdb.mysql.v1.co" +
-      "nfig.MysqlConfig5_7\022H\n\016default_config\030\003 " +
-      "\001(\01320.yandex.cloud.mdb.mysql.v1.config.M" +
-      "ysqlConfig5_7Br\n$yandex.cloud.api.mdb.my" +
-      "sql.v1.configZJgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/mdb/mysql/v1/con" +
-      "fig;mysqlb\006proto3"
+      "295\022Y\n\020audit_log_policy\030X \001(\0162?.yandex.c" +
+      "loud.mdb.mysql.v1.config.MysqlConfig5_7." +
+      "AuditLogPolicy\022N\n\025innodb_lru_scan_depth\030" +
+      "Y \001(\0132\033.google.protobuf.Int64ValueB\022\372\3071\016" +
+      "100-4294967295\0221\n\rmdb_force_ssl\030Z \001(\0132\032." +
+      "google.protobuf.BoolValue\022g\n\027innodb_chan" +
+      "ge_buffering\030[ \001(\0162F.yandex.cloud.mdb.my" +
+      "sql.v1.config.MysqlConfig5_7.InnodbChang" +
+      "eBuffering\"\231\005\n\007SQLMode\022\027\n\023SQLMODE_UNSPEC" +
+      "IFIED\020\000\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI" +
+      "_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO\020" +
+      "\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPA" +
+      "CE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BA" +
+      "CKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITUT" +
+      "ION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO" +
+      "_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_" +
+      "FIELD_OPTIONS\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020N" +
+      "O_TABLE_OPTIONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020" +
+      "\017\022\033\n\027PAD_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_" +
+      "AS_CONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT" +
+      "_ALL_TABLES\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010" +
+      "\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MA" +
+      "XDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL4" +
+      "0\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGRESQL\020\035\022\027\n\023NO_AU" +
+      "TO_CREATE_USER\020\036\022\024\n\020NO_DIR_IN_CREATE\020\037\"\243" +
+      "\001\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED" +
+      "\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\035\n\025CACHING" +
+      "_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SHA256_PASSWORD\020" +
+      "\003\022\022\n\016MYSQL_NO_LOGIN\020\004\022\025\n\021MDB_IAMPROXY_AU" +
+      "TH\020\005\"x\n\024TransactionIsolation\022%\n!TRANSACT" +
+      "ION_ISOLATION_UNSPECIFIED\020\000\022\022\n\016READ_COMM" +
+      "ITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020\n\014SERIALIZ" +
+      "ABLE\020\003\"U\n\016BinlogRowImage\022 \n\034BINLOG_ROW_I" +
+      "MAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020" +
+      "\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallelType\022#\n\037SL" +
+      "AVE_PARALLEL_TYPE_UNSPECIFIED\020\000\022\014\n\010DATAB" +
+      "ASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"M\n\017LogSlowRateT" +
+      "ype\022\"\n\036LOG_SLOW_RATE_TYPE_UNSPECIFIED\020\000\022" +
+      "\013\n\007SESSION\020\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilte" +
+      "rType\022$\n LOG_SLOW_FILTER_TYPE_UNSPECIFIE" +
+      "D\020\000\022\r\n\tFULL_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP" +
+      "_TABLE\020\003\022\025\n\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILES" +
+      "ORT\020\005\022\024\n\020FILESORT_ON_DISK\020\006\"\223\001\n#BinlogTr" +
+      "ansactionDependencyTracking\0226\n2BINLOG_TR" +
+      "ANSACTION_DEPENDENCY_TRACKING_UNSPECIFIE" +
+      "D\020\000\022\020\n\014COMMIT_ORDER\020\001\022\014\n\010WRITESET\020\002\022\024\n\020W" +
+      "RITESET_SESSION\020\003\"^\n\016AuditLogPolicy\022 \n\034A" +
+      "UDIT_LOG_POLICY_UNSPECIFIED\020\000\022\007\n\003ALL\020\001\022\n" +
+      "\n\006LOGINS\020\002\022\013\n\007QUERIES\020\003\022\010\n\004NONE\020\004\"\226\002\n\025In" +
+      "nodbChangeBuffering\022\'\n#INNODB_CHANGE_BUF" +
+      "FERING_UNSPECIFIED\020\000\022 \n\034INNODB_CHANGE_BU" +
+      "FFERING_NONE\020\001\022#\n\037INNODB_CHANGE_BUFFERIN" +
+      "G_INSERTS\020\002\022#\n\037INNODB_CHANGE_BUFFERING_D" +
+      "ELETES\020\003\022#\n\037INNODB_CHANGE_BUFFERING_CHAN" +
+      "GES\020\004\022\"\n\036INNODB_CHANGE_BUFFERING_PURGES\020" +
+      "\005\022\037\n\033INNODB_CHANGE_BUFFERING_ALL\020\006\"\360\001\n\021M" +
+      "ysqlConfigSet5_7\022J\n\020effective_config\030\001 \001" +
+      "(\01320.yandex.cloud.mdb.mysql.v1.config.My" +
+      "sqlConfig5_7\022E\n\013user_config\030\002 \001(\01320.yand" +
+      "ex.cloud.mdb.mysql.v1.config.MysqlConfig" +
+      "5_7\022H\n\016default_config\030\003 \001(\01320.yandex.clo" +
+      "ud.mdb.mysql.v1.config.MysqlConfig5_7Br\n" +
+      "$yandex.cloud.api.mdb.mysql.v1.configZJg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/mdb/mysql/v1/config;mysqlb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26556,7 +27707,7 @@ public final class Mysql57 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", "InnodbCompressionLevel", "BinlogTransactionDependencyTracking", "Autocommit", "InnodbStatusOutput", "InnodbStrictMode", "InnodbPrintLockWaitTimeoutInfo", "LogErrorVerbosity", "MaxDigestLength", "QueryCacheLimit", "QueryCacheSize", "QueryCacheType", "LockWaitTimeout", "MaxPreparedStmtCount", "OptimizerSwitch", "OptimizerSearchDepth", "QueryResponseTimeStats", "Userstat", "MaxExecutionTime", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", "InnodbCompressionLevel", "BinlogTransactionDependencyTracking", "Autocommit", "InnodbStatusOutput", "InnodbStrictMode", "InnodbPrintLockWaitTimeoutInfo", "LogErrorVerbosity", "MaxDigestLength", "QueryCacheLimit", "QueryCacheSize", "QueryCacheType", "LockWaitTimeout", "MaxPreparedStmtCount", "OptimizerSwitch", "OptimizerSearchDepth", "QueryResponseTimeStats", "Userstat", "MaxExecutionTime", "AuditLogPolicy", "InnodbLruScanDepth", "MdbForceSsl", "InnodbChangeBuffering", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_fieldAccessorTable = new

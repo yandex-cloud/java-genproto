@@ -15910,6 +15910,47 @@ public final class DatasetServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    /**
+     * <pre>
+     *Dataset Id of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 7;</code>
+     * @return A list containing the datasetIds.
+     */
+    java.util.List<java.lang.String>
+        getDatasetIdsList();
+    /**
+     * <pre>
+     *Dataset Id of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 7;</code>
+     * @return The count of datasetIds.
+     */
+    int getDatasetIdsCount();
+    /**
+     * <pre>
+     *Dataset Id of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 7;</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    java.lang.String getDatasetIds(int index);
+    /**
+     * <pre>
+     *Dataset Id of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the datasetIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.dataset.v1.ListDatasetsRequest}
@@ -15929,6 +15970,7 @@ public final class DatasetServiceOuterClass {
       datasetNamePattern_ = "";
       taskTypeFilter_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       pageToken_ = "";
+      datasetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -16017,6 +16059,15 @@ public final class DatasetServiceOuterClass {
               pageToken_ = s;
               break;
             }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                datasetIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              datasetIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -16037,6 +16088,9 @@ public final class DatasetServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           taskTypeFilter_ = taskTypeFilter_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          datasetIds_ = datasetIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -16342,6 +16396,57 @@ public final class DatasetServiceOuterClass {
       }
     }
 
+    public static final int DATASET_IDS_FIELD_NUMBER = 7;
+    private com.google.protobuf.LazyStringList datasetIds_;
+    /**
+     * <pre>
+     *Dataset Id of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 7;</code>
+     * @return A list containing the datasetIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDatasetIdsList() {
+      return datasetIds_;
+    }
+    /**
+     * <pre>
+     *Dataset Id of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 7;</code>
+     * @return The count of datasetIds.
+     */
+    public int getDatasetIdsCount() {
+      return datasetIds_.size();
+    }
+    /**
+     * <pre>
+     *Dataset Id of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 7;</code>
+     * @param index The index of the element to return.
+     * @return The datasetIds at the given index.
+     */
+    public java.lang.String getDatasetIds(int index) {
+      return datasetIds_.get(index);
+    }
+    /**
+     * <pre>
+     *Dataset Id of the datasets to list. Optional.
+     * </pre>
+     *
+     * <code>repeated string dataset_ids = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the datasetIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDatasetIdsBytes(int index) {
+      return datasetIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16378,6 +16483,9 @@ public final class DatasetServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, pageToken_);
+      }
+      for (int i = 0; i < datasetIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, datasetIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -16421,6 +16529,14 @@ public final class DatasetServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, pageToken_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < datasetIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(datasetIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDatasetIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16447,6 +16563,8 @@ public final class DatasetServiceOuterClass {
           != other.getPageSize()) return false;
       if (!getPageToken()
           .equals(other.getPageToken())) return false;
+      if (!getDatasetIdsList()
+          .equals(other.getDatasetIdsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16475,6 +16593,10 @@ public final class DatasetServiceOuterClass {
           getPageSize());
       hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPageToken().hashCode();
+      if (getDatasetIdsCount() > 0) {
+        hash = (37 * hash) + DATASET_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getDatasetIdsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -16620,6 +16742,8 @@ public final class DatasetServiceOuterClass {
 
         pageToken_ = "";
 
+        datasetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -16661,6 +16785,11 @@ public final class DatasetServiceOuterClass {
         result.taskTypeFilter_ = taskTypeFilter_;
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          datasetIds_ = datasetIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.datasetIds_ = datasetIds_;
         onBuilt();
         return result;
       }
@@ -16742,6 +16871,16 @@ public final class DatasetServiceOuterClass {
         }
         if (!other.getPageToken().isEmpty()) {
           pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.datasetIds_.isEmpty()) {
+          if (datasetIds_.isEmpty()) {
+            datasetIds_ = other.datasetIds_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureDatasetIdsIsMutable();
+            datasetIds_.addAll(other.datasetIds_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -17449,6 +17588,152 @@ public final class DatasetServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList datasetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDatasetIdsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          datasetIds_ = new com.google.protobuf.LazyStringArrayList(datasetIds_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       *Dataset Id of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 7;</code>
+       * @return A list containing the datasetIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDatasetIdsList() {
+        return datasetIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       *Dataset Id of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 7;</code>
+       * @return The count of datasetIds.
+       */
+      public int getDatasetIdsCount() {
+        return datasetIds_.size();
+      }
+      /**
+       * <pre>
+       *Dataset Id of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 7;</code>
+       * @param index The index of the element to return.
+       * @return The datasetIds at the given index.
+       */
+      public java.lang.String getDatasetIds(int index) {
+        return datasetIds_.get(index);
+      }
+      /**
+       * <pre>
+       *Dataset Id of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 7;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the datasetIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDatasetIdsBytes(int index) {
+        return datasetIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       *Dataset Id of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The datasetIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDatasetIdsIsMutable();
+        datasetIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Dataset Id of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 7;</code>
+       * @param value The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDatasetIdsIsMutable();
+        datasetIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Dataset Id of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 7;</code>
+       * @param values The datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDatasetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDatasetIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, datasetIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Dataset Id of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetIds() {
+        datasetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Dataset Id of the datasets to list. Optional.
+       * </pre>
+       *
+       * <code>repeated string dataset_ids = 7;</code>
+       * @param value The bytes of the datasetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDatasetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureDatasetIdsIsMutable();
+        datasetIds_.add(value);
         onChanged();
         return this;
       }
@@ -27642,89 +27927,89 @@ public final class DatasetServiceOuterClass {
       "est\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\022D\n\016uploade" +
       "d_parts\030\002 \003(\0132,.yandex.cloud.ai.dataset." +
       "v1.UploadedPartInfo\"8\n\"FinishMultipartUp" +
-      "loadDraftResponse\022\022\n\ndataset_id\030\001 \001(\t\"\315\001" +
+      "loadDraftResponse\022\022\n\ndataset_id\030\001 \001(\t\"\342\001" +
       "\n\023ListDatasetsRequest\022\027\n\tfolder_id\030\001 \001(\t" +
       "B\004\350\3071\001\022>\n\006status\030\002 \003(\0162..yandex.cloud.ai" +
       ".dataset.v1.DatasetInfo.Status\022\034\n\024datase" +
       "t_name_pattern\030\003 \001(\t\022\030\n\020task_type_filter" +
       "\030\004 \003(\t\022\021\n\tpage_size\030\005 \001(\003\022\022\n\npage_token\030" +
-      "\006 \001(\t\"j\n\024ListDatasetsResponse\0229\n\010dataset" +
-      "s\030\001 \003(\0132\'.yandex.cloud.ai.dataset.v1.Dat" +
-      "asetInfo\022\027\n\017next_page_token\030\002 \001(\t\"3\n\030Lis" +
-      "tUploadFormatsRequest\022\027\n\ttask_type\030\001 \001(\t" +
-      "B\004\350\3071\001\",\n\031ListUploadFormatsResponse\022\017\n\007f" +
-      "ormats\030\001 \003(\t\"F\n\030ListUploadSchemasRequest" +
-      "\022\027\n\ttask_type\030\001 \001(\tB\004\350\3071\001\022\021\n\tfolder_id\030\002" +
-      " \001(\t\"]\n\031ListUploadSchemasResponse\022@\n\007sch" +
-      "emas\030\001 \003(\0132/.yandex.cloud.ai.dataset.v1." +
-      "DatasetUploadSchema\"%\n\020ListTypesRequest\022" +
-      "\021\n\tfolder_id\030\001 \001(\t\"\"\n\021ListTypesResponse\022" +
-      "\r\n\005types\030\001 \003(\t\"4\n\030GetDatasetPreviewReque" +
-      "st\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"F\n\031GetDatas" +
-      "etPreviewResponse\022\022\n\ndataset_id\030\001 \001(\t\022\025\n" +
-      "\rpreview_lines\030\002 \003(\t\"2\n\026GetDownloadUrlsR" +
-      "equest\022\030\n\ndataset_id\030\001 \001(\tB\004\350\3071\001\"x\n\027GetD" +
-      "ownloadUrlsResponse\022\022\n\ndataset_id\030\001 \001(\t\022" +
-      "I\n\rdownload_urls\030\002 \003(\01322.yandex.cloud.ai" +
-      ".dataset.v1.DatasetFileDownloadUrl\".\n\030Li" +
-      "stOperationsIdsRequest\022\022\n\ndataset_id\030\001 \003" +
-      "(\t\"\321\001\n\031ListOperationsIdsResponse\022u\n\032data" +
-      "set_id_to_operation_id\030\001 \003(\0132Q.yandex.cl" +
-      "oud.ai.dataset.v1.ListOperationsIdsRespo" +
-      "nse.DatasetIdToOperationIdEntry\032=\n\033Datas" +
-      "etIdToOperationIdEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\0012\204\017\n\016DatasetService\022s\n\010Des" +
-      "cribe\0222.yandex.cloud.ai.dataset.v1.Descr" +
-      "ibeDatasetRequest\0323.yandex.cloud.ai.data" +
-      "set.v1.DescribeDatasetResponse\022\231\001\n\010Valid" +
-      "ate\0222.yandex.cloud.ai.dataset.v1.Validat" +
-      "eDatasetRequest\032!.yandex.cloud.operation" +
-      ".Operation\"6\262\322*2\n\027ValidateDatasetMetadat" +
-      "a\022\027ValidateDatasetResponse\022m\n\006Create\0220.y" +
-      "andex.cloud.ai.dataset.v1.CreateDatasetR" +
-      "equest\0321.yandex.cloud.ai.dataset.v1.Crea" +
-      "teDatasetResponse\022m\n\006Update\0220.yandex.clo" +
-      "ud.ai.dataset.v1.UpdateDatasetRequest\0321." +
-      "yandex.cloud.ai.dataset.v1.UpdateDataset" +
-      "Response\022m\n\006Delete\0220.yandex.cloud.ai.dat" +
-      "aset.v1.DeleteDatasetRequest\0321.yandex.cl" +
-      "oud.ai.dataset.v1.DeleteDatasetResponse\022" +
-      "i\n\004List\022/.yandex.cloud.ai.dataset.v1.Lis" +
-      "tDatasetsRequest\0320.yandex.cloud.ai.datas" +
-      "et.v1.ListDatasetsResponse\022\205\001\n\021ListUploa" +
-      "dFormats\0224.yandex.cloud.ai.dataset.v1.Li" +
-      "stUploadFormatsRequest\0325.yandex.cloud.ai" +
-      ".dataset.v1.ListUploadFormatsResponse\"\003\210" +
-      "\002\001\022\200\001\n\021ListUploadSchemas\0224.yandex.cloud." +
-      "ai.dataset.v1.ListUploadSchemasRequest\0325" +
-      ".yandex.cloud.ai.dataset.v1.ListUploadSc" +
-      "hemasResponse\022\200\001\n\021GetUploadDraftUrl\0224.ya" +
-      "ndex.cloud.ai.dataset.v1.GetUploadDraftU" +
-      "rlRequest\0325.yandex.cloud.ai.dataset.v1.G" +
-      "etUploadDraftUrlResponse\022z\n\017GetDownloadU" +
-      "rls\0222.yandex.cloud.ai.dataset.v1.GetDown" +
-      "loadUrlsRequest\0323.yandex.cloud.ai.datase" +
-      "t.v1.GetDownloadUrlsResponse\022\230\001\n\031StartMu" +
-      "ltipartUploadDraft\022<.yandex.cloud.ai.dat" +
-      "aset.v1.StartMultipartUploadDraftRequest" +
-      "\032=.yandex.cloud.ai.dataset.v1.StartMulti" +
-      "partUploadDraftResponse\022\233\001\n\032FinishMultip" +
-      "artUploadDraft\022=.yandex.cloud.ai.dataset" +
-      ".v1.FinishMultipartUploadDraftRequest\032>." +
-      "yandex.cloud.ai.dataset.v1.FinishMultipa" +
-      "rtUploadDraftResponse\022h\n\tListTypes\022,.yan" +
-      "dex.cloud.ai.dataset.v1.ListTypesRequest" +
-      "\032-.yandex.cloud.ai.dataset.v1.ListTypesR" +
-      "esponse\022y\n\nGetPreview\0224.yandex.cloud.ai." +
-      "dataset.v1.GetDatasetPreviewRequest\0325.ya" +
-      "ndex.cloud.ai.dataset.v1.GetDatasetPrevi" +
-      "ewResponse\022\200\001\n\021ListOperationsIds\0224.yande" +
-      "x.cloud.ai.dataset.v1.ListOperationsIdsR" +
-      "equest\0325.yandex.cloud.ai.dataset.v1.List" +
-      "OperationsIdsResponseBe\n\036yandex.cloud.ap" +
-      "i.ai.dataset.v1ZCgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/ai/dataset/v1;" +
-      "fomob\006proto3"
+      "\006 \001(\t\022\023\n\013dataset_ids\030\007 \003(\t\"j\n\024ListDatase" +
+      "tsResponse\0229\n\010datasets\030\001 \003(\0132\'.yandex.cl" +
+      "oud.ai.dataset.v1.DatasetInfo\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t\"3\n\030ListUploadFormatsReque" +
+      "st\022\027\n\ttask_type\030\001 \001(\tB\004\350\3071\001\",\n\031ListUploa" +
+      "dFormatsResponse\022\017\n\007formats\030\001 \003(\t\"F\n\030Lis" +
+      "tUploadSchemasRequest\022\027\n\ttask_type\030\001 \001(\t" +
+      "B\004\350\3071\001\022\021\n\tfolder_id\030\002 \001(\t\"]\n\031ListUploadS" +
+      "chemasResponse\022@\n\007schemas\030\001 \003(\0132/.yandex" +
+      ".cloud.ai.dataset.v1.DatasetUploadSchema" +
+      "\"%\n\020ListTypesRequest\022\021\n\tfolder_id\030\001 \001(\t\"" +
+      "\"\n\021ListTypesResponse\022\r\n\005types\030\001 \003(\t\"4\n\030G" +
+      "etDatasetPreviewRequest\022\030\n\ndataset_id\030\001 " +
+      "\001(\tB\004\350\3071\001\"F\n\031GetDatasetPreviewResponse\022\022" +
+      "\n\ndataset_id\030\001 \001(\t\022\025\n\rpreview_lines\030\002 \003(" +
+      "\t\"2\n\026GetDownloadUrlsRequest\022\030\n\ndataset_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\"x\n\027GetDownloadUrlsResponse" +
+      "\022\022\n\ndataset_id\030\001 \001(\t\022I\n\rdownload_urls\030\002 " +
+      "\003(\01322.yandex.cloud.ai.dataset.v1.Dataset" +
+      "FileDownloadUrl\".\n\030ListOperationsIdsRequ" +
+      "est\022\022\n\ndataset_id\030\001 \003(\t\"\321\001\n\031ListOperatio" +
+      "nsIdsResponse\022u\n\032dataset_id_to_operation" +
+      "_id\030\001 \003(\0132Q.yandex.cloud.ai.dataset.v1.L" +
+      "istOperationsIdsResponse.DatasetIdToOper" +
+      "ationIdEntry\032=\n\033DatasetIdToOperationIdEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\0012\204\017\n\016" +
+      "DatasetService\022s\n\010Describe\0222.yandex.clou" +
+      "d.ai.dataset.v1.DescribeDatasetRequest\0323" +
+      ".yandex.cloud.ai.dataset.v1.DescribeData" +
+      "setResponse\022\231\001\n\010Validate\0222.yandex.cloud." +
+      "ai.dataset.v1.ValidateDatasetRequest\032!.y" +
+      "andex.cloud.operation.Operation\"6\262\322*2\n\027V" +
+      "alidateDatasetMetadata\022\027ValidateDatasetR" +
+      "esponse\022m\n\006Create\0220.yandex.cloud.ai.data" +
+      "set.v1.CreateDatasetRequest\0321.yandex.clo" +
+      "ud.ai.dataset.v1.CreateDatasetResponse\022m" +
+      "\n\006Update\0220.yandex.cloud.ai.dataset.v1.Up" +
+      "dateDatasetRequest\0321.yandex.cloud.ai.dat" +
+      "aset.v1.UpdateDatasetResponse\022m\n\006Delete\022" +
+      "0.yandex.cloud.ai.dataset.v1.DeleteDatas" +
+      "etRequest\0321.yandex.cloud.ai.dataset.v1.D" +
+      "eleteDatasetResponse\022i\n\004List\022/.yandex.cl" +
+      "oud.ai.dataset.v1.ListDatasetsRequest\0320." +
+      "yandex.cloud.ai.dataset.v1.ListDatasetsR" +
+      "esponse\022\205\001\n\021ListUploadFormats\0224.yandex.c" +
+      "loud.ai.dataset.v1.ListUploadFormatsRequ" +
+      "est\0325.yandex.cloud.ai.dataset.v1.ListUpl" +
+      "oadFormatsResponse\"\003\210\002\001\022\200\001\n\021ListUploadSc" +
+      "hemas\0224.yandex.cloud.ai.dataset.v1.ListU" +
+      "ploadSchemasRequest\0325.yandex.cloud.ai.da" +
+      "taset.v1.ListUploadSchemasResponse\022\200\001\n\021G" +
+      "etUploadDraftUrl\0224.yandex.cloud.ai.datas" +
+      "et.v1.GetUploadDraftUrlRequest\0325.yandex." +
+      "cloud.ai.dataset.v1.GetUploadDraftUrlRes" +
+      "ponse\022z\n\017GetDownloadUrls\0222.yandex.cloud." +
+      "ai.dataset.v1.GetDownloadUrlsRequest\0323.y" +
+      "andex.cloud.ai.dataset.v1.GetDownloadUrl" +
+      "sResponse\022\230\001\n\031StartMultipartUploadDraft\022" +
+      "<.yandex.cloud.ai.dataset.v1.StartMultip" +
+      "artUploadDraftRequest\032=.yandex.cloud.ai." +
+      "dataset.v1.StartMultipartUploadDraftResp" +
+      "onse\022\233\001\n\032FinishMultipartUploadDraft\022=.ya" +
+      "ndex.cloud.ai.dataset.v1.FinishMultipart" +
+      "UploadDraftRequest\032>.yandex.cloud.ai.dat" +
+      "aset.v1.FinishMultipartUploadDraftRespon" +
+      "se\022h\n\tListTypes\022,.yandex.cloud.ai.datase" +
+      "t.v1.ListTypesRequest\032-.yandex.cloud.ai." +
+      "dataset.v1.ListTypesResponse\022y\n\nGetPrevi" +
+      "ew\0224.yandex.cloud.ai.dataset.v1.GetDatas" +
+      "etPreviewRequest\0325.yandex.cloud.ai.datas" +
+      "et.v1.GetDatasetPreviewResponse\022\200\001\n\021List" +
+      "OperationsIds\0224.yandex.cloud.ai.dataset." +
+      "v1.ListOperationsIdsRequest\0325.yandex.clo" +
+      "ud.ai.dataset.v1.ListOperationsIdsRespon" +
+      "seBe\n\036yandex.cloud.api.ai.dataset.v1ZCgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/ai/dataset/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27860,7 +28145,7 @@ public final class DatasetServiceOuterClass {
     internal_static_yandex_cloud_ai_dataset_v1_ListDatasetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_dataset_v1_ListDatasetsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Status", "DatasetNamePattern", "TaskTypeFilter", "PageSize", "PageToken", });
+        new java.lang.String[] { "FolderId", "Status", "DatasetNamePattern", "TaskTypeFilter", "PageSize", "PageToken", "DatasetIds", });
     internal_static_yandex_cloud_ai_dataset_v1_ListDatasetsResponse_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_ai_dataset_v1_ListDatasetsResponse_fieldAccessorTable = new

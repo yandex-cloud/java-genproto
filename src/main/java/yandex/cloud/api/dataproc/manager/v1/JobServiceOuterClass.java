@@ -20,7 +20,7 @@ public final class JobServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the cluster to list Data Proc jobs of.
+     * Required. ID of the cluster to list Yandex Data Processing jobs of.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,7 +29,7 @@ public final class JobServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the cluster to list Data Proc jobs of.
+     * Required. ID of the cluster to list Yandex Data Processing jobs of.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -200,7 +200,7 @@ public final class JobServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the cluster to list Data Proc jobs of.
+     * Required. ID of the cluster to list Yandex Data Processing jobs of.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -221,7 +221,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the cluster to list Data Proc jobs of.
+     * Required. ID of the cluster to list Yandex Data Processing jobs of.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -711,7 +711,7 @@ public final class JobServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the cluster to list Data Proc jobs of.
+       * Required. ID of the cluster to list Yandex Data Processing jobs of.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -731,7 +731,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list Data Proc jobs of.
+       * Required. ID of the cluster to list Yandex Data Processing jobs of.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -752,7 +752,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list Data Proc jobs of.
+       * Required. ID of the cluster to list Yandex Data Processing jobs of.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -771,7 +771,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list Data Proc jobs of.
+       * Required. ID of the cluster to list Yandex Data Processing jobs of.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -785,7 +785,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the cluster to list Data Proc jobs of.
+       * Required. ID of the cluster to list Yandex Data Processing jobs of.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1111,7 +1111,7 @@ public final class JobServiceOuterClass {
 
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1120,7 +1120,7 @@ public final class JobServiceOuterClass {
         getJobsList();
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1128,7 +1128,7 @@ public final class JobServiceOuterClass {
     yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job getJobs(int index);
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1136,7 +1136,7 @@ public final class JobServiceOuterClass {
     int getJobsCount();
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1145,7 +1145,7 @@ public final class JobServiceOuterClass {
         getJobsOrBuilderList();
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1283,7 +1283,7 @@ public final class JobServiceOuterClass {
     private java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.Job> jobs_;
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1294,7 +1294,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1306,7 +1306,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1317,7 +1317,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1328,7 +1328,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1766,7 +1766,7 @@ public final class JobServiceOuterClass {
 
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1780,7 +1780,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1794,7 +1794,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1808,7 +1808,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1829,7 +1829,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1847,7 +1847,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1867,7 +1867,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1888,7 +1888,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1906,7 +1906,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1924,7 +1924,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1943,7 +1943,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1960,7 +1960,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1977,7 +1977,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -1988,7 +1988,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -2002,7 +2002,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -2017,7 +2017,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -2028,7 +2028,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -2040,7 +2040,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.Job jobs = 1;</code>
@@ -2238,7 +2238,7 @@ public final class JobServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the Data Proc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2247,7 +2247,7 @@ public final class JobServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the Data Proc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2258,7 +2258,7 @@ public final class JobServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the Data Proc job to update.
+     * Required. ID of the Yandex Data Processing job to update.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2267,7 +2267,7 @@ public final class JobServiceOuterClass {
     java.lang.String getJobId();
     /**
      * <pre>
-     * Required. ID of the Data Proc job to update.
+     * Required. ID of the Yandex Data Processing job to update.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2437,7 +2437,7 @@ public final class JobServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the Data Proc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2458,7 +2458,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the Data Proc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2483,7 +2483,7 @@ public final class JobServiceOuterClass {
     private volatile java.lang.Object jobId_;
     /**
      * <pre>
-     * Required. ID of the Data Proc job to update.
+     * Required. ID of the Yandex Data Processing job to update.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2504,7 +2504,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the Data Proc job to update.
+     * Required. ID of the Yandex Data Processing job to update.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2958,7 +2958,7 @@ public final class JobServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2978,7 +2978,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2999,7 +2999,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3018,7 +3018,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3032,7 +3032,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3054,7 +3054,7 @@ public final class JobServiceOuterClass {
       private java.lang.Object jobId_ = "";
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3074,7 +3074,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3095,7 +3095,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3114,7 +3114,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3128,7 +3128,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3852,7 +3852,7 @@ public final class JobServiceOuterClass {
 
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -3861,7 +3861,7 @@ public final class JobServiceOuterClass {
         getJobsList();
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -3869,7 +3869,7 @@ public final class JobServiceOuterClass {
     yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob getJobs(int index);
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -3877,7 +3877,7 @@ public final class JobServiceOuterClass {
     int getJobsCount();
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -3886,7 +3886,7 @@ public final class JobServiceOuterClass {
         getJobsOrBuilderList();
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4024,7 +4024,7 @@ public final class JobServiceOuterClass {
     private java.util.List<yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob> jobs_;
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4035,7 +4035,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4047,7 +4047,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4058,7 +4058,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4069,7 +4069,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Requested list of Data Proc jobs.
+     * Requested list of Yandex Data Processing jobs.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4507,7 +4507,7 @@ public final class JobServiceOuterClass {
 
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4521,7 +4521,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4535,7 +4535,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4549,7 +4549,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4570,7 +4570,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4588,7 +4588,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4608,7 +4608,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4629,7 +4629,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4647,7 +4647,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4665,7 +4665,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4684,7 +4684,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4701,7 +4701,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4718,7 +4718,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4729,7 +4729,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4743,7 +4743,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4758,7 +4758,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4769,7 +4769,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4781,7 +4781,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Requested list of Data Proc jobs.
+       * Requested list of Yandex Data Processing jobs.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dataproc.manager.v1.SupportJob jobs = 1;</code>
@@ -4979,7 +4979,7 @@ public final class JobServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the Data Proc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4988,7 +4988,7 @@ public final class JobServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the Data Proc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4999,7 +4999,7 @@ public final class JobServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the Data Proc job to update.
+     * Required. ID of the Yandex Data Processing job to update.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5008,7 +5008,7 @@ public final class JobServiceOuterClass {
     java.lang.String getJobId();
     /**
      * <pre>
-     * Required. ID of the Data Proc job to update.
+     * Required. ID of the Yandex Data Processing job to update.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5138,7 +5138,7 @@ public final class JobServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the Data Proc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5159,7 +5159,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the Data Proc cluster.
+     * Required. ID of the Yandex Data Processing cluster.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5184,7 +5184,7 @@ public final class JobServiceOuterClass {
     private volatile java.lang.Object jobId_;
     /**
      * <pre>
-     * Required. ID of the Data Proc job to update.
+     * Required. ID of the Yandex Data Processing job to update.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5205,7 +5205,7 @@ public final class JobServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the Data Proc job to update.
+     * Required. ID of the Yandex Data Processing job to update.
      * </pre>
      *
      * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5591,7 +5591,7 @@ public final class JobServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5611,7 +5611,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5632,7 +5632,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5651,7 +5651,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5665,7 +5665,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc cluster.
+       * Required. ID of the Yandex Data Processing cluster.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5687,7 +5687,7 @@ public final class JobServiceOuterClass {
       private java.lang.Object jobId_ = "";
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5707,7 +5707,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5728,7 +5728,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5747,7 +5747,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5761,7 +5761,7 @@ public final class JobServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the Data Proc job to update.
+       * Required. ID of the Yandex Data Processing job to update.
        * </pre>
        *
        * <code>string job_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>

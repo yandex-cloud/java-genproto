@@ -173,6 +173,99 @@ public final class FederationServiceGrpc {
     return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAccessBindings",
+      requestType = yandex.cloud.api.access.Access.ListAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.access.Access.ListAccessBindingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+    if ((getListAccessBindingsMethod = FederationServiceGrpc.getListAccessBindingsMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getListAccessBindingsMethod = FederationServiceGrpc.getListAccessBindingsMethod) == null) {
+          FederationServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getListAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAccessBindings",
+      requestType = yandex.cloud.api.access.Access.SetAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+    if ((getSetAccessBindingsMethod = FederationServiceGrpc.getSetAccessBindingsMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getSetAccessBindingsMethod = FederationServiceGrpc.getSetAccessBindingsMethod) == null) {
+          FederationServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getSetAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAccessBindings",
+      requestType = yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+    if ((getUpdateAccessBindingsMethod = FederationServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+      synchronized (FederationServiceGrpc.class) {
+        if ((getUpdateAccessBindingsMethod = FederationServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+          FederationServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new FederationServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAccessBindingsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -275,6 +368,36 @@ public final class FederationServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Lists access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -312,6 +435,27 @@ public final class FederationServiceGrpc {
                 yandex.cloud.api.iam.v1.workload.oidc.FederationServiceOuterClass.DeleteFederationRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getListAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+                yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
+                  this, METHODID_LIST_ACCESS_BINDINGS)))
+          .addMethod(
+            getSetAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SET_ACCESS_BINDINGS)))
+          .addMethod(
+            getUpdateAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_ACCESS_BINDINGS)))
           .build();
     }
   }
@@ -388,6 +532,39 @@ public final class FederationServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -456,6 +633,36 @@ public final class FederationServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.iam.v1.workload.oidc.FederationServiceOuterClass.DeleteFederationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
 
@@ -531,6 +738,39 @@ public final class FederationServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
+        yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
+        yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the specified OIDC workload identity federation.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
+        yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -538,6 +778,9 @@ public final class FederationServiceGrpc {
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 5;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 6;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -574,6 +817,18 @@ public final class FederationServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.iam.v1.workload.oidc.FederationServiceOuterClass.DeleteFederationRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_ACCESS_BINDINGS:
+          serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse>) responseObserver);
+          break;
+        case METHODID_SET_ACCESS_BINDINGS:
+          serviceImpl.setAccessBindings((yandex.cloud.api.access.Access.SetAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_ACCESS_BINDINGS:
+          serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -642,6 +897,9 @@ public final class FederationServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getListAccessBindingsMethod())
+              .addMethod(getSetAccessBindingsMethod())
+              .addMethod(getUpdateAccessBindingsMethod())
               .build();
         }
       }

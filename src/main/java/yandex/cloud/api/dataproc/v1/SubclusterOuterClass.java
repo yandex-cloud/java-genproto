@@ -41,7 +41,7 @@ public final class SubclusterOuterClass {
     MASTERNODE(1),
     /**
      * <pre>
-     * The subcluster is a DATANODE in a Data Proc cluster.
+     * The subcluster is a DATANODE in a Yandex Data Processing cluster.
      * DATANODE can run the following services, depending on the requested components:
      * * HDFS DataNode
      * * YARN NodeManager
@@ -54,7 +54,7 @@ public final class SubclusterOuterClass {
     DATANODE(2),
     /**
      * <pre>
-     * The subcluster is a COMPUTENODE in a Data Proc cluster.
+     * The subcluster is a COMPUTENODE in a Yandex Data Processing cluster.
      * COMPUTENODE can run the following services, depending on the requested components:
      * * YARN NodeManager
      * * Spark libraries
@@ -88,7 +88,7 @@ public final class SubclusterOuterClass {
     public static final int MASTERNODE_VALUE = 1;
     /**
      * <pre>
-     * The subcluster is a DATANODE in a Data Proc cluster.
+     * The subcluster is a DATANODE in a Yandex Data Processing cluster.
      * DATANODE can run the following services, depending on the requested components:
      * * HDFS DataNode
      * * YARN NodeManager
@@ -101,7 +101,7 @@ public final class SubclusterOuterClass {
     public static final int DATANODE_VALUE = 2;
     /**
      * <pre>
-     * The subcluster is a COMPUTENODE in a Data Proc cluster.
+     * The subcluster is a COMPUTENODE in a Yandex Data Processing cluster.
      * COMPUTENODE can run the following services, depending on the requested components:
      * * YARN NodeManager
      * * Spark libraries
@@ -1864,7 +1864,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * ID of the Data Proc cluster that the subcluster belongs to.
+     * ID of the Yandex Data Processing cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -1873,7 +1873,7 @@ public final class SubclusterOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the Data Proc cluster that the subcluster belongs to.
+     * ID of the Yandex Data Processing cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -2064,7 +2064,7 @@ public final class SubclusterOuterClass {
   }
   /**
    * <pre>
-   * A Data Proc subcluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
+   * A Yandex Data Processing subcluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Subcluster}
@@ -2284,7 +2284,7 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the Data Proc cluster that the subcluster belongs to.
+     * ID of the Yandex Data Processing cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -2305,7 +2305,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the Data Proc cluster that the subcluster belongs to.
+     * ID of the Yandex Data Processing cluster that the subcluster belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -2913,7 +2913,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * A Data Proc subcluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
+     * A Yandex Data Processing subcluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Subcluster}
@@ -3250,7 +3250,7 @@ public final class SubclusterOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -3270,7 +3270,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -3291,7 +3291,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -3310,7 +3310,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -3324,7 +3324,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc cluster that the subcluster belongs to.
+       * ID of the Yandex Data Processing cluster that the subcluster belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -4314,8 +4314,8 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
-     * and cannot be changed. The name is generated to be unique across all Data Proc
+     * Name of the Yandex Data Processing host. The host name is assigned by Yandex Data Processing at creation time
+     * and cannot be changed. The name is generated to be unique across all Yandex Data Processing
      * hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
@@ -4325,8 +4325,8 @@ public final class SubclusterOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
-     * and cannot be changed. The name is generated to be unique across all Data Proc
+     * Name of the Yandex Data Processing host. The host name is assigned by Yandex Data Processing at creation time
+     * and cannot be changed. The name is generated to be unique across all Yandex Data Processing
      * hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
@@ -4338,7 +4338,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * ID of the Data Proc subcluster that the host belongs to.
+     * ID of the Yandex Data Processing subcluster that the host belongs to.
      * </pre>
      *
      * <code>string subcluster_id = 2;</code>
@@ -4347,7 +4347,7 @@ public final class SubclusterOuterClass {
     java.lang.String getSubclusterId();
     /**
      * <pre>
-     * ID of the Data Proc subcluster that the host belongs to.
+     * ID of the Yandex Data Processing subcluster that the host belongs to.
      * </pre>
      *
      * <code>string subcluster_id = 2;</code>
@@ -4377,7 +4377,7 @@ public final class SubclusterOuterClass {
 
     /**
      * <pre>
-     * ID of the Compute virtual machine that is used as the Data Proc host.
+     * ID of the Compute virtual machine that is used as the Yandex Data Processing host.
      * </pre>
      *
      * <code>string compute_instance_id = 4;</code>
@@ -4386,7 +4386,7 @@ public final class SubclusterOuterClass {
     java.lang.String getComputeInstanceId();
     /**
      * <pre>
-     * ID of the Compute virtual machine that is used as the Data Proc host.
+     * ID of the Compute virtual machine that is used as the Yandex Data Processing host.
      * </pre>
      *
      * <code>string compute_instance_id = 4;</code>
@@ -4416,7 +4416,7 @@ public final class SubclusterOuterClass {
   }
   /**
    * <pre>
-   * A Data Proc host. For details about the concept, see [documentation](/docs/data-proc/concepts/).
+   * A Yandex Data Processing host. For details about the concept, see [documentation](/docs/data-proc/concepts/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Host}
@@ -4534,8 +4534,8 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
-     * and cannot be changed. The name is generated to be unique across all Data Proc
+     * Name of the Yandex Data Processing host. The host name is assigned by Yandex Data Processing at creation time
+     * and cannot be changed. The name is generated to be unique across all Yandex Data Processing
      * hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
@@ -4557,8 +4557,8 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
-     * and cannot be changed. The name is generated to be unique across all Data Proc
+     * Name of the Yandex Data Processing host. The host name is assigned by Yandex Data Processing at creation time
+     * and cannot be changed. The name is generated to be unique across all Yandex Data Processing
      * hosts that exist on the platform, as it defines the FQDN of the host.
      * </pre>
      *
@@ -4584,7 +4584,7 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object subclusterId_;
     /**
      * <pre>
-     * ID of the Data Proc subcluster that the host belongs to.
+     * ID of the Yandex Data Processing subcluster that the host belongs to.
      * </pre>
      *
      * <code>string subcluster_id = 2;</code>
@@ -4605,7 +4605,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the Data Proc subcluster that the host belongs to.
+     * ID of the Yandex Data Processing subcluster that the host belongs to.
      * </pre>
      *
      * <code>string subcluster_id = 2;</code>
@@ -4657,7 +4657,7 @@ public final class SubclusterOuterClass {
     private volatile java.lang.Object computeInstanceId_;
     /**
      * <pre>
-     * ID of the Compute virtual machine that is used as the Data Proc host.
+     * ID of the Compute virtual machine that is used as the Yandex Data Processing host.
      * </pre>
      *
      * <code>string compute_instance_id = 4;</code>
@@ -4678,7 +4678,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the Compute virtual machine that is used as the Data Proc host.
+     * ID of the Compute virtual machine that is used as the Yandex Data Processing host.
      * </pre>
      *
      * <code>string compute_instance_id = 4;</code>
@@ -4922,7 +4922,7 @@ public final class SubclusterOuterClass {
     }
     /**
      * <pre>
-     * A Data Proc host. For details about the concept, see [documentation](/docs/data-proc/concepts/).
+     * A Yandex Data Processing host. For details about the concept, see [documentation](/docs/data-proc/concepts/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Host}
@@ -5101,8 +5101,8 @@ public final class SubclusterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
-       * and cannot be changed. The name is generated to be unique across all Data Proc
+       * Name of the Yandex Data Processing host. The host name is assigned by Yandex Data Processing at creation time
+       * and cannot be changed. The name is generated to be unique across all Yandex Data Processing
        * hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -5123,8 +5123,8 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
-       * and cannot be changed. The name is generated to be unique across all Data Proc
+       * Name of the Yandex Data Processing host. The host name is assigned by Yandex Data Processing at creation time
+       * and cannot be changed. The name is generated to be unique across all Yandex Data Processing
        * hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -5146,8 +5146,8 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
-       * and cannot be changed. The name is generated to be unique across all Data Proc
+       * Name of the Yandex Data Processing host. The host name is assigned by Yandex Data Processing at creation time
+       * and cannot be changed. The name is generated to be unique across all Yandex Data Processing
        * hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -5167,8 +5167,8 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
-       * and cannot be changed. The name is generated to be unique across all Data Proc
+       * Name of the Yandex Data Processing host. The host name is assigned by Yandex Data Processing at creation time
+       * and cannot be changed. The name is generated to be unique across all Yandex Data Processing
        * hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -5183,8 +5183,8 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the Data Proc host. The host name is assigned by Data Proc at creation time
-       * and cannot be changed. The name is generated to be unique across all Data Proc
+       * Name of the Yandex Data Processing host. The host name is assigned by Yandex Data Processing at creation time
+       * and cannot be changed. The name is generated to be unique across all Yandex Data Processing
        * hosts that exist on the platform, as it defines the FQDN of the host.
        * </pre>
        *
@@ -5207,7 +5207,7 @@ public final class SubclusterOuterClass {
       private java.lang.Object subclusterId_ = "";
       /**
        * <pre>
-       * ID of the Data Proc subcluster that the host belongs to.
+       * ID of the Yandex Data Processing subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -5227,7 +5227,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc subcluster that the host belongs to.
+       * ID of the Yandex Data Processing subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -5248,7 +5248,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc subcluster that the host belongs to.
+       * ID of the Yandex Data Processing subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -5267,7 +5267,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc subcluster that the host belongs to.
+       * ID of the Yandex Data Processing subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -5281,7 +5281,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Data Proc subcluster that the host belongs to.
+       * ID of the Yandex Data Processing subcluster that the host belongs to.
        * </pre>
        *
        * <code>string subcluster_id = 2;</code>
@@ -5377,7 +5377,7 @@ public final class SubclusterOuterClass {
       private java.lang.Object computeInstanceId_ = "";
       /**
        * <pre>
-       * ID of the Compute virtual machine that is used as the Data Proc host.
+       * ID of the Compute virtual machine that is used as the Yandex Data Processing host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>
@@ -5397,7 +5397,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Compute virtual machine that is used as the Data Proc host.
+       * ID of the Compute virtual machine that is used as the Yandex Data Processing host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>
@@ -5418,7 +5418,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Compute virtual machine that is used as the Data Proc host.
+       * ID of the Compute virtual machine that is used as the Yandex Data Processing host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>
@@ -5437,7 +5437,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Compute virtual machine that is used as the Data Proc host.
+       * ID of the Compute virtual machine that is used as the Yandex Data Processing host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>
@@ -5451,7 +5451,7 @@ public final class SubclusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the Compute virtual machine that is used as the Data Proc host.
+       * ID of the Compute virtual machine that is used as the Yandex Data Processing host.
        * </pre>
        *
        * <code>string compute_instance_id = 4;</code>

@@ -147,6 +147,982 @@ public final class ResourceOuterClass {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.backup.v1.ResourceType)
   }
 
+  public interface TenantInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.TenantInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Folder ID
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Folder ID
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Personal tenant id from backup provider
+     * </pre>
+     *
+     * <code>string personal_tenant_id = 2;</code>
+     * @return The personalTenantId.
+     */
+    java.lang.String getPersonalTenantId();
+    /**
+     * <pre>
+     * Personal tenant id from backup provider
+     * </pre>
+     *
+     * <code>string personal_tenant_id = 2;</code>
+     * @return The bytes for personalTenantId.
+     */
+    com.google.protobuf.ByteString
+        getPersonalTenantIdBytes();
+
+    /**
+     * <pre>
+     * User id from provider
+     * </pre>
+     *
+     * <code>string user_id = 3;</code>
+     * @return The userId.
+     */
+    java.lang.String getUserId();
+    /**
+     * <pre>
+     * User id from provider
+     * </pre>
+     *
+     * <code>string user_id = 3;</code>
+     * @return The bytes for userId.
+     */
+    com.google.protobuf.ByteString
+        getUserIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.backup.v1.TenantInfo}
+   */
+  public static final class TenantInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.backup.v1.TenantInfo)
+      TenantInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TenantInfo.newBuilder() to construct.
+    private TenantInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TenantInfo() {
+      folderId_ = "";
+      personalTenantId_ = "";
+      userId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TenantInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TenantInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              personalTenantId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              userId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_TenantInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_TenantInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.class, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Folder ID
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Folder ID
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PERSONAL_TENANT_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object personalTenantId_;
+    /**
+     * <pre>
+     * Personal tenant id from backup provider
+     * </pre>
+     *
+     * <code>string personal_tenant_id = 2;</code>
+     * @return The personalTenantId.
+     */
+    @java.lang.Override
+    public java.lang.String getPersonalTenantId() {
+      java.lang.Object ref = personalTenantId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        personalTenantId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Personal tenant id from backup provider
+     * </pre>
+     *
+     * <code>string personal_tenant_id = 2;</code>
+     * @return The bytes for personalTenantId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPersonalTenantIdBytes() {
+      java.lang.Object ref = personalTenantId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        personalTenantId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object userId_;
+    /**
+     * <pre>
+     * User id from provider
+     * </pre>
+     *
+     * <code>string user_id = 3;</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * User id from provider
+     * </pre>
+     *
+     * <code>string user_id = 3;</code>
+     * @return The bytes for userId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(personalTenantId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, personalTenantId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(personalTenantId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, personalTenantId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo other = (yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getPersonalTenantId()
+          .equals(other.getPersonalTenantId())) return false;
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + PERSONAL_TENANT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPersonalTenantId().hashCode();
+      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.backup.v1.TenantInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.backup.v1.TenantInfo)
+        yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_TenantInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_TenantInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.class, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        personalTenantId_ = "";
+
+        userId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.internal_static_yandex_cloud_backup_v1_TenantInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo getDefaultInstanceForType() {
+        return yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo build() {
+        yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo buildPartial() {
+        yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo result = new yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo(this);
+        result.folderId_ = folderId_;
+        result.personalTenantId_ = personalTenantId_;
+        result.userId_ = userId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo) {
+          return mergeFrom((yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo other) {
+        if (other == yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getPersonalTenantId().isEmpty()) {
+          personalTenantId_ = other.personalTenantId_;
+          onChanged();
+        }
+        if (!other.getUserId().isEmpty()) {
+          userId_ = other.userId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Folder ID
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object personalTenantId_ = "";
+      /**
+       * <pre>
+       * Personal tenant id from backup provider
+       * </pre>
+       *
+       * <code>string personal_tenant_id = 2;</code>
+       * @return The personalTenantId.
+       */
+      public java.lang.String getPersonalTenantId() {
+        java.lang.Object ref = personalTenantId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          personalTenantId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Personal tenant id from backup provider
+       * </pre>
+       *
+       * <code>string personal_tenant_id = 2;</code>
+       * @return The bytes for personalTenantId.
+       */
+      public com.google.protobuf.ByteString
+          getPersonalTenantIdBytes() {
+        java.lang.Object ref = personalTenantId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          personalTenantId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Personal tenant id from backup provider
+       * </pre>
+       *
+       * <code>string personal_tenant_id = 2;</code>
+       * @param value The personalTenantId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPersonalTenantId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        personalTenantId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Personal tenant id from backup provider
+       * </pre>
+       *
+       * <code>string personal_tenant_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPersonalTenantId() {
+        
+        personalTenantId_ = getDefaultInstance().getPersonalTenantId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Personal tenant id from backup provider
+       * </pre>
+       *
+       * <code>string personal_tenant_id = 2;</code>
+       * @param value The bytes for personalTenantId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPersonalTenantIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        personalTenantId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userId_ = "";
+      /**
+       * <pre>
+       * User id from provider
+       * </pre>
+       *
+       * <code>string user_id = 3;</code>
+       * @return The userId.
+       */
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User id from provider
+       * </pre>
+       *
+       * <code>string user_id = 3;</code>
+       * @return The bytes for userId.
+       */
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * User id from provider
+       * </pre>
+       *
+       * <code>string user_id = 3;</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User id from provider
+       * </pre>
+       *
+       * <code>string user_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        
+        userId_ = getDefaultInstance().getUserId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User id from provider
+       * </pre>
+       *
+       * <code>string user_id = 3;</code>
+       * @param value The bytes for userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.backup.v1.TenantInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.backup.v1.TenantInfo)
+    private static final yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo();
+    }
+
+    public static yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TenantInfo>
+        PARSER = new com.google.protobuf.AbstractParser<TenantInfo>() {
+      @java.lang.Override
+      public TenantInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TenantInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TenantInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TenantInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ResourceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.backup.v1.Resource)
       com.google.protobuf.MessageOrBuilder {
@@ -386,6 +1362,33 @@ public final class ResourceOuterClass {
      * @return The type.
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType getType();
+
+    /**
+     * <pre>
+     * Additional info abount tenant which resource belongs to
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+     * @return Whether the tenantInfo field is set.
+     */
+    boolean hasTenantInfo();
+    /**
+     * <pre>
+     * Additional info abount tenant which resource belongs to
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+     * @return The tenantInfo.
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo getTenantInfo();
+    /**
+     * <pre>
+     * Additional info abount tenant which resource belongs to
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+     */
+    yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder getTenantInfoOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.backup.v1.Resource}
@@ -551,6 +1554,19 @@ public final class ResourceOuterClass {
               int rawValue = input.readEnum();
 
               type_ = rawValue;
+              break;
+            }
+            case 130: {
+              yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.Builder subBuilder = null;
+              if (tenantInfo_ != null) {
+                subBuilder = tenantInfo_.toBuilder();
+              }
+              tenantInfo_ = input.readMessage(yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tenantInfo_);
+                tenantInfo_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1368,6 +2384,44 @@ public final class ResourceOuterClass {
       return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.UNRECOGNIZED : result;
     }
 
+    public static final int TENANT_INFO_FIELD_NUMBER = 16;
+    private yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo tenantInfo_;
+    /**
+     * <pre>
+     * Additional info abount tenant which resource belongs to
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+     * @return Whether the tenantInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasTenantInfo() {
+      return tenantInfo_ != null;
+    }
+    /**
+     * <pre>
+     * Additional info abount tenant which resource belongs to
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+     * @return The tenantInfo.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo getTenantInfo() {
+      return tenantInfo_ == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.getDefaultInstance() : tenantInfo_;
+    }
+    /**
+     * <pre>
+     * Additional info abount tenant which resource belongs to
+     * </pre>
+     *
+     * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder getTenantInfoOrBuilder() {
+      return getTenantInfo();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1426,6 +2480,9 @@ public final class ResourceOuterClass {
       }
       if (type_ != yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(15, type_);
+      }
+      if (tenantInfo_ != null) {
+        output.writeMessage(16, getTenantInfo());
       }
       unknownFields.writeTo(output);
     }
@@ -1492,6 +2549,10 @@ public final class ResourceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(15, type_);
       }
+      if (tenantInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, getTenantInfo());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1546,6 +2607,11 @@ public final class ResourceOuterClass {
       if (!getMetadata()
           .equals(other.getMetadata())) return false;
       if (type_ != other.type_) return false;
+      if (hasTenantInfo() != other.hasTenantInfo()) return false;
+      if (hasTenantInfo()) {
+        if (!getTenantInfo()
+            .equals(other.getTenantInfo())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1599,6 +2665,10 @@ public final class ResourceOuterClass {
       hash = (53 * hash) + getMetadata().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
+      if (hasTenantInfo()) {
+        hash = (37 * hash) + TENANT_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getTenantInfo().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1778,6 +2848,12 @@ public final class ResourceOuterClass {
 
         type_ = 0;
 
+        if (tenantInfoBuilder_ == null) {
+          tenantInfo_ = null;
+        } else {
+          tenantInfo_ = null;
+          tenantInfoBuilder_ = null;
+        }
         return this;
       }
 
@@ -1835,6 +2911,11 @@ public final class ResourceOuterClass {
         result.initStatus_ = initStatus_;
         result.metadata_ = metadata_;
         result.type_ = type_;
+        if (tenantInfoBuilder_ == null) {
+          result.tenantInfo_ = tenantInfo_;
+        } else {
+          result.tenantInfo_ = tenantInfoBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1931,6 +3012,9 @@ public final class ResourceOuterClass {
         }
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
+        }
+        if (other.hasTenantInfo()) {
+          mergeTenantInfo(other.getTenantInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3212,6 +4296,161 @@ public final class ResourceOuterClass {
         type_ = 0;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo tenantInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder> tenantInfoBuilder_;
+      /**
+       * <pre>
+       * Additional info abount tenant which resource belongs to
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+       * @return Whether the tenantInfo field is set.
+       */
+      public boolean hasTenantInfo() {
+        return tenantInfoBuilder_ != null || tenantInfo_ != null;
+      }
+      /**
+       * <pre>
+       * Additional info abount tenant which resource belongs to
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+       * @return The tenantInfo.
+       */
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo getTenantInfo() {
+        if (tenantInfoBuilder_ == null) {
+          return tenantInfo_ == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.getDefaultInstance() : tenantInfo_;
+        } else {
+          return tenantInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Additional info abount tenant which resource belongs to
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+       */
+      public Builder setTenantInfo(yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo value) {
+        if (tenantInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tenantInfo_ = value;
+          onChanged();
+        } else {
+          tenantInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional info abount tenant which resource belongs to
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+       */
+      public Builder setTenantInfo(
+          yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.Builder builderForValue) {
+        if (tenantInfoBuilder_ == null) {
+          tenantInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          tenantInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional info abount tenant which resource belongs to
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+       */
+      public Builder mergeTenantInfo(yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo value) {
+        if (tenantInfoBuilder_ == null) {
+          if (tenantInfo_ != null) {
+            tenantInfo_ =
+              yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.newBuilder(tenantInfo_).mergeFrom(value).buildPartial();
+          } else {
+            tenantInfo_ = value;
+          }
+          onChanged();
+        } else {
+          tenantInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional info abount tenant which resource belongs to
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+       */
+      public Builder clearTenantInfo() {
+        if (tenantInfoBuilder_ == null) {
+          tenantInfo_ = null;
+          onChanged();
+        } else {
+          tenantInfo_ = null;
+          tenantInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional info abount tenant which resource belongs to
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+       */
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.Builder getTenantInfoBuilder() {
+        
+        onChanged();
+        return getTenantInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Additional info abount tenant which resource belongs to
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+       */
+      public yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder getTenantInfoOrBuilder() {
+        if (tenantInfoBuilder_ != null) {
+          return tenantInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return tenantInfo_ == null ?
+              yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.getDefaultInstance() : tenantInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * Additional info abount tenant which resource belongs to
+       * </pre>
+       *
+       * <code>.yandex.cloud.backup.v1.TenantInfo tenant_info = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder> 
+          getTenantInfoFieldBuilder() {
+        if (tenantInfoBuilder_ == null) {
+          tenantInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfo.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.TenantInfoOrBuilder>(
+                  getTenantInfo(),
+                  getParentForChildren(),
+                  isClean());
+          tenantInfo_ = null;
+        }
+        return tenantInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6943,6 +8182,11 @@ public final class ResourceOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_backup_v1_TenantInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_backup_v1_TenantInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_backup_v1_Resource_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -6968,72 +8212,82 @@ public final class ResourceOuterClass {
     java.lang.String[] descriptorData = {
       "\n%yandex/cloud/backup/v1/resource.proto\022" +
       "\026yandex.cloud.backup.v1\032\037google/protobuf" +
-      "/timestamp.proto\"\201\006\n\010Resource\022\033\n\023compute" +
-      "_instance_id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022.\n\nupdated_at" +
-      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022\016\n\006on" +
-      "line\030\004 \001(\010\022\017\n\007enabled\030\005 \001(\010\0227\n\006status\030\006 " +
-      "\001(\0162\'.yandex.cloud.backup.v1.Resource.St" +
-      "atus\022\026\n\016status_details\030\007 \001(\t\022\027\n\017status_p" +
-      "rogress\030\010 \001(\003\0224\n\020last_backup_time\030\t \001(\0132" +
-      "\032.google.protobuf.Timestamp\0224\n\020next_back" +
-      "up_time\030\n \001(\0132\032.google.protobuf.Timestam" +
-      "p\022\023\n\013resource_id\030\013 \001(\t\022\021\n\tis_active\030\014 \001(" +
-      "\010\022@\n\013init_status\030\r \001(\0162+.yandex.cloud.ba" +
-      "ckup.v1.Resource.InitStatus\022\020\n\010metadata\030" +
-      "\016 \001(\t\0222\n\004type\030\017 \001(\0162$.yandex.cloud.backu" +
-      "p.v1.ResourceType\"`\n\006Status\022\026\n\022STATUS_UN" +
-      "SPECIFIED\020\000\022\010\n\004IDLE\020\001\022\r\n\tBACKUPING\020\002\022\016\n\n" +
-      "RECOVERING\020\003\022\n\n\006FAILED\020\004\022\t\n\005OTHER\020\005\"o\n\nI" +
-      "nitStatus\022\033\n\027INIT_STATUS_UNSPECIFIED\020\000\022\017" +
-      "\n\013REGISTERING\020\001\022\r\n\tREGISTRED\020\002\022\027\n\023FAILED" +
-      "_REGISTRATION\020\003\022\013\n\007DELETED\020\004\"*\n\010Progress" +
-      "\022\017\n\007current\030\001 \001(\003\022\r\n\005total\030\002 \001(\003\"\267\006\n\004Tas" +
-      "k\022\n\n\002id\030\001 \001(\003\022\023\n\013cancellable\030\002 \001(\010\022\021\n\tpo" +
-      "licy_id\030\003 \001(\t\022/\n\004type\030\004 \001(\0162!.yandex.clo" +
-      "ud.backup.v1.Task.Type\0222\n\010progress\030\005 \001(\013" +
-      "2 .yandex.cloud.backup.v1.Progress\0223\n\006st" +
-      "atus\030\006 \001(\0162#.yandex.cloud.backup.v1.Task" +
-      ".Status\022/\n\013enqueued_at\030\007 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022.\n\nstarted_at\030\010 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022.\n\nupdated_at\030\t" +
-      " \001(\0132\032.google.protobuf.Timestamp\0220\n\014comp" +
-      "leted_at\030\n \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022\033\n\023compute_instance_id\030\013 \001(\t\0226\n\013resul" +
-      "t_code\030\014 \001(\0162!.yandex.cloud.backup.v1.Ta" +
-      "sk.Code\022\r\n\005error\030\r \001(\t\"j\n\004Type\022\024\n\020TYPE_U" +
-      "NSPECIFIED\020\000\022\n\n\006BACKUP\020\001\022\r\n\tRETENTION\020\002\022" +
-      "\014\n\010RECOVERY\020\003\022\020\n\014APPLY_POLICY\020\004\022\021\n\rREVOK" +
-      "E_POLICY\020\005\"d\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
-      "ED\020\000\022\014\n\010ENQUEUED\020\001\022\014\n\010ASSIGNED\020\002\022\013\n\007STAR" +
-      "TED\020\003\022\n\n\006PAUSED\020\004\022\r\n\tCOMPLETED\020\005\"h\n\004Code" +
-      "\022\024\n\020CODE_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020" +
-      "\002\022\013\n\007WARNING\020\003\022\r\n\tCANCELLED\020\004\022\r\n\tABANDON" +
-      "ED\020\005\022\014\n\010TIMEDOUT\020\006*C\n\014ResourceType\022\035\n\031RE" +
-      "SOURCE_TYPE_UNSPECIFIED\020\000\022\013\n\007COMPUTE\020\001\022\007" +
-      "\n\003BMS\020\002B_\n\032yandex.cloud.api.backup.v1ZAg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/backup/v1;backupb\006proto3"
+      "/timestamp.proto\"L\n\nTenantInfo\022\021\n\tfolder" +
+      "_id\030\001 \001(\t\022\032\n\022personal_tenant_id\030\002 \001(\t\022\017\n" +
+      "\007user_id\030\003 \001(\t\"\272\006\n\010Resource\022\033\n\023compute_i" +
+      "nstance_id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022.\n\nupdated_at\030\003" +
+      " \001(\0132\032.google.protobuf.Timestamp\022\016\n\006onli" +
+      "ne\030\004 \001(\010\022\017\n\007enabled\030\005 \001(\010\0227\n\006status\030\006 \001(" +
+      "\0162\'.yandex.cloud.backup.v1.Resource.Stat" +
+      "us\022\026\n\016status_details\030\007 \001(\t\022\027\n\017status_pro" +
+      "gress\030\010 \001(\003\0224\n\020last_backup_time\030\t \001(\0132\032." +
+      "google.protobuf.Timestamp\0224\n\020next_backup" +
+      "_time\030\n \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\023\n\013resource_id\030\013 \001(\t\022\021\n\tis_active\030\014 \001(\010\022" +
+      "@\n\013init_status\030\r \001(\0162+.yandex.cloud.back" +
+      "up.v1.Resource.InitStatus\022\020\n\010metadata\030\016 " +
+      "\001(\t\0222\n\004type\030\017 \001(\0162$.yandex.cloud.backup." +
+      "v1.ResourceType\0227\n\013tenant_info\030\020 \001(\0132\".y" +
+      "andex.cloud.backup.v1.TenantInfo\"`\n\006Stat" +
+      "us\022\026\n\022STATUS_UNSPECIFIED\020\000\022\010\n\004IDLE\020\001\022\r\n\t" +
+      "BACKUPING\020\002\022\016\n\nRECOVERING\020\003\022\n\n\006FAILED\020\004\022" +
+      "\t\n\005OTHER\020\005\"o\n\nInitStatus\022\033\n\027INIT_STATUS_" +
+      "UNSPECIFIED\020\000\022\017\n\013REGISTERING\020\001\022\r\n\tREGIST" +
+      "RED\020\002\022\027\n\023FAILED_REGISTRATION\020\003\022\013\n\007DELETE" +
+      "D\020\004\"*\n\010Progress\022\017\n\007current\030\001 \001(\003\022\r\n\005tota" +
+      "l\030\002 \001(\003\"\267\006\n\004Task\022\n\n\002id\030\001 \001(\003\022\023\n\013cancella" +
+      "ble\030\002 \001(\010\022\021\n\tpolicy_id\030\003 \001(\t\022/\n\004type\030\004 \001" +
+      "(\0162!.yandex.cloud.backup.v1.Task.Type\0222\n" +
+      "\010progress\030\005 \001(\0132 .yandex.cloud.backup.v1" +
+      ".Progress\0223\n\006status\030\006 \001(\0162#.yandex.cloud" +
+      ".backup.v1.Task.Status\022/\n\013enqueued_at\030\007 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022.\n\nstart" +
+      "ed_at\030\010 \001(\0132\032.google.protobuf.Timestamp\022" +
+      ".\n\nupdated_at\030\t \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\0220\n\014completed_at\030\n \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022\033\n\023compute_instance_id" +
+      "\030\013 \001(\t\0226\n\013result_code\030\014 \001(\0162!.yandex.clo" +
+      "ud.backup.v1.Task.Code\022\r\n\005error\030\r \001(\t\"j\n" +
+      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006BACKUP\020\001\022" +
+      "\r\n\tRETENTION\020\002\022\014\n\010RECOVERY\020\003\022\020\n\014APPLY_PO" +
+      "LICY\020\004\022\021\n\rREVOKE_POLICY\020\005\"d\n\006Status\022\026\n\022S" +
+      "TATUS_UNSPECIFIED\020\000\022\014\n\010ENQUEUED\020\001\022\014\n\010ASS" +
+      "IGNED\020\002\022\013\n\007STARTED\020\003\022\n\n\006PAUSED\020\004\022\r\n\tCOMP" +
+      "LETED\020\005\"h\n\004Code\022\024\n\020CODE_UNSPECIFIED\020\000\022\006\n" +
+      "\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007WARNING\020\003\022\r\n\tCANCELL" +
+      "ED\020\004\022\r\n\tABANDONED\020\005\022\014\n\010TIMEDOUT\020\006*C\n\014Res" +
+      "ourceType\022\035\n\031RESOURCE_TYPE_UNSPECIFIED\020\000" +
+      "\022\013\n\007COMPUTE\020\001\022\007\n\003BMS\020\002B_\n\032yandex.cloud.a" +
+      "pi.backup.v1ZAgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/backup/v1;backupb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_yandex_cloud_backup_v1_Resource_descriptor =
+    internal_static_yandex_cloud_backup_v1_TenantInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_yandex_cloud_backup_v1_TenantInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_backup_v1_TenantInfo_descriptor,
+        new java.lang.String[] { "FolderId", "PersonalTenantId", "UserId", });
+    internal_static_yandex_cloud_backup_v1_Resource_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_backup_v1_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Resource_descriptor,
-        new java.lang.String[] { "ComputeInstanceId", "CreatedAt", "UpdatedAt", "Online", "Enabled", "Status", "StatusDetails", "StatusProgress", "LastBackupTime", "NextBackupTime", "ResourceId", "IsActive", "InitStatus", "Metadata", "Type", });
+        new java.lang.String[] { "ComputeInstanceId", "CreatedAt", "UpdatedAt", "Online", "Enabled", "Status", "StatusDetails", "StatusProgress", "LastBackupTime", "NextBackupTime", "ResourceId", "IsActive", "InitStatus", "Metadata", "Type", "TenantInfo", });
     internal_static_yandex_cloud_backup_v1_Progress_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_backup_v1_Progress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Progress_descriptor,
         new java.lang.String[] { "Current", "Total", });
     internal_static_yandex_cloud_backup_v1_Task_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_backup_v1_Task_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_Task_descriptor,

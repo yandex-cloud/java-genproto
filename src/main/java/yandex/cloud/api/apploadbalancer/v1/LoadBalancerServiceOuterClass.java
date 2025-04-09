@@ -4540,6 +4540,16 @@ public final class LoadBalancerServiceOuterClass {
      * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 10;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder getLogOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies whether application load balancer is available to zonal shift.
+     * </pre>
+     *
+     * <code>bool allow_zonal_shift = 11;</code>
+     * @return The allowZonalShift.
+     */
+    boolean getAllowZonalShift();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.UpdateLoadBalancerRequest}
@@ -4691,6 +4701,11 @@ public final class LoadBalancerServiceOuterClass {
                 logOptions_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 88: {
+
+              allowZonalShift_ = input.readBool();
               break;
             }
             default: {
@@ -5358,6 +5373,21 @@ public final class LoadBalancerServiceOuterClass {
       return getLogOptions();
     }
 
+    public static final int ALLOW_ZONAL_SHIFT_FIELD_NUMBER = 11;
+    private boolean allowZonalShift_;
+    /**
+     * <pre>
+     * Specifies whether application load balancer is available to zonal shift.
+     * </pre>
+     *
+     * <code>bool allow_zonal_shift = 11;</code>
+     * @return The allowZonalShift.
+     */
+    @java.lang.Override
+    public boolean getAllowZonalShift() {
+      return allowZonalShift_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5404,6 +5434,9 @@ public final class LoadBalancerServiceOuterClass {
       }
       if (logOptions_ != null) {
         output.writeMessage(10, getLogOptions());
+      }
+      if (allowZonalShift_ != false) {
+        output.writeBool(11, allowZonalShift_);
       }
       unknownFields.writeTo(output);
     }
@@ -5461,6 +5494,10 @@ public final class LoadBalancerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLogOptions());
       }
+      if (allowZonalShift_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, allowZonalShift_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5508,6 +5545,8 @@ public final class LoadBalancerServiceOuterClass {
         if (!getLogOptions()
             .equals(other.getLogOptions())) return false;
       }
+      if (getAllowZonalShift()
+          != other.getAllowZonalShift()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5553,6 +5592,9 @@ public final class LoadBalancerServiceOuterClass {
         hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getLogOptions().hashCode();
       }
+      hash = (37 * hash) + ALLOW_ZONAL_SHIFT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowZonalShift());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5748,6 +5790,8 @@ public final class LoadBalancerServiceOuterClass {
           logOptions_ = null;
           logOptionsBuilder_ = null;
         }
+        allowZonalShift_ = false;
+
         return this;
       }
 
@@ -5814,6 +5858,7 @@ public final class LoadBalancerServiceOuterClass {
         } else {
           result.logOptions_ = logOptionsBuilder_.build();
         }
+        result.allowZonalShift_ = allowZonalShift_;
         onBuilt();
         return result;
       }
@@ -5923,6 +5968,9 @@ public final class LoadBalancerServiceOuterClass {
         }
         if (other.hasLogOptions()) {
           mergeLogOptions(other.getLogOptions());
+        }
+        if (other.getAllowZonalShift() != false) {
+          setAllowZonalShift(other.getAllowZonalShift());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7791,6 +7839,49 @@ public final class LoadBalancerServiceOuterClass {
         }
         return logOptionsBuilder_;
       }
+
+      private boolean allowZonalShift_ ;
+      /**
+       * <pre>
+       * Specifies whether application load balancer is available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 11;</code>
+       * @return The allowZonalShift.
+       */
+      @java.lang.Override
+      public boolean getAllowZonalShift() {
+        return allowZonalShift_;
+      }
+      /**
+       * <pre>
+       * Specifies whether application load balancer is available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 11;</code>
+       * @param value The allowZonalShift to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowZonalShift(boolean value) {
+        
+        allowZonalShift_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether application load balancer is available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowZonalShift() {
+        
+        allowZonalShift_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8821,6 +8912,16 @@ public final class LoadBalancerServiceOuterClass {
      * <code>.yandex.cloud.apploadbalancer.v1.LogOptions log_options = 11;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.Logging.LogOptionsOrBuilder getLogOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies whether application load balancer is available to zonal shift.
+     * </pre>
+     *
+     * <code>bool allow_zonal_shift = 12;</code>
+     * @return The allowZonalShift.
+     */
+    boolean getAllowZonalShift();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CreateLoadBalancerRequest}
@@ -8973,6 +9074,11 @@ public final class LoadBalancerServiceOuterClass {
                 logOptions_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 96: {
+
+              allowZonalShift_ = input.readBool();
               break;
             }
             default: {
@@ -9626,6 +9732,21 @@ public final class LoadBalancerServiceOuterClass {
       return getLogOptions();
     }
 
+    public static final int ALLOW_ZONAL_SHIFT_FIELD_NUMBER = 12;
+    private boolean allowZonalShift_;
+    /**
+     * <pre>
+     * Specifies whether application load balancer is available to zonal shift.
+     * </pre>
+     *
+     * <code>bool allow_zonal_shift = 12;</code>
+     * @return The allowZonalShift.
+     */
+    @java.lang.Override
+    public boolean getAllowZonalShift() {
+      return allowZonalShift_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9675,6 +9796,9 @@ public final class LoadBalancerServiceOuterClass {
       }
       if (logOptions_ != null) {
         output.writeMessage(11, getLogOptions());
+      }
+      if (allowZonalShift_ != false) {
+        output.writeBool(12, allowZonalShift_);
       }
       unknownFields.writeTo(output);
     }
@@ -9734,6 +9858,10 @@ public final class LoadBalancerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getLogOptions());
       }
+      if (allowZonalShift_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, allowZonalShift_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9780,6 +9908,8 @@ public final class LoadBalancerServiceOuterClass {
         if (!getLogOptions()
             .equals(other.getLogOptions())) return false;
       }
+      if (getAllowZonalShift()
+          != other.getAllowZonalShift()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9825,6 +9955,9 @@ public final class LoadBalancerServiceOuterClass {
         hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getLogOptions().hashCode();
       }
+      hash = (37 * hash) + ALLOW_ZONAL_SHIFT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowZonalShift());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10018,6 +10151,8 @@ public final class LoadBalancerServiceOuterClass {
           logOptions_ = null;
           logOptionsBuilder_ = null;
         }
+        allowZonalShift_ = false;
+
         return this;
       }
 
@@ -10081,6 +10216,7 @@ public final class LoadBalancerServiceOuterClass {
         } else {
           result.logOptions_ = logOptionsBuilder_.build();
         }
+        result.allowZonalShift_ = allowZonalShift_;
         onBuilt();
         return result;
       }
@@ -10195,6 +10331,9 @@ public final class LoadBalancerServiceOuterClass {
         }
         if (other.hasLogOptions()) {
           mergeLogOptions(other.getLogOptions());
+        }
+        if (other.getAllowZonalShift() != false) {
+          setAllowZonalShift(other.getAllowZonalShift());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11925,6 +12064,49 @@ public final class LoadBalancerServiceOuterClass {
           logOptions_ = null;
         }
         return logOptionsBuilder_;
+      }
+
+      private boolean allowZonalShift_ ;
+      /**
+       * <pre>
+       * Specifies whether application load balancer is available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 12;</code>
+       * @return The allowZonalShift.
+       */
+      @java.lang.Override
+      public boolean getAllowZonalShift() {
+        return allowZonalShift_;
+      }
+      /**
+       * <pre>
+       * Specifies whether application load balancer is available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 12;</code>
+       * @param value The allowZonalShift to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowZonalShift(boolean value) {
+        
+        allowZonalShift_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether application load balancer is available to zonal shift.
+       * </pre>
+       *
+       * <code>bool allow_zonal_shift = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowZonalShift() {
+        
+        allowZonalShift_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -38033,6 +38215,3574 @@ public final class LoadBalancerServiceOuterClass {
 
   }
 
+  public interface StartZonalShiftRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.StartZonalShiftRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the application load balancer to start zonal shift.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
+     */
+    java.lang.String getLoadBalancerId();
+    /**
+     * <pre>
+     * ID of the application load balancer to start zonal shift.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
+     */
+    com.google.protobuf.ByteString
+        getLoadBalancerIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs to start zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs to start zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs to start zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs to start zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StartZonalShiftRequest}
+   */
+  public static final class StartZonalShiftRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StartZonalShiftRequest)
+      StartZonalShiftRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartZonalShiftRequest.newBuilder() to construct.
+    private StartZonalShiftRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartZonalShiftRequest() {
+      loadBalancerId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartZonalShiftRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartZonalShiftRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loadBalancerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest.Builder.class);
+    }
+
+    public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object loadBalancerId_;
+    /**
+     * <pre>
+     * ID of the application load balancer to start zonal shift.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
+     */
+    @java.lang.Override
+    public java.lang.String getLoadBalancerId() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loadBalancerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the application load balancer to start zonal shift.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoadBalancerIdBytes() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loadBalancerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs to start zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs to start zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs to start zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs to start zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest) obj;
+
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOAD_BALANCER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadBalancerId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StartZonalShiftRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.StartZonalShiftRequest)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        loadBalancerId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.loadBalancerId_ = loadBalancerId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest.getDefaultInstance()) return this;
+        if (!other.getLoadBalancerId().isEmpty()) {
+          loadBalancerId_ = other.loadBalancerId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object loadBalancerId_ = "";
+      /**
+       * <pre>
+       * ID of the application load balancer to start zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
+       */
+      public java.lang.String getLoadBalancerId() {
+        java.lang.Object ref = loadBalancerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadBalancerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to start zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
+       */
+      public com.google.protobuf.ByteString
+          getLoadBalancerIdBytes() {
+        java.lang.Object ref = loadBalancerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadBalancerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to start zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to start zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadBalancerId() {
+        
+        loadBalancerId_ = getDefaultInstance().getLoadBalancerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to start zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs to start zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs to start zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs to start zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to start zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to start zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to start zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to start zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to start zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to start zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.StartZonalShiftRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.StartZonalShiftRequest)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartZonalShiftRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StartZonalShiftRequest>() {
+      @java.lang.Override
+      public StartZonalShiftRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartZonalShiftRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartZonalShiftRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartZonalShiftRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StartZonalShiftMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.StartZonalShiftMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the application load balancer that the zonal shift is being started to.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
+     */
+    java.lang.String getLoadBalancerId();
+    /**
+     * <pre>
+     * ID of the application load balancer that the zonal shift is being started to.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
+     */
+    com.google.protobuf.ByteString
+        getLoadBalancerIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was started.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was started.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was started.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was started.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StartZonalShiftMetadata}
+   */
+  public static final class StartZonalShiftMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StartZonalShiftMetadata)
+      StartZonalShiftMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartZonalShiftMetadata.newBuilder() to construct.
+    private StartZonalShiftMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartZonalShiftMetadata() {
+      loadBalancerId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartZonalShiftMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartZonalShiftMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loadBalancerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata.Builder.class);
+    }
+
+    public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object loadBalancerId_;
+    /**
+     * <pre>
+     * ID of the application load balancer that the zonal shift is being started to.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
+     */
+    @java.lang.Override
+    public java.lang.String getLoadBalancerId() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loadBalancerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the application load balancer that the zonal shift is being started to.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoadBalancerIdBytes() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loadBalancerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was started.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was started.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was started.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was started.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata) obj;
+
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOAD_BALANCER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadBalancerId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StartZonalShiftMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.StartZonalShiftMetadata)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        loadBalancerId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata(this);
+        int from_bitField0_ = bitField0_;
+        result.loadBalancerId_ = loadBalancerId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata.getDefaultInstance()) return this;
+        if (!other.getLoadBalancerId().isEmpty()) {
+          loadBalancerId_ = other.loadBalancerId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object loadBalancerId_ = "";
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being started to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
+       */
+      public java.lang.String getLoadBalancerId() {
+        java.lang.Object ref = loadBalancerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadBalancerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being started to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
+       */
+      public com.google.protobuf.ByteString
+          getLoadBalancerIdBytes() {
+        java.lang.Object ref = loadBalancerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadBalancerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being started to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being started to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadBalancerId() {
+        
+        loadBalancerId_ = getDefaultInstance().getLoadBalancerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being started to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was started.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was started.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was started.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was started.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was started.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was started.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was started.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was started.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was started.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.StartZonalShiftMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.StartZonalShiftMetadata)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartZonalShiftMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<StartZonalShiftMetadata>() {
+      @java.lang.Override
+      public StartZonalShiftMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartZonalShiftMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartZonalShiftMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartZonalShiftMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CancelZonalShiftRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.CancelZonalShiftRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the application load balancer to cancel zonal shift.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
+     */
+    java.lang.String getLoadBalancerId();
+    /**
+     * <pre>
+     * ID of the application load balancer to cancel zonal shift.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
+     */
+    com.google.protobuf.ByteString
+        getLoadBalancerIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs to cancel zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs to cancel zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs to cancel zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs to cancel zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CancelZonalShiftRequest}
+   */
+  public static final class CancelZonalShiftRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.CancelZonalShiftRequest)
+      CancelZonalShiftRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CancelZonalShiftRequest.newBuilder() to construct.
+    private CancelZonalShiftRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CancelZonalShiftRequest() {
+      loadBalancerId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CancelZonalShiftRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CancelZonalShiftRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loadBalancerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest.Builder.class);
+    }
+
+    public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object loadBalancerId_;
+    /**
+     * <pre>
+     * ID of the application load balancer to cancel zonal shift.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The loadBalancerId.
+     */
+    @java.lang.Override
+    public java.lang.String getLoadBalancerId() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loadBalancerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the application load balancer to cancel zonal shift.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for loadBalancerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoadBalancerIdBytes() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loadBalancerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs to cancel zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs to cancel zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs to cancel zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs to cancel zonal shift.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest) obj;
+
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOAD_BALANCER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadBalancerId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CancelZonalShiftRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.CancelZonalShiftRequest)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        loadBalancerId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.loadBalancerId_ = loadBalancerId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest.getDefaultInstance()) return this;
+        if (!other.getLoadBalancerId().isEmpty()) {
+          loadBalancerId_ = other.loadBalancerId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object loadBalancerId_ = "";
+      /**
+       * <pre>
+       * ID of the application load balancer to cancel zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The loadBalancerId.
+       */
+      public java.lang.String getLoadBalancerId() {
+        java.lang.Object ref = loadBalancerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadBalancerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to cancel zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for loadBalancerId.
+       */
+      public com.google.protobuf.ByteString
+          getLoadBalancerIdBytes() {
+        java.lang.Object ref = loadBalancerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadBalancerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to cancel zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to cancel zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadBalancerId() {
+        
+        loadBalancerId_ = getDefaultInstance().getLoadBalancerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer to cancel zonal shift.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs to cancel zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs to cancel zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs to cancel zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to cancel zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs to cancel zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to cancel zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to cancel zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to cancel zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs to cancel zonal shift.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.CancelZonalShiftRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.CancelZonalShiftRequest)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CancelZonalShiftRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CancelZonalShiftRequest>() {
+      @java.lang.Override
+      public CancelZonalShiftRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CancelZonalShiftRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CancelZonalShiftRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CancelZonalShiftRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CancelZonalShiftMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.CancelZonalShiftMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the application load balancer that the zonal shift is being canceled to.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
+     */
+    java.lang.String getLoadBalancerId();
+    /**
+     * <pre>
+     * ID of the application load balancer that the zonal shift is being canceled to.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
+     */
+    com.google.protobuf.ByteString
+        getLoadBalancerIdBytes();
+
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was cancelled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was cancelled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was cancelled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was cancelled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CancelZonalShiftMetadata}
+   */
+  public static final class CancelZonalShiftMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.CancelZonalShiftMetadata)
+      CancelZonalShiftMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CancelZonalShiftMetadata.newBuilder() to construct.
+    private CancelZonalShiftMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CancelZonalShiftMetadata() {
+      loadBalancerId_ = "";
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CancelZonalShiftMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CancelZonalShiftMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              loadBalancerId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata.Builder.class);
+    }
+
+    public static final int LOAD_BALANCER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object loadBalancerId_;
+    /**
+     * <pre>
+     * ID of the application load balancer that the zonal shift is being canceled to.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The loadBalancerId.
+     */
+    @java.lang.Override
+    public java.lang.String getLoadBalancerId() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        loadBalancerId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the application load balancer that the zonal shift is being canceled to.
+     * </pre>
+     *
+     * <code>string load_balancer_id = 1;</code>
+     * @return The bytes for loadBalancerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLoadBalancerIdBytes() {
+      java.lang.Object ref = loadBalancerId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        loadBalancerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was cancelled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was cancelled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was cancelled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Zone IDs where zonal shift was cancelled.
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, loadBalancerId_);
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, zoneIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadBalancerId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, loadBalancerId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata other = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata) obj;
+
+      if (!getLoadBalancerId()
+          .equals(other.getLoadBalancerId())) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOAD_BALANCER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLoadBalancerId().hashCode();
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.CancelZonalShiftMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.CancelZonalShiftMetadata)
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata.class, yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        loadBalancerId_ = "";
+
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata build() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata result = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata(this);
+        int from_bitField0_ = bitField0_;
+        result.loadBalancerId_ = loadBalancerId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata.getDefaultInstance()) return this;
+        if (!other.getLoadBalancerId().isEmpty()) {
+          loadBalancerId_ = other.loadBalancerId_;
+          onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object loadBalancerId_ = "";
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being canceled to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return The loadBalancerId.
+       */
+      public java.lang.String getLoadBalancerId() {
+        java.lang.Object ref = loadBalancerId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          loadBalancerId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being canceled to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return The bytes for loadBalancerId.
+       */
+      public com.google.protobuf.ByteString
+          getLoadBalancerIdBytes() {
+        java.lang.Object ref = loadBalancerId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          loadBalancerId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being canceled to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @param value The loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being canceled to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLoadBalancerId() {
+        
+        loadBalancerId_ = getDefaultInstance().getLoadBalancerId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the application load balancer that the zonal shift is being canceled to.
+       * </pre>
+       *
+       * <code>string load_balancer_id = 1;</code>
+       * @param value The bytes for loadBalancerId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLoadBalancerIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        loadBalancerId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was cancelled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was cancelled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was cancelled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was cancelled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was cancelled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was cancelled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was cancelled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was cancelled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Zone IDs where zonal shift was cancelled.
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 2;</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.CancelZonalShiftMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.CancelZonalShiftMetadata)
+    private static final yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CancelZonalShiftMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<CancelZonalShiftMetadata>() {
+      @java.lang.Override
+      public CancelZonalShiftMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CancelZonalShiftMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CancelZonalShiftMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CancelZonalShiftMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_GetLoadBalancerRequest_descriptor;
   private static final 
@@ -38218,6 +41968,26 @@ public final class LoadBalancerServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_ListLoadBalancerOperationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38247,7 +42017,7 @@ public final class LoadBalancerServiceOuterClass {
       "oken\030\002 \001(\t\";\n\031DeleteLoadBalancerRequest\022" +
       "\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\"6\n\032Delet" +
       "eLoadBalancerMetadata\022\030\n\020load_balancer_i" +
-      "d\030\001 \001(\t\"\323\005\n\031UpdateLoadBalancerRequest\022\036\n" +
+      "d\030\001 \001(\t\"\356\005\n\031UpdateLoadBalancerRequest\022\036\n" +
       "\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_" +
       "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0224" +
       "\n\004name\030\003 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}" +
@@ -38264,193 +42034,214 @@ public final class LoadBalancerServiceOuterClass {
       "licy\030\t \001(\01320.yandex.cloud.apploadbalance" +
       "r.v1.AutoScalePolicy\022@\n\013log_options\030\n \001(" +
       "\0132+.yandex.cloud.apploadbalancer.v1.LogO" +
-      "ptions\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"6\n\032UpdateLoadBalancerMetad" +
-      "ata\022\030\n\020load_balancer_id\030\001 \001(\t\"\316\005\n\031Create" +
-      "LoadBalancerRequest\022\027\n\tfolder_id\030\001 \001(\tB\004" +
-      "\350\3071\001\0224\n\004name\030\002 \001(\tB&\362\3071\"([a-z]([-a-z0-9]" +
-      "{0,61}[a-z0-9])?)?\022\036\n\013description\030\003 \001(\tB" +
-      "\t\212\3101\005<=256\022\237\001\n\006labels\030\004 \003(\0132F.yandex.clo" +
-      "ud.apploadbalancer.v1.CreateLoadBalancer" +
-      "Request.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071" +
-      "\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_" +
-      "./\\@0-9a-z]*\022\027\n\tregion_id\030\005 \001(\tB\004\350\3071\001\022\030\n" +
-      "\nnetwork_id\030\006 \001(\tB\004\350\3071\001\022E\n\016listener_spec" +
-      "s\030\007 \003(\0132-.yandex.cloud.apploadbalancer.v" +
-      "1.ListenerSpec\022L\n\021allocation_policy\030\010 \001(" +
-      "\01321.yandex.cloud.apploadbalancer.v1.Allo" +
-      "cationPolicy\022\032\n\022security_group_ids\030\t \003(\t" +
-      "\022K\n\021auto_scale_policy\030\n \001(\01320.yandex.clo" +
-      "ud.apploadbalancer.v1.AutoScalePolicy\022@\n" +
-      "\013log_options\030\013 \001(\0132+.yandex.cloud.apploa" +
-      "dbalancer.v1.LogOptions\032-\n\013LabelsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"6\n\032Create" +
-      "LoadBalancerMetadata\022\030\n\020load_balancer_id" +
-      "\030\001 \001(\t\":\n\030StartLoadBalancerRequest\022\036\n\020lo" +
-      "ad_balancer_id\030\001 \001(\tB\004\350\3071\001\"5\n\031StartLoadB" +
-      "alancerMetadata\022\030\n\020load_balancer_id\030\001 \001(" +
-      "\t\"9\n\027StopLoadBalancerRequest\022\036\n\020load_bal" +
-      "ancer_id\030\001 \001(\tB\004\350\3071\001\"4\n\030StopLoadBalancer" +
-      "Metadata\022\030\n\020load_balancer_id\030\001 \001(\t\"\200\001\n\022A" +
-      "ddListenerRequest\022\036\n\020load_balancer_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022J\n\rlistener_spec\030\002 \001(\0132-.yande" +
-      "x.cloud.apploadbalancer.v1.ListenerSpecB" +
-      "\004\350\3071\001\"F\n\023AddListenerMetadata\022\030\n\020load_bal" +
-      "ancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\"K\n" +
-      "\025RemoveListenerRequest\022\036\n\020load_balancer_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022\022\n\004name\030\002 \001(\tB\004\350\3071\001\"I\n\026Re" +
-      "moveListenerMetadata\022\030\n\020load_balancer_id" +
-      "\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\"\264\001\n\025Update" +
-      "ListenerRequest\022\036\n\020load_balancer_id\030\001 \001(" +
-      "\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
-      "otobuf.FieldMask\022J\n\rlistener_spec\030\003 \001(\0132" +
-      "-.yandex.cloud.apploadbalancer.v1.Listen" +
-      "erSpecB\004\350\3071\001\"I\n\026UpdateListenerMetadata\022\030" +
-      "\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlistener_nam" +
-      "e\030\002 \001(\t\"\303\002\n\013AddressSpec\022^\n\032external_ipv4" +
-      "_address_spec\030\001 \001(\01328.yandex.cloud.applo" +
-      "adbalancer.v1.ExternalIpv4AddressSpecH\000\022" +
-      "^\n\032internal_ipv4_address_spec\030\002 \001(\01328.ya" +
-      "ndex.cloud.apploadbalancer.v1.InternalIp" +
-      "v4AddressSpecH\000\022^\n\032external_ipv6_address" +
-      "_spec\030\003 \001(\01328.yandex.cloud.apploadbalanc" +
-      "er.v1.ExternalIpv6AddressSpecH\000B\024\n\014addre" +
-      "ss_spec\022\004\300\3011\001\"*\n\027ExternalIpv4AddressSpec" +
-      "\022\017\n\007address\030\001 \001(\t\"=\n\027InternalIpv4Address" +
-      "Spec\022\017\n\007address\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t" +
-      "\"*\n\027ExternalIpv6AddressSpec\022\017\n\007address\030\001" +
-      " \001(\t\"}\n\014EndpointSpec\022K\n\raddress_specs\030\001 " +
-      "\003(\0132,.yandex.cloud.apploadbalancer.v1.Ad" +
-      "dressSpecB\006\202\3101\002>0\022 \n\005ports\030\002 \003(\003B\021\202\3101\002>0" +
-      "\372\3071\0071-65535\"\345\002\n\014ListenerSpec\0225\n\004name\030\001 \001" +
-      "(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9" +
-      "])?\022M\n\016endpoint_specs\030\002 \003(\0132-.yandex.clo" +
-      "ud.apploadbalancer.v1.EndpointSpecB\006\202\3101\002" +
-      ">0\022=\n\004http\030\003 \001(\0132-.yandex.cloud.apploadb" +
-      "alancer.v1.HttpListenerH\000\022;\n\003tls\030\004 \001(\0132," +
-      ".yandex.cloud.apploadbalancer.v1.TlsList" +
-      "enerH\000\022A\n\006stream\030\005 \001(\0132/.yandex.cloud.ap" +
-      "ploadbalancer.v1.StreamListenerH\000B\020\n\010lis" +
-      "tener\022\004\300\3011\001\"w\n\026GetTargetStatesRequest\022\036\n" +
-      "\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\036\n\020backend" +
-      "_group_id\030\002 \001(\tB\004\350\3071\001\022\035\n\017target_group_id" +
-      "\030\003 \001(\tB\004\350\3071\001\"^\n\027GetTargetStatesResponse\022" +
-      "C\n\rtarget_states\030\001 \003(\0132,.yandex.cloud.ap" +
-      "ploadbalancer.v1.TargetState\"\307\001\n\022AddSniM" +
-      "atchRequest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\022\n\004name" +
-      "\030\003 \001(\tB\004\350\3071\001\022\034\n\014server_names\030\004 \003(\tB\006\202\3101\002" +
-      ">0\022B\n\007handler\030\005 \001(\0132+.yandex.cloud.applo" +
-      "adbalancer.v1.TlsHandlerB\004\350\3071\001\"^\n\023AddSni" +
-      "MatchMetadata\022\030\n\020load_balancer_id\030\001 \001(\t\022" +
-      "\025\n\rlistener_name\030\002 \001(\t\022\026\n\016sni_match_name" +
-      "\030\003 \001(\t\"r\n\025RemoveSniMatchRequest\022\036\n\020load_" +
-      "balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistener_name" +
-      "\030\002 \001(\tB\004\350\3071\001\022\034\n\016sni_match_name\030\003 \001(\tB\004\350\307" +
-      "1\001\"a\n\026RemoveSniMatchMetadata\022\030\n\020load_bal" +
-      "ancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n" +
-      "\016sni_match_name\030\003 \001(\t\"\373\001\n\025UpdateSniMatch" +
-      "Request\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022" +
-      "\033\n\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\022\n\004name\030\003 \001" +
-      "(\tB\004\350\3071\001\022/\n\013update_mask\030\004 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\022\034\n\014server_names\030\005 \003(\tB" +
-      "\006\202\3101\002>0\022B\n\007handler\030\006 \001(\0132+.yandex.cloud." +
-      "apploadbalancer.v1.TlsHandlerB\004\350\3071\001\"a\n\026U" +
-      "pdateSniMatchMetadata\022\030\n\020load_balancer_i" +
-      "d\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n\016sni_ma" +
-      "tch_name\030\003 \001(\t\"\211\001\n!ListLoadBalancerOpera" +
-      "tionsRequest\022&\n\020load_balancer_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"t\n\"Li" +
-      "stLoadBalancerOperationsResponse\0225\n\noper" +
-      "ations\030\001 \003(\0132!.yandex.cloud.operation.Op" +
-      "eration\022\027\n\017next_page_token\030\002 \001(\t2\353\031\n\023Loa" +
-      "dBalancerService\022\253\001\n\003Get\0227.yandex.cloud." +
-      "apploadbalancer.v1.GetLoadBalancerReques" +
-      "t\032-.yandex.cloud.apploadbalancer.v1.Load" +
-      "Balancer\"<\202\323\344\223\0026\0224/apploadbalancer/v1/lo" +
-      "adBalancers/{load_balancer_id}\022\250\001\n\004List\022" +
-      "9.yandex.cloud.apploadbalancer.v1.ListLo" +
-      "adBalancersRequest\032:.yandex.cloud.apploa" +
-      "dbalancer.v1.ListLoadBalancersResponse\")" +
-      "\202\323\344\223\002#\022!/apploadbalancer/v1/loadBalancer" +
-      "s\022\303\001\n\006Create\022:.yandex.cloud.apploadbalan" +
-      "cer.v1.CreateLoadBalancerRequest\032!.yande" +
-      "x.cloud.operation.Operation\"Z\202\323\344\223\002&\"!/ap" +
-      "ploadbalancer/v1/loadBalancers:\001*\262\322**\n\032C" +
-      "reateLoadBalancerMetadata\022\014LoadBalancer\022" +
-      "\326\001\n\006Update\022:.yandex.cloud.apploadbalance" +
-      "r.v1.UpdateLoadBalancerRequest\032!.yandex." +
-      "cloud.operation.Operation\"m\202\323\344\223\002924/appl" +
-      "oadbalancer/v1/loadBalancers/{load_balan" +
-      "cer_id}:\001*\262\322**\n\032UpdateLoadBalancerMetada" +
-      "ta\022\014LoadBalancer\022\334\001\n\006Delete\022:.yandex.clo" +
-      "ud.apploadbalancer.v1.DeleteLoadBalancer" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"s\202\323\344\223\0026*4/apploadbalancer/v1/loadBala" +
-      "ncers/{load_balancer_id}\262\322*3\n\032DeleteLoad" +
-      "BalancerMetadata\022\025google.protobuf.Empty\022" +
-      "\326\001\n\005Start\0229.yandex.cloud.apploadbalancer" +
-      ".v1.StartLoadBalancerRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"o\202\323\344\223\002<\":/apploa" +
-      "dbalancer/v1/loadBalancers/{load_balance" +
-      "r_id}:start\262\322*)\n\031StartLoadBalancerMetada" +
-      "ta\022\014LoadBalancer\022\322\001\n\004Stop\0228.yandex.cloud" +
-      ".apploadbalancer.v1.StopLoadBalancerRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"m" +
-      "\202\323\344\223\002;\"9/apploadbalancer/v1/loadBalancer" +
-      "s/{load_balancer_id}:stop\262\322*(\n\030StopLoadB" +
-      "alancerMetadata\022\014LoadBalancer\022\331\001\n\013AddLis" +
-      "tener\0223.yandex.cloud.apploadbalancer.v1." +
-      "AddListenerRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"r\202\323\344\223\002E\"@/apploadbalancer/" +
-      "v1/loadBalancers/{load_balancer_id}:addL" +
-      "istener:\001*\262\322*#\n\023AddListenerMetadata\022\014Loa" +
-      "dBalancer\022\345\001\n\016RemoveListener\0226.yandex.cl" +
-      "oud.apploadbalancer.v1.RemoveListenerReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "x\202\323\344\223\002H\"C/apploadbalancer/v1/loadBalance" +
-      "rs/{load_balancer_id}:removeListener:\001*\262" +
-      "\322*&\n\026RemoveListenerMetadata\022\014LoadBalance" +
-      "r\022\345\001\n\016UpdateListener\0226.yandex.cloud.appl" +
-      "oadbalancer.v1.UpdateListenerRequest\032!.y" +
-      "andex.cloud.operation.Operation\"x\202\323\344\223\002H\"" +
-      "C/apploadbalancer/v1/loadBalancers/{load" +
-      "_balancer_id}:updateListener:\001*\262\322*&\n\026Upd" +
-      "ateListenerMetadata\022\014LoadBalancer\022\342\001\n\013Ad" +
-      "dSniMatch\0223.yandex.cloud.apploadbalancer" +
-      ".v1.AddSniMatchRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"{\202\323\344\223\002E\"@/apploadbalan" +
-      "cer/v1/loadBalancers/{load_balancer_id}:" +
-      "addSniMatch:\001*\262\322*,\n\023AddSniMatchMetadata\022" +
-      "\025google.protobuf.Empty\022\357\001\n\016UpdateSniMatc" +
-      "h\0226.yandex.cloud.apploadbalancer.v1.Upda" +
-      "teSniMatchRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"\201\001\202\323\344\223\002H\"C/apploadbalancer/" +
-      "v1/loadBalancers/{load_balancer_id}:upda" +
-      "teSniMatch:\001*\262\322*/\n\026UpdateSniMatchMetadat" +
-      "a\022\025google.protobuf.Empty\022\357\001\n\016RemoveSniMa" +
-      "tch\0226.yandex.cloud.apploadbalancer.v1.Re" +
-      "moveSniMatchRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"\201\001\202\323\344\223\002H\"C/apploadbalance" +
-      "r/v1/loadBalancers/{load_balancer_id}:re" +
-      "moveSniMatch:\001*\262\322*/\n\026RemoveSniMatchMetad" +
-      "ata\022\025google.protobuf.Empty\022\364\001\n\017GetTarget" +
-      "States\0227.yandex.cloud.apploadbalancer.v1" +
-      ".GetTargetStatesRequest\0328.yandex.cloud.a" +
-      "pploadbalancer.v1.GetTargetStatesRespons" +
-      "e\"n\202\323\344\223\002h\022f/apploadbalancer/v1/loadBalan" +
-      "cers/{load_balancer_id}/targetStates/{ba" +
-      "ckend_group_id}/{target_group_id}\022\342\001\n\016Li" +
-      "stOperations\022B.yandex.cloud.apploadbalan" +
-      "cer.v1.ListLoadBalancerOperationsRequest" +
-      "\032C.yandex.cloud.apploadbalancer.v1.ListL" +
-      "oadBalancerOperationsResponse\"G\202\323\344\223\002A\022?/" +
+      "ptions\022\031\n\021allow_zonal_shift\030\013 \001(\010\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"6\n\032UpdateLoadBalancerMetadata\022\030\n\020load_b" +
+      "alancer_id\030\001 \001(\t\"\351\005\n\031CreateLoadBalancerR" +
+      "equest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030" +
+      "\002 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9" +
+      "])?)?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\237\001" +
+      "\n\006labels\030\004 \003(\0132F.yandex.cloud.apploadbal" +
+      "ancer.v1.CreateLoadBalancerRequest.Label" +
+      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
+      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
+      "\027\n\tregion_id\030\005 \001(\tB\004\350\3071\001\022\030\n\nnetwork_id\030\006" +
+      " \001(\tB\004\350\3071\001\022E\n\016listener_specs\030\007 \003(\0132-.yan" +
+      "dex.cloud.apploadbalancer.v1.ListenerSpe" +
+      "c\022L\n\021allocation_policy\030\010 \001(\01321.yandex.cl" +
+      "oud.apploadbalancer.v1.AllocationPolicy\022" +
+      "\032\n\022security_group_ids\030\t \003(\t\022K\n\021auto_scal" +
+      "e_policy\030\n \001(\01320.yandex.cloud.apploadbal" +
+      "ancer.v1.AutoScalePolicy\022@\n\013log_options\030" +
+      "\013 \001(\0132+.yandex.cloud.apploadbalancer.v1." +
+      "LogOptions\022\031\n\021allow_zonal_shift\030\014 \001(\010\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"6\n\032CreateLoadBalancerMetadata\022\030\n\020lo" +
+      "ad_balancer_id\030\001 \001(\t\":\n\030StartLoadBalance" +
+      "rRequest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001" +
+      "\"5\n\031StartLoadBalancerMetadata\022\030\n\020load_ba" +
+      "lancer_id\030\001 \001(\t\"9\n\027StopLoadBalancerReque" +
+      "st\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\"4\n\030St" +
+      "opLoadBalancerMetadata\022\030\n\020load_balancer_" +
+      "id\030\001 \001(\t\"\200\001\n\022AddListenerRequest\022\036\n\020load_" +
+      "balancer_id\030\001 \001(\tB\004\350\3071\001\022J\n\rlistener_spec" +
+      "\030\002 \001(\0132-.yandex.cloud.apploadbalancer.v1" +
+      ".ListenerSpecB\004\350\3071\001\"F\n\023AddListenerMetada" +
+      "ta\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlistener" +
+      "_name\030\002 \001(\t\"K\n\025RemoveListenerRequest\022\036\n\020" +
+      "load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\022\n\004name\030\002 \001" +
+      "(\tB\004\350\3071\001\"I\n\026RemoveListenerMetadata\022\030\n\020lo" +
+      "ad_balancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 " +
+      "\001(\t\"\264\001\n\025UpdateListenerRequest\022\036\n\020load_ba" +
+      "lancer_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022J\n\rlisten" +
+      "er_spec\030\003 \001(\0132-.yandex.cloud.apploadbala" +
+      "ncer.v1.ListenerSpecB\004\350\3071\001\"I\n\026UpdateList" +
+      "enerMetadata\022\030\n\020load_balancer_id\030\001 \001(\t\022\025" +
+      "\n\rlistener_name\030\002 \001(\t\"\303\002\n\013AddressSpec\022^\n" +
+      "\032external_ipv4_address_spec\030\001 \001(\01328.yand" +
+      "ex.cloud.apploadbalancer.v1.ExternalIpv4" +
+      "AddressSpecH\000\022^\n\032internal_ipv4_address_s" +
+      "pec\030\002 \001(\01328.yandex.cloud.apploadbalancer" +
+      ".v1.InternalIpv4AddressSpecH\000\022^\n\032externa" +
+      "l_ipv6_address_spec\030\003 \001(\01328.yandex.cloud" +
+      ".apploadbalancer.v1.ExternalIpv6AddressS" +
+      "pecH\000B\024\n\014address_spec\022\004\300\3011\001\"*\n\027ExternalI" +
+      "pv4AddressSpec\022\017\n\007address\030\001 \001(\t\"=\n\027Inter" +
+      "nalIpv4AddressSpec\022\017\n\007address\030\001 \001(\t\022\021\n\ts" +
+      "ubnet_id\030\002 \001(\t\"*\n\027ExternalIpv6AddressSpe" +
+      "c\022\017\n\007address\030\001 \001(\t\"}\n\014EndpointSpec\022K\n\rad" +
+      "dress_specs\030\001 \003(\0132,.yandex.cloud.appload" +
+      "balancer.v1.AddressSpecB\006\202\3101\002>0\022 \n\005ports" +
+      "\030\002 \003(\003B\021\202\3101\002>0\372\3071\0071-65535\"\345\002\n\014ListenerSp" +
+      "ec\0225\n\004name\030\001 \001(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9" +
+      "]{0,61}[a-z0-9])?\022M\n\016endpoint_specs\030\002 \003(" +
+      "\0132-.yandex.cloud.apploadbalancer.v1.Endp" +
+      "ointSpecB\006\202\3101\002>0\022=\n\004http\030\003 \001(\0132-.yandex." +
+      "cloud.apploadbalancer.v1.HttpListenerH\000\022" +
+      ";\n\003tls\030\004 \001(\0132,.yandex.cloud.apploadbalan" +
+      "cer.v1.TlsListenerH\000\022A\n\006stream\030\005 \001(\0132/.y" +
+      "andex.cloud.apploadbalancer.v1.StreamLis" +
+      "tenerH\000B\020\n\010listener\022\004\300\3011\001\"w\n\026GetTargetSt" +
+      "atesRequest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022\036\n\020backend_group_id\030\002 \001(\tB\004\350\3071\001\022\035\n\017t" +
+      "arget_group_id\030\003 \001(\tB\004\350\3071\001\"^\n\027GetTargetS" +
+      "tatesResponse\022C\n\rtarget_states\030\001 \003(\0132,.y" +
+      "andex.cloud.apploadbalancer.v1.TargetSta" +
+      "te\"\307\001\n\022AddSniMatchRequest\022\036\n\020load_balanc" +
+      "er_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistener_name\030\002 \001(\t" +
+      "B\004\350\3071\001\022\022\n\004name\030\003 \001(\tB\004\350\3071\001\022\034\n\014server_nam" +
+      "es\030\004 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\005 \001(\0132+.yand" +
+      "ex.cloud.apploadbalancer.v1.TlsHandlerB\004" +
+      "\350\3071\001\"^\n\023AddSniMatchMetadata\022\030\n\020load_bala" +
+      "ncer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002 \001(\t\022\026\n\016" +
+      "sni_match_name\030\003 \001(\t\"r\n\025RemoveSniMatchRe" +
+      "quest\022\036\n\020load_balancer_id\030\001 \001(\tB\004\350\3071\001\022\033\n" +
+      "\rlistener_name\030\002 \001(\tB\004\350\3071\001\022\034\n\016sni_match_" +
+      "name\030\003 \001(\tB\004\350\3071\001\"a\n\026RemoveSniMatchMetada" +
+      "ta\022\030\n\020load_balancer_id\030\001 \001(\t\022\025\n\rlistener" +
+      "_name\030\002 \001(\t\022\026\n\016sni_match_name\030\003 \001(\t\"\373\001\n\025" +
+      "UpdateSniMatchRequest\022\036\n\020load_balancer_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\022\033\n\rlistener_name\030\002 \001(\tB\004\350\307" +
+      "1\001\022\022\n\004name\030\003 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\004 " +
+      "\001(\0132\032.google.protobuf.FieldMask\022\034\n\014serve" +
+      "r_names\030\005 \003(\tB\006\202\3101\002>0\022B\n\007handler\030\006 \001(\0132+" +
+      ".yandex.cloud.apploadbalancer.v1.TlsHand" +
+      "lerB\004\350\3071\001\"a\n\026UpdateSniMatchMetadata\022\030\n\020l" +
+      "oad_balancer_id\030\001 \001(\t\022\025\n\rlistener_name\030\002" +
+      " \001(\t\022\026\n\016sni_match_name\030\003 \001(\t\"\211\001\n!ListLoa" +
+      "dBalancerOperationsRequest\022&\n\020load_balan" +
+      "cer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
+      "\3101\005<=100\"t\n\"ListLoadBalancerOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"R\n\026StartZonalShiftRequest\022\036\n\020load" +
+      "_balancer_id\030\001 \001(\tB\004\350\3071\001\022\030\n\010zone_ids\030\002 \003" +
+      "(\tB\006\202\3101\002>0\"E\n\027StartZonalShiftMetadata\022\030\n" +
+      "\020load_balancer_id\030\001 \001(\t\022\020\n\010zone_ids\030\002 \003(" +
+      "\t\"S\n\027CancelZonalShiftRequest\022\036\n\020load_bal" +
+      "ancer_id\030\001 \001(\tB\004\350\3071\001\022\030\n\010zone_ids\030\002 \003(\tB\006" +
+      "\202\3101\002>0\"F\n\030CancelZonalShiftMetadata\022\030\n\020lo" +
+      "ad_balancer_id\030\001 \001(\t\022\020\n\010zone_ids\030\002 \003(\t2\307" +
+      "\035\n\023LoadBalancerService\022\253\001\n\003Get\0227.yandex." +
+      "cloud.apploadbalancer.v1.GetLoadBalancer" +
+      "Request\032-.yandex.cloud.apploadbalancer.v" +
+      "1.LoadBalancer\"<\202\323\344\223\0026\0224/apploadbalancer" +
+      "/v1/loadBalancers/{load_balancer_id}\022\250\001\n" +
+      "\004List\0229.yandex.cloud.apploadbalancer.v1." +
+      "ListLoadBalancersRequest\032:.yandex.cloud." +
+      "apploadbalancer.v1.ListLoadBalancersResp" +
+      "onse\")\202\323\344\223\002#\022!/apploadbalancer/v1/loadBa" +
+      "lancers\022\303\001\n\006Create\022:.yandex.cloud.apploa" +
+      "dbalancer.v1.CreateLoadBalancerRequest\032!" +
+      ".yandex.cloud.operation.Operation\"Z\202\323\344\223\002" +
+      "&\"!/apploadbalancer/v1/loadBalancers:\001*\262" +
+      "\322**\n\032CreateLoadBalancerMetadata\022\014LoadBal" +
+      "ancer\022\326\001\n\006Update\022:.yandex.cloud.apploadb" +
+      "alancer.v1.UpdateLoadBalancerRequest\032!.y" +
+      "andex.cloud.operation.Operation\"m\202\323\344\223\00292" +
+      "4/apploadbalancer/v1/loadBalancers/{load" +
+      "_balancer_id}:\001*\262\322**\n\032UpdateLoadBalancer" +
+      "Metadata\022\014LoadBalancer\022\334\001\n\006Delete\022:.yand" +
+      "ex.cloud.apploadbalancer.v1.DeleteLoadBa" +
+      "lancerRequest\032!.yandex.cloud.operation.O" +
+      "peration\"s\202\323\344\223\0026*4/apploadbalancer/v1/lo" +
+      "adBalancers/{load_balancer_id}\262\322*3\n\032Dele" +
+      "teLoadBalancerMetadata\022\025google.protobuf." +
+      "Empty\022\326\001\n\005Start\0229.yandex.cloud.apploadba" +
+      "lancer.v1.StartLoadBalancerRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"o\202\323\344\223\002<\":/" +
       "apploadbalancer/v1/loadBalancers/{load_b" +
-      "alancer_id}/operationsBz\n#yandex.cloud.a" +
-      "pi.apploadbalancer.v1ZSgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/apploadb" +
-      "alancer/v1;apploadbalancerb\006proto3"
+      "alancer_id}:start\262\322*)\n\031StartLoadBalancer" +
+      "Metadata\022\014LoadBalancer\022\322\001\n\004Stop\0228.yandex" +
+      ".cloud.apploadbalancer.v1.StopLoadBalanc" +
+      "erRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"m\202\323\344\223\002;\"9/apploadbalancer/v1/loadBa" +
+      "lancers/{load_balancer_id}:stop\262\322*(\n\030Sto" +
+      "pLoadBalancerMetadata\022\014LoadBalancer\022\331\001\n\013" +
+      "AddListener\0223.yandex.cloud.apploadbalanc" +
+      "er.v1.AddListenerRequest\032!.yandex.cloud." +
+      "operation.Operation\"r\202\323\344\223\002E\"@/apploadbal" +
+      "ancer/v1/loadBalancers/{load_balancer_id" +
+      "}:addListener:\001*\262\322*#\n\023AddListenerMetadat" +
+      "a\022\014LoadBalancer\022\345\001\n\016RemoveListener\0226.yan" +
+      "dex.cloud.apploadbalancer.v1.RemoveListe" +
+      "nerRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"x\202\323\344\223\002H\"C/apploadbalancer/v1/loadB" +
+      "alancers/{load_balancer_id}:removeListen" +
+      "er:\001*\262\322*&\n\026RemoveListenerMetadata\022\014LoadB" +
+      "alancer\022\345\001\n\016UpdateListener\0226.yandex.clou" +
+      "d.apploadbalancer.v1.UpdateListenerReque" +
+      "st\032!.yandex.cloud.operation.Operation\"x\202" +
+      "\323\344\223\002H\"C/apploadbalancer/v1/loadBalancers" +
+      "/{load_balancer_id}:updateListener:\001*\262\322*" +
+      "&\n\026UpdateListenerMetadata\022\014LoadBalancer\022" +
+      "\342\001\n\013AddSniMatch\0223.yandex.cloud.apploadba" +
+      "lancer.v1.AddSniMatchRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"{\202\323\344\223\002E\"@/apploa" +
+      "dbalancer/v1/loadBalancers/{load_balance" +
+      "r_id}:addSniMatch:\001*\262\322*,\n\023AddSniMatchMet" +
+      "adata\022\025google.protobuf.Empty\022\357\001\n\016UpdateS" +
+      "niMatch\0226.yandex.cloud.apploadbalancer.v" +
+      "1.UpdateSniMatchRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\201\001\202\323\344\223\002H\"C/apploadbal" +
+      "ancer/v1/loadBalancers/{load_balancer_id" +
+      "}:updateSniMatch:\001*\262\322*/\n\026UpdateSniMatchM" +
+      "etadata\022\025google.protobuf.Empty\022\357\001\n\016Remov" +
+      "eSniMatch\0226.yandex.cloud.apploadbalancer" +
+      ".v1.RemoveSniMatchRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\201\001\202\323\344\223\002H\"C/apploadb" +
+      "alancer/v1/loadBalancers/{load_balancer_" +
+      "id}:removeSniMatch:\001*\262\322*/\n\026RemoveSniMatc" +
+      "hMetadata\022\025google.protobuf.Empty\022\364\001\n\017Get" +
+      "TargetStates\0227.yandex.cloud.apploadbalan" +
+      "cer.v1.GetTargetStatesRequest\0328.yandex.c" +
+      "loud.apploadbalancer.v1.GetTargetStatesR" +
+      "esponse\"n\202\323\344\223\002h\022f/apploadbalancer/v1/loa" +
+      "dBalancers/{load_balancer_id}/targetStat" +
+      "es/{backend_group_id}/{target_group_id}\022" +
+      "\342\001\n\016ListOperations\022B.yandex.cloud.apploa" +
+      "dbalancer.v1.ListLoadBalancerOperationsR" +
+      "equest\032C.yandex.cloud.apploadbalancer.v1" +
+      ".ListLoadBalancerOperationsResponse\"G\202\323\344" +
+      "\223\002A\022?/apploadbalancer/v1/loadBalancers/{" +
+      "load_balancer_id}/operations\022\351\001\n\017StartZo" +
+      "nalShift\0227.yandex.cloud.apploadbalancer." +
+      "v1.StartZonalShiftRequest\032!.yandex.cloud" +
+      ".operation.Operation\"z\202\323\344\223\002I\"D/apploadba" +
+      "lancer/v1/loadBalancers/{load_balancer_i" +
+      "d}:startZonalShift:\001*\262\322*\'\n\027StartZonalShi" +
+      "ftMetadata\022\014LoadBalancer\022\355\001\n\020CancelZonal" +
+      "Shift\0228.yandex.cloud.apploadbalancer.v1." +
+      "CancelZonalShiftRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"|\202\323\344\223\002J\"E/apploadbala" +
+      "ncer/v1/loadBalancers/{load_balancer_id}" +
+      ":cancelZonalShift:\001*\262\322*(\n\030CancelZonalShi" +
+      "ftMetadata\022\014LoadBalancerBz\n#yandex.cloud" +
+      ".api.apploadbalancer.v1ZSgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/apploa" +
+      "dbalancer/v1;apploadbalancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -38498,7 +42289,7 @@ public final class LoadBalancerServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_descriptor,
-        new java.lang.String[] { "LoadBalancerId", "UpdateMask", "Name", "Description", "Labels", "ListenerSpecs", "AllocationPolicy", "SecurityGroupIds", "AutoScalePolicy", "LogOptions", });
+        new java.lang.String[] { "LoadBalancerId", "UpdateMask", "Name", "Description", "Labels", "ListenerSpecs", "AllocationPolicy", "SecurityGroupIds", "AutoScalePolicy", "LogOptions", "AllowZonalShift", });
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_UpdateLoadBalancerRequest_LabelsEntry_fieldAccessorTable = new
@@ -38516,7 +42307,7 @@ public final class LoadBalancerServiceOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "RegionId", "NetworkId", "ListenerSpecs", "AllocationPolicy", "SecurityGroupIds", "AutoScalePolicy", "LogOptions", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "RegionId", "NetworkId", "ListenerSpecs", "AllocationPolicy", "SecurityGroupIds", "AutoScalePolicy", "LogOptions", "AllowZonalShift", });
     internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_apploadbalancer_v1_CreateLoadBalancerRequest_LabelsEntry_fieldAccessorTable = new
@@ -38685,6 +42476,30 @@ public final class LoadBalancerServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_ListLoadBalancerOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
+    internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftRequest_descriptor,
+        new java.lang.String[] { "LoadBalancerId", "ZoneIds", });
+    internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_StartZonalShiftMetadata_descriptor,
+        new java.lang.String[] { "LoadBalancerId", "ZoneIds", });
+    internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftRequest_descriptor,
+        new java.lang.String[] { "LoadBalancerId", "ZoneIds", });
+    internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_CancelZonalShiftMetadata_descriptor,
+        new java.lang.String[] { "LoadBalancerId", "ZoneIds", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

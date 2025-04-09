@@ -310,7 +310,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of service account for the Data Proc manager agent.
+     * ID of service account for the Yandex Data Processing manager agent.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -319,7 +319,7 @@ public final class ClusterOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * ID of service account for the Data Proc manager agent.
+     * ID of service account for the Yandex Data Processing manager agent.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -330,7 +330,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
+     * Object Storage bucket to be used for Yandex Data Processing jobs that are run in the cluster.
      * </pre>
      *
      * <code>string bucket = 13;</code>
@@ -339,7 +339,7 @@ public final class ClusterOuterClass {
     java.lang.String getBucket();
     /**
      * <pre>
-     * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
+     * Object Storage bucket to be used for Yandex Data Processing jobs that are run in the cluster.
      * </pre>
      *
      * <code>string bucket = 13;</code>
@@ -493,7 +493,7 @@ public final class ClusterOuterClass {
   }
   /**
    * <pre>
-   * A Data Proc cluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
+   * A Yandex Data Processing cluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Cluster}
@@ -1597,7 +1597,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * ID of service account for the Data Proc manager agent.
+     * ID of service account for the Yandex Data Processing manager agent.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -1618,7 +1618,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of service account for the Data Proc manager agent.
+     * ID of service account for the Yandex Data Processing manager agent.
      * </pre>
      *
      * <code>string service_account_id = 12;</code>
@@ -1643,7 +1643,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object bucket_;
     /**
      * <pre>
-     * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
+     * Object Storage bucket to be used for Yandex Data Processing jobs that are run in the cluster.
      * </pre>
      *
      * <code>string bucket = 13;</code>
@@ -1664,7 +1664,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
+     * Object Storage bucket to be used for Yandex Data Processing jobs that are run in the cluster.
      * </pre>
      *
      * <code>string bucket = 13;</code>
@@ -2273,7 +2273,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * A Data Proc cluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
+     * A Yandex Data Processing cluster. For details about the concept, see [documentation](/docs/data-proc/concepts/).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Cluster}
@@ -4047,7 +4047,7 @@ public final class ClusterOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * ID of service account for the Data Proc manager agent.
+       * ID of service account for the Yandex Data Processing manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -4067,7 +4067,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of service account for the Data Proc manager agent.
+       * ID of service account for the Yandex Data Processing manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -4088,7 +4088,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of service account for the Data Proc manager agent.
+       * ID of service account for the Yandex Data Processing manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -4107,7 +4107,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of service account for the Data Proc manager agent.
+       * ID of service account for the Yandex Data Processing manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -4121,7 +4121,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of service account for the Data Proc manager agent.
+       * ID of service account for the Yandex Data Processing manager agent.
        * </pre>
        *
        * <code>string service_account_id = 12;</code>
@@ -4143,7 +4143,7 @@ public final class ClusterOuterClass {
       private java.lang.Object bucket_ = "";
       /**
        * <pre>
-       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
+       * Object Storage bucket to be used for Yandex Data Processing jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -4163,7 +4163,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
+       * Object Storage bucket to be used for Yandex Data Processing jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -4184,7 +4184,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
+       * Object Storage bucket to be used for Yandex Data Processing jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -4203,7 +4203,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
+       * Object Storage bucket to be used for Yandex Data Processing jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -4217,7 +4217,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Object Storage bucket to be used for Data Proc jobs that are run in the cluster.
+       * Object Storage bucket to be used for Yandex Data Processing jobs that are run in the cluster.
        * </pre>
        *
        * <code>string bucket = 13;</code>
@@ -4907,7 +4907,7 @@ public final class ClusterOuterClass {
   }
   /**
    * <pre>
-   * Metadata of a monitoring system for a Data Proc cluster.
+   * Metadata of a monitoring system for a Yandex Data Processing cluster.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dataproc.v1.Monitoring}
@@ -5321,7 +5321,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Metadata of a monitoring system for a Data Proc cluster.
+     * Metadata of a monitoring system for a Yandex Data Processing cluster.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dataproc.v1.Monitoring}
@@ -8085,7 +8085,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Data Proc specific configuration options.
+     * Yandex Data Processing specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8094,7 +8094,7 @@ public final class ClusterOuterClass {
     boolean hasHadoop();
     /**
      * <pre>
-     * Data Proc specific configuration options.
+     * Yandex Data Processing specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8103,7 +8103,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig getHadoop();
     /**
      * <pre>
-     * Data Proc specific configuration options.
+     * Yandex Data Processing specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8259,7 +8259,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig hadoop_;
     /**
      * <pre>
-     * Data Proc specific configuration options.
+     * Yandex Data Processing specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8271,7 +8271,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Data Proc specific configuration options.
+     * Yandex Data Processing specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8283,7 +8283,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Data Proc specific configuration options.
+     * Yandex Data Processing specific configuration options.
      * </pre>
      *
      * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8731,7 +8731,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig, yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfig.Builder, yandex.cloud.api.dataproc.v1.ClusterOuterClass.HadoopConfigOrBuilder> hadoopBuilder_;
       /**
        * <pre>
-       * Data Proc specific configuration options.
+       * Yandex Data Processing specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8742,7 +8742,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Data Proc specific configuration options.
+       * Yandex Data Processing specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8757,7 +8757,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Data Proc specific configuration options.
+       * Yandex Data Processing specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8777,7 +8777,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Data Proc specific configuration options.
+       * Yandex Data Processing specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8795,7 +8795,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Data Proc specific configuration options.
+       * Yandex Data Processing specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8817,7 +8817,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Data Proc specific configuration options.
+       * Yandex Data Processing specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8835,7 +8835,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Data Proc specific configuration options.
+       * Yandex Data Processing specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8847,7 +8847,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Data Proc specific configuration options.
+       * Yandex Data Processing specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>
@@ -8862,7 +8862,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Data Proc specific configuration options.
+       * Yandex Data Processing specific configuration options.
        * </pre>
        *
        * <code>.yandex.cloud.dataproc.v1.HadoopConfig hadoop = 2;</code>

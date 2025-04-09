@@ -2172,11 +2172,4394 @@ public final class BackupOuterClass {
 
   }
 
+  public interface SnapshotManagementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.SnapshotManagement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Snapshot creation schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+     * @return Whether the snapshotSchedule field is set.
+     */
+    boolean hasSnapshotSchedule();
+    /**
+     * <pre>
+     * Snapshot creation schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+     * @return The snapshotSchedule.
+     */
+    yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule getSnapshotSchedule();
+    /**
+     * <pre>
+     * Snapshot creation schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+     */
+    yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotScheduleOrBuilder getSnapshotScheduleOrBuilder();
+
+    /**
+     * <pre>
+     * Snapshot max age in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+     * @return Whether the snapshotMaxAgeDays field is set.
+     */
+    boolean hasSnapshotMaxAgeDays();
+    /**
+     * <pre>
+     * Snapshot max age in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+     * @return The snapshotMaxAgeDays.
+     */
+    com.google.protobuf.Int64Value getSnapshotMaxAgeDays();
+    /**
+     * <pre>
+     * Snapshot max age in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSnapshotMaxAgeDaysOrBuilder();
+  }
+  /**
+   * <pre>
+   * Snapshot management configuration
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.SnapshotManagement}
+   */
+  public static final class SnapshotManagement extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.SnapshotManagement)
+      SnapshotManagementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SnapshotManagement.newBuilder() to construct.
+    private SnapshotManagement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SnapshotManagement() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SnapshotManagement();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SnapshotManagement(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.Builder subBuilder = null;
+              if (snapshotSchedule_ != null) {
+                subBuilder = snapshotSchedule_.toBuilder();
+              }
+              snapshotSchedule_ = input.readMessage(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(snapshotSchedule_);
+                snapshotSchedule_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (snapshotMaxAgeDays_ != null) {
+                subBuilder = snapshotMaxAgeDays_.toBuilder();
+              }
+              snapshotMaxAgeDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(snapshotMaxAgeDays_);
+                snapshotMaxAgeDays_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement.Builder.class);
+    }
+
+    public static final int SNAPSHOT_SCHEDULE_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule snapshotSchedule_;
+    /**
+     * <pre>
+     * Snapshot creation schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+     * @return Whether the snapshotSchedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasSnapshotSchedule() {
+      return snapshotSchedule_ != null;
+    }
+    /**
+     * <pre>
+     * Snapshot creation schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+     * @return The snapshotSchedule.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule getSnapshotSchedule() {
+      return snapshotSchedule_ == null ? yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.getDefaultInstance() : snapshotSchedule_;
+    }
+    /**
+     * <pre>
+     * Snapshot creation schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotScheduleOrBuilder getSnapshotScheduleOrBuilder() {
+      return getSnapshotSchedule();
+    }
+
+    public static final int SNAPSHOT_MAX_AGE_DAYS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value snapshotMaxAgeDays_;
+    /**
+     * <pre>
+     * Snapshot max age in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+     * @return Whether the snapshotMaxAgeDays field is set.
+     */
+    @java.lang.Override
+    public boolean hasSnapshotMaxAgeDays() {
+      return snapshotMaxAgeDays_ != null;
+    }
+    /**
+     * <pre>
+     * Snapshot max age in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+     * @return The snapshotMaxAgeDays.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSnapshotMaxAgeDays() {
+      return snapshotMaxAgeDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : snapshotMaxAgeDays_;
+    }
+    /**
+     * <pre>
+     * Snapshot max age in days
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSnapshotMaxAgeDaysOrBuilder() {
+      return getSnapshotMaxAgeDays();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (snapshotSchedule_ != null) {
+        output.writeMessage(1, getSnapshotSchedule());
+      }
+      if (snapshotMaxAgeDays_ != null) {
+        output.writeMessage(2, getSnapshotMaxAgeDays());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (snapshotSchedule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSnapshotSchedule());
+      }
+      if (snapshotMaxAgeDays_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSnapshotMaxAgeDays());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement other = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement) obj;
+
+      if (hasSnapshotSchedule() != other.hasSnapshotSchedule()) return false;
+      if (hasSnapshotSchedule()) {
+        if (!getSnapshotSchedule()
+            .equals(other.getSnapshotSchedule())) return false;
+      }
+      if (hasSnapshotMaxAgeDays() != other.hasSnapshotMaxAgeDays()) return false;
+      if (hasSnapshotMaxAgeDays()) {
+        if (!getSnapshotMaxAgeDays()
+            .equals(other.getSnapshotMaxAgeDays())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSnapshotSchedule()) {
+        hash = (37 * hash) + SNAPSHOT_SCHEDULE_FIELD_NUMBER;
+        hash = (53 * hash) + getSnapshotSchedule().hashCode();
+      }
+      if (hasSnapshotMaxAgeDays()) {
+        hash = (37 * hash) + SNAPSHOT_MAX_AGE_DAYS_FIELD_NUMBER;
+        hash = (53 * hash) + getSnapshotMaxAgeDays().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Snapshot management configuration
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.SnapshotManagement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.SnapshotManagement)
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (snapshotScheduleBuilder_ == null) {
+          snapshotSchedule_ = null;
+        } else {
+          snapshotSchedule_ = null;
+          snapshotScheduleBuilder_ = null;
+        }
+        if (snapshotMaxAgeDaysBuilder_ == null) {
+          snapshotMaxAgeDays_ = null;
+        } else {
+          snapshotMaxAgeDays_ = null;
+          snapshotMaxAgeDaysBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement build() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement result = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement(this);
+        if (snapshotScheduleBuilder_ == null) {
+          result.snapshotSchedule_ = snapshotSchedule_;
+        } else {
+          result.snapshotSchedule_ = snapshotScheduleBuilder_.build();
+        }
+        if (snapshotMaxAgeDaysBuilder_ == null) {
+          result.snapshotMaxAgeDays_ = snapshotMaxAgeDays_;
+        } else {
+          result.snapshotMaxAgeDays_ = snapshotMaxAgeDaysBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement.getDefaultInstance()) return this;
+        if (other.hasSnapshotSchedule()) {
+          mergeSnapshotSchedule(other.getSnapshotSchedule());
+        }
+        if (other.hasSnapshotMaxAgeDays()) {
+          mergeSnapshotMaxAgeDays(other.getSnapshotMaxAgeDays());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule snapshotSchedule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotScheduleOrBuilder> snapshotScheduleBuilder_;
+      /**
+       * <pre>
+       * Snapshot creation schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+       * @return Whether the snapshotSchedule field is set.
+       */
+      public boolean hasSnapshotSchedule() {
+        return snapshotScheduleBuilder_ != null || snapshotSchedule_ != null;
+      }
+      /**
+       * <pre>
+       * Snapshot creation schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+       * @return The snapshotSchedule.
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule getSnapshotSchedule() {
+        if (snapshotScheduleBuilder_ == null) {
+          return snapshotSchedule_ == null ? yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.getDefaultInstance() : snapshotSchedule_;
+        } else {
+          return snapshotScheduleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Snapshot creation schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+       */
+      public Builder setSnapshotSchedule(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule value) {
+        if (snapshotScheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          snapshotSchedule_ = value;
+          onChanged();
+        } else {
+          snapshotScheduleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot creation schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+       */
+      public Builder setSnapshotSchedule(
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.Builder builderForValue) {
+        if (snapshotScheduleBuilder_ == null) {
+          snapshotSchedule_ = builderForValue.build();
+          onChanged();
+        } else {
+          snapshotScheduleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot creation schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+       */
+      public Builder mergeSnapshotSchedule(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule value) {
+        if (snapshotScheduleBuilder_ == null) {
+          if (snapshotSchedule_ != null) {
+            snapshotSchedule_ =
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.newBuilder(snapshotSchedule_).mergeFrom(value).buildPartial();
+          } else {
+            snapshotSchedule_ = value;
+          }
+          onChanged();
+        } else {
+          snapshotScheduleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot creation schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+       */
+      public Builder clearSnapshotSchedule() {
+        if (snapshotScheduleBuilder_ == null) {
+          snapshotSchedule_ = null;
+          onChanged();
+        } else {
+          snapshotSchedule_ = null;
+          snapshotScheduleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot creation schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.Builder getSnapshotScheduleBuilder() {
+        
+        onChanged();
+        return getSnapshotScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Snapshot creation schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotScheduleOrBuilder getSnapshotScheduleOrBuilder() {
+        if (snapshotScheduleBuilder_ != null) {
+          return snapshotScheduleBuilder_.getMessageOrBuilder();
+        } else {
+          return snapshotSchedule_ == null ?
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.getDefaultInstance() : snapshotSchedule_;
+        }
+      }
+      /**
+       * <pre>
+       * Snapshot creation schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.SnapshotSchedule snapshot_schedule = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotScheduleOrBuilder> 
+          getSnapshotScheduleFieldBuilder() {
+        if (snapshotScheduleBuilder_ == null) {
+          snapshotScheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotScheduleOrBuilder>(
+                  getSnapshotSchedule(),
+                  getParentForChildren(),
+                  isClean());
+          snapshotSchedule_ = null;
+        }
+        return snapshotScheduleBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value snapshotMaxAgeDays_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> snapshotMaxAgeDaysBuilder_;
+      /**
+       * <pre>
+       * Snapshot max age in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+       * @return Whether the snapshotMaxAgeDays field is set.
+       */
+      public boolean hasSnapshotMaxAgeDays() {
+        return snapshotMaxAgeDaysBuilder_ != null || snapshotMaxAgeDays_ != null;
+      }
+      /**
+       * <pre>
+       * Snapshot max age in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+       * @return The snapshotMaxAgeDays.
+       */
+      public com.google.protobuf.Int64Value getSnapshotMaxAgeDays() {
+        if (snapshotMaxAgeDaysBuilder_ == null) {
+          return snapshotMaxAgeDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : snapshotMaxAgeDays_;
+        } else {
+          return snapshotMaxAgeDaysBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Snapshot max age in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+       */
+      public Builder setSnapshotMaxAgeDays(com.google.protobuf.Int64Value value) {
+        if (snapshotMaxAgeDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          snapshotMaxAgeDays_ = value;
+          onChanged();
+        } else {
+          snapshotMaxAgeDaysBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot max age in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+       */
+      public Builder setSnapshotMaxAgeDays(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (snapshotMaxAgeDaysBuilder_ == null) {
+          snapshotMaxAgeDays_ = builderForValue.build();
+          onChanged();
+        } else {
+          snapshotMaxAgeDaysBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot max age in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+       */
+      public Builder mergeSnapshotMaxAgeDays(com.google.protobuf.Int64Value value) {
+        if (snapshotMaxAgeDaysBuilder_ == null) {
+          if (snapshotMaxAgeDays_ != null) {
+            snapshotMaxAgeDays_ =
+              com.google.protobuf.Int64Value.newBuilder(snapshotMaxAgeDays_).mergeFrom(value).buildPartial();
+          } else {
+            snapshotMaxAgeDays_ = value;
+          }
+          onChanged();
+        } else {
+          snapshotMaxAgeDaysBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot max age in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+       */
+      public Builder clearSnapshotMaxAgeDays() {
+        if (snapshotMaxAgeDaysBuilder_ == null) {
+          snapshotMaxAgeDays_ = null;
+          onChanged();
+        } else {
+          snapshotMaxAgeDays_ = null;
+          snapshotMaxAgeDaysBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Snapshot max age in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSnapshotMaxAgeDaysBuilder() {
+        
+        onChanged();
+        return getSnapshotMaxAgeDaysFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Snapshot max age in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSnapshotMaxAgeDaysOrBuilder() {
+        if (snapshotMaxAgeDaysBuilder_ != null) {
+          return snapshotMaxAgeDaysBuilder_.getMessageOrBuilder();
+        } else {
+          return snapshotMaxAgeDays_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : snapshotMaxAgeDays_;
+        }
+      }
+      /**
+       * <pre>
+       * Snapshot max age in days
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value snapshot_max_age_days = 2 [(.yandex.cloud.value) = "&gt;=7"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSnapshotMaxAgeDaysFieldBuilder() {
+        if (snapshotMaxAgeDaysBuilder_ == null) {
+          snapshotMaxAgeDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSnapshotMaxAgeDays(),
+                  getParentForChildren(),
+                  isClean());
+          snapshotMaxAgeDays_ = null;
+        }
+        return snapshotMaxAgeDaysBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.SnapshotManagement)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.SnapshotManagement)
+    private static final yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SnapshotManagement>
+        PARSER = new com.google.protobuf.AbstractParser<SnapshotManagement>() {
+      @java.lang.Override
+      public SnapshotManagement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SnapshotManagement(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SnapshotManagement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SnapshotManagement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotManagement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SnapshotScheduleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.SnapshotSchedule)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Hourly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+     * @return Whether the hourlySnapshotSchedule field is set.
+     */
+    boolean hasHourlySnapshotSchedule();
+    /**
+     * <pre>
+     * Hourly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+     * @return The hourlySnapshotSchedule.
+     */
+    yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule getHourlySnapshotSchedule();
+    /**
+     * <pre>
+     * Hourly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+     */
+    yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotScheduleOrBuilder getHourlySnapshotScheduleOrBuilder();
+
+    /**
+     * <pre>
+     * Daily based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+     * @return Whether the dailySnapshotSchedule field is set.
+     */
+    boolean hasDailySnapshotSchedule();
+    /**
+     * <pre>
+     * Daily based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+     * @return The dailySnapshotSchedule.
+     */
+    yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule getDailySnapshotSchedule();
+    /**
+     * <pre>
+     * Daily based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+     */
+    yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotScheduleOrBuilder getDailySnapshotScheduleOrBuilder();
+
+    /**
+     * <pre>
+     * Weekly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+     * @return Whether the weeklySnapshotSchedule field is set.
+     */
+    boolean hasWeeklySnapshotSchedule();
+    /**
+     * <pre>
+     * Weekly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+     * @return The weeklySnapshotSchedule.
+     */
+    yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule getWeeklySnapshotSchedule();
+    /**
+     * <pre>
+     * Weekly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+     */
+    yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotScheduleOrBuilder getWeeklySnapshotScheduleOrBuilder();
+
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.ScheduleCase getScheduleCase();
+  }
+  /**
+   * <pre>
+   * Snapshot creation schedule
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.SnapshotSchedule}
+   */
+  public static final class SnapshotSchedule extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.SnapshotSchedule)
+      SnapshotScheduleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SnapshotSchedule.newBuilder() to construct.
+    private SnapshotSchedule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SnapshotSchedule() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SnapshotSchedule();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SnapshotSchedule(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.Builder subBuilder = null;
+              if (scheduleCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_).toBuilder();
+              }
+              schedule_ =
+                  input.readMessage(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_);
+                schedule_ = subBuilder.buildPartial();
+              }
+              scheduleCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.Builder subBuilder = null;
+              if (scheduleCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_).toBuilder();
+              }
+              schedule_ =
+                  input.readMessage(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_);
+                schedule_ = subBuilder.buildPartial();
+              }
+              scheduleCase_ = 2;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.Builder subBuilder = null;
+              if (scheduleCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_).toBuilder();
+              }
+              schedule_ =
+                  input.readMessage(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_);
+                schedule_ = subBuilder.buildPartial();
+              }
+              scheduleCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.Builder.class);
+    }
+
+    private int scheduleCase_ = 0;
+    private java.lang.Object schedule_;
+    public enum ScheduleCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      HOURLY_SNAPSHOT_SCHEDULE(1),
+      DAILY_SNAPSHOT_SCHEDULE(2),
+      WEEKLY_SNAPSHOT_SCHEDULE(3),
+      SCHEDULE_NOT_SET(0);
+      private final int value;
+      private ScheduleCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ScheduleCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ScheduleCase forNumber(int value) {
+        switch (value) {
+          case 1: return HOURLY_SNAPSHOT_SCHEDULE;
+          case 2: return DAILY_SNAPSHOT_SCHEDULE;
+          case 3: return WEEKLY_SNAPSHOT_SCHEDULE;
+          case 0: return SCHEDULE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ScheduleCase
+    getScheduleCase() {
+      return ScheduleCase.forNumber(
+          scheduleCase_);
+    }
+
+    public static final int HOURLY_SNAPSHOT_SCHEDULE_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Hourly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+     * @return Whether the hourlySnapshotSchedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasHourlySnapshotSchedule() {
+      return scheduleCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Hourly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+     * @return The hourlySnapshotSchedule.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule getHourlySnapshotSchedule() {
+      if (scheduleCase_ == 1) {
+         return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_;
+      }
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Hourly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotScheduleOrBuilder getHourlySnapshotScheduleOrBuilder() {
+      if (scheduleCase_ == 1) {
+         return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_;
+      }
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.getDefaultInstance();
+    }
+
+    public static final int DAILY_SNAPSHOT_SCHEDULE_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Daily based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+     * @return Whether the dailySnapshotSchedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasDailySnapshotSchedule() {
+      return scheduleCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Daily based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+     * @return The dailySnapshotSchedule.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule getDailySnapshotSchedule() {
+      if (scheduleCase_ == 2) {
+         return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_;
+      }
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Daily based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotScheduleOrBuilder getDailySnapshotScheduleOrBuilder() {
+      if (scheduleCase_ == 2) {
+         return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_;
+      }
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.getDefaultInstance();
+    }
+
+    public static final int WEEKLY_SNAPSHOT_SCHEDULE_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Weekly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+     * @return Whether the weeklySnapshotSchedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasWeeklySnapshotSchedule() {
+      return scheduleCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Weekly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+     * @return The weeklySnapshotSchedule.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule getWeeklySnapshotSchedule() {
+      if (scheduleCase_ == 3) {
+         return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_;
+      }
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Weekly based snapshot schedule
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotScheduleOrBuilder getWeeklySnapshotScheduleOrBuilder() {
+      if (scheduleCase_ == 3) {
+         return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_;
+      }
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (scheduleCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_);
+      }
+      if (scheduleCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_);
+      }
+      if (scheduleCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (scheduleCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_);
+      }
+      if (scheduleCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_);
+      }
+      if (scheduleCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule other = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule) obj;
+
+      if (!getScheduleCase().equals(other.getScheduleCase())) return false;
+      switch (scheduleCase_) {
+        case 1:
+          if (!getHourlySnapshotSchedule()
+              .equals(other.getHourlySnapshotSchedule())) return false;
+          break;
+        case 2:
+          if (!getDailySnapshotSchedule()
+              .equals(other.getDailySnapshotSchedule())) return false;
+          break;
+        case 3:
+          if (!getWeeklySnapshotSchedule()
+              .equals(other.getWeeklySnapshotSchedule())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (scheduleCase_) {
+        case 1:
+          hash = (37 * hash) + HOURLY_SNAPSHOT_SCHEDULE_FIELD_NUMBER;
+          hash = (53 * hash) + getHourlySnapshotSchedule().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + DAILY_SNAPSHOT_SCHEDULE_FIELD_NUMBER;
+          hash = (53 * hash) + getDailySnapshotSchedule().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + WEEKLY_SNAPSHOT_SCHEDULE_FIELD_NUMBER;
+          hash = (53 * hash) + getWeeklySnapshotSchedule().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Snapshot creation schedule
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.SnapshotSchedule}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.SnapshotSchedule)
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotScheduleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        scheduleCase_ = 0;
+        schedule_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule build() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule result = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule(this);
+        if (scheduleCase_ == 1) {
+          if (hourlySnapshotScheduleBuilder_ == null) {
+            result.schedule_ = schedule_;
+          } else {
+            result.schedule_ = hourlySnapshotScheduleBuilder_.build();
+          }
+        }
+        if (scheduleCase_ == 2) {
+          if (dailySnapshotScheduleBuilder_ == null) {
+            result.schedule_ = schedule_;
+          } else {
+            result.schedule_ = dailySnapshotScheduleBuilder_.build();
+          }
+        }
+        if (scheduleCase_ == 3) {
+          if (weeklySnapshotScheduleBuilder_ == null) {
+            result.schedule_ = schedule_;
+          } else {
+            result.schedule_ = weeklySnapshotScheduleBuilder_.build();
+          }
+        }
+        result.scheduleCase_ = scheduleCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule.getDefaultInstance()) return this;
+        switch (other.getScheduleCase()) {
+          case HOURLY_SNAPSHOT_SCHEDULE: {
+            mergeHourlySnapshotSchedule(other.getHourlySnapshotSchedule());
+            break;
+          }
+          case DAILY_SNAPSHOT_SCHEDULE: {
+            mergeDailySnapshotSchedule(other.getDailySnapshotSchedule());
+            break;
+          }
+          case WEEKLY_SNAPSHOT_SCHEDULE: {
+            mergeWeeklySnapshotSchedule(other.getWeeklySnapshotSchedule());
+            break;
+          }
+          case SCHEDULE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int scheduleCase_ = 0;
+      private java.lang.Object schedule_;
+      public ScheduleCase
+          getScheduleCase() {
+        return ScheduleCase.forNumber(
+            scheduleCase_);
+      }
+
+      public Builder clearSchedule() {
+        scheduleCase_ = 0;
+        schedule_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotScheduleOrBuilder> hourlySnapshotScheduleBuilder_;
+      /**
+       * <pre>
+       * Hourly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+       * @return Whether the hourlySnapshotSchedule field is set.
+       */
+      @java.lang.Override
+      public boolean hasHourlySnapshotSchedule() {
+        return scheduleCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Hourly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+       * @return The hourlySnapshotSchedule.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule getHourlySnapshotSchedule() {
+        if (hourlySnapshotScheduleBuilder_ == null) {
+          if (scheduleCase_ == 1) {
+            return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_;
+          }
+          return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.getDefaultInstance();
+        } else {
+          if (scheduleCase_ == 1) {
+            return hourlySnapshotScheduleBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Hourly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+       */
+      public Builder setHourlySnapshotSchedule(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule value) {
+        if (hourlySnapshotScheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schedule_ = value;
+          onChanged();
+        } else {
+          hourlySnapshotScheduleBuilder_.setMessage(value);
+        }
+        scheduleCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hourly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+       */
+      public Builder setHourlySnapshotSchedule(
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.Builder builderForValue) {
+        if (hourlySnapshotScheduleBuilder_ == null) {
+          schedule_ = builderForValue.build();
+          onChanged();
+        } else {
+          hourlySnapshotScheduleBuilder_.setMessage(builderForValue.build());
+        }
+        scheduleCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hourly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+       */
+      public Builder mergeHourlySnapshotSchedule(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule value) {
+        if (hourlySnapshotScheduleBuilder_ == null) {
+          if (scheduleCase_ == 1 &&
+              schedule_ != yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.getDefaultInstance()) {
+            schedule_ = yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.newBuilder((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            schedule_ = value;
+          }
+          onChanged();
+        } else {
+          if (scheduleCase_ == 1) {
+            hourlySnapshotScheduleBuilder_.mergeFrom(value);
+          }
+          hourlySnapshotScheduleBuilder_.setMessage(value);
+        }
+        scheduleCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hourly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+       */
+      public Builder clearHourlySnapshotSchedule() {
+        if (hourlySnapshotScheduleBuilder_ == null) {
+          if (scheduleCase_ == 1) {
+            scheduleCase_ = 0;
+            schedule_ = null;
+            onChanged();
+          }
+        } else {
+          if (scheduleCase_ == 1) {
+            scheduleCase_ = 0;
+            schedule_ = null;
+          }
+          hourlySnapshotScheduleBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Hourly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.Builder getHourlySnapshotScheduleBuilder() {
+        return getHourlySnapshotScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Hourly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotScheduleOrBuilder getHourlySnapshotScheduleOrBuilder() {
+        if ((scheduleCase_ == 1) && (hourlySnapshotScheduleBuilder_ != null)) {
+          return hourlySnapshotScheduleBuilder_.getMessageOrBuilder();
+        } else {
+          if (scheduleCase_ == 1) {
+            return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_;
+          }
+          return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Hourly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule hourly_snapshot_schedule = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotScheduleOrBuilder> 
+          getHourlySnapshotScheduleFieldBuilder() {
+        if (hourlySnapshotScheduleBuilder_ == null) {
+          if (!(scheduleCase_ == 1)) {
+            schedule_ = yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.getDefaultInstance();
+          }
+          hourlySnapshotScheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotScheduleOrBuilder>(
+                  (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) schedule_,
+                  getParentForChildren(),
+                  isClean());
+          schedule_ = null;
+        }
+        scheduleCase_ = 1;
+        onChanged();;
+        return hourlySnapshotScheduleBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotScheduleOrBuilder> dailySnapshotScheduleBuilder_;
+      /**
+       * <pre>
+       * Daily based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+       * @return Whether the dailySnapshotSchedule field is set.
+       */
+      @java.lang.Override
+      public boolean hasDailySnapshotSchedule() {
+        return scheduleCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Daily based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+       * @return The dailySnapshotSchedule.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule getDailySnapshotSchedule() {
+        if (dailySnapshotScheduleBuilder_ == null) {
+          if (scheduleCase_ == 2) {
+            return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_;
+          }
+          return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.getDefaultInstance();
+        } else {
+          if (scheduleCase_ == 2) {
+            return dailySnapshotScheduleBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Daily based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+       */
+      public Builder setDailySnapshotSchedule(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule value) {
+        if (dailySnapshotScheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schedule_ = value;
+          onChanged();
+        } else {
+          dailySnapshotScheduleBuilder_.setMessage(value);
+        }
+        scheduleCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Daily based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+       */
+      public Builder setDailySnapshotSchedule(
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.Builder builderForValue) {
+        if (dailySnapshotScheduleBuilder_ == null) {
+          schedule_ = builderForValue.build();
+          onChanged();
+        } else {
+          dailySnapshotScheduleBuilder_.setMessage(builderForValue.build());
+        }
+        scheduleCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Daily based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+       */
+      public Builder mergeDailySnapshotSchedule(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule value) {
+        if (dailySnapshotScheduleBuilder_ == null) {
+          if (scheduleCase_ == 2 &&
+              schedule_ != yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.getDefaultInstance()) {
+            schedule_ = yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.newBuilder((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            schedule_ = value;
+          }
+          onChanged();
+        } else {
+          if (scheduleCase_ == 2) {
+            dailySnapshotScheduleBuilder_.mergeFrom(value);
+          }
+          dailySnapshotScheduleBuilder_.setMessage(value);
+        }
+        scheduleCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Daily based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+       */
+      public Builder clearDailySnapshotSchedule() {
+        if (dailySnapshotScheduleBuilder_ == null) {
+          if (scheduleCase_ == 2) {
+            scheduleCase_ = 0;
+            schedule_ = null;
+            onChanged();
+          }
+        } else {
+          if (scheduleCase_ == 2) {
+            scheduleCase_ = 0;
+            schedule_ = null;
+          }
+          dailySnapshotScheduleBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Daily based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.Builder getDailySnapshotScheduleBuilder() {
+        return getDailySnapshotScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Daily based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotScheduleOrBuilder getDailySnapshotScheduleOrBuilder() {
+        if ((scheduleCase_ == 2) && (dailySnapshotScheduleBuilder_ != null)) {
+          return dailySnapshotScheduleBuilder_.getMessageOrBuilder();
+        } else {
+          if (scheduleCase_ == 2) {
+            return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_;
+          }
+          return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Daily based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule daily_snapshot_schedule = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotScheduleOrBuilder> 
+          getDailySnapshotScheduleFieldBuilder() {
+        if (dailySnapshotScheduleBuilder_ == null) {
+          if (!(scheduleCase_ == 2)) {
+            schedule_ = yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.getDefaultInstance();
+          }
+          dailySnapshotScheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotScheduleOrBuilder>(
+                  (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) schedule_,
+                  getParentForChildren(),
+                  isClean());
+          schedule_ = null;
+        }
+        scheduleCase_ = 2;
+        onChanged();;
+        return dailySnapshotScheduleBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotScheduleOrBuilder> weeklySnapshotScheduleBuilder_;
+      /**
+       * <pre>
+       * Weekly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+       * @return Whether the weeklySnapshotSchedule field is set.
+       */
+      @java.lang.Override
+      public boolean hasWeeklySnapshotSchedule() {
+        return scheduleCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Weekly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+       * @return The weeklySnapshotSchedule.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule getWeeklySnapshotSchedule() {
+        if (weeklySnapshotScheduleBuilder_ == null) {
+          if (scheduleCase_ == 3) {
+            return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_;
+          }
+          return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDefaultInstance();
+        } else {
+          if (scheduleCase_ == 3) {
+            return weeklySnapshotScheduleBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Weekly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+       */
+      public Builder setWeeklySnapshotSchedule(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule value) {
+        if (weeklySnapshotScheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schedule_ = value;
+          onChanged();
+        } else {
+          weeklySnapshotScheduleBuilder_.setMessage(value);
+        }
+        scheduleCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Weekly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+       */
+      public Builder setWeeklySnapshotSchedule(
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.Builder builderForValue) {
+        if (weeklySnapshotScheduleBuilder_ == null) {
+          schedule_ = builderForValue.build();
+          onChanged();
+        } else {
+          weeklySnapshotScheduleBuilder_.setMessage(builderForValue.build());
+        }
+        scheduleCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Weekly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+       */
+      public Builder mergeWeeklySnapshotSchedule(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule value) {
+        if (weeklySnapshotScheduleBuilder_ == null) {
+          if (scheduleCase_ == 3 &&
+              schedule_ != yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDefaultInstance()) {
+            schedule_ = yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.newBuilder((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            schedule_ = value;
+          }
+          onChanged();
+        } else {
+          if (scheduleCase_ == 3) {
+            weeklySnapshotScheduleBuilder_.mergeFrom(value);
+          }
+          weeklySnapshotScheduleBuilder_.setMessage(value);
+        }
+        scheduleCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Weekly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+       */
+      public Builder clearWeeklySnapshotSchedule() {
+        if (weeklySnapshotScheduleBuilder_ == null) {
+          if (scheduleCase_ == 3) {
+            scheduleCase_ = 0;
+            schedule_ = null;
+            onChanged();
+          }
+        } else {
+          if (scheduleCase_ == 3) {
+            scheduleCase_ = 0;
+            schedule_ = null;
+          }
+          weeklySnapshotScheduleBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Weekly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+       */
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.Builder getWeeklySnapshotScheduleBuilder() {
+        return getWeeklySnapshotScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Weekly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotScheduleOrBuilder getWeeklySnapshotScheduleOrBuilder() {
+        if ((scheduleCase_ == 3) && (weeklySnapshotScheduleBuilder_ != null)) {
+          return weeklySnapshotScheduleBuilder_.getMessageOrBuilder();
+        } else {
+          if (scheduleCase_ == 3) {
+            return (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_;
+          }
+          return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Weekly based snapshot schedule
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule weekly_snapshot_schedule = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotScheduleOrBuilder> 
+          getWeeklySnapshotScheduleFieldBuilder() {
+        if (weeklySnapshotScheduleBuilder_ == null) {
+          if (!(scheduleCase_ == 3)) {
+            schedule_ = yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDefaultInstance();
+          }
+          weeklySnapshotScheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.Builder, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotScheduleOrBuilder>(
+                  (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) schedule_,
+                  getParentForChildren(),
+                  isClean());
+          schedule_ = null;
+        }
+        scheduleCase_ = 3;
+        onChanged();;
+        return weeklySnapshotScheduleBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.SnapshotSchedule)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.SnapshotSchedule)
+    private static final yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SnapshotSchedule>
+        PARSER = new com.google.protobuf.AbstractParser<SnapshotSchedule>() {
+      @java.lang.Override
+      public SnapshotSchedule parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SnapshotSchedule(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SnapshotSchedule> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SnapshotSchedule> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.SnapshotSchedule getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HourlySnapshotScheduleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The minute of the hour at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 minute = 1 [(.yandex.cloud.value) = "0-59"];</code>
+     * @return The minute.
+     */
+    long getMinute();
+  }
+  /**
+   * <pre>
+   * Hourly based snapshot schedule
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule}
+   */
+  public static final class HourlySnapshotSchedule extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule)
+      HourlySnapshotScheduleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HourlySnapshotSchedule.newBuilder() to construct.
+    private HourlySnapshotSchedule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HourlySnapshotSchedule() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HourlySnapshotSchedule();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HourlySnapshotSchedule(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              minute_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.Builder.class);
+    }
+
+    public static final int MINUTE_FIELD_NUMBER = 1;
+    private long minute_;
+    /**
+     * <pre>
+     * The minute of the hour at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 minute = 1 [(.yandex.cloud.value) = "0-59"];</code>
+     * @return The minute.
+     */
+    @java.lang.Override
+    public long getMinute() {
+      return minute_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minute_ != 0L) {
+        output.writeInt64(1, minute_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minute_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, minute_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule other = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) obj;
+
+      if (getMinute()
+          != other.getMinute()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINUTE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinute());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Hourly based snapshot schedule
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule)
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotScheduleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        minute_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule build() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule result = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule(this);
+        result.minute_ = minute_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule.getDefaultInstance()) return this;
+        if (other.getMinute() != 0L) {
+          setMinute(other.getMinute());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long minute_ ;
+      /**
+       * <pre>
+       * The minute of the hour at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 minute = 1 [(.yandex.cloud.value) = "0-59"];</code>
+       * @return The minute.
+       */
+      @java.lang.Override
+      public long getMinute() {
+        return minute_;
+      }
+      /**
+       * <pre>
+       * The minute of the hour at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 minute = 1 [(.yandex.cloud.value) = "0-59"];</code>
+       * @param value The minute to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinute(long value) {
+        
+        minute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The minute of the hour at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 minute = 1 [(.yandex.cloud.value) = "0-59"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinute() {
+        
+        minute_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.HourlySnapshotSchedule)
+    private static final yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HourlySnapshotSchedule>
+        PARSER = new com.google.protobuf.AbstractParser<HourlySnapshotSchedule>() {
+      @java.lang.Override
+      public HourlySnapshotSchedule parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HourlySnapshotSchedule(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HourlySnapshotSchedule> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HourlySnapshotSchedule> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.HourlySnapshotSchedule getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DailySnapshotScheduleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The hour of the day in UTC timezone at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 hour = 1 [(.yandex.cloud.value) = "0-23"];</code>
+     * @return The hour.
+     */
+    long getHour();
+
+    /**
+     * <pre>
+     * The minute of the hour at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 minute = 2 [(.yandex.cloud.value) = "0-59"];</code>
+     * @return The minute.
+     */
+    long getMinute();
+  }
+  /**
+   * <pre>
+   * Daily based snapshot schedule
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule}
+   */
+  public static final class DailySnapshotSchedule extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule)
+      DailySnapshotScheduleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DailySnapshotSchedule.newBuilder() to construct.
+    private DailySnapshotSchedule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DailySnapshotSchedule() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DailySnapshotSchedule();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DailySnapshotSchedule(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              hour_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              minute_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.Builder.class);
+    }
+
+    public static final int HOUR_FIELD_NUMBER = 1;
+    private long hour_;
+    /**
+     * <pre>
+     * The hour of the day in UTC timezone at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 hour = 1 [(.yandex.cloud.value) = "0-23"];</code>
+     * @return The hour.
+     */
+    @java.lang.Override
+    public long getHour() {
+      return hour_;
+    }
+
+    public static final int MINUTE_FIELD_NUMBER = 2;
+    private long minute_;
+    /**
+     * <pre>
+     * The minute of the hour at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 minute = 2 [(.yandex.cloud.value) = "0-59"];</code>
+     * @return The minute.
+     */
+    @java.lang.Override
+    public long getMinute() {
+      return minute_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hour_ != 0L) {
+        output.writeInt64(1, hour_);
+      }
+      if (minute_ != 0L) {
+        output.writeInt64(2, minute_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hour_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, hour_);
+      }
+      if (minute_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, minute_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule other = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) obj;
+
+      if (getHour()
+          != other.getHour()) return false;
+      if (getMinute()
+          != other.getMinute()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOUR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHour());
+      hash = (37 * hash) + MINUTE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinute());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Daily based snapshot schedule
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule)
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotScheduleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hour_ = 0L;
+
+        minute_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule build() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule result = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule(this);
+        result.hour_ = hour_;
+        result.minute_ = minute_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule.getDefaultInstance()) return this;
+        if (other.getHour() != 0L) {
+          setHour(other.getHour());
+        }
+        if (other.getMinute() != 0L) {
+          setMinute(other.getMinute());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long hour_ ;
+      /**
+       * <pre>
+       * The hour of the day in UTC timezone at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 hour = 1 [(.yandex.cloud.value) = "0-23"];</code>
+       * @return The hour.
+       */
+      @java.lang.Override
+      public long getHour() {
+        return hour_;
+      }
+      /**
+       * <pre>
+       * The hour of the day in UTC timezone at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 hour = 1 [(.yandex.cloud.value) = "0-23"];</code>
+       * @param value The hour to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHour(long value) {
+        
+        hour_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The hour of the day in UTC timezone at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 hour = 1 [(.yandex.cloud.value) = "0-23"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHour() {
+        
+        hour_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long minute_ ;
+      /**
+       * <pre>
+       * The minute of the hour at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 minute = 2 [(.yandex.cloud.value) = "0-59"];</code>
+       * @return The minute.
+       */
+      @java.lang.Override
+      public long getMinute() {
+        return minute_;
+      }
+      /**
+       * <pre>
+       * The minute of the hour at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 minute = 2 [(.yandex.cloud.value) = "0-59"];</code>
+       * @param value The minute to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinute(long value) {
+        
+        minute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The minute of the hour at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 minute = 2 [(.yandex.cloud.value) = "0-59"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinute() {
+        
+        minute_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.DailySnapshotSchedule)
+    private static final yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DailySnapshotSchedule>
+        PARSER = new com.google.protobuf.AbstractParser<DailySnapshotSchedule>() {
+      @java.lang.Override
+      public DailySnapshotSchedule parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DailySnapshotSchedule(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DailySnapshotSchedule> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DailySnapshotSchedule> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.DailySnapshotSchedule getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface WeeklySnapshotScheduleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Day of the week
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay day = 1;</code>
+     * @return The enum numeric value on the wire for day.
+     */
+    int getDayValue();
+    /**
+     * <pre>
+     * Day of the week
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay day = 1;</code>
+     * @return The day.
+     */
+    yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay getDay();
+
+    /**
+     * <pre>
+     * The hour of the day in UTC timezone at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 hour = 2 [(.yandex.cloud.value) = "0-23"];</code>
+     * @return The hour.
+     */
+    long getHour();
+
+    /**
+     * <pre>
+     * The minute of the hour at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 minute = 3 [(.yandex.cloud.value) = "0-59"];</code>
+     * @return The minute.
+     */
+    long getMinute();
+  }
+  /**
+   * <pre>
+   * Weekly based snapshot schedule
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule}
+   */
+  public static final class WeeklySnapshotSchedule extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule)
+      WeeklySnapshotScheduleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WeeklySnapshotSchedule.newBuilder() to construct.
+    private WeeklySnapshotSchedule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WeeklySnapshotSchedule() {
+      day_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WeeklySnapshotSchedule();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private WeeklySnapshotSchedule(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              day_ = rawValue;
+              break;
+            }
+            case 16: {
+
+              hour_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              minute_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Day of the week
+     * </pre>
+     *
+     * Protobuf enum {@code yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay}
+     */
+    public enum WeekDay
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>WEEK_DAY_UNSPECIFIED = 0;</code>
+       */
+      WEEK_DAY_UNSPECIFIED(0),
+      /**
+       * <code>MON = 1;</code>
+       */
+      MON(1),
+      /**
+       * <code>TUE = 2;</code>
+       */
+      TUE(2),
+      /**
+       * <code>WED = 3;</code>
+       */
+      WED(3),
+      /**
+       * <code>THU = 4;</code>
+       */
+      THU(4),
+      /**
+       * <code>FRI = 5;</code>
+       */
+      FRI(5),
+      /**
+       * <code>SAT = 6;</code>
+       */
+      SAT(6),
+      /**
+       * <code>SUN = 7;</code>
+       */
+      SUN(7),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>WEEK_DAY_UNSPECIFIED = 0;</code>
+       */
+      public static final int WEEK_DAY_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>MON = 1;</code>
+       */
+      public static final int MON_VALUE = 1;
+      /**
+       * <code>TUE = 2;</code>
+       */
+      public static final int TUE_VALUE = 2;
+      /**
+       * <code>WED = 3;</code>
+       */
+      public static final int WED_VALUE = 3;
+      /**
+       * <code>THU = 4;</code>
+       */
+      public static final int THU_VALUE = 4;
+      /**
+       * <code>FRI = 5;</code>
+       */
+      public static final int FRI_VALUE = 5;
+      /**
+       * <code>SAT = 6;</code>
+       */
+      public static final int SAT_VALUE = 6;
+      /**
+       * <code>SUN = 7;</code>
+       */
+      public static final int SUN_VALUE = 7;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static WeekDay valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static WeekDay forNumber(int value) {
+        switch (value) {
+          case 0: return WEEK_DAY_UNSPECIFIED;
+          case 1: return MON;
+          case 2: return TUE;
+          case 3: return WED;
+          case 4: return THU;
+          case 5: return FRI;
+          case 6: return SAT;
+          case 7: return SUN;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<WeekDay>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          WeekDay> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<WeekDay>() {
+              public WeekDay findValueByNumber(int number) {
+                return WeekDay.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final WeekDay[] VALUES = values();
+
+      public static WeekDay valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private WeekDay(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay)
+    }
+
+    public static final int DAY_FIELD_NUMBER = 1;
+    private int day_;
+    /**
+     * <pre>
+     * Day of the week
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay day = 1;</code>
+     * @return The enum numeric value on the wire for day.
+     */
+    @java.lang.Override public int getDayValue() {
+      return day_;
+    }
+    /**
+     * <pre>
+     * Day of the week
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay day = 1;</code>
+     * @return The day.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay getDay() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay result = yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay.valueOf(day_);
+      return result == null ? yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay.UNRECOGNIZED : result;
+    }
+
+    public static final int HOUR_FIELD_NUMBER = 2;
+    private long hour_;
+    /**
+     * <pre>
+     * The hour of the day in UTC timezone at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 hour = 2 [(.yandex.cloud.value) = "0-23"];</code>
+     * @return The hour.
+     */
+    @java.lang.Override
+    public long getHour() {
+      return hour_;
+    }
+
+    public static final int MINUTE_FIELD_NUMBER = 3;
+    private long minute_;
+    /**
+     * <pre>
+     * The minute of the hour at which the backup should be created.
+     * </pre>
+     *
+     * <code>int64 minute = 3 [(.yandex.cloud.value) = "0-59"];</code>
+     * @return The minute.
+     */
+    @java.lang.Override
+    public long getMinute() {
+      return minute_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (day_ != yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay.WEEK_DAY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, day_);
+      }
+      if (hour_ != 0L) {
+        output.writeInt64(2, hour_);
+      }
+      if (minute_ != 0L) {
+        output.writeInt64(3, minute_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (day_ != yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay.WEEK_DAY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, day_);
+      }
+      if (hour_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, hour_);
+      }
+      if (minute_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, minute_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule other = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) obj;
+
+      if (day_ != other.day_) return false;
+      if (getHour()
+          != other.getHour()) return false;
+      if (getMinute()
+          != other.getMinute()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DAY_FIELD_NUMBER;
+      hash = (53 * hash) + day_;
+      hash = (37 * hash) + HOUR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHour());
+      hash = (37 * hash) + MINUTE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinute());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Weekly based snapshot schedule
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule)
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotScheduleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.class, yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        day_ = 0;
+
+        hour_ = 0L;
+
+        minute_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule build() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule buildPartial() {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule result = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule(this);
+        result.day_ = day_;
+        result.hour_ = hour_;
+        result.minute_ = minute_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) {
+          return mergeFrom((yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule other) {
+        if (other == yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.getDefaultInstance()) return this;
+        if (other.day_ != 0) {
+          setDayValue(other.getDayValue());
+        }
+        if (other.getHour() != 0L) {
+          setHour(other.getHour());
+        }
+        if (other.getMinute() != 0L) {
+          setMinute(other.getMinute());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int day_ = 0;
+      /**
+       * <pre>
+       * Day of the week
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay day = 1;</code>
+       * @return The enum numeric value on the wire for day.
+       */
+      @java.lang.Override public int getDayValue() {
+        return day_;
+      }
+      /**
+       * <pre>
+       * Day of the week
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay day = 1;</code>
+       * @param value The enum numeric value on the wire for day to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDayValue(int value) {
+        
+        day_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Day of the week
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay day = 1;</code>
+       * @return The day.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay getDay() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay result = yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay.valueOf(day_);
+        return result == null ? yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Day of the week
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay day = 1;</code>
+       * @param value The day to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDay(yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule.WeekDay value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        day_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Day of the week
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule.WeekDay day = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDay() {
+        
+        day_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long hour_ ;
+      /**
+       * <pre>
+       * The hour of the day in UTC timezone at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 hour = 2 [(.yandex.cloud.value) = "0-23"];</code>
+       * @return The hour.
+       */
+      @java.lang.Override
+      public long getHour() {
+        return hour_;
+      }
+      /**
+       * <pre>
+       * The hour of the day in UTC timezone at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 hour = 2 [(.yandex.cloud.value) = "0-23"];</code>
+       * @param value The hour to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHour(long value) {
+        
+        hour_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The hour of the day in UTC timezone at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 hour = 2 [(.yandex.cloud.value) = "0-23"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHour() {
+        
+        hour_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long minute_ ;
+      /**
+       * <pre>
+       * The minute of the hour at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 minute = 3 [(.yandex.cloud.value) = "0-59"];</code>
+       * @return The minute.
+       */
+      @java.lang.Override
+      public long getMinute() {
+        return minute_;
+      }
+      /**
+       * <pre>
+       * The minute of the hour at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 minute = 3 [(.yandex.cloud.value) = "0-59"];</code>
+       * @param value The minute to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinute(long value) {
+        
+        minute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The minute of the hour at which the backup should be created.
+       * </pre>
+       *
+       * <code>int64 minute = 3 [(.yandex.cloud.value) = "0-59"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinute() {
+        
+        minute_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.opensearch.v1.WeeklySnapshotSchedule)
+    private static final yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule();
+    }
+
+    public static yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WeeklySnapshotSchedule>
+        PARSER = new com.google.protobuf.AbstractParser<WeeklySnapshotSchedule>() {
+      @java.lang.Override
+      public WeeklySnapshotSchedule parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new WeeklySnapshotSchedule(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<WeeklySnapshotSchedule> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WeeklySnapshotSchedule> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.opensearch.v1.BackupOuterClass.WeeklySnapshotSchedule getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_opensearch_v1_Backup_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_opensearch_v1_Backup_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2188,23 +6571,46 @@ public final class BackupOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/mdb/opensearch/v1/backup." +
       "proto\022\036yandex.cloud.mdb.opensearch.v1\032\037g" +
-      "oogle/protobuf/timestamp.proto\032\035yandex/c" +
-      "loud/validation.proto\"\205\002\n\006Backup\022\n\n\002id\030\001" +
-      " \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\031\n\021source_cluste" +
-      "r_id\030\003 \001(\t\022.\n\nstarted_at\030\004 \001(\0132\032.google." +
-      "protobuf.Timestamp\022.\n\ncreated_at\030\005 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022\032\n\007indices\030\006 " +
-      "\003(\tB\t\202\3101\005<=100\022\032\n\022opensearch_version\030\007 \001" +
-      "(\t\022\022\n\nsize_bytes\030\010 \001(\003\022\025\n\rindices_total\030" +
-      "\t \001(\003Bs\n\"yandex.cloud.api.mdb.opensearch" +
-      ".v1ZMgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/opensearch/v1;opensear" +
-      "chb\006proto3"
+      "oogle/protobuf/timestamp.proto\032\036google/p" +
+      "rotobuf/wrappers.proto\032\035yandex/cloud/val" +
+      "idation.proto\"\205\002\n\006Backup\022\n\n\002id\030\001 \001(\t\022\021\n\t" +
+      "folder_id\030\002 \001(\t\022\031\n\021source_cluster_id\030\003 \001" +
+      "(\t\022.\n\nstarted_at\030\004 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022.\n\ncreated_at\030\005 \001(\0132\032.google." +
+      "protobuf.Timestamp\022\032\n\007indices\030\006 \003(\tB\t\202\3101" +
+      "\005<=100\022\032\n\022opensearch_version\030\007 \001(\t\022\022\n\nsi" +
+      "ze_bytes\030\010 \001(\003\022\025\n\rindices_total\030\t \001(\003\"\246\001" +
+      "\n\022SnapshotManagement\022K\n\021snapshot_schedul" +
+      "e\030\001 \001(\01320.yandex.cloud.mdb.opensearch.v1" +
+      ".SnapshotSchedule\022C\n\025snapshot_max_age_da" +
+      "ys\030\002 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
+      "\3071\003>=7\"\266\002\n\020SnapshotSchedule\022Z\n\030hourly_sn" +
+      "apshot_schedule\030\001 \001(\01326.yandex.cloud.mdb" +
+      ".opensearch.v1.HourlySnapshotScheduleH\000\022" +
+      "X\n\027daily_snapshot_schedule\030\002 \001(\01325.yande" +
+      "x.cloud.mdb.opensearch.v1.DailySnapshotS" +
+      "cheduleH\000\022Z\n\030weekly_snapshot_schedule\030\003 " +
+      "\001(\01326.yandex.cloud.mdb.opensearch.v1.Wee" +
+      "klySnapshotScheduleH\000B\020\n\010schedule\022\004\300\3011\001\"" +
+      "2\n\026HourlySnapshotSchedule\022\030\n\006minute\030\001 \001(" +
+      "\003B\010\372\3071\0040-59\"I\n\025DailySnapshotSchedule\022\026\n\004" +
+      "hour\030\001 \001(\003B\010\372\3071\0040-23\022\030\n\006minute\030\002 \001(\003B\010\372\307" +
+      "1\0040-59\"\373\001\n\026WeeklySnapshotSchedule\022K\n\003day" +
+      "\030\001 \001(\0162>.yandex.cloud.mdb.opensearch.v1." +
+      "WeeklySnapshotSchedule.WeekDay\022\026\n\004hour\030\002" +
+      " \001(\003B\010\372\3071\0040-23\022\030\n\006minute\030\003 \001(\003B\010\372\3071\0040-59" +
+      "\"b\n\007WeekDay\022\030\n\024WEEK_DAY_UNSPECIFIED\020\000\022\007\n" +
+      "\003MON\020\001\022\007\n\003TUE\020\002\022\007\n\003WED\020\003\022\007\n\003THU\020\004\022\007\n\003FRI" +
+      "\020\005\022\007\n\003SAT\020\006\022\007\n\003SUN\020\007Bs\n\"yandex.cloud.api" +
+      ".mdb.opensearch.v1ZMgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/opensea" +
+      "rch/v1;opensearchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_opensearch_v1_Backup_descriptor =
@@ -2213,12 +6619,45 @@ public final class BackupOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_Backup_descriptor,
         new java.lang.String[] { "Id", "FolderId", "SourceClusterId", "StartedAt", "CreatedAt", "Indices", "OpensearchVersion", "SizeBytes", "IndicesTotal", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotManagement_descriptor,
+        new java.lang.String[] { "SnapshotSchedule", "SnapshotMaxAgeDays", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_SnapshotSchedule_descriptor,
+        new java.lang.String[] { "HourlySnapshotSchedule", "DailySnapshotSchedule", "WeeklySnapshotSchedule", "Schedule", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_HourlySnapshotSchedule_descriptor,
+        new java.lang.String[] { "Minute", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_DailySnapshotSchedule_descriptor,
+        new java.lang.String[] { "Hour", "Minute", });
+    internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_opensearch_v1_WeeklySnapshotSchedule_descriptor,
+        new java.lang.String[] { "Day", "Hour", "Minute", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
 

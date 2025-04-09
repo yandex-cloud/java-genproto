@@ -81,7 +81,7 @@ public final class ResourcePresetOuterClass {
 
     /**
      * <pre>
-     * Number of CPU cores for a Data Proc host created with the preset.
+     * Number of CPU cores for a Yandex Data Processing host created with the preset.
      * </pre>
      *
      * <code>int64 cores = 3;</code>
@@ -91,7 +91,7 @@ public final class ResourcePresetOuterClass {
 
     /**
      * <pre>
-     * RAM volume for a Data Proc host created with the preset, in bytes.
+     * RAM volume for a Yandex Data Processing host created with the preset, in bytes.
      * </pre>
      *
      * <code>int64 memory = 4;</code>
@@ -312,7 +312,7 @@ public final class ResourcePresetOuterClass {
     private long cores_;
     /**
      * <pre>
-     * Number of CPU cores for a Data Proc host created with the preset.
+     * Number of CPU cores for a Yandex Data Processing host created with the preset.
      * </pre>
      *
      * <code>int64 cores = 3;</code>
@@ -327,7 +327,7 @@ public final class ResourcePresetOuterClass {
     private long memory_;
     /**
      * <pre>
-     * RAM volume for a Data Proc host created with the preset, in bytes.
+     * RAM volume for a Yandex Data Processing host created with the preset, in bytes.
      * </pre>
      *
      * <code>int64 memory = 4;</code>
@@ -961,7 +961,7 @@ public final class ResourcePresetOuterClass {
       private long cores_ ;
       /**
        * <pre>
-       * Number of CPU cores for a Data Proc host created with the preset.
+       * Number of CPU cores for a Yandex Data Processing host created with the preset.
        * </pre>
        *
        * <code>int64 cores = 3;</code>
@@ -973,7 +973,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Number of CPU cores for a Data Proc host created with the preset.
+       * Number of CPU cores for a Yandex Data Processing host created with the preset.
        * </pre>
        *
        * <code>int64 cores = 3;</code>
@@ -988,7 +988,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * Number of CPU cores for a Data Proc host created with the preset.
+       * Number of CPU cores for a Yandex Data Processing host created with the preset.
        * </pre>
        *
        * <code>int64 cores = 3;</code>
@@ -1004,7 +1004,7 @@ public final class ResourcePresetOuterClass {
       private long memory_ ;
       /**
        * <pre>
-       * RAM volume for a Data Proc host created with the preset, in bytes.
+       * RAM volume for a Yandex Data Processing host created with the preset, in bytes.
        * </pre>
        *
        * <code>int64 memory = 4;</code>
@@ -1016,7 +1016,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * RAM volume for a Data Proc host created with the preset, in bytes.
+       * RAM volume for a Yandex Data Processing host created with the preset, in bytes.
        * </pre>
        *
        * <code>int64 memory = 4;</code>
@@ -1031,7 +1031,7 @@ public final class ResourcePresetOuterClass {
       }
       /**
        * <pre>
-       * RAM volume for a Data Proc host created with the preset, in bytes.
+       * RAM volume for a Yandex Data Processing host created with the preset, in bytes.
        * </pre>
        *
        * <code>int64 memory = 4;</code>

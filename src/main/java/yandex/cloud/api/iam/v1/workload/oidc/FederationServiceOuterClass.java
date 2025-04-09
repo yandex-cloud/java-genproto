@@ -9529,69 +9529,88 @@ public final class FederationServiceOuterClass {
       "ration_service.proto\022!yandex.cloud.iam.v" +
       "1.workload.oidc\032\034google/api/annotations." +
       "proto\032 google/protobuf/field_mask.proto\032" +
-      " yandex/cloud/api/operation.proto\0322yande" +
-      "x/cloud/iam/v1/workload/oidc/federation." +
-      "proto\032&yandex/cloud/operation/operation." +
-      "proto\032\035yandex/cloud/validation.proto\";\n\024" +
-      "GetFederationRequest\022#\n\rfederation_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"x\n\026ListFederationsRequ" +
-      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_toke" +
-      "n\030\003 \001(\tB\n\212\3101\006<=2000\"v\n\027ListFederationsRe" +
-      "sponse\022B\n\013federations\030\001 \003(\0132-.yandex.clo" +
-      "ud.iam.v1.workload.oidc.Federation\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\223\003\n\027CreateFederation" +
-      "Request\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\0225\n\004name\030\003 \001(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9]{" +
-      "0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\310" +
-      "1\005<=256\022\020\n\010disabled\030\005 \001(\010\022%\n\taudiences\030\006" +
-      " \003(\tB\022\202\3101\005<=100\212\3101\005<=255\022\036\n\006issuer\030\007 \001(\t" +
-      "B\016\350\3071\001\212\3101\006<=8000\022 \n\010jwks_url\030\010 \001(\tB\016\350\3071\001" +
-      "\212\3101\006<=8000\022V\n\006labels\030\t \003(\0132F.yandex.clou" +
-      "d.iam.v1.workload.oidc.CreateFederationR" +
-      "equest.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\030CreateFeder" +
-      "ationMetadata\022\025\n\rfederation_id\030\001 \001(\t\"\240\003\n" +
-      "\027UpdateFederationRequest\022#\n\rfederation_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001" +
-      "(\0132\032.google.protobuf.FieldMask\0221\n\004name\030\003" +
-      " \001(\tB#\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9])" +
-      "?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\020\n\010dis" +
-      "abled\030\005 \001(\010\022%\n\taudiences\030\006 \003(\tB\022\202\3101\005<=10" +
-      "0\212\3101\005<=255\022\034\n\010jwks_url\030\007 \001(\tB\n\212\3101\006<=8000" +
-      "\022V\n\006labels\030\010 \003(\0132F.yandex.cloud.iam.v1.w" +
-      "orkload.oidc.UpdateFederationRequest.Lab" +
-      "elsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"1\n\030UpdateFederationMetad" +
-      "ata\022\025\n\rfederation_id\030\001 \001(\t\">\n\027DeleteFede" +
-      "rationRequest\022#\n\rfederation_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"1\n\030DeleteFederationMetadata\022\025" +
-      "\n\rfederation_id\030\001 \001(\t2\327\007\n\021FederationServ" +
-      "ice\022\250\001\n\003Get\0227.yandex.cloud.iam.v1.worklo" +
-      "ad.oidc.GetFederationRequest\032-.yandex.cl" +
-      "oud.iam.v1.workload.oidc.Federation\"9\202\323\344" +
-      "\223\0023\0221/iam/v1/workload/oidc/federations/{" +
-      "federation_id}\022\250\001\n\004List\0229.yandex.cloud.i" +
-      "am.v1.workload.oidc.ListFederationsReque" +
-      "st\032:.yandex.cloud.iam.v1.workload.oidc.L" +
-      "istFederationsResponse\")\202\323\344\223\002#\022!/iam/v1/" +
-      "workload/oidc/federations\022\277\001\n\006Create\022:.y" +
-      "andex.cloud.iam.v1.workload.oidc.CreateF" +
-      "ederationRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"V\202\323\344\223\002&\"!/iam/v1/workload/oi" +
-      "dc/federations:\001*\262\322*&\n\030CreateFederationM" +
-      "etadata\022\nFederation\022\317\001\n\006Update\022:.yandex." +
-      "cloud.iam.v1.workload.oidc.UpdateFederat" +
+      " yandex/cloud/access/access.proto\032 yande" +
+      "x/cloud/api/operation.proto\0322yandex/clou" +
+      "d/iam/v1/workload/oidc/federation.proto\032" +
+      "&yandex/cloud/operation/operation.proto\032" +
+      "\035yandex/cloud/validation.proto\";\n\024GetFed" +
+      "erationRequest\022#\n\rfederation_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"x\n\026ListFederationsRequest\022\037\n" +
+      "\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(" +
+      "\tB\n\212\3101\006<=2000\"v\n\027ListFederationsResponse" +
+      "\022B\n\013federations\030\001 \003(\0132-.yandex.cloud.iam" +
+      ".v1.workload.oidc.Federation\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"\223\003\n\027CreateFederationReques" +
+      "t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\004na" +
+      "me\030\003 \001(\tB\'\350\3071\001\362\3071\037[a-z]([-a-z0-9]{0,61}[" +
+      "a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=25" +
+      "6\022\020\n\010disabled\030\005 \001(\010\022%\n\taudiences\030\006 \003(\tB\022" +
+      "\202\3101\005<=100\212\3101\005<=255\022\036\n\006issuer\030\007 \001(\tB\016\350\3071\001" +
+      "\212\3101\006<=8000\022 \n\010jwks_url\030\010 \001(\tB\016\350\3071\001\212\3101\006<=" +
+      "8000\022V\n\006labels\030\t \003(\0132F.yandex.cloud.iam." +
+      "v1.workload.oidc.CreateFederationRequest" +
+      ".LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\030CreateFederationM" +
+      "etadata\022\025\n\rfederation_id\030\001 \001(\t\"\240\003\n\027Updat" +
+      "eFederationRequest\022#\n\rfederation_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMask\0221\n\004name\030\003 \001(\tB#" +
+      "\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
+      "escription\030\004 \001(\tB\t\212\3101\005<=256\022\020\n\010disabled\030" +
+      "\005 \001(\010\022%\n\taudiences\030\006 \003(\tB\022\202\3101\005<=100\212\3101\005<" +
+      "=255\022\034\n\010jwks_url\030\007 \001(\tB\n\212\3101\006<=8000\022V\n\006la" +
+      "bels\030\010 \003(\0132F.yandex.cloud.iam.v1.workloa" +
+      "d.oidc.UpdateFederationRequest.LabelsEnt" +
+      "ry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"1\n\030UpdateFederationMetadata\022\025\n" +
+      "\rfederation_id\030\001 \001(\t\">\n\027DeleteFederation" +
+      "Request\022#\n\rfederation_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"1\n\030DeleteFederationMetadata\022\025\n\rfede" +
+      "ration_id\030\001 \001(\t2\255\r\n\021FederationService\022\250\001" +
+      "\n\003Get\0227.yandex.cloud.iam.v1.workload.oid" +
+      "c.GetFederationRequest\032-.yandex.cloud.ia" +
+      "m.v1.workload.oidc.Federation\"9\202\323\344\223\0023\0221/" +
+      "iam/v1/workload/oidc/federations/{federa" +
+      "tion_id}\022\250\001\n\004List\0229.yandex.cloud.iam.v1." +
+      "workload.oidc.ListFederationsRequest\032:.y" +
+      "andex.cloud.iam.v1.workload.oidc.ListFed" +
+      "erationsResponse\")\202\323\344\223\002#\022!/iam/v1/worklo" +
+      "ad/oidc/federations\022\277\001\n\006Create\022:.yandex." +
+      "cloud.iam.v1.workload.oidc.CreateFederat" +
       "ionRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"f\202\323\344\223\002621/iam/v1/workload/oidc/fed" +
-      "erations/{federation_id}:\001*\262\322*&\n\030UpdateF" +
-      "ederationMetadata\022\nFederation\022\327\001\n\006Delete" +
-      "\022:.yandex.cloud.iam.v1.workload.oidc.Del" +
-      "eteFederationRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"n\202\323\344\223\0023*1/iam/v1/workloa" +
-      "d/oidc/federations/{federation_id}\262\322*1\n\030" +
-      "DeleteFederationMetadata\022\025google.protobu" +
-      "f.EmptyBs\n%yandex.cloud.api.iam.v1.workl" +
+      "ation\"V\202\323\344\223\002&\"!/iam/v1/workload/oidc/fed" +
+      "erations:\001*\262\322*&\n\030CreateFederationMetadat" +
+      "a\022\nFederation\022\317\001\n\006Update\022:.yandex.cloud." +
+      "iam.v1.workload.oidc.UpdateFederationReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "f\202\323\344\223\002621/iam/v1/workload/oidc/federatio" +
+      "ns/{federation_id}:\001*\262\322*&\n\030UpdateFederat" +
+      "ionMetadata\022\nFederation\022\327\001\n\006Delete\022:.yan" +
+      "dex.cloud.iam.v1.workload.oidc.DeleteFed" +
+      "erationRequest\032!.yandex.cloud.operation." +
+      "Operation\"n\202\323\344\223\0023*1/iam/v1/workload/oidc" +
+      "/federations/{federation_id}\262\322*1\n\030Delete" +
+      "FederationMetadata\022\025google.protobuf.Empt" +
+      "y\022\301\001\n\022ListAccessBindings\022..yandex.cloud." +
+      "access.ListAccessBindingsRequest\032/.yande" +
+      "x.cloud.access.ListAccessBindingsRespons" +
+      "e\"J\202\323\344\223\002D\022B/iam/v1/workload/oidc/federat" +
+      "ions/{resource_id}:listAccessBindings\022\200\002" +
+      "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
+      "s.SetAccessBindingsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\230\001\202\323\344\223\002F\"A/iam/v1/" +
+      "workload/oidc/federations/{resource_id}:" +
+      "setAccessBindings:\001*\262\322*H\n access.SetAcce" +
+      "ssBindingsMetadata\022$access.AccessBinding" +
+      "sOperationResult\022\214\002\n\024UpdateAccessBinding" +
+      "s\0220.yandex.cloud.access.UpdateAccessBind" +
+      "ingsRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"\236\001\202\323\344\223\002I\"D/iam/v1/workload/oidc/f" +
+      "ederations/{resource_id}:updateAccessBin" +
+      "dings:\001*\262\322*K\n#access.UpdateAccessBinding" +
+      "sMetadata\022$access.AccessBindingsOperatio" +
+      "nResultBs\n%yandex.cloud.api.iam.v1.workl" +
       "oad.oidcZJgithub.com/yandex-cloud/go-gen" +
       "proto/yandex/cloud/iam/v1/workload/oidc;" +
       "oidcb\006proto3"
@@ -9601,6 +9620,7 @@ public final class FederationServiceOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.iam.v1.workload.oidc.FederationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -9685,6 +9705,7 @@ public final class FederationServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.iam.v1.workload.oidc.FederationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

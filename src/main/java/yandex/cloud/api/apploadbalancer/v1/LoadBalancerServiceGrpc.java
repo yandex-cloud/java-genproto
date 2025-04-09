@@ -483,6 +483,68 @@ public final class LoadBalancerServiceGrpc {
     return getListOperationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStartZonalShiftMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StartZonalShift",
+      requestType = yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStartZonalShiftMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStartZonalShiftMethod;
+    if ((getStartZonalShiftMethod = LoadBalancerServiceGrpc.getStartZonalShiftMethod) == null) {
+      synchronized (LoadBalancerServiceGrpc.class) {
+        if ((getStartZonalShiftMethod = LoadBalancerServiceGrpc.getStartZonalShiftMethod) == null) {
+          LoadBalancerServiceGrpc.getStartZonalShiftMethod = getStartZonalShiftMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StartZonalShift"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("StartZonalShift"))
+              .build();
+        }
+      }
+    }
+    return getStartZonalShiftMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCancelZonalShiftMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CancelZonalShift",
+      requestType = yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCancelZonalShiftMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCancelZonalShiftMethod;
+    if ((getCancelZonalShiftMethod = LoadBalancerServiceGrpc.getCancelZonalShiftMethod) == null) {
+      synchronized (LoadBalancerServiceGrpc.class) {
+        if ((getCancelZonalShiftMethod = LoadBalancerServiceGrpc.getCancelZonalShiftMethod) == null) {
+          LoadBalancerServiceGrpc.getCancelZonalShiftMethod = getCancelZonalShiftMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelZonalShift"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new LoadBalancerServiceMethodDescriptorSupplier("CancelZonalShift"))
+              .build();
+        }
+      }
+    }
+    return getCancelZonalShiftMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -688,6 +750,26 @@ public final class LoadBalancerServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Start ZonalShift for the specified load balancer.
+     * </pre>
+     */
+    public void startZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartZonalShiftMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Cancel ZonalShift for the specified load balancer.
+     * </pre>
+     */
+    public void cancelZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelZonalShiftMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -795,6 +877,20 @@ public final class LoadBalancerServiceGrpc {
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest,
                 yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
+          .addMethod(
+            getStartZonalShiftMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_START_ZONAL_SHIFT)))
+          .addMethod(
+            getCancelZonalShiftMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CANCEL_ZONAL_SHIFT)))
           .build();
     }
   }
@@ -984,6 +1080,28 @@ public final class LoadBalancerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Start ZonalShift for the specified load balancer.
+     * </pre>
+     */
+    public void startZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStartZonalShiftMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Cancel ZonalShift for the specified load balancer.
+     * </pre>
+     */
+    public void cancelZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCancelZonalShiftMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1155,6 +1273,26 @@ public final class LoadBalancerServiceGrpc {
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse listOperations(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Start ZonalShift for the specified load balancer.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation startZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStartZonalShiftMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Cancel ZonalShift for the specified load balancer.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation cancelZonalShift(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCancelZonalShiftMethod(), getCallOptions(), request);
     }
   }
 
@@ -1343,6 +1481,28 @@ public final class LoadBalancerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Start ZonalShift for the specified load balancer.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> startZonalShift(
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStartZonalShiftMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Cancel ZonalShift for the specified load balancer.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> cancelZonalShift(
+        yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCancelZonalShiftMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1360,6 +1520,8 @@ public final class LoadBalancerServiceGrpc {
   private static final int METHODID_REMOVE_SNI_MATCH = 12;
   private static final int METHODID_GET_TARGET_STATES = 13;
   private static final int METHODID_LIST_OPERATIONS = 14;
+  private static final int METHODID_START_ZONAL_SHIFT = 15;
+  private static final int METHODID_CANCEL_ZONAL_SHIFT = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1438,6 +1600,14 @@ public final class LoadBalancerServiceGrpc {
           serviceImpl.listOperations((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse>) responseObserver);
           break;
+        case METHODID_START_ZONAL_SHIFT:
+          serviceImpl.startZonalShift((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartZonalShiftRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_CANCEL_ZONAL_SHIFT:
+          serviceImpl.cancelZonalShift((yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CancelZonalShiftRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1514,6 +1684,8 @@ public final class LoadBalancerServiceGrpc {
               .addMethod(getRemoveSniMatchMethod())
               .addMethod(getGetTargetStatesMethod())
               .addMethod(getListOperationsMethod())
+              .addMethod(getStartZonalShiftMethod())
+              .addMethod(getCancelZonalShiftMethod())
               .build();
         }
       }

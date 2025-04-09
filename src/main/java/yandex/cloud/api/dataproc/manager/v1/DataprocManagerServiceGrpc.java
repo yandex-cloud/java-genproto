@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Data Proc manager service definition.
+ * Yandex Data Processing manager service definition.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -95,7 +95,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Data Proc manager service definition.
+   * Yandex Data Processing manager service definition.
    * </pre>
    */
   public static abstract class DataprocManagerServiceImplBase implements io.grpc.BindableService {
@@ -125,7 +125,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Data Proc manager service definition.
+   * Yandex Data Processing manager service definition.
    * </pre>
    */
   public static final class DataprocManagerServiceStub extends io.grpc.stub.AbstractAsyncStub<DataprocManagerServiceStub> {
@@ -154,7 +154,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Data Proc manager service definition.
+   * Yandex Data Processing manager service definition.
    * </pre>
    */
   public static final class DataprocManagerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DataprocManagerServiceBlockingStub> {
@@ -182,7 +182,7 @@ public final class DataprocManagerServiceGrpc {
 
   /**
    * <pre>
-   * Data Proc manager service definition.
+   * Yandex Data Processing manager service definition.
    * </pre>
    */
   public static final class DataprocManagerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DataprocManagerServiceFutureStub> {

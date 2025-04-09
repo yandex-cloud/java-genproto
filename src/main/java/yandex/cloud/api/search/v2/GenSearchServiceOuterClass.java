@@ -963,47 +963,47 @@ public final class GenSearchServiceOuterClass {
         getFolderIdBytes();
 
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
      * @return Whether the site field is set.
      */
     boolean hasSite();
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
      * @return The site.
      */
     yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption getSite();
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOptionOrBuilder getSiteOrBuilder();
 
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
      * @return Whether the host field is set.
      */
     boolean hasHost();
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
      * @return The host.
      */
     yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption getHost();
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOptionOrBuilder getHostOrBuilder();
 
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
      * @return Whether the url field is set.
      */
     boolean hasUrl();
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
      * @return The url.
      */
     yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption getUrl();
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOptionOrBuilder getUrlOrBuilder();
 
@@ -4870,7 +4870,7 @@ public final class GenSearchServiceOuterClass {
 
     public static final int SITE_FIELD_NUMBER = 3;
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
      * @return Whether the site field is set.
      */
     @java.lang.Override
@@ -4878,7 +4878,7 @@ public final class GenSearchServiceOuterClass {
       return siteOptionsCase_ == 3;
     }
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
      * @return The site.
      */
     @java.lang.Override
@@ -4889,7 +4889,7 @@ public final class GenSearchServiceOuterClass {
       return yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOptionOrBuilder getSiteOrBuilder() {
@@ -4901,7 +4901,7 @@ public final class GenSearchServiceOuterClass {
 
     public static final int HOST_FIELD_NUMBER = 4;
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
      * @return Whether the host field is set.
      */
     @java.lang.Override
@@ -4909,7 +4909,7 @@ public final class GenSearchServiceOuterClass {
       return siteOptionsCase_ == 4;
     }
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
      * @return The host.
      */
     @java.lang.Override
@@ -4920,7 +4920,7 @@ public final class GenSearchServiceOuterClass {
       return yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOptionOrBuilder getHostOrBuilder() {
@@ -4932,7 +4932,7 @@ public final class GenSearchServiceOuterClass {
 
     public static final int URL_FIELD_NUMBER = 5;
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
      * @return Whether the url field is set.
      */
     @java.lang.Override
@@ -4940,7 +4940,7 @@ public final class GenSearchServiceOuterClass {
       return siteOptionsCase_ == 5;
     }
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
      * @return The url.
      */
     @java.lang.Override
@@ -4951,7 +4951,7 @@ public final class GenSearchServiceOuterClass {
       return yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+     * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
     public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOptionOrBuilder getUrlOrBuilder() {
@@ -6022,7 +6022,7 @@ public final class GenSearchServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption.Builder, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOptionOrBuilder> siteBuilder_;
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
        * @return Whether the site field is set.
        */
       @java.lang.Override
@@ -6030,7 +6030,7 @@ public final class GenSearchServiceOuterClass {
         return siteOptionsCase_ == 3;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
        * @return The site.
        */
       @java.lang.Override
@@ -6048,7 +6048,7 @@ public final class GenSearchServiceOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setSite(yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption value) {
         if (siteBuilder_ == null) {
@@ -6064,7 +6064,7 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setSite(
           yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption.Builder builderForValue) {
@@ -6078,7 +6078,7 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeSite(yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption value) {
         if (siteBuilder_ == null) {
@@ -6100,7 +6100,7 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearSite() {
         if (siteBuilder_ == null) {
@@ -6119,13 +6119,13 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption.Builder getSiteBuilder() {
         return getSiteFieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
        */
       @java.lang.Override
       public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOptionOrBuilder getSiteOrBuilder() {
@@ -6139,7 +6139,7 @@ public final class GenSearchServiceOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.SiteOption site = 3 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOption.Builder, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.SiteOptionOrBuilder> 
@@ -6163,7 +6163,7 @@ public final class GenSearchServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption.Builder, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOptionOrBuilder> hostBuilder_;
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
        * @return Whether the host field is set.
        */
       @java.lang.Override
@@ -6171,7 +6171,7 @@ public final class GenSearchServiceOuterClass {
         return siteOptionsCase_ == 4;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
        * @return The host.
        */
       @java.lang.Override
@@ -6189,7 +6189,7 @@ public final class GenSearchServiceOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHost(yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption value) {
         if (hostBuilder_ == null) {
@@ -6205,7 +6205,7 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHost(
           yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption.Builder builderForValue) {
@@ -6219,7 +6219,7 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeHost(yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption value) {
         if (hostBuilder_ == null) {
@@ -6241,7 +6241,7 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearHost() {
         if (hostBuilder_ == null) {
@@ -6260,13 +6260,13 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption.Builder getHostBuilder() {
         return getHostFieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
        */
       @java.lang.Override
       public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOptionOrBuilder getHostOrBuilder() {
@@ -6280,7 +6280,7 @@ public final class GenSearchServiceOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.HostOption host = 4 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOption.Builder, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.HostOptionOrBuilder> 
@@ -6304,7 +6304,7 @@ public final class GenSearchServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption.Builder, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOptionOrBuilder> urlBuilder_;
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
        * @return Whether the url field is set.
        */
       @java.lang.Override
@@ -6312,7 +6312,7 @@ public final class GenSearchServiceOuterClass {
         return siteOptionsCase_ == 5;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
        * @return The url.
        */
       @java.lang.Override
@@ -6330,7 +6330,7 @@ public final class GenSearchServiceOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUrl(yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption value) {
         if (urlBuilder_ == null) {
@@ -6346,7 +6346,7 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setUrl(
           yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption.Builder builderForValue) {
@@ -6360,7 +6360,7 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeUrl(yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption value) {
         if (urlBuilder_ == null) {
@@ -6382,7 +6382,7 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearUrl() {
         if (urlBuilder_ == null) {
@@ -6401,13 +6401,13 @@ public final class GenSearchServiceOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption.Builder getUrlBuilder() {
         return getUrlFieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
        */
       @java.lang.Override
       public yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOptionOrBuilder getUrlOrBuilder() {
@@ -6421,7 +6421,7 @@ public final class GenSearchServiceOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5;</code>
+       * <code>.yandex.cloud.searchapi.v2.GenSearchRequest.UrlOption url = 5 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOption.Builder, yandex.cloud.api.search.v2.GenSearchServiceOuterClass.GenSearchRequest.UrlOptionOrBuilder> 
@@ -10643,52 +10643,52 @@ public final class GenSearchServiceOuterClass {
       "pi/annotations.proto\"h\n\020GenSearchMessage" +
       "\022\037\n\007content\030\001 \001(\tB\016\350\3071\001\212\3101\006<=1024\0223\n\004rol" +
       "e\030\002 \001(\0162\037.yandex.cloud.searchapi.v2.Role" +
-      "B\004\350\3071\001\"\234\010\n\020GenSearchRequest\022H\n\010messages\030" +
+      "B\004\350\3071\001\"\256\010\n\020GenSearchRequest\022H\n\010messages\030" +
       "\001 \003(\0132+.yandex.cloud.searchapi.v2.GenSea" +
       "rchMessageB\t\202\3101\0051-100\022\037\n\tfolder_id\030\002 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022F\n\004site\030\003 \001(\01326.yandex.cl" +
+      "B\014\350\3071\001\212\3101\004<=50\022L\n\004site\030\003 \001(\01326.yandex.cl" +
       "oud.searchapi.v2.GenSearchRequest.SiteOp" +
-      "tionH\000\022F\n\004host\030\004 \001(\01326.yandex.cloud.sear" +
-      "chapi.v2.GenSearchRequest.HostOptionH\000\022D" +
-      "\n\003url\030\005 \001(\01325.yandex.cloud.searchapi.v2." +
-      "GenSearchRequest.UrlOptionH\000\022\024\n\014fix_miss" +
-      "pell\030\006 \001(\010\022\030\n\020enable_nrfm_docs\030\007 \001(\010\022Z\n\016" +
-      "search_filters\030\010 \003(\01328.yandex.cloud.sear" +
-      "chapi.v2.GenSearchRequest.SearchFilterB\010" +
-      "\202\3101\004<=10\032/\n\nSiteOption\022!\n\004site\030\001 \003(\tB\023\212\310" +
-      "1\006<=1024\202\3101\005<=100\032-\n\tUrlOption\022 \n\003url\030\001 " +
-      "\003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032/\n\nHostOption\022!" +
-      "\n\004host\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032\231\003\n\014Se" +
-      "archFilter\022\030\n\004date\030\001 \001(\tB\010\212\3101\004<=25H\000\022\025\n\004" +
-      "lang\030\002 \001(\tB\005\212\3101\0012H\000\022T\n\006format\030\003 \001(\0162B.ya" +
-      "ndex.cloud.searchapi.v2.GenSearchRequest" +
-      ".SearchFilter.DocFormatH\000\"\357\001\n\tDocFormat\022" +
-      "\032\n\026DOC_FORMAT_UNSPECIFIED\020\000\022\022\n\016DOC_FORMA" +
-      "T_PDF\020\001\022\022\n\016DOC_FORMAT_XLS\020\002\022\022\n\016DOC_FORMA" +
-      "T_ODS\020\003\022\022\n\016DOC_FORMAT_RTF\020\004\022\022\n\016DOC_FORMA" +
-      "T_PPT\020\005\022\022\n\016DOC_FORMAT_ODP\020\006\022\022\n\016DOC_FORMA" +
-      "T_SWF\020\007\022\022\n\016DOC_FORMAT_ODT\020\010\022\022\n\016DOC_FORMA" +
-      "T_ODG\020\t\022\022\n\016DOC_FORMAT_DOC\020\nB\020\n\016filter_op" +
-      "tionsB\016\n\014site_options\"\236\003\n\021GenSearchRespo" +
-      "nse\022<\n\007message\030\001 \001(\0132+.yandex.cloud.sear" +
-      "chapi.v2.GenSearchMessage\022D\n\007sources\030\002 \003" +
-      "(\01323.yandex.cloud.searchapi.v2.GenSearch" +
-      "Response.Source\022P\n\016search_queries\030\003 \003(\0132" +
-      "8.yandex.cloud.searchapi.v2.GenSearchRes" +
-      "ponse.SearchQuery\022\034\n\024fixed_misspell_quer" +
-      "y\030\004 \001(\t\022\032\n\022is_answer_rejected\030\005 \001(\010\022\030\n\020i" +
-      "s_bullet_answer\030\006 \001(\010\0322\n\006Source\022\013\n\003url\030\001" +
-      " \001(\t\022\r\n\005title\030\002 \001(\t\022\014\n\004used\030\003 \001(\010\032+\n\013Sea" +
-      "rchQuery\022\014\n\004text\030\001 \001(\t\022\016\n\006req_id\030\002 \001(\t*?" +
-      "\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\r\n\tROLE_USE" +
-      "R\020\001\022\022\n\016ROLE_ASSISTANT\020\0022\225\001\n\020GenSearchSer" +
-      "vice\022\200\001\n\006Search\022+.yandex.cloud.searchapi" +
-      ".v2.GenSearchRequest\032,.yandex.cloud.sear" +
-      "chapi.v2.GenSearchResponse\"\031\202\323\344\223\002\023\"\016/v2/" +
-      "gen/search:\001*0\001Be\n\032yandex.cloud.api.sear" +
-      "ch.v2ZGgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/searchapi/v2;searchapib\006" +
-      "proto3"
+      "tionB\004\350\3071\001H\000\022L\n\004host\030\004 \001(\01326.yandex.clou" +
+      "d.searchapi.v2.GenSearchRequest.HostOpti" +
+      "onB\004\350\3071\001H\000\022J\n\003url\030\005 \001(\01325.yandex.cloud.s" +
+      "earchapi.v2.GenSearchRequest.UrlOptionB\004" +
+      "\350\3071\001H\000\022\024\n\014fix_misspell\030\006 \001(\010\022\030\n\020enable_n" +
+      "rfm_docs\030\007 \001(\010\022Z\n\016search_filters\030\010 \003(\01328" +
+      ".yandex.cloud.searchapi.v2.GenSearchRequ" +
+      "est.SearchFilterB\010\202\3101\004<=10\032/\n\nSiteOption" +
+      "\022!\n\004site\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032-\n\tU" +
+      "rlOption\022 \n\003url\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=1" +
+      "00\032/\n\nHostOption\022!\n\004host\030\001 \003(\tB\023\212\3101\006<=10" +
+      "24\202\3101\005<=100\032\231\003\n\014SearchFilter\022\030\n\004date\030\001 \001" +
+      "(\tB\010\212\3101\004<=25H\000\022\025\n\004lang\030\002 \001(\tB\005\212\3101\0012H\000\022T\n" +
+      "\006format\030\003 \001(\0162B.yandex.cloud.searchapi.v" +
+      "2.GenSearchRequest.SearchFilter.DocForma" +
+      "tH\000\"\357\001\n\tDocFormat\022\032\n\026DOC_FORMAT_UNSPECIF" +
+      "IED\020\000\022\022\n\016DOC_FORMAT_PDF\020\001\022\022\n\016DOC_FORMAT_" +
+      "XLS\020\002\022\022\n\016DOC_FORMAT_ODS\020\003\022\022\n\016DOC_FORMAT_" +
+      "RTF\020\004\022\022\n\016DOC_FORMAT_PPT\020\005\022\022\n\016DOC_FORMAT_" +
+      "ODP\020\006\022\022\n\016DOC_FORMAT_SWF\020\007\022\022\n\016DOC_FORMAT_" +
+      "ODT\020\010\022\022\n\016DOC_FORMAT_ODG\020\t\022\022\n\016DOC_FORMAT_" +
+      "DOC\020\nB\020\n\016filter_optionsB\016\n\014site_options\"" +
+      "\236\003\n\021GenSearchResponse\022<\n\007message\030\001 \001(\0132+" +
+      ".yandex.cloud.searchapi.v2.GenSearchMess" +
+      "age\022D\n\007sources\030\002 \003(\01323.yandex.cloud.sear" +
+      "chapi.v2.GenSearchResponse.Source\022P\n\016sea" +
+      "rch_queries\030\003 \003(\01328.yandex.cloud.searcha" +
+      "pi.v2.GenSearchResponse.SearchQuery\022\034\n\024f" +
+      "ixed_misspell_query\030\004 \001(\t\022\032\n\022is_answer_r" +
+      "ejected\030\005 \001(\010\022\030\n\020is_bullet_answer\030\006 \001(\010\032" +
+      "2\n\006Source\022\013\n\003url\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\014\n" +
+      "\004used\030\003 \001(\010\032+\n\013SearchQuery\022\014\n\004text\030\001 \001(\t" +
+      "\022\016\n\006req_id\030\002 \001(\t*?\n\004Role\022\024\n\020ROLE_UNSPECI" +
+      "FIED\020\000\022\r\n\tROLE_USER\020\001\022\022\n\016ROLE_ASSISTANT\020" +
+      "\0022\225\001\n\020GenSearchService\022\200\001\n\006Search\022+.yand" +
+      "ex.cloud.searchapi.v2.GenSearchRequest\032," +
+      ".yandex.cloud.searchapi.v2.GenSearchResp" +
+      "onse\"\031\202\323\344\223\002\023\"\016/v2/gen/search:\001*0\001Be\n\032yan" +
+      "dex.cloud.api.search.v2ZGgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/search" +
+      "api/v2;searchapib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

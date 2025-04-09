@@ -34772,6 +34772,9298 @@ public final class TuningServiceOuterClass {
 
   }
 
+  public interface CreateTuningDraftRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.CreateTuningDraftRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string base_model_uri = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The baseModelUri.
+     */
+    java.lang.String getBaseModelUri();
+    /**
+     * <code>string base_model_uri = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for baseModelUri.
+     */
+    com.google.protobuf.ByteString
+        getBaseModelUriBytes();
+
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> 
+        getTrainDatasetsList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getTrainDatasets(int index);
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    int getTrainDatasetsCount();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getTrainDatasetsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getTrainDatasetsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> 
+        getValidationDatasetsList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index);
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    int getValidationDatasetsCount();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getValidationDatasetsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+        int index);
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     * @return Whether the textToTextCompletion field is set.
+     */
+    boolean hasTextToTextCompletion();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     * @return The textToTextCompletion.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams getTextToTextCompletion();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder getTextToTextCompletionOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return Whether the textClassificationMultilabel field is set.
+     */
+    boolean hasTextClassificationMultilabel();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return The textClassificationMultilabel.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams getTextClassificationMultilabel();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder getTextClassificationMultilabelOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return Whether the textClassificationMulticlass field is set.
+     */
+    boolean hasTextClassificationMulticlass();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return The textClassificationMulticlass.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams getTextClassificationMulticlass();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return Whether the textEmbeddingPairParams field is set.
+     */
+    boolean hasTextEmbeddingPairParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return The textEmbeddingPairParams.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return Whether the textEmbeddingTripletParams field is set.
+     */
+    boolean hasTextEmbeddingTripletParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return The textEmbeddingTripletParams.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder();
+
+    /**
+     * <code>string name = 200 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 200 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string description = 201;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 201;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.TuningParamsCase getTuningParamsCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.CreateTuningDraftRequest}
+   */
+  public static final class CreateTuningDraftRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.CreateTuningDraftRequest)
+      CreateTuningDraftRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateTuningDraftRequest.newBuilder() to construct.
+    private CreateTuningDraftRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateTuningDraftRequest() {
+      baseModelUri_ = "";
+      trainDatasets_ = java.util.Collections.emptyList();
+      validationDatasets_ = java.util.Collections.emptyList();
+      name_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateTuningDraftRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateTuningDraftRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              baseModelUri_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                trainDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              trainDatasets_.add(
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                validationDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              validationDatasets_.add(
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.parser(), extensionRegistry));
+              break;
+            }
+            case 802: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 100) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 100;
+              break;
+            }
+            case 810: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 101) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 101;
+              break;
+            }
+            case 818: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 102) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 102;
+              break;
+            }
+            case 826: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 103) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 103;
+              break;
+            }
+            case 834: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 104) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 104;
+              break;
+            }
+            case 1602: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 1610: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 1618: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          trainDatasets_ = java.util.Collections.unmodifiableList(trainDatasets_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          validationDatasets_ = java.util.Collections.unmodifiableList(validationDatasets_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 202:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.Builder.class);
+    }
+
+    private int tuningParamsCase_ = 0;
+    private java.lang.Object tuningParams_;
+    public enum TuningParamsCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TEXT_TO_TEXT_COMPLETION(100),
+      TEXT_CLASSIFICATION_MULTILABEL(101),
+      TEXT_CLASSIFICATION_MULTICLASS(102),
+      TEXT_EMBEDDING_PAIR_PARAMS(103),
+      TEXT_EMBEDDING_TRIPLET_PARAMS(104),
+      TUNINGPARAMS_NOT_SET(0);
+      private final int value;
+      private TuningParamsCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TuningParamsCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TuningParamsCase forNumber(int value) {
+        switch (value) {
+          case 100: return TEXT_TO_TEXT_COMPLETION;
+          case 101: return TEXT_CLASSIFICATION_MULTILABEL;
+          case 102: return TEXT_CLASSIFICATION_MULTICLASS;
+          case 103: return TEXT_EMBEDDING_PAIR_PARAMS;
+          case 104: return TEXT_EMBEDDING_TRIPLET_PARAMS;
+          case 0: return TUNINGPARAMS_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TuningParamsCase
+    getTuningParamsCase() {
+      return TuningParamsCase.forNumber(
+          tuningParamsCase_);
+    }
+
+    public static final int BASE_MODEL_URI_FIELD_NUMBER = 1;
+    private volatile java.lang.Object baseModelUri_;
+    /**
+     * <code>string base_model_uri = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The baseModelUri.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseModelUri() {
+      java.lang.Object ref = baseModelUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseModelUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string base_model_uri = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for baseModelUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseModelUriBytes() {
+      java.lang.Object ref = baseModelUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseModelUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRAIN_DATASETS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> trainDatasets_;
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getTrainDatasetsList() {
+      return trainDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getTrainDatasetsOrBuilderList() {
+      return trainDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public int getTrainDatasetsCount() {
+      return trainDatasets_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getTrainDatasets(int index) {
+      return trainDatasets_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getTrainDatasetsOrBuilder(
+        int index) {
+      return trainDatasets_.get(index);
+    }
+
+    public static final int VALIDATION_DATASETS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> validationDatasets_;
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getValidationDatasetsList() {
+      return validationDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getValidationDatasetsOrBuilderList() {
+      return validationDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public int getValidationDatasetsCount() {
+      return validationDatasets_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index) {
+      return validationDatasets_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+        int index) {
+      return validationDatasets_.get(index);
+    }
+
+    public static final int TEXT_TO_TEXT_COMPLETION_FIELD_NUMBER = 100;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     * @return Whether the textToTextCompletion field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextToTextCompletion() {
+      return tuningParamsCase_ == 100;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     * @return The textToTextCompletion.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams getTextToTextCompletion() {
+      if (tuningParamsCase_ == 100) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder getTextToTextCompletionOrBuilder() {
+      if (tuningParamsCase_ == 100) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_CLASSIFICATION_MULTILABEL_FIELD_NUMBER = 101;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return Whether the textClassificationMultilabel field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextClassificationMultilabel() {
+      return tuningParamsCase_ == 101;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return The textClassificationMultilabel.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams getTextClassificationMultilabel() {
+      if (tuningParamsCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder getTextClassificationMultilabelOrBuilder() {
+      if (tuningParamsCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_CLASSIFICATION_MULTICLASS_FIELD_NUMBER = 102;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return Whether the textClassificationMulticlass field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextClassificationMulticlass() {
+      return tuningParamsCase_ == 102;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return The textClassificationMulticlass.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams getTextClassificationMulticlass() {
+      if (tuningParamsCase_ == 102) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder() {
+      if (tuningParamsCase_ == 102) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_EMBEDDING_PAIR_PARAMS_FIELD_NUMBER = 103;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return Whether the textEmbeddingPairParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextEmbeddingPairParams() {
+      return tuningParamsCase_ == 103;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return The textEmbeddingPairParams.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams() {
+      if (tuningParamsCase_ == 103) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder() {
+      if (tuningParamsCase_ == 103) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_EMBEDDING_TRIPLET_PARAMS_FIELD_NUMBER = 104;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return Whether the textEmbeddingTripletParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextEmbeddingTripletParams() {
+      return tuningParamsCase_ == 104;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return The textEmbeddingTripletParams.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams() {
+      if (tuningParamsCase_ == 104) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder() {
+      if (tuningParamsCase_ == 104) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+    }
+
+    public static final int NAME_FIELD_NUMBER = 200;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 200 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 200 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 201;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>string description = 201;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 201;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 202;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseModelUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, baseModelUri_);
+      }
+      for (int i = 0; i < trainDatasets_.size(); i++) {
+        output.writeMessage(2, trainDatasets_.get(i));
+      }
+      for (int i = 0; i < validationDatasets_.size(); i++) {
+        output.writeMessage(3, validationDatasets_.get(i));
+      }
+      if (tuningParamsCase_ == 100) {
+        output.writeMessage(100, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 101) {
+        output.writeMessage(101, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 102) {
+        output.writeMessage(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 103) {
+        output.writeMessage(103, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 104) {
+        output.writeMessage(104, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 200, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 201, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          202);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseModelUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, baseModelUri_);
+      }
+      for (int i = 0; i < trainDatasets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, trainDatasets_.get(i));
+      }
+      for (int i = 0; i < validationDatasets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, validationDatasets_.get(i));
+      }
+      if (tuningParamsCase_ == 100) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(100, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 101) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(101, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 102) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 103) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(103, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 104) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(104, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(200, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(201, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(202, labels__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest) obj;
+
+      if (!getBaseModelUri()
+          .equals(other.getBaseModelUri())) return false;
+      if (!getTrainDatasetsList()
+          .equals(other.getTrainDatasetsList())) return false;
+      if (!getValidationDatasetsList()
+          .equals(other.getValidationDatasetsList())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getTuningParamsCase().equals(other.getTuningParamsCase())) return false;
+      switch (tuningParamsCase_) {
+        case 100:
+          if (!getTextToTextCompletion()
+              .equals(other.getTextToTextCompletion())) return false;
+          break;
+        case 101:
+          if (!getTextClassificationMultilabel()
+              .equals(other.getTextClassificationMultilabel())) return false;
+          break;
+        case 102:
+          if (!getTextClassificationMulticlass()
+              .equals(other.getTextClassificationMulticlass())) return false;
+          break;
+        case 103:
+          if (!getTextEmbeddingPairParams()
+              .equals(other.getTextEmbeddingPairParams())) return false;
+          break;
+        case 104:
+          if (!getTextEmbeddingTripletParams()
+              .equals(other.getTextEmbeddingTripletParams())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BASE_MODEL_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseModelUri().hashCode();
+      if (getTrainDatasetsCount() > 0) {
+        hash = (37 * hash) + TRAIN_DATASETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTrainDatasetsList().hashCode();
+      }
+      if (getValidationDatasetsCount() > 0) {
+        hash = (37 * hash) + VALIDATION_DATASETS_FIELD_NUMBER;
+        hash = (53 * hash) + getValidationDatasetsList().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      switch (tuningParamsCase_) {
+        case 100:
+          hash = (37 * hash) + TEXT_TO_TEXT_COMPLETION_FIELD_NUMBER;
+          hash = (53 * hash) + getTextToTextCompletion().hashCode();
+          break;
+        case 101:
+          hash = (37 * hash) + TEXT_CLASSIFICATION_MULTILABEL_FIELD_NUMBER;
+          hash = (53 * hash) + getTextClassificationMultilabel().hashCode();
+          break;
+        case 102:
+          hash = (37 * hash) + TEXT_CLASSIFICATION_MULTICLASS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextClassificationMulticlass().hashCode();
+          break;
+        case 103:
+          hash = (37 * hash) + TEXT_EMBEDDING_PAIR_PARAMS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextEmbeddingPairParams().hashCode();
+          break;
+        case 104:
+          hash = (37 * hash) + TEXT_EMBEDDING_TRIPLET_PARAMS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextEmbeddingTripletParams().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.CreateTuningDraftRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.CreateTuningDraftRequest)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 202:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 202:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTrainDatasetsFieldBuilder();
+          getValidationDatasetsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        baseModelUri_ = "";
+
+        if (trainDatasetsBuilder_ == null) {
+          trainDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          trainDatasetsBuilder_.clear();
+        }
+        if (validationDatasetsBuilder_ == null) {
+          validationDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          validationDatasetsBuilder_.clear();
+        }
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
+        tuningParamsCase_ = 0;
+        tuningParams_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.baseModelUri_ = baseModelUri_;
+        if (trainDatasetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            trainDatasets_ = java.util.Collections.unmodifiableList(trainDatasets_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.trainDatasets_ = trainDatasets_;
+        } else {
+          result.trainDatasets_ = trainDatasetsBuilder_.build();
+        }
+        if (validationDatasetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            validationDatasets_ = java.util.Collections.unmodifiableList(validationDatasets_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.validationDatasets_ = validationDatasets_;
+        } else {
+          result.validationDatasets_ = validationDatasetsBuilder_.build();
+        }
+        if (tuningParamsCase_ == 100) {
+          if (textToTextCompletionBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textToTextCompletionBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 101) {
+          if (textClassificationMultilabelBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textClassificationMultilabelBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 102) {
+          if (textClassificationMulticlassBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textClassificationMulticlassBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 103) {
+          if (textEmbeddingPairParamsBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textEmbeddingPairParamsBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 104) {
+          if (textEmbeddingTripletParamsBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textEmbeddingTripletParamsBuilder_.build();
+          }
+        }
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.tuningParamsCase_ = tuningParamsCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest.getDefaultInstance()) return this;
+        if (!other.getBaseModelUri().isEmpty()) {
+          baseModelUri_ = other.baseModelUri_;
+          onChanged();
+        }
+        if (trainDatasetsBuilder_ == null) {
+          if (!other.trainDatasets_.isEmpty()) {
+            if (trainDatasets_.isEmpty()) {
+              trainDatasets_ = other.trainDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTrainDatasetsIsMutable();
+              trainDatasets_.addAll(other.trainDatasets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.trainDatasets_.isEmpty()) {
+            if (trainDatasetsBuilder_.isEmpty()) {
+              trainDatasetsBuilder_.dispose();
+              trainDatasetsBuilder_ = null;
+              trainDatasets_ = other.trainDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              trainDatasetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTrainDatasetsFieldBuilder() : null;
+            } else {
+              trainDatasetsBuilder_.addAllMessages(other.trainDatasets_);
+            }
+          }
+        }
+        if (validationDatasetsBuilder_ == null) {
+          if (!other.validationDatasets_.isEmpty()) {
+            if (validationDatasets_.isEmpty()) {
+              validationDatasets_ = other.validationDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureValidationDatasetsIsMutable();
+              validationDatasets_.addAll(other.validationDatasets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.validationDatasets_.isEmpty()) {
+            if (validationDatasetsBuilder_.isEmpty()) {
+              validationDatasetsBuilder_.dispose();
+              validationDatasetsBuilder_ = null;
+              validationDatasets_ = other.validationDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              validationDatasetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValidationDatasetsFieldBuilder() : null;
+            } else {
+              validationDatasetsBuilder_.addAllMessages(other.validationDatasets_);
+            }
+          }
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        switch (other.getTuningParamsCase()) {
+          case TEXT_TO_TEXT_COMPLETION: {
+            mergeTextToTextCompletion(other.getTextToTextCompletion());
+            break;
+          }
+          case TEXT_CLASSIFICATION_MULTILABEL: {
+            mergeTextClassificationMultilabel(other.getTextClassificationMultilabel());
+            break;
+          }
+          case TEXT_CLASSIFICATION_MULTICLASS: {
+            mergeTextClassificationMulticlass(other.getTextClassificationMulticlass());
+            break;
+          }
+          case TEXT_EMBEDDING_PAIR_PARAMS: {
+            mergeTextEmbeddingPairParams(other.getTextEmbeddingPairParams());
+            break;
+          }
+          case TEXT_EMBEDDING_TRIPLET_PARAMS: {
+            mergeTextEmbeddingTripletParams(other.getTextEmbeddingTripletParams());
+            break;
+          }
+          case TUNINGPARAMS_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int tuningParamsCase_ = 0;
+      private java.lang.Object tuningParams_;
+      public TuningParamsCase
+          getTuningParamsCase() {
+        return TuningParamsCase.forNumber(
+            tuningParamsCase_);
+      }
+
+      public Builder clearTuningParams() {
+        tuningParamsCase_ = 0;
+        tuningParams_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object baseModelUri_ = "";
+      /**
+       * <code>string base_model_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The baseModelUri.
+       */
+      public java.lang.String getBaseModelUri() {
+        java.lang.Object ref = baseModelUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseModelUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string base_model_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for baseModelUri.
+       */
+      public com.google.protobuf.ByteString
+          getBaseModelUriBytes() {
+        java.lang.Object ref = baseModelUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseModelUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string base_model_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The baseModelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseModelUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        baseModelUri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_model_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseModelUri() {
+        
+        baseModelUri_ = getDefaultInstance().getBaseModelUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_model_uri = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for baseModelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseModelUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        baseModelUri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> trainDatasets_ =
+        java.util.Collections.emptyList();
+      private void ensureTrainDatasetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          trainDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>(trainDatasets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> trainDatasetsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getTrainDatasetsList() {
+        if (trainDatasetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(trainDatasets_);
+        } else {
+          return trainDatasetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public int getTrainDatasetsCount() {
+        if (trainDatasetsBuilder_ == null) {
+          return trainDatasets_.size();
+        } else {
+          return trainDatasetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getTrainDatasets(int index) {
+        if (trainDatasetsBuilder_ == null) {
+          return trainDatasets_.get(index);
+        } else {
+          return trainDatasetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder setTrainDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (trainDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.set(index, value);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder setTrainDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addTrainDatasets(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (trainDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.add(value);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addTrainDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (trainDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.add(index, value);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addTrainDatasets(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addTrainDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder addAllTrainDatasets(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> values) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trainDatasets_);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder clearTrainDatasets() {
+        if (trainDatasetsBuilder_ == null) {
+          trainDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder removeTrainDatasets(int index) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.remove(index);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder getTrainDatasetsBuilder(
+          int index) {
+        return getTrainDatasetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getTrainDatasetsOrBuilder(
+          int index) {
+        if (trainDatasetsBuilder_ == null) {
+          return trainDatasets_.get(index);  } else {
+          return trainDatasetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+           getTrainDatasetsOrBuilderList() {
+        if (trainDatasetsBuilder_ != null) {
+          return trainDatasetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(trainDatasets_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addTrainDatasetsBuilder() {
+        return getTrainDatasetsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addTrainDatasetsBuilder(
+          int index) {
+        return getTrainDatasetsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder> 
+           getTrainDatasetsBuilderList() {
+        return getTrainDatasetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+          getTrainDatasetsFieldBuilder() {
+        if (trainDatasetsBuilder_ == null) {
+          trainDatasetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder>(
+                  trainDatasets_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          trainDatasets_ = null;
+        }
+        return trainDatasetsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> validationDatasets_ =
+        java.util.Collections.emptyList();
+      private void ensureValidationDatasetsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          validationDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>(validationDatasets_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> validationDatasetsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getValidationDatasetsList() {
+        if (validationDatasetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(validationDatasets_);
+        } else {
+          return validationDatasetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public int getValidationDatasetsCount() {
+        if (validationDatasetsBuilder_ == null) {
+          return validationDatasets_.size();
+        } else {
+          return validationDatasetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index) {
+        if (validationDatasetsBuilder_ == null) {
+          return validationDatasets_.get(index);
+        } else {
+          return validationDatasetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public Builder setValidationDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (validationDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.set(index, value);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public Builder setValidationDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public Builder addValidationDatasets(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (validationDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.add(value);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public Builder addValidationDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (validationDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.add(index, value);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public Builder addValidationDatasets(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public Builder addValidationDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public Builder addAllValidationDatasets(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> values) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, validationDatasets_);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public Builder clearValidationDatasets() {
+        if (validationDatasetsBuilder_ == null) {
+          validationDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public Builder removeValidationDatasets(int index) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.remove(index);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder getValidationDatasetsBuilder(
+          int index) {
+        return getValidationDatasetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+          int index) {
+        if (validationDatasetsBuilder_ == null) {
+          return validationDatasets_.get(index);  } else {
+          return validationDatasetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+           getValidationDatasetsOrBuilderList() {
+        if (validationDatasetsBuilder_ != null) {
+          return validationDatasetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(validationDatasets_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addValidationDatasetsBuilder() {
+        return getValidationDatasetsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addValidationDatasetsBuilder(
+          int index) {
+        return getValidationDatasetsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder> 
+           getValidationDatasetsBuilderList() {
+        return getValidationDatasetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+          getValidationDatasetsFieldBuilder() {
+        if (validationDatasetsBuilder_ == null) {
+          validationDatasetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder>(
+                  validationDatasets_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          validationDatasets_ = null;
+        }
+        return validationDatasetsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder> textToTextCompletionBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       * @return Whether the textToTextCompletion field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextToTextCompletion() {
+        return tuningParamsCase_ == 100;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       * @return The textToTextCompletion.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams getTextToTextCompletion() {
+        if (textToTextCompletionBuilder_ == null) {
+          if (tuningParamsCase_ == 100) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 100) {
+            return textToTextCompletionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public Builder setTextToTextCompletion(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams value) {
+        if (textToTextCompletionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textToTextCompletionBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public Builder setTextToTextCompletion(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder builderForValue) {
+        if (textToTextCompletionBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textToTextCompletionBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public Builder mergeTextToTextCompletion(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams value) {
+        if (textToTextCompletionBuilder_ == null) {
+          if (tuningParamsCase_ == 100 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 100) {
+            textToTextCompletionBuilder_.mergeFrom(value);
+          }
+          textToTextCompletionBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public Builder clearTextToTextCompletion() {
+        if (textToTextCompletionBuilder_ == null) {
+          if (tuningParamsCase_ == 100) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 100) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textToTextCompletionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder getTextToTextCompletionBuilder() {
+        return getTextToTextCompletionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder getTextToTextCompletionOrBuilder() {
+        if ((tuningParamsCase_ == 100) && (textToTextCompletionBuilder_ != null)) {
+          return textToTextCompletionBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 100) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder> 
+          getTextToTextCompletionFieldBuilder() {
+        if (textToTextCompletionBuilder_ == null) {
+          if (!(tuningParamsCase_ == 100)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+          }
+          textToTextCompletionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 100;
+        onChanged();;
+        return textToTextCompletionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder> textClassificationMultilabelBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       * @return Whether the textClassificationMultilabel field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextClassificationMultilabel() {
+        return tuningParamsCase_ == 101;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       * @return The textClassificationMultilabel.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams getTextClassificationMultilabel() {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (tuningParamsCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 101) {
+            return textClassificationMultilabelBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder setTextClassificationMultilabel(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams value) {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textClassificationMultilabelBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder setTextClassificationMultilabel(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder builderForValue) {
+        if (textClassificationMultilabelBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textClassificationMultilabelBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder mergeTextClassificationMultilabel(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams value) {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (tuningParamsCase_ == 101 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 101) {
+            textClassificationMultilabelBuilder_.mergeFrom(value);
+          }
+          textClassificationMultilabelBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder clearTextClassificationMultilabel() {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (tuningParamsCase_ == 101) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 101) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textClassificationMultilabelBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder getTextClassificationMultilabelBuilder() {
+        return getTextClassificationMultilabelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder getTextClassificationMultilabelOrBuilder() {
+        if ((tuningParamsCase_ == 101) && (textClassificationMultilabelBuilder_ != null)) {
+          return textClassificationMultilabelBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder> 
+          getTextClassificationMultilabelFieldBuilder() {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (!(tuningParamsCase_ == 101)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+          }
+          textClassificationMultilabelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 101;
+        onChanged();;
+        return textClassificationMultilabelBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder> textClassificationMulticlassBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       * @return Whether the textClassificationMulticlass field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextClassificationMulticlass() {
+        return tuningParamsCase_ == 102;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       * @return The textClassificationMulticlass.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams getTextClassificationMulticlass() {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (tuningParamsCase_ == 102) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 102) {
+            return textClassificationMulticlassBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder setTextClassificationMulticlass(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams value) {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textClassificationMulticlassBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder setTextClassificationMulticlass(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder builderForValue) {
+        if (textClassificationMulticlassBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textClassificationMulticlassBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder mergeTextClassificationMulticlass(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams value) {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (tuningParamsCase_ == 102 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 102) {
+            textClassificationMulticlassBuilder_.mergeFrom(value);
+          }
+          textClassificationMulticlassBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder clearTextClassificationMulticlass() {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (tuningParamsCase_ == 102) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 102) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textClassificationMulticlassBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder getTextClassificationMulticlassBuilder() {
+        return getTextClassificationMulticlassFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder() {
+        if ((tuningParamsCase_ == 102) && (textClassificationMulticlassBuilder_ != null)) {
+          return textClassificationMulticlassBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 102) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder> 
+          getTextClassificationMulticlassFieldBuilder() {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (!(tuningParamsCase_ == 102)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+          }
+          textClassificationMulticlassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 102;
+        onChanged();;
+        return textClassificationMulticlassBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder> textEmbeddingPairParamsBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       * @return Whether the textEmbeddingPairParams field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextEmbeddingPairParams() {
+        return tuningParamsCase_ == 103;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       * @return The textEmbeddingPairParams.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            return textEmbeddingPairParamsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder setTextEmbeddingPairParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams value) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textEmbeddingPairParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder setTextEmbeddingPairParams(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder builderForValue) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textEmbeddingPairParamsBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder mergeTextEmbeddingPairParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams value) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            textEmbeddingPairParamsBuilder_.mergeFrom(value);
+          }
+          textEmbeddingPairParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder clearTextEmbeddingPairParams() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 103) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textEmbeddingPairParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder getTextEmbeddingPairParamsBuilder() {
+        return getTextEmbeddingPairParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder() {
+        if ((tuningParamsCase_ == 103) && (textEmbeddingPairParamsBuilder_ != null)) {
+          return textEmbeddingPairParamsBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder> 
+          getTextEmbeddingPairParamsFieldBuilder() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (!(tuningParamsCase_ == 103)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+          }
+          textEmbeddingPairParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 103;
+        onChanged();;
+        return textEmbeddingPairParamsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder> textEmbeddingTripletParamsBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       * @return Whether the textEmbeddingTripletParams field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextEmbeddingTripletParams() {
+        return tuningParamsCase_ == 104;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       * @return The textEmbeddingTripletParams.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            return textEmbeddingTripletParamsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder setTextEmbeddingTripletParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams value) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textEmbeddingTripletParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder setTextEmbeddingTripletParams(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder builderForValue) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textEmbeddingTripletParamsBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder mergeTextEmbeddingTripletParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams value) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            textEmbeddingTripletParamsBuilder_.mergeFrom(value);
+          }
+          textEmbeddingTripletParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder clearTextEmbeddingTripletParams() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 104) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textEmbeddingTripletParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder getTextEmbeddingTripletParamsBuilder() {
+        return getTextEmbeddingTripletParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder() {
+        if ((tuningParamsCase_ == 104) && (textEmbeddingTripletParamsBuilder_ != null)) {
+          return textEmbeddingTripletParamsBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder> 
+          getTextEmbeddingTripletParamsFieldBuilder() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (!(tuningParamsCase_ == 104)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+          }
+          textEmbeddingTripletParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 104;
+        onChanged();;
+        return textEmbeddingTripletParamsBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 200 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 200 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 200 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 200 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 200 [(.yandex.cloud.pattern) = "^[A-Za-z0-9 _-]{3,100}$"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 201;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 201;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 201;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 201;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 201;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.CreateTuningDraftRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.CreateTuningDraftRequest)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateTuningDraftRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateTuningDraftRequest>() {
+      @java.lang.Override
+      public CreateTuningDraftRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateTuningDraftRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateTuningDraftRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateTuningDraftRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateTuningDraftResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.CreateTuningDraftResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.CreateTuningDraftResponse}
+   */
+  public static final class CreateTuningDraftResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.CreateTuningDraftResponse)
+      CreateTuningDraftResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateTuningDraftResponse.newBuilder() to construct.
+    private CreateTuningDraftResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateTuningDraftResponse() {
+      tuningTaskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateTuningDraftResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateTuningDraftResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse.Builder.class);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.CreateTuningDraftResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.CreateTuningDraftResponse)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse(this);
+        result.tuningTaskId_ = tuningTaskId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.CreateTuningDraftResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.CreateTuningDraftResponse)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateTuningDraftResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CreateTuningDraftResponse>() {
+      @java.lang.Override
+      public CreateTuningDraftResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateTuningDraftResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateTuningDraftResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateTuningDraftResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateTuningDraftRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.UpdateTuningDraftRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+
+    /**
+     * <code>string base_model_uri = 2;</code>
+     * @return The baseModelUri.
+     */
+    java.lang.String getBaseModelUri();
+    /**
+     * <code>string base_model_uri = 2;</code>
+     * @return The bytes for baseModelUri.
+     */
+    com.google.protobuf.ByteString
+        getBaseModelUriBytes();
+
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> 
+        getTrainDatasetsList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getTrainDatasets(int index);
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    int getTrainDatasetsCount();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getTrainDatasetsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getTrainDatasetsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> 
+        getValidationDatasetsList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index);
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    int getValidationDatasetsCount();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getValidationDatasetsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+        int index);
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     * @return Whether the textToTextCompletion field is set.
+     */
+    boolean hasTextToTextCompletion();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     * @return The textToTextCompletion.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams getTextToTextCompletion();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder getTextToTextCompletionOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return Whether the textClassificationMultilabel field is set.
+     */
+    boolean hasTextClassificationMultilabel();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return The textClassificationMultilabel.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams getTextClassificationMultilabel();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder getTextClassificationMultilabelOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return Whether the textClassificationMulticlass field is set.
+     */
+    boolean hasTextClassificationMulticlass();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return The textClassificationMulticlass.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams getTextClassificationMulticlass();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return Whether the textEmbeddingPairParams field is set.
+     */
+    boolean hasTextEmbeddingPairParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return The textEmbeddingPairParams.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return Whether the textEmbeddingTripletParams field is set.
+     */
+    boolean hasTextEmbeddingTripletParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return The textEmbeddingTripletParams.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder();
+
+    /**
+     * <code>string name = 200;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 200;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string description = 201;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 201;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.TuningParamsCase getTuningParamsCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.UpdateTuningDraftRequest}
+   */
+  public static final class UpdateTuningDraftRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.UpdateTuningDraftRequest)
+      UpdateTuningDraftRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateTuningDraftRequest.newBuilder() to construct.
+    private UpdateTuningDraftRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateTuningDraftRequest() {
+      tuningTaskId_ = "";
+      baseModelUri_ = "";
+      trainDatasets_ = java.util.Collections.emptyList();
+      validationDatasets_ = java.util.Collections.emptyList();
+      name_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateTuningDraftRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateTuningDraftRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              baseModelUri_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                trainDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              trainDatasets_.add(
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.parser(), extensionRegistry));
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                validationDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              validationDatasets_.add(
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.parser(), extensionRegistry));
+              break;
+            }
+            case 802: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 100) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 100;
+              break;
+            }
+            case 810: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 101) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 101;
+              break;
+            }
+            case 818: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 102) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 102;
+              break;
+            }
+            case 826: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 103) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 103;
+              break;
+            }
+            case 834: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder subBuilder = null;
+              if (tuningParamsCase_ == 104) {
+                subBuilder = ((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_).toBuilder();
+              }
+              tuningParams_ =
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+                tuningParams_ = subBuilder.buildPartial();
+              }
+              tuningParamsCase_ = 104;
+              break;
+            }
+            case 1602: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 1610: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 1618: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          trainDatasets_ = java.util.Collections.unmodifiableList(trainDatasets_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          validationDatasets_ = java.util.Collections.unmodifiableList(validationDatasets_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 202:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.Builder.class);
+    }
+
+    private int tuningParamsCase_ = 0;
+    private java.lang.Object tuningParams_;
+    public enum TuningParamsCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TEXT_TO_TEXT_COMPLETION(100),
+      TEXT_CLASSIFICATION_MULTILABEL(101),
+      TEXT_CLASSIFICATION_MULTICLASS(102),
+      TEXT_EMBEDDING_PAIR_PARAMS(103),
+      TEXT_EMBEDDING_TRIPLET_PARAMS(104),
+      TUNINGPARAMS_NOT_SET(0);
+      private final int value;
+      private TuningParamsCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TuningParamsCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TuningParamsCase forNumber(int value) {
+        switch (value) {
+          case 100: return TEXT_TO_TEXT_COMPLETION;
+          case 101: return TEXT_CLASSIFICATION_MULTILABEL;
+          case 102: return TEXT_CLASSIFICATION_MULTICLASS;
+          case 103: return TEXT_EMBEDDING_PAIR_PARAMS;
+          case 104: return TEXT_EMBEDDING_TRIPLET_PARAMS;
+          case 0: return TUNINGPARAMS_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TuningParamsCase
+    getTuningParamsCase() {
+      return TuningParamsCase.forNumber(
+          tuningParamsCase_);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BASE_MODEL_URI_FIELD_NUMBER = 2;
+    private volatile java.lang.Object baseModelUri_;
+    /**
+     * <code>string base_model_uri = 2;</code>
+     * @return The baseModelUri.
+     */
+    @java.lang.Override
+    public java.lang.String getBaseModelUri() {
+      java.lang.Object ref = baseModelUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baseModelUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string base_model_uri = 2;</code>
+     * @return The bytes for baseModelUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBaseModelUriBytes() {
+      java.lang.Object ref = baseModelUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baseModelUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRAIN_DATASETS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> trainDatasets_;
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getTrainDatasetsList() {
+      return trainDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getTrainDatasetsOrBuilderList() {
+      return trainDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public int getTrainDatasetsCount() {
+      return trainDatasets_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getTrainDatasets(int index) {
+      return trainDatasets_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getTrainDatasetsOrBuilder(
+        int index) {
+      return trainDatasets_.get(index);
+    }
+
+    public static final int VALIDATION_DATASETS_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> validationDatasets_;
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getValidationDatasetsList() {
+      return validationDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getValidationDatasetsOrBuilderList() {
+      return validationDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    @java.lang.Override
+    public int getValidationDatasetsCount() {
+      return validationDatasets_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index) {
+      return validationDatasets_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+        int index) {
+      return validationDatasets_.get(index);
+    }
+
+    public static final int TEXT_TO_TEXT_COMPLETION_FIELD_NUMBER = 100;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     * @return Whether the textToTextCompletion field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextToTextCompletion() {
+      return tuningParamsCase_ == 100;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     * @return The textToTextCompletion.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams getTextToTextCompletion() {
+      if (tuningParamsCase_ == 100) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder getTextToTextCompletionOrBuilder() {
+      if (tuningParamsCase_ == 100) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_CLASSIFICATION_MULTILABEL_FIELD_NUMBER = 101;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return Whether the textClassificationMultilabel field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextClassificationMultilabel() {
+      return tuningParamsCase_ == 101;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     * @return The textClassificationMultilabel.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams getTextClassificationMultilabel() {
+      if (tuningParamsCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder getTextClassificationMultilabelOrBuilder() {
+      if (tuningParamsCase_ == 101) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_CLASSIFICATION_MULTICLASS_FIELD_NUMBER = 102;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return Whether the textClassificationMulticlass field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextClassificationMulticlass() {
+      return tuningParamsCase_ == 102;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     * @return The textClassificationMulticlass.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams getTextClassificationMulticlass() {
+      if (tuningParamsCase_ == 102) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder() {
+      if (tuningParamsCase_ == 102) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_EMBEDDING_PAIR_PARAMS_FIELD_NUMBER = 103;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return Whether the textEmbeddingPairParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextEmbeddingPairParams() {
+      return tuningParamsCase_ == 103;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     * @return The textEmbeddingPairParams.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams() {
+      if (tuningParamsCase_ == 103) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder() {
+      if (tuningParamsCase_ == 103) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+    }
+
+    public static final int TEXT_EMBEDDING_TRIPLET_PARAMS_FIELD_NUMBER = 104;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return Whether the textEmbeddingTripletParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextEmbeddingTripletParams() {
+      return tuningParamsCase_ == 104;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     * @return The textEmbeddingTripletParams.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams() {
+      if (tuningParamsCase_ == 104) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder() {
+      if (tuningParamsCase_ == 104) {
+         return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+      }
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+    }
+
+    public static final int NAME_FIELD_NUMBER = 200;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 200;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 200;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 201;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>string description = 201;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 201;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 202;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; labels = 202;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseModelUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, baseModelUri_);
+      }
+      for (int i = 0; i < trainDatasets_.size(); i++) {
+        output.writeMessage(3, trainDatasets_.get(i));
+      }
+      for (int i = 0; i < validationDatasets_.size(); i++) {
+        output.writeMessage(4, validationDatasets_.get(i));
+      }
+      if (tuningParamsCase_ == 100) {
+        output.writeMessage(100, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 101) {
+        output.writeMessage(101, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 102) {
+        output.writeMessage(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 103) {
+        output.writeMessage(103, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 104) {
+        output.writeMessage(104, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 200, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 201, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          202);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baseModelUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, baseModelUri_);
+      }
+      for (int i = 0; i < trainDatasets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, trainDatasets_.get(i));
+      }
+      for (int i = 0; i < validationDatasets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, validationDatasets_.get(i));
+      }
+      if (tuningParamsCase_ == 100) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(100, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 101) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(101, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 102) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(102, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 103) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(103, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_);
+      }
+      if (tuningParamsCase_ == 104) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(104, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(200, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(201, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(202, labels__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!getBaseModelUri()
+          .equals(other.getBaseModelUri())) return false;
+      if (!getTrainDatasetsList()
+          .equals(other.getTrainDatasetsList())) return false;
+      if (!getValidationDatasetsList()
+          .equals(other.getValidationDatasetsList())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getTuningParamsCase().equals(other.getTuningParamsCase())) return false;
+      switch (tuningParamsCase_) {
+        case 100:
+          if (!getTextToTextCompletion()
+              .equals(other.getTextToTextCompletion())) return false;
+          break;
+        case 101:
+          if (!getTextClassificationMultilabel()
+              .equals(other.getTextClassificationMultilabel())) return false;
+          break;
+        case 102:
+          if (!getTextClassificationMulticlass()
+              .equals(other.getTextClassificationMulticlass())) return false;
+          break;
+        case 103:
+          if (!getTextEmbeddingPairParams()
+              .equals(other.getTextEmbeddingPairParams())) return false;
+          break;
+        case 104:
+          if (!getTextEmbeddingTripletParams()
+              .equals(other.getTextEmbeddingTripletParams())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (37 * hash) + BASE_MODEL_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getBaseModelUri().hashCode();
+      if (getTrainDatasetsCount() > 0) {
+        hash = (37 * hash) + TRAIN_DATASETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTrainDatasetsList().hashCode();
+      }
+      if (getValidationDatasetsCount() > 0) {
+        hash = (37 * hash) + VALIDATION_DATASETS_FIELD_NUMBER;
+        hash = (53 * hash) + getValidationDatasetsList().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      switch (tuningParamsCase_) {
+        case 100:
+          hash = (37 * hash) + TEXT_TO_TEXT_COMPLETION_FIELD_NUMBER;
+          hash = (53 * hash) + getTextToTextCompletion().hashCode();
+          break;
+        case 101:
+          hash = (37 * hash) + TEXT_CLASSIFICATION_MULTILABEL_FIELD_NUMBER;
+          hash = (53 * hash) + getTextClassificationMultilabel().hashCode();
+          break;
+        case 102:
+          hash = (37 * hash) + TEXT_CLASSIFICATION_MULTICLASS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextClassificationMulticlass().hashCode();
+          break;
+        case 103:
+          hash = (37 * hash) + TEXT_EMBEDDING_PAIR_PARAMS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextEmbeddingPairParams().hashCode();
+          break;
+        case 104:
+          hash = (37 * hash) + TEXT_EMBEDDING_TRIPLET_PARAMS_FIELD_NUMBER;
+          hash = (53 * hash) + getTextEmbeddingTripletParams().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.UpdateTuningDraftRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.UpdateTuningDraftRequest)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 202:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 202:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTrainDatasetsFieldBuilder();
+          getValidationDatasetsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        baseModelUri_ = "";
+
+        if (trainDatasetsBuilder_ == null) {
+          trainDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          trainDatasetsBuilder_.clear();
+        }
+        if (validationDatasetsBuilder_ == null) {
+          validationDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          validationDatasetsBuilder_.clear();
+        }
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
+        tuningParamsCase_ = 0;
+        tuningParams_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.tuningTaskId_ = tuningTaskId_;
+        result.baseModelUri_ = baseModelUri_;
+        if (trainDatasetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            trainDatasets_ = java.util.Collections.unmodifiableList(trainDatasets_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.trainDatasets_ = trainDatasets_;
+        } else {
+          result.trainDatasets_ = trainDatasetsBuilder_.build();
+        }
+        if (validationDatasetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            validationDatasets_ = java.util.Collections.unmodifiableList(validationDatasets_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.validationDatasets_ = validationDatasets_;
+        } else {
+          result.validationDatasets_ = validationDatasetsBuilder_.build();
+        }
+        if (tuningParamsCase_ == 100) {
+          if (textToTextCompletionBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textToTextCompletionBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 101) {
+          if (textClassificationMultilabelBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textClassificationMultilabelBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 102) {
+          if (textClassificationMulticlassBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textClassificationMulticlassBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 103) {
+          if (textEmbeddingPairParamsBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textEmbeddingPairParamsBuilder_.build();
+          }
+        }
+        if (tuningParamsCase_ == 104) {
+          if (textEmbeddingTripletParamsBuilder_ == null) {
+            result.tuningParams_ = tuningParams_;
+          } else {
+            result.tuningParams_ = textEmbeddingTripletParamsBuilder_.build();
+          }
+        }
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.tuningParamsCase_ = tuningParamsCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        if (!other.getBaseModelUri().isEmpty()) {
+          baseModelUri_ = other.baseModelUri_;
+          onChanged();
+        }
+        if (trainDatasetsBuilder_ == null) {
+          if (!other.trainDatasets_.isEmpty()) {
+            if (trainDatasets_.isEmpty()) {
+              trainDatasets_ = other.trainDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTrainDatasetsIsMutable();
+              trainDatasets_.addAll(other.trainDatasets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.trainDatasets_.isEmpty()) {
+            if (trainDatasetsBuilder_.isEmpty()) {
+              trainDatasetsBuilder_.dispose();
+              trainDatasetsBuilder_ = null;
+              trainDatasets_ = other.trainDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              trainDatasetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTrainDatasetsFieldBuilder() : null;
+            } else {
+              trainDatasetsBuilder_.addAllMessages(other.trainDatasets_);
+            }
+          }
+        }
+        if (validationDatasetsBuilder_ == null) {
+          if (!other.validationDatasets_.isEmpty()) {
+            if (validationDatasets_.isEmpty()) {
+              validationDatasets_ = other.validationDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureValidationDatasetsIsMutable();
+              validationDatasets_.addAll(other.validationDatasets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.validationDatasets_.isEmpty()) {
+            if (validationDatasetsBuilder_.isEmpty()) {
+              validationDatasetsBuilder_.dispose();
+              validationDatasetsBuilder_ = null;
+              validationDatasets_ = other.validationDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              validationDatasetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValidationDatasetsFieldBuilder() : null;
+            } else {
+              validationDatasetsBuilder_.addAllMessages(other.validationDatasets_);
+            }
+          }
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        switch (other.getTuningParamsCase()) {
+          case TEXT_TO_TEXT_COMPLETION: {
+            mergeTextToTextCompletion(other.getTextToTextCompletion());
+            break;
+          }
+          case TEXT_CLASSIFICATION_MULTILABEL: {
+            mergeTextClassificationMultilabel(other.getTextClassificationMultilabel());
+            break;
+          }
+          case TEXT_CLASSIFICATION_MULTICLASS: {
+            mergeTextClassificationMulticlass(other.getTextClassificationMulticlass());
+            break;
+          }
+          case TEXT_EMBEDDING_PAIR_PARAMS: {
+            mergeTextEmbeddingPairParams(other.getTextEmbeddingPairParams());
+            break;
+          }
+          case TEXT_EMBEDDING_TRIPLET_PARAMS: {
+            mergeTextEmbeddingTripletParams(other.getTextEmbeddingTripletParams());
+            break;
+          }
+          case TUNINGPARAMS_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int tuningParamsCase_ = 0;
+      private java.lang.Object tuningParams_;
+      public TuningParamsCase
+          getTuningParamsCase() {
+        return TuningParamsCase.forNumber(
+            tuningParamsCase_);
+      }
+
+      public Builder clearTuningParams() {
+        tuningParamsCase_ = 0;
+        tuningParams_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object baseModelUri_ = "";
+      /**
+       * <code>string base_model_uri = 2;</code>
+       * @return The baseModelUri.
+       */
+      public java.lang.String getBaseModelUri() {
+        java.lang.Object ref = baseModelUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baseModelUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string base_model_uri = 2;</code>
+       * @return The bytes for baseModelUri.
+       */
+      public com.google.protobuf.ByteString
+          getBaseModelUriBytes() {
+        java.lang.Object ref = baseModelUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baseModelUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string base_model_uri = 2;</code>
+       * @param value The baseModelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseModelUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        baseModelUri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_model_uri = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBaseModelUri() {
+        
+        baseModelUri_ = getDefaultInstance().getBaseModelUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string base_model_uri = 2;</code>
+       * @param value The bytes for baseModelUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBaseModelUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        baseModelUri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> trainDatasets_ =
+        java.util.Collections.emptyList();
+      private void ensureTrainDatasetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          trainDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>(trainDatasets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> trainDatasetsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getTrainDatasetsList() {
+        if (trainDatasetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(trainDatasets_);
+        } else {
+          return trainDatasetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public int getTrainDatasetsCount() {
+        if (trainDatasetsBuilder_ == null) {
+          return trainDatasets_.size();
+        } else {
+          return trainDatasetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getTrainDatasets(int index) {
+        if (trainDatasetsBuilder_ == null) {
+          return trainDatasets_.get(index);
+        } else {
+          return trainDatasetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public Builder setTrainDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (trainDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.set(index, value);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public Builder setTrainDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public Builder addTrainDatasets(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (trainDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.add(value);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public Builder addTrainDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (trainDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.add(index, value);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public Builder addTrainDatasets(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public Builder addTrainDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public Builder addAllTrainDatasets(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> values) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trainDatasets_);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public Builder clearTrainDatasets() {
+        if (trainDatasetsBuilder_ == null) {
+          trainDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public Builder removeTrainDatasets(int index) {
+        if (trainDatasetsBuilder_ == null) {
+          ensureTrainDatasetsIsMutable();
+          trainDatasets_.remove(index);
+          onChanged();
+        } else {
+          trainDatasetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder getTrainDatasetsBuilder(
+          int index) {
+        return getTrainDatasetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getTrainDatasetsOrBuilder(
+          int index) {
+        if (trainDatasetsBuilder_ == null) {
+          return trainDatasets_.get(index);  } else {
+          return trainDatasetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+           getTrainDatasetsOrBuilderList() {
+        if (trainDatasetsBuilder_ != null) {
+          return trainDatasetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(trainDatasets_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addTrainDatasetsBuilder() {
+        return getTrainDatasetsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addTrainDatasetsBuilder(
+          int index) {
+        return getTrainDatasetsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset train_datasets = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder> 
+           getTrainDatasetsBuilderList() {
+        return getTrainDatasetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+          getTrainDatasetsFieldBuilder() {
+        if (trainDatasetsBuilder_ == null) {
+          trainDatasetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder>(
+                  trainDatasets_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          trainDatasets_ = null;
+        }
+        return trainDatasetsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> validationDatasets_ =
+        java.util.Collections.emptyList();
+      private void ensureValidationDatasetsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          validationDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>(validationDatasets_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> validationDatasetsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getValidationDatasetsList() {
+        if (validationDatasetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(validationDatasets_);
+        } else {
+          return validationDatasetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public int getValidationDatasetsCount() {
+        if (validationDatasetsBuilder_ == null) {
+          return validationDatasets_.size();
+        } else {
+          return validationDatasetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index) {
+        if (validationDatasetsBuilder_ == null) {
+          return validationDatasets_.get(index);
+        } else {
+          return validationDatasetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public Builder setValidationDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (validationDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.set(index, value);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public Builder setValidationDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public Builder addValidationDatasets(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (validationDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.add(value);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public Builder addValidationDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (validationDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.add(index, value);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public Builder addValidationDatasets(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public Builder addValidationDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public Builder addAllValidationDatasets(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> values) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, validationDatasets_);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public Builder clearValidationDatasets() {
+        if (validationDatasetsBuilder_ == null) {
+          validationDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public Builder removeValidationDatasets(int index) {
+        if (validationDatasetsBuilder_ == null) {
+          ensureValidationDatasetsIsMutable();
+          validationDatasets_.remove(index);
+          onChanged();
+        } else {
+          validationDatasetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder getValidationDatasetsBuilder(
+          int index) {
+        return getValidationDatasetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+          int index) {
+        if (validationDatasetsBuilder_ == null) {
+          return validationDatasets_.get(index);  } else {
+          return validationDatasetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+           getValidationDatasetsOrBuilderList() {
+        if (validationDatasetsBuilder_ != null) {
+          return validationDatasetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(validationDatasets_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addValidationDatasetsBuilder() {
+        return getValidationDatasetsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addValidationDatasetsBuilder(
+          int index) {
+        return getValidationDatasetsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder> 
+           getValidationDatasetsBuilderList() {
+        return getValidationDatasetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+          getValidationDatasetsFieldBuilder() {
+        if (validationDatasetsBuilder_ == null) {
+          validationDatasetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder>(
+                  validationDatasets_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          validationDatasets_ = null;
+        }
+        return validationDatasetsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder> textToTextCompletionBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       * @return Whether the textToTextCompletion field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextToTextCompletion() {
+        return tuningParamsCase_ == 100;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       * @return The textToTextCompletion.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams getTextToTextCompletion() {
+        if (textToTextCompletionBuilder_ == null) {
+          if (tuningParamsCase_ == 100) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 100) {
+            return textToTextCompletionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public Builder setTextToTextCompletion(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams value) {
+        if (textToTextCompletionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textToTextCompletionBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public Builder setTextToTextCompletion(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder builderForValue) {
+        if (textToTextCompletionBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textToTextCompletionBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public Builder mergeTextToTextCompletion(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams value) {
+        if (textToTextCompletionBuilder_ == null) {
+          if (tuningParamsCase_ == 100 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 100) {
+            textToTextCompletionBuilder_.mergeFrom(value);
+          }
+          textToTextCompletionBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 100;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public Builder clearTextToTextCompletion() {
+        if (textToTextCompletionBuilder_ == null) {
+          if (tuningParamsCase_ == 100) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 100) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textToTextCompletionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder getTextToTextCompletionBuilder() {
+        return getTextToTextCompletionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder getTextToTextCompletionOrBuilder() {
+        if ((tuningParamsCase_ == 100) && (textToTextCompletionBuilder_ != null)) {
+          return textToTextCompletionBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 100) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextToTextCompletionTuningParams text_to_text_completion = 100;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder> 
+          getTextToTextCompletionFieldBuilder() {
+        if (textToTextCompletionBuilder_ == null) {
+          if (!(tuningParamsCase_ == 100)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.getDefaultInstance();
+          }
+          textToTextCompletionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 100;
+        onChanged();;
+        return textToTextCompletionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder> textClassificationMultilabelBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       * @return Whether the textClassificationMultilabel field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextClassificationMultilabel() {
+        return tuningParamsCase_ == 101;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       * @return The textClassificationMultilabel.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams getTextClassificationMultilabel() {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (tuningParamsCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 101) {
+            return textClassificationMultilabelBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder setTextClassificationMultilabel(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams value) {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textClassificationMultilabelBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder setTextClassificationMultilabel(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder builderForValue) {
+        if (textClassificationMultilabelBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textClassificationMultilabelBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder mergeTextClassificationMultilabel(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams value) {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (tuningParamsCase_ == 101 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 101) {
+            textClassificationMultilabelBuilder_.mergeFrom(value);
+          }
+          textClassificationMultilabelBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 101;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public Builder clearTextClassificationMultilabel() {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (tuningParamsCase_ == 101) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 101) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textClassificationMultilabelBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder getTextClassificationMultilabelBuilder() {
+        return getTextClassificationMultilabelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder getTextClassificationMultilabelOrBuilder() {
+        if ((tuningParamsCase_ == 101) && (textClassificationMultilabelBuilder_ != null)) {
+          return textClassificationMultilabelBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 101) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMultilabelParams text_classification_multilabel = 101;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder> 
+          getTextClassificationMultilabelFieldBuilder() {
+        if (textClassificationMultilabelBuilder_ == null) {
+          if (!(tuningParamsCase_ == 101)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.getDefaultInstance();
+          }
+          textClassificationMultilabelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMultilabelParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 101;
+        onChanged();;
+        return textClassificationMultilabelBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder> textClassificationMulticlassBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       * @return Whether the textClassificationMulticlass field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextClassificationMulticlass() {
+        return tuningParamsCase_ == 102;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       * @return The textClassificationMulticlass.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams getTextClassificationMulticlass() {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (tuningParamsCase_ == 102) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 102) {
+            return textClassificationMulticlassBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder setTextClassificationMulticlass(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams value) {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textClassificationMulticlassBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder setTextClassificationMulticlass(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder builderForValue) {
+        if (textClassificationMulticlassBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textClassificationMulticlassBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder mergeTextClassificationMulticlass(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams value) {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (tuningParamsCase_ == 102 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 102) {
+            textClassificationMulticlassBuilder_.mergeFrom(value);
+          }
+          textClassificationMulticlassBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 102;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public Builder clearTextClassificationMulticlass() {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (tuningParamsCase_ == 102) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 102) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textClassificationMulticlassBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder getTextClassificationMulticlassBuilder() {
+        return getTextClassificationMulticlassFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder getTextClassificationMulticlassOrBuilder() {
+        if ((tuningParamsCase_ == 102) && (textClassificationMulticlassBuilder_ != null)) {
+          return textClassificationMulticlassBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 102) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextClassificationMulticlassParams text_classification_multiclass = 102;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder> 
+          getTextClassificationMulticlassFieldBuilder() {
+        if (textClassificationMulticlassBuilder_ == null) {
+          if (!(tuningParamsCase_ == 102)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.getDefaultInstance();
+          }
+          textClassificationMulticlassBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextClassificationMulticlassParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 102;
+        onChanged();;
+        return textClassificationMulticlassBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder> textEmbeddingPairParamsBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       * @return Whether the textEmbeddingPairParams field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextEmbeddingPairParams() {
+        return tuningParamsCase_ == 103;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       * @return The textEmbeddingPairParams.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams getTextEmbeddingPairParams() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            return textEmbeddingPairParamsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder setTextEmbeddingPairParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams value) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textEmbeddingPairParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder setTextEmbeddingPairParams(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder builderForValue) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textEmbeddingPairParamsBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder mergeTextEmbeddingPairParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams value) {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            textEmbeddingPairParamsBuilder_.mergeFrom(value);
+          }
+          textEmbeddingPairParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 103;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public Builder clearTextEmbeddingPairParams() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 103) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 103) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textEmbeddingPairParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder getTextEmbeddingPairParamsBuilder() {
+        return getTextEmbeddingPairParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder getTextEmbeddingPairParamsOrBuilder() {
+        if ((tuningParamsCase_ == 103) && (textEmbeddingPairParamsBuilder_ != null)) {
+          return textEmbeddingPairParamsBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 103) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingPairParams text_embedding_pair_params = 103;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder> 
+          getTextEmbeddingPairParamsFieldBuilder() {
+        if (textEmbeddingPairParamsBuilder_ == null) {
+          if (!(tuningParamsCase_ == 103)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.getDefaultInstance();
+          }
+          textEmbeddingPairParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingPairParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 103;
+        onChanged();;
+        return textEmbeddingPairParamsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder> textEmbeddingTripletParamsBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       * @return Whether the textEmbeddingTripletParams field is set.
+       */
+      @java.lang.Override
+      public boolean hasTextEmbeddingTripletParams() {
+        return tuningParamsCase_ == 104;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       * @return The textEmbeddingTripletParams.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams getTextEmbeddingTripletParams() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            return textEmbeddingTripletParamsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder setTextEmbeddingTripletParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams value) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tuningParams_ = value;
+          onChanged();
+        } else {
+          textEmbeddingTripletParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder setTextEmbeddingTripletParams(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder builderForValue) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          tuningParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          textEmbeddingTripletParamsBuilder_.setMessage(builderForValue.build());
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder mergeTextEmbeddingTripletParams(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams value) {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104 &&
+              tuningParams_ != yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance()) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.newBuilder((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            tuningParams_ = value;
+          }
+          onChanged();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            textEmbeddingTripletParamsBuilder_.mergeFrom(value);
+          }
+          textEmbeddingTripletParamsBuilder_.setMessage(value);
+        }
+        tuningParamsCase_ = 104;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public Builder clearTextEmbeddingTripletParams() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (tuningParamsCase_ == 104) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+            onChanged();
+          }
+        } else {
+          if (tuningParamsCase_ == 104) {
+            tuningParamsCase_ = 0;
+            tuningParams_ = null;
+          }
+          textEmbeddingTripletParamsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder getTextEmbeddingTripletParamsBuilder() {
+        return getTextEmbeddingTripletParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder getTextEmbeddingTripletParamsOrBuilder() {
+        if ((tuningParamsCase_ == 104) && (textEmbeddingTripletParamsBuilder_ != null)) {
+          return textEmbeddingTripletParamsBuilder_.getMessageOrBuilder();
+        } else {
+          if (tuningParamsCase_ == 104) {
+            return (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_;
+          }
+          return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TextEmbeddingTripletParams text_embedding_triplet_params = 104;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder> 
+          getTextEmbeddingTripletParamsFieldBuilder() {
+        if (textEmbeddingTripletParamsBuilder_ == null) {
+          if (!(tuningParamsCase_ == 104)) {
+            tuningParams_ = yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.getDefaultInstance();
+          }
+          textEmbeddingTripletParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParamsOrBuilder>(
+                  (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextEmbeddingTripletParams) tuningParams_,
+                  getParentForChildren(),
+                  isClean());
+          tuningParams_ = null;
+        }
+        tuningParamsCase_ = 104;
+        onChanged();;
+        return textEmbeddingTripletParamsBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 200;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 200;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 200;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 200;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 200;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 201;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 201;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 201;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 201;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 201;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; labels = 202;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.UpdateTuningDraftRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.UpdateTuningDraftRequest)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateTuningDraftRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateTuningDraftRequest>() {
+      @java.lang.Override
+      public UpdateTuningDraftRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateTuningDraftRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateTuningDraftRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateTuningDraftRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateTuningDraftResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.UpdateTuningDraftResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.UpdateTuningDraftResponse}
+   */
+  public static final class UpdateTuningDraftResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.UpdateTuningDraftResponse)
+      UpdateTuningDraftResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateTuningDraftResponse.newBuilder() to construct.
+    private UpdateTuningDraftResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateTuningDraftResponse() {
+      tuningTaskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateTuningDraftResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateTuningDraftResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse.Builder.class);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.UpdateTuningDraftResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.UpdateTuningDraftResponse)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse(this);
+        result.tuningTaskId_ = tuningTaskId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.UpdateTuningDraftResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.UpdateTuningDraftResponse)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateTuningDraftResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateTuningDraftResponse>() {
+      @java.lang.Override
+      public UpdateTuningDraftResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateTuningDraftResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateTuningDraftResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateTuningDraftResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteTuningDraftRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.DeleteTuningDraftRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.DeleteTuningDraftRequest}
+   */
+  public static final class DeleteTuningDraftRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.DeleteTuningDraftRequest)
+      DeleteTuningDraftRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteTuningDraftRequest.newBuilder() to construct.
+    private DeleteTuningDraftRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteTuningDraftRequest() {
+      tuningTaskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteTuningDraftRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteTuningDraftRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest.Builder.class);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.DeleteTuningDraftRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.DeleteTuningDraftRequest)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest(this);
+        result.tuningTaskId_ = tuningTaskId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.DeleteTuningDraftRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.DeleteTuningDraftRequest)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteTuningDraftRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteTuningDraftRequest>() {
+      @java.lang.Override
+      public DeleteTuningDraftRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteTuningDraftRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteTuningDraftRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteTuningDraftRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteTuningDraftResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.DeleteTuningDraftResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.DeleteTuningDraftResponse}
+   */
+  public static final class DeleteTuningDraftResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.DeleteTuningDraftResponse)
+      DeleteTuningDraftResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteTuningDraftResponse.newBuilder() to construct.
+    private DeleteTuningDraftResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteTuningDraftResponse() {
+      tuningTaskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteTuningDraftResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteTuningDraftResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse.Builder.class);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1;</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.DeleteTuningDraftResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.DeleteTuningDraftResponse)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse(this);
+        result.tuningTaskId_ = tuningTaskId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1;</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.DeleteTuningDraftResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.DeleteTuningDraftResponse)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteTuningDraftResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteTuningDraftResponse>() {
+      @java.lang.Override
+      public DeleteTuningDraftResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteTuningDraftResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteTuningDraftResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteTuningDraftResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TuneDraftRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.tuning.v1.TuneDraftRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    java.lang.String getTuningTaskId();
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    com.google.protobuf.ByteString
+        getTuningTaskIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.tuning.v1.TuneDraftRequest}
+   */
+  public static final class TuneDraftRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.tuning.v1.TuneDraftRequest)
+      TuneDraftRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TuneDraftRequest.newBuilder() to construct.
+    private TuneDraftRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TuneDraftRequest() {
+      tuningTaskId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TuneDraftRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TuneDraftRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tuningTaskId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest.Builder.class);
+    }
+
+    public static final int TUNING_TASK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tuningTaskId_;
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The tuningTaskId.
+     */
+    @java.lang.Override
+    public java.lang.String getTuningTaskId() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tuningTaskId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for tuningTaskId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTuningTaskIdBytes() {
+      java.lang.Object ref = tuningTaskId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tuningTaskId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tuningTaskId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tuningTaskId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tuningTaskId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest other = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest) obj;
+
+      if (!getTuningTaskId()
+          .equals(other.getTuningTaskId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TUNING_TASK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTuningTaskId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.tuning.v1.TuneDraftRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.tuning.v1.TuneDraftRequest)
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest.class, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tuningTaskId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest build() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest buildPartial() {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest result = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest(this);
+        result.tuningTaskId_ = tuningTaskId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest) {
+          return mergeFrom((yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest other) {
+        if (other == yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest.getDefaultInstance()) return this;
+        if (!other.getTuningTaskId().isEmpty()) {
+          tuningTaskId_ = other.tuningTaskId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object tuningTaskId_ = "";
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The tuningTaskId.
+       */
+      public java.lang.String getTuningTaskId() {
+        java.lang.Object ref = tuningTaskId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tuningTaskId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for tuningTaskId.
+       */
+      public com.google.protobuf.ByteString
+          getTuningTaskIdBytes() {
+        java.lang.Object ref = tuningTaskId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tuningTaskId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTuningTaskId() {
+        
+        tuningTaskId_ = getDefaultInstance().getTuningTaskId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tuning_task_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for tuningTaskId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTuningTaskIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tuningTaskId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.tuning.v1.TuneDraftRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.tuning.v1.TuneDraftRequest)
+    private static final yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest();
+    }
+
+    public static yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TuneDraftRequest>
+        PARSER = new com.google.protobuf.AbstractParser<TuneDraftRequest>() {
+      @java.lang.Override
+      public TuneDraftRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TuneDraftRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TuneDraftRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TuneDraftRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_tuning_v1_ListTuningsRequest_descriptor;
   private static final 
@@ -34932,6 +44224,51 @@ public final class TuningServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_tuning_v1_ListErrorsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35119,7 +44456,61 @@ public final class TuningServiceOuterClass {
       "\000B\017\n\rtuning_paramsJ\004\010\005\020d\"+\n\021ListErrorsRe" +
       "quest\022\026\n\016tuning_task_id\030\001 \001(\t\"R\n\022ListErr" +
       "orsResponse\022<\n\014tuning_error\030\001 \003(\0132&.yand" +
-      "ex.cloud.ai.tuning.v1.TuningError2\227\006\n\rTu" +
+      "ex.cloud.ai.tuning.v1.TuningError\"\266\007\n\030Cr" +
+      "eateTuningDraftRequest\022\034\n\016base_model_uri" +
+      "\030\001 \001(\tB\004\350\3071\001\022X\n\016train_datasets\030\002 \003(\01328.y" +
+      "andex.cloud.ai.tuning.v1.TuningRequest.W" +
+      "eightedDatasetB\006\202\3101\002>0\022U\n\023validation_dat" +
+      "asets\030\003 \003(\01328.yandex.cloud.ai.tuning.v1." +
+      "TuningRequest.WeightedDataset\022^\n\027text_to" +
+      "_text_completion\030d \001(\0132;.yandex.cloud.ai" +
+      ".tuning.v1.TextToTextCompletionTuningPar" +
+      "amsH\000\022g\n\036text_classification_multilabel\030" +
+      "e \001(\0132=.yandex.cloud.ai.tuning.v1.TextCl" +
+      "assificationMultilabelParamsH\000\022g\n\036text_c" +
+      "lassification_multiclass\030f \001(\0132=.yandex." +
+      "cloud.ai.tuning.v1.TextClassificationMul" +
+      "ticlassParamsH\000\022X\n\032text_embedding_pair_p" +
+      "arams\030g \001(\01322.yandex.cloud.ai.tuning.v1." +
+      "TextEmbeddingPairParamsH\000\022^\n\035text_embedd" +
+      "ing_triplet_params\030h \001(\01325.yandex.cloud." +
+      "ai.tuning.v1.TextEmbeddingTripletParamsH" +
+      "\000\022*\n\004name\030\310\001 \001(\tB\033\362\3071\027^[A-Za-z0-9 _-]{3," +
+      "100}$\022\024\n\013description\030\311\001 \001(\t\022P\n\006labels\030\312\001" +
+      " \003(\0132?.yandex.cloud.ai.tuning.v1.CreateT" +
+      "uningDraftRequest.LabelsEntry\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\r" +
+      "tuning_paramsJ\004\010\004\020dJ\005\010i\020\310\001\"3\n\031CreateTuni" +
+      "ngDraftResponse\022\026\n\016tuning_task_id\030\001 \001(\t\"" +
+      "\251\007\n\030UpdateTuningDraftRequest\022\034\n\016tuning_t" +
+      "ask_id\030\001 \001(\tB\004\350\3071\001\022\026\n\016base_model_uri\030\002 \001" +
+      "(\t\022P\n\016train_datasets\030\003 \003(\01328.yandex.clou" +
+      "d.ai.tuning.v1.TuningRequest.WeightedDat" +
+      "aset\022U\n\023validation_datasets\030\004 \003(\01328.yand" +
+      "ex.cloud.ai.tuning.v1.TuningRequest.Weig" +
+      "htedDataset\022^\n\027text_to_text_completion\030d" +
+      " \001(\0132;.yandex.cloud.ai.tuning.v1.TextToT" +
+      "extCompletionTuningParamsH\000\022g\n\036text_clas" +
+      "sification_multilabel\030e \001(\0132=.yandex.clo" +
+      "ud.ai.tuning.v1.TextClassificationMultil" +
+      "abelParamsH\000\022g\n\036text_classification_mult" +
+      "iclass\030f \001(\0132=.yandex.cloud.ai.tuning.v1" +
+      ".TextClassificationMulticlassParamsH\000\022X\n" +
+      "\032text_embedding_pair_params\030g \001(\01322.yand" +
+      "ex.cloud.ai.tuning.v1.TextEmbeddingPairP" +
+      "aramsH\000\022^\n\035text_embedding_triplet_params" +
+      "\030h \001(\01325.yandex.cloud.ai.tuning.v1.TextE" +
+      "mbeddingTripletParamsH\000\022\r\n\004name\030\310\001 \001(\t\022\024" +
+      "\n\013description\030\311\001 \001(\t\022P\n\006labels\030\312\001 \003(\0132?." +
+      "yandex.cloud.ai.tuning.v1.UpdateTuningDr" +
+      "aftRequest.LabelsEntry\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\rtuning_" +
+      "paramsJ\004\010\005\020dJ\005\010i\020\310\001\"3\n\031UpdateTuningDraft" +
+      "Response\022\026\n\016tuning_task_id\030\001 \001(\t\"8\n\030Dele" +
+      "teTuningDraftRequest\022\034\n\016tuning_task_id\030\001" +
+      " \001(\tB\004\350\3071\001\"3\n\031DeleteTuningDraftResponse\022" +
+      "\026\n\016tuning_task_id\030\001 \001(\t\"0\n\020TuneDraftRequ" +
+      "est\022\034\n\016tuning_task_id\030\001 \001(\tB\004\350\3071\0012\211\n\n\rTu" +
       "ningService\022y\n\004Tune\022(.yandex.cloud.ai.tu" +
       "ning.v1.TuningRequest\032!.yandex.cloud.ope" +
       "ration.Operation\"$\262\322* \n\016TuningMetadata\022\016" +
@@ -35139,10 +44530,22 @@ public final class TuningServiceOuterClass {
       "ex.cloud.ai.tuning.v1.GetOptionsResponse" +
       "\022i\n\nListErrors\022,.yandex.cloud.ai.tuning." +
       "v1.ListErrorsRequest\032-.yandex.cloud.ai.t" +
-      "uning.v1.ListErrorsResponseBc\n\035yandex.cl" +
-      "oud.api.ai.tuning.v1ZBgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/ai/tuning" +
-      "/v1;fomob\006proto3"
+      "uning.v1.ListErrorsResponse\022x\n\013CreateDra" +
+      "ft\0223.yandex.cloud.ai.tuning.v1.CreateTun" +
+      "ingDraftRequest\0324.yandex.cloud.ai.tuning" +
+      ".v1.CreateTuningDraftResponse\022x\n\013UpdateD" +
+      "raft\0223.yandex.cloud.ai.tuning.v1.UpdateT" +
+      "uningDraftRequest\0324.yandex.cloud.ai.tuni" +
+      "ng.v1.UpdateTuningDraftResponse\022x\n\013Delet" +
+      "eDraft\0223.yandex.cloud.ai.tuning.v1.Delet" +
+      "eTuningDraftRequest\0324.yandex.cloud.ai.tu" +
+      "ning.v1.DeleteTuningDraftResponse\022\201\001\n\tTu" +
+      "neDraft\022+.yandex.cloud.ai.tuning.v1.Tune" +
+      "DraftRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"$\262\322* \n\016TuningMetadata\022\016TuningRes" +
+      "ponseBc\n\035yandex.cloud.api.ai.tuning.v1ZB" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/ai/tuning/v1;fomob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35348,9 +44751,64 @@ public final class TuningServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_ListErrorsResponse_descriptor,
         new java.lang.String[] { "TuningError", });
+    internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_descriptor,
+        new java.lang.String[] { "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "TextEmbeddingPairParams", "TextEmbeddingTripletParams", "Name", "Description", "Labels", "TuningParams", });
+    internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_CreateTuningDraftResponse_descriptor,
+        new java.lang.String[] { "TuningTaskId", });
+    internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_descriptor,
+        new java.lang.String[] { "TuningTaskId", "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "TextEmbeddingPairParams", "TextEmbeddingTripletParams", "Name", "Description", "Labels", "TuningParams", });
+    internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_UpdateTuningDraftResponse_descriptor,
+        new java.lang.String[] { "TuningTaskId", });
+    internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftRequest_descriptor,
+        new java.lang.String[] { "TuningTaskId", });
+    internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_DeleteTuningDraftResponse_descriptor,
+        new java.lang.String[] { "TuningTaskId", });
+    internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_tuning_v1_TuneDraftRequest_descriptor,
+        new java.lang.String[] { "TuningTaskId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor

@@ -1935,7 +1935,7 @@ public final class PolicyOuterClass {
 
     /**
      * <pre>
-     * Format of the Cyberprotect backup archive.
+     * Format of the Acronis backup archive.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -1944,7 +1944,7 @@ public final class PolicyOuterClass {
     int getFormatValue();
     /**
      * <pre>
-     * Format of the Cyberprotect backup archive.
+     * Format of the Acronis backup archive.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -1965,12 +1965,14 @@ public final class PolicyOuterClass {
     /**
      * <pre>
      * If true, the file security settings will be preserved.
+     * Deprecated.
      * </pre>
      *
-     * <code>bool preserve_file_security_settings = 4;</code>
+     * <code>bool preserve_file_security_settings = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The preserveFileSecuritySettings.
      */
-    boolean getPreserveFileSecuritySettings();
+    @java.lang.Deprecated boolean getPreserveFileSecuritySettings();
 
     /**
      * <pre>
@@ -2230,12 +2232,14 @@ public final class PolicyOuterClass {
     /**
      * <pre>
      * If true, a quiesced snapshot of the virtual machine will be taken.
+     * Deprecated.
      * </pre>
      *
-     * <code>bool quiesce_snapshotting_enabled = 18;</code>
+     * <code>bool quiesce_snapshotting_enabled = 18 [deprecated = true];</code>
+     * @deprecated
      * @return The quiesceSnapshottingEnabled.
      */
-    boolean getQuiesceSnapshottingEnabled();
+    @java.lang.Deprecated boolean getQuiesceSnapshottingEnabled();
 
     /**
      * <pre>
@@ -2263,6 +2267,44 @@ public final class PolicyOuterClass {
      * <code>.yandex.cloud.backup.v1.PolicySettings.FileFilters file_filters = 19;</code>
      */
     yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFiltersOrBuilder getFileFiltersOrBuilder();
+
+    /**
+     * <pre>
+     * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+     * including those that do not contain data.
+     * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+     * This method can be used to back up a disk or volume with an unsupported file system.
+     * </pre>
+     *
+     * <code>bool sector_by_sector = 20;</code>
+     * @return The sectorBySector.
+     */
+    boolean getSectorBySector();
+
+    /**
+     * <pre>
+     * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+     * This is because not only the data physically contained in the backup copy is verified,
+     * but all data restored when it is selected. 
+     * This option requires access to previously created backup copies.
+     * </pre>
+     *
+     * <code>bool validation_enabled = 21;</code>
+     * @return The validationEnabled.
+     */
+    boolean getValidationEnabled();
+
+    /**
+     * <pre>
+     * LVM will be used to create the volume snapshot.
+     * If LVM fails to create a snapshot (for example, because there is not enough free space),
+     * the software will create the snapshot itself.
+     * </pre>
+     *
+     * <code>bool lvm_snapshotting_enabled = 22;</code>
+     * @return The lvmSnapshottingEnabled.
+     */
+    boolean getLvmSnapshottingEnabled();
   }
   /**
    * <pre>
@@ -2474,6 +2516,21 @@ public final class PolicyOuterClass {
                 fileFilters_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 160: {
+
+              sectorBySector_ = input.readBool();
+              break;
+            }
+            case 168: {
+
+              validationEnabled_ = input.readBool();
+              break;
+            }
+            case 176: {
+
+              lvmSnapshottingEnabled_ = input.readBool();
               break;
             }
             default: {
@@ -11010,6 +11067,16 @@ public final class PolicyOuterClass {
            * @return The type.
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RepeatePeriod getType();
+
+          /**
+           * <pre>
+           * If the machine is off, launch missed tasks on boot up.
+           * </pre>
+           *
+           * <code>bool run_later = 10;</code>
+           * @return The runLater.
+           */
+          boolean getRunLater();
         }
         /**
          * Protobuf type {@code yandex.cloud.backup.v1.PolicySettings.Scheduling.BackupSet.Time}
@@ -11184,6 +11251,11 @@ public final class PolicyOuterClass {
                     int rawValue = input.readEnum();
 
                     type_ = rawValue;
+                    break;
+                  }
+                  case 80: {
+
+                    runLater_ = input.readBool();
                     break;
                   }
                   default: {
@@ -11608,6 +11680,21 @@ public final class PolicyOuterClass {
             return result == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RepeatePeriod.UNRECOGNIZED : result;
           }
 
+          public static final int RUN_LATER_FIELD_NUMBER = 10;
+          private boolean runLater_;
+          /**
+           * <pre>
+           * If the machine is off, launch missed tasks on boot up.
+           * </pre>
+           *
+           * <code>bool run_later = 10;</code>
+           * @return The runLater.
+           */
+          @java.lang.Override
+          public boolean getRunLater() {
+            return runLater_;
+          }
+
           private byte memoizedIsInitialized = -1;
           @java.lang.Override
           public final boolean isInitialized() {
@@ -11661,6 +11748,9 @@ public final class PolicyOuterClass {
             }
             if (type_ != yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RepeatePeriod.REPEATE_PERIOD_UNSPECIFIED.getNumber()) {
               output.writeEnum(9, type_);
+            }
+            if (runLater_ != false) {
+              output.writeBool(10, runLater_);
             }
             unknownFields.writeTo(output);
           }
@@ -11735,6 +11825,10 @@ public final class PolicyOuterClass {
               size += com.google.protobuf.CodedOutputStream
                 .computeEnumSize(9, type_);
             }
+            if (runLater_ != false) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeBoolSize(10, runLater_);
+            }
             size += unknownFields.getSerializedSize();
             memoizedSize = size;
             return size;
@@ -11775,6 +11869,8 @@ public final class PolicyOuterClass {
             if (!getMonthsList()
                 .equals(other.getMonthsList())) return false;
             if (type_ != other.type_) return false;
+            if (getRunLater()
+                != other.getRunLater()) return false;
             if (!unknownFields.equals(other.unknownFields)) return false;
             return true;
           }
@@ -11819,6 +11915,9 @@ public final class PolicyOuterClass {
             }
             hash = (37 * hash) + TYPE_FIELD_NUMBER;
             hash = (53 * hash) + type_;
+            hash = (37 * hash) + RUN_LATER_FIELD_NUMBER;
+            hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+                getRunLater());
             hash = (29 * hash) + unknownFields.hashCode();
             memoizedHashCode = hash;
             return hash;
@@ -11987,6 +12086,8 @@ public final class PolicyOuterClass {
               bitField0_ = (bitField0_ & ~0x00000008);
               type_ = 0;
 
+              runLater_ = false;
+
               return this;
             }
 
@@ -12055,6 +12156,7 @@ public final class PolicyOuterClass {
               }
               result.months_ = months_;
               result.type_ = type_;
+              result.runLater_ = runLater_;
               onBuilt();
               return result;
             }
@@ -12173,6 +12275,9 @@ public final class PolicyOuterClass {
               }
               if (other.type_ != 0) {
                 setTypeValue(other.getTypeValue());
+              }
+              if (other.getRunLater() != false) {
+                setRunLater(other.getRunLater());
               }
               this.mergeUnknownFields(other.unknownFields);
               onChanged();
@@ -13506,6 +13611,49 @@ public final class PolicyOuterClass {
             public Builder clearType() {
               
               type_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private boolean runLater_ ;
+            /**
+             * <pre>
+             * If the machine is off, launch missed tasks on boot up.
+             * </pre>
+             *
+             * <code>bool run_later = 10;</code>
+             * @return The runLater.
+             */
+            @java.lang.Override
+            public boolean getRunLater() {
+              return runLater_;
+            }
+            /**
+             * <pre>
+             * If the machine is off, launch missed tasks on boot up.
+             * </pre>
+             *
+             * <code>bool run_later = 10;</code>
+             * @param value The runLater to set.
+             * @return This builder for chaining.
+             */
+            public Builder setRunLater(boolean value) {
+              
+              runLater_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <pre>
+             * If the machine is off, launch missed tasks on boot up.
+             * </pre>
+             *
+             * <code>bool run_later = 10;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearRunLater() {
+              
+              runLater_ = false;
               onChanged();
               return this;
             }
@@ -17793,7 +17941,7 @@ public final class PolicyOuterClass {
     private int format_;
     /**
      * <pre>
-     * Format of the Cyberprotect backup archive.
+     * Format of the Acronis backup archive.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -17804,7 +17952,7 @@ public final class PolicyOuterClass {
     }
     /**
      * <pre>
-     * Format of the Cyberprotect backup archive.
+     * Format of the Acronis backup archive.
      * </pre>
      *
      * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -17836,13 +17984,15 @@ public final class PolicyOuterClass {
     /**
      * <pre>
      * If true, the file security settings will be preserved.
+     * Deprecated.
      * </pre>
      *
-     * <code>bool preserve_file_security_settings = 4;</code>
+     * <code>bool preserve_file_security_settings = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The preserveFileSecuritySettings.
      */
     @java.lang.Override
-    public boolean getPreserveFileSecuritySettings() {
+    @java.lang.Deprecated public boolean getPreserveFileSecuritySettings() {
       return preserveFileSecuritySettings_;
     }
 
@@ -18212,13 +18362,15 @@ public final class PolicyOuterClass {
     /**
      * <pre>
      * If true, a quiesced snapshot of the virtual machine will be taken.
+     * Deprecated.
      * </pre>
      *
-     * <code>bool quiesce_snapshotting_enabled = 18;</code>
+     * <code>bool quiesce_snapshotting_enabled = 18 [deprecated = true];</code>
+     * @deprecated
      * @return The quiesceSnapshottingEnabled.
      */
     @java.lang.Override
-    public boolean getQuiesceSnapshottingEnabled() {
+    @java.lang.Deprecated public boolean getQuiesceSnapshottingEnabled() {
       return quiesceSnapshottingEnabled_;
     }
 
@@ -18258,6 +18410,59 @@ public final class PolicyOuterClass {
     @java.lang.Override
     public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.FileFiltersOrBuilder getFileFiltersOrBuilder() {
       return getFileFilters();
+    }
+
+    public static final int SECTOR_BY_SECTOR_FIELD_NUMBER = 20;
+    private boolean sectorBySector_;
+    /**
+     * <pre>
+     * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+     * including those that do not contain data.
+     * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+     * This method can be used to back up a disk or volume with an unsupported file system.
+     * </pre>
+     *
+     * <code>bool sector_by_sector = 20;</code>
+     * @return The sectorBySector.
+     */
+    @java.lang.Override
+    public boolean getSectorBySector() {
+      return sectorBySector_;
+    }
+
+    public static final int VALIDATION_ENABLED_FIELD_NUMBER = 21;
+    private boolean validationEnabled_;
+    /**
+     * <pre>
+     * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+     * This is because not only the data physically contained in the backup copy is verified,
+     * but all data restored when it is selected. 
+     * This option requires access to previously created backup copies.
+     * </pre>
+     *
+     * <code>bool validation_enabled = 21;</code>
+     * @return The validationEnabled.
+     */
+    @java.lang.Override
+    public boolean getValidationEnabled() {
+      return validationEnabled_;
+    }
+
+    public static final int LVM_SNAPSHOTTING_ENABLED_FIELD_NUMBER = 22;
+    private boolean lvmSnapshottingEnabled_;
+    /**
+     * <pre>
+     * LVM will be used to create the volume snapshot.
+     * If LVM fails to create a snapshot (for example, because there is not enough free space),
+     * the software will create the snapshot itself.
+     * </pre>
+     *
+     * <code>bool lvm_snapshotting_enabled = 22;</code>
+     * @return The lvmSnapshottingEnabled.
+     */
+    @java.lang.Override
+    public boolean getLvmSnapshottingEnabled() {
+      return lvmSnapshottingEnabled_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -18324,6 +18529,15 @@ public final class PolicyOuterClass {
       }
       if (fileFilters_ != null) {
         output.writeMessage(19, getFileFilters());
+      }
+      if (sectorBySector_ != false) {
+        output.writeBool(20, sectorBySector_);
+      }
+      if (validationEnabled_ != false) {
+        output.writeBool(21, validationEnabled_);
+      }
+      if (lvmSnapshottingEnabled_ != false) {
+        output.writeBool(22, lvmSnapshottingEnabled_);
       }
       unknownFields.writeTo(output);
     }
@@ -18402,6 +18616,18 @@ public final class PolicyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getFileFilters());
       }
+      if (sectorBySector_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(20, sectorBySector_);
+      }
+      if (validationEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(21, validationEnabled_);
+      }
+      if (lvmSnapshottingEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(22, lvmSnapshottingEnabled_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -18475,6 +18701,12 @@ public final class PolicyOuterClass {
         if (!getFileFilters()
             .equals(other.getFileFilters())) return false;
       }
+      if (getSectorBySector()
+          != other.getSectorBySector()) return false;
+      if (getValidationEnabled()
+          != other.getValidationEnabled()) return false;
+      if (getLvmSnapshottingEnabled()
+          != other.getLvmSnapshottingEnabled()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -18543,6 +18775,15 @@ public final class PolicyOuterClass {
         hash = (37 * hash) + FILE_FILTERS_FIELD_NUMBER;
         hash = (53 * hash) + getFileFilters().hashCode();
       }
+      hash = (37 * hash) + SECTOR_BY_SECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSectorBySector());
+      hash = (37 * hash) + VALIDATION_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getValidationEnabled());
+      hash = (37 * hash) + LVM_SNAPSHOTTING_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLvmSnapshottingEnabled());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18750,6 +18991,12 @@ public final class PolicyOuterClass {
           fileFilters_ = null;
           fileFiltersBuilder_ = null;
         }
+        sectorBySector_ = false;
+
+        validationEnabled_ = false;
+
+        lvmSnapshottingEnabled_ = false;
+
         return this;
       }
 
@@ -18829,6 +19076,9 @@ public final class PolicyOuterClass {
         } else {
           result.fileFilters_ = fileFiltersBuilder_.build();
         }
+        result.sectorBySector_ = sectorBySector_;
+        result.validationEnabled_ = validationEnabled_;
+        result.lvmSnapshottingEnabled_ = lvmSnapshottingEnabled_;
         onBuilt();
         return result;
       }
@@ -18927,6 +19177,15 @@ public final class PolicyOuterClass {
         }
         if (other.hasFileFilters()) {
           mergeFileFilters(other.getFileFilters());
+        }
+        if (other.getSectorBySector() != false) {
+          setSectorBySector(other.getSectorBySector());
+        }
+        if (other.getValidationEnabled() != false) {
+          setValidationEnabled(other.getValidationEnabled());
+        }
+        if (other.getLvmSnapshottingEnabled() != false) {
+          setLvmSnapshottingEnabled(other.getLvmSnapshottingEnabled());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19034,7 +19293,7 @@ public final class PolicyOuterClass {
       private int format_ = 0;
       /**
        * <pre>
-       * Format of the Cyberprotect backup archive.
+       * Format of the Acronis backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -19045,7 +19304,7 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Format of the Cyberprotect backup archive.
+       * Format of the Acronis backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -19060,7 +19319,7 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Format of the Cyberprotect backup archive.
+       * Format of the Acronis backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -19074,7 +19333,7 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Format of the Cyberprotect backup archive.
+       * Format of the Acronis backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -19092,7 +19351,7 @@ public final class PolicyOuterClass {
       }
       /**
        * <pre>
-       * Format of the Cyberprotect backup archive.
+       * Format of the Acronis backup archive.
        * </pre>
        *
        * <code>.yandex.cloud.backup.v1.Format format = 2 [(.yandex.cloud.required) = true];</code>
@@ -19152,25 +19411,29 @@ public final class PolicyOuterClass {
       /**
        * <pre>
        * If true, the file security settings will be preserved.
+       * Deprecated.
        * </pre>
        *
-       * <code>bool preserve_file_security_settings = 4;</code>
+       * <code>bool preserve_file_security_settings = 4 [deprecated = true];</code>
+       * @deprecated
        * @return The preserveFileSecuritySettings.
        */
       @java.lang.Override
-      public boolean getPreserveFileSecuritySettings() {
+      @java.lang.Deprecated public boolean getPreserveFileSecuritySettings() {
         return preserveFileSecuritySettings_;
       }
       /**
        * <pre>
        * If true, the file security settings will be preserved.
+       * Deprecated.
        * </pre>
        *
-       * <code>bool preserve_file_security_settings = 4;</code>
+       * <code>bool preserve_file_security_settings = 4 [deprecated = true];</code>
+       * @deprecated
        * @param value The preserveFileSecuritySettings to set.
        * @return This builder for chaining.
        */
-      public Builder setPreserveFileSecuritySettings(boolean value) {
+      @java.lang.Deprecated public Builder setPreserveFileSecuritySettings(boolean value) {
         
         preserveFileSecuritySettings_ = value;
         onChanged();
@@ -19179,12 +19442,14 @@ public final class PolicyOuterClass {
       /**
        * <pre>
        * If true, the file security settings will be preserved.
+       * Deprecated.
        * </pre>
        *
-       * <code>bool preserve_file_security_settings = 4;</code>
+       * <code>bool preserve_file_security_settings = 4 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearPreserveFileSecuritySettings() {
+      @java.lang.Deprecated public Builder clearPreserveFileSecuritySettings() {
         
         preserveFileSecuritySettings_ = false;
         onChanged();
@@ -20595,25 +20860,29 @@ public final class PolicyOuterClass {
       /**
        * <pre>
        * If true, a quiesced snapshot of the virtual machine will be taken.
+       * Deprecated.
        * </pre>
        *
-       * <code>bool quiesce_snapshotting_enabled = 18;</code>
+       * <code>bool quiesce_snapshotting_enabled = 18 [deprecated = true];</code>
+       * @deprecated
        * @return The quiesceSnapshottingEnabled.
        */
       @java.lang.Override
-      public boolean getQuiesceSnapshottingEnabled() {
+      @java.lang.Deprecated public boolean getQuiesceSnapshottingEnabled() {
         return quiesceSnapshottingEnabled_;
       }
       /**
        * <pre>
        * If true, a quiesced snapshot of the virtual machine will be taken.
+       * Deprecated.
        * </pre>
        *
-       * <code>bool quiesce_snapshotting_enabled = 18;</code>
+       * <code>bool quiesce_snapshotting_enabled = 18 [deprecated = true];</code>
+       * @deprecated
        * @param value The quiesceSnapshottingEnabled to set.
        * @return This builder for chaining.
        */
-      public Builder setQuiesceSnapshottingEnabled(boolean value) {
+      @java.lang.Deprecated public Builder setQuiesceSnapshottingEnabled(boolean value) {
         
         quiesceSnapshottingEnabled_ = value;
         onChanged();
@@ -20622,12 +20891,14 @@ public final class PolicyOuterClass {
       /**
        * <pre>
        * If true, a quiesced snapshot of the virtual machine will be taken.
+       * Deprecated.
        * </pre>
        *
-       * <code>bool quiesce_snapshotting_enabled = 18;</code>
+       * <code>bool quiesce_snapshotting_enabled = 18 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearQuiesceSnapshottingEnabled() {
+      @java.lang.Deprecated public Builder clearQuiesceSnapshottingEnabled() {
         
         quiesceSnapshottingEnabled_ = false;
         onChanged();
@@ -20787,6 +21058,159 @@ public final class PolicyOuterClass {
           fileFilters_ = null;
         }
         return fileFiltersBuilder_;
+      }
+
+      private boolean sectorBySector_ ;
+      /**
+       * <pre>
+       * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+       * including those that do not contain data.
+       * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+       * This method can be used to back up a disk or volume with an unsupported file system.
+       * </pre>
+       *
+       * <code>bool sector_by_sector = 20;</code>
+       * @return The sectorBySector.
+       */
+      @java.lang.Override
+      public boolean getSectorBySector() {
+        return sectorBySector_;
+      }
+      /**
+       * <pre>
+       * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+       * including those that do not contain data.
+       * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+       * This method can be used to back up a disk or volume with an unsupported file system.
+       * </pre>
+       *
+       * <code>bool sector_by_sector = 20;</code>
+       * @param value The sectorBySector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSectorBySector(boolean value) {
+        
+        sectorBySector_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A sector-by-sector backup of a disk or volume creates a backup copy of all sectors of the disk or volume, 
+       * including those that do not contain data.
+       * Therefore, the size of such a backup copy will be equal to the size of the original disk or volume. 
+       * This method can be used to back up a disk or volume with an unsupported file system.
+       * </pre>
+       *
+       * <code>bool sector_by_sector = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSectorBySector() {
+        
+        sectorBySector_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean validationEnabled_ ;
+      /**
+       * <pre>
+       * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+       * This is because not only the data physically contained in the backup copy is verified,
+       * but all data restored when it is selected. 
+       * This option requires access to previously created backup copies.
+       * </pre>
+       *
+       * <code>bool validation_enabled = 21;</code>
+       * @return The validationEnabled.
+       */
+      @java.lang.Override
+      public boolean getValidationEnabled() {
+        return validationEnabled_;
+      }
+      /**
+       * <pre>
+       * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+       * This is because not only the data physically contained in the backup copy is verified,
+       * but all data restored when it is selected. 
+       * This option requires access to previously created backup copies.
+       * </pre>
+       *
+       * <code>bool validation_enabled = 21;</code>
+       * @param value The validationEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidationEnabled(boolean value) {
+        
+        validationEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Validation is a time-consuming process, even with incremental or differential backups of small amounts of data. 
+       * This is because not only the data physically contained in the backup copy is verified,
+       * but all data restored when it is selected. 
+       * This option requires access to previously created backup copies.
+       * </pre>
+       *
+       * <code>bool validation_enabled = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidationEnabled() {
+        
+        validationEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean lvmSnapshottingEnabled_ ;
+      /**
+       * <pre>
+       * LVM will be used to create the volume snapshot.
+       * If LVM fails to create a snapshot (for example, because there is not enough free space),
+       * the software will create the snapshot itself.
+       * </pre>
+       *
+       * <code>bool lvm_snapshotting_enabled = 22;</code>
+       * @return The lvmSnapshottingEnabled.
+       */
+      @java.lang.Override
+      public boolean getLvmSnapshottingEnabled() {
+        return lvmSnapshottingEnabled_;
+      }
+      /**
+       * <pre>
+       * LVM will be used to create the volume snapshot.
+       * If LVM fails to create a snapshot (for example, because there is not enough free space),
+       * the software will create the snapshot itself.
+       * </pre>
+       *
+       * <code>bool lvm_snapshotting_enabled = 22;</code>
+       * @param value The lvmSnapshottingEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLvmSnapshottingEnabled(boolean value) {
+        
+        lvmSnapshottingEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * LVM will be used to create the volume snapshot.
+       * If LVM fails to create a snapshot (for example, because there is not enough free space),
+       * the software will create the snapshot itself.
+       * </pre>
+       *
+       * <code>bool lvm_snapshotting_enabled = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLvmSnapshottingEnabled() {
+        
+        lvmSnapshottingEnabled_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -22356,128 +22780,131 @@ public final class PolicyOuterClass {
       "\n\nupdated_at\030\004 \001(\0132\032.google.protobuf.Tim" +
       "estamp\022\017\n\007enabled\030\005 \001(\010\0228\n\010settings\030\006 \001(" +
       "\0132&.yandex.cloud.backup.v1.PolicySetting" +
-      "s\022\021\n\tfolder_id\030\007 \001(\t\"\215\"\n\016PolicySettings\022" +
+      "s\022\021\n\tfolder_id\030\007 \001(\t\"\200#\n\016PolicySettings\022" +
       "M\n\013compression\030\001 \001(\01622.yandex.cloud.back" +
       "up.v1.PolicySettings.CompressionB\004\350\3071\001\0224" +
       "\n\006format\030\002 \001(\0162\036.yandex.cloud.backup.v1." +
       "FormatB\004\350\3071\001\022)\n!multi_volume_snapshottin" +
-      "g_enabled\030\003 \001(\010\022\'\n\037preserve_file_securit" +
-      "y_settings\030\004 \001(\010\022U\n\nreattempts\030\005 \001(\0132;.y" +
-      "andex.cloud.backup.v1.PolicySettings.Ret" +
-      "riesConfigurationB\004\350\3071\001\022\033\n\023silent_mode_e" +
-      "nabled\030\006 \001(\010\022I\n\tsplitting\030\007 \001(\01320.yandex" +
-      ".cloud.backup.v1.PolicySettings.Splittin" +
-      "gB\004\350\3071\001\022a\n\026vm_snapshot_reattempts\030\010 \001(\0132" +
-      ";.yandex.cloud.backup.v1.PolicySettings." +
-      "RetriesConfigurationB\004\350\3071\001\022Y\n\003vss\030\t \001(\0132" +
-      "F.yandex.cloud.backup.v1.PolicySettings." +
-      "VolumeShadowCopyServiceSettingsB\004\350\3071\001\022I\n" +
-      "\007archive\030\n \001(\01328.yandex.cloud.backup.v1." +
-      "PolicySettings.ArchiveProperties\022Z\n\022perf" +
-      "ormance_window\030\013 \001(\01328.yandex.cloud.back" +
-      "up.v1.PolicySettings.PerformanceWindowB\004" +
-      "\350\3071\001\022I\n\tretention\030\014 \001(\01320.yandex.cloud.b" +
-      "ackup.v1.PolicySettings.RetentionB\004\350\3071\001\022" +
-      "K\n\nscheduling\030\017 \001(\01321.yandex.cloud.backu" +
-      "p.v1.PolicySettings.SchedulingB\004\350\3071\001\022N\n\003" +
-      "cbt\030\020 \001(\0162;.yandex.cloud.backup.v1.Polic" +
-      "ySettings.ChangedBlockTrackingB\004\350\3071\001\022\033\n\023" +
-      "fast_backup_enabled\030\021 \001(\010\022$\n\034quiesce_sna" +
-      "pshotting_enabled\030\022 \001(\010\022H\n\014file_filters\030" +
-      "\023 \001(\01322.yandex.cloud.backup.v1.PolicySet" +
-      "tings.FileFilters\032\317\001\n\010Interval\022H\n\004type\030\001" +
-      " \001(\01624.yandex.cloud.backup.v1.PolicySett" +
-      "ings.Interval.TypeB\004\350\3071\001\022\025\n\005count\030\002 \001(\003B" +
-      "\006\372\3071\002>0\"b\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\013\n" +
-      "\007SECONDS\020\001\022\013\n\007MINUTES\020\002\022\t\n\005HOURS\020\003\022\010\n\004DA" +
-      "YS\020\004\022\t\n\005WEEKS\020\005\022\n\n\006MONTHS\020\006\032\216\001\n\024RetriesC" +
-      "onfiguration\022\017\n\007enabled\030\001 \001(\010\022G\n\010interva" +
-      "l\030\002 \001(\0132/.yandex.cloud.backup.v1.PolicyS" +
-      "ettings.IntervalB\004\350\3071\001\022\034\n\014max_attempts\030\003" +
-      " \001(\003B\006\372\3071\002>0\032\031\n\tSplitting\022\014\n\004size\030\001 \001(\003\032" +
-      "\362\001\n\037VolumeShadowCopyServiceSettings\022\017\n\007e" +
-      "nabled\030\001 \001(\010\022j\n\010provider\030\002 \001(\0162R.yandex." +
-      "cloud.backup.v1.PolicySettings.VolumeSha" +
-      "dowCopyServiceSettings.VSSProviderB\004\350\3071\001" +
-      "\"R\n\013VSSProvider\022\034\n\030VSS_PROVIDER_UNSPECIF" +
-      "IED\020\000\022\n\n\006NATIVE\020\001\022\031\n\025TARGET_SYSTEM_DEFIN" +
-      "ED\020\002\032!\n\021ArchiveProperties\022\014\n\004name\030\001 \001(\t\032" +
-      "$\n\021PerformanceWindow\022\017\n\007enabled\030\001 \001(\010\032)\n" +
-      "\tTimeOfDay\022\014\n\004hour\030\001 \001(\003\022\016\n\006minute\030\002 \001(\003" +
-      "\032\277\002\n\tRetention\022M\n\005rules\030\001 \003(\0132>.yandex.c" +
-      "loud.backup.v1.PolicySettings.Retention." +
-      "RetentionRule\022\025\n\rbefore_backup\030\003 \001(\010\032\305\001\n" +
-      "\rRetentionRule\022H\n\nbackup_set\030\001 \003(\01624.yan" +
-      "dex.cloud.backup.v1.PolicySettings.Repea" +
-      "tePeriod\022B\n\007max_age\030\002 \001(\0132/.yandex.cloud" +
-      ".backup.v1.PolicySettings.IntervalH\000\022\023\n\t" +
-      "max_count\030\003 \001(\003H\000B\021\n\tcondition\022\004\300\3011\001J\004\010\002" +
-      "\020\003\032\355\014\n\nScheduling\022X\n\013backup_sets\030\001 \003(\0132;" +
-      ".yandex.cloud.backup.v1.PolicySettings.S" +
-      "cheduling.BackupSetB\006\202\3101\002>0\022\017\n\007enabled\030\002" +
-      " \001(\010\022\034\n\024max_parallel_backups\030\003 \001(\003\022M\n\016ra" +
-      "nd_max_delay\030\004 \001(\0132/.yandex.cloud.backup" +
-      ".v1.PolicySettings.IntervalB\004\350\3071\001\022N\n\006sch" +
-      "eme\030\005 \001(\01628.yandex.cloud.backup.v1.Polic" +
-      "ySettings.Scheduling.SchemeB\004\350\3071\001\022K\n\021wee" +
-      "kly_backup_day\030\006 \001(\0162*.yandex.cloud.back" +
-      "up.v1.PolicySettings.DayB\004\350\3071\001\022Q\n\014task_f" +
-      "ailure\030\007 \001(\0132;.yandex.cloud.backup.v1.Po" +
-      "licySettings.RetriesConfiguration\032\356\007\n\tBa" +
-      "ckupSet\022P\n\004time\030\001 \001(\0132@.yandex.cloud.bac" +
-      "kup.v1.PolicySettings.Scheduling.BackupS" +
-      "et.TimeH\000\022m\n\024since_last_exec_time\030\002 \001(\0132" +
-      "M.yandex.cloud.backup.v1.PolicySettings." +
-      "Scheduling.BackupSet.SinceLastExecTimeH\000" +
-      "\022N\n\004type\030\003 \001(\0162@.yandex.cloud.backup.v1." +
-      "PolicySettings.Scheduling.BackupSet.Type" +
-      "\032\372\003\n\004Time\022B\n\010weekdays\030\001 \003(\0162*.yandex.clo" +
-      "ud.backup.v1.PolicySettings.DayB\004\220\3101\001\022C\n" +
-      "\trepeat_at\030\002 \003(\01320.yandex.cloud.backup.v" +
-      "1.PolicySettings.TimeOfDay\022E\n\014repeat_eve" +
-      "ry\030\003 \001(\0132/.yandex.cloud.backup.v1.Policy" +
-      "Settings.Interval\022C\n\ttime_from\030\004 \001(\01320.y" +
-      "andex.cloud.backup.v1.PolicySettings.Tim" +
-      "eOfDay\022A\n\007time_to\030\005 \001(\01320.yandex.cloud.b" +
-      "ackup.v1.PolicySettings.TimeOfDay\022\027\n\tmon" +
-      "thdays\030\006 \003(\003B\004\220\3101\001\022!\n\031include_last_day_o" +
-      "f_month\030\007 \001(\010\022\024\n\006months\030\010 \003(\003B\004\220\3101\001\022H\n\004t" +
-      "ype\030\t \001(\01624.yandex.cloud.backup.v1.Polic" +
-      "ySettings.RepeatePeriodB\004\350\3071\001\032Y\n\021SinceLa" +
-      "stExecTime\022D\n\005delay\030\001 \001(\0132/.yandex.cloud" +
-      ".backup.v1.PolicySettings.IntervalB\004\350\3071\001" +
-      "\"g\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tTYPE_A" +
-      "UTO\020\001\022\r\n\tTYPE_FULL\020\002\022\024\n\020TYPE_INCREMENTAL" +
-      "\020\003\022\025\n\021TYPE_DIFFERENTIAL\020\004B\017\n\007setting\022\004\300\301" +
-      "1\001\"\245\001\n\006Scheme\022\026\n\022SCHEME_UNSPECIFIED\020\000\022\n\n" +
-      "\006SIMPLE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWAYS_INC" +
-      "REMENTAL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004\022!\n\035WE" +
-      "EKLY_FULL_DAILY_INCREMENTAL\020\005\022\n\n\006CUSTOM\020" +
-      "\006\022\007\n\003CDP\020\007\032?\n\013FileFilters\022\027\n\017exclusion_m" +
-      "asks\030\001 \003(\t\022\027\n\017inclusion_masks\030\002 \003(\t\"R\n\013C" +
-      "ompression\022\033\n\027COMPRESSION_UNSPECIFIED\020\000\022" +
-      "\n\n\006NORMAL\020\001\022\010\n\004HIGH\020\002\022\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"" +
-      "_\n\rRepeatePeriod\022\036\n\032REPEATE_PERIOD_UNSPE" +
-      "CIFIED\020\000\022\n\n\006HOURLY\020\001\022\t\n\005DAILY\020\002\022\n\n\006WEEKL" +
-      "Y\020\003\022\013\n\007MONTHLY\020\004\"v\n\003Day\022\023\n\017DAY_UNSPECIFI" +
-      "ED\020\000\022\n\n\006MONDAY\020\001\022\013\n\007TUESDAY\020\002\022\r\n\tWEDNESD" +
-      "AY\020\003\022\014\n\010THURSDAY\020\004\022\n\n\006FRIDAY\020\005\022\014\n\010SATURD" +
-      "AY\020\006\022\n\n\006SUNDAY\020\007\"v\n\024ChangedBlockTracking" +
-      "\022&\n\"CHANGED_BLOCK_TRACKING_UNSPECIFIED\020\000" +
-      "\022\022\n\016USE_IF_ENABLED\020\001\022\022\n\016ENABLE_AND_USE\020\002" +
-      "\022\016\n\nDO_NOT_USE\020\003J\004\010\r\020\016J\004\010\016\020\017\"\242\002\n\021PolicyA" +
-      "pplication\022\021\n\tpolicy_id\030\001 \001(\t\022\033\n\023compute" +
-      "_instance_id\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022@\n\006s" +
-      "tatus\030\004 \001(\01620.yandex.cloud.backup.v1.Pol" +
-      "icyApplication.Status\022.\n\ncreated_at\030\005 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\025\n\ris_proc" +
-      "essing\030\006 \001(\010\"C\n\006Status\022\026\n\022STATUS_UNSPECI" +
-      "FIED\020\000\022\006\n\002OK\020\001\022\013\n\007RUNNING\020\002\022\014\n\010DISABLED\020" +
-      "\003*J\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nV" +
-      "ERSION_11\020\001\022\016\n\nVERSION_12\020\002\022\010\n\004AUTO\020\003B_\n" +
-      "\032yandex.cloud.api.backup.v1ZAgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ba" +
-      "ckup/v1;backupb\006proto3"
+      "g_enabled\030\003 \001(\010\022+\n\037preserve_file_securit" +
+      "y_settings\030\004 \001(\010B\002\030\001\022U\n\nreattempts\030\005 \001(\013" +
+      "2;.yandex.cloud.backup.v1.PolicySettings" +
+      ".RetriesConfigurationB\004\350\3071\001\022\033\n\023silent_mo" +
+      "de_enabled\030\006 \001(\010\022I\n\tsplitting\030\007 \001(\01320.ya" +
+      "ndex.cloud.backup.v1.PolicySettings.Spli" +
+      "ttingB\004\350\3071\001\022a\n\026vm_snapshot_reattempts\030\010 " +
+      "\001(\0132;.yandex.cloud.backup.v1.PolicySetti" +
+      "ngs.RetriesConfigurationB\004\350\3071\001\022Y\n\003vss\030\t " +
+      "\001(\0132F.yandex.cloud.backup.v1.PolicySetti" +
+      "ngs.VolumeShadowCopyServiceSettingsB\004\350\3071" +
+      "\001\022I\n\007archive\030\n \001(\01328.yandex.cloud.backup" +
+      ".v1.PolicySettings.ArchiveProperties\022Z\n\022" +
+      "performance_window\030\013 \001(\01328.yandex.cloud." +
+      "backup.v1.PolicySettings.PerformanceWind" +
+      "owB\004\350\3071\001\022I\n\tretention\030\014 \001(\01320.yandex.clo" +
+      "ud.backup.v1.PolicySettings.RetentionB\004\350" +
+      "\3071\001\022K\n\nscheduling\030\017 \001(\01321.yandex.cloud.b" +
+      "ackup.v1.PolicySettings.SchedulingB\004\350\3071\001" +
+      "\022N\n\003cbt\030\020 \001(\0162;.yandex.cloud.backup.v1.P" +
+      "olicySettings.ChangedBlockTrackingB\004\350\3071\001" +
+      "\022\033\n\023fast_backup_enabled\030\021 \001(\010\022(\n\034quiesce" +
+      "_snapshotting_enabled\030\022 \001(\010B\002\030\001\022H\n\014file_" +
+      "filters\030\023 \001(\01322.yandex.cloud.backup.v1.P" +
+      "olicySettings.FileFilters\022\030\n\020sector_by_s" +
+      "ector\030\024 \001(\010\022\032\n\022validation_enabled\030\025 \001(\010\022" +
+      " \n\030lvm_snapshotting_enabled\030\026 \001(\010\032\317\001\n\010In" +
+      "terval\022H\n\004type\030\001 \001(\01624.yandex.cloud.back" +
+      "up.v1.PolicySettings.Interval.TypeB\004\350\3071\001" +
+      "\022\025\n\005count\030\002 \001(\003B\006\372\3071\002>0\"b\n\004Type\022\024\n\020TYPE_" +
+      "UNSPECIFIED\020\000\022\013\n\007SECONDS\020\001\022\013\n\007MINUTES\020\002\022" +
+      "\t\n\005HOURS\020\003\022\010\n\004DAYS\020\004\022\t\n\005WEEKS\020\005\022\n\n\006MONTH" +
+      "S\020\006\032\216\001\n\024RetriesConfiguration\022\017\n\007enabled\030" +
+      "\001 \001(\010\022G\n\010interval\030\002 \001(\0132/.yandex.cloud.b" +
+      "ackup.v1.PolicySettings.IntervalB\004\350\3071\001\022\034" +
+      "\n\014max_attempts\030\003 \001(\003B\006\372\3071\002>0\032\031\n\tSplittin" +
+      "g\022\014\n\004size\030\001 \001(\003\032\362\001\n\037VolumeShadowCopyServ" +
+      "iceSettings\022\017\n\007enabled\030\001 \001(\010\022j\n\010provider" +
+      "\030\002 \001(\0162R.yandex.cloud.backup.v1.PolicySe" +
+      "ttings.VolumeShadowCopyServiceSettings.V" +
+      "SSProviderB\004\350\3071\001\"R\n\013VSSProvider\022\034\n\030VSS_P" +
+      "ROVIDER_UNSPECIFIED\020\000\022\n\n\006NATIVE\020\001\022\031\n\025TAR" +
+      "GET_SYSTEM_DEFINED\020\002\032!\n\021ArchivePropertie" +
+      "s\022\014\n\004name\030\001 \001(\t\032$\n\021PerformanceWindow\022\017\n\007" +
+      "enabled\030\001 \001(\010\032)\n\tTimeOfDay\022\014\n\004hour\030\001 \001(\003" +
+      "\022\016\n\006minute\030\002 \001(\003\032\277\002\n\tRetention\022M\n\005rules\030" +
+      "\001 \003(\0132>.yandex.cloud.backup.v1.PolicySet" +
+      "tings.Retention.RetentionRule\022\025\n\rbefore_" +
+      "backup\030\003 \001(\010\032\305\001\n\rRetentionRule\022H\n\nbackup" +
+      "_set\030\001 \003(\01624.yandex.cloud.backup.v1.Poli" +
+      "cySettings.RepeatePeriod\022B\n\007max_age\030\002 \001(" +
+      "\0132/.yandex.cloud.backup.v1.PolicySetting" +
+      "s.IntervalH\000\022\023\n\tmax_count\030\003 \001(\003H\000B\021\n\tcon" +
+      "dition\022\004\300\3011\001J\004\010\002\020\003\032\200\r\n\nScheduling\022X\n\013bac" +
+      "kup_sets\030\001 \003(\0132;.yandex.cloud.backup.v1." +
+      "PolicySettings.Scheduling.BackupSetB\006\202\3101" +
+      "\002>0\022\017\n\007enabled\030\002 \001(\010\022\034\n\024max_parallel_bac" +
+      "kups\030\003 \001(\003\022M\n\016rand_max_delay\030\004 \001(\0132/.yan" +
+      "dex.cloud.backup.v1.PolicySettings.Inter" +
+      "valB\004\350\3071\001\022N\n\006scheme\030\005 \001(\01628.yandex.cloud" +
+      ".backup.v1.PolicySettings.Scheduling.Sch" +
+      "emeB\004\350\3071\001\022K\n\021weekly_backup_day\030\006 \001(\0162*.y" +
+      "andex.cloud.backup.v1.PolicySettings.Day" +
+      "B\004\350\3071\001\022Q\n\014task_failure\030\007 \001(\0132;.yandex.cl" +
+      "oud.backup.v1.PolicySettings.RetriesConf" +
+      "iguration\032\201\010\n\tBackupSet\022P\n\004time\030\001 \001(\0132@." +
+      "yandex.cloud.backup.v1.PolicySettings.Sc" +
+      "heduling.BackupSet.TimeH\000\022m\n\024since_last_" +
+      "exec_time\030\002 \001(\0132M.yandex.cloud.backup.v1" +
+      ".PolicySettings.Scheduling.BackupSet.Sin" +
+      "ceLastExecTimeH\000\022N\n\004type\030\003 \001(\0162@.yandex." +
+      "cloud.backup.v1.PolicySettings.Schedulin" +
+      "g.BackupSet.Type\032\215\004\n\004Time\022B\n\010weekdays\030\001 " +
+      "\003(\0162*.yandex.cloud.backup.v1.PolicySetti" +
+      "ngs.DayB\004\220\3101\001\022C\n\trepeat_at\030\002 \003(\01320.yande" +
+      "x.cloud.backup.v1.PolicySettings.TimeOfD" +
+      "ay\022E\n\014repeat_every\030\003 \001(\0132/.yandex.cloud." +
+      "backup.v1.PolicySettings.Interval\022C\n\ttim" +
+      "e_from\030\004 \001(\01320.yandex.cloud.backup.v1.Po" +
+      "licySettings.TimeOfDay\022A\n\007time_to\030\005 \001(\0132" +
+      "0.yandex.cloud.backup.v1.PolicySettings." +
+      "TimeOfDay\022\027\n\tmonthdays\030\006 \003(\003B\004\220\3101\001\022!\n\031in" +
+      "clude_last_day_of_month\030\007 \001(\010\022\024\n\006months\030" +
+      "\010 \003(\003B\004\220\3101\001\022H\n\004type\030\t \001(\01624.yandex.cloud" +
+      ".backup.v1.PolicySettings.RepeatePeriodB" +
+      "\004\350\3071\001\022\021\n\trun_later\030\n \001(\010\032Y\n\021SinceLastExe" +
+      "cTime\022D\n\005delay\030\001 \001(\0132/.yandex.cloud.back" +
+      "up.v1.PolicySettings.IntervalB\004\350\3071\001\"g\n\004T" +
+      "ype\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tTYPE_AUTO\020\001" +
+      "\022\r\n\tTYPE_FULL\020\002\022\024\n\020TYPE_INCREMENTAL\020\003\022\025\n" +
+      "\021TYPE_DIFFERENTIAL\020\004B\017\n\007setting\022\004\300\3011\001\"\245\001" +
+      "\n\006Scheme\022\026\n\022SCHEME_UNSPECIFIED\020\000\022\n\n\006SIMP" +
+      "LE\020\001\022\017\n\013ALWAYS_FULL\020\002\022\026\n\022ALWAYS_INCREMEN" +
+      "TAL\020\003\022\026\n\022WEEKLY_INCREMENTAL\020\004\022!\n\035WEEKLY_" +
+      "FULL_DAILY_INCREMENTAL\020\005\022\n\n\006CUSTOM\020\006\022\007\n\003" +
+      "CDP\020\007\032?\n\013FileFilters\022\027\n\017exclusion_masks\030" +
+      "\001 \003(\t\022\027\n\017inclusion_masks\030\002 \003(\t\"R\n\013Compre" +
+      "ssion\022\033\n\027COMPRESSION_UNSPECIFIED\020\000\022\n\n\006NO" +
+      "RMAL\020\001\022\010\n\004HIGH\020\002\022\007\n\003MAX\020\003\022\007\n\003OFF\020\004\"_\n\rRe" +
+      "peatePeriod\022\036\n\032REPEATE_PERIOD_UNSPECIFIE" +
+      "D\020\000\022\n\n\006HOURLY\020\001\022\t\n\005DAILY\020\002\022\n\n\006WEEKLY\020\003\022\013" +
+      "\n\007MONTHLY\020\004\"v\n\003Day\022\023\n\017DAY_UNSPECIFIED\020\000\022" +
+      "\n\n\006MONDAY\020\001\022\013\n\007TUESDAY\020\002\022\r\n\tWEDNESDAY\020\003\022" +
+      "\014\n\010THURSDAY\020\004\022\n\n\006FRIDAY\020\005\022\014\n\010SATURDAY\020\006\022" +
+      "\n\n\006SUNDAY\020\007\"v\n\024ChangedBlockTracking\022&\n\"C" +
+      "HANGED_BLOCK_TRACKING_UNSPECIFIED\020\000\022\022\n\016U" +
+      "SE_IF_ENABLED\020\001\022\022\n\016ENABLE_AND_USE\020\002\022\016\n\nD" +
+      "O_NOT_USE\020\003J\004\010\r\020\016J\004\010\016\020\017\"\242\002\n\021PolicyApplic" +
+      "ation\022\021\n\tpolicy_id\030\001 \001(\t\022\033\n\023compute_inst" +
+      "ance_id\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022@\n\006status" +
+      "\030\004 \001(\01620.yandex.cloud.backup.v1.PolicyAp" +
+      "plication.Status\022.\n\ncreated_at\030\005 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022\025\n\ris_processin" +
+      "g\030\006 \001(\010\"C\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\006\n\002OK\020\001\022\013\n\007RUNNING\020\002\022\014\n\010DISABLED\020\003*J\n\006" +
+      "Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\016\n\nVERSIO" +
+      "N_11\020\001\022\016\n\nVERSION_12\020\002\022\010\n\004AUTO\020\003B_\n\032yand" +
+      "ex.cloud.api.backup.v1ZAgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/backup/" +
+      "v1;backupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22496,7 +22923,7 @@ public final class PolicyOuterClass {
     internal_static_yandex_cloud_backup_v1_PolicySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_descriptor,
-        new java.lang.String[] { "Compression", "Format", "MultiVolumeSnapshottingEnabled", "PreserveFileSecuritySettings", "Reattempts", "SilentModeEnabled", "Splitting", "VmSnapshotReattempts", "Vss", "Archive", "PerformanceWindow", "Retention", "Scheduling", "Cbt", "FastBackupEnabled", "QuiesceSnapshottingEnabled", "FileFilters", });
+        new java.lang.String[] { "Compression", "Format", "MultiVolumeSnapshottingEnabled", "PreserveFileSecuritySettings", "Reattempts", "SilentModeEnabled", "Splitting", "VmSnapshotReattempts", "Vss", "Archive", "PerformanceWindow", "Retention", "Scheduling", "Cbt", "FastBackupEnabled", "QuiesceSnapshottingEnabled", "FileFilters", "SectorBySector", "ValidationEnabled", "LvmSnapshottingEnabled", });
     internal_static_yandex_cloud_backup_v1_PolicySettings_Interval_descriptor =
       internal_static_yandex_cloud_backup_v1_PolicySettings_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_backup_v1_PolicySettings_Interval_fieldAccessorTable = new
@@ -22568,7 +22995,7 @@ public final class PolicyOuterClass {
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_Time_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_Time_descriptor,
-        new java.lang.String[] { "Weekdays", "RepeatAt", "RepeatEvery", "TimeFrom", "TimeTo", "Monthdays", "IncludeLastDayOfMonth", "Months", "Type", });
+        new java.lang.String[] { "Weekdays", "RepeatAt", "RepeatEvery", "TimeFrom", "TimeTo", "Monthdays", "IncludeLastDayOfMonth", "Months", "Type", "RunLater", });
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_SinceLastExecTime_descriptor =
       internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_backup_v1_PolicySettings_Scheduling_BackupSet_SinceLastExecTime_fieldAccessorTable = new
