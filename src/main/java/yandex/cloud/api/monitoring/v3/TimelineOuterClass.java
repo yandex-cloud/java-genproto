@@ -43,7 +43,16 @@ public final class TimelineOuterClass {
      * default refresh interval
      * </pre>
      *
-     * <code>int64 refresh_interval = 2;</code>
+     * <code>optional int64 refresh_interval = 2;</code>
+     * @return Whether the refreshInterval field is set.
+     */
+    boolean hasRefreshInterval();
+    /**
+     * <pre>
+     * default refresh interval
+     * </pre>
+     *
+     * <code>optional int64 refresh_interval = 2;</code>
      * @return The refreshInterval.
      */
     long getRefreshInterval();
@@ -84,6 +93,7 @@ public final class TimelineOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -101,7 +111,7 @@ public final class TimelineOuterClass {
               break;
             }
             case 16: {
-
+              bitField0_ |= 0x00000001;
               refreshInterval_ = input.readInt64();
               break;
             }
@@ -137,6 +147,7 @@ public final class TimelineOuterClass {
               yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.class, yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PERIOD_FIELD_NUMBER = 1;
     private volatile java.lang.Object period_;
     /**
@@ -190,7 +201,19 @@ public final class TimelineOuterClass {
      * default refresh interval
      * </pre>
      *
-     * <code>int64 refresh_interval = 2;</code>
+     * <code>optional int64 refresh_interval = 2;</code>
+     * @return Whether the refreshInterval field is set.
+     */
+    @java.lang.Override
+    public boolean hasRefreshInterval() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * default refresh interval
+     * </pre>
+     *
+     * <code>optional int64 refresh_interval = 2;</code>
      * @return The refreshInterval.
      */
     @java.lang.Override
@@ -215,7 +238,7 @@ public final class TimelineOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(period_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, period_);
       }
-      if (refreshInterval_ != 0L) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeInt64(2, refreshInterval_);
       }
       unknownFields.writeTo(output);
@@ -230,7 +253,7 @@ public final class TimelineOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(period_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, period_);
       }
-      if (refreshInterval_ != 0L) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, refreshInterval_);
       }
@@ -251,8 +274,11 @@ public final class TimelineOuterClass {
 
       if (!getPeriod()
           .equals(other.getPeriod())) return false;
-      if (getRefreshInterval()
-          != other.getRefreshInterval()) return false;
+      if (hasRefreshInterval() != other.hasRefreshInterval()) return false;
+      if (hasRefreshInterval()) {
+        if (getRefreshInterval()
+            != other.getRefreshInterval()) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -266,9 +292,11 @@ public final class TimelineOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PERIOD_FIELD_NUMBER;
       hash = (53 * hash) + getPeriod().hashCode();
-      hash = (37 * hash) + REFRESH_INTERVAL_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getRefreshInterval());
+      if (hasRefreshInterval()) {
+        hash = (37 * hash) + REFRESH_INTERVAL_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getRefreshInterval());
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -405,7 +433,7 @@ public final class TimelineOuterClass {
         period_ = "";
 
         refreshInterval_ = 0L;
-
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -432,8 +460,14 @@ public final class TimelineOuterClass {
       @java.lang.Override
       public yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline buildPartial() {
         yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline result = new yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.period_ = period_;
-        result.refreshInterval_ = refreshInterval_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.refreshInterval_ = refreshInterval_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -486,7 +520,7 @@ public final class TimelineOuterClass {
           period_ = other.period_;
           onChanged();
         }
-        if (other.getRefreshInterval() != 0L) {
+        if (other.hasRefreshInterval()) {
           setRefreshInterval(other.getRefreshInterval());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -517,6 +551,7 @@ public final class TimelineOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object period_ = "";
       /**
@@ -620,7 +655,19 @@ public final class TimelineOuterClass {
        * default refresh interval
        * </pre>
        *
-       * <code>int64 refresh_interval = 2;</code>
+       * <code>optional int64 refresh_interval = 2;</code>
+       * @return Whether the refreshInterval field is set.
+       */
+      @java.lang.Override
+      public boolean hasRefreshInterval() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * default refresh interval
+       * </pre>
+       *
+       * <code>optional int64 refresh_interval = 2;</code>
        * @return The refreshInterval.
        */
       @java.lang.Override
@@ -632,12 +679,12 @@ public final class TimelineOuterClass {
        * default refresh interval
        * </pre>
        *
-       * <code>int64 refresh_interval = 2;</code>
+       * <code>optional int64 refresh_interval = 2;</code>
        * @param value The refreshInterval to set.
        * @return This builder for chaining.
        */
       public Builder setRefreshInterval(long value) {
-        
+        bitField0_ |= 0x00000001;
         refreshInterval_ = value;
         onChanged();
         return this;
@@ -647,11 +694,11 @@ public final class TimelineOuterClass {
        * default refresh interval
        * </pre>
        *
-       * <code>int64 refresh_interval = 2;</code>
+       * <code>optional int64 refresh_interval = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRefreshInterval() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         refreshInterval_ = 0L;
         onChanged();
         return this;
@@ -724,12 +771,12 @@ public final class TimelineOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n)yandex/cloud/monitoring/v3/timeline.pr" +
-      "oto\022\032yandex.cloud.monitoring.v3\"4\n\010Timel" +
-      "ine\022\016\n\006period\030\001 \001(\t\022\030\n\020refresh_interval\030" +
-      "\002 \001(\003Bk\n\036yandex.cloud.api.monitoring.v3Z" +
-      "Igithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/monitoring/v3;monitoringb\006prot" +
-      "o3"
+      "oto\022\032yandex.cloud.monitoring.v3\"N\n\010Timel" +
+      "ine\022\016\n\006period\030\001 \001(\t\022\035\n\020refresh_interval\030" +
+      "\002 \001(\003H\000\210\001\001B\023\n\021_refresh_intervalBk\n\036yande" +
+      "x.cloud.api.monitoring.v3ZIgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/moni" +
+      "toring/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -740,7 +787,7 @@ public final class TimelineOuterClass {
     internal_static_yandex_cloud_monitoring_v3_Timeline_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_Timeline_descriptor,
-        new java.lang.String[] { "Period", "RefreshInterval", });
+        new java.lang.String[] { "Period", "RefreshInterval", "RefreshInterval", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

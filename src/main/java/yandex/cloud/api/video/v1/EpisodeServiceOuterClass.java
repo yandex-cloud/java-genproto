@@ -745,8 +745,11 @@ public final class EpisodeServiceOuterClass {
      * Expressions are composed of terms connected by logic operators.
      * If value contains spaces or quotes,
      * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
-     * Example: "key1='value' AND key2='value'".
-     * Supported operators: ["AND", "OR"].
+     * Supported logical operators: ["AND", "OR"].
+     * Supported string match operators: ["=", "!=", ":"].
+     * Operator ":" stands for substring matching.
+     * Filter expressions may also contain parentheses to group logical operands.
+     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
      * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
@@ -761,8 +764,11 @@ public final class EpisodeServiceOuterClass {
      * Expressions are composed of terms connected by logic operators.
      * If value contains spaces or quotes,
      * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
-     * Example: "key1='value' AND key2='value'".
-     * Supported operators: ["AND", "OR"].
+     * Supported logical operators: ["AND", "OR"].
+     * Supported string match operators: ["=", "!=", ":"].
+     * Operator ":" stands for substring matching.
+     * Filter expressions may also contain parentheses to group logical operands.
+     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
      * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
@@ -1183,8 +1189,11 @@ public final class EpisodeServiceOuterClass {
      * Expressions are composed of terms connected by logic operators.
      * If value contains spaces or quotes,
      * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
-     * Example: "key1='value' AND key2='value'".
-     * Supported operators: ["AND", "OR"].
+     * Supported logical operators: ["AND", "OR"].
+     * Supported string match operators: ["=", "!=", ":"].
+     * Operator ":" stands for substring matching.
+     * Filter expressions may also contain parentheses to group logical operands.
+     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
      * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
@@ -1211,8 +1220,11 @@ public final class EpisodeServiceOuterClass {
      * Expressions are composed of terms connected by logic operators.
      * If value contains spaces or quotes,
      * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
-     * Example: "key1='value' AND key2='value'".
-     * Supported operators: ["AND", "OR"].
+     * Supported logical operators: ["AND", "OR"].
+     * Supported string match operators: ["=", "!=", ":"].
+     * Operator ":" stands for substring matching.
+     * Filter expressions may also contain parentheses to group logical operands.
+     * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
      * Supported fields: ["id", "title"].
      * Both snake_case and camelCase are supported for fields.
      * </pre>
@@ -2174,8 +2186,11 @@ public final class EpisodeServiceOuterClass {
        * Expressions are composed of terms connected by logic operators.
        * If value contains spaces or quotes,
        * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
-       * Example: "key1='value' AND key2='value'".
-       * Supported operators: ["AND", "OR"].
+       * Supported logical operators: ["AND", "OR"].
+       * Supported string match operators: ["=", "!=", ":"].
+       * Operator ":" stands for substring matching.
+       * Filter expressions may also contain parentheses to group logical operands.
+       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
        * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
@@ -2201,8 +2216,11 @@ public final class EpisodeServiceOuterClass {
        * Expressions are composed of terms connected by logic operators.
        * If value contains spaces or quotes,
        * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
-       * Example: "key1='value' AND key2='value'".
-       * Supported operators: ["AND", "OR"].
+       * Supported logical operators: ["AND", "OR"].
+       * Supported string match operators: ["=", "!=", ":"].
+       * Operator ":" stands for substring matching.
+       * Filter expressions may also contain parentheses to group logical operands.
+       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
        * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
@@ -2229,8 +2247,11 @@ public final class EpisodeServiceOuterClass {
        * Expressions are composed of terms connected by logic operators.
        * If value contains spaces or quotes,
        * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
-       * Example: "key1='value' AND key2='value'".
-       * Supported operators: ["AND", "OR"].
+       * Supported logical operators: ["AND", "OR"].
+       * Supported string match operators: ["=", "!=", ":"].
+       * Operator ":" stands for substring matching.
+       * Filter expressions may also contain parentheses to group logical operands.
+       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
        * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
@@ -2255,8 +2276,11 @@ public final class EpisodeServiceOuterClass {
        * Expressions are composed of terms connected by logic operators.
        * If value contains spaces or quotes,
        * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
-       * Example: "key1='value' AND key2='value'".
-       * Supported operators: ["AND", "OR"].
+       * Supported logical operators: ["AND", "OR"].
+       * Supported string match operators: ["=", "!=", ":"].
+       * Operator ":" stands for substring matching.
+       * Filter expressions may also contain parentheses to group logical operands.
+       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
        * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>
@@ -2276,8 +2300,11 @@ public final class EpisodeServiceOuterClass {
        * Expressions are composed of terms connected by logic operators.
        * If value contains spaces or quotes,
        * it should be in quotes (`'` or `"`) with the inner quotes being backslash escaped.
-       * Example: "key1='value' AND key2='value'".
-       * Supported operators: ["AND", "OR"].
+       * Supported logical operators: ["AND", "OR"].
+       * Supported string match operators: ["=", "!=", ":"].
+       * Operator ":" stands for substring matching.
+       * Filter expressions may also contain parentheses to group logical operands.
+       * Example: `key1='value' AND (key2!='&#92;'value&#92;'' OR key2:"&#92;"value&#92;"")`
        * Supported fields: ["id", "title"].
        * Both snake_case and camelCase are supported for fields.
        * </pre>

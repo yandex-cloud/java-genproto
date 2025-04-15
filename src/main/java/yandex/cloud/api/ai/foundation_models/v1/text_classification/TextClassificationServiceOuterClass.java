@@ -20,7 +20,7 @@ public final class TextClassificationServiceOuterClass {
 
     /**
      * <pre>
-     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -29,7 +29,7 @@ public final class TextClassificationServiceOuterClass {
     java.lang.String getModelUri();
     /**
      * <pre>
-     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -61,7 +61,7 @@ public final class TextClassificationServiceOuterClass {
   /**
    * <pre>
    * Request for the service to classify text with tuned model.
-   * The names of the classes between which the model will be distributing requests must be specified during model tuning; 
+   * The names of the classes between which the model will be distributing requests must be specified during model tuning;
    * therefore, they are not provided in the request.
    * For examples of usage, see [step-by-step guides](/docs/foundation-models/operations/classifier/additionally-trained).
    * </pre>
@@ -160,7 +160,7 @@ public final class TextClassificationServiceOuterClass {
     private volatile java.lang.Object modelUri_;
     /**
      * <pre>
-     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -181,7 +181,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
+     * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model.
      * </pre>
      *
      * <code>string model_uri = 1;</code>
@@ -415,7 +415,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * Request for the service to classify text with tuned model.
-     * The names of the classes between which the model will be distributing requests must be specified during model tuning; 
+     * The names of the classes between which the model will be distributing requests must be specified during model tuning;
      * therefore, they are not provided in the request.
      * For examples of usage, see [step-by-step guides](/docs/foundation-models/operations/classifier/additionally-trained).
      * </pre>
@@ -577,7 +577,7 @@ public final class TextClassificationServiceOuterClass {
       private java.lang.Object modelUri_ = "";
       /**
        * <pre>
-       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -597,7 +597,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -618,7 +618,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -637,7 +637,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -651,7 +651,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model. 
+       * The [URI](/docs/foundation-models/concepts/classifier/models) of your tuned classifier model.
        * </pre>
        *
        * <code>string model_uri = 1;</code>
@@ -824,7 +824,7 @@ public final class TextClassificationServiceOuterClass {
 
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -834,7 +834,7 @@ public final class TextClassificationServiceOuterClass {
         getPredictionsList();
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -843,7 +843,7 @@ public final class TextClassificationServiceOuterClass {
     yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel getPredictions(int index);
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -852,7 +852,7 @@ public final class TextClassificationServiceOuterClass {
     int getPredictionsCount();
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -862,7 +862,7 @@ public final class TextClassificationServiceOuterClass {
         getPredictionsOrBuilderList();
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -890,6 +890,16 @@ public final class TextClassificationServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getModelVersionBytes();
+
+    /**
+     * <pre>
+     * Number of input tokens
+     * </pre>
+     *
+     * <code>int64 input_tokens = 3;</code>
+     * @return The inputTokens.
+     */
+    long getInputTokens();
   }
   /**
    * <pre>
@@ -958,6 +968,11 @@ public final class TextClassificationServiceOuterClass {
               modelVersion_ = s;
               break;
             }
+            case 24: {
+
+              inputTokens_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -997,7 +1012,7 @@ public final class TextClassificationServiceOuterClass {
     private java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> predictions_;
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -1009,7 +1024,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -1022,7 +1037,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -1034,7 +1049,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -1046,7 +1061,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -1104,6 +1119,21 @@ public final class TextClassificationServiceOuterClass {
       }
     }
 
+    public static final int INPUT_TOKENS_FIELD_NUMBER = 3;
+    private long inputTokens_;
+    /**
+     * <pre>
+     * Number of input tokens
+     * </pre>
+     *
+     * <code>int64 input_tokens = 3;</code>
+     * @return The inputTokens.
+     */
+    @java.lang.Override
+    public long getInputTokens() {
+      return inputTokens_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1124,6 +1154,9 @@ public final class TextClassificationServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelVersion_);
       }
+      if (inputTokens_ != 0L) {
+        output.writeInt64(3, inputTokens_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1139,6 +1172,10 @@ public final class TextClassificationServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelVersion_);
+      }
+      if (inputTokens_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, inputTokens_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1159,6 +1196,8 @@ public final class TextClassificationServiceOuterClass {
           .equals(other.getPredictionsList())) return false;
       if (!getModelVersion()
           .equals(other.getModelVersion())) return false;
+      if (getInputTokens()
+          != other.getInputTokens()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1176,6 +1215,9 @@ public final class TextClassificationServiceOuterClass {
       }
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getModelVersion().hashCode();
+      hash = (37 * hash) + INPUT_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getInputTokens());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1322,6 +1364,8 @@ public final class TextClassificationServiceOuterClass {
         }
         modelVersion_ = "";
 
+        inputTokens_ = 0L;
+
         return this;
       }
 
@@ -1359,6 +1403,7 @@ public final class TextClassificationServiceOuterClass {
           result.predictions_ = predictionsBuilder_.build();
         }
         result.modelVersion_ = modelVersion_;
+        result.inputTokens_ = inputTokens_;
         onBuilt();
         return result;
       }
@@ -1437,6 +1482,9 @@ public final class TextClassificationServiceOuterClass {
           modelVersion_ = other.modelVersion_;
           onChanged();
         }
+        if (other.getInputTokens() != 0L) {
+          setInputTokens(other.getInputTokens());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1481,7 +1529,7 @@ public final class TextClassificationServiceOuterClass {
 
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1496,7 +1544,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1511,7 +1559,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1526,7 +1574,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1548,7 +1596,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1567,7 +1615,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1588,7 +1636,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1610,7 +1658,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1629,7 +1677,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1648,7 +1696,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1668,7 +1716,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1686,7 +1734,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1704,7 +1752,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1716,7 +1764,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1731,7 +1779,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1747,7 +1795,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1759,7 +1807,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1772,7 +1820,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -1892,6 +1940,49 @@ public final class TextClassificationServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private long inputTokens_ ;
+      /**
+       * <pre>
+       * Number of input tokens
+       * </pre>
+       *
+       * <code>int64 input_tokens = 3;</code>
+       * @return The inputTokens.
+       */
+      @java.lang.Override
+      public long getInputTokens() {
+        return inputTokens_;
+      }
+      /**
+       * <pre>
+       * Number of input tokens
+       * </pre>
+       *
+       * <code>int64 input_tokens = 3;</code>
+       * @param value The inputTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputTokens(long value) {
+        
+        inputTokens_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of input tokens
+       * </pre>
+       *
+       * <code>int64 input_tokens = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInputTokens() {
+        
+        inputTokens_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1992,7 +2083,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
-     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * Give meaningful names to label classes: this is essential for correct classification results.
      * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
@@ -2004,7 +2095,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
-     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * Give meaningful names to label classes: this is essential for correct classification results.
      * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
@@ -2015,7 +2106,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
-     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * Give meaningful names to label classes: this is essential for correct classification results.
      * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
@@ -2027,7 +2118,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
-     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * Give meaningful names to label classes: this is essential for correct classification results.
      * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
@@ -2329,7 +2420,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
-     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * Give meaningful names to label classes: this is essential for correct classification results.
      * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
@@ -2343,7 +2434,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
-     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * Give meaningful names to label classes: this is essential for correct classification results.
      * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
@@ -2356,7 +2447,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
-     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * Give meaningful names to label classes: this is essential for correct classification results.
      * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
@@ -2370,7 +2461,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * List of available labels for the classification result.
-     * Give meaningful names to label classes: this is essential for correct classification results. 
+     * Give meaningful names to label classes: this is essential for correct classification results.
      * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
      * </pre>
      *
@@ -3123,7 +3214,7 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
-       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * Give meaningful names to label classes: this is essential for correct classification results.
        * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
@@ -3137,7 +3228,7 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
-       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * Give meaningful names to label classes: this is essential for correct classification results.
        * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
@@ -3150,7 +3241,7 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
-       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * Give meaningful names to label classes: this is essential for correct classification results.
        * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
@@ -3164,7 +3255,7 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
-       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * Give meaningful names to label classes: this is essential for correct classification results.
        * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
@@ -3179,7 +3270,7 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
-       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * Give meaningful names to label classes: this is essential for correct classification results.
        * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
@@ -3201,7 +3292,7 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
-       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * Give meaningful names to label classes: this is essential for correct classification results.
        * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
@@ -3222,7 +3313,7 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
-       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * Give meaningful names to label classes: this is essential for correct classification results.
        * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
@@ -3241,7 +3332,7 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
-       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * Give meaningful names to label classes: this is essential for correct classification results.
        * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
@@ -3257,7 +3348,7 @@ public final class TextClassificationServiceOuterClass {
       /**
        * <pre>
        * List of available labels for the classification result.
-       * Give meaningful names to label classes: this is essential for correct classification results. 
+       * Give meaningful names to label classes: this is essential for correct classification results.
        * For example, use ``chemistry`` and ``physics`` rather than ``chm`` and ``phs`` for class names.
        * </pre>
        *
@@ -3743,7 +3834,7 @@ public final class TextClassificationServiceOuterClass {
 
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -3753,7 +3844,7 @@ public final class TextClassificationServiceOuterClass {
         getPredictionsList();
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -3762,7 +3853,7 @@ public final class TextClassificationServiceOuterClass {
     yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel getPredictions(int index);
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -3771,7 +3862,7 @@ public final class TextClassificationServiceOuterClass {
     int getPredictionsCount();
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -3781,7 +3872,7 @@ public final class TextClassificationServiceOuterClass {
         getPredictionsOrBuilderList();
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -3809,6 +3900,16 @@ public final class TextClassificationServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getModelVersionBytes();
+
+    /**
+     * <pre>
+     * Number of input tokens
+     * </pre>
+     *
+     * <code>int64 input_tokens = 3;</code>
+     * @return The inputTokens.
+     */
+    long getInputTokens();
   }
   /**
    * <pre>
@@ -3877,6 +3978,11 @@ public final class TextClassificationServiceOuterClass {
               modelVersion_ = s;
               break;
             }
+            case 24: {
+
+              inputTokens_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3916,7 +4022,7 @@ public final class TextClassificationServiceOuterClass {
     private java.util.List<yandex.cloud.api.ai.foundation_models.v1.text_classification.TextClassification.ClassificationLabel> predictions_;
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -3928,7 +4034,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -3941,7 +4047,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -3953,7 +4059,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -3965,7 +4071,7 @@ public final class TextClassificationServiceOuterClass {
     }
     /**
      * <pre>
-     * The classification results with the `confidence`` values 
+     * The classification results with the `confidence`` values
      * for the probability of classifying the request text into each class.
      * </pre>
      *
@@ -4023,6 +4129,21 @@ public final class TextClassificationServiceOuterClass {
       }
     }
 
+    public static final int INPUT_TOKENS_FIELD_NUMBER = 3;
+    private long inputTokens_;
+    /**
+     * <pre>
+     * Number of input tokens
+     * </pre>
+     *
+     * <code>int64 input_tokens = 3;</code>
+     * @return The inputTokens.
+     */
+    @java.lang.Override
+    public long getInputTokens() {
+      return inputTokens_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4043,6 +4164,9 @@ public final class TextClassificationServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelVersion_);
       }
+      if (inputTokens_ != 0L) {
+        output.writeInt64(3, inputTokens_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4058,6 +4182,10 @@ public final class TextClassificationServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelVersion_);
+      }
+      if (inputTokens_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, inputTokens_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4078,6 +4206,8 @@ public final class TextClassificationServiceOuterClass {
           .equals(other.getPredictionsList())) return false;
       if (!getModelVersion()
           .equals(other.getModelVersion())) return false;
+      if (getInputTokens()
+          != other.getInputTokens()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4095,6 +4225,9 @@ public final class TextClassificationServiceOuterClass {
       }
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getModelVersion().hashCode();
+      hash = (37 * hash) + INPUT_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getInputTokens());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4241,6 +4374,8 @@ public final class TextClassificationServiceOuterClass {
         }
         modelVersion_ = "";
 
+        inputTokens_ = 0L;
+
         return this;
       }
 
@@ -4278,6 +4413,7 @@ public final class TextClassificationServiceOuterClass {
           result.predictions_ = predictionsBuilder_.build();
         }
         result.modelVersion_ = modelVersion_;
+        result.inputTokens_ = inputTokens_;
         onBuilt();
         return result;
       }
@@ -4356,6 +4492,9 @@ public final class TextClassificationServiceOuterClass {
           modelVersion_ = other.modelVersion_;
           onChanged();
         }
+        if (other.getInputTokens() != 0L) {
+          setInputTokens(other.getInputTokens());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4400,7 +4539,7 @@ public final class TextClassificationServiceOuterClass {
 
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4415,7 +4554,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4430,7 +4569,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4445,7 +4584,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4467,7 +4606,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4486,7 +4625,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4507,7 +4646,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4529,7 +4668,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4548,7 +4687,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4567,7 +4706,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4587,7 +4726,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4605,7 +4744,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4623,7 +4762,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4635,7 +4774,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4650,7 +4789,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4666,7 +4805,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4678,7 +4817,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4691,7 +4830,7 @@ public final class TextClassificationServiceOuterClass {
       }
       /**
        * <pre>
-       * The classification results with the `confidence`` values 
+       * The classification results with the `confidence`` values
        * for the probability of classifying the request text into each class.
        * </pre>
        *
@@ -4811,6 +4950,49 @@ public final class TextClassificationServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private long inputTokens_ ;
+      /**
+       * <pre>
+       * Number of input tokens
+       * </pre>
+       *
+       * <code>int64 input_tokens = 3;</code>
+       * @return The inputTokens.
+       */
+      @java.lang.Override
+      public long getInputTokens() {
+        return inputTokens_;
+      }
+      /**
+       * <pre>
+       * Number of input tokens
+       * </pre>
+       *
+       * <code>int64 input_tokens = 3;</code>
+       * @param value The inputTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputTokens(long value) {
+        
+        inputTokens_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of input tokens
+       * </pre>
+       *
+       * <code>int64 input_tokens = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInputTokens() {
+        
+        inputTokens_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4901,38 +5083,39 @@ public final class TextClassificationServiceOuterClass {
       "undation_models/v1/text_classification/t" +
       "ext_classification.proto\"<\n\031TextClassifi" +
       "cationRequest\022\021\n\tmodel_uri\030\001 \001(\t\022\014\n\004text" +
-      "\030\002 \001(\t\"\227\001\n\032TextClassificationResponse\022b\n" +
+      "\030\002 \001(\t\"\255\001\n\032TextClassificationResponse\022b\n" +
       "\013predictions\030\001 \003(\0132M.yandex.cloud.ai.fou" +
       "ndation_models.v1.text_classification.Cl" +
       "assificationLabel\022\025\n\rmodel_version\030\002 \001(\t" +
-      "\"\316\001\n FewShotTextClassificationRequest\022\021\n" +
-      "\tmodel_uri\030\001 \001(\t\022\030\n\020task_description\030\002 \001" +
-      "(\t\022\016\n\006labels\030\003 \003(\t\022\014\n\004text\030\004 \001(\t\022_\n\007samp" +
-      "les\030\005 \003(\0132N.yandex.cloud.ai.foundation_m" +
-      "odels.v1.text_classification.Classificat" +
-      "ionSample\"\236\001\n!FewShotTextClassificationR" +
-      "esponse\022b\n\013predictions\030\001 \003(\0132M.yandex.cl" +
-      "oud.ai.foundation_models.v1.text_classif" +
-      "ication.ClassificationLabel\022\025\n\rmodel_ver" +
-      "sion\030\002 \001(\t2\217\004\n\031TextClassificationService" +
-      "\022\351\001\n\010Classify\022S.yandex.cloud.ai.foundati" +
-      "on_models.v1.text_classification.TextCla" +
-      "ssificationRequest\032T.yandex.cloud.ai.fou" +
-      "ndation_models.v1.text_classification.Te" +
-      "xtClassificationResponse\"2\202\323\344\223\002,\"\'/found" +
-      "ationModels/v1/textClassification:\001*\022\205\002\n" +
-      "\017FewShotClassify\022Z.yandex.cloud.ai.found" +
-      "ation_models.v1.text_classification.FewS" +
-      "hotTextClassificationRequest\032[.yandex.cl" +
-      "oud.ai.foundation_models.v1.text_classif" +
-      "ication.FewShotTextClassificationRespons" +
-      "e\"9\202\323\344\223\0023\"./foundationModels/v1/fewShotT" +
-      "extClassification:\001*B\260\001\n<yandex.cloud.ap" +
-      "i.ai.foundation_models.v1.text_classific" +
-      "ationZpgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/ai/foundation_models/v1/" +
-      "text_classification;text_classificationb" +
-      "\006proto3"
+      "\022\024\n\014input_tokens\030\003 \001(\003\"\316\001\n FewShotTextCl" +
+      "assificationRequest\022\021\n\tmodel_uri\030\001 \001(\t\022\030" +
+      "\n\020task_description\030\002 \001(\t\022\016\n\006labels\030\003 \003(\t" +
+      "\022\014\n\004text\030\004 \001(\t\022_\n\007samples\030\005 \003(\0132N.yandex" +
+      ".cloud.ai.foundation_models.v1.text_clas" +
+      "sification.ClassificationSample\"\264\001\n!FewS" +
+      "hotTextClassificationResponse\022b\n\013predict" +
+      "ions\030\001 \003(\0132M.yandex.cloud.ai.foundation_" +
+      "models.v1.text_classification.Classifica" +
+      "tionLabel\022\025\n\rmodel_version\030\002 \001(\t\022\024\n\014inpu" +
+      "t_tokens\030\003 \001(\0032\217\004\n\031TextClassificationSer" +
+      "vice\022\351\001\n\010Classify\022S.yandex.cloud.ai.foun" +
+      "dation_models.v1.text_classification.Tex" +
+      "tClassificationRequest\032T.yandex.cloud.ai" +
+      ".foundation_models.v1.text_classificatio" +
+      "n.TextClassificationResponse\"2\202\323\344\223\002,\"\'/f" +
+      "oundationModels/v1/textClassification:\001*" +
+      "\022\205\002\n\017FewShotClassify\022Z.yandex.cloud.ai.f" +
+      "oundation_models.v1.text_classification." +
+      "FewShotTextClassificationRequest\032[.yande" +
+      "x.cloud.ai.foundation_models.v1.text_cla" +
+      "ssification.FewShotTextClassificationRes" +
+      "ponse\"9\202\323\344\223\0023\"./foundationModels/v1/fewS" +
+      "hotTextClassification:\001*B\260\001\n<yandex.clou" +
+      "d.api.ai.foundation_models.v1.text_class" +
+      "ificationZpgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/ai/foundation_models" +
+      "/v1/text_classification;text_classificat" +
+      "ionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4951,7 +5134,7 @@ public final class TextClassificationServiceOuterClass {
     internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_TextClassificationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_TextClassificationResponse_descriptor,
-        new java.lang.String[] { "Predictions", "ModelVersion", });
+        new java.lang.String[] { "Predictions", "ModelVersion", "InputTokens", });
     internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationRequest_fieldAccessorTable = new
@@ -4963,7 +5146,7 @@ public final class TextClassificationServiceOuterClass {
     internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_foundation_models_v1_text_classification_FewShotTextClassificationResponse_descriptor,
-        new java.lang.String[] { "Predictions", "ModelVersion", });
+        new java.lang.String[] { "Predictions", "ModelVersion", "InputTokens", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
