@@ -6031,6 +6031,16 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationActionOrBuilder getInitializationActionsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Oslogin enable on cluster nodes
+     * </pre>
+     *
+     * <code>bool oslogin_enabled = 5;</code>
+     * @return The osloginEnabled.
+     */
+    boolean getOsloginEnabled();
   }
   /**
    * <pre>
@@ -6138,6 +6148,11 @@ public final class ClusterOuterClass {
               }
               initializationActions_.add(
                   input.readMessage(yandex.cloud.api.dataproc.v1.ClusterOuterClass.InitializationAction.parser(), extensionRegistry));
+              break;
+            }
+            case 40: {
+
+              osloginEnabled_ = input.readBool();
               break;
             }
             default: {
@@ -6707,6 +6722,21 @@ public final class ClusterOuterClass {
       return initializationActions_.get(index);
     }
 
+    public static final int OSLOGIN_ENABLED_FIELD_NUMBER = 5;
+    private boolean osloginEnabled_;
+    /**
+     * <pre>
+     * Oslogin enable on cluster nodes
+     * </pre>
+     *
+     * <code>bool oslogin_enabled = 5;</code>
+     * @return The osloginEnabled.
+     */
+    @java.lang.Override
+    public boolean getOsloginEnabled() {
+      return osloginEnabled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6740,6 +6770,9 @@ public final class ClusterOuterClass {
       }
       for (int i = 0; i < initializationActions_.size(); i++) {
         output.writeMessage(4, initializationActions_.get(i));
+      }
+      if (osloginEnabled_ != false) {
+        output.writeBool(5, osloginEnabled_);
       }
       unknownFields.writeTo(output);
     }
@@ -6784,6 +6817,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, initializationActions_.get(i));
       }
+      if (osloginEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, osloginEnabled_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6806,6 +6843,8 @@ public final class ClusterOuterClass {
           .equals(other.getSshPublicKeysList())) return false;
       if (!getInitializationActionsList()
           .equals(other.getInitializationActionsList())) return false;
+      if (getOsloginEnabled()
+          != other.getOsloginEnabled()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6833,6 +6872,9 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + INITIALIZATION_ACTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getInitializationActionsList().hashCode();
       }
+      hash = (37 * hash) + OSLOGIN_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getOsloginEnabled());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7005,6 +7047,8 @@ public final class ClusterOuterClass {
         } else {
           initializationActionsBuilder_.clear();
         }
+        osloginEnabled_ = false;
+
         return this;
       }
 
@@ -7053,6 +7097,7 @@ public final class ClusterOuterClass {
         } else {
           result.initializationActions_ = initializationActionsBuilder_.build();
         }
+        result.osloginEnabled_ = osloginEnabled_;
         onBuilt();
         return result;
       }
@@ -7148,6 +7193,9 @@ public final class ClusterOuterClass {
               initializationActionsBuilder_.addAllMessages(other.initializationActions_);
             }
           }
+        }
+        if (other.getOsloginEnabled() != false) {
+          setOsloginEnabled(other.getOsloginEnabled());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8003,6 +8051,49 @@ public final class ClusterOuterClass {
           initializationActions_ = null;
         }
         return initializationActionsBuilder_;
+      }
+
+      private boolean osloginEnabled_ ;
+      /**
+       * <pre>
+       * Oslogin enable on cluster nodes
+       * </pre>
+       *
+       * <code>bool oslogin_enabled = 5;</code>
+       * @return The osloginEnabled.
+       */
+      @java.lang.Override
+      public boolean getOsloginEnabled() {
+        return osloginEnabled_;
+      }
+      /**
+       * <pre>
+       * Oslogin enable on cluster nodes
+       * </pre>
+       *
+       * <code>bool oslogin_enabled = 5;</code>
+       * @param value The osloginEnabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOsloginEnabled(boolean value) {
+        
+        osloginEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Oslogin enable on cluster nodes
+       * </pre>
+       *
+       * <code>bool oslogin_enabled = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOsloginEnabled() {
+        
+        osloginEnabled_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9988,27 +10079,27 @@ public final class ClusterOuterClass {
       "ED\020\005\022\014\n\010STARTING\020\006\"I\n\013Environment\022\033\n\027ENV" +
       "IRONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r" +
       "\n\tPRESTABLE\020\002\"=\n\nMonitoring\022\014\n\004name\030\001 \001(" +
-      "\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\361\003\n" +
+      "\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\212\004\n" +
       "\014HadoopConfig\022@\n\010services\030\001 \003(\0162..yandex" +
       ".cloud.dataproc.v1.HadoopConfig.Service\022" +
       "J\n\nproperties\030\002 \003(\01326.yandex.cloud.datap" +
       "roc.v1.HadoopConfig.PropertiesEntry\022\027\n\017s" +
       "sh_public_keys\030\003 \003(\t\022N\n\026initialization_a" +
       "ctions\030\004 \003(\0132..yandex.cloud.dataproc.v1." +
-      "InitializationAction\0321\n\017PropertiesEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\266\001\n\007Serv" +
-      "ice\022\027\n\023SERVICE_UNSPECIFIED\020\000\022\010\n\004HDFS\020\001\022\010" +
-      "\n\004YARN\020\002\022\r\n\tMAPREDUCE\020\003\022\010\n\004HIVE\020\004\022\007\n\003TEZ" +
-      "\020\005\022\r\n\tZOOKEEPER\020\006\022\t\n\005HBASE\020\007\022\t\n\005SQOOP\020\010\022" +
-      "\t\n\005FLUME\020\t\022\t\n\005SPARK\020\n\022\014\n\010ZEPPELIN\020\013\022\t\n\005O" +
-      "OZIE\020\014\022\010\n\004LIVY\020\r\"[\n\rClusterConfig\022\022\n\nver" +
-      "sion_id\030\001 \001(\t\0226\n\006hadoop\030\002 \001(\0132&.yandex.c" +
-      "loud.dataproc.v1.HadoopConfig\"B\n\024Initial" +
-      "izationAction\022\013\n\003uri\030\001 \001(\t\022\014\n\004args\030\002 \003(\t" +
-      "\022\017\n\007timeout\030\003 \001(\003Be\n\034yandex.cloud.api.da" +
-      "taproc.v1ZEgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/dataproc/v1;dataproc" +
-      "b\006proto3"
+      "InitializationAction\022\027\n\017oslogin_enabled\030" +
+      "\005 \001(\010\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\"\266\001\n\007Service\022\027\n\023SERVICE_" +
+      "UNSPECIFIED\020\000\022\010\n\004HDFS\020\001\022\010\n\004YARN\020\002\022\r\n\tMAP" +
+      "REDUCE\020\003\022\010\n\004HIVE\020\004\022\007\n\003TEZ\020\005\022\r\n\tZOOKEEPER" +
+      "\020\006\022\t\n\005HBASE\020\007\022\t\n\005SQOOP\020\010\022\t\n\005FLUME\020\t\022\t\n\005S" +
+      "PARK\020\n\022\014\n\010ZEPPELIN\020\013\022\t\n\005OOZIE\020\014\022\010\n\004LIVY\020" +
+      "\r\"[\n\rClusterConfig\022\022\n\nversion_id\030\001 \001(\t\0226" +
+      "\n\006hadoop\030\002 \001(\0132&.yandex.cloud.dataproc.v" +
+      "1.HadoopConfig\"B\n\024InitializationAction\022\013" +
+      "\n\003uri\030\001 \001(\t\022\014\n\004args\030\002 \003(\t\022\017\n\007timeout\030\003 \001" +
+      "(\003Be\n\034yandex.cloud.api.dataproc.v1ZEgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/dataproc/v1;dataprocb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10040,7 +10131,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_dataproc_v1_HadoopConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_HadoopConfig_descriptor,
-        new java.lang.String[] { "Services", "Properties", "SshPublicKeys", "InitializationActions", });
+        new java.lang.String[] { "Services", "Properties", "SshPublicKeys", "InitializationActions", "OsloginEnabled", });
     internal_static_yandex_cloud_dataproc_v1_HadoopConfig_PropertiesEntry_descriptor =
       internal_static_yandex_cloud_dataproc_v1_HadoopConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_HadoopConfig_PropertiesEntry_fieldAccessorTable = new

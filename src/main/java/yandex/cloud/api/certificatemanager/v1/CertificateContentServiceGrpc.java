@@ -49,6 +49,37 @@ public final class CertificateContentServiceGrpc {
     return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest,
+      yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse> getGetExMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetEx",
+      requestType = yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest.class,
+      responseType = yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest,
+      yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse> getGetExMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest, yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse> getGetExMethod;
+    if ((getGetExMethod = CertificateContentServiceGrpc.getGetExMethod) == null) {
+      synchronized (CertificateContentServiceGrpc.class) {
+        if ((getGetExMethod = CertificateContentServiceGrpc.getGetExMethod) == null) {
+          CertificateContentServiceGrpc.getGetExMethod = getGetExMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest, yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEx"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CertificateContentServiceMethodDescriptorSupplier("GetEx"))
+              .build();
+        }
+      }
+    }
+    return getGetExMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -110,6 +141,13 @@ public final class CertificateContentServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getEx(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetExMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -119,6 +157,13 @@ public final class CertificateContentServiceGrpc {
                 yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest,
                 yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse>(
                   this, METHODID_GET)))
+          .addMethod(
+            getGetExMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest,
+                yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse>(
+                  this, METHODID_GET_EX)))
           .build();
     }
   }
@@ -150,6 +195,14 @@ public final class CertificateContentServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getEx(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetExMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -177,6 +230,13 @@ public final class CertificateContentServiceGrpc {
     public yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse get(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse getEx(yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetExMethod(), getCallOptions(), request);
     }
   }
 
@@ -207,9 +267,18 @@ public final class CertificateContentServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse> getEx(
+        yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetExMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
+  private static final int METHODID_GET_EX = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -231,6 +300,10 @@ public final class CertificateContentServiceGrpc {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetCertificateContentResponse>) responseObserver);
+          break;
+        case METHODID_GET_EX:
+          serviceImpl.getEx((yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.certificatemanager.v1.CertificateContentServiceOuterClass.GetExCertificateContentResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -294,6 +367,7 @@ public final class CertificateContentServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CertificateContentServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
+              .addMethod(getGetExMethod())
               .build();
         }
       }

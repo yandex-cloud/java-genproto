@@ -33651,7 +33651,7 @@ public final class InstanceGroupServiceOuterClass {
       "_records\030\001 \003(\01320.yandex.cloud.compute.v1" +
       ".instancegroup.LogRecord\022\027\n\017next_page_to" +
       "ken\030\002 \001(\t*(\n\021InstanceGroupView\022\t\n\005BASIC\020" +
-      "\000\022\010\n\004FULL\020\0012\204$\n\024InstanceGroupService\022\263\001\n" +
+      "\000\022\010\n\004FULL\020\0012\224%\n\024InstanceGroupService\022\263\001\n" +
       "\003Get\022>.yandex.cloud.compute.v1.instanceg" +
       "roup.GetInstanceGroupRequest\0324.yandex.cl" +
       "oud.compute.v1.instancegroup.InstanceGro" +
@@ -33717,60 +33717,63 @@ public final class InstanceGroupServiceOuterClass {
       "pute.v1.instancegroup.ListInstanceGroupI" +
       "nstancesResponse\"@\202\323\344\223\002:\0228/compute/v1/in" +
       "stanceGroups/{instance_group_id}/instanc" +
-      "es\022\241\001\n\017DeleteInstances\022=.yandex.cloud.co" +
+      "es\022\352\001\n\017DeleteInstances\022=.yandex.cloud.co" +
       "mpute.v1.instancegroup.DeleteInstancesRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\",\262\322*(\n\027DeleteInstancesMetadata\022\rInstanc" +
-      "eGroup\022\233\001\n\rStopInstances\022;.yandex.cloud." +
-      "compute.v1.instancegroup.StopInstancesRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"*\262\322*&\n\025StopInstancesMetadata\022\rInstanceG" +
-      "roup\022\352\001\n\016ListOperations\022I.yandex.cloud.c" +
-      "ompute.v1.instancegroup.ListInstanceGrou" +
-      "pOperationsRequest\032J.yandex.cloud.comput" +
-      "e.v1.instancegroup.ListInstanceGroupOper" +
-      "ationsResponse\"A\202\323\344\223\002;\0229/compute/v1/inst" +
-      "anceGroups/{instance_group_id}/operation" +
-      "s\022\344\001\n\016ListLogRecords\022I.yandex.cloud.comp" +
-      "ute.v1.instancegroup.ListInstanceGroupLo" +
-      "gRecordsRequest\032J.yandex.cloud.compute.v" +
-      "1.instancegroup.ListInstanceGroupLogReco" +
-      "rdsResponse\";\202\323\344\223\0025\0223/compute/v1/instanc" +
-      "eGroups/{instance_group_id}:logs\022\272\001\n\022Lis" +
-      "tAccessBindings\022..yandex.cloud.access.Li" +
-      "stAccessBindingsRequest\032/.yandex.cloud.a" +
-      "ccess.ListAccessBindingsResponse\"C\202\323\344\223\002=" +
-      "\022;/compute/v1/instanceGroups/{resource_i" +
-      "d}:listAccessBindings\022\352\001\n\021SetAccessBindi" +
-      "ngs\022-.yandex.cloud.access.SetAccessBindi" +
-      "ngsRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\202\001\202\323\344\223\002?\":/compute/v1/instanceGrou" +
-      "ps/{resource_id}:setAccessBindings:\001*\262\322*" +
-      "9\n access.SetAccessBindingsMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\366\001\n\024UpdateAccessBindi" +
-      "ngs\0220.yandex.cloud.access.UpdateAccessBi" +
-      "ndingsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"\210\001\202\323\344\223\002B\"=/compute/v1/instanceG" +
-      "roups/{resource_id}:updateAccessBindings" +
-      ":\001*\262\322*<\n#access.UpdateAccessBindingsMeta" +
-      "data\022\025google.protobuf.Empty\022\203\002\n\017ResumePr" +
-      "ocesses\022J.yandex.cloud.compute.v1.instan" +
-      "cegroup.ResumeInstanceGroupProcessesRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\200" +
-      "\001\202\323\344\223\002C\">/compute/v1/instanceGroups/{ins" +
-      "tance_group_id}:resumeProcesses:\001*\262\322*3\n\"" +
-      "ResumeInstanceGroupProcessMetadata\022\rInst" +
-      "anceGroup\022\376\001\n\016PauseProcesses\022I.yandex.cl" +
-      "oud.compute.v1.instancegroup.PauseInstan" +
-      "ceGroupProcessesRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"~\202\323\344\223\002B\"=/compute/v1/" +
-      "instanceGroups/{instance_group_id}:pause" +
-      "Processes:\001*\262\322*2\n!PauseInstanceGroupProc" +
-      "essMetadata\022\rInstanceGroupB\204\001\n)yandex.cl" +
-      "oud.api.compute.v1.instancegroupZWgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/compute/v1/instancegroup;instancegrou" +
-      "pb\006proto3"
+      "\"u\202\323\344\223\002C\">/compute/v1/instanceGroups/{in" +
+      "stance_group_id}:deleteInstances:\001*\262\322*(\n" +
+      "\027DeleteInstancesMetadata\022\rInstanceGroup\022" +
+      "\342\001\n\rStopInstances\022;.yandex.cloud.compute" +
+      ".v1.instancegroup.StopInstancesRequest\032!" +
+      ".yandex.cloud.operation.Operation\"q\202\323\344\223\002" +
+      "A\"</compute/v1/instanceGroups/{instance_" +
+      "group_id}:stopInstances:\001*\262\322*&\n\025StopInst" +
+      "ancesMetadata\022\rInstanceGroup\022\352\001\n\016ListOpe" +
+      "rations\022I.yandex.cloud.compute.v1.instan" +
+      "cegroup.ListInstanceGroupOperationsReque" +
+      "st\032J.yandex.cloud.compute.v1.instancegro" +
+      "up.ListInstanceGroupOperationsResponse\"A" +
+      "\202\323\344\223\002;\0229/compute/v1/instanceGroups/{inst" +
+      "ance_group_id}/operations\022\344\001\n\016ListLogRec" +
+      "ords\022I.yandex.cloud.compute.v1.instanceg" +
+      "roup.ListInstanceGroupLogRecordsRequest\032" +
+      "J.yandex.cloud.compute.v1.instancegroup." +
+      "ListInstanceGroupLogRecordsResponse\";\202\323\344" +
+      "\223\0025\0223/compute/v1/instanceGroups/{instanc" +
+      "e_group_id}:logs\022\272\001\n\022ListAccessBindings\022" +
+      "..yandex.cloud.access.ListAccessBindings" +
+      "Request\032/.yandex.cloud.access.ListAccess" +
+      "BindingsResponse\"C\202\323\344\223\002=\022;/compute/v1/in" +
+      "stanceGroups/{resource_id}:listAccessBin" +
+      "dings\022\352\001\n\021SetAccessBindings\022-.yandex.clo" +
+      "ud.access.SetAccessBindingsRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"\202\001\202\323\344\223\002?\":" +
+      "/compute/v1/instanceGroups/{resource_id}" +
+      ":setAccessBindings:\001*\262\322*9\n access.SetAcc" +
+      "essBindingsMetadata\022\025google.protobuf.Emp" +
+      "ty\022\366\001\n\024UpdateAccessBindings\0220.yandex.clo" +
+      "ud.access.UpdateAccessBindingsRequest\032!." +
+      "yandex.cloud.operation.Operation\"\210\001\202\323\344\223\002" +
+      "B\"=/compute/v1/instanceGroups/{resource_" +
+      "id}:updateAccessBindings:\001*\262\322*<\n#access." +
+      "UpdateAccessBindingsMetadata\022\025google.pro" +
+      "tobuf.Empty\022\203\002\n\017ResumeProcesses\022J.yandex" +
+      ".cloud.compute.v1.instancegroup.ResumeIn" +
+      "stanceGroupProcessesRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\200\001\202\323\344\223\002C\">/comput" +
+      "e/v1/instanceGroups/{instance_group_id}:" +
+      "resumeProcesses:\001*\262\322*3\n\"ResumeInstanceGr" +
+      "oupProcessMetadata\022\rInstanceGroup\022\376\001\n\016Pa" +
+      "useProcesses\022I.yandex.cloud.compute.v1.i" +
+      "nstancegroup.PauseInstanceGroupProcesses" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"~\202\323\344\223\002B\"=/compute/v1/instanceGroups/{" +
+      "instance_group_id}:pauseProcesses:\001*\262\322*2" +
+      "\n!PauseInstanceGroupProcessMetadata\022\rIns" +
+      "tanceGroupB\204\001\n)yandex.cloud.api.compute." +
+      "v1.instancegroupZWgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/compute/v1/in" +
+      "stancegroup;instancegroupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

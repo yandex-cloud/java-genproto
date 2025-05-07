@@ -264,6 +264,14 @@ public final class SearchQueryOuterClass {
        * <code>SEARCH_TYPE_BE = 5;</code>
        */
       SEARCH_TYPE_BE(5),
+      /**
+       * <pre>
+       * Uzbek search type, yandex.uz search domain name will be used.
+       * </pre>
+       *
+       * <code>SEARCH_TYPE_UZ = 6;</code>
+       */
+      SEARCH_TYPE_UZ(6),
       UNRECOGNIZED(-1),
       ;
 
@@ -311,6 +319,14 @@ public final class SearchQueryOuterClass {
        * <code>SEARCH_TYPE_BE = 5;</code>
        */
       public static final int SEARCH_TYPE_BE_VALUE = 5;
+      /**
+       * <pre>
+       * Uzbek search type, yandex.uz search domain name will be used.
+       * </pre>
+       *
+       * <code>SEARCH_TYPE_UZ = 6;</code>
+       */
+      public static final int SEARCH_TYPE_UZ_VALUE = 6;
 
 
       public final int getNumber() {
@@ -343,6 +359,7 @@ public final class SearchQueryOuterClass {
           case 3: return SEARCH_TYPE_COM;
           case 4: return SEARCH_TYPE_KK;
           case 5: return SEARCH_TYPE_BE;
+          case 6: return SEARCH_TYPE_UZ;
           default: return null;
         }
       }
@@ -1625,7 +1642,7 @@ public final class SearchQueryOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/searchapi/v2/search_query" +
       ".proto\022\031yandex.cloud.searchapi.v2\032\035yande" +
-      "x/cloud/validation.proto\"\207\005\n\013SearchQuery" +
+      "x/cloud/validation.proto\"\233\005\n\013SearchQuery" +
       "\022L\n\013search_type\030\001 \001(\01621.yandex.cloud.sea" +
       "rchapi.v2.SearchQuery.SearchTypeB\004\350\3071\001\022!" +
       "\n\nquery_text\030\002 \001(\tB\r\350\3071\001\212\3101\005<=400\022F\n\013fam" +
@@ -1633,18 +1650,19 @@ public final class SearchQueryOuterClass {
       "v2.SearchQuery.FamilyMode\022\025\n\004page\030\004 \001(\003B" +
       "\007\372\3071\003>=0\022I\n\rfix_typo_mode\030\005 \001(\01622.yandex" +
       ".cloud.searchapi.v2.SearchQuery.FixTypoM" +
-      "ode\"\216\001\n\nSearchType\022\033\n\027SEARCH_TYPE_UNSPEC" +
+      "ode\"\242\001\n\nSearchType\022\033\n\027SEARCH_TYPE_UNSPEC" +
       "IFIED\020\000\022\022\n\016SEARCH_TYPE_RU\020\001\022\022\n\016SEARCH_TY" +
       "PE_TR\020\002\022\023\n\017SEARCH_TYPE_COM\020\003\022\022\n\016SEARCH_T" +
-      "YPE_KK\020\004\022\022\n\016SEARCH_TYPE_BE\020\005\"q\n\nFamilyMo" +
-      "de\022\033\n\027FAMILY_MODE_UNSPECIFIED\020\000\022\024\n\020FAMIL" +
-      "Y_MODE_NONE\020\001\022\030\n\024FAMILY_MODE_MODERATE\020\002\022" +
-      "\026\n\022FAMILY_MODE_STRICT\020\003\"Y\n\013FixTypoMode\022\035" +
-      "\n\031FIX_TYPO_MODE_UNSPECIFIED\020\000\022\024\n\020FIX_TYP" +
-      "O_MODE_ON\020\001\022\025\n\021FIX_TYPO_MODE_OFF\020\002Be\n\032ya" +
-      "ndex.cloud.api.search.v2ZGgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/searc" +
-      "hapi/v2;searchapib\006proto3"
+      "YPE_KK\020\004\022\022\n\016SEARCH_TYPE_BE\020\005\022\022\n\016SEARCH_T" +
+      "YPE_UZ\020\006\"q\n\nFamilyMode\022\033\n\027FAMILY_MODE_UN" +
+      "SPECIFIED\020\000\022\024\n\020FAMILY_MODE_NONE\020\001\022\030\n\024FAM" +
+      "ILY_MODE_MODERATE\020\002\022\026\n\022FAMILY_MODE_STRIC" +
+      "T\020\003\"Y\n\013FixTypoMode\022\035\n\031FIX_TYPO_MODE_UNSP" +
+      "ECIFIED\020\000\022\024\n\020FIX_TYPO_MODE_ON\020\001\022\025\n\021FIX_T" +
+      "YPO_MODE_OFF\020\002Be\n\032yandex.cloud.api.searc" +
+      "h.v2ZGgithub.com/yandex-cloud/go-genprot" +
+      "o/yandex/cloud/searchapi/v2;searchapib\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

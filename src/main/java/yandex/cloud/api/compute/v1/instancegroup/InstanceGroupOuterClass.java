@@ -17625,7 +17625,7 @@ public final class InstanceGroupOuterClass {
      * Instance startup duration.
      * Instance will be considered up and running (and start receiving traffic) only after startup_duration
      * has elapsed and all health checks are passed.
-     * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+     * See [ManagedInstance.Status] for more information.
      * </pre>
      *
      * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -17637,7 +17637,7 @@ public final class InstanceGroupOuterClass {
      * Instance startup duration.
      * Instance will be considered up and running (and start receiving traffic) only after startup_duration
      * has elapsed and all health checks are passed.
-     * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+     * See [ManagedInstance.Status] for more information.
      * </pre>
      *
      * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -17649,7 +17649,7 @@ public final class InstanceGroupOuterClass {
      * Instance startup duration.
      * Instance will be considered up and running (and start receiving traffic) only after startup_duration
      * has elapsed and all health checks are passed.
-     * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+     * See [ManagedInstance.Status] for more information.
      * </pre>
      *
      * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -18178,7 +18178,7 @@ public final class InstanceGroupOuterClass {
      * Instance startup duration.
      * Instance will be considered up and running (and start receiving traffic) only after startup_duration
      * has elapsed and all health checks are passed.
-     * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+     * See [ManagedInstance.Status] for more information.
      * </pre>
      *
      * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -18193,7 +18193,7 @@ public final class InstanceGroupOuterClass {
      * Instance startup duration.
      * Instance will be considered up and running (and start receiving traffic) only after startup_duration
      * has elapsed and all health checks are passed.
-     * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+     * See [ManagedInstance.Status] for more information.
      * </pre>
      *
      * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -18208,7 +18208,7 @@ public final class InstanceGroupOuterClass {
      * Instance startup duration.
      * Instance will be considered up and running (and start receiving traffic) only after startup_duration
      * has elapsed and all health checks are passed.
-     * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+     * See [ManagedInstance.Status] for more information.
      * </pre>
      *
      * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -18891,7 +18891,7 @@ public final class InstanceGroupOuterClass {
        * Instance startup duration.
        * Instance will be considered up and running (and start receiving traffic) only after startup_duration
        * has elapsed and all health checks are passed.
-       * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+       * See [ManagedInstance.Status] for more information.
        * </pre>
        *
        * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -18905,7 +18905,7 @@ public final class InstanceGroupOuterClass {
        * Instance startup duration.
        * Instance will be considered up and running (and start receiving traffic) only after startup_duration
        * has elapsed and all health checks are passed.
-       * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+       * See [ManagedInstance.Status] for more information.
        * </pre>
        *
        * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -18923,7 +18923,7 @@ public final class InstanceGroupOuterClass {
        * Instance startup duration.
        * Instance will be considered up and running (and start receiving traffic) only after startup_duration
        * has elapsed and all health checks are passed.
-       * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+       * See [ManagedInstance.Status] for more information.
        * </pre>
        *
        * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -18946,7 +18946,7 @@ public final class InstanceGroupOuterClass {
        * Instance startup duration.
        * Instance will be considered up and running (and start receiving traffic) only after startup_duration
        * has elapsed and all health checks are passed.
-       * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+       * See [ManagedInstance.Status] for more information.
        * </pre>
        *
        * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -18967,7 +18967,7 @@ public final class InstanceGroupOuterClass {
        * Instance startup duration.
        * Instance will be considered up and running (and start receiving traffic) only after startup_duration
        * has elapsed and all health checks are passed.
-       * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+       * See [ManagedInstance.Status] for more information.
        * </pre>
        *
        * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -18992,7 +18992,7 @@ public final class InstanceGroupOuterClass {
        * Instance startup duration.
        * Instance will be considered up and running (and start receiving traffic) only after startup_duration
        * has elapsed and all health checks are passed.
-       * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+       * See [ManagedInstance.Status] for more information.
        * </pre>
        *
        * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -19013,7 +19013,7 @@ public final class InstanceGroupOuterClass {
        * Instance startup duration.
        * Instance will be considered up and running (and start receiving traffic) only after startup_duration
        * has elapsed and all health checks are passed.
-       * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+       * See [ManagedInstance.Status] for more information.
        * </pre>
        *
        * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -19028,7 +19028,7 @@ public final class InstanceGroupOuterClass {
        * Instance startup duration.
        * Instance will be considered up and running (and start receiving traffic) only after startup_duration
        * has elapsed and all health checks are passed.
-       * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+       * See [ManagedInstance.Status] for more information.
        * </pre>
        *
        * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>
@@ -19046,7 +19046,7 @@ public final class InstanceGroupOuterClass {
        * Instance startup duration.
        * Instance will be considered up and running (and start receiving traffic) only after startup_duration
        * has elapsed and all health checks are passed.
-       * See [yandex.cloud.compute.v1.instancegroup.ManagedInstance.Status] for more information.
+       * See [ManagedInstance.Status] for more information.
        * </pre>
        *
        * <code>.google.protobuf.Duration startup_duration = 7 [(.yandex.cloud.value) = "0m-1h"];</code>

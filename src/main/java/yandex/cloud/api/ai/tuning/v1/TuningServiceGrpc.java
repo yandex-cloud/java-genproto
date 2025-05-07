@@ -454,6 +454,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public void createDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse> responseObserver) {
@@ -461,6 +464,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public void updateDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse> responseObserver) {
@@ -468,6 +474,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public void deleteDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse> responseObserver) {
@@ -475,6 +484,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public void tuneDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -635,6 +647,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public void createDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse> responseObserver) {
@@ -643,6 +658,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public void updateDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse> responseObserver) {
@@ -651,6 +669,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public void deleteDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse> responseObserver) {
@@ -659,6 +680,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public void tuneDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -731,6 +755,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse createDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -738,6 +765,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse updateDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -745,6 +775,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse deleteDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -752,6 +785,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation tuneDraft(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -830,6 +866,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftResponse> createDraft(
         yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.CreateTuningDraftRequest request) {
@@ -838,6 +877,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftResponse> updateDraft(
         yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.UpdateTuningDraftRequest request) {
@@ -846,6 +888,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftResponse> deleteDraft(
         yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.DeleteTuningDraftRequest request) {
@@ -854,6 +899,9 @@ public final class TuningServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unimplemented
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> tuneDraft(
         yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuneDraftRequest request) {

@@ -4017,29 +4017,117 @@ public final class SearchIndexOuterClass {
      * Tokenizer that generates n-grams.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the ngramTokenizer field is set.
      */
-    boolean hasNgramTokenizer();
+    @java.lang.Deprecated boolean hasNgramTokenizer();
     /**
      * <pre>
      * Tokenizer that generates n-grams.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The ngramTokenizer.
      */
-    yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getNgramTokenizer();
+    @java.lang.Deprecated yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getNgramTokenizer();
     /**
      * <pre>
      * Tokenizer that generates n-grams.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
      */
-    yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder getNgramTokenizerOrBuilder();
+    @java.lang.Deprecated yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder getNgramTokenizerOrBuilder();
+
+    /**
+     * <pre>
+     * Tokenizer that generates words.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+     * @return Whether the standardTokenizer field is set.
+     */
+    boolean hasStandardTokenizer();
+    /**
+     * <pre>
+     * Tokenizer that generates words.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+     * @return The standardTokenizer.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer getStandardTokenizer();
+    /**
+     * <pre>
+     * Tokenizer that generates words.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizerOrBuilder getStandardTokenizerOrBuilder();
+
+    /**
+     * <pre>
+     * Standard analyzer that performs common text processing operations to normalize text.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+     * @return Whether the standardAnalyzer field is set.
+     */
+    boolean hasStandardAnalyzer();
+    /**
+     * <pre>
+     * Standard analyzer that performs common text processing operations to normalize text.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+     * @return The standardAnalyzer.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer getStandardAnalyzer();
+    /**
+     * <pre>
+     * Standard analyzer that performs common text processing operations to normalize text.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzerOrBuilder getStandardAnalyzerOrBuilder();
+
+    /**
+     * <pre>
+     * Specialized analyzer that uses Yandex's lemmatization technology,
+     * particularly effective for Russian and other Slavic languages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+     * @return Whether the yandexLemmerAnalyzer field is set.
+     */
+    boolean hasYandexLemmerAnalyzer();
+    /**
+     * <pre>
+     * Specialized analyzer that uses Yandex's lemmatization technology,
+     * particularly effective for Russian and other Slavic languages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+     * @return The yandexLemmerAnalyzer.
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer getYandexLemmerAnalyzer();
+    /**
+     * <pre>
+     * Specialized analyzer that uses Yandex's lemmatization technology,
+     * particularly effective for Russian and other Slavic languages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzerOrBuilder getYandexLemmerAnalyzerOrBuilder();
 
     public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.TextTokenizerCase getTextTokenizerCase();
+
+    public yandex.cloud.api.ai.assistants.v1.searchindex.SearchIndexOuterClass.TextSearchIndex.TextAnalyzerCase getTextAnalyzerCase();
   }
   /**
    * <pre>
@@ -4117,6 +4205,48 @@ public final class SearchIndexOuterClass {
               textTokenizerCase_ = 2;
               break;
             }
+            case 26: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.Builder subBuilder = null;
+              if (textTokenizerCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_).toBuilder();
+              }
+              textTokenizer_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_);
+                textTokenizer_ = subBuilder.buildPartial();
+              }
+              textTokenizerCase_ = 3;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.Builder subBuilder = null;
+              if (textAnalyzerCase_ == 4) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_).toBuilder();
+              }
+              textAnalyzer_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_);
+                textAnalyzer_ = subBuilder.buildPartial();
+              }
+              textAnalyzerCase_ = 4;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.Builder subBuilder = null;
+              if (textAnalyzerCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_).toBuilder();
+              }
+              textAnalyzer_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_);
+                textAnalyzer_ = subBuilder.buildPartial();
+              }
+              textAnalyzerCase_ = 5;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4154,7 +4284,8 @@ public final class SearchIndexOuterClass {
     public enum TextTokenizerCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      NGRAM_TOKENIZER(2),
+      @java.lang.Deprecated NGRAM_TOKENIZER(2),
+      STANDARD_TOKENIZER(3),
       TEXTTOKENIZER_NOT_SET(0);
       private final int value;
       private TextTokenizerCase(int value) {
@@ -4173,6 +4304,7 @@ public final class SearchIndexOuterClass {
       public static TextTokenizerCase forNumber(int value) {
         switch (value) {
           case 2: return NGRAM_TOKENIZER;
+          case 3: return STANDARD_TOKENIZER;
           case 0: return TEXTTOKENIZER_NOT_SET;
           default: return null;
         }
@@ -4186,6 +4318,47 @@ public final class SearchIndexOuterClass {
     getTextTokenizerCase() {
       return TextTokenizerCase.forNumber(
           textTokenizerCase_);
+    }
+
+    private int textAnalyzerCase_ = 0;
+    private java.lang.Object textAnalyzer_;
+    public enum TextAnalyzerCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      STANDARD_ANALYZER(4),
+      YANDEX_LEMMER_ANALYZER(5),
+      TEXTANALYZER_NOT_SET(0);
+      private final int value;
+      private TextAnalyzerCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TextAnalyzerCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TextAnalyzerCase forNumber(int value) {
+        switch (value) {
+          case 4: return STANDARD_ANALYZER;
+          case 5: return YANDEX_LEMMER_ANALYZER;
+          case 0: return TEXTANALYZER_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TextAnalyzerCase
+    getTextAnalyzerCase() {
+      return TextAnalyzerCase.forNumber(
+          textAnalyzerCase_);
     }
 
     public static final int CHUNKING_STRATEGY_FIELD_NUMBER = 1;
@@ -4235,11 +4408,12 @@ public final class SearchIndexOuterClass {
      * Tokenizer that generates n-grams.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the ngramTokenizer field is set.
      */
     @java.lang.Override
-    public boolean hasNgramTokenizer() {
+    @java.lang.Deprecated public boolean hasNgramTokenizer() {
       return textTokenizerCase_ == 2;
     }
     /**
@@ -4247,11 +4421,12 @@ public final class SearchIndexOuterClass {
      * Tokenizer that generates n-grams.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
+     * @deprecated
      * @return The ngramTokenizer.
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getNgramTokenizer() {
+    @java.lang.Deprecated public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getNgramTokenizer() {
       if (textTokenizerCase_ == 2) {
          return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_;
       }
@@ -4262,14 +4437,146 @@ public final class SearchIndexOuterClass {
      * Tokenizer that generates n-grams.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder getNgramTokenizerOrBuilder() {
+    @java.lang.Deprecated public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder getNgramTokenizerOrBuilder() {
       if (textTokenizerCase_ == 2) {
          return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_;
       }
       return yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance();
+    }
+
+    public static final int STANDARD_TOKENIZER_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Tokenizer that generates words.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+     * @return Whether the standardTokenizer field is set.
+     */
+    @java.lang.Override
+    public boolean hasStandardTokenizer() {
+      return textTokenizerCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Tokenizer that generates words.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+     * @return The standardTokenizer.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer getStandardTokenizer() {
+      if (textTokenizerCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Tokenizer that generates words.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizerOrBuilder getStandardTokenizerOrBuilder() {
+      if (textTokenizerCase_ == 3) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.getDefaultInstance();
+    }
+
+    public static final int STANDARD_ANALYZER_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * Standard analyzer that performs common text processing operations to normalize text.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+     * @return Whether the standardAnalyzer field is set.
+     */
+    @java.lang.Override
+    public boolean hasStandardAnalyzer() {
+      return textAnalyzerCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Standard analyzer that performs common text processing operations to normalize text.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+     * @return The standardAnalyzer.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer getStandardAnalyzer() {
+      if (textAnalyzerCase_ == 4) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Standard analyzer that performs common text processing operations to normalize text.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzerOrBuilder getStandardAnalyzerOrBuilder() {
+      if (textAnalyzerCase_ == 4) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.getDefaultInstance();
+    }
+
+    public static final int YANDEX_LEMMER_ANALYZER_FIELD_NUMBER = 5;
+    /**
+     * <pre>
+     * Specialized analyzer that uses Yandex's lemmatization technology,
+     * particularly effective for Russian and other Slavic languages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+     * @return Whether the yandexLemmerAnalyzer field is set.
+     */
+    @java.lang.Override
+    public boolean hasYandexLemmerAnalyzer() {
+      return textAnalyzerCase_ == 5;
+    }
+    /**
+     * <pre>
+     * Specialized analyzer that uses Yandex's lemmatization technology,
+     * particularly effective for Russian and other Slavic languages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+     * @return The yandexLemmerAnalyzer.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer getYandexLemmerAnalyzer() {
+      if (textAnalyzerCase_ == 5) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Specialized analyzer that uses Yandex's lemmatization technology,
+     * particularly effective for Russian and other Slavic languages.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzerOrBuilder getYandexLemmerAnalyzerOrBuilder() {
+      if (textAnalyzerCase_ == 5) {
+         return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4292,6 +4599,15 @@ public final class SearchIndexOuterClass {
       if (textTokenizerCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_);
       }
+      if (textTokenizerCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_);
+      }
+      if (textAnalyzerCase_ == 4) {
+        output.writeMessage(4, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_);
+      }
+      if (textAnalyzerCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4308,6 +4624,18 @@ public final class SearchIndexOuterClass {
       if (textTokenizerCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_);
+      }
+      if (textTokenizerCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_);
+      }
+      if (textAnalyzerCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_);
+      }
+      if (textAnalyzerCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4335,6 +4663,23 @@ public final class SearchIndexOuterClass {
           if (!getNgramTokenizer()
               .equals(other.getNgramTokenizer())) return false;
           break;
+        case 3:
+          if (!getStandardTokenizer()
+              .equals(other.getStandardTokenizer())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getTextAnalyzerCase().equals(other.getTextAnalyzerCase())) return false;
+      switch (textAnalyzerCase_) {
+        case 4:
+          if (!getStandardAnalyzer()
+              .equals(other.getStandardAnalyzer())) return false;
+          break;
+        case 5:
+          if (!getYandexLemmerAnalyzer()
+              .equals(other.getYandexLemmerAnalyzer())) return false;
+          break;
         case 0:
         default:
       }
@@ -4357,6 +4702,22 @@ public final class SearchIndexOuterClass {
         case 2:
           hash = (37 * hash) + NGRAM_TOKENIZER_FIELD_NUMBER;
           hash = (53 * hash) + getNgramTokenizer().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + STANDARD_TOKENIZER_FIELD_NUMBER;
+          hash = (53 * hash) + getStandardTokenizer().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      switch (textAnalyzerCase_) {
+        case 4:
+          hash = (37 * hash) + STANDARD_ANALYZER_FIELD_NUMBER;
+          hash = (53 * hash) + getStandardAnalyzer().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + YANDEX_LEMMER_ANALYZER_FIELD_NUMBER;
+          hash = (53 * hash) + getYandexLemmerAnalyzer().hashCode();
           break;
         case 0:
         default:
@@ -4506,6 +4867,8 @@ public final class SearchIndexOuterClass {
         }
         textTokenizerCase_ = 0;
         textTokenizer_ = null;
+        textAnalyzerCase_ = 0;
+        textAnalyzer_ = null;
         return this;
       }
 
@@ -4544,7 +4907,29 @@ public final class SearchIndexOuterClass {
             result.textTokenizer_ = ngramTokenizerBuilder_.build();
           }
         }
+        if (textTokenizerCase_ == 3) {
+          if (standardTokenizerBuilder_ == null) {
+            result.textTokenizer_ = textTokenizer_;
+          } else {
+            result.textTokenizer_ = standardTokenizerBuilder_.build();
+          }
+        }
+        if (textAnalyzerCase_ == 4) {
+          if (standardAnalyzerBuilder_ == null) {
+            result.textAnalyzer_ = textAnalyzer_;
+          } else {
+            result.textAnalyzer_ = standardAnalyzerBuilder_.build();
+          }
+        }
+        if (textAnalyzerCase_ == 5) {
+          if (yandexLemmerAnalyzerBuilder_ == null) {
+            result.textAnalyzer_ = textAnalyzer_;
+          } else {
+            result.textAnalyzer_ = yandexLemmerAnalyzerBuilder_.build();
+          }
+        }
         result.textTokenizerCase_ = textTokenizerCase_;
+        result.textAnalyzerCase_ = textAnalyzerCase_;
         onBuilt();
         return result;
       }
@@ -4601,7 +4986,24 @@ public final class SearchIndexOuterClass {
             mergeNgramTokenizer(other.getNgramTokenizer());
             break;
           }
+          case STANDARD_TOKENIZER: {
+            mergeStandardTokenizer(other.getStandardTokenizer());
+            break;
+          }
           case TEXTTOKENIZER_NOT_SET: {
+            break;
+          }
+        }
+        switch (other.getTextAnalyzerCase()) {
+          case STANDARD_ANALYZER: {
+            mergeStandardAnalyzer(other.getStandardAnalyzer());
+            break;
+          }
+          case YANDEX_LEMMER_ANALYZER: {
+            mergeYandexLemmerAnalyzer(other.getYandexLemmerAnalyzer());
+            break;
+          }
+          case TEXTANALYZER_NOT_SET: {
             break;
           }
         }
@@ -4644,6 +5046,21 @@ public final class SearchIndexOuterClass {
       public Builder clearTextTokenizer() {
         textTokenizerCase_ = 0;
         textTokenizer_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int textAnalyzerCase_ = 0;
+      private java.lang.Object textAnalyzer_;
+      public TextAnalyzerCase
+          getTextAnalyzerCase() {
+        return TextAnalyzerCase.forNumber(
+            textAnalyzerCase_);
+      }
+
+      public Builder clearTextAnalyzer() {
+        textAnalyzerCase_ = 0;
+        textAnalyzer_ = null;
         onChanged();
         return this;
       }
@@ -4820,11 +5237,12 @@ public final class SearchIndexOuterClass {
        * Tokenizer that generates n-grams.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the ngramTokenizer field is set.
        */
       @java.lang.Override
-      public boolean hasNgramTokenizer() {
+      @java.lang.Deprecated public boolean hasNgramTokenizer() {
         return textTokenizerCase_ == 2;
       }
       /**
@@ -4832,11 +5250,12 @@ public final class SearchIndexOuterClass {
        * Tokenizer that generates n-grams.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
+       * @deprecated
        * @return The ngramTokenizer.
        */
       @java.lang.Override
-      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getNgramTokenizer() {
+      @java.lang.Deprecated public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer getNgramTokenizer() {
         if (ngramTokenizerBuilder_ == null) {
           if (textTokenizerCase_ == 2) {
             return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer) textTokenizer_;
@@ -4854,9 +5273,9 @@ public final class SearchIndexOuterClass {
        * Tokenizer that generates n-grams.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
        */
-      public Builder setNgramTokenizer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer value) {
+      @java.lang.Deprecated public Builder setNgramTokenizer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer value) {
         if (ngramTokenizerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4874,9 +5293,9 @@ public final class SearchIndexOuterClass {
        * Tokenizer that generates n-grams.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
        */
-      public Builder setNgramTokenizer(
+      @java.lang.Deprecated public Builder setNgramTokenizer(
           yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder builderForValue) {
         if (ngramTokenizerBuilder_ == null) {
           textTokenizer_ = builderForValue.build();
@@ -4892,9 +5311,9 @@ public final class SearchIndexOuterClass {
        * Tokenizer that generates n-grams.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
        */
-      public Builder mergeNgramTokenizer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer value) {
+      @java.lang.Deprecated public Builder mergeNgramTokenizer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer value) {
         if (ngramTokenizerBuilder_ == null) {
           if (textTokenizerCase_ == 2 &&
               textTokenizer_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.getDefaultInstance()) {
@@ -4918,9 +5337,9 @@ public final class SearchIndexOuterClass {
        * Tokenizer that generates n-grams.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
        */
-      public Builder clearNgramTokenizer() {
+      @java.lang.Deprecated public Builder clearNgramTokenizer() {
         if (ngramTokenizerBuilder_ == null) {
           if (textTokenizerCase_ == 2) {
             textTokenizerCase_ = 0;
@@ -4941,9 +5360,9 @@ public final class SearchIndexOuterClass {
        * Tokenizer that generates n-grams.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
        */
-      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder getNgramTokenizerBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder getNgramTokenizerBuilder() {
         return getNgramTokenizerFieldBuilder().getBuilder();
       }
       /**
@@ -4951,10 +5370,10 @@ public final class SearchIndexOuterClass {
        * Tokenizer that generates n-grams.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
        */
       @java.lang.Override
-      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder getNgramTokenizerOrBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder getNgramTokenizerOrBuilder() {
         if ((textTokenizerCase_ == 2) && (ngramTokenizerBuilder_ != null)) {
           return ngramTokenizerBuilder_.getMessageOrBuilder();
         } else {
@@ -4969,7 +5388,7 @@ public final class SearchIndexOuterClass {
        * Tokenizer that generates n-grams.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2;</code>
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.NgramTokenizer ngram_tokenizer = 2 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.NgramTokenizerOrBuilder> 
@@ -4988,6 +5407,546 @@ public final class SearchIndexOuterClass {
         textTokenizerCase_ = 2;
         onChanged();;
         return ngramTokenizerBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizerOrBuilder> standardTokenizerBuilder_;
+      /**
+       * <pre>
+       * Tokenizer that generates words.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+       * @return Whether the standardTokenizer field is set.
+       */
+      @java.lang.Override
+      public boolean hasStandardTokenizer() {
+        return textTokenizerCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates words.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+       * @return The standardTokenizer.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer getStandardTokenizer() {
+        if (standardTokenizerBuilder_ == null) {
+          if (textTokenizerCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.getDefaultInstance();
+        } else {
+          if (textTokenizerCase_ == 3) {
+            return standardTokenizerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates words.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+       */
+      public Builder setStandardTokenizer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer value) {
+        if (standardTokenizerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          textTokenizer_ = value;
+          onChanged();
+        } else {
+          standardTokenizerBuilder_.setMessage(value);
+        }
+        textTokenizerCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates words.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+       */
+      public Builder setStandardTokenizer(
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.Builder builderForValue) {
+        if (standardTokenizerBuilder_ == null) {
+          textTokenizer_ = builderForValue.build();
+          onChanged();
+        } else {
+          standardTokenizerBuilder_.setMessage(builderForValue.build());
+        }
+        textTokenizerCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates words.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+       */
+      public Builder mergeStandardTokenizer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer value) {
+        if (standardTokenizerBuilder_ == null) {
+          if (textTokenizerCase_ == 3 &&
+              textTokenizer_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.getDefaultInstance()) {
+            textTokenizer_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.newBuilder((yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            textTokenizer_ = value;
+          }
+          onChanged();
+        } else {
+          if (textTokenizerCase_ == 3) {
+            standardTokenizerBuilder_.mergeFrom(value);
+          }
+          standardTokenizerBuilder_.setMessage(value);
+        }
+        textTokenizerCase_ = 3;
+        return this;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates words.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+       */
+      public Builder clearStandardTokenizer() {
+        if (standardTokenizerBuilder_ == null) {
+          if (textTokenizerCase_ == 3) {
+            textTokenizerCase_ = 0;
+            textTokenizer_ = null;
+            onChanged();
+          }
+        } else {
+          if (textTokenizerCase_ == 3) {
+            textTokenizerCase_ = 0;
+            textTokenizer_ = null;
+          }
+          standardTokenizerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates words.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.Builder getStandardTokenizerBuilder() {
+        return getStandardTokenizerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates words.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizerOrBuilder getStandardTokenizerOrBuilder() {
+        if ((textTokenizerCase_ == 3) && (standardTokenizerBuilder_ != null)) {
+          return standardTokenizerBuilder_.getMessageOrBuilder();
+        } else {
+          if (textTokenizerCase_ == 3) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Tokenizer that generates words.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardTokenizer standard_tokenizer = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizerOrBuilder> 
+          getStandardTokenizerFieldBuilder() {
+        if (standardTokenizerBuilder_ == null) {
+          if (!(textTokenizerCase_ == 3)) {
+            textTokenizer_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.getDefaultInstance();
+          }
+          standardTokenizerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizerOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardTokenizer) textTokenizer_,
+                  getParentForChildren(),
+                  isClean());
+          textTokenizer_ = null;
+        }
+        textTokenizerCase_ = 3;
+        onChanged();;
+        return standardTokenizerBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzerOrBuilder> standardAnalyzerBuilder_;
+      /**
+       * <pre>
+       * Standard analyzer that performs common text processing operations to normalize text.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+       * @return Whether the standardAnalyzer field is set.
+       */
+      @java.lang.Override
+      public boolean hasStandardAnalyzer() {
+        return textAnalyzerCase_ == 4;
+      }
+      /**
+       * <pre>
+       * Standard analyzer that performs common text processing operations to normalize text.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+       * @return The standardAnalyzer.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer getStandardAnalyzer() {
+        if (standardAnalyzerBuilder_ == null) {
+          if (textAnalyzerCase_ == 4) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.getDefaultInstance();
+        } else {
+          if (textAnalyzerCase_ == 4) {
+            return standardAnalyzerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Standard analyzer that performs common text processing operations to normalize text.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+       */
+      public Builder setStandardAnalyzer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer value) {
+        if (standardAnalyzerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          textAnalyzer_ = value;
+          onChanged();
+        } else {
+          standardAnalyzerBuilder_.setMessage(value);
+        }
+        textAnalyzerCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * Standard analyzer that performs common text processing operations to normalize text.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+       */
+      public Builder setStandardAnalyzer(
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.Builder builderForValue) {
+        if (standardAnalyzerBuilder_ == null) {
+          textAnalyzer_ = builderForValue.build();
+          onChanged();
+        } else {
+          standardAnalyzerBuilder_.setMessage(builderForValue.build());
+        }
+        textAnalyzerCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * Standard analyzer that performs common text processing operations to normalize text.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+       */
+      public Builder mergeStandardAnalyzer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer value) {
+        if (standardAnalyzerBuilder_ == null) {
+          if (textAnalyzerCase_ == 4 &&
+              textAnalyzer_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.getDefaultInstance()) {
+            textAnalyzer_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.newBuilder((yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            textAnalyzer_ = value;
+          }
+          onChanged();
+        } else {
+          if (textAnalyzerCase_ == 4) {
+            standardAnalyzerBuilder_.mergeFrom(value);
+          }
+          standardAnalyzerBuilder_.setMessage(value);
+        }
+        textAnalyzerCase_ = 4;
+        return this;
+      }
+      /**
+       * <pre>
+       * Standard analyzer that performs common text processing operations to normalize text.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+       */
+      public Builder clearStandardAnalyzer() {
+        if (standardAnalyzerBuilder_ == null) {
+          if (textAnalyzerCase_ == 4) {
+            textAnalyzerCase_ = 0;
+            textAnalyzer_ = null;
+            onChanged();
+          }
+        } else {
+          if (textAnalyzerCase_ == 4) {
+            textAnalyzerCase_ = 0;
+            textAnalyzer_ = null;
+          }
+          standardAnalyzerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Standard analyzer that performs common text processing operations to normalize text.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.Builder getStandardAnalyzerBuilder() {
+        return getStandardAnalyzerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Standard analyzer that performs common text processing operations to normalize text.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzerOrBuilder getStandardAnalyzerOrBuilder() {
+        if ((textAnalyzerCase_ == 4) && (standardAnalyzerBuilder_ != null)) {
+          return standardAnalyzerBuilder_.getMessageOrBuilder();
+        } else {
+          if (textAnalyzerCase_ == 4) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Standard analyzer that performs common text processing operations to normalize text.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.StandardAnalyzer standard_analyzer = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzerOrBuilder> 
+          getStandardAnalyzerFieldBuilder() {
+        if (standardAnalyzerBuilder_ == null) {
+          if (!(textAnalyzerCase_ == 4)) {
+            textAnalyzer_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.getDefaultInstance();
+          }
+          standardAnalyzerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzerOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.searchindex.Common.StandardAnalyzer) textAnalyzer_,
+                  getParentForChildren(),
+                  isClean());
+          textAnalyzer_ = null;
+        }
+        textAnalyzerCase_ = 4;
+        onChanged();;
+        return standardAnalyzerBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzerOrBuilder> yandexLemmerAnalyzerBuilder_;
+      /**
+       * <pre>
+       * Specialized analyzer that uses Yandex's lemmatization technology,
+       * particularly effective for Russian and other Slavic languages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+       * @return Whether the yandexLemmerAnalyzer field is set.
+       */
+      @java.lang.Override
+      public boolean hasYandexLemmerAnalyzer() {
+        return textAnalyzerCase_ == 5;
+      }
+      /**
+       * <pre>
+       * Specialized analyzer that uses Yandex's lemmatization technology,
+       * particularly effective for Russian and other Slavic languages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+       * @return The yandexLemmerAnalyzer.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer getYandexLemmerAnalyzer() {
+        if (yandexLemmerAnalyzerBuilder_ == null) {
+          if (textAnalyzerCase_ == 5) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.getDefaultInstance();
+        } else {
+          if (textAnalyzerCase_ == 5) {
+            return yandexLemmerAnalyzerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specialized analyzer that uses Yandex's lemmatization technology,
+       * particularly effective for Russian and other Slavic languages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+       */
+      public Builder setYandexLemmerAnalyzer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer value) {
+        if (yandexLemmerAnalyzerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          textAnalyzer_ = value;
+          onChanged();
+        } else {
+          yandexLemmerAnalyzerBuilder_.setMessage(value);
+        }
+        textAnalyzerCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specialized analyzer that uses Yandex's lemmatization technology,
+       * particularly effective for Russian and other Slavic languages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+       */
+      public Builder setYandexLemmerAnalyzer(
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.Builder builderForValue) {
+        if (yandexLemmerAnalyzerBuilder_ == null) {
+          textAnalyzer_ = builderForValue.build();
+          onChanged();
+        } else {
+          yandexLemmerAnalyzerBuilder_.setMessage(builderForValue.build());
+        }
+        textAnalyzerCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specialized analyzer that uses Yandex's lemmatization technology,
+       * particularly effective for Russian and other Slavic languages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+       */
+      public Builder mergeYandexLemmerAnalyzer(yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer value) {
+        if (yandexLemmerAnalyzerBuilder_ == null) {
+          if (textAnalyzerCase_ == 5 &&
+              textAnalyzer_ != yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.getDefaultInstance()) {
+            textAnalyzer_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.newBuilder((yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            textAnalyzer_ = value;
+          }
+          onChanged();
+        } else {
+          if (textAnalyzerCase_ == 5) {
+            yandexLemmerAnalyzerBuilder_.mergeFrom(value);
+          }
+          yandexLemmerAnalyzerBuilder_.setMessage(value);
+        }
+        textAnalyzerCase_ = 5;
+        return this;
+      }
+      /**
+       * <pre>
+       * Specialized analyzer that uses Yandex's lemmatization technology,
+       * particularly effective for Russian and other Slavic languages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+       */
+      public Builder clearYandexLemmerAnalyzer() {
+        if (yandexLemmerAnalyzerBuilder_ == null) {
+          if (textAnalyzerCase_ == 5) {
+            textAnalyzerCase_ = 0;
+            textAnalyzer_ = null;
+            onChanged();
+          }
+        } else {
+          if (textAnalyzerCase_ == 5) {
+            textAnalyzerCase_ = 0;
+            textAnalyzer_ = null;
+          }
+          yandexLemmerAnalyzerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Specialized analyzer that uses Yandex's lemmatization technology,
+       * particularly effective for Russian and other Slavic languages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.Builder getYandexLemmerAnalyzerBuilder() {
+        return getYandexLemmerAnalyzerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specialized analyzer that uses Yandex's lemmatization technology,
+       * particularly effective for Russian and other Slavic languages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzerOrBuilder getYandexLemmerAnalyzerOrBuilder() {
+        if ((textAnalyzerCase_ == 5) && (yandexLemmerAnalyzerBuilder_ != null)) {
+          return yandexLemmerAnalyzerBuilder_.getMessageOrBuilder();
+        } else {
+          if (textAnalyzerCase_ == 5) {
+            return (yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Specialized analyzer that uses Yandex's lemmatization technology,
+       * particularly effective for Russian and other Slavic languages.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.searchindex.YandexLemmerAnalyzer yandex_lemmer_analyzer = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzerOrBuilder> 
+          getYandexLemmerAnalyzerFieldBuilder() {
+        if (yandexLemmerAnalyzerBuilder_ == null) {
+          if (!(textAnalyzerCase_ == 5)) {
+            textAnalyzer_ = yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.getDefaultInstance();
+          }
+          yandexLemmerAnalyzerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer, yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer.Builder, yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzerOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.searchindex.Common.YandexLemmerAnalyzer) textAnalyzer_,
+                  getParentForChildren(),
+                  isClean());
+          textAnalyzer_ = null;
+        }
+        textAnalyzerCase_ = 5;
+        onChanged();;
+        return yandexLemmerAnalyzerBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7827,32 +8786,40 @@ public final class SearchIndexOuterClass {
       "id_search_index\030\016 \001(\0132<.yandex.cloud.ai." +
       "assistants.v1.searchindex.HybridSearchIn" +
       "dexH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001B\013\n\tIndexType\"\320\001\n\017TextSearch" +
+      "ue\030\002 \001(\t:\0028\001B\013\n\tIndexType\"\375\003\n\017TextSearch" +
       "Index\022V\n\021chunking_strategy\030\001 \001(\0132;.yande" +
       "x.cloud.ai.assistants.v1.searchindex.Chu" +
-      "nkingStrategy\022T\n\017ngram_tokenizer\030\002 \001(\01329" +
+      "nkingStrategy\022X\n\017ngram_tokenizer\030\002 \001(\01329" +
       ".yandex.cloud.ai.assistants.v1.searchind" +
-      "ex.NgramTokenizerH\000B\017\n\rTextTokenizer\"\241\001\n" +
-      "\021VectorSearchIndex\022\030\n\020doc_embedder_uri\030\001" +
-      " \001(\t\022\032\n\022query_embedder_uri\030\002 \001(\t\022V\n\021chun" +
-      "king_strategy\030\003 \001(\0132;.yandex.cloud.ai.as" +
-      "sistants.v1.searchindex.ChunkingStrategy" +
-      "\"\335\003\n\021HybridSearchIndex\022U\n\021text_search_in" +
-      "dex\030\001 \001(\0132:.yandex.cloud.ai.assistants.v" +
-      "1.searchindex.TextSearchIndex\022Y\n\023vector_" +
-      "search_index\030\002 \001(\0132<.yandex.cloud.ai.ass" +
-      "istants.v1.searchindex.VectorSearchIndex" +
-      "\022V\n\021chunking_strategy\030\003 \001(\0132;.yandex.clo" +
-      "ud.ai.assistants.v1.searchindex.Chunking" +
-      "Strategy\022`\n\026normalization_strategy\030\004 \001(\016" +
-      "2@.yandex.cloud.ai.assistants.v1.searchi" +
-      "ndex.NormalizationStrategy\022\\\n\024combinatio" +
-      "n_strategy\030\005 \001(\0132>.yandex.cloud.ai.assis" +
-      "tants.v1.searchindex.CombinationStrategy" +
-      "B\212\001\n-yandex.cloud.api.ai.assistants.v1.s" +
-      "earchindexZYgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/ai/assistants/v1/se" +
-      "archindex;searchindexb\006proto3"
+      "ex.NgramTokenizerB\002\030\001H\000\022Z\n\022standard_toke" +
+      "nizer\030\003 \001(\0132<.yandex.cloud.ai.assistants" +
+      ".v1.searchindex.StandardTokenizerH\000\022X\n\021s" +
+      "tandard_analyzer\030\004 \001(\0132;.yandex.cloud.ai" +
+      ".assistants.v1.searchindex.StandardAnaly" +
+      "zerH\001\022a\n\026yandex_lemmer_analyzer\030\005 \001(\0132?." +
+      "yandex.cloud.ai.assistants.v1.searchinde" +
+      "x.YandexLemmerAnalyzerH\001B\017\n\rTextTokenize" +
+      "rB\016\n\014TextAnalyzer\"\241\001\n\021VectorSearchIndex\022" +
+      "\030\n\020doc_embedder_uri\030\001 \001(\t\022\032\n\022query_embed" +
+      "der_uri\030\002 \001(\t\022V\n\021chunking_strategy\030\003 \001(\013" +
+      "2;.yandex.cloud.ai.assistants.v1.searchi" +
+      "ndex.ChunkingStrategy\"\335\003\n\021HybridSearchIn" +
+      "dex\022U\n\021text_search_index\030\001 \001(\0132:.yandex." +
+      "cloud.ai.assistants.v1.searchindex.TextS" +
+      "earchIndex\022Y\n\023vector_search_index\030\002 \001(\0132" +
+      "<.yandex.cloud.ai.assistants.v1.searchin" +
+      "dex.VectorSearchIndex\022V\n\021chunking_strate" +
+      "gy\030\003 \001(\0132;.yandex.cloud.ai.assistants.v1" +
+      ".searchindex.ChunkingStrategy\022`\n\026normali" +
+      "zation_strategy\030\004 \001(\0162@.yandex.cloud.ai." +
+      "assistants.v1.searchindex.NormalizationS" +
+      "trategy\022\\\n\024combination_strategy\030\005 \001(\0132>." +
+      "yandex.cloud.ai.assistants.v1.searchinde" +
+      "x.CombinationStrategyB\212\001\n-yandex.cloud.a" +
+      "pi.ai.assistants.v1.searchindexZYgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/ai/assistants/v1/searchindex;searchind" +
+      "exb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7878,7 +8845,7 @@ public final class SearchIndexOuterClass {
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_TextSearchIndex_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_searchindex_TextSearchIndex_descriptor,
-        new java.lang.String[] { "ChunkingStrategy", "NgramTokenizer", "TextTokenizer", });
+        new java.lang.String[] { "ChunkingStrategy", "NgramTokenizer", "StandardTokenizer", "StandardAnalyzer", "YandexLemmerAnalyzer", "TextTokenizer", "TextAnalyzer", });
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_VectorSearchIndex_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ai_assistants_v1_searchindex_VectorSearchIndex_fieldAccessorTable = new

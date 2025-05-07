@@ -6109,27 +6109,66 @@ public final class TuningServiceOuterClass {
         int index);
 
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
-    java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> 
+    @java.lang.Deprecated java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> 
         getValidationDatasetsList();
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
-    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index);
+    @java.lang.Deprecated yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index);
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
-    int getValidationDatasetsCount();
+    @java.lang.Deprecated int getValidationDatasetsCount();
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
-    java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+    @java.lang.Deprecated java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
         getValidationDatasetsOrBuilderList();
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
-    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+    @java.lang.Deprecated yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+        int index);
+
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+     * @return Whether the validationDataset field is set.
+     */
+    boolean hasValidationDataset();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+     * @return The validationDataset.
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDataset();
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetOrBuilder();
+
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> 
+        getTestDatasetsList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getTestDatasets(int index);
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    int getTestDatasetsCount();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getTestDatasetsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getTestDatasetsOrBuilder(
         int index);
 
     /**
@@ -6307,6 +6346,7 @@ public final class TuningServiceOuterClass {
       baseModelUri_ = "";
       trainDatasets_ = java.util.Collections.emptyList();
       validationDatasets_ = java.util.Collections.emptyList();
+      testDatasets_ = java.util.Collections.emptyList();
       name_ = "";
       description_ = "";
     }
@@ -6363,6 +6403,28 @@ public final class TuningServiceOuterClass {
                 mutable_bitField0_ |= 0x00000002;
               }
               validationDatasets_.add(
+                  input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.parser(), extensionRegistry));
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder subBuilder = null;
+              if (validationDataset_ != null) {
+                subBuilder = validationDataset_.toBuilder();
+              }
+              validationDataset_ = input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(validationDataset_);
+                validationDataset_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                testDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              testDatasets_.add(
                   input.readMessage(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.parser(), extensionRegistry));
               break;
             }
@@ -6449,10 +6511,10 @@ public final class TuningServiceOuterClass {
               break;
             }
             case 1618: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 labels_ = com.google.protobuf.MapField.newMapField(
                     LabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000008;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               labels__ = input.readMessage(
@@ -6481,6 +6543,9 @@ public final class TuningServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           validationDatasets_ = java.util.Collections.unmodifiableList(validationDatasets_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          testDatasets_ = java.util.Collections.unmodifiableList(testDatasets_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -7287,41 +7352,107 @@ public final class TuningServiceOuterClass {
     public static final int VALIDATION_DATASETS_FIELD_NUMBER = 3;
     private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> validationDatasets_;
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getValidationDatasetsList() {
+    @java.lang.Deprecated public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getValidationDatasetsList() {
       return validationDatasets_;
     }
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+    @java.lang.Deprecated public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
         getValidationDatasetsOrBuilderList() {
       return validationDatasets_;
     }
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public int getValidationDatasetsCount() {
+    @java.lang.Deprecated public int getValidationDatasetsCount() {
       return validationDatasets_.size();
     }
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index) {
+    @java.lang.Deprecated public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index) {
       return validationDatasets_.get(index);
     }
     /**
-     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+    @java.lang.Deprecated public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
         int index) {
       return validationDatasets_.get(index);
+    }
+
+    public static final int VALIDATION_DATASET_FIELD_NUMBER = 4;
+    private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset validationDataset_;
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+     * @return Whether the validationDataset field is set.
+     */
+    @java.lang.Override
+    public boolean hasValidationDataset() {
+      return validationDataset_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+     * @return The validationDataset.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDataset() {
+      return validationDataset_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance() : validationDataset_;
+    }
+    /**
+     * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetOrBuilder() {
+      return getValidationDataset();
+    }
+
+    public static final int TEST_DATASETS_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> testDatasets_;
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getTestDatasetsList() {
+      return testDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+        getTestDatasetsOrBuilderList() {
+      return testDatasets_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    @java.lang.Override
+    public int getTestDatasetsCount() {
+      return testDatasets_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getTestDatasets(int index) {
+      return testDatasets_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getTestDatasetsOrBuilder(
+        int index) {
+      return testDatasets_.get(index);
     }
 
     public static final int TEXT_TO_TEXT_COMPLETION_FIELD_NUMBER = 100;
@@ -7683,6 +7814,12 @@ public final class TuningServiceOuterClass {
       for (int i = 0; i < validationDatasets_.size(); i++) {
         output.writeMessage(3, validationDatasets_.get(i));
       }
+      if (validationDataset_ != null) {
+        output.writeMessage(4, getValidationDataset());
+      }
+      for (int i = 0; i < testDatasets_.size(); i++) {
+        output.writeMessage(5, testDatasets_.get(i));
+      }
       if (tuningParamsCase_ == 100) {
         output.writeMessage(100, (yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TextToTextCompletionTuningParams) tuningParams_);
       }
@@ -7729,6 +7866,14 @@ public final class TuningServiceOuterClass {
       for (int i = 0; i < validationDatasets_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, validationDatasets_.get(i));
+      }
+      if (validationDataset_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getValidationDataset());
+      }
+      for (int i = 0; i < testDatasets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, testDatasets_.get(i));
       }
       if (tuningParamsCase_ == 100) {
         size += com.google.protobuf.CodedOutputStream
@@ -7787,6 +7932,13 @@ public final class TuningServiceOuterClass {
           .equals(other.getTrainDatasetsList())) return false;
       if (!getValidationDatasetsList()
           .equals(other.getValidationDatasetsList())) return false;
+      if (hasValidationDataset() != other.hasValidationDataset()) return false;
+      if (hasValidationDataset()) {
+        if (!getValidationDataset()
+            .equals(other.getValidationDataset())) return false;
+      }
+      if (!getTestDatasetsList()
+          .equals(other.getTestDatasetsList())) return false;
       if (!getName()
           .equals(other.getName())) return false;
       if (!getDescription()
@@ -7838,6 +7990,14 @@ public final class TuningServiceOuterClass {
       if (getValidationDatasetsCount() > 0) {
         hash = (37 * hash) + VALIDATION_DATASETS_FIELD_NUMBER;
         hash = (53 * hash) + getValidationDatasetsList().hashCode();
+      }
+      if (hasValidationDataset()) {
+        hash = (37 * hash) + VALIDATION_DATASET_FIELD_NUMBER;
+        hash = (53 * hash) + getValidationDataset().hashCode();
+      }
+      if (getTestDatasetsCount() > 0) {
+        hash = (37 * hash) + TEST_DATASETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTestDatasetsList().hashCode();
       }
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
@@ -8023,6 +8183,7 @@ public final class TuningServiceOuterClass {
                 .alwaysUseFieldBuilders) {
           getTrainDatasetsFieldBuilder();
           getValidationDatasetsFieldBuilder();
+          getTestDatasetsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -8041,6 +8202,18 @@ public final class TuningServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           validationDatasetsBuilder_.clear();
+        }
+        if (validationDatasetBuilder_ == null) {
+          validationDataset_ = null;
+        } else {
+          validationDataset_ = null;
+          validationDatasetBuilder_ = null;
+        }
+        if (testDatasetsBuilder_ == null) {
+          testDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          testDatasetsBuilder_.clear();
         }
         name_ = "";
 
@@ -8094,6 +8267,20 @@ public final class TuningServiceOuterClass {
           result.validationDatasets_ = validationDatasets_;
         } else {
           result.validationDatasets_ = validationDatasetsBuilder_.build();
+        }
+        if (validationDatasetBuilder_ == null) {
+          result.validationDataset_ = validationDataset_;
+        } else {
+          result.validationDataset_ = validationDatasetBuilder_.build();
+        }
+        if (testDatasetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            testDatasets_ = java.util.Collections.unmodifiableList(testDatasets_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.testDatasets_ = testDatasets_;
+        } else {
+          result.testDatasets_ = testDatasetsBuilder_.build();
         }
         if (tuningParamsCase_ == 100) {
           if (textToTextCompletionBuilder_ == null) {
@@ -8236,6 +8423,35 @@ public final class TuningServiceOuterClass {
                    getValidationDatasetsFieldBuilder() : null;
             } else {
               validationDatasetsBuilder_.addAllMessages(other.validationDatasets_);
+            }
+          }
+        }
+        if (other.hasValidationDataset()) {
+          mergeValidationDataset(other.getValidationDataset());
+        }
+        if (testDatasetsBuilder_ == null) {
+          if (!other.testDatasets_.isEmpty()) {
+            if (testDatasets_.isEmpty()) {
+              testDatasets_ = other.testDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTestDatasetsIsMutable();
+              testDatasets_.addAll(other.testDatasets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.testDatasets_.isEmpty()) {
+            if (testDatasetsBuilder_.isEmpty()) {
+              testDatasetsBuilder_.dispose();
+              testDatasetsBuilder_ = null;
+              testDatasets_ = other.testDatasets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              testDatasetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTestDatasetsFieldBuilder() : null;
+            } else {
+              testDatasetsBuilder_.addAllMessages(other.testDatasets_);
             }
           }
         }
@@ -8668,9 +8884,9 @@ public final class TuningServiceOuterClass {
           yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> validationDatasetsBuilder_;
 
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getValidationDatasetsList() {
+      @java.lang.Deprecated public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getValidationDatasetsList() {
         if (validationDatasetsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(validationDatasets_);
         } else {
@@ -8678,9 +8894,9 @@ public final class TuningServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public int getValidationDatasetsCount() {
+      @java.lang.Deprecated public int getValidationDatasetsCount() {
         if (validationDatasetsBuilder_ == null) {
           return validationDatasets_.size();
         } else {
@@ -8688,9 +8904,9 @@ public final class TuningServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index) {
+      @java.lang.Deprecated public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDatasets(int index) {
         if (validationDatasetsBuilder_ == null) {
           return validationDatasets_.get(index);
         } else {
@@ -8698,9 +8914,9 @@ public final class TuningServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public Builder setValidationDatasets(
+      @java.lang.Deprecated public Builder setValidationDatasets(
           int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
         if (validationDatasetsBuilder_ == null) {
           if (value == null) {
@@ -8715,9 +8931,9 @@ public final class TuningServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public Builder setValidationDatasets(
+      @java.lang.Deprecated public Builder setValidationDatasets(
           int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
         if (validationDatasetsBuilder_ == null) {
           ensureValidationDatasetsIsMutable();
@@ -8729,9 +8945,9 @@ public final class TuningServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public Builder addValidationDatasets(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+      @java.lang.Deprecated public Builder addValidationDatasets(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
         if (validationDatasetsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8745,9 +8961,9 @@ public final class TuningServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public Builder addValidationDatasets(
+      @java.lang.Deprecated public Builder addValidationDatasets(
           int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
         if (validationDatasetsBuilder_ == null) {
           if (value == null) {
@@ -8762,9 +8978,9 @@ public final class TuningServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public Builder addValidationDatasets(
+      @java.lang.Deprecated public Builder addValidationDatasets(
           yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
         if (validationDatasetsBuilder_ == null) {
           ensureValidationDatasetsIsMutable();
@@ -8776,9 +8992,9 @@ public final class TuningServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public Builder addValidationDatasets(
+      @java.lang.Deprecated public Builder addValidationDatasets(
           int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
         if (validationDatasetsBuilder_ == null) {
           ensureValidationDatasetsIsMutable();
@@ -8790,9 +9006,9 @@ public final class TuningServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public Builder addAllValidationDatasets(
+      @java.lang.Deprecated public Builder addAllValidationDatasets(
           java.lang.Iterable<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> values) {
         if (validationDatasetsBuilder_ == null) {
           ensureValidationDatasetsIsMutable();
@@ -8805,9 +9021,9 @@ public final class TuningServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public Builder clearValidationDatasets() {
+      @java.lang.Deprecated public Builder clearValidationDatasets() {
         if (validationDatasetsBuilder_ == null) {
           validationDatasets_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -8818,9 +9034,9 @@ public final class TuningServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public Builder removeValidationDatasets(int index) {
+      @java.lang.Deprecated public Builder removeValidationDatasets(int index) {
         if (validationDatasetsBuilder_ == null) {
           ensureValidationDatasetsIsMutable();
           validationDatasets_.remove(index);
@@ -8831,16 +9047,16 @@ public final class TuningServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder getValidationDatasetsBuilder(
+      @java.lang.Deprecated public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder getValidationDatasetsBuilder(
           int index) {
         return getValidationDatasetsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
+      @java.lang.Deprecated public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetsOrBuilder(
           int index) {
         if (validationDatasetsBuilder_ == null) {
           return validationDatasets_.get(index);  } else {
@@ -8848,9 +9064,9 @@ public final class TuningServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+      @java.lang.Deprecated public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
            getValidationDatasetsOrBuilderList() {
         if (validationDatasetsBuilder_ != null) {
           return validationDatasetsBuilder_.getMessageOrBuilderList();
@@ -8859,24 +9075,24 @@ public final class TuningServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addValidationDatasetsBuilder() {
+      @java.lang.Deprecated public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addValidationDatasetsBuilder() {
         return getValidationDatasetsFieldBuilder().addBuilder(
             yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addValidationDatasetsBuilder(
+      @java.lang.Deprecated public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addValidationDatasetsBuilder(
           int index) {
         return getValidationDatasetsFieldBuilder().addBuilder(
             index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
       }
       /**
-       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3;</code>
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_datasets = 3 [deprecated = true];</code>
        */
-      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder> 
+      @java.lang.Deprecated public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder> 
            getValidationDatasetsBuilderList() {
         return getValidationDatasetsFieldBuilder().getBuilderList();
       }
@@ -8893,6 +9109,365 @@ public final class TuningServiceOuterClass {
           validationDatasets_ = null;
         }
         return validationDatasetsBuilder_;
+      }
+
+      private yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset validationDataset_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> validationDatasetBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+       * @return Whether the validationDataset field is set.
+       */
+      public boolean hasValidationDataset() {
+        return validationDatasetBuilder_ != null || validationDataset_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+       * @return The validationDataset.
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getValidationDataset() {
+        if (validationDatasetBuilder_ == null) {
+          return validationDataset_ == null ? yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance() : validationDataset_;
+        } else {
+          return validationDatasetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+       */
+      public Builder setValidationDataset(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (validationDatasetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          validationDataset_ = value;
+          onChanged();
+        } else {
+          validationDatasetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+       */
+      public Builder setValidationDataset(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (validationDatasetBuilder_ == null) {
+          validationDataset_ = builderForValue.build();
+          onChanged();
+        } else {
+          validationDatasetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+       */
+      public Builder mergeValidationDataset(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (validationDatasetBuilder_ == null) {
+          if (validationDataset_ != null) {
+            validationDataset_ =
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.newBuilder(validationDataset_).mergeFrom(value).buildPartial();
+          } else {
+            validationDataset_ = value;
+          }
+          onChanged();
+        } else {
+          validationDatasetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+       */
+      public Builder clearValidationDataset() {
+        if (validationDatasetBuilder_ == null) {
+          validationDataset_ = null;
+          onChanged();
+        } else {
+          validationDataset_ = null;
+          validationDatasetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder getValidationDatasetBuilder() {
+        
+        onChanged();
+        return getValidationDatasetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getValidationDatasetOrBuilder() {
+        if (validationDatasetBuilder_ != null) {
+          return validationDatasetBuilder_.getMessageOrBuilder();
+        } else {
+          return validationDataset_ == null ?
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance() : validationDataset_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset validation_dataset = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+          getValidationDatasetFieldBuilder() {
+        if (validationDatasetBuilder_ == null) {
+          validationDatasetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder>(
+                  getValidationDataset(),
+                  getParentForChildren(),
+                  isClean());
+          validationDataset_ = null;
+        }
+        return validationDatasetBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> testDatasets_ =
+        java.util.Collections.emptyList();
+      private void ensureTestDatasetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          testDatasets_ = new java.util.ArrayList<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset>(testDatasets_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> testDatasetsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> getTestDatasetsList() {
+        if (testDatasetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(testDatasets_);
+        } else {
+          return testDatasetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public int getTestDatasetsCount() {
+        if (testDatasetsBuilder_ == null) {
+          return testDatasets_.size();
+        } else {
+          return testDatasetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset getTestDatasets(int index) {
+        if (testDatasetsBuilder_ == null) {
+          return testDatasets_.get(index);
+        } else {
+          return testDatasetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public Builder setTestDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (testDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTestDatasetsIsMutable();
+          testDatasets_.set(index, value);
+          onChanged();
+        } else {
+          testDatasetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public Builder setTestDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (testDatasetsBuilder_ == null) {
+          ensureTestDatasetsIsMutable();
+          testDatasets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          testDatasetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public Builder addTestDatasets(yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (testDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTestDatasetsIsMutable();
+          testDatasets_.add(value);
+          onChanged();
+        } else {
+          testDatasetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public Builder addTestDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset value) {
+        if (testDatasetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTestDatasetsIsMutable();
+          testDatasets_.add(index, value);
+          onChanged();
+        } else {
+          testDatasetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public Builder addTestDatasets(
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (testDatasetsBuilder_ == null) {
+          ensureTestDatasetsIsMutable();
+          testDatasets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          testDatasetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public Builder addTestDatasets(
+          int index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder builderForValue) {
+        if (testDatasetsBuilder_ == null) {
+          ensureTestDatasetsIsMutable();
+          testDatasets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          testDatasetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public Builder addAllTestDatasets(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset> values) {
+        if (testDatasetsBuilder_ == null) {
+          ensureTestDatasetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, testDatasets_);
+          onChanged();
+        } else {
+          testDatasetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public Builder clearTestDatasets() {
+        if (testDatasetsBuilder_ == null) {
+          testDatasets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          testDatasetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public Builder removeTestDatasets(int index) {
+        if (testDatasetsBuilder_ == null) {
+          ensureTestDatasetsIsMutable();
+          testDatasets_.remove(index);
+          onChanged();
+        } else {
+          testDatasetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder getTestDatasetsBuilder(
+          int index) {
+        return getTestDatasetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder getTestDatasetsOrBuilder(
+          int index) {
+        if (testDatasetsBuilder_ == null) {
+          return testDatasets_.get(index);  } else {
+          return testDatasetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+           getTestDatasetsOrBuilderList() {
+        if (testDatasetsBuilder_ != null) {
+          return testDatasetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(testDatasets_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addTestDatasetsBuilder() {
+        return getTestDatasetsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder addTestDatasetsBuilder(
+          int index) {
+        return getTestDatasetsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.tuning.v1.TuningRequest.WeightedDataset test_datasets = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder> 
+           getTestDatasetsBuilderList() {
+        return getTestDatasetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder> 
+          getTestDatasetsFieldBuilder() {
+        if (testDatasetsBuilder_ == null) {
+          testDatasetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDataset.Builder, yandex.cloud.api.ai.tuning.v1.TuningServiceOuterClass.TuningRequest.WeightedDatasetOrBuilder>(
+                  testDatasets_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          testDatasets_ = null;
+        }
+        return testDatasetsBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -44308,244 +44883,249 @@ public final class TuningServiceOuterClass {
       "a\022\026\n\016tuning_task_id\030\001 \001(\t\022<\n\006status\030\002 \001(" +
       "\0162,.yandex.cloud.ai.tuning.v1.TuningTask" +
       ".Status\022\023\n\013total_steps\030\003 \001(\003\022\024\n\014current_" +
-      "step\030\004 \001(\003\"\300\007\n\rTuningRequest\022\034\n\016base_mod" +
+      "step\030\004 \001(\003\"\353\010\n\rTuningRequest\022\034\n\016base_mod" +
       "el_uri\030\001 \001(\tB\004\350\3071\001\022X\n\016train_datasets\030\002 \003" +
       "(\01328.yandex.cloud.ai.tuning.v1.TuningReq" +
-      "uest.WeightedDatasetB\006\202\3101\002>0\022U\n\023validati" +
+      "uest.WeightedDatasetB\006\202\3101\002>0\022Y\n\023validati" +
       "on_datasets\030\003 \003(\01328.yandex.cloud.ai.tuni" +
-      "ng.v1.TuningRequest.WeightedDataset\022^\n\027t" +
-      "ext_to_text_completion\030d \001(\0132;.yandex.cl" +
-      "oud.ai.tuning.v1.TextToTextCompletionTun" +
-      "ingParamsH\000\022g\n\036text_classification_multi" +
-      "label\030e \001(\0132=.yandex.cloud.ai.tuning.v1." +
-      "TextClassificationMultilabelParamsH\000\022g\n\036" +
-      "text_classification_multiclass\030f \001(\0132=.y" +
-      "andex.cloud.ai.tuning.v1.TextClassificat" +
-      "ionMulticlassParamsH\000\022X\n\032text_embedding_" +
-      "pair_params\030g \001(\01322.yandex.cloud.ai.tuni" +
-      "ng.v1.TextEmbeddingPairParamsH\000\022^\n\035text_" +
-      "embedding_triplet_params\030h \001(\01325.yandex." +
-      "cloud.ai.tuning.v1.TextEmbeddingTripletP" +
-      "aramsH\000\022\r\n\004name\030\310\001 \001(\t\022\024\n\013description\030\311\001" +
-      " \001(\t\022E\n\006labels\030\312\001 \003(\01324.yandex.cloud.ai." +
-      "tuning.v1.TuningRequest.LabelsEntry\032-\n\013L" +
-      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\032;\n\017WeightedDataset\022\030\n\ndataset_id\030\001 \001(" +
-      "\tB\004\350\3071\001\022\016\n\006weight\030\002 \001(\001B\017\n\rtuning_params" +
-      "J\004\010\004\020dJ\005\010i\020\310\001\"\211\006\n TextToTextCompletionTu" +
-      "ningParams\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\t" +
-      "n_samples\030\003 \001(\003\022\034\n\024additional_arguments\030" +
-      "\007 \001(\t\0229\n\004lora\030d \001(\0132).yandex.cloud.ai.tu" +
-      "ning.v1.TuningTypeLoraH\000\022F\n\013prompt_tune\030" +
-      "e \001(\0132/.yandex.cloud.ai.tuning.v1.Tuning" +
-      "TypePromptTuneH\000\022Y\n\tscheduler\030\310\001 \001(\0132E.y" +
-      "andex.cloud.ai.tuning.v1.TextToTextCompl" +
-      "etionTuningParams.Scheduler\022Y\n\toptimizer" +
-      "\030\311\001 \001(\0132E.yandex.cloud.ai.tuning.v1.Text" +
-      "ToTextCompletionTuningParams.Optimizer\032\355" +
-      "\001\n\tScheduler\022<\n\006linear\030\001 \001(\0132*.yandex.cl" +
+      "ng.v1.TuningRequest.WeightedDatasetB\002\030\001\022" +
+      "T\n\022validation_dataset\030\004 \001(\01328.yandex.clo" +
+      "ud.ai.tuning.v1.TuningRequest.WeightedDa" +
+      "taset\022O\n\rtest_datasets\030\005 \003(\01328.yandex.cl" +
+      "oud.ai.tuning.v1.TuningRequest.WeightedD" +
+      "ataset\022^\n\027text_to_text_completion\030d \001(\0132" +
+      ";.yandex.cloud.ai.tuning.v1.TextToTextCo" +
+      "mpletionTuningParamsH\000\022g\n\036text_classific" +
+      "ation_multilabel\030e \001(\0132=.yandex.cloud.ai" +
+      ".tuning.v1.TextClassificationMultilabelP" +
+      "aramsH\000\022g\n\036text_classification_multiclas" +
+      "s\030f \001(\0132=.yandex.cloud.ai.tuning.v1.Text" +
+      "ClassificationMulticlassParamsH\000\022X\n\032text" +
+      "_embedding_pair_params\030g \001(\01322.yandex.cl" +
+      "oud.ai.tuning.v1.TextEmbeddingPairParams" +
+      "H\000\022^\n\035text_embedding_triplet_params\030h \001(" +
+      "\01325.yandex.cloud.ai.tuning.v1.TextEmbedd" +
+      "ingTripletParamsH\000\022\r\n\004name\030\310\001 \001(\t\022\024\n\013des" +
+      "cription\030\311\001 \001(\t\022E\n\006labels\030\312\001 \003(\01324.yande" +
+      "x.cloud.ai.tuning.v1.TuningRequest.Label" +
+      "sEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\032;\n\017WeightedDataset\022\030\n\ndata" +
+      "set_id\030\001 \001(\tB\004\350\3071\001\022\016\n\006weight\030\002 \001(\001B\017\n\rtu" +
+      "ning_paramsJ\004\010\006\020dJ\005\010i\020\310\001\"\211\006\n TextToTextC" +
+      "ompletionTuningParams\022\014\n\004seed\030\001 \001(\003\022\n\n\002l" +
+      "r\030\002 \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n\024additional" +
+      "_arguments\030\007 \001(\t\0229\n\004lora\030d \001(\0132).yandex." +
+      "cloud.ai.tuning.v1.TuningTypeLoraH\000\022F\n\013p" +
+      "rompt_tune\030e \001(\0132/.yandex.cloud.ai.tunin" +
+      "g.v1.TuningTypePromptTuneH\000\022Y\n\tscheduler" +
+      "\030\310\001 \001(\0132E.yandex.cloud.ai.tuning.v1.Text" +
+      "ToTextCompletionTuningParams.Scheduler\022Y" +
+      "\n\toptimizer\030\311\001 \001(\0132E.yandex.cloud.ai.tun" +
+      "ing.v1.TextToTextCompletionTuningParams." +
+      "Optimizer\032\355\001\n\tScheduler\022<\n\006linear\030\001 \001(\0132" +
+      "*.yandex.cloud.ai.tuning.v1.SchedulerLin" +
+      "earH\000\022@\n\010constant\030\002 \001(\0132,.yandex.cloud.a" +
+      "i.tuning.v1.SchedulerConstantH\000\022<\n\006cosin" +
+      "e\030\003 \001(\0132*.yandex.cloud.ai.tuning.v1.Sche" +
+      "dulerCosineH\000\022\024\n\014warmup_ratio\030e \001(\001B\006\n\004t" +
+      "ypeJ\004\010\004\020e\032O\n\tOptimizer\022:\n\005adamw\030\001 \001(\0132)." +
+      "yandex.cloud.ai.tuning.v1.OptimizerAdamw" +
+      "H\000B\006\n\004typeB\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\010\020dJ\005\010" +
+      "f\020\310\001\"\217\006\n\"TextClassificationMultilabelPar" +
+      "ams\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_sampl" +
+      "es\030\003 \001(\003\022\034\n\024additional_arguments\030\007 \001(\t\0229" +
+      "\n\004lora\030d \001(\0132).yandex.cloud.ai.tuning.v1" +
+      ".TuningTypeLoraH\000\022F\n\013prompt_tune\030e \001(\0132/" +
+      ".yandex.cloud.ai.tuning.v1.TuningTypePro" +
+      "mptTuneH\000\022[\n\tscheduler\030\310\001 \001(\0132G.yandex.c" +
+      "loud.ai.tuning.v1.TextClassificationMult" +
+      "ilabelParams.Scheduler\022[\n\toptimizer\030\311\001 \001" +
+      "(\0132G.yandex.cloud.ai.tuning.v1.TextClass" +
+      "ificationMultilabelParams.Optimizer\032\355\001\n\t" +
+      "Scheduler\022<\n\006linear\030\001 \001(\0132*.yandex.cloud" +
+      ".ai.tuning.v1.SchedulerLinearH\000\022@\n\010const" +
+      "ant\030\002 \001(\0132,.yandex.cloud.ai.tuning.v1.Sc" +
+      "hedulerConstantH\000\022<\n\006cosine\030\003 \001(\0132*.yand" +
+      "ex.cloud.ai.tuning.v1.SchedulerCosineH\000\022" +
+      "\024\n\014warmup_ratio\030e \001(\001B\006\n\004typeJ\004\010\004\020e\032O\n\tO" +
+      "ptimizer\022:\n\005adamw\030\001 \001(\0132).yandex.cloud.a" +
+      "i.tuning.v1.OptimizerAdamwH\000B\006\n\004typeB\r\n\013" +
+      "tuning_typeJ\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310\001\"\217\006\n\"TextC" +
+      "lassificationMulticlassParams\022\014\n\004seed\030\001 " +
+      "\001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n\024ad" +
+      "ditional_arguments\030\007 \001(\t\0229\n\004lora\030d \001(\0132)" +
+      ".yandex.cloud.ai.tuning.v1.TuningTypeLor" +
+      "aH\000\022F\n\013prompt_tune\030e \001(\0132/.yandex.cloud." +
+      "ai.tuning.v1.TuningTypePromptTuneH\000\022[\n\ts" +
+      "cheduler\030\310\001 \001(\0132G.yandex.cloud.ai.tuning" +
+      ".v1.TextClassificationMulticlassParams.S" +
+      "cheduler\022[\n\toptimizer\030\311\001 \001(\0132G.yandex.cl" +
+      "oud.ai.tuning.v1.TextClassificationMulti" +
+      "classParams.Optimizer\032\355\001\n\tScheduler\022<\n\006l" +
+      "inear\030\001 \001(\0132*.yandex.cloud.ai.tuning.v1." +
+      "SchedulerLinearH\000\022@\n\010constant\030\002 \001(\0132,.ya" +
+      "ndex.cloud.ai.tuning.v1.SchedulerConstan" +
+      "tH\000\022<\n\006cosine\030\003 \001(\0132*.yandex.cloud.ai.tu" +
+      "ning.v1.SchedulerCosineH\000\022\024\n\014warmup_rati" +
+      "o\030e \001(\001B\006\n\004typeJ\004\010\004\020e\032O\n\tOptimizer\022:\n\005ad" +
+      "amw\030\001 \001(\0132).yandex.cloud.ai.tuning.v1.Op" +
+      "timizerAdamwH\000B\006\n\004typeB\r\n\013tuning_typeJ\004\010" +
+      "\004\020\007J\004\010\010\020dJ\005\010f\020\310\001\"\241\006\n\027TextEmbeddingPairPa" +
+      "rams\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samp" +
+      "les\030\003 \001(\003\022\034\n\024additional_arguments\030\007 \001(\t\022" +
+      "\026\n\016embedding_dims\030\010 \003(\003\0229\n\004lora\030d \001(\0132)." +
+      "yandex.cloud.ai.tuning.v1.TuningTypeLora" +
+      "H\000\022F\n\013prompt_tune\030e \001(\0132/.yandex.cloud.a" +
+      "i.tuning.v1.TuningTypePromptTuneH\000\022P\n\tsc" +
+      "heduler\030\310\001 \001(\0132<.yandex.cloud.ai.tuning." +
+      "v1.TextEmbeddingPairParams.Scheduler\022P\n\t" +
+      "optimizer\030\311\001 \001(\0132<.yandex.cloud.ai.tunin" +
+      "g.v1.TextEmbeddingPairParams.Optimizer\032\210" +
+      "\002\n\tScheduler\022<\n\006linear\030\001 \001(\0132*.yandex.cl" +
       "oud.ai.tuning.v1.SchedulerLinearH\000\022@\n\010co" +
       "nstant\030\002 \001(\0132,.yandex.cloud.ai.tuning.v1" +
       ".SchedulerConstantH\000\022<\n\006cosine\030\003 \001(\0132*.y" +
       "andex.cloud.ai.tuning.v1.SchedulerCosine" +
-      "H\000\022\024\n\014warmup_ratio\030e \001(\001B\006\n\004typeJ\004\010\004\020e\032O" +
+      "H\000\022\026\n\014warmup_ratio\030e \001(\001H\001B\006\n\004typeB\027\n\025op" +
+      "tional_warmup_ratioJ\004\010\004\020e\032O\n\tOptimizer\022:" +
+      "\n\005adamw\030\001 \001(\0132).yandex.cloud.ai.tuning.v" +
+      "1.OptimizerAdamwH\000B\006\n\004typeB\r\n\013tuning_typ" +
+      "eJ\004\010\004\020\007J\004\010\t\020dJ\005\010f\020\310\001\"\252\006\n\032TextEmbeddingTr" +
+      "ipletParams\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n" +
+      "\tn_samples\030\003 \001(\003\022\034\n\024additional_arguments" +
+      "\030\007 \001(\t\022\026\n\016embedding_dims\030\010 \003(\003\0229\n\004lora\030d" +
+      " \001(\0132).yandex.cloud.ai.tuning.v1.TuningT" +
+      "ypeLoraH\000\022F\n\013prompt_tune\030e \001(\0132/.yandex." +
+      "cloud.ai.tuning.v1.TuningTypePromptTuneH" +
+      "\000\022S\n\tscheduler\030\310\001 \001(\0132?.yandex.cloud.ai." +
+      "tuning.v1.TextEmbeddingTripletParams.Sch" +
+      "eduler\022S\n\toptimizer\030\311\001 \001(\0132?.yandex.clou" +
+      "d.ai.tuning.v1.TextEmbeddingTripletParam" +
+      "s.Optimizer\032\210\002\n\tScheduler\022<\n\006linear\030\001 \001(" +
+      "\0132*.yandex.cloud.ai.tuning.v1.SchedulerL" +
+      "inearH\000\022@\n\010constant\030\002 \001(\0132,.yandex.cloud" +
+      ".ai.tuning.v1.SchedulerConstantH\000\022<\n\006cos" +
+      "ine\030\003 \001(\0132*.yandex.cloud.ai.tuning.v1.Sc" +
+      "hedulerCosineH\000\022\026\n\014warmup_ratio\030e \001(\001H\001B" +
+      "\006\n\004typeB\027\n\025optional_warmup_ratioJ\004\010\004\020e\032O" +
       "\n\tOptimizer\022:\n\005adamw\030\001 \001(\0132).yandex.clou" +
       "d.ai.tuning.v1.OptimizerAdamwH\000B\006\n\004typeB" +
-      "\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310\001\"\217\006\n\"Te" +
-      "xtClassificationMultilabelParams\022\014\n\004seed" +
-      "\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n" +
-      "\024additional_arguments\030\007 \001(\t\0229\n\004lora\030d \001(" +
-      "\0132).yandex.cloud.ai.tuning.v1.TuningType" +
-      "LoraH\000\022F\n\013prompt_tune\030e \001(\0132/.yandex.clo" +
-      "ud.ai.tuning.v1.TuningTypePromptTuneH\000\022[" +
-      "\n\tscheduler\030\310\001 \001(\0132G.yandex.cloud.ai.tun" +
-      "ing.v1.TextClassificationMultilabelParam" +
-      "s.Scheduler\022[\n\toptimizer\030\311\001 \001(\0132G.yandex" +
-      ".cloud.ai.tuning.v1.TextClassificationMu" +
-      "ltilabelParams.Optimizer\032\355\001\n\tScheduler\022<" +
-      "\n\006linear\030\001 \001(\0132*.yandex.cloud.ai.tuning." +
-      "v1.SchedulerLinearH\000\022@\n\010constant\030\002 \001(\0132," +
-      ".yandex.cloud.ai.tuning.v1.SchedulerCons" +
-      "tantH\000\022<\n\006cosine\030\003 \001(\0132*.yandex.cloud.ai" +
-      ".tuning.v1.SchedulerCosineH\000\022\024\n\014warmup_r" +
-      "atio\030e \001(\001B\006\n\004typeJ\004\010\004\020e\032O\n\tOptimizer\022:\n" +
-      "\005adamw\030\001 \001(\0132).yandex.cloud.ai.tuning.v1" +
-      ".OptimizerAdamwH\000B\006\n\004typeB\r\n\013tuning_type" +
-      "J\004\010\004\020\007J\004\010\010\020dJ\005\010f\020\310\001\"\217\006\n\"TextClassificati" +
-      "onMulticlassParams\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002" +
-      " \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034\n\024additional_ar" +
-      "guments\030\007 \001(\t\0229\n\004lora\030d \001(\0132).yandex.clo" +
-      "ud.ai.tuning.v1.TuningTypeLoraH\000\022F\n\013prom" +
-      "pt_tune\030e \001(\0132/.yandex.cloud.ai.tuning.v" +
-      "1.TuningTypePromptTuneH\000\022[\n\tscheduler\030\310\001" +
-      " \001(\0132G.yandex.cloud.ai.tuning.v1.TextCla" +
-      "ssificationMulticlassParams.Scheduler\022[\n" +
-      "\toptimizer\030\311\001 \001(\0132G.yandex.cloud.ai.tuni" +
-      "ng.v1.TextClassificationMulticlassParams" +
-      ".Optimizer\032\355\001\n\tScheduler\022<\n\006linear\030\001 \001(\013" +
-      "2*.yandex.cloud.ai.tuning.v1.SchedulerLi" +
-      "nearH\000\022@\n\010constant\030\002 \001(\0132,.yandex.cloud." +
-      "ai.tuning.v1.SchedulerConstantH\000\022<\n\006cosi" +
-      "ne\030\003 \001(\0132*.yandex.cloud.ai.tuning.v1.Sch" +
-      "edulerCosineH\000\022\024\n\014warmup_ratio\030e \001(\001B\006\n\004" +
-      "typeJ\004\010\004\020e\032O\n\tOptimizer\022:\n\005adamw\030\001 \001(\0132)" +
-      ".yandex.cloud.ai.tuning.v1.OptimizerAdam" +
-      "wH\000B\006\n\004typeB\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\010\020dJ\005" +
-      "\010f\020\310\001\"\241\006\n\027TextEmbeddingPairParams\022\014\n\004see" +
-      "d\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030\003 \001(\003\022\034" +
-      "\n\024additional_arguments\030\007 \001(\t\022\026\n\016embeddin" +
-      "g_dims\030\010 \003(\003\0229\n\004lora\030d \001(\0132).yandex.clou" +
-      "d.ai.tuning.v1.TuningTypeLoraH\000\022F\n\013promp" +
-      "t_tune\030e \001(\0132/.yandex.cloud.ai.tuning.v1" +
-      ".TuningTypePromptTuneH\000\022P\n\tscheduler\030\310\001 " +
-      "\001(\0132<.yandex.cloud.ai.tuning.v1.TextEmbe" +
-      "ddingPairParams.Scheduler\022P\n\toptimizer\030\311" +
-      "\001 \001(\0132<.yandex.cloud.ai.tuning.v1.TextEm" +
-      "beddingPairParams.Optimizer\032\210\002\n\tSchedule" +
-      "r\022<\n\006linear\030\001 \001(\0132*.yandex.cloud.ai.tuni" +
-      "ng.v1.SchedulerLinearH\000\022@\n\010constant\030\002 \001(" +
-      "\0132,.yandex.cloud.ai.tuning.v1.SchedulerC" +
-      "onstantH\000\022<\n\006cosine\030\003 \001(\0132*.yandex.cloud" +
-      ".ai.tuning.v1.SchedulerCosineH\000\022\026\n\014warmu" +
-      "p_ratio\030e \001(\001H\001B\006\n\004typeB\027\n\025optional_warm" +
-      "up_ratioJ\004\010\004\020e\032O\n\tOptimizer\022:\n\005adamw\030\001 \001" +
-      "(\0132).yandex.cloud.ai.tuning.v1.Optimizer" +
-      "AdamwH\000B\006\n\004typeB\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\t" +
-      "\020dJ\005\010f\020\310\001\"\252\006\n\032TextEmbeddingTripletParams" +
-      "\022\014\n\004seed\030\001 \001(\003\022\n\n\002lr\030\002 \001(\001\022\021\n\tn_samples\030" +
-      "\003 \001(\003\022\034\n\024additional_arguments\030\007 \001(\t\022\026\n\016e" +
-      "mbedding_dims\030\010 \003(\003\0229\n\004lora\030d \001(\0132).yand" +
-      "ex.cloud.ai.tuning.v1.TuningTypeLoraH\000\022F" +
-      "\n\013prompt_tune\030e \001(\0132/.yandex.cloud.ai.tu" +
-      "ning.v1.TuningTypePromptTuneH\000\022S\n\tschedu" +
-      "ler\030\310\001 \001(\0132?.yandex.cloud.ai.tuning.v1.T" +
-      "extEmbeddingTripletParams.Scheduler\022S\n\to" +
-      "ptimizer\030\311\001 \001(\0132?.yandex.cloud.ai.tuning" +
-      ".v1.TextEmbeddingTripletParams.Optimizer" +
-      "\032\210\002\n\tScheduler\022<\n\006linear\030\001 \001(\0132*.yandex." +
-      "cloud.ai.tuning.v1.SchedulerLinearH\000\022@\n\010" +
-      "constant\030\002 \001(\0132,.yandex.cloud.ai.tuning." +
-      "v1.SchedulerConstantH\000\022<\n\006cosine\030\003 \001(\0132*" +
-      ".yandex.cloud.ai.tuning.v1.SchedulerCosi" +
-      "neH\000\022\026\n\014warmup_ratio\030e \001(\001H\001B\006\n\004typeB\027\n\025" +
-      "optional_warmup_ratioJ\004\010\004\020e\032O\n\tOptimizer" +
-      "\022:\n\005adamw\030\001 \001(\0132).yandex.cloud.ai.tuning" +
-      ".v1.OptimizerAdamwH\000B\006\n\004typeB\r\n\013tuning_t" +
-      "ypeJ\004\010\004\020\007J\004\010\t\020dJ\005\010f\020\310\001\"-\n\024GetMetricsUrlR" +
-      "equest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\")\n\025GetMetr" +
-      "icsUrlResponse\022\020\n\010load_url\030\001 \001(\t\"*\n\021GetO" +
-      "ptionsRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001\"\351\005\n" +
-      "\022GetOptionsResponse\022\017\n\007task_id\030\001 \001(\t\022\026\n\016" +
-      "base_model_uri\030\002 \001(\t\022P\n\016train_datasets\030\003" +
+      "\r\n\013tuning_typeJ\004\010\004\020\007J\004\010\t\020dJ\005\010f\020\310\001\"-\n\024Get" +
+      "MetricsUrlRequest\022\025\n\007task_id\030\001 \001(\tB\004\350\3071\001" +
+      "\")\n\025GetMetricsUrlResponse\022\020\n\010load_url\030\001 " +
+      "\001(\t\"*\n\021GetOptionsRequest\022\025\n\007task_id\030\001 \001(" +
+      "\tB\004\350\3071\001\"\351\005\n\022GetOptionsResponse\022\017\n\007task_i" +
+      "d\030\001 \001(\t\022\026\n\016base_model_uri\030\002 \001(\t\022P\n\016train" +
+      "_datasets\030\003 \003(\01328.yandex.cloud.ai.tuning" +
+      ".v1.TuningRequest.WeightedDataset\022U\n\023val" +
+      "idation_datasets\030\004 \003(\01328.yandex.cloud.ai" +
+      ".tuning.v1.TuningRequest.WeightedDataset" +
+      "\022^\n\027text_to_text_completion\030d \001(\0132;.yand" +
+      "ex.cloud.ai.tuning.v1.TextToTextCompleti" +
+      "onTuningParamsH\000\022g\n\036text_classification_" +
+      "multilabel\030e \001(\0132=.yandex.cloud.ai.tunin" +
+      "g.v1.TextClassificationMultilabelParamsH" +
+      "\000\022g\n\036text_classification_multiclass\030f \001(" +
+      "\0132=.yandex.cloud.ai.tuning.v1.TextClassi" +
+      "ficationMulticlassParamsH\000\022X\n\032text_embed" +
+      "ding_pair_params\030g \001(\01322.yandex.cloud.ai" +
+      ".tuning.v1.TextEmbeddingPairParamsH\000\022^\n\035" +
+      "text_embedding_triplet_params\030h \001(\01325.ya" +
+      "ndex.cloud.ai.tuning.v1.TextEmbeddingTri" +
+      "pletParamsH\000B\017\n\rtuning_paramsJ\004\010\005\020d\"+\n\021L" +
+      "istErrorsRequest\022\026\n\016tuning_task_id\030\001 \001(\t" +
+      "\"R\n\022ListErrorsResponse\022<\n\014tuning_error\030\001" +
+      " \003(\0132&.yandex.cloud.ai.tuning.v1.TuningE" +
+      "rror\"\266\007\n\030CreateTuningDraftRequest\022\034\n\016bas" +
+      "e_model_uri\030\001 \001(\tB\004\350\3071\001\022X\n\016train_dataset" +
+      "s\030\002 \003(\01328.yandex.cloud.ai.tuning.v1.Tuni" +
+      "ngRequest.WeightedDatasetB\006\202\3101\002>0\022U\n\023val" +
+      "idation_datasets\030\003 \003(\01328.yandex.cloud.ai" +
+      ".tuning.v1.TuningRequest.WeightedDataset" +
+      "\022^\n\027text_to_text_completion\030d \001(\0132;.yand" +
+      "ex.cloud.ai.tuning.v1.TextToTextCompleti" +
+      "onTuningParamsH\000\022g\n\036text_classification_" +
+      "multilabel\030e \001(\0132=.yandex.cloud.ai.tunin" +
+      "g.v1.TextClassificationMultilabelParamsH" +
+      "\000\022g\n\036text_classification_multiclass\030f \001(" +
+      "\0132=.yandex.cloud.ai.tuning.v1.TextClassi" +
+      "ficationMulticlassParamsH\000\022X\n\032text_embed" +
+      "ding_pair_params\030g \001(\01322.yandex.cloud.ai" +
+      ".tuning.v1.TextEmbeddingPairParamsH\000\022^\n\035" +
+      "text_embedding_triplet_params\030h \001(\01325.ya" +
+      "ndex.cloud.ai.tuning.v1.TextEmbeddingTri" +
+      "pletParamsH\000\022*\n\004name\030\310\001 \001(\tB\033\362\3071\027^[A-Za-" +
+      "z0-9 _-]{3,100}$\022\024\n\013description\030\311\001 \001(\t\022P" +
+      "\n\006labels\030\312\001 \003(\0132?.yandex.cloud.ai.tuning" +
+      ".v1.CreateTuningDraftRequest.LabelsEntry" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001B\017\n\rtuning_paramsJ\004\010\004\020dJ\005\010i\020\310\001\"3\n" +
+      "\031CreateTuningDraftResponse\022\026\n\016tuning_tas" +
+      "k_id\030\001 \001(\t\"\251\007\n\030UpdateTuningDraftRequest\022" +
+      "\034\n\016tuning_task_id\030\001 \001(\tB\004\350\3071\001\022\026\n\016base_mo" +
+      "del_uri\030\002 \001(\t\022P\n\016train_datasets\030\003 \003(\01328." +
+      "yandex.cloud.ai.tuning.v1.TuningRequest." +
+      "WeightedDataset\022U\n\023validation_datasets\030\004" +
       " \003(\01328.yandex.cloud.ai.tuning.v1.TuningR" +
-      "equest.WeightedDataset\022U\n\023validation_dat" +
-      "asets\030\004 \003(\01328.yandex.cloud.ai.tuning.v1." +
-      "TuningRequest.WeightedDataset\022^\n\027text_to" +
-      "_text_completion\030d \001(\0132;.yandex.cloud.ai" +
-      ".tuning.v1.TextToTextCompletionTuningPar" +
-      "amsH\000\022g\n\036text_classification_multilabel\030" +
-      "e \001(\0132=.yandex.cloud.ai.tuning.v1.TextCl" +
-      "assificationMultilabelParamsH\000\022g\n\036text_c" +
-      "lassification_multiclass\030f \001(\0132=.yandex." +
-      "cloud.ai.tuning.v1.TextClassificationMul" +
-      "ticlassParamsH\000\022X\n\032text_embedding_pair_p" +
-      "arams\030g \001(\01322.yandex.cloud.ai.tuning.v1." +
-      "TextEmbeddingPairParamsH\000\022^\n\035text_embedd" +
-      "ing_triplet_params\030h \001(\01325.yandex.cloud." +
-      "ai.tuning.v1.TextEmbeddingTripletParamsH" +
-      "\000B\017\n\rtuning_paramsJ\004\010\005\020d\"+\n\021ListErrorsRe" +
-      "quest\022\026\n\016tuning_task_id\030\001 \001(\t\"R\n\022ListErr" +
-      "orsResponse\022<\n\014tuning_error\030\001 \003(\0132&.yand" +
-      "ex.cloud.ai.tuning.v1.TuningError\"\266\007\n\030Cr" +
-      "eateTuningDraftRequest\022\034\n\016base_model_uri" +
-      "\030\001 \001(\tB\004\350\3071\001\022X\n\016train_datasets\030\002 \003(\01328.y" +
-      "andex.cloud.ai.tuning.v1.TuningRequest.W" +
-      "eightedDatasetB\006\202\3101\002>0\022U\n\023validation_dat" +
-      "asets\030\003 \003(\01328.yandex.cloud.ai.tuning.v1." +
-      "TuningRequest.WeightedDataset\022^\n\027text_to" +
-      "_text_completion\030d \001(\0132;.yandex.cloud.ai" +
-      ".tuning.v1.TextToTextCompletionTuningPar" +
-      "amsH\000\022g\n\036text_classification_multilabel\030" +
-      "e \001(\0132=.yandex.cloud.ai.tuning.v1.TextCl" +
-      "assificationMultilabelParamsH\000\022g\n\036text_c" +
-      "lassification_multiclass\030f \001(\0132=.yandex." +
-      "cloud.ai.tuning.v1.TextClassificationMul" +
-      "ticlassParamsH\000\022X\n\032text_embedding_pair_p" +
-      "arams\030g \001(\01322.yandex.cloud.ai.tuning.v1." +
-      "TextEmbeddingPairParamsH\000\022^\n\035text_embedd" +
-      "ing_triplet_params\030h \001(\01325.yandex.cloud." +
-      "ai.tuning.v1.TextEmbeddingTripletParamsH" +
-      "\000\022*\n\004name\030\310\001 \001(\tB\033\362\3071\027^[A-Za-z0-9 _-]{3," +
-      "100}$\022\024\n\013description\030\311\001 \001(\t\022P\n\006labels\030\312\001" +
-      " \003(\0132?.yandex.cloud.ai.tuning.v1.CreateT" +
-      "uningDraftRequest.LabelsEntry\032-\n\013LabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\r" +
-      "tuning_paramsJ\004\010\004\020dJ\005\010i\020\310\001\"3\n\031CreateTuni" +
-      "ngDraftResponse\022\026\n\016tuning_task_id\030\001 \001(\t\"" +
-      "\251\007\n\030UpdateTuningDraftRequest\022\034\n\016tuning_t" +
-      "ask_id\030\001 \001(\tB\004\350\3071\001\022\026\n\016base_model_uri\030\002 \001" +
-      "(\t\022P\n\016train_datasets\030\003 \003(\01328.yandex.clou" +
-      "d.ai.tuning.v1.TuningRequest.WeightedDat" +
-      "aset\022U\n\023validation_datasets\030\004 \003(\01328.yand" +
-      "ex.cloud.ai.tuning.v1.TuningRequest.Weig" +
-      "htedDataset\022^\n\027text_to_text_completion\030d" +
-      " \001(\0132;.yandex.cloud.ai.tuning.v1.TextToT" +
-      "extCompletionTuningParamsH\000\022g\n\036text_clas" +
-      "sification_multilabel\030e \001(\0132=.yandex.clo" +
-      "ud.ai.tuning.v1.TextClassificationMultil" +
-      "abelParamsH\000\022g\n\036text_classification_mult" +
-      "iclass\030f \001(\0132=.yandex.cloud.ai.tuning.v1" +
-      ".TextClassificationMulticlassParamsH\000\022X\n" +
-      "\032text_embedding_pair_params\030g \001(\01322.yand" +
-      "ex.cloud.ai.tuning.v1.TextEmbeddingPairP" +
-      "aramsH\000\022^\n\035text_embedding_triplet_params" +
-      "\030h \001(\01325.yandex.cloud.ai.tuning.v1.TextE" +
-      "mbeddingTripletParamsH\000\022\r\n\004name\030\310\001 \001(\t\022\024" +
-      "\n\013description\030\311\001 \001(\t\022P\n\006labels\030\312\001 \003(\0132?." +
-      "yandex.cloud.ai.tuning.v1.UpdateTuningDr" +
-      "aftRequest.LabelsEntry\032-\n\013LabelsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\rtuning_" +
-      "paramsJ\004\010\005\020dJ\005\010i\020\310\001\"3\n\031UpdateTuningDraft" +
-      "Response\022\026\n\016tuning_task_id\030\001 \001(\t\"8\n\030Dele" +
-      "teTuningDraftRequest\022\034\n\016tuning_task_id\030\001" +
-      " \001(\tB\004\350\3071\001\"3\n\031DeleteTuningDraftResponse\022" +
-      "\026\n\016tuning_task_id\030\001 \001(\t\"0\n\020TuneDraftRequ" +
-      "est\022\034\n\016tuning_task_id\030\001 \001(\tB\004\350\3071\0012\211\n\n\rTu" +
-      "ningService\022y\n\004Tune\022(.yandex.cloud.ai.tu" +
-      "ning.v1.TuningRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"$\262\322* \n\016TuningMetadata\022\016" +
-      "TuningResponse\022e\n\004List\022-.yandex.cloud.ai" +
-      ".tuning.v1.ListTuningsRequest\032..yandex.c" +
-      "loud.ai.tuning.v1.ListTuningsResponse\022o\n" +
-      "\010Describe\0220.yandex.cloud.ai.tuning.v1.De" +
-      "scribeTuningRequest\0321.yandex.cloud.ai.tu" +
-      "ning.v1.DescribeTuningResponse\022i\n\006Cancel" +
-      "\022..yandex.cloud.ai.tuning.v1.CancelTunin" +
-      "gRequest\032/.yandex.cloud.ai.tuning.v1.Can" +
-      "celTuningResponse\022r\n\rGetMetricsUrl\022/.yan" +
-      "dex.cloud.ai.tuning.v1.GetMetricsUrlRequ" +
-      "est\0320.yandex.cloud.ai.tuning.v1.GetMetri" +
-      "csUrlResponse\022i\n\nGetOptions\022,.yandex.clo" +
-      "ud.ai.tuning.v1.GetOptionsRequest\032-.yand" +
-      "ex.cloud.ai.tuning.v1.GetOptionsResponse" +
-      "\022i\n\nListErrors\022,.yandex.cloud.ai.tuning." +
-      "v1.ListErrorsRequest\032-.yandex.cloud.ai.t" +
-      "uning.v1.ListErrorsResponse\022x\n\013CreateDra" +
-      "ft\0223.yandex.cloud.ai.tuning.v1.CreateTun" +
-      "ingDraftRequest\0324.yandex.cloud.ai.tuning" +
-      ".v1.CreateTuningDraftResponse\022x\n\013UpdateD" +
-      "raft\0223.yandex.cloud.ai.tuning.v1.UpdateT" +
-      "uningDraftRequest\0324.yandex.cloud.ai.tuni" +
-      "ng.v1.UpdateTuningDraftResponse\022x\n\013Delet" +
-      "eDraft\0223.yandex.cloud.ai.tuning.v1.Delet" +
-      "eTuningDraftRequest\0324.yandex.cloud.ai.tu" +
-      "ning.v1.DeleteTuningDraftResponse\022\201\001\n\tTu" +
-      "neDraft\022+.yandex.cloud.ai.tuning.v1.Tune" +
-      "DraftRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"$\262\322* \n\016TuningMetadata\022\016TuningRes" +
-      "ponseBc\n\035yandex.cloud.api.ai.tuning.v1ZB" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/ai/tuning/v1;fomob\006proto3"
+      "equest.WeightedDataset\022^\n\027text_to_text_c" +
+      "ompletion\030d \001(\0132;.yandex.cloud.ai.tuning" +
+      ".v1.TextToTextCompletionTuningParamsH\000\022g" +
+      "\n\036text_classification_multilabel\030e \001(\0132=" +
+      ".yandex.cloud.ai.tuning.v1.TextClassific" +
+      "ationMultilabelParamsH\000\022g\n\036text_classifi" +
+      "cation_multiclass\030f \001(\0132=.yandex.cloud.a" +
+      "i.tuning.v1.TextClassificationMulticlass" +
+      "ParamsH\000\022X\n\032text_embedding_pair_params\030g" +
+      " \001(\01322.yandex.cloud.ai.tuning.v1.TextEmb" +
+      "eddingPairParamsH\000\022^\n\035text_embedding_tri" +
+      "plet_params\030h \001(\01325.yandex.cloud.ai.tuni" +
+      "ng.v1.TextEmbeddingTripletParamsH\000\022\r\n\004na" +
+      "me\030\310\001 \001(\t\022\024\n\013description\030\311\001 \001(\t\022P\n\006label" +
+      "s\030\312\001 \003(\0132?.yandex.cloud.ai.tuning.v1.Upd" +
+      "ateTuningDraftRequest.LabelsEntry\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "B\017\n\rtuning_paramsJ\004\010\005\020dJ\005\010i\020\310\001\"3\n\031Update" +
+      "TuningDraftResponse\022\026\n\016tuning_task_id\030\001 " +
+      "\001(\t\"8\n\030DeleteTuningDraftRequest\022\034\n\016tunin" +
+      "g_task_id\030\001 \001(\tB\004\350\3071\001\"3\n\031DeleteTuningDra" +
+      "ftResponse\022\026\n\016tuning_task_id\030\001 \001(\t\"0\n\020Tu" +
+      "neDraftRequest\022\034\n\016tuning_task_id\030\001 \001(\tB\004" +
+      "\350\3071\0012\211\n\n\rTuningService\022y\n\004Tune\022(.yandex." +
+      "cloud.ai.tuning.v1.TuningRequest\032!.yande" +
+      "x.cloud.operation.Operation\"$\262\322* \n\016Tunin" +
+      "gMetadata\022\016TuningResponse\022e\n\004List\022-.yand" +
+      "ex.cloud.ai.tuning.v1.ListTuningsRequest" +
+      "\032..yandex.cloud.ai.tuning.v1.ListTunings" +
+      "Response\022o\n\010Describe\0220.yandex.cloud.ai.t" +
+      "uning.v1.DescribeTuningRequest\0321.yandex." +
+      "cloud.ai.tuning.v1.DescribeTuningRespons" +
+      "e\022i\n\006Cancel\022..yandex.cloud.ai.tuning.v1." +
+      "CancelTuningRequest\032/.yandex.cloud.ai.tu" +
+      "ning.v1.CancelTuningResponse\022r\n\rGetMetri" +
+      "csUrl\022/.yandex.cloud.ai.tuning.v1.GetMet" +
+      "ricsUrlRequest\0320.yandex.cloud.ai.tuning." +
+      "v1.GetMetricsUrlResponse\022i\n\nGetOptions\022," +
+      ".yandex.cloud.ai.tuning.v1.GetOptionsReq" +
+      "uest\032-.yandex.cloud.ai.tuning.v1.GetOpti" +
+      "onsResponse\022i\n\nListErrors\022,.yandex.cloud" +
+      ".ai.tuning.v1.ListErrorsRequest\032-.yandex" +
+      ".cloud.ai.tuning.v1.ListErrorsResponse\022x" +
+      "\n\013CreateDraft\0223.yandex.cloud.ai.tuning.v" +
+      "1.CreateTuningDraftRequest\0324.yandex.clou" +
+      "d.ai.tuning.v1.CreateTuningDraftResponse" +
+      "\022x\n\013UpdateDraft\0223.yandex.cloud.ai.tuning" +
+      ".v1.UpdateTuningDraftRequest\0324.yandex.cl" +
+      "oud.ai.tuning.v1.UpdateTuningDraftRespon" +
+      "se\022x\n\013DeleteDraft\0223.yandex.cloud.ai.tuni" +
+      "ng.v1.DeleteTuningDraftRequest\0324.yandex." +
+      "cloud.ai.tuning.v1.DeleteTuningDraftResp" +
+      "onse\022\201\001\n\tTuneDraft\022+.yandex.cloud.ai.tun" +
+      "ing.v1.TuneDraftRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"$\262\322* \n\016TuningMetadata" +
+      "\022\016TuningResponseBc\n\035yandex.cloud.api.ai." +
+      "tuning.v1ZBgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/ai/tuning/v1;fomob\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -44612,7 +45192,7 @@ public final class TuningServiceOuterClass {
     internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_descriptor,
-        new java.lang.String[] { "BaseModelUri", "TrainDatasets", "ValidationDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "TextEmbeddingPairParams", "TextEmbeddingTripletParams", "Name", "Description", "Labels", "TuningParams", });
+        new java.lang.String[] { "BaseModelUri", "TrainDatasets", "ValidationDatasets", "ValidationDataset", "TestDatasets", "TextToTextCompletion", "TextClassificationMultilabel", "TextClassificationMulticlass", "TextEmbeddingPairParams", "TextEmbeddingTripletParams", "Name", "Description", "Labels", "TuningParams", });
     internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_tuning_v1_TuningRequest_LabelsEntry_fieldAccessorTable = new

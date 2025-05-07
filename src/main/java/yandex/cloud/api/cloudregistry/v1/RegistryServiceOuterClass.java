@@ -14067,7 +14067,7 @@ public final class RegistryServiceOuterClass {
      * The path to a specific node where the registry artifact is located.
      * </pre>
      *
-     * <code>string path = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*))*"];</code>
+     * <code>string path = 2;</code>
      * @return The path.
      */
     java.lang.String getPath();
@@ -14076,7 +14076,7 @@ public final class RegistryServiceOuterClass {
      * The path to a specific node where the registry artifact is located.
      * </pre>
      *
-     * <code>string path = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*))*"];</code>
+     * <code>string path = 2;</code>
      * @return The bytes for path.
      */
     com.google.protobuf.ByteString
@@ -14276,7 +14276,7 @@ public final class RegistryServiceOuterClass {
      * The path to a specific node where the registry artifact is located.
      * </pre>
      *
-     * <code>string path = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*))*"];</code>
+     * <code>string path = 2;</code>
      * @return The path.
      */
     @java.lang.Override
@@ -14297,7 +14297,7 @@ public final class RegistryServiceOuterClass {
      * The path to a specific node where the registry artifact is located.
      * </pre>
      *
-     * <code>string path = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*))*"];</code>
+     * <code>string path = 2;</code>
      * @return The bytes for path.
      */
     @java.lang.Override
@@ -14843,7 +14843,7 @@ public final class RegistryServiceOuterClass {
        * The path to a specific node where the registry artifact is located.
        * </pre>
        *
-       * <code>string path = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*))*"];</code>
+       * <code>string path = 2;</code>
        * @return The path.
        */
       public java.lang.String getPath() {
@@ -14863,7 +14863,7 @@ public final class RegistryServiceOuterClass {
        * The path to a specific node where the registry artifact is located.
        * </pre>
        *
-       * <code>string path = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*))*"];</code>
+       * <code>string path = 2;</code>
        * @return The bytes for path.
        */
       public com.google.protobuf.ByteString
@@ -14884,7 +14884,7 @@ public final class RegistryServiceOuterClass {
        * The path to a specific node where the registry artifact is located.
        * </pre>
        *
-       * <code>string path = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*))*"];</code>
+       * <code>string path = 2;</code>
        * @param value The path to set.
        * @return This builder for chaining.
        */
@@ -14903,7 +14903,7 @@ public final class RegistryServiceOuterClass {
        * The path to a specific node where the registry artifact is located.
        * </pre>
        *
-       * <code>string path = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*))*"];</code>
+       * <code>string path = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearPath() {
@@ -14917,7 +14917,7 @@ public final class RegistryServiceOuterClass {
        * The path to a specific node where the registry artifact is located.
        * </pre>
        *
-       * <code>string path = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*))*"];</code>
+       * <code>string path = 2;</code>
        * @param value The bytes for path to set.
        * @return This builder for chaining.
        */
@@ -16459,81 +16459,79 @@ public final class RegistryServiceOuterClass {
       "sions\030\001 \003(\0132+.yandex.cloud.cloudregistry" +
       ".v1.IpPermission\"/\n\030SetIpPermissionsMeta" +
       "data\022\023\n\013registry_id\030\001 \001(\t\"2\n\033UpdateIpPer" +
-      "missionsMetadata\022\023\n\013registry_id\030\001 \001(\t\"\322\001" +
+      "missionsMetadata\022\023\n\013registry_id\030\001 \001(\t\"\201\001" +
       "\n\024ListArtifactsRequest\022\035\n\013registry_id\030\001 " +
-      "\001(\tB\010\212\3101\004<=50\022]\n\004path\030\002 \001(\tBO\362\3071K|[a-zA-" +
-      "Z0-9]+(?:[._-][a-zA-Z0-9]+)*(/([a-zA-Z0-" +
-      "9]+(?:[._-][a-zA-Z0-9]+)*))*\022\035\n\tpage_siz" +
-      "e\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB" +
-      "\t\212\3101\005<=100\"l\n\025ListArtifactsResponse\022:\n\ta" +
-      "rtifacts\030\001 \003(\0132\'.yandex.cloud.cloudregis" +
-      "try.v1.Artifact\022\027\n\017next_page_token\030\002 \001(\t" +
-      "2\256\023\n\017RegistryService\022\226\001\n\003Get\0221.yandex.cl" +
-      "oud.cloudregistry.v1.GetRegistryRequest\032" +
-      "\'.yandex.cloud.cloudregistry.v1.Registry" +
-      "\"3\202\323\344\223\002-\022+/cloud-registry/v1/registries/" +
-      "{registry_id}\022\232\001\n\004List\0224.yandex.cloud.cl" +
-      "oudregistry.v1.ListRegistriesRequest\0325.y" +
-      "andex.cloud.cloudregistry.v1.ListRegistr" +
-      "iesResponse\"%\202\323\344\223\002\037\022\035/cloud-registry/v1/" +
-      "registries\022\261\001\n\006Create\0224.yandex.cloud.clo" +
-      "udregistry.v1.CreateRegistryRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"N\202\323\344\223\002\"\"\035" +
-      "/cloud-registry/v1/registries:\001*\262\322*\"\n\026Cr" +
-      "eateRegistryMetadata\022\010Registry\022\277\001\n\006Updat" +
-      "e\0224.yandex.cloud.cloudregistry.v1.Update" +
-      "RegistryRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\\\202\323\344\223\00202+/cloud-registry/v1/r" +
-      "egistries/{registry_id}:\001*\262\322*\"\n\026UpdateRe" +
-      "gistryMetadata\022\010Registry\022\311\001\n\006Delete\0224.ya" +
-      "ndex.cloud.cloudregistry.v1.DeleteRegist" +
-      "ryRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"f\202\323\344\223\002-*+/cloud-registry/v1/registr" +
-      "ies/{registry_id}\262\322*/\n\026DeleteRegistryMet" +
-      "adata\022\025google.protobuf.Empty\022\275\001\n\022ListAcc" +
-      "essBindings\022..yandex.cloud.access.ListAc" +
-      "cessBindingsRequest\032/.yandex.cloud.acces" +
-      "s.ListAccessBindingsResponse\"F\202\323\344\223\002@\022>/c" +
-      "loud-registry/v1/registries/{resource_id" +
-      "}:listAccessBindings\022\355\001\n\021SetAccessBindin" +
-      "gs\022-.yandex.cloud.access.SetAccessBindin" +
-      "gsRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"\205\001\202\323\344\223\002B\"=/cloud-registry/v1/regist" +
-      "ries/{resource_id}:setAccessBindings:\001*\262" +
-      "\322*9\n access.SetAccessBindingsMetadata\022\025g" +
-      "oogle.protobuf.Empty\022\371\001\n\024UpdateAccessBin" +
-      "dings\0220.yandex.cloud.access.UpdateAccess" +
-      "BindingsRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\213\001\202\323\344\223\002E\"@/cloud-registry/v1/" +
-      "registries/{resource_id}:updateAccessBin" +
-      "dings:\001*\262\322*<\n#access.UpdateAccessBinding" +
-      "sMetadata\022\025google.protobuf.Empty\022\315\001\n\021Lis" +
-      "tIpPermissions\0227.yandex.cloud.cloudregis" +
-      "try.v1.ListIpPermissionsRequest\0328.yandex" +
-      ".cloud.cloudregistry.v1.ListIpPermission" +
-      "sResponse\"E\202\323\344\223\002?\022=/cloud-registry/v1/re" +
-      "gistries/{registry_id}:listIpPermissions" +
-      "\022\353\001\n\020SetIpPermissions\0226.yandex.cloud.clo" +
-      "udregistry.v1.SetIpPermissionsRequest\032!." +
-      "yandex.cloud.operation.Operation\"|\202\323\344\223\002A" +
-      "\"</cloud-registry/v1/registries/{registr" +
-      "y_id}:setIpPermissions:\001*\262\322*1\n\030SetIpPerm" +
-      "issionsMetadata\022\025google.protobuf.Empty\022\370" +
-      "\001\n\023UpdateIpPermissions\0229.yandex.cloud.cl" +
-      "oudregistry.v1.UpdateIpPermissionsReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\202\001\202" +
-      "\323\344\223\002D\"?/cloud-registry/v1/registries/{re" +
-      "gistry_id}:updateIpPermissions:\001*\262\322*4\n\033U" +
-      "pdateIpPermissionsMetadata\022\025google.proto" +
-      "buf.Empty\022\275\001\n\rListArtifacts\0223.yandex.clo" +
-      "ud.cloudregistry.v1.ListArtifactsRequest" +
-      "\0324.yandex.cloud.cloudregistry.v1.ListArt" +
-      "ifactsResponse\"A\202\323\344\223\002;\0229/cloud-registry/" +
-      "v1/registries/{registry_id}:listArtifact" +
-      "sBt\n!yandex.cloud.api.cloudregistry.v1ZO" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/cloudregistry/v1;cloudregistryb" +
-      "\006proto3"
+      "\001(\tB\010\212\3101\004<=50\022\014\n\004path\030\002 \001(\t\022\035\n\tpage_size" +
+      "\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB\t" +
+      "\212\3101\005<=100\"l\n\025ListArtifactsResponse\022:\n\tar" +
+      "tifacts\030\001 \003(\0132\'.yandex.cloud.cloudregist" +
+      "ry.v1.Artifact\022\027\n\017next_page_token\030\002 \001(\t2" +
+      "\256\023\n\017RegistryService\022\226\001\n\003Get\0221.yandex.clo" +
+      "ud.cloudregistry.v1.GetRegistryRequest\032\'" +
+      ".yandex.cloud.cloudregistry.v1.Registry\"" +
+      "3\202\323\344\223\002-\022+/cloud-registry/v1/registries/{" +
+      "registry_id}\022\232\001\n\004List\0224.yandex.cloud.clo" +
+      "udregistry.v1.ListRegistriesRequest\0325.ya" +
+      "ndex.cloud.cloudregistry.v1.ListRegistri" +
+      "esResponse\"%\202\323\344\223\002\037\022\035/cloud-registry/v1/r" +
+      "egistries\022\261\001\n\006Create\0224.yandex.cloud.clou" +
+      "dregistry.v1.CreateRegistryRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"N\202\323\344\223\002\"\"\035/" +
+      "cloud-registry/v1/registries:\001*\262\322*\"\n\026Cre" +
+      "ateRegistryMetadata\022\010Registry\022\277\001\n\006Update" +
+      "\0224.yandex.cloud.cloudregistry.v1.UpdateR" +
+      "egistryRequest\032!.yandex.cloud.operation." +
+      "Operation\"\\\202\323\344\223\00202+/cloud-registry/v1/re" +
+      "gistries/{registry_id}:\001*\262\322*\"\n\026UpdateReg" +
+      "istryMetadata\022\010Registry\022\311\001\n\006Delete\0224.yan" +
+      "dex.cloud.cloudregistry.v1.DeleteRegistr" +
+      "yRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"f\202\323\344\223\002-*+/cloud-registry/v1/registri" +
+      "es/{registry_id}\262\322*/\n\026DeleteRegistryMeta" +
+      "data\022\025google.protobuf.Empty\022\275\001\n\022ListAcce" +
+      "ssBindings\022..yandex.cloud.access.ListAcc" +
+      "essBindingsRequest\032/.yandex.cloud.access" +
+      ".ListAccessBindingsResponse\"F\202\323\344\223\002@\022>/cl" +
+      "oud-registry/v1/registries/{resource_id}" +
+      ":listAccessBindings\022\355\001\n\021SetAccessBinding" +
+      "s\022-.yandex.cloud.access.SetAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\205\001\202\323\344\223\002B\"=/cloud-registry/v1/registr" +
+      "ies/{resource_id}:setAccessBindings:\001*\262\322" +
+      "*9\n access.SetAccessBindingsMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\371\001\n\024UpdateAccessBind" +
+      "ings\0220.yandex.cloud.access.UpdateAccessB" +
+      "indingsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\213\001\202\323\344\223\002E\"@/cloud-registry/v1/r" +
+      "egistries/{resource_id}:updateAccessBind" +
+      "ings:\001*\262\322*<\n#access.UpdateAccessBindings" +
+      "Metadata\022\025google.protobuf.Empty\022\315\001\n\021List" +
+      "IpPermissions\0227.yandex.cloud.cloudregist" +
+      "ry.v1.ListIpPermissionsRequest\0328.yandex." +
+      "cloud.cloudregistry.v1.ListIpPermissions" +
+      "Response\"E\202\323\344\223\002?\022=/cloud-registry/v1/reg" +
+      "istries/{registry_id}:listIpPermissions\022" +
+      "\353\001\n\020SetIpPermissions\0226.yandex.cloud.clou" +
+      "dregistry.v1.SetIpPermissionsRequest\032!.y" +
+      "andex.cloud.operation.Operation\"|\202\323\344\223\002A\"" +
+      "</cloud-registry/v1/registries/{registry" +
+      "_id}:setIpPermissions:\001*\262\322*1\n\030SetIpPermi" +
+      "ssionsMetadata\022\025google.protobuf.Empty\022\370\001" +
+      "\n\023UpdateIpPermissions\0229.yandex.cloud.clo" +
+      "udregistry.v1.UpdateIpPermissionsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"\202\001\202\323" +
+      "\344\223\002D\"?/cloud-registry/v1/registries/{reg" +
+      "istry_id}:updateIpPermissions:\001*\262\322*4\n\033Up" +
+      "dateIpPermissionsMetadata\022\025google.protob" +
+      "uf.Empty\022\275\001\n\rListArtifacts\0223.yandex.clou" +
+      "d.cloudregistry.v1.ListArtifactsRequest\032" +
+      "4.yandex.cloud.cloudregistry.v1.ListArti" +
+      "factsResponse\"A\202\323\344\223\002;\0229/cloud-registry/v" +
+      "1/registries/{registry_id}:listArtifacts" +
+      "Bt\n!yandex.cloud.api.cloudregistry.v1ZOg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/cloudregistry/v1;cloudregistryb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

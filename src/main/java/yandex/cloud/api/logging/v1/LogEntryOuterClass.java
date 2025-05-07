@@ -2568,7 +2568,7 @@ public final class LogEntryOuterClass {
      * Entry text message.
      * </pre>
      *
-     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      * @return The message.
      */
     java.lang.String getMessage();
@@ -2577,7 +2577,7 @@ public final class LogEntryOuterClass {
      * Entry text message.
      * </pre>
      *
-     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      * @return The bytes for message.
      */
     com.google.protobuf.ByteString
@@ -2588,7 +2588,7 @@ public final class LogEntryOuterClass {
      * Entry annotation.
      * </pre>
      *
-     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      * @return Whether the jsonPayload field is set.
      */
     boolean hasJsonPayload();
@@ -2597,7 +2597,7 @@ public final class LogEntryOuterClass {
      * Entry annotation.
      * </pre>
      *
-     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      * @return The jsonPayload.
      */
     com.google.protobuf.Struct getJsonPayload();
@@ -2606,7 +2606,7 @@ public final class LogEntryOuterClass {
      * Entry annotation.
      * </pre>
      *
-     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      */
     com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder();
 
@@ -2828,7 +2828,7 @@ public final class LogEntryOuterClass {
      * Entry text message.
      * </pre>
      *
-     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      * @return The message.
      */
     @java.lang.Override
@@ -2849,7 +2849,7 @@ public final class LogEntryOuterClass {
      * Entry text message.
      * </pre>
      *
-     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      * @return The bytes for message.
      */
     @java.lang.Override
@@ -2874,7 +2874,7 @@ public final class LogEntryOuterClass {
      * Entry annotation.
      * </pre>
      *
-     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      * @return Whether the jsonPayload field is set.
      */
     @java.lang.Override
@@ -2886,7 +2886,7 @@ public final class LogEntryOuterClass {
      * Entry annotation.
      * </pre>
      *
-     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      * @return The jsonPayload.
      */
     @java.lang.Override
@@ -2898,7 +2898,7 @@ public final class LogEntryOuterClass {
      * Entry annotation.
      * </pre>
      *
-     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
@@ -3586,7 +3586,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        * @return The message.
        */
       public java.lang.String getMessage() {
@@ -3606,7 +3606,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
@@ -3627,7 +3627,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        * @param value The message to set.
        * @return This builder for chaining.
        */
@@ -3646,7 +3646,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMessage() {
@@ -3660,7 +3660,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        * @param value The bytes for message to set.
        * @return This builder for chaining.
        */
@@ -3684,7 +3684,7 @@ public final class LogEntryOuterClass {
        * Entry annotation.
        * </pre>
        *
-       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        * @return Whether the jsonPayload field is set.
        */
       public boolean hasJsonPayload() {
@@ -3695,7 +3695,7 @@ public final class LogEntryOuterClass {
        * Entry annotation.
        * </pre>
        *
-       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        * @return The jsonPayload.
        */
       public com.google.protobuf.Struct getJsonPayload() {
@@ -3710,7 +3710,7 @@ public final class LogEntryOuterClass {
        * Entry annotation.
        * </pre>
        *
-       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        */
       public Builder setJsonPayload(com.google.protobuf.Struct value) {
         if (jsonPayloadBuilder_ == null) {
@@ -3730,7 +3730,7 @@ public final class LogEntryOuterClass {
        * Entry annotation.
        * </pre>
        *
-       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        */
       public Builder setJsonPayload(
           com.google.protobuf.Struct.Builder builderForValue) {
@@ -3748,7 +3748,7 @@ public final class LogEntryOuterClass {
        * Entry annotation.
        * </pre>
        *
-       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        */
       public Builder mergeJsonPayload(com.google.protobuf.Struct value) {
         if (jsonPayloadBuilder_ == null) {
@@ -3770,7 +3770,7 @@ public final class LogEntryOuterClass {
        * Entry annotation.
        * </pre>
        *
-       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        */
       public Builder clearJsonPayload() {
         if (jsonPayloadBuilder_ == null) {
@@ -3788,7 +3788,7 @@ public final class LogEntryOuterClass {
        * Entry annotation.
        * </pre>
        *
-       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        */
       public com.google.protobuf.Struct.Builder getJsonPayloadBuilder() {
         
@@ -3800,7 +3800,7 @@ public final class LogEntryOuterClass {
        * Entry annotation.
        * </pre>
        *
-       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        */
       public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
         if (jsonPayloadBuilder_ != null) {
@@ -3815,7 +3815,7 @@ public final class LogEntryOuterClass {
        * Entry annotation.
        * </pre>
        *
-       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=819200"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
@@ -6861,28 +6861,28 @@ public final class LogEntryOuterClass {
       "el\030\006 \001(\0162\'.yandex.cloud.logging.v1.LogLe" +
       "vel.Level\022\017\n\007message\030\007 \001(\t\022-\n\014json_paylo" +
       "ad\030\010 \001(\0132\027.google.protobuf.Struct\022\035\n\013str" +
-      "eam_name\030\t \001(\tB\010\212\3101\004<=63\"\370\001\n\020IncomingLog" +
+      "eam_name\030\t \001(\tB\010\212\3101\004<=63\"\372\001\n\020IncomingLog" +
       "Entry\0223\n\ttimestamp\030\001 \001(\0132\032.google.protob" +
       "uf.TimestampB\004\350\3071\001\0226\n\005level\030\002 \001(\0162\'.yand" +
-      "ex.cloud.logging.v1.LogLevel.Level\022\034\n\007me" +
-      "ssage\030\003 \001(\tB\013\272\3101\007<=65536\022:\n\014json_payload" +
-      "\030\004 \001(\0132\027.google.protobuf.StructB\013\272\3101\007<=6" +
-      "5536\022\035\n\013stream_name\030\005 \001(\tB\010\212\3101\004<=63\"\253\001\n\020" +
-      "LogEntryDefaults\0226\n\005level\030\002 \001(\0162\'.yandex" +
-      ".cloud.logging.v1.LogLevel.Level\022:\n\014json" +
-      "_payload\030\004 \001(\0132\027.google.protobuf.StructB" +
-      "\013\272\3101\007<=65536\022\035\n\013stream_name\030\005 \001(\tB\010\212\3101\004<" +
-      "=63J\004\010\003\020\004\"\231\001\n\013Destination\022;\n\014log_group_i" +
-      "d\030\001 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,6" +
-      "3})?H\000\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z]" +
-      "[-a-zA-Z0-9_.]{0,63})?H\000B\023\n\013destination\022" +
-      "\004\300\3011\001\"\242\001\n\010LogLevel\0226\n\005level\030\001 \001(\0162\'.yand" +
-      "ex.cloud.logging.v1.LogLevel.Level\"^\n\005Le" +
-      "vel\022\025\n\021LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n" +
-      "\005DEBUG\020\002\022\010\n\004INFO\020\003\022\010\n\004WARN\020\004\022\t\n\005ERROR\020\005\022" +
-      "\t\n\005FATAL\020\006Bb\n\033yandex.cloud.api.logging.v" +
-      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/logging/v1;loggingb\006proto3"
+      "ex.cloud.logging.v1.LogLevel.Level\022\035\n\007me" +
+      "ssage\030\003 \001(\tB\014\272\3101\010<=819200\022;\n\014json_payloa" +
+      "d\030\004 \001(\0132\027.google.protobuf.StructB\014\272\3101\010<=" +
+      "819200\022\035\n\013stream_name\030\005 \001(\tB\010\212\3101\004<=63\"\253\001" +
+      "\n\020LogEntryDefaults\0226\n\005level\030\002 \001(\0162\'.yand" +
+      "ex.cloud.logging.v1.LogLevel.Level\022:\n\014js" +
+      "on_payload\030\004 \001(\0132\027.google.protobuf.Struc" +
+      "tB\013\272\3101\007<=65536\022\035\n\013stream_name\030\005 \001(\tB\010\212\3101" +
+      "\004<=63J\004\010\003\020\004\"\231\001\n\013Destination\022;\n\014log_group" +
+      "_id\030\001 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0" +
+      ",63})?H\000\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([a-zA-" +
+      "Z][-a-zA-Z0-9_.]{0,63})?H\000B\023\n\013destinatio" +
+      "n\022\004\300\3011\001\"\242\001\n\010LogLevel\0226\n\005level\030\001 \001(\0162\'.ya" +
+      "ndex.cloud.logging.v1.LogLevel.Level\"^\n\005" +
+      "Level\022\025\n\021LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022" +
+      "\t\n\005DEBUG\020\002\022\010\n\004INFO\020\003\022\010\n\004WARN\020\004\022\t\n\005ERROR\020" +
+      "\005\022\t\n\005FATAL\020\006Bb\n\033yandex.cloud.api.logging" +
+      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/logging/v1;loggingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

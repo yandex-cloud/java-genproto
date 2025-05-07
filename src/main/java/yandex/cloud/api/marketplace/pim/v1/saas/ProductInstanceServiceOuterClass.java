@@ -2397,35 +2397,40 @@ public final class ProductInstanceServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\nCyandex/cloud/marketplace/pim/v1/saas/p" +
       "roduct_instance_service.proto\022$yandex.cl" +
-      "oud.marketplace.pim.v1.saas\032 yandex/clou" +
-      "d/api/operation.proto\032&yandex/cloud/oper" +
-      "ation/operation.proto\032\035yandex/cloud/vali" +
-      "dation.proto\032;yandex/cloud/marketplace/p" +
-      "im/v1/saas/product_instance.proto\"F\n\031Get" +
-      "ProductInstanceRequest\022)\n\023product_instan" +
-      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\230\001\n\033ClaimProdu" +
-      "ctInstanceRequest\022\035\n\005token\030\001 \001(\tB\016\350\3071\001\212\310" +
-      "1\006<=1000\022\023\n\013resource_id\030\002 \001(\t\022E\n\rresourc" +
-      "e_info\030\003 \001(\0132..yandex.cloud.marketplace." +
-      "pim.v1.saas.SaasInfo\"l\n\034ClaimProductInst" +
-      "anceMetadata\022\022\n\nproduct_id\030\001 \001(\t\022\033\n\023prod" +
-      "uct_instance_id\030\002 \001(\t\022\033\n\023license_instanc" +
-      "e_id\030\003 \001(\t2\274\002\n\026ProductInstanceService\022}\n" +
-      "\003Get\022?.yandex.cloud.marketplace.pim.v1.s" +
-      "aas.GetProductInstanceRequest\0325.yandex.c" +
-      "loud.marketplace.pim.v1.saas.ProductInst" +
-      "ance\022\242\001\n\005Claim\022A.yandex.cloud.marketplac" +
-      "e.pim.v1.saas.ClaimProductInstanceReques" +
-      "t\032!.yandex.cloud.operation.Operation\"3\262\322" +
-      "*/\n\034ClaimProductInstanceMetadata\022\017Produc" +
-      "tInstanceBy\n(yandex.cloud.api.marketplac" +
-      "e.pim.v1.saasZMgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/marketplace/pim/" +
-      "v1/saas;saasb\006proto3"
+      "oud.marketplace.pim.v1.saas\032\034google/api/" +
+      "annotations.proto\032 yandex/cloud/api/oper" +
+      "ation.proto\032&yandex/cloud/operation/oper" +
+      "ation.proto\032\035yandex/cloud/validation.pro" +
+      "to\032;yandex/cloud/marketplace/pim/v1/saas" +
+      "/product_instance.proto\"F\n\031GetProductIns" +
+      "tanceRequest\022)\n\023product_instance_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"\230\001\n\033ClaimProductInstance" +
+      "Request\022\035\n\005token\030\001 \001(\tB\016\350\3071\001\212\3101\006<=1000\022\023" +
+      "\n\013resource_id\030\002 \001(\t\022E\n\rresource_info\030\003 \001" +
+      "(\0132..yandex.cloud.marketplace.pim.v1.saa" +
+      "s.SaasInfo\"l\n\034ClaimProductInstanceMetada" +
+      "ta\022\022\n\nproduct_id\030\001 \001(\t\022\033\n\023product_instan" +
+      "ce_id\030\002 \001(\t\022\033\n\023license_instance_id\030\003 \001(\t" +
+      "2\262\003\n\026ProductInstanceService\022\277\001\n\003Get\022?.ya" +
+      "ndex.cloud.marketplace.pim.v1.saas.GetPr" +
+      "oductInstanceRequest\0325.yandex.cloud.mark" +
+      "etplace.pim.v1.saas.ProductInstance\"@\202\323\344" +
+      "\223\002:\0228/marketplace/pim/saas/v1/instances/" +
+      "{product_instance_id}\022\325\001\n\005Claim\022A.yandex" +
+      ".cloud.marketplace.pim.v1.saas.ClaimProd" +
+      "uctInstanceRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"f\202\323\344\223\002-\"(/marketplace/pim/" +
+      "saas/v1/instances/claim:\001*\262\322*/\n\034ClaimPro" +
+      "ductInstanceMetadata\022\017ProductInstanceBy\n" +
+      "(yandex.cloud.api.marketplace.pim.v1.saa" +
+      "sZMgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/marketplace/pim/v1/saas;saas" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -2451,11 +2456,13 @@ public final class ProductInstanceServiceOuterClass {
         new java.lang.String[] { "ProductId", "ProductInstanceId", "LicenseInstanceId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

@@ -2196,7 +2196,7 @@ public final class TextClassificationServiceOuterClass {
   /**
    * <pre>
    * Request for the service to classify text.
-   * For examples of usage, see [step-by-step guides](/docs/operations/classifier/readymade).
+   * For examples of usage, see [step-by-step guides](/docs/foundation-models/operations/classifier/readymade).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest}
@@ -2787,7 +2787,7 @@ public final class TextClassificationServiceOuterClass {
     /**
      * <pre>
      * Request for the service to classify text.
-     * For examples of usage, see [step-by-step guides](/docs/operations/classifier/readymade).
+     * For examples of usage, see [step-by-step guides](/docs/foundation-models/operations/classifier/readymade).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.foundation_models.v1.text_classification.FewShotTextClassificationRequest}

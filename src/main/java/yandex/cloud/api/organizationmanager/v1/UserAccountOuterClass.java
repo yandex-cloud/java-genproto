@@ -2178,7 +2178,7 @@ public final class UserAccountOuterClass {
   /**
    * <pre>
    * A SAML federated user.
-   * For more information, see [federations](/docs/iam/concepts/users/saml-federations).
+   * For more information, see [federations](/docs/iam/concepts/users/accounts#saml-federation).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.organizationmanager.v1.SamlUserAccount}
@@ -3315,7 +3315,7 @@ public final class UserAccountOuterClass {
     /**
      * <pre>
      * A SAML federated user.
-     * For more information, see [federations](/docs/iam/concepts/users/saml-federations).
+     * For more information, see [federations](/docs/iam/concepts/users/accounts#saml-federation).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.organizationmanager.v1.SamlUserAccount}

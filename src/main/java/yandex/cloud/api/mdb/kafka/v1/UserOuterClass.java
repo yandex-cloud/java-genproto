@@ -2594,6 +2594,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
+     * With roles SCHEMA_READER and SCHEMA_WRITER: string that contains set of schema registry subjects, separated by ';'.
      * To get the topic name, make a [TopicService.List] request.
      * </pre>
      *
@@ -2604,6 +2605,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
+     * With roles SCHEMA_READER and SCHEMA_WRITER: string that contains set of schema registry subjects, separated by ';'.
      * To get the topic name, make a [TopicService.List] request.
      * </pre>
      *
@@ -2839,6 +2841,22 @@ public final class UserOuterClass {
        * <code>ACCESS_ROLE_TOPIC_ADMIN = 4;</code>
        */
       ACCESS_ROLE_TOPIC_ADMIN(4),
+      /**
+       * <code>ACCESS_ROLE_TOPIC_PRODUCER = 5;</code>
+       */
+      ACCESS_ROLE_TOPIC_PRODUCER(5),
+      /**
+       * <code>ACCESS_ROLE_TOPIC_CONSUMER = 6;</code>
+       */
+      ACCESS_ROLE_TOPIC_CONSUMER(6),
+      /**
+       * <code>ACCESS_ROLE_SCHEMA_READER = 7;</code>
+       */
+      ACCESS_ROLE_SCHEMA_READER(7),
+      /**
+       * <code>ACCESS_ROLE_SCHEMA_WRITER = 8;</code>
+       */
+      ACCESS_ROLE_SCHEMA_WRITER(8),
       UNRECOGNIZED(-1),
       ;
 
@@ -2878,6 +2896,22 @@ public final class UserOuterClass {
        * <code>ACCESS_ROLE_TOPIC_ADMIN = 4;</code>
        */
       public static final int ACCESS_ROLE_TOPIC_ADMIN_VALUE = 4;
+      /**
+       * <code>ACCESS_ROLE_TOPIC_PRODUCER = 5;</code>
+       */
+      public static final int ACCESS_ROLE_TOPIC_PRODUCER_VALUE = 5;
+      /**
+       * <code>ACCESS_ROLE_TOPIC_CONSUMER = 6;</code>
+       */
+      public static final int ACCESS_ROLE_TOPIC_CONSUMER_VALUE = 6;
+      /**
+       * <code>ACCESS_ROLE_SCHEMA_READER = 7;</code>
+       */
+      public static final int ACCESS_ROLE_SCHEMA_READER_VALUE = 7;
+      /**
+       * <code>ACCESS_ROLE_SCHEMA_WRITER = 8;</code>
+       */
+      public static final int ACCESS_ROLE_SCHEMA_WRITER_VALUE = 8;
 
 
       public final int getNumber() {
@@ -2909,6 +2943,10 @@ public final class UserOuterClass {
           case 2: return ACCESS_ROLE_CONSUMER;
           case 3: return ACCESS_ROLE_ADMIN;
           case 4: return ACCESS_ROLE_TOPIC_ADMIN;
+          case 5: return ACCESS_ROLE_TOPIC_PRODUCER;
+          case 6: return ACCESS_ROLE_TOPIC_CONSUMER;
+          case 7: return ACCESS_ROLE_SCHEMA_READER;
+          case 8: return ACCESS_ROLE_SCHEMA_WRITER;
           default: return null;
         }
       }
@@ -2970,6 +3008,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
+     * With roles SCHEMA_READER and SCHEMA_WRITER: string that contains set of schema registry subjects, separated by ';'.
      * To get the topic name, make a [TopicService.List] request.
      * </pre>
      *
@@ -2992,6 +3031,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
+     * With roles SCHEMA_READER and SCHEMA_WRITER: string that contains set of schema registry subjects, separated by ';'.
      * To get the topic name, make a [TopicService.List] request.
      * </pre>
      *
@@ -3469,6 +3509,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
+       * With roles SCHEMA_READER and SCHEMA_WRITER: string that contains set of schema registry subjects, separated by ';'.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
@@ -3490,6 +3531,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
+       * With roles SCHEMA_READER and SCHEMA_WRITER: string that contains set of schema registry subjects, separated by ';'.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
@@ -3512,6 +3554,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
+       * With roles SCHEMA_READER and SCHEMA_WRITER: string that contains set of schema registry subjects, separated by ';'.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
@@ -3532,6 +3575,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
+       * With roles SCHEMA_READER and SCHEMA_WRITER: string that contains set of schema registry subjects, separated by ';'.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
@@ -3547,6 +3591,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
+       * With roles SCHEMA_READER and SCHEMA_WRITER: string that contains set of schema registry subjects, separated by ';'.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
@@ -3915,17 +3960,20 @@ public final class UserOuterClass {
       "\001\n\010UserSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\0051-256" +
       "\362\3071\r[a-zA-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071" +
       "\001\212\3101\0058-128\022:\n\013permissions\030\003 \003(\0132%.yandex" +
-      ".cloud.mdb.kafka.v1.Permission\"\217\002\n\nPermi" +
+      ".cloud.mdb.kafka.v1.Permission\"\215\003\n\nPermi" +
       "ssion\022\022\n\ntopic_name\030\001 \001(\t\022>\n\004role\030\002 \001(\0162" +
       "0.yandex.cloud.mdb.kafka.v1.Permission.A" +
-      "ccessRole\022\023\n\013allow_hosts\030\004 \003(\t\"\221\001\n\nAcces" +
+      "ccessRole\022\023\n\013allow_hosts\030\004 \003(\t\"\217\002\n\nAcces" +
       "sRole\022\033\n\027ACCESS_ROLE_UNSPECIFIED\020\000\022\030\n\024AC" +
       "CESS_ROLE_PRODUCER\020\001\022\030\n\024ACCESS_ROLE_CONS" +
       "UMER\020\002\022\025\n\021ACCESS_ROLE_ADMIN\020\003\022\033\n\027ACCESS_" +
-      "ROLE_TOPIC_ADMIN\020\004J\004\010\003\020\004Bd\n\035yandex.cloud" +
-      ".api.mdb.kafka.v1ZCgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/mdb/kafka/v1" +
-      ";kafkab\006proto3"
+      "ROLE_TOPIC_ADMIN\020\004\022\036\n\032ACCESS_ROLE_TOPIC_" +
+      "PRODUCER\020\005\022\036\n\032ACCESS_ROLE_TOPIC_CONSUMER" +
+      "\020\006\022\035\n\031ACCESS_ROLE_SCHEMA_READER\020\007\022\035\n\031ACC" +
+      "ESS_ROLE_SCHEMA_WRITER\020\010J\004\010\003\020\004Bd\n\035yandex" +
+      ".cloud.api.mdb.kafka.v1ZCgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/mdb/ka" +
+      "fka/v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

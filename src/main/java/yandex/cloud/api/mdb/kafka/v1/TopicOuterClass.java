@@ -3877,31 +3877,36 @@ public final class TopicOuterClass {
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the preallocate field is set.
      */
-    boolean hasPreallocate();
+    @java.lang.Deprecated boolean hasPreallocate();
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * @deprecated
      * @return The preallocate.
      */
-    com.google.protobuf.BoolValue getPreallocate();
+    @java.lang.Deprecated com.google.protobuf.BoolValue getPreallocate();
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
      */
-    com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
+    @java.lang.Deprecated com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
   }
   /**
    * <pre>
@@ -4755,38 +4760,43 @@ public final class TopicOuterClass {
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the preallocate field is set.
      */
     @java.lang.Override
-    public boolean hasPreallocate() {
+    @java.lang.Deprecated public boolean hasPreallocate() {
       return preallocate_ != null;
     }
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * @deprecated
      * @return The preallocate.
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValue getPreallocate() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValue getPreallocate() {
       return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
     }
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
       return getPreallocate();
     }
 
@@ -7218,24 +7228,28 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the preallocate field is set.
        */
-      public boolean hasPreallocate() {
+      @java.lang.Deprecated public boolean hasPreallocate() {
         return preallocateBuilder_ != null || preallocate_ != null;
       }
       /**
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * @deprecated
        * @return The preallocate.
        */
-      public com.google.protobuf.BoolValue getPreallocate() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue getPreallocate() {
         if (preallocateBuilder_ == null) {
           return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
         } else {
@@ -7246,11 +7260,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public Builder setPreallocate(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder setPreallocate(com.google.protobuf.BoolValue value) {
         if (preallocateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7267,11 +7282,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public Builder setPreallocate(
+      @java.lang.Deprecated public Builder setPreallocate(
           com.google.protobuf.BoolValue.Builder builderForValue) {
         if (preallocateBuilder_ == null) {
           preallocate_ = builderForValue.build();
@@ -7286,11 +7302,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
         if (preallocateBuilder_ == null) {
           if (preallocate_ != null) {
             preallocate_ =
@@ -7309,11 +7326,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public Builder clearPreallocate() {
+      @java.lang.Deprecated public Builder clearPreallocate() {
         if (preallocateBuilder_ == null) {
           preallocate_ = null;
           onChanged();
@@ -7328,11 +7346,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
         
         onChanged();
         return getPreallocateFieldBuilder().getBuilder();
@@ -7341,11 +7360,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
         if (preallocateBuilder_ != null) {
           return preallocateBuilder_.getMessageOrBuilder();
         } else {
@@ -7357,9 +7377,10 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig2_8.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -7767,31 +7788,36 @@ public final class TopicOuterClass {
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the preallocate field is set.
      */
-    boolean hasPreallocate();
+    @java.lang.Deprecated boolean hasPreallocate();
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * @deprecated
      * @return The preallocate.
      */
-    com.google.protobuf.BoolValue getPreallocate();
+    @java.lang.Deprecated com.google.protobuf.BoolValue getPreallocate();
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
      */
-    com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
+    @java.lang.Deprecated com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
   }
   /**
    * <pre>
@@ -8645,38 +8671,43 @@ public final class TopicOuterClass {
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the preallocate field is set.
      */
     @java.lang.Override
-    public boolean hasPreallocate() {
+    @java.lang.Deprecated public boolean hasPreallocate() {
       return preallocate_ != null;
     }
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+     * @deprecated
      * @return The preallocate.
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValue getPreallocate() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValue getPreallocate() {
       return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
     }
     /**
      * <pre>
      * True if we should preallocate the file on disk when creating a new log segment.
      * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
       return getPreallocate();
     }
 
@@ -11108,24 +11139,28 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the preallocate field is set.
        */
-      public boolean hasPreallocate() {
+      @java.lang.Deprecated public boolean hasPreallocate() {
         return preallocateBuilder_ != null || preallocate_ != null;
       }
       /**
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
+       * @deprecated
        * @return The preallocate.
        */
-      public com.google.protobuf.BoolValue getPreallocate() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue getPreallocate() {
         if (preallocateBuilder_ == null) {
           return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
         } else {
@@ -11136,11 +11171,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public Builder setPreallocate(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder setPreallocate(com.google.protobuf.BoolValue value) {
         if (preallocateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11157,11 +11193,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public Builder setPreallocate(
+      @java.lang.Deprecated public Builder setPreallocate(
           com.google.protobuf.BoolValue.Builder builderForValue) {
         if (preallocateBuilder_ == null) {
           preallocate_ = builderForValue.build();
@@ -11176,11 +11213,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
         if (preallocateBuilder_ == null) {
           if (preallocate_ != null) {
             preallocate_ =
@@ -11199,11 +11237,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public Builder clearPreallocate() {
+      @java.lang.Deprecated public Builder clearPreallocate() {
         if (preallocateBuilder_ == null) {
           preallocate_ = null;
           onChanged();
@@ -11218,11 +11257,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
         
         onChanged();
         return getPreallocateFieldBuilder().getBuilder();
@@ -11231,11 +11271,12 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
         if (preallocateBuilder_ != null) {
           return preallocateBuilder_.getMessageOrBuilder();
         } else {
@@ -11247,9 +11288,10 @@ public final class TopicOuterClass {
        * <pre>
        * True if we should preallocate the file on disk when creating a new log segment.
        * This setting overrides the cluster-level [KafkaConfig3.log_preallocate] setting on the topic level.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       * <code>.google.protobuf.BoolValue preallocate = 13 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -11367,7 +11409,7 @@ public final class TopicOuterClass {
       "\017topicConfig_2_8\022P\n\016topic_config_3\030\007 \001(\013" +
       "2\'.yandex.cloud.mdb.kafka.v1.TopicConfig" +
       "3H\000R\rtopicConfig_3B\016\n\014topic_configJ\004\010\004\020\006" +
-      "\"\214\007\n\016TopicConfig2_8\022O\n\016cleanup_policy\030\001 " +
+      "\"\220\007\n\016TopicConfig2_8\022O\n\016cleanup_policy\030\001 " +
       "\001(\01627.yandex.cloud.mdb.kafka.v1.TopicCon" +
       "fig2_8.CleanupPolicy\022D\n\020compression_type" +
       "\030\002 \001(\0162*.yandex.cloud.mdb.kafka.v1.Compr" +
@@ -11384,38 +11426,38 @@ public final class TopicOuterClass {
       "message_bytes\030\n \001(\0132\033.google.protobuf.In" +
       "t64Value\0228\n\023min_insync_replicas\030\013 \001(\0132\033." +
       "google.protobuf.Int64Value\0222\n\rsegment_by" +
-      "tes\030\014 \001(\0132\033.google.protobuf.Int64Value\022/" +
+      "tes\030\014 \001(\0132\033.google.protobuf.Int64Value\0223" +
       "\n\013preallocate\030\r \001(\0132\032.google.protobuf.Bo" +
-      "olValue\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_POL" +
-      "ICY_UNSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_DELE" +
-      "TE\020\001\022\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!CLEA" +
-      "NUP_POLICY_COMPACT_AND_DELETE\020\003\"\210\007\n\014Topi" +
-      "cConfig3\022M\n\016cleanup_policy\030\001 \001(\01625.yande" +
-      "x.cloud.mdb.kafka.v1.TopicConfig3.Cleanu" +
-      "pPolicy\022D\n\020compression_type\030\002 \001(\0162*.yand" +
-      "ex.cloud.mdb.kafka.v1.CompressionType\0228\n" +
-      "\023delete_retention_ms\030\003 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\0229\n\024file_delete_delay_ms\030" +
-      "\004 \001(\0132\033.google.protobuf.Int64Value\0223\n\016fl" +
-      "ush_messages\030\005 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022-\n\010flush_ms\030\006 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022:\n\025min_compaction_lag_ms\030" +
-      "\007 \001(\0132\033.google.protobuf.Int64Value\0224\n\017re" +
-      "tention_bytes\030\010 \001(\0132\033.google.protobuf.In" +
-      "t64Value\0221\n\014retention_ms\030\t \001(\0132\033.google." +
-      "protobuf.Int64Value\0226\n\021max_message_bytes" +
-      "\030\n \001(\0132\033.google.protobuf.Int64Value\0228\n\023m" +
-      "in_insync_replicas\030\013 \001(\0132\033.google.protob" +
-      "uf.Int64Value\0222\n\rsegment_bytes\030\014 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022/\n\013preallocate" +
-      "\030\r \001(\0132\032.google.protobuf.BoolValue\"\215\001\n\rC" +
-      "leanupPolicy\022\036\n\032CLEANUP_POLICY_UNSPECIFI" +
-      "ED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020\001\022\032\n\026CLEAN" +
-      "UP_POLICY_COMPACT\020\002\022%\n!CLEANUP_POLICY_CO" +
-      "MPACT_AND_DELETE\020\003Bd\n\035yandex.cloud.api.m" +
-      "db.kafka.v1ZCgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/mdb/kafka/v1;kafka" +
-      "b\006proto3"
+      "olValueB\002\030\001\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP" +
+      "_POLICY_UNSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_" +
+      "DELETE\020\001\022\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!" +
+      "CLEANUP_POLICY_COMPACT_AND_DELETE\020\003\"\214\007\n\014" +
+      "TopicConfig3\022M\n\016cleanup_policy\030\001 \001(\01625.y" +
+      "andex.cloud.mdb.kafka.v1.TopicConfig3.Cl" +
+      "eanupPolicy\022D\n\020compression_type\030\002 \001(\0162*." +
+      "yandex.cloud.mdb.kafka.v1.CompressionTyp" +
+      "e\0228\n\023delete_retention_ms\030\003 \001(\0132\033.google." +
+      "protobuf.Int64Value\0229\n\024file_delete_delay" +
+      "_ms\030\004 \001(\0132\033.google.protobuf.Int64Value\0223" +
+      "\n\016flush_messages\030\005 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022-\n\010flush_ms\030\006 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022:\n\025min_compaction_lag" +
+      "_ms\030\007 \001(\0132\033.google.protobuf.Int64Value\0224" +
+      "\n\017retention_bytes\030\010 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0221\n\014retention_ms\030\t \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\0226\n\021max_message_b" +
+      "ytes\030\n \001(\0132\033.google.protobuf.Int64Value\022" +
+      "8\n\023min_insync_replicas\030\013 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0222\n\rsegment_bytes\030\014 \001(\013" +
+      "2\033.google.protobuf.Int64Value\0223\n\013preallo" +
+      "cate\030\r \001(\0132\032.google.protobuf.BoolValueB\002" +
+      "\030\001\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_POLICY_U" +
+      "NSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020\001\022" +
+      "\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!CLEANUP_P" +
+      "OLICY_COMPACT_AND_DELETE\020\003Bd\n\035yandex.clo" +
+      "ud.api.mdb.kafka.v1ZCgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/mdb/kafka/" +
+      "v1;kafkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

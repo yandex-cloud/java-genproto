@@ -2805,7 +2805,7 @@ public final class BudgetOuterClass {
 
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -2816,7 +2816,7 @@ public final class BudgetOuterClass {
         getNotificationUserAccountIdsList();
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -2826,7 +2826,7 @@ public final class BudgetOuterClass {
     int getNotificationUserAccountIdsCount();
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -2837,7 +2837,7 @@ public final class BudgetOuterClass {
     java.lang.String getNotificationUserAccountIds(int index);
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -3249,7 +3249,7 @@ public final class BudgetOuterClass {
     private com.google.protobuf.LazyStringList notificationUserAccountIds_;
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -3262,7 +3262,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -3274,7 +3274,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -3287,7 +3287,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -4191,7 +4191,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -4204,7 +4204,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -4216,7 +4216,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -4229,7 +4229,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -4243,7 +4243,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -4264,7 +4264,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -4284,7 +4284,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -4302,7 +4302,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -4317,7 +4317,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -5229,7 +5229,7 @@ public final class BudgetOuterClass {
 
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -5240,7 +5240,7 @@ public final class BudgetOuterClass {
         getNotificationUserAccountIdsList();
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -5250,7 +5250,7 @@ public final class BudgetOuterClass {
     int getNotificationUserAccountIdsCount();
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -5261,7 +5261,7 @@ public final class BudgetOuterClass {
     java.lang.String getNotificationUserAccountIds(int index);
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -5673,7 +5673,7 @@ public final class BudgetOuterClass {
     private com.google.protobuf.LazyStringList notificationUserAccountIds_;
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -5686,7 +5686,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -5698,7 +5698,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -5711,7 +5711,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -6615,7 +6615,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -6628,7 +6628,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -6640,7 +6640,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -6653,7 +6653,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -6667,7 +6667,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -6688,7 +6688,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -6708,7 +6708,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -6726,7 +6726,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -6741,7 +6741,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -7653,7 +7653,7 @@ public final class BudgetOuterClass {
 
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -7664,7 +7664,7 @@ public final class BudgetOuterClass {
         getNotificationUserAccountIdsList();
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -7674,7 +7674,7 @@ public final class BudgetOuterClass {
     int getNotificationUserAccountIdsCount();
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -7685,7 +7685,7 @@ public final class BudgetOuterClass {
     java.lang.String getNotificationUserAccountIds(int index);
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -7968,7 +7968,7 @@ public final class BudgetOuterClass {
     private com.google.protobuf.LazyStringList notificationUserAccountIds_;
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -7981,7 +7981,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -7993,7 +7993,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -8006,7 +8006,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the budget exceeds.
      * </pre>
      *
@@ -8716,7 +8716,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -8729,7 +8729,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -8741,7 +8741,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -8754,7 +8754,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -8768,7 +8768,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -8789,7 +8789,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -8809,7 +8809,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -8827,7 +8827,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -8842,7 +8842,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the budget exceeds.
        * </pre>
        *
@@ -11726,7 +11726,7 @@ public final class BudgetOuterClass {
 
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the threshold exceeds.
      * </pre>
      *
@@ -11737,7 +11737,7 @@ public final class BudgetOuterClass {
         getNotificationUserAccountIdsList();
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the threshold exceeds.
      * </pre>
      *
@@ -11747,7 +11747,7 @@ public final class BudgetOuterClass {
     int getNotificationUserAccountIdsCount();
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the threshold exceeds.
      * </pre>
      *
@@ -11758,7 +11758,7 @@ public final class BudgetOuterClass {
     java.lang.String getNotificationUserAccountIds(int index);
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the threshold exceeds.
      * </pre>
      *
@@ -11959,7 +11959,7 @@ public final class BudgetOuterClass {
     private com.google.protobuf.LazyStringList notificationUserAccountIds_;
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the threshold exceeds.
      * </pre>
      *
@@ -11972,7 +11972,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the threshold exceeds.
      * </pre>
      *
@@ -11984,7 +11984,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the threshold exceeds.
      * </pre>
      *
@@ -11997,7 +11997,7 @@ public final class BudgetOuterClass {
     }
     /**
      * <pre>
-     * IDs of the [yandex.cloud.iam.v1.UserAccount].
+     * User account IDs.
      * Specified users will be be notified if the threshold exceeds.
      * </pre>
      *
@@ -12557,7 +12557,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the threshold exceeds.
        * </pre>
        *
@@ -12570,7 +12570,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the threshold exceeds.
        * </pre>
        *
@@ -12582,7 +12582,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the threshold exceeds.
        * </pre>
        *
@@ -12595,7 +12595,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the threshold exceeds.
        * </pre>
        *
@@ -12609,7 +12609,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the threshold exceeds.
        * </pre>
        *
@@ -12630,7 +12630,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the threshold exceeds.
        * </pre>
        *
@@ -12650,7 +12650,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the threshold exceeds.
        * </pre>
        *
@@ -12668,7 +12668,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the threshold exceeds.
        * </pre>
        *
@@ -12683,7 +12683,7 @@ public final class BudgetOuterClass {
       }
       /**
        * <pre>
-       * IDs of the [yandex.cloud.iam.v1.UserAccount].
+       * User account IDs.
        * Specified users will be be notified if the threshold exceeds.
        * </pre>
        *

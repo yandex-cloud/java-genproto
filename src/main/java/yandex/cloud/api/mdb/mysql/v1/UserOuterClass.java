@@ -71,6 +71,14 @@ public final class UserOuterClass {
      * <code>SHOW_ROUTINE = 5;</code>
      */
     SHOW_ROUTINE(5),
+    /**
+     * <pre>
+     * Enables use of the KILL command, creating and dropping databases and users, granting privileges to tables and databases.
+     * </pre>
+     *
+     * <code>MDB_ADMIN = 6;</code>
+     */
+    MDB_ADMIN(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -126,6 +134,14 @@ public final class UserOuterClass {
      * <code>SHOW_ROUTINE = 5;</code>
      */
     public static final int SHOW_ROUTINE_VALUE = 5;
+    /**
+     * <pre>
+     * Enables use of the KILL command, creating and dropping databases and users, granting privileges to tables and databases.
+     * </pre>
+     *
+     * <code>MDB_ADMIN = 6;</code>
+     */
+    public static final int MDB_ADMIN_VALUE = 6;
 
 
     public final int getNumber() {
@@ -158,6 +174,7 @@ public final class UserOuterClass {
         case 3: return PROCESS;
         case 4: return FLUSH_OPTIMIZER_COSTS;
         case 5: return SHOW_ROUTINE;
+        case 6: return MDB_ADMIN;
         default: return null;
       }
     }
@@ -8714,17 +8731,18 @@ public final class UserOuterClass {
       "thentication_plugin\030\006 \001(\0162%.yandex.cloud" +
       ".mdb.mysql.v1.AuthPlugin\0225\n\021generate_pas" +
       "sword\030\007 \001(\0132\032.google.protobuf.BoolValue*" +
-      "\236\001\n\020GlobalPermission\022!\n\035GLOBAL_PERMISSIO" +
+      "\255\001\n\020GlobalPermission\022!\n\035GLOBAL_PERMISSIO" +
       "N_UNSPECIFIED\020\000\022\026\n\022REPLICATION_CLIENT\020\001\022" +
       "\025\n\021REPLICATION_SLAVE\020\002\022\013\n\007PROCESS\020\003\022\031\n\025F" +
       "LUSH_OPTIMIZER_COSTS\020\004\022\020\n\014SHOW_ROUTINE\020\005" +
-      "*\237\001\n\nAuthPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFI" +
-      "ED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CACHI" +
-      "NG_SHA2_PASSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003\022" +
-      "\022\n\016MYSQL_NO_LOGIN\020\004\022\025\n\021MDB_IAMPROXY_AUTH" +
-      "\020\005Bd\n\035yandex.cloud.api.mdb.mysql.v1ZCgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/mdb/mysql/v1;mysqlb\006proto3"
+      "\022\r\n\tMDB_ADMIN\020\006*\237\001\n\nAuthPlugin\022\033\n\027AUTH_P" +
+      "LUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASS" +
+      "WORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n\017SHA" +
+      "256_PASSWORD\020\003\022\022\n\016MYSQL_NO_LOGIN\020\004\022\025\n\021MD" +
+      "B_IAMPROXY_AUTH\020\005Bd\n\035yandex.cloud.api.md" +
+      "b.mysql.v1ZCgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/mdb/mysql/v1;mysqlb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

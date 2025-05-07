@@ -102,7 +102,7 @@ public final class PERB {
      * Service account, which has permission to write to destination
      * </pre>
      *
-     * <code>string service_account_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 4;</code>
      * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
@@ -111,7 +111,7 @@ public final class PERB {
      * Service account, which has permission to write to destination
      * </pre>
      *
-     * <code>string service_account_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 4;</code>
      * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
@@ -427,7 +427,7 @@ public final class PERB {
      * Service account, which has permission to write to destination
      * </pre>
      *
-     * <code>string service_account_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 4;</code>
      * @return The serviceAccountId.
      */
     @java.lang.Override
@@ -448,7 +448,7 @@ public final class PERB {
      * Service account, which has permission to write to destination
      * </pre>
      *
-     * <code>string service_account_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * <code>string service_account_id = 4;</code>
      * @return The bytes for serviceAccountId.
      */
     @java.lang.Override
@@ -1189,7 +1189,7 @@ public final class PERB {
        * Service account, which has permission to write to destination
        * </pre>
        *
-       * <code>string service_account_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 4;</code>
        * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
@@ -1209,7 +1209,7 @@ public final class PERB {
        * Service account, which has permission to write to destination
        * </pre>
        *
-       * <code>string service_account_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 4;</code>
        * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
@@ -1230,7 +1230,7 @@ public final class PERB {
        * Service account, which has permission to write to destination
        * </pre>
        *
-       * <code>string service_account_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 4;</code>
        * @param value The serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -1249,7 +1249,7 @@ public final class PERB {
        * Service account, which has permission to write to destination
        * </pre>
        *
-       * <code>string service_account_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
@@ -1263,7 +1263,7 @@ public final class PERB {
        * Service account, which has permission to write to destination
        * </pre>
        *
-       * <code>string service_account_id = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * <code>string service_account_id = 4;</code>
        * @param value The bytes for serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -4071,29 +4071,29 @@ public final class PERB {
       "/bus.proto\022&yandex.cloud.serverless.even" +
       "trouter.v1\032\037google/protobuf/timestamp.pr" +
       "oto\032\'yandex/cloud/logging/v1/log_entry.p" +
-      "roto\032\035yandex/cloud/validation.proto\"\302\001\n\n" +
+      "roto\032\035yandex/cloud/validation.proto\"\264\001\n\n" +
       "LogOptions\022 \n\014log_group_id\030\001 \001(\tB\010\212\3101\004<=" +
       "50H\000\022\035\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022:\n\tm" +
       "in_level\030\003 \001(\0162\'.yandex.cloud.logging.v1" +
-      ".LogLevel.Level\022(\n\022service_account_id\030\004 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50B\r\n\013destination\"\216\004\n\003Bus" +
-      "\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\020\n\010cloud" +
-      "_id\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022\014\n\004name\030\005 \001(\t\022\023\n\013descr" +
-      "iption\030\006 \001(\t\022G\n\006labels\030\007 \003(\01327.yandex.cl" +
-      "oud.serverless.eventrouter.v1.Bus.Labels" +
-      "Entry\022\033\n\023deletion_protection\030\010 \001(\010\022B\n\006st" +
-      "atus\030\t \001(\01622.yandex.cloud.serverless.eve" +
-      "ntrouter.v1.Bus.Status\022\027\n\017logging_enable" +
-      "d\030\n \001(\010\022G\n\013log_options\030\013 \001(\01322.yandex.cl" +
-      "oud.serverless.eventrouter.v1.LogOptions" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
-      "\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020" +
-      "\003B\212\001\n*yandex.cloud.api.serverless.eventr" +
-      "outer.v1B\004PERBZVgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/serverless/even" +
-      "trouter/v1;eventrouterb\006proto3"
+      ".LogLevel.Level\022\032\n\022service_account_id\030\004 " +
+      "\001(\tB\r\n\013destination\"\216\004\n\003Bus\022\n\n\002id\030\001 \001(\t\022\021" +
+      "\n\tfolder_id\030\002 \001(\t\022\020\n\010cloud_id\030\003 \001(\t\022.\n\nc" +
+      "reated_at\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022\014\n\004name\030\005 \001(\t\022\023\n\013description\030\006 \001(\t\022G" +
+      "\n\006labels\030\007 \003(\01327.yandex.cloud.serverless" +
+      ".eventrouter.v1.Bus.LabelsEntry\022\033\n\023delet" +
+      "ion_protection\030\010 \001(\010\022B\n\006status\030\t \001(\01622.y" +
+      "andex.cloud.serverless.eventrouter.v1.Bu" +
+      "s.Status\022\027\n\017logging_enabled\030\n \001(\010\022G\n\013log" +
+      "_options\030\013 \001(\01322.yandex.cloud.serverless" +
+      ".eventrouter.v1.LogOptions\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H\n\006Sta" +
+      "tus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020" +
+      "\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003B\212\001\n*yandex.c" +
+      "loud.api.serverless.eventrouter.v1B\004PERB" +
+      "ZVgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/serverless/eventrouter/v1;eve" +
+      "ntrouterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4123,7 +4123,6 @@ public final class PERB {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
-    registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();

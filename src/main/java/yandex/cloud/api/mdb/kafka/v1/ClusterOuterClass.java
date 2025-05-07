@@ -13228,31 +13228,36 @@ public final class ClusterOuterClass {
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the logPreallocate field is set.
      */
-    boolean hasLogPreallocate();
+    @java.lang.Deprecated boolean hasLogPreallocate();
     /**
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+     * @deprecated
      * @return The logPreallocate.
      */
-    com.google.protobuf.BoolValue getLogPreallocate();
+    @java.lang.Deprecated com.google.protobuf.BoolValue getLogPreallocate();
     /**
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
      */
-    com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder();
+    @java.lang.Deprecated com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder();
 
     /**
      * <pre>
@@ -14277,38 +14282,43 @@ public final class ClusterOuterClass {
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the logPreallocate field is set.
      */
     @java.lang.Override
-    public boolean hasLogPreallocate() {
+    @java.lang.Deprecated public boolean hasLogPreallocate() {
       return logPreallocate_ != null;
     }
     /**
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+     * @deprecated
      * @return The logPreallocate.
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValue getLogPreallocate() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValue getLogPreallocate() {
       return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
     }
     /**
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
       return getLogPreallocate();
     }
 
@@ -17049,24 +17059,28 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the logPreallocate field is set.
        */
-      public boolean hasLogPreallocate() {
+      @java.lang.Deprecated public boolean hasLogPreallocate() {
         return logPreallocateBuilder_ != null || logPreallocate_ != null;
       }
       /**
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+       * @deprecated
        * @return The logPreallocate.
        */
-      public com.google.protobuf.BoolValue getLogPreallocate() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue getLogPreallocate() {
         if (logPreallocateBuilder_ == null) {
           return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
         } else {
@@ -17077,11 +17091,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public Builder setLogPreallocate(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder setLogPreallocate(com.google.protobuf.BoolValue value) {
         if (logPreallocateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17098,11 +17113,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public Builder setLogPreallocate(
+      @java.lang.Deprecated public Builder setLogPreallocate(
           com.google.protobuf.BoolValue.Builder builderForValue) {
         if (logPreallocateBuilder_ == null) {
           logPreallocate_ = builderForValue.build();
@@ -17117,11 +17133,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public Builder mergeLogPreallocate(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder mergeLogPreallocate(com.google.protobuf.BoolValue value) {
         if (logPreallocateBuilder_ == null) {
           if (logPreallocate_ != null) {
             logPreallocate_ =
@@ -17140,11 +17157,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public Builder clearLogPreallocate() {
+      @java.lang.Deprecated public Builder clearLogPreallocate() {
         if (logPreallocateBuilder_ == null) {
           logPreallocate_ = null;
           onChanged();
@@ -17159,11 +17177,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValue.Builder getLogPreallocateBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue.Builder getLogPreallocateBuilder() {
         
         onChanged();
         return getLogPreallocateFieldBuilder().getBuilder();
@@ -17172,11 +17191,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
         if (logPreallocateBuilder_ != null) {
           return logPreallocateBuilder_.getMessageOrBuilder();
         } else {
@@ -17188,9 +17208,10 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_8.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -19105,31 +19126,36 @@ public final class ClusterOuterClass {
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the logPreallocate field is set.
      */
-    boolean hasLogPreallocate();
+    @java.lang.Deprecated boolean hasLogPreallocate();
     /**
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+     * @deprecated
      * @return The logPreallocate.
      */
-    com.google.protobuf.BoolValue getLogPreallocate();
+    @java.lang.Deprecated com.google.protobuf.BoolValue getLogPreallocate();
     /**
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
      */
-    com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder();
+    @java.lang.Deprecated com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder();
 
     /**
      * <pre>
@@ -20154,38 +20180,43 @@ public final class ClusterOuterClass {
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+     * @deprecated
      * @return Whether the logPreallocate field is set.
      */
     @java.lang.Override
-    public boolean hasLogPreallocate() {
+    @java.lang.Deprecated public boolean hasLogPreallocate() {
       return logPreallocate_ != null;
     }
     /**
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+     * @deprecated
      * @return The logPreallocate.
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValue getLogPreallocate() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValue getLogPreallocate() {
       return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
     }
     /**
      * <pre>
      * Should pre allocate file when create new segment?
      * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+     * Deprecated. Feature useless for Yandex Cloud.
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+    @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
       return getLogPreallocate();
     }
 
@@ -22926,24 +22957,28 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+       * @deprecated
        * @return Whether the logPreallocate field is set.
        */
-      public boolean hasLogPreallocate() {
+      @java.lang.Deprecated public boolean hasLogPreallocate() {
         return logPreallocateBuilder_ != null || logPreallocate_ != null;
       }
       /**
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
+       * @deprecated
        * @return The logPreallocate.
        */
-      public com.google.protobuf.BoolValue getLogPreallocate() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue getLogPreallocate() {
         if (logPreallocateBuilder_ == null) {
           return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
         } else {
@@ -22954,11 +22989,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public Builder setLogPreallocate(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder setLogPreallocate(com.google.protobuf.BoolValue value) {
         if (logPreallocateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22975,11 +23011,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public Builder setLogPreallocate(
+      @java.lang.Deprecated public Builder setLogPreallocate(
           com.google.protobuf.BoolValue.Builder builderForValue) {
         if (logPreallocateBuilder_ == null) {
           logPreallocate_ = builderForValue.build();
@@ -22994,11 +23031,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public Builder mergeLogPreallocate(com.google.protobuf.BoolValue value) {
+      @java.lang.Deprecated public Builder mergeLogPreallocate(com.google.protobuf.BoolValue value) {
         if (logPreallocateBuilder_ == null) {
           if (logPreallocate_ != null) {
             logPreallocate_ =
@@ -23017,11 +23055,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public Builder clearLogPreallocate() {
+      @java.lang.Deprecated public Builder clearLogPreallocate() {
         if (logPreallocateBuilder_ == null) {
           logPreallocate_ = null;
           onChanged();
@@ -23036,11 +23075,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValue.Builder getLogPreallocateBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValue.Builder getLogPreallocateBuilder() {
         
         onChanged();
         return getLogPreallocateFieldBuilder().getBuilder();
@@ -23049,11 +23089,12 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
-      public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+      @java.lang.Deprecated public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
         if (logPreallocateBuilder_ != null) {
           return logPreallocateBuilder_.getMessageOrBuilder();
         } else {
@@ -23065,9 +23106,10 @@ public final class ClusterOuterClass {
        * <pre>
        * Should pre allocate file when create new segment?
        * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig3.preallocate] setting.
+       * Deprecated. Feature useless for Yandex Cloud.
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       * <code>.google.protobuf.BoolValue log_preallocate = 10 [deprecated = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -28164,7 +28206,7 @@ public final class ClusterOuterClass {
       "1.Resources\032 \n\rRestAPIConfig\022\017\n\007enabled\030" +
       "\001 \001(\010\"P\n\tResources\022\032\n\022resource_preset_id" +
       "\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_i" +
-      "d\030\003 \001(\t\"\300\t\n\016KafkaConfig2_8\022D\n\020compressio" +
+      "d\030\003 \001(\t\"\304\t\n\016KafkaConfig2_8\022D\n\020compressio" +
       "n_type\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1" +
       ".CompressionType\022@\n\033log_flush_interval_m" +
       "essages\030\002 \001(\0132\033.google.protobuf.Int64Val" +
@@ -28178,71 +28220,71 @@ public final class ClusterOuterClass {
       "\033.google.protobuf.Int64Value\0225\n\020log_rete" +
       "ntion_ms\030\010 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\0226\n\021log_segment_bytes\030\t \001(\0132\033.google." +
-      "protobuf.Int64Value\0223\n\017log_preallocate\030\n" +
-      " \001(\0132\032.google.protobuf.BoolValue\022=\n\030sock" +
-      "et_send_buffer_bytes\030\013 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022@\n\033socket_receive_buffer" +
-      "_bytes\030\014 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022=\n\031auto_create_topics_enable\030\r \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\0223\n\016num_partitio" +
-      "ns\030\016 \001(\0132\033.google.protobuf.Int64Value\022?\n" +
-      "\032default_replication_factor\030\017 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0226\n\021message_max_by" +
-      "tes\030\020 \001(\0132\033.google.protobuf.Int64Value\022<" +
-      "\n\027replica_fetch_max_bytes\030\021 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022\031\n\021ssl_cipher_suite" +
-      "s\030\022 \003(\t\022>\n\031offsets_retention_minutes\030\023 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022I\n\027sasl_" +
-      "enabled_mechanisms\030\024 \003(\0162(.yandex.cloud." +
-      "mdb.kafka.v1.SaslMechanism\"\276\t\n\014KafkaConf" +
-      "ig3\022D\n\020compression_type\030\001 \001(\0162*.yandex.c" +
-      "loud.mdb.kafka.v1.CompressionType\022@\n\033log" +
-      "_flush_interval_messages\030\002 \001(\0132\033.google." +
-      "protobuf.Int64Value\022:\n\025log_flush_interva" +
-      "l_ms\030\003 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "D\n\037log_flush_scheduler_interval_ms\030\004 \001(\013" +
-      "2\033.google.protobuf.Int64Value\0228\n\023log_ret" +
-      "ention_bytes\030\005 \001(\0132\033.google.protobuf.Int" +
-      "64Value\0228\n\023log_retention_hours\030\006 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022:\n\025log_retenti" +
-      "on_minutes\030\007 \001(\0132\033.google.protobuf.Int64" +
-      "Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.google" +
-      ".protobuf.Int64Value\0226\n\021log_segment_byte" +
-      "s\030\t \001(\0132\033.google.protobuf.Int64Value\0223\n\017" +
-      "log_preallocate\030\n \001(\0132\032.google.protobuf." +
-      "BoolValue\022=\n\030socket_send_buffer_bytes\030\013 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022@\n\033sock" +
-      "et_receive_buffer_bytes\030\014 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022=\n\031auto_create_topics" +
-      "_enable\030\r \001(\0132\032.google.protobuf.BoolValu" +
-      "e\0223\n\016num_partitions\030\016 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022?\n\032default_replication_fa" +
-      "ctor\030\017 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "6\n\021message_max_bytes\030\020 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022<\n\027replica_fetch_max_byt" +
-      "es\030\021 \001(\0132\033.google.protobuf.Int64Value\022\031\n" +
-      "\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offsets_rete" +
-      "ntion_minutes\030\023 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022I\n\027sasl_enabled_mechanisms\030\024 \003(" +
-      "\0162(.yandex.cloud.mdb.kafka.v1.SaslMechan" +
-      "ism\"\203\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id" +
-      "\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$." +
-      "yandex.cloud.mdb.kafka.v1.Host.Role\0227\n\tr" +
-      "esources\030\005 \001(\0132$.yandex.cloud.mdb.kafka." +
-      "v1.Resources\0226\n\006health\030\006 \001(\0162&.yandex.cl" +
-      "oud.mdb.kafka.v1.Host.Health\022\021\n\tsubnet_i" +
-      "d\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Rol" +
-      "e\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZO" +
-      "OKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIV" +
-      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003J\004\010\007\020\010\"\037\n\006Acc" +
-      "ess\022\025\n\rdata_transfer\030\001 \001(\010\"\220\001\n\023DiskSizeA" +
-      "utoscaling\022.\n\027planned_usage_threshold\030\001 " +
-      "\001(\003B\r\350\3071\000\372\3071\0050-100\0220\n\031emergency_usage_th" +
-      "reshold\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017disk_siz" +
-      "e_limit\030\003 \001(\003Bd\n\035yandex.cloud.api.mdb.ka" +
-      "fka.v1ZCgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/mdb/kafka/v1;kafkab\006pro" +
-      "to3"
+      "protobuf.Int64Value\0227\n\017log_preallocate\030\n" +
+      " \001(\0132\032.google.protobuf.BoolValueB\002\030\001\022=\n\030" +
+      "socket_send_buffer_bytes\030\013 \001(\0132\033.google." +
+      "protobuf.Int64Value\022@\n\033socket_receive_bu" +
+      "ffer_bytes\030\014 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022=\n\031auto_create_topics_enable\030\r \001(\013" +
+      "2\032.google.protobuf.BoolValue\0223\n\016num_part" +
+      "itions\030\016 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022?\n\032default_replication_factor\030\017 \001(\0132\033." +
+      "google.protobuf.Int64Value\0226\n\021message_ma" +
+      "x_bytes\030\020 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022<\n\027replica_fetch_max_bytes\030\021 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022\031\n\021ssl_cipher_s" +
+      "uites\030\022 \003(\t\022>\n\031offsets_retention_minutes" +
+      "\030\023 \001(\0132\033.google.protobuf.Int64Value\022I\n\027s" +
+      "asl_enabled_mechanisms\030\024 \003(\0162(.yandex.cl" +
+      "oud.mdb.kafka.v1.SaslMechanism\"\302\t\n\014Kafka" +
+      "Config3\022D\n\020compression_type\030\001 \001(\0162*.yand" +
+      "ex.cloud.mdb.kafka.v1.CompressionType\022@\n" +
+      "\033log_flush_interval_messages\030\002 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022:\n\025log_flush_int" +
+      "erval_ms\030\003 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022D\n\037log_flush_scheduler_interval_ms\030\004" +
+      " \001(\0132\033.google.protobuf.Int64Value\0228\n\023log" +
+      "_retention_bytes\030\005 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0228\n\023log_retention_hours\030\006 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022:\n\025log_ret" +
+      "ention_minutes\030\007 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0226\n\021log_segment_" +
+      "bytes\030\t \001(\0132\033.google.protobuf.Int64Value" +
+      "\0227\n\017log_preallocate\030\n \001(\0132\032.google.proto" +
+      "buf.BoolValueB\002\030\001\022=\n\030socket_send_buffer_" +
+      "bytes\030\013 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022@\n\033socket_receive_buffer_bytes\030\014 \001(\0132\033." +
+      "google.protobuf.Int64Value\022=\n\031auto_creat" +
+      "e_topics_enable\030\r \001(\0132\032.google.protobuf." +
+      "BoolValue\0223\n\016num_partitions\030\016 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022?\n\032default_replic" +
+      "ation_factor\030\017 \001(\0132\033.google.protobuf.Int" +
+      "64Value\0226\n\021message_max_bytes\030\020 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022<\n\027replica_fetch" +
+      "_max_bytes\030\021 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offs" +
+      "ets_retention_minutes\030\023 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022I\n\027sasl_enabled_mechani" +
+      "sms\030\024 \003(\0162(.yandex.cloud.mdb.kafka.v1.Sa" +
+      "slMechanism\"\203\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
+      "uster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030" +
+      "\004 \001(\0162$.yandex.cloud.mdb.kafka.v1.Host.R" +
+      "ole\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.md" +
+      "b.kafka.v1.Resources\0226\n\006health\030\006 \001(\0162&.y" +
+      "andex.cloud.mdb.kafka.v1.Host.Health\022\021\n\t" +
+      "subnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(" +
+      "\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA" +
+      "\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000" +
+      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003J\004\010\007\020" +
+      "\010\"\037\n\006Access\022\025\n\rdata_transfer\030\001 \001(\010\"\220\001\n\023D" +
+      "iskSizeAutoscaling\022.\n\027planned_usage_thre" +
+      "shold\030\001 \001(\003B\r\350\3071\000\372\3071\0050-100\0220\n\031emergency_" +
+      "usage_threshold\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017" +
+      "disk_size_limit\030\003 \001(\003Bd\n\035yandex.cloud.ap" +
+      "i.mdb.kafka.v1ZCgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/mdb/kafka/v1;ka" +
+      "fkab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
