@@ -3259,6 +3259,50 @@ public final class DashboardServiceOuterClass {
      */
     yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder();
 
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> 
+        getLinksList();
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem getLinks(int index);
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    int getLinksCount();
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> 
+        getLinksOrBuilderList();
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder getLinksOrBuilder(
+        int index);
+
     public yandex.cloud.api.monitoring.v3.DashboardServiceOuterClass.CreateDashboardRequest.ContainerCase getContainerCase();
   }
   /**
@@ -3280,6 +3324,7 @@ public final class DashboardServiceOuterClass {
       widgets_ = java.util.Collections.emptyList();
       managedBy_ = "";
       managedLink_ = "";
+      links_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -3384,6 +3429,15 @@ public final class DashboardServiceOuterClass {
               managedLink_ = s;
               break;
             }
+            case 234: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                links_ = new java.util.ArrayList<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              links_.add(
+                  input.readMessage(yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.parser(), extensionRegistry));
+              break;
+            }
             case 274: {
               yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder subBuilder = null;
               if (timeline_ != null) {
@@ -3414,6 +3468,9 @@ public final class DashboardServiceOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           widgets_ = java.util.Collections.unmodifiableList(widgets_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          links_ = java.util.Collections.unmodifiableList(links_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4014,6 +4071,66 @@ public final class DashboardServiceOuterClass {
       return getTimeline();
     }
 
+    public static final int LINKS_FIELD_NUMBER = 29;
+    private java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> links_;
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> getLinksList() {
+      return links_;
+    }
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> 
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4057,6 +4174,9 @@ public final class DashboardServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 27, managedLink_);
+      }
+      for (int i = 0; i < links_.size(); i++) {
+        output.writeMessage(29, links_.get(i));
       }
       if (timeline_ != null) {
         output.writeMessage(34, getTimeline());
@@ -4106,6 +4226,10 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, managedLink_);
       }
+      for (int i = 0; i < links_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, links_.get(i));
+      }
       if (timeline_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(34, getTimeline());
@@ -4149,6 +4273,8 @@ public final class DashboardServiceOuterClass {
         if (!getTimeline()
             .equals(other.getTimeline())) return false;
       }
+      if (!getLinksList()
+          .equals(other.getLinksList())) return false;
       if (!getContainerCase().equals(other.getContainerCase())) return false;
       switch (containerCase_) {
         case 2:
@@ -4194,6 +4320,10 @@ public final class DashboardServiceOuterClass {
       if (hasTimeline()) {
         hash = (37 * hash) + TIMELINE_FIELD_NUMBER;
         hash = (53 * hash) + getTimeline().hashCode();
+      }
+      if (getLinksCount() > 0) {
+        hash = (37 * hash) + LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLinksList().hashCode();
       }
       switch (containerCase_) {
         case 2:
@@ -4354,6 +4484,7 @@ public final class DashboardServiceOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getWidgetsFieldBuilder();
+          getLinksFieldBuilder();
         }
       }
       @java.lang.Override
@@ -4387,6 +4518,12 @@ public final class DashboardServiceOuterClass {
         } else {
           timeline_ = null;
           timelineBuilder_ = null;
+        }
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          linksBuilder_.clear();
         }
         containerCase_ = 0;
         container_ = null;
@@ -4445,6 +4582,15 @@ public final class DashboardServiceOuterClass {
           result.timeline_ = timeline_;
         } else {
           result.timeline_ = timelineBuilder_.build();
+        }
+        if (linksBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            links_ = java.util.Collections.unmodifiableList(links_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.links_ = links_;
+        } else {
+          result.links_ = linksBuilder_.build();
         }
         result.containerCase_ = containerCase_;
         onBuilt();
@@ -4548,6 +4694,32 @@ public final class DashboardServiceOuterClass {
         }
         if (other.hasTimeline()) {
           mergeTimeline(other.getTimeline());
+        }
+        if (linksBuilder_ == null) {
+          if (!other.links_.isEmpty()) {
+            if (links_.isEmpty()) {
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureLinksIsMutable();
+              links_.addAll(other.links_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.links_.isEmpty()) {
+            if (linksBuilder_.isEmpty()) {
+              linksBuilder_.dispose();
+              linksBuilder_ = null;
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              linksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLinksFieldBuilder() : null;
+            } else {
+              linksBuilder_.addAllMessages(other.links_);
+            }
+          }
         }
         switch (other.getContainerCase()) {
           case FOLDER_ID: {
@@ -5996,6 +6168,318 @@ public final class DashboardServiceOuterClass {
         }
         return timelineBuilder_;
       }
+
+      private java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> links_ =
+        java.util.Collections.emptyList();
+      private void ensureLinksIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          links_ = new java.util.ArrayList<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem>(links_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> linksBuilder_;
+
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> getLinksList() {
+        if (linksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(links_);
+        } else {
+          return linksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public int getLinksCount() {
+        if (linksBuilder_ == null) {
+          return links_.size();
+        } else {
+          return linksBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem getLinks(int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);
+        } else {
+          return linksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder setLinks(
+          int index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.set(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder setLinks(
+          int index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addLinks(yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addLinks(
+          int index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addLinks(
+          yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addLinks(
+          int index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addAllLinks(
+          java.lang.Iterable<? extends yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> values) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, links_);
+          onChanged();
+        } else {
+          linksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder clearLinks() {
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          linksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder removeLinks(int index) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.remove(index);
+          onChanged();
+        } else {
+          linksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder getLinksBuilder(
+          int index) {
+        return getLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder getLinksOrBuilder(
+          int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);  } else {
+          return linksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> 
+           getLinksOrBuilderList() {
+        if (linksBuilder_ != null) {
+          return linksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(links_);
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder addLinksBuilder() {
+        return getLinksFieldBuilder().addBuilder(
+            yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder addLinksBuilder(
+          int index) {
+        return getLinksFieldBuilder().addBuilder(
+            index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder> 
+           getLinksBuilderList() {
+        return getLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> 
+          getLinksFieldBuilder() {
+        if (linksBuilder_ == null) {
+          linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder>(
+                  links_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          links_ = null;
+        }
+        return linksBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6957,6 +7441,50 @@ public final class DashboardServiceOuterClass {
      * <code>.yandex.cloud.monitoring.v3.Timeline timeline = 34;</code>
      */
     yandex.cloud.api.monitoring.v3.TimelineOuterClass.TimelineOrBuilder getTimelineOrBuilder();
+
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> 
+        getLinksList();
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem getLinks(int index);
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    int getLinksCount();
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> 
+        getLinksOrBuilderList();
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder getLinksOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.monitoring.v3.UpdateDashboardRequest}
@@ -6979,6 +7507,7 @@ public final class DashboardServiceOuterClass {
       etag_ = "";
       managedBy_ = "";
       managedLink_ = "";
+      links_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -7089,6 +7618,15 @@ public final class DashboardServiceOuterClass {
               managedLink_ = s;
               break;
             }
+            case 234: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                links_ = new java.util.ArrayList<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              links_.add(
+                  input.readMessage(yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.parser(), extensionRegistry));
+              break;
+            }
             case 274: {
               yandex.cloud.api.monitoring.v3.TimelineOuterClass.Timeline.Builder subBuilder = null;
               if (timeline_ != null) {
@@ -7119,6 +7657,9 @@ public final class DashboardServiceOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           widgets_ = java.util.Collections.unmodifiableList(widgets_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          links_ = java.util.Collections.unmodifiableList(links_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -7712,6 +8253,66 @@ public final class DashboardServiceOuterClass {
       return getTimeline();
     }
 
+    public static final int LINKS_FIELD_NUMBER = 29;
+    private java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> links_;
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> getLinksList() {
+      return links_;
+    }
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> 
+        getLinksOrBuilderList() {
+      return links_;
+    }
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public int getLinksCount() {
+      return links_.size();
+    }
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem getLinks(int index) {
+      return links_.get(index);
+    }
+    /**
+     * <pre>
+     * Dashboard links
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder getLinksOrBuilder(
+        int index) {
+      return links_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7758,6 +8359,9 @@ public final class DashboardServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 27, managedLink_);
+      }
+      for (int i = 0; i < links_.size(); i++) {
+        output.writeMessage(29, links_.get(i));
       }
       if (timeline_ != null) {
         output.writeMessage(34, getTimeline());
@@ -7810,6 +8414,10 @@ public final class DashboardServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedLink_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, managedLink_);
       }
+      for (int i = 0; i < links_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(29, links_.get(i));
+      }
       if (timeline_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(34, getTimeline());
@@ -7857,6 +8465,8 @@ public final class DashboardServiceOuterClass {
         if (!getTimeline()
             .equals(other.getTimeline())) return false;
       }
+      if (!getLinksList()
+          .equals(other.getLinksList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7897,6 +8507,10 @@ public final class DashboardServiceOuterClass {
       if (hasTimeline()) {
         hash = (37 * hash) + TIMELINE_FIELD_NUMBER;
         hash = (53 * hash) + getTimeline().hashCode();
+      }
+      if (getLinksCount() > 0) {
+        hash = (37 * hash) + LINKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLinksList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8049,6 +8663,7 @@ public final class DashboardServiceOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getWidgetsFieldBuilder();
+          getLinksFieldBuilder();
         }
       }
       @java.lang.Override
@@ -8086,6 +8701,12 @@ public final class DashboardServiceOuterClass {
         } else {
           timeline_ = null;
           timelineBuilder_ = null;
+        }
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          linksBuilder_.clear();
         }
         return this;
       }
@@ -8141,6 +8762,15 @@ public final class DashboardServiceOuterClass {
           result.timeline_ = timeline_;
         } else {
           result.timeline_ = timelineBuilder_.build();
+        }
+        if (linksBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            links_ = java.util.Collections.unmodifiableList(links_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.links_ = links_;
+        } else {
+          result.links_ = linksBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8251,6 +8881,32 @@ public final class DashboardServiceOuterClass {
         }
         if (other.hasTimeline()) {
           mergeTimeline(other.getTimeline());
+        }
+        if (linksBuilder_ == null) {
+          if (!other.links_.isEmpty()) {
+            if (links_.isEmpty()) {
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureLinksIsMutable();
+              links_.addAll(other.links_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.links_.isEmpty()) {
+            if (linksBuilder_.isEmpty()) {
+              linksBuilder_.dispose();
+              linksBuilder_ = null;
+              links_ = other.links_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              linksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLinksFieldBuilder() : null;
+            } else {
+              linksBuilder_.addAllMessages(other.links_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9750,6 +10406,318 @@ public final class DashboardServiceOuterClass {
           timeline_ = null;
         }
         return timelineBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> links_ =
+        java.util.Collections.emptyList();
+      private void ensureLinksIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          links_ = new java.util.ArrayList<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem>(links_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> linksBuilder_;
+
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> getLinksList() {
+        if (linksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(links_);
+        } else {
+          return linksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public int getLinksCount() {
+        if (linksBuilder_ == null) {
+          return links_.size();
+        } else {
+          return linksBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem getLinks(int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);
+        } else {
+          return linksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder setLinks(
+          int index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.set(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder setLinks(
+          int index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addLinks(yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addLinks(
+          int index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem value) {
+        if (linksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinksIsMutable();
+          links_.add(index, value);
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addLinks(
+          yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addLinks(
+          int index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder builderForValue) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder addAllLinks(
+          java.lang.Iterable<? extends yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem> values) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, links_);
+          onChanged();
+        } else {
+          linksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder clearLinks() {
+        if (linksBuilder_ == null) {
+          links_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          linksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public Builder removeLinks(int index) {
+        if (linksBuilder_ == null) {
+          ensureLinksIsMutable();
+          links_.remove(index);
+          onChanged();
+        } else {
+          linksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder getLinksBuilder(
+          int index) {
+        return getLinksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder getLinksOrBuilder(
+          int index) {
+        if (linksBuilder_ == null) {
+          return links_.get(index);  } else {
+          return linksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> 
+           getLinksOrBuilderList() {
+        if (linksBuilder_ != null) {
+          return linksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(links_);
+        }
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder addLinksBuilder() {
+        return getLinksFieldBuilder().addBuilder(
+            yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder addLinksBuilder(
+          int index) {
+        return getLinksFieldBuilder().addBuilder(
+            index, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Dashboard links
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.monitoring.v3.LinkItem links = 29;</code>
+       */
+      public java.util.List<yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder> 
+           getLinksBuilderList() {
+        return getLinksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder> 
+          getLinksFieldBuilder() {
+        if (linksBuilder_ == null) {
+          linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItem.Builder, yandex.cloud.api.monitoring.v3.LinkItemOuterClass.LinkItemOrBuilder>(
+                  links_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          links_ = null;
+        }
+        return linksBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13903,88 +14871,92 @@ public final class DashboardServiceOuterClass {
       "yandex/cloud/monitoring/v3/widget.proto\032" +
       "&yandex/cloud/operation/operation.proto\032" +
       "\035yandex/cloud/validation.proto\032)yandex/c" +
-      "loud/monitoring/v3/timeline.proto\"9\n\023Get" +
-      "DashboardRequest\022\"\n\014dashboard_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"\247\001\n\025ListDashboardsRequest\022!" +
-      "\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\022\035\n\tpag" +
-      "e_size\030\023 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\024" +
-      " \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\025 \001(\tB\n\212\3101\006<=1" +
-      "000B\013\n\tcontainerJ\004\010\003\020\023\"l\n\026ListDashboards" +
-      "Response\0229\n\ndashboards\030\001 \003(\0132%.yandex.cl" +
-      "oud.monitoring.v3.Dashboard\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"\343\004\n\026CreateDashboardRequest\022" +
-      "!\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\0222\n\004na" +
-      "me\030\023 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z" +
-      "0-9])?\022\036\n\013description\030\024 \001(\tB\t\212\3101\005<=256\022\227" +
-      "\001\n\006labels\030\025 \003(\0132>.yandex.cloud.monitorin" +
-      "g.v3.CreateDashboardRequest.LabelsEntryB" +
-      "G\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006" +
-      "\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005titl" +
-      "e\030\026 \001(\t\0223\n\007widgets\030\027 \003(\0132\".yandex.cloud." +
-      "monitoring.v3.Widget\022D\n\017parametrization\030" +
-      "\030 \001(\0132+.yandex.cloud.monitoring.v3.Param" +
-      "etrization\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014manage" +
-      "d_link\030\033 \001(\t\0226\n\010timeline\030\" \001(\0132$.yandex." +
-      "cloud.monitoring.v3.Timeline\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\013\n\tc" +
-      "ontainerJ\004\010\003\020\023J\004\010\034\020\"J\004\010\031\020\032\"/\n\027CreateDash" +
-      "boardMetadata\022\024\n\014dashboard_id\030\001 \001(\t\"\337\004\n\026" +
-      "UpdateDashboardRequest\022\"\n\014dashboard_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[" +
-      "a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descri" +
-      "ption\030\003 \001(\tB\t\212\3101\005<=256\022\227\001\n\006labels\030\004 \003(\0132" +
-      ">.yandex.cloud.monitoring.v3.UpdateDashb" +
-      "oardRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=6" +
-      "3\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z" +
-      "][-_./\\@0-9a-z]*\022\r\n\005title\030\005 \001(\t\0223\n\007widge" +
-      "ts\030\006 \003(\0132\".yandex.cloud.monitoring.v3.Wi" +
-      "dget\022D\n\017parametrization\030\007 \001(\0132+.yandex.c" +
-      "loud.monitoring.v3.Parametrization\022\014\n\004et" +
-      "ag\030\010 \001(\t\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014managed_" +
-      "link\030\033 \001(\t\0226\n\010timeline\030\" \001(\0132$.yandex.cl" +
-      "oud.monitoring.v3.Timeline\032-\n\013LabelsEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\034\020\"J" +
-      "\004\010\t\020\032\"/\n\027UpdateDashboardMetadata\022\024\n\014dash" +
-      "board_id\030\001 \001(\t\"J\n\026DeleteDashboardRequest" +
-      "\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004" +
-      "etag\030\002 \001(\t\"/\n\027DeleteDashboardMetadata\022\024\n" +
-      "\014dashboard_id\030\001 \001(\t\"\202\001\n\036ListDashboardOpe" +
-      "rationsRequest\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
-      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"q\n\037List" +
-      "DashboardOperationsResponse\0225\n\noperation" +
-      "s\030\001 \003(\0132!.yandex.cloud.operation.Operati" +
-      "on\022\027\n\017next_page_token\030\002 \001(\t2\267\010\n\020Dashboar" +
-      "dService\022\217\001\n\003Get\022/.yandex.cloud.monitori" +
-      "ng.v3.GetDashboardRequest\032%.yandex.cloud" +
-      ".monitoring.v3.Dashboard\"0\202\323\344\223\002*\022(/monit" +
-      "oring/v3/dashboards/{dashboard_id}\022\220\001\n\004L" +
-      "ist\0221.yandex.cloud.monitoring.v3.ListDas" +
-      "hboardsRequest\0322.yandex.cloud.monitoring" +
-      ".v3.ListDashboardsResponse\"!\202\323\344\223\002\033\022\031/mon" +
-      "itoring/v3/dashboards\022\255\001\n\006Create\0222.yande" +
-      "x.cloud.monitoring.v3.CreateDashboardReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "L\202\323\344\223\002\036\"\031/monitoring/v3/dashboards:\001*\262\322*" +
-      "$\n\027CreateDashboardMetadata\022\tDashboard\022\274\001" +
-      "\n\006Update\0222.yandex.cloud.monitoring.v3.Up" +
-      "dateDashboardRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"[\202\323\344\223\002-2(/monitoring/v3/" +
-      "dashboards/{dashboard_id}:\001*\262\322*$\n\027Update" +
-      "DashboardMetadata\022\tDashboard\022\305\001\n\006Delete\022" +
-      "2.yandex.cloud.monitoring.v3.DeleteDashb" +
-      "oardRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"d\202\323\344\223\002**(/monitoring/v3/dashboard" +
-      "s/{dashboard_id}\262\322*0\n\027DeleteDashboardMet" +
-      "adata\022\025google.protobuf.Empty\022\306\001\n\016ListOpe" +
-      "rations\022:.yandex.cloud.monitoring.v3.Lis" +
-      "tDashboardOperationsRequest\032;.yandex.clo" +
-      "ud.monitoring.v3.ListDashboardOperations" +
-      "Response\";\202\323\344\223\0025\0223/monitoring/v3/dashboa" +
-      "rds/{dashboard_id}/operationsBk\n\036yandex." +
-      "cloud.api.monitoring.v3ZIgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/monito" +
-      "ring/v3;monitoringb\006proto3"
+      "loud/monitoring/v3/timeline.proto\032*yande" +
+      "x/cloud/monitoring/v3/link_item.proto\"9\n" +
+      "\023GetDashboardRequest\022\"\n\014dashboard_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"\247\001\n\025ListDashboardsReque" +
+      "st\022!\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\022\035\n" +
+      "\tpage_size\030\023 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030\024 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\025 \001(\tB\n\212\3101" +
+      "\006<=1000B\013\n\tcontainerJ\004\010\003\020\023\"l\n\026ListDashbo" +
+      "ardsResponse\0229\n\ndashboards\030\001 \003(\0132%.yande" +
+      "x.cloud.monitoring.v3.Dashboard\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"\236\005\n\026CreateDashboardRequ" +
+      "est\022!\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50H\000\0222" +
+      "\n\004name\030\023 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}" +
+      "[a-z0-9])?\022\036\n\013description\030\024 \001(\tB\t\212\3101\005<=2" +
+      "56\022\227\001\n\006labels\030\025 \003(\0132>.yandex.cloud.monit" +
+      "oring.v3.CreateDashboardRequest.LabelsEn" +
+      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\r\n\005" +
+      "title\030\026 \001(\t\0223\n\007widgets\030\027 \003(\0132\".yandex.cl" +
+      "oud.monitoring.v3.Widget\022D\n\017parametrizat" +
+      "ion\030\030 \001(\0132+.yandex.cloud.monitoring.v3.P" +
+      "arametrization\022\022\n\nmanaged_by\030\032 \001(\t\022\024\n\014ma" +
+      "naged_link\030\033 \001(\t\0226\n\010timeline\030\" \001(\0132$.yan" +
+      "dex.cloud.monitoring.v3.Timeline\0223\n\005link" +
+      "s\030\035 \003(\0132$.yandex.cloud.monitoring.v3.Lin" +
+      "kItem\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001B\013\n\tcontainerJ\004\010\003\020\023J\004\010\034\020\035J\004\010" +
+      "\036\020\"J\004\010\031\020\032\"/\n\027CreateDashboardMetadata\022\024\n\014" +
+      "dashboard_id\030\001 \001(\t\"\232\005\n\026UpdateDashboardRe" +
+      "quest\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
+      "61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005" +
+      "<=256\022\227\001\n\006labels\030\004 \003(\0132>.yandex.cloud.mo" +
+      "nitoring.v3.UpdateDashboardRequest.Label" +
+      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
+      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
+      "\r\n\005title\030\005 \001(\t\0223\n\007widgets\030\006 \003(\0132\".yandex" +
+      ".cloud.monitoring.v3.Widget\022D\n\017parametri" +
+      "zation\030\007 \001(\0132+.yandex.cloud.monitoring.v" +
+      "3.Parametrization\022\014\n\004etag\030\010 \001(\t\022\022\n\nmanag" +
+      "ed_by\030\032 \001(\t\022\024\n\014managed_link\030\033 \001(\t\0226\n\010tim" +
+      "eline\030\" \001(\0132$.yandex.cloud.monitoring.v3" +
+      ".Timeline\0223\n\005links\030\035 \003(\0132$.yandex.cloud." +
+      "monitoring.v3.LinkItem\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\034\020\035J\004\010\036\020" +
+      "\"J\004\010\t\020\032\"/\n\027UpdateDashboardMetadata\022\024\n\014da" +
+      "shboard_id\030\001 \001(\t\"J\n\026DeleteDashboardReque" +
+      "st\022\"\n\014dashboard_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014" +
+      "\n\004etag\030\002 \001(\t\"/\n\027DeleteDashboardMetadata\022" +
+      "\024\n\014dashboard_id\030\001 \001(\t\"\202\001\n\036ListDashboardO" +
+      "perationsRequest\022\"\n\014dashboard_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"q\n\037Li" +
+      "stDashboardOperationsResponse\0225\n\noperati" +
+      "ons\030\001 \003(\0132!.yandex.cloud.operation.Opera" +
+      "tion\022\027\n\017next_page_token\030\002 \001(\t2\267\010\n\020Dashbo" +
+      "ardService\022\217\001\n\003Get\022/.yandex.cloud.monito" +
+      "ring.v3.GetDashboardRequest\032%.yandex.clo" +
+      "ud.monitoring.v3.Dashboard\"0\202\323\344\223\002*\022(/mon" +
+      "itoring/v3/dashboards/{dashboard_id}\022\220\001\n" +
+      "\004List\0221.yandex.cloud.monitoring.v3.ListD" +
+      "ashboardsRequest\0322.yandex.cloud.monitori" +
+      "ng.v3.ListDashboardsResponse\"!\202\323\344\223\002\033\022\031/m" +
+      "onitoring/v3/dashboards\022\255\001\n\006Create\0222.yan" +
+      "dex.cloud.monitoring.v3.CreateDashboardR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"L\202\323\344\223\002\036\"\031/monitoring/v3/dashboards:\001*\262" +
+      "\322*$\n\027CreateDashboardMetadata\022\tDashboard\022" +
+      "\274\001\n\006Update\0222.yandex.cloud.monitoring.v3." +
+      "UpdateDashboardRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"[\202\323\344\223\002-2(/monitoring/v" +
+      "3/dashboards/{dashboard_id}:\001*\262\322*$\n\027Upda" +
+      "teDashboardMetadata\022\tDashboard\022\305\001\n\006Delet" +
+      "e\0222.yandex.cloud.monitoring.v3.DeleteDas" +
+      "hboardRequest\032!.yandex.cloud.operation.O" +
+      "peration\"d\202\323\344\223\002**(/monitoring/v3/dashboa" +
+      "rds/{dashboard_id}\262\322*0\n\027DeleteDashboardM" +
+      "etadata\022\025google.protobuf.Empty\022\306\001\n\016ListO" +
+      "perations\022:.yandex.cloud.monitoring.v3.L" +
+      "istDashboardOperationsRequest\032;.yandex.c" +
+      "loud.monitoring.v3.ListDashboardOperatio" +
+      "nsResponse\";\202\323\344\223\0025\0223/monitoring/v3/dashb" +
+      "oards/{dashboard_id}/operationsBk\n\036yande" +
+      "x.cloud.api.monitoring.v3ZIgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/moni" +
+      "toring/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13997,6 +14969,7 @@ public final class DashboardServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.monitoring.v3.TimelineOuterClass.getDescriptor(),
+          yandex.cloud.api.monitoring.v3.LinkItemOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_monitoring_v3_GetDashboardRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14021,7 +14994,7 @@ public final class DashboardServiceOuterClass {
     internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "ManagedBy", "ManagedLink", "Timeline", "Container", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "ManagedBy", "ManagedLink", "Timeline", "Links", "Container", });
     internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_CreateDashboardRequest_LabelsEntry_fieldAccessorTable = new
@@ -14039,7 +15012,7 @@ public final class DashboardServiceOuterClass {
     internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_descriptor,
-        new java.lang.String[] { "DashboardId", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "Etag", "ManagedBy", "ManagedLink", "Timeline", });
+        new java.lang.String[] { "DashboardId", "Name", "Description", "Labels", "Title", "Widgets", "Parametrization", "Etag", "ManagedBy", "ManagedLink", "Timeline", "Links", });
     internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_UpdateDashboardRequest_LabelsEntry_fieldAccessorTable = new
@@ -14096,6 +15069,7 @@ public final class DashboardServiceOuterClass {
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.monitoring.v3.TimelineOuterClass.getDescriptor();
+    yandex.cloud.api.monitoring.v3.LinkItemOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -2657,6 +2657,87 @@ public final class BucketServiceOuterClass {
      */
     yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+     * @return Whether the encryption field is set.
+     */
+    boolean hasEncryption();
+    /**
+     * <pre>
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+     * @return The encryption.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption();
+    /**
+     * <pre>
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder();
+
+    /**
+     * <pre>
+     * Bucket versioning status.
+     * For details, see [documentation](/docs/storage/concepts/versioning).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Versioning versioning = 10;</code>
+     * @return The enum numeric value on the wire for versioning.
+     */
+    int getVersioningValue();
+    /**
+     * <pre>
+     * Bucket versioning status.
+     * For details, see [documentation](/docs/storage/concepts/versioning).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Versioning versioning = 10;</code>
+     * @return The versioning.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.Versioning getVersioning();
+
+    /**
+     * <pre>
+     * Configuration for bucket's allowed private endpoints.
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+     * @return Whether the allowedPrivateEndpoints field is set.
+     */
+    boolean hasAllowedPrivateEndpoints();
+    /**
+     * <pre>
+     * Configuration for bucket's allowed private endpoints.
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+     * @return The allowedPrivateEndpoints.
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints getAllowedPrivateEndpoints();
+    /**
+     * <pre>
+     * Configuration for bucket's allowed private endpoints.
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+     */
+    yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder getAllowedPrivateEndpointsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.storage.v1.CreateBucketRequest}
@@ -2675,6 +2756,7 @@ public final class BucketServiceOuterClass {
       folderId_ = "";
       defaultStorageClass_ = "";
       tags_ = java.util.Collections.emptyList();
+      versioning_ = 0;
     }
 
     @java.lang.Override
@@ -2764,6 +2846,38 @@ public final class BucketServiceOuterClass {
               }
               tags_.add(
                   input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Tag.parser(), extensionRegistry));
+              break;
+            }
+            case 74: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder subBuilder = null;
+              if (encryption_ != null) {
+                subBuilder = encryption_.toBuilder();
+              }
+              encryption_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(encryption_);
+                encryption_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 80: {
+              int rawValue = input.readEnum();
+
+              versioning_ = rawValue;
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder subBuilder = null;
+              if (allowedPrivateEndpoints_ != null) {
+                subBuilder = allowedPrivateEndpoints_.toBuilder();
+              }
+              allowedPrivateEndpoints_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(allowedPrivateEndpoints_);
+                allowedPrivateEndpoints_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3112,6 +3226,117 @@ public final class BucketServiceOuterClass {
       return tags_.get(index);
     }
 
+    public static final int ENCRYPTION_FIELD_NUMBER = 9;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.Encryption encryption_;
+    /**
+     * <pre>
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+     * @return Whether the encryption field is set.
+     */
+    @java.lang.Override
+    public boolean hasEncryption() {
+      return encryption_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+     * @return The encryption.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption() {
+      return encryption_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance() : encryption_;
+    }
+    /**
+     * <pre>
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder() {
+      return getEncryption();
+    }
+
+    public static final int VERSIONING_FIELD_NUMBER = 10;
+    private int versioning_;
+    /**
+     * <pre>
+     * Bucket versioning status.
+     * For details, see [documentation](/docs/storage/concepts/versioning).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Versioning versioning = 10;</code>
+     * @return The enum numeric value on the wire for versioning.
+     */
+    @java.lang.Override public int getVersioningValue() {
+      return versioning_;
+    }
+    /**
+     * <pre>
+     * Bucket versioning status.
+     * For details, see [documentation](/docs/storage/concepts/versioning).
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.Versioning versioning = 10;</code>
+     * @return The versioning.
+     */
+    @java.lang.Override public yandex.cloud.api.storage.v1.BucketOuterClass.Versioning getVersioning() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.storage.v1.BucketOuterClass.Versioning result = yandex.cloud.api.storage.v1.BucketOuterClass.Versioning.valueOf(versioning_);
+      return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Versioning.UNRECOGNIZED : result;
+    }
+
+    public static final int ALLOWED_PRIVATE_ENDPOINTS_FIELD_NUMBER = 11;
+    private yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints allowedPrivateEndpoints_;
+    /**
+     * <pre>
+     * Configuration for bucket's allowed private endpoints.
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+     * @return Whether the allowedPrivateEndpoints field is set.
+     */
+    @java.lang.Override
+    public boolean hasAllowedPrivateEndpoints() {
+      return allowedPrivateEndpoints_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for bucket's allowed private endpoints.
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+     * @return The allowedPrivateEndpoints.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints getAllowedPrivateEndpoints() {
+      return allowedPrivateEndpoints_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.getDefaultInstance() : allowedPrivateEndpoints_;
+    }
+    /**
+     * <pre>
+     * Configuration for bucket's allowed private endpoints.
+     * requires permission s3:PutBucketAllowedPrivateEndpoints
+     * </pre>
+     *
+     * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder getAllowedPrivateEndpointsOrBuilder() {
+      return getAllowedPrivateEndpoints();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3147,6 +3372,15 @@ public final class BucketServiceOuterClass {
       for (int i = 0; i < tags_.size(); i++) {
         output.writeMessage(8, tags_.get(i));
       }
+      if (encryption_ != null) {
+        output.writeMessage(9, getEncryption());
+      }
+      if (versioning_ != yandex.cloud.api.storage.v1.BucketOuterClass.Versioning.VERSIONING_UNSPECIFIED.getNumber()) {
+        output.writeEnum(10, versioning_);
+      }
+      if (allowedPrivateEndpoints_ != null) {
+        output.writeMessage(11, getAllowedPrivateEndpoints());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3180,6 +3414,18 @@ public final class BucketServiceOuterClass {
       for (int i = 0; i < tags_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, tags_.get(i));
+      }
+      if (encryption_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getEncryption());
+      }
+      if (versioning_ != yandex.cloud.api.storage.v1.BucketOuterClass.Versioning.VERSIONING_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(10, versioning_);
+      }
+      if (allowedPrivateEndpoints_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getAllowedPrivateEndpoints());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3216,6 +3462,17 @@ public final class BucketServiceOuterClass {
       }
       if (!getTagsList()
           .equals(other.getTagsList())) return false;
+      if (hasEncryption() != other.hasEncryption()) return false;
+      if (hasEncryption()) {
+        if (!getEncryption()
+            .equals(other.getEncryption())) return false;
+      }
+      if (versioning_ != other.versioning_) return false;
+      if (hasAllowedPrivateEndpoints() != other.hasAllowedPrivateEndpoints()) return false;
+      if (hasAllowedPrivateEndpoints()) {
+        if (!getAllowedPrivateEndpoints()
+            .equals(other.getAllowedPrivateEndpoints())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3247,6 +3504,16 @@ public final class BucketServiceOuterClass {
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (hasEncryption()) {
+        hash = (37 * hash) + ENCRYPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getEncryption().hashCode();
+      }
+      hash = (37 * hash) + VERSIONING_FIELD_NUMBER;
+      hash = (53 * hash) + versioning_;
+      if (hasAllowedPrivateEndpoints()) {
+        hash = (37 * hash) + ALLOWED_PRIVATE_ENDPOINTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAllowedPrivateEndpoints().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3408,6 +3675,20 @@ public final class BucketServiceOuterClass {
         } else {
           tagsBuilder_.clear();
         }
+        if (encryptionBuilder_ == null) {
+          encryption_ = null;
+        } else {
+          encryption_ = null;
+          encryptionBuilder_ = null;
+        }
+        versioning_ = 0;
+
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          allowedPrivateEndpoints_ = null;
+        } else {
+          allowedPrivateEndpoints_ = null;
+          allowedPrivateEndpointsBuilder_ = null;
+        }
         return this;
       }
 
@@ -3457,6 +3738,17 @@ public final class BucketServiceOuterClass {
           result.tags_ = tags_;
         } else {
           result.tags_ = tagsBuilder_.build();
+        }
+        if (encryptionBuilder_ == null) {
+          result.encryption_ = encryption_;
+        } else {
+          result.encryption_ = encryptionBuilder_.build();
+        }
+        result.versioning_ = versioning_;
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          result.allowedPrivateEndpoints_ = allowedPrivateEndpoints_;
+        } else {
+          result.allowedPrivateEndpoints_ = allowedPrivateEndpointsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3552,6 +3844,15 @@ public final class BucketServiceOuterClass {
               tagsBuilder_.addAllMessages(other.tags_);
             }
           }
+        }
+        if (other.hasEncryption()) {
+          mergeEncryption(other.getEncryption());
+        }
+        if (other.versioning_ != 0) {
+          setVersioningValue(other.getVersioningValue());
+        }
+        if (other.hasAllowedPrivateEndpoints()) {
+          mergeAllowedPrivateEndpoints(other.getAllowedPrivateEndpoints());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4598,6 +4899,413 @@ public final class BucketServiceOuterClass {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.Encryption encryption_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder> encryptionBuilder_;
+      /**
+       * <pre>
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+       * @return Whether the encryption field is set.
+       */
+      public boolean hasEncryption() {
+        return encryptionBuilder_ != null || encryption_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+       * @return The encryption.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption() {
+        if (encryptionBuilder_ == null) {
+          return encryption_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance() : encryption_;
+        } else {
+          return encryptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+       */
+      public Builder setEncryption(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption value) {
+        if (encryptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          encryption_ = value;
+          onChanged();
+        } else {
+          encryptionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+       */
+      public Builder setEncryption(
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder builderForValue) {
+        if (encryptionBuilder_ == null) {
+          encryption_ = builderForValue.build();
+          onChanged();
+        } else {
+          encryptionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+       */
+      public Builder mergeEncryption(yandex.cloud.api.storage.v1.BucketOuterClass.Encryption value) {
+        if (encryptionBuilder_ == null) {
+          if (encryption_ != null) {
+            encryption_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.newBuilder(encryption_).mergeFrom(value).buildPartial();
+          } else {
+            encryption_ = value;
+          }
+          onChanged();
+        } else {
+          encryptionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+       */
+      public Builder clearEncryption() {
+        if (encryptionBuilder_ == null) {
+          encryption_ = null;
+          onChanged();
+        } else {
+          encryption_ = null;
+          encryptionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder getEncryptionBuilder() {
+        
+        onChanged();
+        return getEncryptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder getEncryptionOrBuilder() {
+        if (encryptionBuilder_ != null) {
+          return encryptionBuilder_.getMessageOrBuilder();
+        } else {
+          return encryption_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.getDefaultInstance() : encryption_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Encryption encryption = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder> 
+          getEncryptionFieldBuilder() {
+        if (encryptionBuilder_ == null) {
+          encryptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder>(
+                  getEncryption(),
+                  getParentForChildren(),
+                  isClean());
+          encryption_ = null;
+        }
+        return encryptionBuilder_;
+      }
+
+      private int versioning_ = 0;
+      /**
+       * <pre>
+       * Bucket versioning status.
+       * For details, see [documentation](/docs/storage/concepts/versioning).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Versioning versioning = 10;</code>
+       * @return The enum numeric value on the wire for versioning.
+       */
+      @java.lang.Override public int getVersioningValue() {
+        return versioning_;
+      }
+      /**
+       * <pre>
+       * Bucket versioning status.
+       * For details, see [documentation](/docs/storage/concepts/versioning).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Versioning versioning = 10;</code>
+       * @param value The enum numeric value on the wire for versioning to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersioningValue(int value) {
+        
+        versioning_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Bucket versioning status.
+       * For details, see [documentation](/docs/storage/concepts/versioning).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Versioning versioning = 10;</code>
+       * @return The versioning.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Versioning getVersioning() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.storage.v1.BucketOuterClass.Versioning result = yandex.cloud.api.storage.v1.BucketOuterClass.Versioning.valueOf(versioning_);
+        return result == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Versioning.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Bucket versioning status.
+       * For details, see [documentation](/docs/storage/concepts/versioning).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Versioning versioning = 10;</code>
+       * @param value The versioning to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersioning(yandex.cloud.api.storage.v1.BucketOuterClass.Versioning value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        versioning_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Bucket versioning status.
+       * For details, see [documentation](/docs/storage/concepts/versioning).
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Versioning versioning = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersioning() {
+        
+        versioning_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints allowedPrivateEndpoints_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder> allowedPrivateEndpointsBuilder_;
+      /**
+       * <pre>
+       * Configuration for bucket's allowed private endpoints.
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+       * @return Whether the allowedPrivateEndpoints field is set.
+       */
+      public boolean hasAllowedPrivateEndpoints() {
+        return allowedPrivateEndpointsBuilder_ != null || allowedPrivateEndpoints_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's allowed private endpoints.
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+       * @return The allowedPrivateEndpoints.
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints getAllowedPrivateEndpoints() {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          return allowedPrivateEndpoints_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.getDefaultInstance() : allowedPrivateEndpoints_;
+        } else {
+          return allowedPrivateEndpointsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's allowed private endpoints.
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+       */
+      public Builder setAllowedPrivateEndpoints(yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints value) {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          allowedPrivateEndpoints_ = value;
+          onChanged();
+        } else {
+          allowedPrivateEndpointsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's allowed private endpoints.
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+       */
+      public Builder setAllowedPrivateEndpoints(
+          yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder builderForValue) {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          allowedPrivateEndpoints_ = builderForValue.build();
+          onChanged();
+        } else {
+          allowedPrivateEndpointsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's allowed private endpoints.
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+       */
+      public Builder mergeAllowedPrivateEndpoints(yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints value) {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          if (allowedPrivateEndpoints_ != null) {
+            allowedPrivateEndpoints_ =
+              yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.newBuilder(allowedPrivateEndpoints_).mergeFrom(value).buildPartial();
+          } else {
+            allowedPrivateEndpoints_ = value;
+          }
+          onChanged();
+        } else {
+          allowedPrivateEndpointsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's allowed private endpoints.
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+       */
+      public Builder clearAllowedPrivateEndpoints() {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          allowedPrivateEndpoints_ = null;
+          onChanged();
+        } else {
+          allowedPrivateEndpoints_ = null;
+          allowedPrivateEndpointsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's allowed private endpoints.
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder getAllowedPrivateEndpointsBuilder() {
+        
+        onChanged();
+        return getAllowedPrivateEndpointsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's allowed private endpoints.
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+       */
+      public yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder getAllowedPrivateEndpointsOrBuilder() {
+        if (allowedPrivateEndpointsBuilder_ != null) {
+          return allowedPrivateEndpointsBuilder_.getMessageOrBuilder();
+        } else {
+          return allowedPrivateEndpoints_ == null ?
+              yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.getDefaultInstance() : allowedPrivateEndpoints_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for bucket's allowed private endpoints.
+       * requires permission s3:PutBucketAllowedPrivateEndpoints
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.BucketAllowedPrivateEndpoints allowed_private_endpoints = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder> 
+          getAllowedPrivateEndpointsFieldBuilder() {
+        if (allowedPrivateEndpointsBuilder_ == null) {
+          allowedPrivateEndpointsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpoints.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.BucketAllowedPrivateEndpointsOrBuilder>(
+                  getAllowedPrivateEndpoints(),
+                  getParentForChildren(),
+                  isClean());
+          allowedPrivateEndpoints_ = null;
+        }
+        return allowedPrivateEndpointsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5669,8 +6377,8 @@ public final class BucketServiceOuterClass {
 
     /**
      * <pre>
-     * Configuration for bucket's encryption
-     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption)
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -5679,8 +6387,8 @@ public final class BucketServiceOuterClass {
     boolean hasEncryption();
     /**
      * <pre>
-     * Configuration for bucket's encryption
-     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption)
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -5689,8 +6397,8 @@ public final class BucketServiceOuterClass {
     yandex.cloud.api.storage.v1.BucketOuterClass.Encryption getEncryption();
     /**
      * <pre>
-     * Configuration for bucket's encryption
-     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption)
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -6561,8 +7269,8 @@ public final class BucketServiceOuterClass {
     private yandex.cloud.api.storage.v1.BucketOuterClass.Encryption encryption_;
     /**
      * <pre>
-     * Configuration for bucket's encryption
-     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption)
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -6574,8 +7282,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration for bucket's encryption
-     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption)
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -6587,8 +7295,8 @@ public final class BucketServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration for bucket's encryption
-     * For detauls, see [documentation](/docs/storage/concepts/encryption)
+     * Configuration for bucket's encryption.
+     * For details, see [documentation](/docs/storage/concepts/encryption)
      * </pre>
      *
      * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -9712,8 +10420,8 @@ public final class BucketServiceOuterClass {
           yandex.cloud.api.storage.v1.BucketOuterClass.Encryption, yandex.cloud.api.storage.v1.BucketOuterClass.Encryption.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.EncryptionOrBuilder> encryptionBuilder_;
       /**
        * <pre>
-       * Configuration for bucket's encryption
-       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption)
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -9724,8 +10432,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for bucket's encryption
-       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption)
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -9740,8 +10448,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for bucket's encryption
-       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption)
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -9761,8 +10469,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for bucket's encryption
-       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption)
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -9780,8 +10488,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for bucket's encryption
-       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption)
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -9803,8 +10511,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for bucket's encryption
-       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption)
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -9822,8 +10530,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for bucket's encryption
-       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption)
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -9835,8 +10543,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for bucket's encryption
-       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption)
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -9851,8 +10559,8 @@ public final class BucketServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration for bucket's encryption
-       * For detauls, see [documentation](/docs/storage/concepts/encryption)
+       * Configuration for bucket's encryption.
+       * For details, see [documentation](/docs/storage/concepts/encryption)
        * </pre>
        *
        * <code>.yandex.cloud.storage.v1.Encryption encryption = 14;</code>
@@ -17754,95 +18462,100 @@ public final class BucketServiceOuterClass {
       "FULL\020\003\"5\n\022ListBucketsRequest\022\037\n\tfolder_i" +
       "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"G\n\023ListBucketsResp" +
       "onse\0220\n\007buckets\030\001 \003(\0132\037.yandex.cloud.sto" +
-      "rage.v1.Bucket\"\247\002\n\023CreateBucketRequest\022\022" +
+      "rage.v1.Bucket\"\364\003\n\023CreateBucketRequest\022\022" +
       "\n\004name\030\001 \001(\tB\004\350\3071\001\022\037\n\tfolder_id\030\002 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\022\035\n\025default_storage_class\030\004 \001" +
       "(\t\022\020\n\010max_size\030\005 \001(\003\022M\n\026anonymous_access" +
       "_flags\030\006 \001(\0132-.yandex.cloud.storage.v1.A" +
       "nonymousAccessFlags\022)\n\003acl\030\007 \001(\0132\034.yande" +
       "x.cloud.storage.v1.ACL\022*\n\004tags\030\010 \003(\0132\034.y" +
-      "andex.cloud.storage.v1.TagJ\004\010\003\020\004\"$\n\024Crea" +
-      "teBucketMetadata\022\014\n\004name\030\001 \001(\t\"\235\006\n\023Updat" +
-      "eBucketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\0225\n\013up" +
-      "date_mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
-      "askB\004\350\3071\001\022M\n\026anonymous_access_flags\030\003 \001(" +
-      "\0132-.yandex.cloud.storage.v1.AnonymousAcc" +
-      "essFlags\022\035\n\025default_storage_class\030\004 \001(\t\022" +
-      "\020\n\010max_size\030\005 \001(\003\022/\n\004cors\030\006 \003(\0132!.yandex" +
-      ".cloud.storage.v1.CorsRule\022B\n\020website_se" +
-      "ttings\030\007 \001(\0132(.yandex.cloud.storage.v1.W" +
-      "ebsiteSettings\0227\n\nversioning\030\010 \001(\0162#.yan" +
-      "dex.cloud.storage.v1.Versioning\022?\n\017lifec" +
-      "ycle_rules\030\t \003(\0132&.yandex.cloud.storage." +
-      "v1.LifecycleRule\022\'\n\006policy\030\n \001(\0132\027.googl" +
-      "e.protobuf.Struct\022)\n\003acl\030\013 \001(\0132\034.yandex." +
-      "cloud.storage.v1.ACL\022*\n\004tags\030\014 \003(\0132\034.yan" +
-      "dex.cloud.storage.v1.Tag\0228\n\013object_lock\030" +
-      "\r \001(\0132#.yandex.cloud.storage.v1.ObjectLo" +
-      "ck\0227\n\nencryption\030\016 \001(\0132#.yandex.cloud.st" +
-      "orage.v1.Encryption\022Y\n\031allowed_private_e" +
-      "ndpoints\030\017 \001(\01326.yandex.cloud.storage.v1" +
-      ".BucketAllowedPrivateEndpoints\"$\n\024Update" +
-      "BucketMetadata\022\014\n\004name\030\001 \001(\t\")\n\023DeleteBu" +
-      "cketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n\024Delet" +
-      "eBucketMetadata\022\014\n\004name\030\001 \001(\t\"+\n\025GetBuck" +
-      "etStatsRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"1\n\033Ge" +
-      "tBucketHTTPSConfigRequest\022\022\n\004name\030\001 \001(\tB" +
-      "\004\350\3071\001\"n\n\034SelfManagedHTTPSConfigParams\022&\n" +
-      "\017certificate_pem\030\001 \001(\tB\r\212\3101\t<=3145728\022&\n" +
-      "\017private_key_pem\030\002 \001(\tB\r\212\3101\t<=3145728\"=\n" +
-      "#CertificateManagerHTTPSConfigParams\022\026\n\016" +
-      "certificate_id\030\001 \001(\t\"\355\001\n\033SetBucketHTTPSC" +
-      "onfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M\n\014self" +
-      "_managed\030\002 \001(\01325.yandex.cloud.storage.v1" +
-      ".SelfManagedHTTPSConfigParamsH\000\022[\n\023certi" +
-      "ficate_manager\030\003 \001(\0132<.yandex.cloud.stor" +
-      "age.v1.CertificateManagerHTTPSConfigPara" +
-      "msH\000B\016\n\006params\022\004\300\3011\001\",\n\034SetBucketHTTPSCo" +
-      "nfigMetadata\022\014\n\004name\030\001 \001(\t\"4\n\036DeleteBuck" +
-      "etHTTPSConfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001" +
-      "\"/\n\037DeleteBucketHTTPSConfigMetadata\022\014\n\004n" +
-      "ame\030\001 \001(\t2\341\013\n\rBucketService\022~\n\004List\022+.ya" +
-      "ndex.cloud.storage.v1.ListBucketsRequest" +
-      "\032,.yandex.cloud.storage.v1.ListBucketsRe" +
-      "sponse\"\033\202\323\344\223\002\025\022\023/storage/v1/buckets\022u\n\003G" +
-      "et\022).yandex.cloud.storage.v1.GetBucketRe" +
-      "quest\032\037.yandex.cloud.storage.v1.Bucket\"\"" +
-      "\202\323\344\223\002\034\022\032/storage/v1/buckets/{name}\022\233\001\n\006C" +
-      "reate\022,.yandex.cloud.storage.v1.CreateBu" +
-      "cketRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"@\202\323\344\223\002\030\"\023/storage/v1/buckets:\001*\262\322" +
-      "*\036\n\024CreateBucketMetadata\022\006Bucket\022\242\001\n\006Upd" +
-      "ate\022,.yandex.cloud.storage.v1.UpdateBuck" +
-      "etRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"G\202\323\344\223\002\0372\032/storage/v1/buckets/{name}" +
-      ":\001*\262\322*\036\n\024UpdateBucketMetadata\022\006Bucket\022\256\001" +
-      "\n\006Delete\022,.yandex.cloud.storage.v1.Delet" +
+      "andex.cloud.storage.v1.Tag\0227\n\nencryption" +
+      "\030\t \001(\0132#.yandex.cloud.storage.v1.Encrypt" +
+      "ion\0227\n\nversioning\030\n \001(\0162#.yandex.cloud.s" +
+      "torage.v1.Versioning\022Y\n\031allowed_private_" +
+      "endpoints\030\013 \001(\01326.yandex.cloud.storage.v" +
+      "1.BucketAllowedPrivateEndpointsJ\004\010\003\020\004\"$\n" +
+      "\024CreateBucketMetadata\022\014\n\004name\030\001 \001(\t\"\235\006\n\023" +
+      "UpdateBucketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022" +
+      "5\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
+      "ieldMaskB\004\350\3071\001\022M\n\026anonymous_access_flags" +
+      "\030\003 \001(\0132-.yandex.cloud.storage.v1.Anonymo" +
+      "usAccessFlags\022\035\n\025default_storage_class\030\004" +
+      " \001(\t\022\020\n\010max_size\030\005 \001(\003\022/\n\004cors\030\006 \003(\0132!.y" +
+      "andex.cloud.storage.v1.CorsRule\022B\n\020websi" +
+      "te_settings\030\007 \001(\0132(.yandex.cloud.storage" +
+      ".v1.WebsiteSettings\0227\n\nversioning\030\010 \001(\0162" +
+      "#.yandex.cloud.storage.v1.Versioning\022?\n\017" +
+      "lifecycle_rules\030\t \003(\0132&.yandex.cloud.sto" +
+      "rage.v1.LifecycleRule\022\'\n\006policy\030\n \001(\0132\027." +
+      "google.protobuf.Struct\022)\n\003acl\030\013 \001(\0132\034.ya" +
+      "ndex.cloud.storage.v1.ACL\022*\n\004tags\030\014 \003(\0132" +
+      "\034.yandex.cloud.storage.v1.Tag\0228\n\013object_" +
+      "lock\030\r \001(\0132#.yandex.cloud.storage.v1.Obj" +
+      "ectLock\0227\n\nencryption\030\016 \001(\0132#.yandex.clo" +
+      "ud.storage.v1.Encryption\022Y\n\031allowed_priv" +
+      "ate_endpoints\030\017 \001(\01326.yandex.cloud.stora" +
+      "ge.v1.BucketAllowedPrivateEndpoints\"$\n\024U" +
+      "pdateBucketMetadata\022\014\n\004name\030\001 \001(\t\")\n\023Del" +
+      "eteBucketRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"$\n\024" +
+      "DeleteBucketMetadata\022\014\n\004name\030\001 \001(\t\"+\n\025Ge" +
+      "tBucketStatsRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\"" +
+      "1\n\033GetBucketHTTPSConfigRequest\022\022\n\004name\030\001" +
+      " \001(\tB\004\350\3071\001\"n\n\034SelfManagedHTTPSConfigPara" +
+      "ms\022&\n\017certificate_pem\030\001 \001(\tB\r\212\3101\t<=31457" +
+      "28\022&\n\017private_key_pem\030\002 \001(\tB\r\212\3101\t<=31457" +
+      "28\"=\n#CertificateManagerHTTPSConfigParam" +
+      "s\022\026\n\016certificate_id\030\001 \001(\t\"\355\001\n\033SetBucketH" +
+      "TTPSConfigRequest\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022M\n" +
+      "\014self_managed\030\002 \001(\01325.yandex.cloud.stora" +
+      "ge.v1.SelfManagedHTTPSConfigParamsH\000\022[\n\023" +
+      "certificate_manager\030\003 \001(\0132<.yandex.cloud" +
+      ".storage.v1.CertificateManagerHTTPSConfi" +
+      "gParamsH\000B\016\n\006params\022\004\300\3011\001\",\n\034SetBucketHT" +
+      "TPSConfigMetadata\022\014\n\004name\030\001 \001(\t\"4\n\036Delet" +
+      "eBucketHTTPSConfigRequest\022\022\n\004name\030\001 \001(\tB" +
+      "\004\350\3071\001\"/\n\037DeleteBucketHTTPSConfigMetadata" +
+      "\022\014\n\004name\030\001 \001(\t2\341\013\n\rBucketService\022~\n\004List" +
+      "\022+.yandex.cloud.storage.v1.ListBucketsRe" +
+      "quest\032,.yandex.cloud.storage.v1.ListBuck" +
+      "etsResponse\"\033\202\323\344\223\002\025\022\023/storage/v1/buckets" +
+      "\022u\n\003Get\022).yandex.cloud.storage.v1.GetBuc" +
+      "ketRequest\032\037.yandex.cloud.storage.v1.Buc" +
+      "ket\"\"\202\323\344\223\002\034\022\032/storage/v1/buckets/{name}\022" +
+      "\233\001\n\006Create\022,.yandex.cloud.storage.v1.Cre" +
+      "ateBucketRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"@\202\323\344\223\002\030\"\023/storage/v1/buckets" +
+      ":\001*\262\322*\036\n\024CreateBucketMetadata\022\006Bucket\022\242\001" +
+      "\n\006Update\022,.yandex.cloud.storage.v1.Updat" +
       "eBucketRequest\032!.yandex.cloud.operation." +
-      "Operation\"S\202\323\344\223\002\034*\032/storage/v1/buckets/{" +
-      "name}\262\322*-\n\024DeleteBucketMetadata\022\025google." +
-      "protobuf.Empty\022\215\001\n\010GetStats\022..yandex.clo" +
-      "ud.storage.v1.GetBucketStatsRequest\032$.ya" +
-      "ndex.cloud.storage.v1.BucketStats\"+\202\323\344\223\002" +
-      "%\022#/storage/v1/buckets/{name}:getStats\022\237" +
-      "\001\n\016GetHTTPSConfig\0224.yandex.cloud.storage" +
-      ".v1.GetBucketHTTPSConfigRequest\032$.yandex" +
-      ".cloud.storage.v1.HTTPSConfig\"1\202\323\344\223\002+\022)/" +
-      "storage/v1/buckets/{name}:getHttpsConfig" +
-      "\022\316\001\n\016SetHTTPSConfig\0224.yandex.cloud.stora" +
-      "ge.v1.SetBucketHTTPSConfigRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"c\202\323\344\223\002.\")/s" +
-      "torage/v1/buckets/{name}:setHttpsConfig:" +
-      "\001*\262\322*+\n\034SetBucketHTTPSConfigMetadata\022\013HT" +
-      "TPSConfig\022\341\001\n\021DeleteHTTPSConfig\0227.yandex" +
-      ".cloud.storage.v1.DeleteBucketHTTPSConfi" +
-      "gRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"p\202\323\344\223\002.\",/storage/v1/buckets/{name}:" +
-      "deleteHttpsConfig\262\322*8\n\037DeleteBucketHTTPS" +
-      "ConfigMetadata\022\025google.protobuf.EmptyBb\n" +
-      "\033yandex.cloud.api.storage.v1ZCgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/s" +
-      "torage/v1;storageb\006proto3"
+      "Operation\"G\202\323\344\223\002\0372\032/storage/v1/buckets/{" +
+      "name}:\001*\262\322*\036\n\024UpdateBucketMetadata\022\006Buck" +
+      "et\022\256\001\n\006Delete\022,.yandex.cloud.storage.v1." +
+      "DeleteBucketRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"S\202\323\344\223\002\034*\032/storage/v1/buck" +
+      "ets/{name}\262\322*-\n\024DeleteBucketMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\215\001\n\010GetStats\022..yande" +
+      "x.cloud.storage.v1.GetBucketStatsRequest" +
+      "\032$.yandex.cloud.storage.v1.BucketStats\"+" +
+      "\202\323\344\223\002%\022#/storage/v1/buckets/{name}:getSt" +
+      "ats\022\237\001\n\016GetHTTPSConfig\0224.yandex.cloud.st" +
+      "orage.v1.GetBucketHTTPSConfigRequest\032$.y" +
+      "andex.cloud.storage.v1.HTTPSConfig\"1\202\323\344\223" +
+      "\002+\022)/storage/v1/buckets/{name}:getHttpsC" +
+      "onfig\022\316\001\n\016SetHTTPSConfig\0224.yandex.cloud." +
+      "storage.v1.SetBucketHTTPSConfigRequest\032!" +
+      ".yandex.cloud.operation.Operation\"c\202\323\344\223\002" +
+      ".\")/storage/v1/buckets/{name}:setHttpsCo" +
+      "nfig:\001*\262\322*+\n\034SetBucketHTTPSConfigMetadat" +
+      "a\022\013HTTPSConfig\022\341\001\n\021DeleteHTTPSConfig\0227.y" +
+      "andex.cloud.storage.v1.DeleteBucketHTTPS" +
+      "ConfigRequest\032!.yandex.cloud.operation.O" +
+      "peration\"p\202\323\344\223\002.\",/storage/v1/buckets/{n" +
+      "ame}:deleteHttpsConfig\262\322*8\n\037DeleteBucket" +
+      "HTTPSConfigMetadata\022\025google.protobuf.Emp" +
+      "tyBb\n\033yandex.cloud.api.storage.v1ZCgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/storage/v1;storageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17878,7 +18591,7 @@ public final class BucketServiceOuterClass {
     internal_static_yandex_cloud_storage_v1_CreateBucketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_CreateBucketRequest_descriptor,
-        new java.lang.String[] { "Name", "FolderId", "DefaultStorageClass", "MaxSize", "AnonymousAccessFlags", "Acl", "Tags", });
+        new java.lang.String[] { "Name", "FolderId", "DefaultStorageClass", "MaxSize", "AnonymousAccessFlags", "Acl", "Tags", "Encryption", "Versioning", "AllowedPrivateEndpoints", });
     internal_static_yandex_cloud_storage_v1_CreateBucketMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_storage_v1_CreateBucketMetadata_fieldAccessorTable = new

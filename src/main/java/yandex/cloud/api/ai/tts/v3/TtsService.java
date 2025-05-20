@@ -26,13 +26,16 @@ public final class TtsService {
       "\n(yandex/cloud/ai/tts/v3/tts_service.pro" +
       "to\022\020speechkit.tts.v3\032 yandex/cloud/ai/tt" +
       "s/v3/tts.proto\032\034google/api/annotations.p" +
-      "roto2\250\001\n\013Synthesizer\022\230\001\n\022UtteranceSynthe" +
+      "roto2\226\002\n\013Synthesizer\022\230\001\n\022UtteranceSynthe" +
       "sis\022+.speechkit.tts.v3.UtteranceSynthesi" +
       "sRequest\032,.speechkit.tts.v3.UtteranceSyn" +
       "thesisResponse\"%\202\323\344\223\002\037\"\032/tts/v3/utteranc" +
-      "eSynthesis:\001*0\001B\\\n\032yandex.cloud.api.ai.t" +
-      "ts.v3Z>github.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/ai/tts/v3;ttsb\006proto3"
+      "eSynthesis:\001*0\001\022l\n\017StreamSynthesis\022(.spe" +
+      "echkit.tts.v3.StreamSynthesisRequest\032).s" +
+      "peechkit.tts.v3.StreamSynthesisResponse\"" +
+      "\000(\0010\001B\\\n\032yandex.cloud.api.ai.tts.v3Z>git" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/ai/tts/v3;ttsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

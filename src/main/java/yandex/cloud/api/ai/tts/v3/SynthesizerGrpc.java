@@ -49,6 +49,37 @@ public final class SynthesizerGrpc {
     return getUtteranceSynthesisMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisRequest,
+      yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse> getStreamSynthesisMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamSynthesis",
+      requestType = yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisRequest.class,
+      responseType = yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisRequest,
+      yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse> getStreamSynthesisMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisRequest, yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse> getStreamSynthesisMethod;
+    if ((getStreamSynthesisMethod = SynthesizerGrpc.getStreamSynthesisMethod) == null) {
+      synchronized (SynthesizerGrpc.class) {
+        if ((getStreamSynthesisMethod = SynthesizerGrpc.getStreamSynthesisMethod) == null) {
+          SynthesizerGrpc.getStreamSynthesisMethod = getStreamSynthesisMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisRequest, yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamSynthesis"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SynthesizerMethodDescriptorSupplier("StreamSynthesis"))
+              .build();
+        }
+      }
+    }
+    return getStreamSynthesisMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -110,6 +141,16 @@ public final class SynthesizerGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUtteranceSynthesisMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Bidirectional streaming RPC for real-time synthesis.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisRequest> streamSynthesis(
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamSynthesisMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -119,6 +160,13 @@ public final class SynthesizerGrpc {
                 yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest,
                 yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse>(
                   this, METHODID_UTTERANCE_SYNTHESIS)))
+          .addMethod(
+            getStreamSynthesisMethod(),
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+              new MethodHandlers<
+                yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisRequest,
+                yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse>(
+                  this, METHODID_STREAM_SYNTHESIS)))
           .build();
     }
   }
@@ -149,6 +197,17 @@ public final class SynthesizerGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getUtteranceSynthesisMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Bidirectional streaming RPC for real-time synthesis.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisRequest> streamSynthesis(
+        io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getStreamSynthesisMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -200,6 +259,7 @@ public final class SynthesizerGrpc {
   }
 
   private static final int METHODID_UTTERANCE_SYNTHESIS = 0;
+  private static final int METHODID_STREAM_SYNTHESIS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -232,6 +292,9 @@ public final class SynthesizerGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_STREAM_SYNTHESIS:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamSynthesis(
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.ai.tts.v3.Tts.StreamSynthesisResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -284,6 +347,7 @@ public final class SynthesizerGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SynthesizerFileDescriptorSupplier())
               .addMethod(getUtteranceSynthesisMethod())
+              .addMethod(getStreamSynthesisMethod())
               .build();
         }
       }

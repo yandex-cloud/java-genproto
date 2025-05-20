@@ -12950,6 +12950,1502 @@ public final class TalkServiceProto {
 
   }
 
+  public interface UploadBadgeMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.UploadBadgeMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id of uploaded badge
+     * </pre>
+     *
+     * <code>string badge_id = 1;</code>
+     * @return The badgeId.
+     */
+    java.lang.String getBadgeId();
+    /**
+     * <pre>
+     * id of uploaded badge
+     * </pre>
+     *
+     * <code>string badge_id = 1;</code>
+     * @return The bytes for badgeId.
+     */
+    com.google.protobuf.ByteString
+        getBadgeIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.speechsense.v1.UploadBadgeMetadata}
+   */
+  public static final class UploadBadgeMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.speechsense.v1.UploadBadgeMetadata)
+      UploadBadgeMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UploadBadgeMetadata.newBuilder() to construct.
+    private UploadBadgeMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UploadBadgeMetadata() {
+      badgeId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UploadBadgeMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UploadBadgeMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              badgeId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata.class, yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata.Builder.class);
+    }
+
+    public static final int BADGE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object badgeId_;
+    /**
+     * <pre>
+     * id of uploaded badge
+     * </pre>
+     *
+     * <code>string badge_id = 1;</code>
+     * @return The badgeId.
+     */
+    @java.lang.Override
+    public java.lang.String getBadgeId() {
+      java.lang.Object ref = badgeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        badgeId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id of uploaded badge
+     * </pre>
+     *
+     * <code>string badge_id = 1;</code>
+     * @return The bytes for badgeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBadgeIdBytes() {
+      java.lang.Object ref = badgeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        badgeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(badgeId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, badgeId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(badgeId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, badgeId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata other = (yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata) obj;
+
+      if (!getBadgeId()
+          .equals(other.getBadgeId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BADGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBadgeId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.speechsense.v1.UploadBadgeMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.speechsense.v1.UploadBadgeMetadata)
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata.class, yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        badgeId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata build() {
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata buildPartial() {
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata result = new yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata(this);
+        result.badgeId_ = badgeId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata) {
+          return mergeFrom((yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata other) {
+        if (other == yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata.getDefaultInstance()) return this;
+        if (!other.getBadgeId().isEmpty()) {
+          badgeId_ = other.badgeId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object badgeId_ = "";
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @return The badgeId.
+       */
+      public java.lang.String getBadgeId() {
+        java.lang.Object ref = badgeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          badgeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @return The bytes for badgeId.
+       */
+      public com.google.protobuf.ByteString
+          getBadgeIdBytes() {
+        java.lang.Object ref = badgeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          badgeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @param value The badgeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBadgeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        badgeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBadgeId() {
+        
+        badgeId_ = getDefaultInstance().getBadgeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @param value The bytes for badgeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBadgeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        badgeId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.speechsense.v1.UploadBadgeMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.speechsense.v1.UploadBadgeMetadata)
+    private static final yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata();
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UploadBadgeMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UploadBadgeMetadata>() {
+      @java.lang.Override
+      public UploadBadgeMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UploadBadgeMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UploadBadgeMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UploadBadgeMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UploadBadgeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.speechsense.v1.UploadBadgeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id of uploaded badge
+     * </pre>
+     *
+     * <code>string badge_id = 1;</code>
+     * @return The badgeId.
+     */
+    java.lang.String getBadgeId();
+    /**
+     * <pre>
+     * id of uploaded badge
+     * </pre>
+     *
+     * <code>string badge_id = 1;</code>
+     * @return The bytes for badgeId.
+     */
+    com.google.protobuf.ByteString
+        getBadgeIdBytes();
+
+    /**
+     * <pre>
+     * id of created talks related to badge
+     * </pre>
+     *
+     * <code>repeated string talk_ids = 2;</code>
+     * @return A list containing the talkIds.
+     */
+    java.util.List<java.lang.String>
+        getTalkIdsList();
+    /**
+     * <pre>
+     * id of created talks related to badge
+     * </pre>
+     *
+     * <code>repeated string talk_ids = 2;</code>
+     * @return The count of talkIds.
+     */
+    int getTalkIdsCount();
+    /**
+     * <pre>
+     * id of created talks related to badge
+     * </pre>
+     *
+     * <code>repeated string talk_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The talkIds at the given index.
+     */
+    java.lang.String getTalkIds(int index);
+    /**
+     * <pre>
+     * id of created talks related to badge
+     * </pre>
+     *
+     * <code>repeated string talk_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the talkIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTalkIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.speechsense.v1.UploadBadgeResponse}
+   */
+  public static final class UploadBadgeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.speechsense.v1.UploadBadgeResponse)
+      UploadBadgeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UploadBadgeResponse.newBuilder() to construct.
+    private UploadBadgeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UploadBadgeResponse() {
+      badgeId_ = "";
+      talkIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UploadBadgeResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UploadBadgeResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              badgeId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                talkIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              talkIds_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          talkIds_ = talkIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse.class, yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse.Builder.class);
+    }
+
+    public static final int BADGE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object badgeId_;
+    /**
+     * <pre>
+     * id of uploaded badge
+     * </pre>
+     *
+     * <code>string badge_id = 1;</code>
+     * @return The badgeId.
+     */
+    @java.lang.Override
+    public java.lang.String getBadgeId() {
+      java.lang.Object ref = badgeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        badgeId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id of uploaded badge
+     * </pre>
+     *
+     * <code>string badge_id = 1;</code>
+     * @return The bytes for badgeId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBadgeIdBytes() {
+      java.lang.Object ref = badgeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        badgeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TALK_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList talkIds_;
+    /**
+     * <pre>
+     * id of created talks related to badge
+     * </pre>
+     *
+     * <code>repeated string talk_ids = 2;</code>
+     * @return A list containing the talkIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTalkIdsList() {
+      return talkIds_;
+    }
+    /**
+     * <pre>
+     * id of created talks related to badge
+     * </pre>
+     *
+     * <code>repeated string talk_ids = 2;</code>
+     * @return The count of talkIds.
+     */
+    public int getTalkIdsCount() {
+      return talkIds_.size();
+    }
+    /**
+     * <pre>
+     * id of created talks related to badge
+     * </pre>
+     *
+     * <code>repeated string talk_ids = 2;</code>
+     * @param index The index of the element to return.
+     * @return The talkIds at the given index.
+     */
+    public java.lang.String getTalkIds(int index) {
+      return talkIds_.get(index);
+    }
+    /**
+     * <pre>
+     * id of created talks related to badge
+     * </pre>
+     *
+     * <code>repeated string talk_ids = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the talkIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTalkIdsBytes(int index) {
+      return talkIds_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(badgeId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, badgeId_);
+      }
+      for (int i = 0; i < talkIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, talkIds_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(badgeId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, badgeId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < talkIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(talkIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTalkIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse other = (yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse) obj;
+
+      if (!getBadgeId()
+          .equals(other.getBadgeId())) return false;
+      if (!getTalkIdsList()
+          .equals(other.getTalkIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BADGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBadgeId().hashCode();
+      if (getTalkIdsCount() > 0) {
+        hash = (37 * hash) + TALK_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getTalkIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.speechsense.v1.UploadBadgeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.speechsense.v1.UploadBadgeResponse)
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse.class, yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        badgeId_ = "";
+
+        talkIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse build() {
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse buildPartial() {
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse result = new yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse(this);
+        int from_bitField0_ = bitField0_;
+        result.badgeId_ = badgeId_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          talkIds_ = talkIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.talkIds_ = talkIds_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse) {
+          return mergeFrom((yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse other) {
+        if (other == yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse.getDefaultInstance()) return this;
+        if (!other.getBadgeId().isEmpty()) {
+          badgeId_ = other.badgeId_;
+          onChanged();
+        }
+        if (!other.talkIds_.isEmpty()) {
+          if (talkIds_.isEmpty()) {
+            talkIds_ = other.talkIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTalkIdsIsMutable();
+            talkIds_.addAll(other.talkIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object badgeId_ = "";
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @return The badgeId.
+       */
+      public java.lang.String getBadgeId() {
+        java.lang.Object ref = badgeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          badgeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @return The bytes for badgeId.
+       */
+      public com.google.protobuf.ByteString
+          getBadgeIdBytes() {
+        java.lang.Object ref = badgeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          badgeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @param value The badgeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBadgeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        badgeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBadgeId() {
+        
+        badgeId_ = getDefaultInstance().getBadgeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of uploaded badge
+       * </pre>
+       *
+       * <code>string badge_id = 1;</code>
+       * @param value The bytes for badgeId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBadgeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        badgeId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList talkIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTalkIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          talkIds_ = new com.google.protobuf.LazyStringArrayList(talkIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * id of created talks related to badge
+       * </pre>
+       *
+       * <code>repeated string talk_ids = 2;</code>
+       * @return A list containing the talkIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTalkIdsList() {
+        return talkIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * id of created talks related to badge
+       * </pre>
+       *
+       * <code>repeated string talk_ids = 2;</code>
+       * @return The count of talkIds.
+       */
+      public int getTalkIdsCount() {
+        return talkIds_.size();
+      }
+      /**
+       * <pre>
+       * id of created talks related to badge
+       * </pre>
+       *
+       * <code>repeated string talk_ids = 2;</code>
+       * @param index The index of the element to return.
+       * @return The talkIds at the given index.
+       */
+      public java.lang.String getTalkIds(int index) {
+        return talkIds_.get(index);
+      }
+      /**
+       * <pre>
+       * id of created talks related to badge
+       * </pre>
+       *
+       * <code>repeated string talk_ids = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the talkIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTalkIdsBytes(int index) {
+        return talkIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * id of created talks related to badge
+       * </pre>
+       *
+       * <code>repeated string talk_ids = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The talkIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTalkIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTalkIdsIsMutable();
+        talkIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of created talks related to badge
+       * </pre>
+       *
+       * <code>repeated string talk_ids = 2;</code>
+       * @param value The talkIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTalkIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTalkIdsIsMutable();
+        talkIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of created talks related to badge
+       * </pre>
+       *
+       * <code>repeated string talk_ids = 2;</code>
+       * @param values The talkIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTalkIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTalkIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, talkIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of created talks related to badge
+       * </pre>
+       *
+       * <code>repeated string talk_ids = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTalkIds() {
+        talkIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id of created talks related to badge
+       * </pre>
+       *
+       * <code>repeated string talk_ids = 2;</code>
+       * @param value The bytes of the talkIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTalkIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTalkIdsIsMutable();
+        talkIds_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.speechsense.v1.UploadBadgeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.speechsense.v1.UploadBadgeResponse)
+    private static final yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse();
+    }
+
+    public static yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UploadBadgeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UploadBadgeResponse>() {
+      @java.lang.Override
+      public UploadBadgeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UploadBadgeResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UploadBadgeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UploadBadgeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadBadgeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_speechsense_v1_StreamTalkRequest_descriptor;
   private static final 
@@ -13015,6 +14511,16 @@ public final class TalkServiceProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_speechsense_v1_GetTalkResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13027,80 +14533,90 @@ public final class TalkServiceProto {
       "\n.yandex/cloud/speechsense/v1/talk_servi" +
       "ce.proto\022\033yandex.cloud.speechsense.v1\032\034g" +
       "oogle/api/annotations.proto\032 google/prot" +
-      "obuf/field_mask.proto\032\'yandex/cloud/spee" +
-      "chsense/v1/audio.proto\032&yandex/cloud/spe" +
-      "echsense/v1/text.proto\032(yandex/cloud/spe" +
-      "echsense/v1/search.proto\032&yandex/cloud/s" +
-      "peechsense/v1/talk.proto\"\240\001\n\021StreamTalkR" +
-      "equest\022=\n\010metadata\030\001 \001(\0132).yandex.cloud." +
-      "speechsense.v1.TalkMetadataH\000\022C\n\005audio\030\002" +
-      " \001(\01322.yandex.cloud.speechsense.v1.Audio" +
-      "StreamingRequestH\000B\007\n\005Event\"\233\001\n\021UploadTa" +
-      "lkRequest\022\017\n\007talk_id\030\003 \001(\t\022;\n\010metadata\030\001" +
-      " \001(\0132).yandex.cloud.speechsense.v1.TalkM" +
-      "etadata\0228\n\005audio\030\002 \001(\0132).yandex.cloud.sp" +
-      "eechsense.v1.AudioRequest\"%\n\022UploadTalkR" +
-      "esponse\022\017\n\007talk_id\030\001 \001(\t\"\241\001\n\021UploadTextR" +
-      "equest\022\017\n\007talk_id\030\003 \001(\t\022;\n\010metadata\030\001 \001(" +
-      "\0132).yandex.cloud.speechsense.v1.TalkMeta" +
-      "data\022>\n\014text_content\030\002 \001(\0132(.yandex.clou" +
-      "d.speechsense.v1.TextContent\"%\n\022UploadTe" +
-      "xtResponse\022\017\n\007talk_id\030\001 \001(\t\"\325\001\n\014TalkMeta" +
-      "data\022\025\n\rconnection_id\030\001 \001(\t\022E\n\006fields\030\002 " +
-      "\003(\01325.yandex.cloud.speechsense.v1.TalkMe" +
-      "tadata.FieldsEntry\0228\n\005users\030\003 \003(\0132).yand" +
-      "ex.cloud.speechsense.v1.UserMetadata\032-\n\013" +
-      "FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"\305\001\n\014UserMetadata\022\n\n\002id\030\001 \001(\t\0223\n\004role" +
-      "\030\002 \001(\0162%.yandex.cloud.speechsense.v1.Use" +
-      "rRole\022E\n\006fields\030\003 \003(\01325.yandex.cloud.spe" +
-      "echsense.v1.UserMetadata.FieldsEntry\032-\n\013" +
-      "FieldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"\263\002\n\021SearchTalkRequest\022\027\n\017organizatio" +
-      "n_id\030\001 \001(\t\022\020\n\010space_id\030\002 \001(\t\022\025\n\rconnecti" +
-      "on_id\030\003 \001(\t\022\022\n\nproject_id\030\004 \001(\t\0224\n\007filte" +
-      "rs\030\005 \003(\0132#.yandex.cloud.speechsense.v1.F" +
-      "ilter\0221\n\005query\030\006 \001(\0132\".yandex.cloud.spee" +
-      "chsense.v1.Query\022\021\n\tpage_size\030\007 \001(\003\022\022\n\np" +
-      "age_token\030\010 \001(\t\0228\n\tsort_data\030\t \001(\0132%.yan" +
-      "dex.cloud.speechsense.v1.SortData\"T\n\022Sea" +
-      "rchTalkResponse\022\020\n\010talk_ids\030\001 \003(\t\022\023\n\013tal" +
-      "ks_count\030\002 \001(\003\022\027\n\017next_page_token\030\003 \001(\t\"" +
-      "\252\001\n\016GetTalkRequest\022\027\n\017organization_id\030\001 " +
-      "\001(\t\022\020\n\010space_id\030\002 \001(\t\022\025\n\rconnection_id\030\003" +
-      " \001(\t\022\022\n\nproject_id\030\004 \001(\t\022\020\n\010talk_ids\030\005 \003" +
-      "(\t\0220\n\014results_mask\030\006 \001(\0132\032.google.protob" +
-      "uf.FieldMask\"B\n\017GetTalkResponse\022/\n\004talk\030" +
-      "\001 \003(\0132!.yandex.cloud.speechsense.v1.Talk" +
-      "*f\n\010UserRole\022\031\n\025USER_ROLE_UNSPECIFIED\020\000\022" +
-      "\026\n\022USER_ROLE_OPERATOR\020\001\022\024\n\020USER_ROLE_CLI" +
-      "ENT\020\002\022\021\n\rUSER_ROLE_BOT\020\0032\376\004\n\013TalkService" +
-      "\022s\n\016UploadAsStream\022..yandex.cloud.speech" +
-      "sense.v1.StreamTalkRequest\032/.yandex.clou" +
-      "d.speechsense.v1.UploadTalkResponse(\001\022k\n" +
-      "\006Upload\022..yandex.cloud.speechsense.v1.Up" +
-      "loadTalkRequest\032/.yandex.cloud.speechsen" +
-      "se.v1.UploadTalkResponse\"\000\022o\n\nUploadText" +
-      "\022..yandex.cloud.speechsense.v1.UploadTex" +
-      "tRequest\032/.yandex.cloud.speechsense.v1.U" +
-      "ploadTextResponse\"\000\022\222\001\n\006Search\022..yandex." +
-      "cloud.speechsense.v1.SearchTalkRequest\032/" +
-      ".yandex.cloud.speechsense.v1.SearchTalkR" +
-      "esponse\"\'\202\323\344\223\002!\"\034/speechsense/v1/talks/s" +
-      "earch:\001*\022\206\001\n\003Get\022+.yandex.cloud.speechse" +
-      "nse.v1.GetTalkRequest\032,.yandex.cloud.spe" +
-      "echsense.v1.GetTalkResponse\"$\202\323\344\223\002\036\"\031/sp" +
-      "eechsense/v1/talks/get:\001*B\200\001\n\037yandex.clo" +
-      "ud.api.speechsense.v1B\020TalkServiceProtoZ" +
-      "Kgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/speechsense/v1;speechsenseb\006pr" +
-      "oto3"
+      "obuf/field_mask.proto\032 yandex/cloud/api/" +
+      "operation.proto\032&yandex/cloud/operation/" +
+      "operation.proto\032\'yandex/cloud/speechsens" +
+      "e/v1/audio.proto\032&yandex/cloud/speechsen" +
+      "se/v1/text.proto\032(yandex/cloud/speechsen" +
+      "se/v1/search.proto\032&yandex/cloud/speechs" +
+      "ense/v1/talk.proto\"\240\001\n\021StreamTalkRequest" +
+      "\022=\n\010metadata\030\001 \001(\0132).yandex.cloud.speech" +
+      "sense.v1.TalkMetadataH\000\022C\n\005audio\030\002 \001(\01322" +
+      ".yandex.cloud.speechsense.v1.AudioStream" +
+      "ingRequestH\000B\007\n\005Event\"\233\001\n\021UploadTalkRequ" +
+      "est\022\017\n\007talk_id\030\003 \001(\t\022;\n\010metadata\030\001 \001(\0132)" +
+      ".yandex.cloud.speechsense.v1.TalkMetadat" +
+      "a\0228\n\005audio\030\002 \001(\0132).yandex.cloud.speechse" +
+      "nse.v1.AudioRequest\"%\n\022UploadTalkRespons" +
+      "e\022\017\n\007talk_id\030\001 \001(\t\"\241\001\n\021UploadTextRequest" +
+      "\022\017\n\007talk_id\030\003 \001(\t\022;\n\010metadata\030\001 \001(\0132).ya" +
+      "ndex.cloud.speechsense.v1.TalkMetadata\022>" +
+      "\n\014text_content\030\002 \001(\0132(.yandex.cloud.spee" +
+      "chsense.v1.TextContent\"%\n\022UploadTextResp" +
+      "onse\022\017\n\007talk_id\030\001 \001(\t\"\325\001\n\014TalkMetadata\022\025" +
+      "\n\rconnection_id\030\001 \001(\t\022E\n\006fields\030\002 \003(\01325." +
+      "yandex.cloud.speechsense.v1.TalkMetadata" +
+      ".FieldsEntry\0228\n\005users\030\003 \003(\0132).yandex.clo" +
+      "ud.speechsense.v1.UserMetadata\032-\n\013Fields" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\305\001" +
+      "\n\014UserMetadata\022\n\n\002id\030\001 \001(\t\0223\n\004role\030\002 \001(\016" +
+      "2%.yandex.cloud.speechsense.v1.UserRole\022" +
+      "E\n\006fields\030\003 \003(\01325.yandex.cloud.speechsen" +
+      "se.v1.UserMetadata.FieldsEntry\032-\n\013Fields" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\263\002" +
+      "\n\021SearchTalkRequest\022\027\n\017organization_id\030\001" +
+      " \001(\t\022\020\n\010space_id\030\002 \001(\t\022\025\n\rconnection_id\030" +
+      "\003 \001(\t\022\022\n\nproject_id\030\004 \001(\t\0224\n\007filters\030\005 \003" +
+      "(\0132#.yandex.cloud.speechsense.v1.Filter\022" +
+      "1\n\005query\030\006 \001(\0132\".yandex.cloud.speechsens" +
+      "e.v1.Query\022\021\n\tpage_size\030\007 \001(\003\022\022\n\npage_to" +
+      "ken\030\010 \001(\t\0228\n\tsort_data\030\t \001(\0132%.yandex.cl" +
+      "oud.speechsense.v1.SortData\"T\n\022SearchTal" +
+      "kResponse\022\020\n\010talk_ids\030\001 \003(\t\022\023\n\013talks_cou" +
+      "nt\030\002 \001(\003\022\027\n\017next_page_token\030\003 \001(\t\"\252\001\n\016Ge" +
+      "tTalkRequest\022\027\n\017organization_id\030\001 \001(\t\022\020\n" +
+      "\010space_id\030\002 \001(\t\022\025\n\rconnection_id\030\003 \001(\t\022\022" +
+      "\n\nproject_id\030\004 \001(\t\022\020\n\010talk_ids\030\005 \003(\t\0220\n\014" +
+      "results_mask\030\006 \001(\0132\032.google.protobuf.Fie" +
+      "ldMask\"B\n\017GetTalkResponse\022/\n\004talk\030\001 \003(\0132" +
+      "!.yandex.cloud.speechsense.v1.Talk\"\'\n\023Up" +
+      "loadBadgeMetadata\022\020\n\010badge_id\030\001 \001(\t\"9\n\023U" +
+      "ploadBadgeResponse\022\020\n\010badge_id\030\001 \001(\t\022\020\n\010" +
+      "talk_ids\030\002 \003(\t*f\n\010UserRole\022\031\n\025USER_ROLE_" +
+      "UNSPECIFIED\020\000\022\026\n\022USER_ROLE_OPERATOR\020\001\022\024\n" +
+      "\020USER_ROLE_CLIENT\020\002\022\021\n\rUSER_ROLE_BOT\020\0032\223" +
+      "\006\n\013TalkService\022s\n\016UploadAsStream\022..yande" +
+      "x.cloud.speechsense.v1.StreamTalkRequest" +
+      "\032/.yandex.cloud.speechsense.v1.UploadTal" +
+      "kResponse(\001\022k\n\006Upload\022..yandex.cloud.spe" +
+      "echsense.v1.UploadTalkRequest\032/.yandex.c" +
+      "loud.speechsense.v1.UploadTalkResponse\"\000" +
+      "\022o\n\nUploadText\022..yandex.cloud.speechsens" +
+      "e.v1.UploadTextRequest\032/.yandex.cloud.sp" +
+      "eechsense.v1.UploadTextResponse\"\000\022\222\001\n\013Up" +
+      "loadBadge\022..yandex.cloud.speechsense.v1." +
+      "StreamTalkRequest\032!.yandex.cloud.operati" +
+      "on.Operation\".\262\322**\n\023UploadBadgeMetadata\022" +
+      "\023UploadBadgeResponse(\001\022\222\001\n\006Search\022..yand" +
+      "ex.cloud.speechsense.v1.SearchTalkReques" +
+      "t\032/.yandex.cloud.speechsense.v1.SearchTa" +
+      "lkResponse\"\'\202\323\344\223\002!\"\034/speechsense/v1/talk" +
+      "s/search:\001*\022\206\001\n\003Get\022+.yandex.cloud.speec" +
+      "hsense.v1.GetTalkRequest\032,.yandex.cloud." +
+      "speechsense.v1.GetTalkResponse\"$\202\323\344\223\002\036\"\031" +
+      "/speechsense/v1/talks/get:\001*B\200\001\n\037yandex." +
+      "cloud.api.speechsense.v1B\020TalkServicePro" +
+      "toZKgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/speechsense/v1;speechsenseb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.speechsense.v1.AudioProto.getDescriptor(),
           yandex.cloud.api.speechsense.v1.TextProto.getDescriptor(),
           yandex.cloud.api.speechsense.v1.SearchProto.getDescriptor(),
@@ -13184,13 +14700,28 @@ public final class TalkServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_speechsense_v1_GetTalkResponse_descriptor,
         new java.lang.String[] { "Talk", });
+    internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_speechsense_v1_UploadBadgeMetadata_descriptor,
+        new java.lang.String[] { "BadgeId", });
+    internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_speechsense_v1_UploadBadgeResponse_descriptor,
+        new java.lang.String[] { "BadgeId", "TalkIds", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.speechsense.v1.AudioProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.TextProto.getDescriptor();
     yandex.cloud.api.speechsense.v1.SearchProto.getDescriptor();

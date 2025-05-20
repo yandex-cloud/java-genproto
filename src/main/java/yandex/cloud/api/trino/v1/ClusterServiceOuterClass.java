@@ -5572,6 +5572,55 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec> 
+        getCatalogsList();
+    /**
+     * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec getCatalogs(int index);
+    /**
+     * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    int getCatalogsCount();
+    /**
+     * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpecOrBuilder> 
+        getCatalogsOrBuilderList();
+    /**
+     * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpecOrBuilder getCatalogsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
      * Configuration for the coordinator, specifying computational resources and other settings.
      * </pre>
      *
@@ -5664,6 +5713,7 @@ public final class ClusterServiceOuterClass {
       super(builder);
     }
     private TrinoConfigSpec() {
+      catalogs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -5686,6 +5736,7 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5696,6 +5747,15 @@ public final class ClusterServiceOuterClass {
             case 0:
               done = true;
               break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                catalogs_ = new java.util.ArrayList<yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              catalogs_.add(
+                  input.readMessage(yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.parser(), extensionRegistry));
+              break;
+            }
             case 18: {
               yandex.cloud.api.trino.v1.ClusterOuterClass.CoordinatorConfig.Builder subBuilder = null;
               if (coordinatorConfig_ != null) {
@@ -5750,6 +5810,9 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          catalogs_ = java.util.Collections.unmodifiableList(catalogs_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -5765,6 +5828,71 @@ public final class ClusterServiceOuterClass {
       return yandex.cloud.api.trino.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_trino_v1_TrinoConfigSpec_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.trino.v1.ClusterServiceOuterClass.TrinoConfigSpec.class, yandex.cloud.api.trino.v1.ClusterServiceOuterClass.TrinoConfigSpec.Builder.class);
+    }
+
+    public static final int CATALOGS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec> catalogs_;
+    /**
+     * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec> getCatalogsList() {
+      return catalogs_;
+    }
+    /**
+     * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpecOrBuilder> 
+        getCatalogsOrBuilderList() {
+      return catalogs_;
+    }
+    /**
+     * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    @java.lang.Override
+    public int getCatalogsCount() {
+      return catalogs_.size();
+    }
+    /**
+     * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec getCatalogs(int index) {
+      return catalogs_.get(index);
+    }
+    /**
+     * <pre>
+     * List of catalogs that enable integration with various data sources.
+     * Each catalog defines a connection to an external data source that Trino can query.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpecOrBuilder getCatalogsOrBuilder(
+        int index) {
+      return catalogs_.get(index);
     }
 
     public static final int COORDINATOR_CONFIG_FIELD_NUMBER = 2;
@@ -5895,6 +6023,9 @@ public final class ClusterServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      for (int i = 0; i < catalogs_.size(); i++) {
+        output.writeMessage(1, catalogs_.get(i));
+      }
       if (coordinatorConfig_ != null) {
         output.writeMessage(2, getCoordinatorConfig());
       }
@@ -5913,6 +6044,10 @@ public final class ClusterServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      for (int i = 0; i < catalogs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, catalogs_.get(i));
+      }
       if (coordinatorConfig_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getCoordinatorConfig());
@@ -5940,6 +6075,8 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.trino.v1.ClusterServiceOuterClass.TrinoConfigSpec other = (yandex.cloud.api.trino.v1.ClusterServiceOuterClass.TrinoConfigSpec) obj;
 
+      if (!getCatalogsList()
+          .equals(other.getCatalogsList())) return false;
       if (hasCoordinatorConfig() != other.hasCoordinatorConfig()) return false;
       if (hasCoordinatorConfig()) {
         if (!getCoordinatorConfig()
@@ -5966,6 +6103,10 @@ public final class ClusterServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCatalogsCount() > 0) {
+        hash = (37 * hash) + CATALOGS_FIELD_NUMBER;
+        hash = (53 * hash) + getCatalogsList().hashCode();
+      }
       if (hasCoordinatorConfig()) {
         hash = (37 * hash) + COORDINATOR_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getCoordinatorConfig().hashCode();
@@ -6106,11 +6247,18 @@ public final class ClusterServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getCatalogsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (catalogsBuilder_ == null) {
+          catalogs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          catalogsBuilder_.clear();
+        }
         if (coordinatorConfigBuilder_ == null) {
           coordinatorConfig_ = null;
         } else {
@@ -6155,6 +6303,16 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.trino.v1.ClusterServiceOuterClass.TrinoConfigSpec buildPartial() {
         yandex.cloud.api.trino.v1.ClusterServiceOuterClass.TrinoConfigSpec result = new yandex.cloud.api.trino.v1.ClusterServiceOuterClass.TrinoConfigSpec(this);
+        int from_bitField0_ = bitField0_;
+        if (catalogsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            catalogs_ = java.util.Collections.unmodifiableList(catalogs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.catalogs_ = catalogs_;
+        } else {
+          result.catalogs_ = catalogsBuilder_.build();
+        }
         if (coordinatorConfigBuilder_ == null) {
           result.coordinatorConfig_ = coordinatorConfig_;
         } else {
@@ -6218,6 +6376,32 @@ public final class ClusterServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.trino.v1.ClusterServiceOuterClass.TrinoConfigSpec other) {
         if (other == yandex.cloud.api.trino.v1.ClusterServiceOuterClass.TrinoConfigSpec.getDefaultInstance()) return this;
+        if (catalogsBuilder_ == null) {
+          if (!other.catalogs_.isEmpty()) {
+            if (catalogs_.isEmpty()) {
+              catalogs_ = other.catalogs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCatalogsIsMutable();
+              catalogs_.addAll(other.catalogs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.catalogs_.isEmpty()) {
+            if (catalogsBuilder_.isEmpty()) {
+              catalogsBuilder_.dispose();
+              catalogsBuilder_ = null;
+              catalogs_ = other.catalogs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              catalogsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCatalogsFieldBuilder() : null;
+            } else {
+              catalogsBuilder_.addAllMessages(other.catalogs_);
+            }
+          }
+        }
         if (other.hasCoordinatorConfig()) {
           mergeCoordinatorConfig(other.getCoordinatorConfig());
         }
@@ -6254,6 +6438,337 @@ public final class ClusterServiceOuterClass {
           }
         }
         return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec> catalogs_ =
+        java.util.Collections.emptyList();
+      private void ensureCatalogsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          catalogs_ = new java.util.ArrayList<yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec>(catalogs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpecOrBuilder> catalogsBuilder_;
+
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec> getCatalogsList() {
+        if (catalogsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(catalogs_);
+        } else {
+          return catalogsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public int getCatalogsCount() {
+        if (catalogsBuilder_ == null) {
+          return catalogs_.size();
+        } else {
+          return catalogsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec getCatalogs(int index) {
+        if (catalogsBuilder_ == null) {
+          return catalogs_.get(index);
+        } else {
+          return catalogsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public Builder setCatalogs(
+          int index, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec value) {
+        if (catalogsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCatalogsIsMutable();
+          catalogs_.set(index, value);
+          onChanged();
+        } else {
+          catalogsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public Builder setCatalogs(
+          int index, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder builderForValue) {
+        if (catalogsBuilder_ == null) {
+          ensureCatalogsIsMutable();
+          catalogs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          catalogsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public Builder addCatalogs(yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec value) {
+        if (catalogsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCatalogsIsMutable();
+          catalogs_.add(value);
+          onChanged();
+        } else {
+          catalogsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public Builder addCatalogs(
+          int index, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec value) {
+        if (catalogsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCatalogsIsMutable();
+          catalogs_.add(index, value);
+          onChanged();
+        } else {
+          catalogsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public Builder addCatalogs(
+          yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder builderForValue) {
+        if (catalogsBuilder_ == null) {
+          ensureCatalogsIsMutable();
+          catalogs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          catalogsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public Builder addCatalogs(
+          int index, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder builderForValue) {
+        if (catalogsBuilder_ == null) {
+          ensureCatalogsIsMutable();
+          catalogs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          catalogsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public Builder addAllCatalogs(
+          java.lang.Iterable<? extends yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec> values) {
+        if (catalogsBuilder_ == null) {
+          ensureCatalogsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, catalogs_);
+          onChanged();
+        } else {
+          catalogsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public Builder clearCatalogs() {
+        if (catalogsBuilder_ == null) {
+          catalogs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          catalogsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public Builder removeCatalogs(int index) {
+        if (catalogsBuilder_ == null) {
+          ensureCatalogsIsMutable();
+          catalogs_.remove(index);
+          onChanged();
+        } else {
+          catalogsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder getCatalogsBuilder(
+          int index) {
+        return getCatalogsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpecOrBuilder getCatalogsOrBuilder(
+          int index) {
+        if (catalogsBuilder_ == null) {
+          return catalogs_.get(index);  } else {
+          return catalogsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpecOrBuilder> 
+           getCatalogsOrBuilderList() {
+        if (catalogsBuilder_ != null) {
+          return catalogsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(catalogs_);
+        }
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder addCatalogsBuilder() {
+        return getCatalogsFieldBuilder().addBuilder(
+            yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder addCatalogsBuilder(
+          int index) {
+        return getCatalogsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of catalogs that enable integration with various data sources.
+       * Each catalog defines a connection to an external data source that Trino can query.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.trino.v1.CatalogSpec catalogs = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder> 
+           getCatalogsBuilderList() {
+        return getCatalogsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpecOrBuilder> 
+          getCatalogsFieldBuilder() {
+        if (catalogsBuilder_ == null) {
+          catalogsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpec.Builder, yandex.cloud.api.trino.v1.CatalogOuterClass.CatalogSpecOrBuilder>(
+                  catalogs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          catalogs_ = null;
+        }
+        return catalogsBuilder_;
       }
 
       private yandex.cloud.api.trino.v1.ClusterOuterClass.CoordinatorConfig coordinatorConfig_;
@@ -21298,126 +21813,128 @@ public final class ClusterServiceOuterClass {
       "/annotations.proto\032 google/protobuf/fiel" +
       "d_mask.proto\032 yandex/cloud/api/operation" +
       ".proto\032&yandex/cloud/operation/operation" +
-      ".proto\032#yandex/cloud/trino/v1/cluster.pr" +
-      "oto\032\'yandex/cloud/trino/v1/maintenance.p" +
-      "roto\032\035yandex/cloud/validation.proto\"5\n\021G" +
-      "etClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfo" +
-      "lder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
-      "\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t" +
-      "\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"a\n" +
-      "\024ListClustersResponse\0220\n\010clusters\030\001 \003(\0132" +
-      "\036.yandex.cloud.trino.v1.Cluster\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"\375\004\n\024CreateClusterReques" +
-      "t\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004na" +
-      "me\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*" +
-      "\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\210\001\n\006lab" +
-      "els\030\004 \003(\01327.yandex.cloud.trino.v1.Create" +
-      "ClusterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004" +
-      "<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z]" +
-      "[-_0-9a-z]*\022;\n\005trino\030\005 \001(\0132&.yandex.clou" +
-      "d.trino.v1.TrinoConfigSpecB\004\350\3071\001\022;\n\007netw" +
-      "ork\030\006 \001(\0132$.yandex.cloud.trino.v1.Networ" +
-      "kConfigB\004\350\3071\001\022\033\n\023deletion_protection\030\007 \001" +
-      "(\010\022(\n\022service_account_id\030\010 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\0225\n\007logging\030\t \001(\0132$.yandex.cloud.tri" +
-      "no.v1.LoggingConfig\022D\n\022maintenance_windo" +
-      "w\030\n \001(\0132(.yandex.cloud.trino.v1.Maintena" +
-      "nceWindow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\"\353\001\n\017TrinoConfigSpec\022J\n\022" +
-      "coordinator_config\030\002 \001(\0132(.yandex.cloud." +
-      "trino.v1.CoordinatorConfigB\004\350\3071\001\022@\n\rwork" +
-      "er_config\030\003 \001(\0132#.yandex.cloud.trino.v1." +
-      "WorkerConfigB\004\350\3071\001\022>\n\014retry_policy\030\004 \001(\013" +
-      "2(.yandex.cloud.trino.v1.RetryPolicyConf" +
-      "igJ\004\010\001\020\002J\004\010\005\020\006\"+\n\025CreateClusterMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\"N\n\027UpdateCoordinator" +
-      "Config\0223\n\tresources\030\001 \001(\0132 .yandex.cloud" +
-      ".trino.v1.Resources\"\304\002\n\022UpdateWorkerConf" +
-      "ig\0223\n\tresources\030\001 \001(\0132 .yandex.cloud.tri" +
-      "no.v1.Resources\022Q\n\014scale_policy\030\002 \001(\0132;." +
-      "yandex.cloud.trino.v1.UpdateWorkerConfig" +
-      ".WorkerScalePolicy\032\245\001\n\021WorkerScalePolicy" +
-      "\022>\n\013fixed_scale\030\001 \001(\0132\'.yandex.cloud.tri" +
-      "no.v1.FixedScalePolicyH\000\022<\n\nauto_scale\030\002" +
-      " \001(\0132&.yandex.cloud.trino.v1.AutoScalePo" +
-      "licyH\000B\022\n\nscale_type\022\004\300\3011\001\"\353\001\n\025UpdateTri" +
-      "noConfigSpec\022J\n\022coordinator_config\030\001 \001(\013" +
-      "2..yandex.cloud.trino.v1.UpdateCoordinat" +
-      "orConfig\022@\n\rworker_config\030\002 \001(\0132).yandex" +
-      ".cloud.trino.v1.UpdateWorkerConfig\022>\n\014re" +
-      "try_policy\030\004 \001(\0132(.yandex.cloud.trino.v1" +
-      ".RetryPolicyConfigJ\004\010\003\020\004\"5\n\027UpdateNetwor" +
-      "kConfigSpec\022\032\n\022security_group_ids\030\001 \003(\t\"" +
-      "\260\005\n\024UpdateClusterRequest\022 \n\ncluster_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
-      "\032.google.protobuf.FieldMask\022(\n\004name\030\003 \001(" +
-      "\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descrip" +
-      "tion\030\004 \001(\tB\t\212\3101\005<=256\022\210\001\n\006labels\030\005 \003(\01327" +
-      ".yandex.cloud.trino.v1.UpdateClusterRequ" +
-      "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
-      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\022\033\n\023deletion_protection\030\006 \001(\010\022;\n\005trino\030\007" +
-      " \001(\0132,.yandex.cloud.trino.v1.UpdateTrino" +
-      "ConfigSpec\022D\n\014network_spec\030\010 \001(\0132..yande" +
-      "x.cloud.trino.v1.UpdateNetworkConfigSpec" +
-      "\022$\n\022service_account_id\030\t \001(\tB\010\212\3101\004<=50\0225" +
-      "\n\007logging\030\n \001(\0132$.yandex.cloud.trino.v1." +
-      "LoggingConfig\022D\n\022maintenance_window\030\013 \001(" +
-      "\0132(.yandex.cloud.trino.v1.MaintenanceWin" +
-      "dow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nc" +
-      "luster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
-      "eteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7" +
-      "\n\023StartClusterRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023S" +
-      "topClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"~" +
-      "\n\034ListClusterOperationsRequest\022 \n\ncluste" +
+      ".proto\032#yandex/cloud/trino/v1/catalog.pr" +
+      "oto\032#yandex/cloud/trino/v1/cluster.proto" +
+      "\032\'yandex/cloud/trino/v1/maintenance.prot" +
+      "o\032\035yandex/cloud/validation.proto\"5\n\021GetC" +
+      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfolde" +
       "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
       "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"o\n\035ListClusterOperationsResponse\022" +
-      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
-      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t2" +
-      "\314\n\n\016ClusterService\022\200\001\n\003Get\022(.yandex.clou" +
-      "d.trino.v1.GetClusterRequest\032\036.yandex.cl" +
-      "oud.trino.v1.Cluster\"/\202\323\344\223\002)\022\'/managed-t" +
-      "rino/v1/clusters/{cluster_id}\022\203\001\n\004List\022*" +
-      ".yandex.cloud.trino.v1.ListClustersReque" +
-      "st\032+.yandex.cloud.trino.v1.ListClustersR" +
-      "esponse\"\"\202\323\344\223\002\034\022\032/managed-trino/v1/clust" +
-      "ers\022\243\001\n\006Create\022+.yandex.cloud.trino.v1.C" +
-      "reateClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"I\202\323\344\223\002\037\"\032/managed-trino/v" +
-      "1/clusters:\001*\262\322* \n\025CreateClusterMetadata" +
-      "\022\007Cluster\022\260\001\n\006Update\022+.yandex.cloud.trin" +
-      "o.v1.UpdateClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"V\202\323\344\223\002,2\'/managed-t" +
-      "rino/v1/clusters/{cluster_id}:\001*\262\322* \n\025Up" +
-      "dateClusterMetadata\022\007Cluster\022\273\001\n\006Delete\022" +
-      "+.yandex.cloud.trino.v1.DeleteClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "a\202\323\344\223\002)*\'/managed-trino/v1/clusters/{clu" +
-      "ster_id}\262\322*.\n\025DeleteClusterMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\260\001\n\005Start\022*.yandex.cl" +
-      "oud.trino.v1.StartClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"X\202\323\344\223\002/\"-/ma" +
-      "naged-trino/v1/clusters/{cluster_id}:sta" +
-      "rt\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\254\001" +
-      "\n\004Stop\022).yandex.cloud.trino.v1.StopClust" +
+      "\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"a\n\024Li" +
+      "stClustersResponse\0220\n\010clusters\030\001 \003(\0132\036.y" +
+      "andex.cloud.trino.v1.Cluster\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"\375\004\n\024CreateClusterRequest\022\037" +
+      "\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030" +
+      "\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n" +
+      "\013description\030\003 \001(\tB\t\212\3101\005<=256\022\210\001\n\006labels" +
+      "\030\004 \003(\01327.yandex.cloud.trino.v1.CreateClu" +
+      "sterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\022;\n\005trino\030\005 \001(\0132&.yandex.cloud.t" +
+      "rino.v1.TrinoConfigSpecB\004\350\3071\001\022;\n\007network" +
+      "\030\006 \001(\0132$.yandex.cloud.trino.v1.NetworkCo" +
+      "nfigB\004\350\3071\001\022\033\n\023deletion_protection\030\007 \001(\010\022" +
+      "(\n\022service_account_id\030\010 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\0225\n\007logging\030\t \001(\0132$.yandex.cloud.trino." +
+      "v1.LoggingConfig\022D\n\022maintenance_window\030\n" +
+      " \001(\0132(.yandex.cloud.trino.v1.Maintenance" +
+      "Window\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\"\233\002\n\017TrinoConfigSpec\0224\n\010cat" +
+      "alogs\030\001 \003(\0132\".yandex.cloud.trino.v1.Cata" +
+      "logSpec\022J\n\022coordinator_config\030\002 \001(\0132(.ya" +
+      "ndex.cloud.trino.v1.CoordinatorConfigB\004\350" +
+      "\3071\001\022@\n\rworker_config\030\003 \001(\0132#.yandex.clou" +
+      "d.trino.v1.WorkerConfigB\004\350\3071\001\022>\n\014retry_p" +
+      "olicy\030\004 \001(\0132(.yandex.cloud.trino.v1.Retr" +
+      "yPolicyConfigJ\004\010\005\020\006\"+\n\025CreateClusterMeta" +
+      "data\022\022\n\ncluster_id\030\001 \001(\t\"N\n\027UpdateCoordi" +
+      "natorConfig\0223\n\tresources\030\001 \001(\0132 .yandex." +
+      "cloud.trino.v1.Resources\"\304\002\n\022UpdateWorke" +
+      "rConfig\0223\n\tresources\030\001 \001(\0132 .yandex.clou" +
+      "d.trino.v1.Resources\022Q\n\014scale_policy\030\002 \001" +
+      "(\0132;.yandex.cloud.trino.v1.UpdateWorkerC" +
+      "onfig.WorkerScalePolicy\032\245\001\n\021WorkerScaleP" +
+      "olicy\022>\n\013fixed_scale\030\001 \001(\0132\'.yandex.clou" +
+      "d.trino.v1.FixedScalePolicyH\000\022<\n\nauto_sc" +
+      "ale\030\002 \001(\0132&.yandex.cloud.trino.v1.AutoSc" +
+      "alePolicyH\000B\022\n\nscale_type\022\004\300\3011\001\"\353\001\n\025Upda" +
+      "teTrinoConfigSpec\022J\n\022coordinator_config\030" +
+      "\001 \001(\0132..yandex.cloud.trino.v1.UpdateCoor" +
+      "dinatorConfig\022@\n\rworker_config\030\002 \001(\0132).y" +
+      "andex.cloud.trino.v1.UpdateWorkerConfig\022" +
+      ">\n\014retry_policy\030\004 \001(\0132(.yandex.cloud.tri" +
+      "no.v1.RetryPolicyConfigJ\004\010\003\020\004\"5\n\027UpdateN" +
+      "etworkConfigSpec\022\032\n\022security_group_ids\030\001" +
+      " \003(\t\"\260\005\n\024UpdateClusterRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002" +
+      " \001(\0132\032.google.protobuf.FieldMask\022(\n\004name" +
+      "\030\003 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013de" +
+      "scription\030\004 \001(\tB\t\212\3101\005<=256\022\210\001\n\006labels\030\005 " +
+      "\003(\01327.yandex.cloud.trino.v1.UpdateCluste" +
+      "rRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\307" +
+      "1\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9" +
+      "a-z]*\022\033\n\023deletion_protection\030\006 \001(\010\022;\n\005tr" +
+      "ino\030\007 \001(\0132,.yandex.cloud.trino.v1.Update" +
+      "TrinoConfigSpec\022D\n\014network_spec\030\010 \001(\0132.." +
+      "yandex.cloud.trino.v1.UpdateNetworkConfi" +
+      "gSpec\022$\n\022service_account_id\030\t \001(\tB\010\212\3101\004<" +
+      "=50\0225\n\007logging\030\n \001(\0132$.yandex.cloud.trin" +
+      "o.v1.LoggingConfig\022D\n\022maintenance_window" +
+      "\030\013 \001(\0132(.yandex.cloud.trino.v1.Maintenan" +
+      "ceWindow\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteClusterReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+" +
+      "\n\025DeleteClusterMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\"7\n\023StartClusterRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMeta" +
+      "data\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\")\n\023StopClusterMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\"~\n\034ListClusterOperationsRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
+      "ze\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\t" +
+      "B\t\212\3101\005<=100\"o\n\035ListClusterOperationsResp" +
+      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
+      "operation.Operation\022\027\n\017next_page_token\030\002" +
+      " \001(\t2\314\n\n\016ClusterService\022\200\001\n\003Get\022(.yandex" +
+      ".cloud.trino.v1.GetClusterRequest\032\036.yand" +
+      "ex.cloud.trino.v1.Cluster\"/\202\323\344\223\002)\022\'/mana" +
+      "ged-trino/v1/clusters/{cluster_id}\022\203\001\n\004L" +
+      "ist\022*.yandex.cloud.trino.v1.ListClusters" +
+      "Request\032+.yandex.cloud.trino.v1.ListClus" +
+      "tersResponse\"\"\202\323\344\223\002\034\022\032/managed-trino/v1/" +
+      "clusters\022\243\001\n\006Create\022+.yandex.cloud.trino" +
+      ".v1.CreateClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"I\202\323\344\223\002\037\"\032/managed-tr" +
+      "ino/v1/clusters:\001*\262\322* \n\025CreateClusterMet" +
+      "adata\022\007Cluster\022\260\001\n\006Update\022+.yandex.cloud" +
+      ".trino.v1.UpdateClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"V\202\323\344\223\002,2\'/mana" +
+      "ged-trino/v1/clusters/{cluster_id}:\001*\262\322*" +
+      " \n\025UpdateClusterMetadata\022\007Cluster\022\273\001\n\006De" +
+      "lete\022+.yandex.cloud.trino.v1.DeleteClust" +
       "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"V\202\323\344\223\002.\",/managed-trino/v1/clusters" +
-      "/{cluster_id}:stop\262\322*\036\n\023StopClusterMetad" +
-      "ata\022\007Cluster\022\267\001\n\016ListOperations\0223.yandex" +
-      ".cloud.trino.v1.ListClusterOperationsReq" +
-      "uest\0324.yandex.cloud.trino.v1.ListCluster" +
-      "OperationsResponse\":\202\323\344\223\0024\0222/managed-tri" +
-      "no/v1/clusters/{cluster_id}/operationsB\\" +
-      "\n\031yandex.cloud.api.trino.v1Z?github.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/tr" +
-      "ino/v1;trinob\006proto3"
+      "tion\"a\202\323\344\223\002)*\'/managed-trino/v1/clusters" +
+      "/{cluster_id}\262\322*.\n\025DeleteClusterMetadata" +
+      "\022\025google.protobuf.Empty\022\260\001\n\005Start\022*.yand" +
+      "ex.cloud.trino.v1.StartClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"X\202\323\344\223\002/" +
+      "\"-/managed-trino/v1/clusters/{cluster_id" +
+      "}:start\262\322*\037\n\024StartClusterMetadata\022\007Clust" +
+      "er\022\254\001\n\004Stop\022).yandex.cloud.trino.v1.Stop" +
+      "ClusterRequest\032!.yandex.cloud.operation." +
+      "Operation\"V\202\323\344\223\002.\",/managed-trino/v1/clu" +
+      "sters/{cluster_id}:stop\262\322*\036\n\023StopCluster" +
+      "Metadata\022\007Cluster\022\267\001\n\016ListOperations\0223.y" +
+      "andex.cloud.trino.v1.ListClusterOperatio" +
+      "nsRequest\0324.yandex.cloud.trino.v1.ListCl" +
+      "usterOperationsResponse\":\202\323\344\223\0024\0222/manage" +
+      "d-trino/v1/clusters/{cluster_id}/operati" +
+      "onsB\\\n\031yandex.cloud.api.trino.v1Z?github" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/trino/v1;trinob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21426,6 +21943,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.trino.v1.CatalogOuterClass.getDescriptor(),
           yandex.cloud.api.trino.v1.ClusterOuterClass.getDescriptor(),
           yandex.cloud.api.trino.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -21465,7 +21983,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_trino_v1_TrinoConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_trino_v1_TrinoConfigSpec_descriptor,
-        new java.lang.String[] { "CoordinatorConfig", "WorkerConfig", "RetryPolicy", });
+        new java.lang.String[] { "Catalogs", "CoordinatorConfig", "WorkerConfig", "RetryPolicy", });
     internal_static_yandex_cloud_trino_v1_CreateClusterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_trino_v1_CreateClusterMetadata_fieldAccessorTable = new
@@ -21585,6 +22103,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.trino.v1.CatalogOuterClass.getDescriptor();
     yandex.cloud.api.trino.v1.ClusterOuterClass.getDescriptor();
     yandex.cloud.api.trino.v1.Maintenance.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();

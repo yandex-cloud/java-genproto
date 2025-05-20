@@ -108,6 +108,37 @@ public final class TalkServiceGrpc {
     return getUploadTextMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.speechsense.v1.TalkServiceProto.StreamTalkRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUploadBadgeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UploadBadge",
+      requestType = yandex.cloud.api.speechsense.v1.TalkServiceProto.StreamTalkRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.speechsense.v1.TalkServiceProto.StreamTalkRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUploadBadgeMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.speechsense.v1.TalkServiceProto.StreamTalkRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUploadBadgeMethod;
+    if ((getUploadBadgeMethod = TalkServiceGrpc.getUploadBadgeMethod) == null) {
+      synchronized (TalkServiceGrpc.class) {
+        if ((getUploadBadgeMethod = TalkServiceGrpc.getUploadBadgeMethod) == null) {
+          TalkServiceGrpc.getUploadBadgeMethod = getUploadBadgeMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.speechsense.v1.TalkServiceProto.StreamTalkRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadBadge"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.speechsense.v1.TalkServiceProto.StreamTalkRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new TalkServiceMethodDescriptorSupplier("UploadBadge"))
+              .build();
+        }
+      }
+    }
+    return getUploadBadgeMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.speechsense.v1.TalkServiceProto.SearchTalkRequest,
       yandex.cloud.api.speechsense.v1.TalkServiceProto.SearchTalkResponse> getSearchMethod;
 
@@ -251,6 +282,17 @@ public final class TalkServiceGrpc {
 
     /**
      * <pre>
+     * rpc for streaming document that contains combined talks. First message should contain Talk related metadata,
+     * second - audio metadata, others should contain audio bytes in chunks
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<yandex.cloud.api.speechsense.v1.TalkServiceProto.StreamTalkRequest> uploadBadge(
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUploadBadgeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * rpc for searching talks. will return ids only
      * </pre>
      */
@@ -292,6 +334,13 @@ public final class TalkServiceGrpc {
                 yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextRequest,
                 yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextResponse>(
                   this, METHODID_UPLOAD_TEXT)))
+          .addMethod(
+            getUploadBadgeMethod(),
+            io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+              new MethodHandlers<
+                yandex.cloud.api.speechsense.v1.TalkServiceProto.StreamTalkRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPLOAD_BADGE)))
           .addMethod(
             getSearchMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -356,6 +405,18 @@ public final class TalkServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTextResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUploadTextMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * rpc for streaming document that contains combined talks. First message should contain Talk related metadata,
+     * second - audio metadata, others should contain audio bytes in chunks
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<yandex.cloud.api.speechsense.v1.TalkServiceProto.StreamTalkRequest> uploadBadge(
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getUploadBadgeMethod(), getCallOptions()), responseObserver);
     }
 
     /**
@@ -500,6 +561,7 @@ public final class TalkServiceGrpc {
   private static final int METHODID_SEARCH = 2;
   private static final int METHODID_GET = 3;
   private static final int METHODID_UPLOAD_AS_STREAM = 4;
+  private static final int METHODID_UPLOAD_BADGE = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -547,6 +609,9 @@ public final class TalkServiceGrpc {
         case METHODID_UPLOAD_AS_STREAM:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.uploadAsStream(
               (io.grpc.stub.StreamObserver<yandex.cloud.api.speechsense.v1.TalkServiceProto.UploadTalkResponse>) responseObserver);
+        case METHODID_UPLOAD_BADGE:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.uploadBadge(
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -601,6 +666,7 @@ public final class TalkServiceGrpc {
               .addMethod(getUploadAsStreamMethod())
               .addMethod(getUploadMethod())
               .addMethod(getUploadTextMethod())
+              .addMethod(getUploadBadgeMethod())
               .addMethod(getSearchMethod())
               .addMethod(getGetMethod())
               .build();

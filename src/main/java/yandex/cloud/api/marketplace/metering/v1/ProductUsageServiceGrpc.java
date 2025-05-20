@@ -3,6 +3,9 @@ package yandex.cloud.api.marketplace.metering.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing product's usage with product instances.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -91,6 +94,9 @@ public final class ProductUsageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing product's usage with product instances.
+   * </pre>
    */
   public static abstract class ProductUsageServiceImplBase implements io.grpc.BindableService {
 
@@ -118,6 +124,9 @@ public final class ProductUsageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing product's usage with product instances.
+   * </pre>
    */
   public static final class ProductUsageServiceStub extends io.grpc.stub.AbstractAsyncStub<ProductUsageServiceStub> {
     private ProductUsageServiceStub(
@@ -144,6 +153,9 @@ public final class ProductUsageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing product's usage with product instances.
+   * </pre>
    */
   public static final class ProductUsageServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProductUsageServiceBlockingStub> {
     private ProductUsageServiceBlockingStub(
@@ -169,6 +181,9 @@ public final class ProductUsageServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing product's usage with product instances.
+   * </pre>
    */
   public static final class ProductUsageServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProductUsageServiceFutureStub> {
     private ProductUsageServiceFutureStub(

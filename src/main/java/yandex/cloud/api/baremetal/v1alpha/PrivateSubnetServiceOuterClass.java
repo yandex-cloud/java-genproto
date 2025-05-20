@@ -7708,6 +7708,28 @@ public final class PrivateSubnetServiceOuterClass {
 
     /**
      * <pre>
+     * ID of the PrivateSubnet resource to update.
+     * To get the private subnet ID, use a [PrivateSubnetService.List] request.
+     * </pre>
+     *
+     * <code>string private_subnet_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
+     * @return The privateSubnetId.
+     */
+    java.lang.String getPrivateSubnetId();
+    /**
+     * <pre>
+     * ID of the PrivateSubnet resource to update.
+     * To get the private subnet ID, use a [PrivateSubnetService.List] request.
+     * </pre>
+     *
+     * <code>string private_subnet_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for privateSubnetId.
+     */
+    com.google.protobuf.ByteString
+        getPrivateSubnetIdBytes();
+
+    /**
+     * <pre>
      * Field mask that specifies which fields of the PrivateSubnet resource are going to be updated.
      * </pre>
      *
@@ -7804,28 +7826,6 @@ public final class PrivateSubnetServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the PrivateSubnet resource to update.
-     * To get the private subnet ID, use a [PrivateSubnetService.List] request.
-     * </pre>
-     *
-     * <code>string private_subnet_id = 6 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
-     * @return The privateSubnetId.
-     */
-    java.lang.String getPrivateSubnetId();
-    /**
-     * <pre>
-     * ID of the PrivateSubnet resource to update.
-     * To get the private subnet ID, use a [PrivateSubnetService.List] request.
-     * </pre>
-     *
-     * <code>string private_subnet_id = 6 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
-     * @return The bytes for privateSubnetId.
-     */
-    com.google.protobuf.ByteString
-        getPrivateSubnetIdBytes();
-
-    /**
-     * <pre>
      * Resource labels as `key:value` pairs.
      * Existing set of `labels` is completely replaced by the provided set.
      * </pre>
@@ -7896,9 +7896,9 @@ public final class PrivateSubnetServiceOuterClass {
       super(builder);
     }
     private UpdatePrivateSubnetRequest() {
+      privateSubnetId_ = "";
       name_ = "";
       description_ = "";
-      privateSubnetId_ = "";
     }
 
     @java.lang.Override
@@ -7932,6 +7932,12 @@ public final class PrivateSubnetServiceOuterClass {
             case 0:
               done = true;
               break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privateSubnetId_ = s;
+              break;
+            }
             case 18: {
               com.google.protobuf.FieldMask.Builder subBuilder = null;
               if (updateMask_ != null) {
@@ -7968,12 +7974,6 @@ public final class PrivateSubnetServiceOuterClass {
                 vrfOptionsSpec_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              privateSubnetId_ = s;
               break;
             }
             case 1602: {
@@ -8031,6 +8031,54 @@ public final class PrivateSubnetServiceOuterClass {
       return yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.internal_static_yandex_cloud_baremetal_v1alpha_UpdatePrivateSubnetRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.UpdatePrivateSubnetRequest.class, yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.UpdatePrivateSubnetRequest.Builder.class);
+    }
+
+    public static final int PRIVATE_SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object privateSubnetId_;
+    /**
+     * <pre>
+     * ID of the PrivateSubnet resource to update.
+     * To get the private subnet ID, use a [PrivateSubnetService.List] request.
+     * </pre>
+     *
+     * <code>string private_subnet_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
+     * @return The privateSubnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivateSubnetId() {
+      java.lang.Object ref = privateSubnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateSubnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the PrivateSubnet resource to update.
+     * To get the private subnet ID, use a [PrivateSubnetService.List] request.
+     * </pre>
+     *
+     * <code>string private_subnet_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
+     * @return The bytes for privateSubnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivateSubnetIdBytes() {
+      java.lang.Object ref = privateSubnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateSubnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
@@ -8203,54 +8251,6 @@ public final class PrivateSubnetServiceOuterClass {
       return getVrfOptionsSpec();
     }
 
-    public static final int PRIVATE_SUBNET_ID_FIELD_NUMBER = 6;
-    private volatile java.lang.Object privateSubnetId_;
-    /**
-     * <pre>
-     * ID of the PrivateSubnet resource to update.
-     * To get the private subnet ID, use a [PrivateSubnetService.List] request.
-     * </pre>
-     *
-     * <code>string private_subnet_id = 6 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
-     * @return The privateSubnetId.
-     */
-    @java.lang.Override
-    public java.lang.String getPrivateSubnetId() {
-      java.lang.Object ref = privateSubnetId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        privateSubnetId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * ID of the PrivateSubnet resource to update.
-     * To get the private subnet ID, use a [PrivateSubnetService.List] request.
-     * </pre>
-     *
-     * <code>string private_subnet_id = 6 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
-     * @return The bytes for privateSubnetId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPrivateSubnetIdBytes() {
-      java.lang.Object ref = privateSubnetId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        privateSubnetId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int LABELS_FIELD_NUMBER = 200;
     private static final class LabelsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
@@ -8366,6 +8366,9 @@ public final class PrivateSubnetServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateSubnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, privateSubnetId_);
+      }
       if (updateMask_ != null) {
         output.writeMessage(2, getUpdateMask());
       }
@@ -8377,9 +8380,6 @@ public final class PrivateSubnetServiceOuterClass {
       }
       if (vrfOptionsSpec_ != null) {
         output.writeMessage(5, getVrfOptionsSpec());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateSubnetId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, privateSubnetId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
@@ -8396,6 +8396,9 @@ public final class PrivateSubnetServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateSubnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, privateSubnetId_);
+      }
       if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getUpdateMask());
@@ -8409,9 +8412,6 @@ public final class PrivateSubnetServiceOuterClass {
       if (vrfOptionsSpec_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getVrfOptionsSpec());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateSubnetId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, privateSubnetId_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetLabels().getMap().entrySet()) {
@@ -8438,6 +8438,8 @@ public final class PrivateSubnetServiceOuterClass {
       }
       yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.UpdatePrivateSubnetRequest other = (yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.UpdatePrivateSubnetRequest) obj;
 
+      if (!getPrivateSubnetId()
+          .equals(other.getPrivateSubnetId())) return false;
       if (hasUpdateMask() != other.hasUpdateMask()) return false;
       if (hasUpdateMask()) {
         if (!getUpdateMask()
@@ -8452,8 +8454,6 @@ public final class PrivateSubnetServiceOuterClass {
         if (!getVrfOptionsSpec()
             .equals(other.getVrfOptionsSpec())) return false;
       }
-      if (!getPrivateSubnetId()
-          .equals(other.getPrivateSubnetId())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -8467,6 +8467,8 @@ public final class PrivateSubnetServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivateSubnetId().hashCode();
       if (hasUpdateMask()) {
         hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
         hash = (53 * hash) + getUpdateMask().hashCode();
@@ -8479,8 +8481,6 @@ public final class PrivateSubnetServiceOuterClass {
         hash = (37 * hash) + VRF_OPTIONS_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getVrfOptionsSpec().hashCode();
       }
-      hash = (37 * hash) + PRIVATE_SUBNET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getPrivateSubnetId().hashCode();
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
@@ -8640,6 +8640,8 @@ public final class PrivateSubnetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        privateSubnetId_ = "";
+
         if (updateMaskBuilder_ == null) {
           updateMask_ = null;
         } else {
@@ -8656,8 +8658,6 @@ public final class PrivateSubnetServiceOuterClass {
           vrfOptionsSpec_ = null;
           vrfOptionsSpecBuilder_ = null;
         }
-        privateSubnetId_ = "";
-
         internalGetMutableLabels().clear();
         return this;
       }
@@ -8686,6 +8686,7 @@ public final class PrivateSubnetServiceOuterClass {
       public yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.UpdatePrivateSubnetRequest buildPartial() {
         yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.UpdatePrivateSubnetRequest result = new yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.UpdatePrivateSubnetRequest(this);
         int from_bitField0_ = bitField0_;
+        result.privateSubnetId_ = privateSubnetId_;
         if (updateMaskBuilder_ == null) {
           result.updateMask_ = updateMask_;
         } else {
@@ -8698,7 +8699,6 @@ public final class PrivateSubnetServiceOuterClass {
         } else {
           result.vrfOptionsSpec_ = vrfOptionsSpecBuilder_.build();
         }
-        result.privateSubnetId_ = privateSubnetId_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
         onBuilt();
@@ -8749,6 +8749,10 @@ public final class PrivateSubnetServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.UpdatePrivateSubnetRequest other) {
         if (other == yandex.cloud.api.baremetal.v1alpha.PrivateSubnetServiceOuterClass.UpdatePrivateSubnetRequest.getDefaultInstance()) return this;
+        if (!other.getPrivateSubnetId().isEmpty()) {
+          privateSubnetId_ = other.privateSubnetId_;
+          onChanged();
+        }
         if (other.hasUpdateMask()) {
           mergeUpdateMask(other.getUpdateMask());
         }
@@ -8762,10 +8766,6 @@ public final class PrivateSubnetServiceOuterClass {
         }
         if (other.hasVrfOptionsSpec()) {
           mergeVrfOptionsSpec(other.getVrfOptionsSpec());
-        }
-        if (!other.getPrivateSubnetId().isEmpty()) {
-          privateSubnetId_ = other.privateSubnetId_;
-          onChanged();
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
@@ -8798,6 +8798,107 @@ public final class PrivateSubnetServiceOuterClass {
         return this;
       }
       private int bitField0_;
+
+      private java.lang.Object privateSubnetId_ = "";
+      /**
+       * <pre>
+       * ID of the PrivateSubnet resource to update.
+       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
+       * </pre>
+       *
+       * <code>string private_subnet_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
+       * @return The privateSubnetId.
+       */
+      public java.lang.String getPrivateSubnetId() {
+        java.lang.Object ref = privateSubnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privateSubnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateSubnet resource to update.
+       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
+       * </pre>
+       *
+       * <code>string private_subnet_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
+       * @return The bytes for privateSubnetId.
+       */
+      public com.google.protobuf.ByteString
+          getPrivateSubnetIdBytes() {
+        java.lang.Object ref = privateSubnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privateSubnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the PrivateSubnet resource to update.
+       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
+       * </pre>
+       *
+       * <code>string private_subnet_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
+       * @param value The privateSubnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privateSubnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateSubnet resource to update.
+       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
+       * </pre>
+       *
+       * <code>string private_subnet_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateSubnetId() {
+        
+        privateSubnetId_ = getDefaultInstance().getPrivateSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the PrivateSubnet resource to update.
+       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
+       * </pre>
+       *
+       * <code>string private_subnet_id = 1 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
+       * @param value The bytes for privateSubnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privateSubnetId_ = value;
+        onChanged();
+        return this;
+      }
 
       private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9304,107 +9405,6 @@ public final class PrivateSubnetServiceOuterClass {
           vrfOptionsSpec_ = null;
         }
         return vrfOptionsSpecBuilder_;
-      }
-
-      private java.lang.Object privateSubnetId_ = "";
-      /**
-       * <pre>
-       * ID of the PrivateSubnet resource to update.
-       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
-       * </pre>
-       *
-       * <code>string private_subnet_id = 6 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
-       * @return The privateSubnetId.
-       */
-      public java.lang.String getPrivateSubnetId() {
-        java.lang.Object ref = privateSubnetId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          privateSubnetId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the PrivateSubnet resource to update.
-       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
-       * </pre>
-       *
-       * <code>string private_subnet_id = 6 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
-       * @return The bytes for privateSubnetId.
-       */
-      public com.google.protobuf.ByteString
-          getPrivateSubnetIdBytes() {
-        java.lang.Object ref = privateSubnetId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          privateSubnetId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the PrivateSubnet resource to update.
-       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
-       * </pre>
-       *
-       * <code>string private_subnet_id = 6 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
-       * @param value The privateSubnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPrivateSubnetId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        privateSubnetId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the PrivateSubnet resource to update.
-       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
-       * </pre>
-       *
-       * <code>string private_subnet_id = 6 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPrivateSubnetId() {
-        
-        privateSubnetId_ = getDefaultInstance().getPrivateSubnetId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * ID of the PrivateSubnet resource to update.
-       * To get the private subnet ID, use a [PrivateSubnetService.List] request.
-       * </pre>
-       *
-       * <code>string private_subnet_id = 6 [(.yandex.cloud.pattern) = "[a-z][a-z0-9]*", (.yandex.cloud.length) = "20"];</code>
-       * @param value The bytes for privateSubnetId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPrivateSubnetIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        privateSubnetId_ = value;
-        onChanged();
-        return this;
       }
 
       private com.google.protobuf.MapField<
@@ -13593,58 +13593,58 @@ public final class PrivateSubnetServiceOuterClass {
       "Spec\022\022\n\ngateway_ip\030\004 \001(\t\"3\n\017DhcpOptionsS" +
       "pec\022\020\n\010start_ip\030\001 \001(\t\022\016\n\006end_ip\030\002 \001(\t\">\n" +
       "\033CreatePrivateSubnetMetadata\022\031\n\021private_" +
-      "subnet_id\030\002 \001(\tJ\004\010\001\020\002\"\372\003\n\032UpdatePrivateS" +
-      "ubnetRequest\022/\n\013update_mask\030\002 \001(\0132\032.goog" +
-      "le.protobuf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071" +
-      "\032[a-z]([-a-z0-9]*[a-z0-9])?\212\3101\0042-63\022\037\n\013d" +
-      "escription\030\004 \001(\tB\n\212\3101\006<=1024\022H\n\020vrf_opti" +
-      "ons_spec\030\005 \001(\0132..yandex.cloud.baremetal." +
-      "v1alpha.VrfOptionsSpec\0223\n\021private_subnet" +
-      "_id\030\006 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022\230\001\n\006" +
+      "subnet_id\030\002 \001(\tJ\004\010\001\020\002\"\364\003\n\032UpdatePrivateS" +
+      "ubnetRequest\0223\n\021private_subnet_id\030\001 \001(\tB" +
+      "\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022/\n\013update_mask" +
+      "\030\002 \001(\0132\032.google.protobuf.FieldMask\0224\n\004na" +
+      "me\030\003 \001(\tB&\362\3071\032[a-z]([-a-z0-9]*[a-z0-9])?" +
+      "\212\3101\0042-63\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=102" +
+      "4\022H\n\020vrf_options_spec\030\005 \001(\0132..yandex.clo" +
+      "ud.baremetal.v1alpha.VrfOptionsSpec\022\230\001\n\006" +
       "labels\030\310\001 \003(\0132F.yandex.cloud.baremetal.v" +
       "1alpha.UpdatePrivateSubnetRequest.Labels" +
       "EntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\310" +
       "1\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010" +
-      "\001\020\002J\005\010\007\020\310\001\">\n\033UpdatePrivateSubnetMetadat" +
-      "a\022\031\n\021private_subnet_id\030\002 \001(\tJ\004\010\001\020\002\"W\n\032De" +
-      "letePrivateSubnetRequest\0223\n\021private_subn" +
-      "et_id\030\002 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220J\004\010" +
-      "\001\020\002\">\n\033DeletePrivateSubnetMetadata\022\031\n\021pr" +
-      "ivate_subnet_id\030\002 \001(\tJ\004\010\001\020\002\"\227\001\n\"ListPriv" +
-      "ateSubnetOperationsRequest\0223\n\021private_su" +
-      "bnet_id\030\002 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022" +
-      "\034\n\tpage_size\030d \001(\003B\t\372\3071\005<=100\022\022\n\npage_to" +
-      "ken\030e \001(\tJ\004\010\001\020\002J\004\010\003\020d\"{\n#ListPrivateSubn" +
-      "etOperationsResponse\0225\n\noperations\030\001 \003(\013" +
-      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
-      "ext_page_token\030d \001(\tJ\004\010\002\020d2\200\007\n\024PrivateSu" +
-      "bnetService\022o\n\003Get\0227.yandex.cloud.bareme" +
-      "tal.v1alpha.GetPrivateSubnetRequest\032-.ya" +
-      "ndex.cloud.baremetal.v1alpha.PrivateSubn" +
-      "et\"\000\022}\n\004List\0228.yandex.cloud.baremetal.v1" +
-      "alpha.ListPrivateSubnetRequest\0329.yandex." +
-      "cloud.baremetal.v1alpha.ListPrivateSubne" +
-      "tResponse\"\000\022\231\001\n\006Create\022:.yandex.cloud.ba" +
-      "remetal.v1alpha.CreatePrivateSubnetReque" +
-      "st\032!.yandex.cloud.operation.Operation\"0\262" +
-      "\322*,\n\033CreatePrivateSubnetMetadata\022\rPrivat" +
-      "eSubnet\022\231\001\n\006Update\022:.yandex.cloud.bareme" +
-      "tal.v1alpha.UpdatePrivateSubnetRequest\032!" +
-      ".yandex.cloud.operation.Operation\"0\262\322*,\n" +
-      "\033UpdatePrivateSubnetMetadata\022\rPrivateSub" +
-      "net\022\241\001\n\006Delete\022:.yandex.cloud.baremetal." +
-      "v1alpha.DeletePrivateSubnetRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"8\262\322*4\n\033Del" +
-      "etePrivateSubnetMetadata\022\025google.protobu" +
-      "f.Empty\022\233\001\n\016ListOperations\022B.yandex.clou" +
-      "d.baremetal.v1alpha.ListPrivateSubnetOpe" +
-      "rationsRequest\032C.yandex.cloud.baremetal." +
-      "v1alpha.ListPrivateSubnetOperationsRespo" +
-      "nse\"\000Br\n\"yandex.cloud.api.baremetal.v1al" +
-      "phaZLgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/baremetal/v1alpha;baremeta" +
-      "lb\006proto3"
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J\005\010" +
+      "\006\020\310\001\">\n\033UpdatePrivateSubnetMetadata\022\031\n\021p" +
+      "rivate_subnet_id\030\002 \001(\tJ\004\010\001\020\002\"W\n\032DeletePr" +
+      "ivateSubnetRequest\0223\n\021private_subnet_id\030" +
+      "\002 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220J\004\010\001\020\002\">\n" +
+      "\033DeletePrivateSubnetMetadata\022\031\n\021private_" +
+      "subnet_id\030\002 \001(\tJ\004\010\001\020\002\"\227\001\n\"ListPrivateSub" +
+      "netOperationsRequest\0223\n\021private_subnet_i" +
+      "d\030\002 \001(\tB\030\362\3071\016[a-z][a-z0-9]*\212\3101\00220\022\034\n\tpag" +
+      "e_size\030d \001(\003B\t\372\3071\005<=100\022\022\n\npage_token\030e " +
+      "\001(\tJ\004\010\001\020\002J\004\010\003\020d\"{\n#ListPrivateSubnetOper" +
+      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
+      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
+      "ge_token\030d \001(\tJ\004\010\002\020d2\200\007\n\024PrivateSubnetSe" +
+      "rvice\022o\n\003Get\0227.yandex.cloud.baremetal.v1" +
+      "alpha.GetPrivateSubnetRequest\032-.yandex.c" +
+      "loud.baremetal.v1alpha.PrivateSubnet\"\000\022}" +
+      "\n\004List\0228.yandex.cloud.baremetal.v1alpha." +
+      "ListPrivateSubnetRequest\0329.yandex.cloud." +
+      "baremetal.v1alpha.ListPrivateSubnetRespo" +
+      "nse\"\000\022\231\001\n\006Create\022:.yandex.cloud.baremeta" +
+      "l.v1alpha.CreatePrivateSubnetRequest\032!.y" +
+      "andex.cloud.operation.Operation\"0\262\322*,\n\033C" +
+      "reatePrivateSubnetMetadata\022\rPrivateSubne" +
+      "t\022\231\001\n\006Update\022:.yandex.cloud.baremetal.v1" +
+      "alpha.UpdatePrivateSubnetRequest\032!.yande" +
+      "x.cloud.operation.Operation\"0\262\322*,\n\033Updat" +
+      "ePrivateSubnetMetadata\022\rPrivateSubnet\022\241\001" +
+      "\n\006Delete\022:.yandex.cloud.baremetal.v1alph" +
+      "a.DeletePrivateSubnetRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"8\262\322*4\n\033DeletePri" +
+      "vateSubnetMetadata\022\025google.protobuf.Empt" +
+      "y\022\233\001\n\016ListOperations\022B.yandex.cloud.bare" +
+      "metal.v1alpha.ListPrivateSubnetOperation" +
+      "sRequest\032C.yandex.cloud.baremetal.v1alph" +
+      "a.ListPrivateSubnetOperationsResponse\"\000B" +
+      "r\n\"yandex.cloud.api.baremetal.v1alphaZLg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/baremetal/v1alpha;baremetalb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13708,7 +13708,7 @@ public final class PrivateSubnetServiceOuterClass {
     internal_static_yandex_cloud_baremetal_v1alpha_UpdatePrivateSubnetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_baremetal_v1alpha_UpdatePrivateSubnetRequest_descriptor,
-        new java.lang.String[] { "UpdateMask", "Name", "Description", "VrfOptionsSpec", "PrivateSubnetId", "Labels", });
+        new java.lang.String[] { "PrivateSubnetId", "UpdateMask", "Name", "Description", "VrfOptionsSpec", "Labels", });
     internal_static_yandex_cloud_baremetal_v1alpha_UpdatePrivateSubnetRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_baremetal_v1alpha_UpdatePrivateSubnetRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_baremetal_v1alpha_UpdatePrivateSubnetRequest_LabelsEntry_fieldAccessorTable = new

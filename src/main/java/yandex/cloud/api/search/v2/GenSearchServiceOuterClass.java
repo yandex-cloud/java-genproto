@@ -156,7 +156,7 @@ public final class GenSearchServiceOuterClass {
      * Text of user query or the model's response (depending on the role value).
      * </pre>
      *
-     * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=16384"];</code>
      * @return The content.
      */
     java.lang.String getContent();
@@ -165,7 +165,7 @@ public final class GenSearchServiceOuterClass {
      * Text of user query or the model's response (depending on the role value).
      * </pre>
      *
-     * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=16384"];</code>
      * @return The bytes for content.
      */
     com.google.protobuf.ByteString
@@ -288,7 +288,7 @@ public final class GenSearchServiceOuterClass {
      * Text of user query or the model's response (depending on the role value).
      * </pre>
      *
-     * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=16384"];</code>
      * @return The content.
      */
     @java.lang.Override
@@ -309,7 +309,7 @@ public final class GenSearchServiceOuterClass {
      * Text of user query or the model's response (depending on the role value).
      * </pre>
      *
-     * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+     * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=16384"];</code>
      * @return The bytes for content.
      */
     @java.lang.Override
@@ -678,7 +678,7 @@ public final class GenSearchServiceOuterClass {
        * Text of user query or the model's response (depending on the role value).
        * </pre>
        *
-       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=16384"];</code>
        * @return The content.
        */
       public java.lang.String getContent() {
@@ -698,7 +698,7 @@ public final class GenSearchServiceOuterClass {
        * Text of user query or the model's response (depending on the role value).
        * </pre>
        *
-       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=16384"];</code>
        * @return The bytes for content.
        */
       public com.google.protobuf.ByteString
@@ -719,7 +719,7 @@ public final class GenSearchServiceOuterClass {
        * Text of user query or the model's response (depending on the role value).
        * </pre>
        *
-       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=16384"];</code>
        * @param value The content to set.
        * @return This builder for chaining.
        */
@@ -738,7 +738,7 @@ public final class GenSearchServiceOuterClass {
        * Text of user query or the model's response (depending on the role value).
        * </pre>
        *
-       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=16384"];</code>
        * @return This builder for chaining.
        */
       public Builder clearContent() {
@@ -752,7 +752,7 @@ public final class GenSearchServiceOuterClass {
        * Text of user query or the model's response (depending on the role value).
        * </pre>
        *
-       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1024"];</code>
+       * <code>string content = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=16384"];</code>
        * @param value The bytes for content to set.
        * @return This builder for chaining.
        */
@@ -10640,55 +10640,55 @@ public final class GenSearchServiceOuterClass {
       "\n2yandex/cloud/searchapi/v2/gen_search_s" +
       "ervice.proto\022\031yandex.cloud.searchapi.v2\032" +
       "\035yandex/cloud/validation.proto\032\034google/a" +
-      "pi/annotations.proto\"h\n\020GenSearchMessage" +
-      "\022\037\n\007content\030\001 \001(\tB\016\350\3071\001\212\3101\006<=1024\0223\n\004rol" +
-      "e\030\002 \001(\0162\037.yandex.cloud.searchapi.v2.Role" +
-      "B\004\350\3071\001\"\256\010\n\020GenSearchRequest\022H\n\010messages\030" +
-      "\001 \003(\0132+.yandex.cloud.searchapi.v2.GenSea" +
-      "rchMessageB\t\202\3101\0051-100\022\037\n\tfolder_id\030\002 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022L\n\004site\030\003 \001(\01326.yandex.cl" +
-      "oud.searchapi.v2.GenSearchRequest.SiteOp" +
-      "tionB\004\350\3071\001H\000\022L\n\004host\030\004 \001(\01326.yandex.clou" +
-      "d.searchapi.v2.GenSearchRequest.HostOpti" +
-      "onB\004\350\3071\001H\000\022J\n\003url\030\005 \001(\01325.yandex.cloud.s" +
-      "earchapi.v2.GenSearchRequest.UrlOptionB\004" +
-      "\350\3071\001H\000\022\024\n\014fix_misspell\030\006 \001(\010\022\030\n\020enable_n" +
-      "rfm_docs\030\007 \001(\010\022Z\n\016search_filters\030\010 \003(\01328" +
-      ".yandex.cloud.searchapi.v2.GenSearchRequ" +
-      "est.SearchFilterB\010\202\3101\004<=10\032/\n\nSiteOption" +
-      "\022!\n\004site\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032-\n\tU" +
-      "rlOption\022 \n\003url\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=1" +
-      "00\032/\n\nHostOption\022!\n\004host\030\001 \003(\tB\023\212\3101\006<=10" +
-      "24\202\3101\005<=100\032\231\003\n\014SearchFilter\022\030\n\004date\030\001 \001" +
-      "(\tB\010\212\3101\004<=25H\000\022\025\n\004lang\030\002 \001(\tB\005\212\3101\0012H\000\022T\n" +
-      "\006format\030\003 \001(\0162B.yandex.cloud.searchapi.v" +
-      "2.GenSearchRequest.SearchFilter.DocForma" +
-      "tH\000\"\357\001\n\tDocFormat\022\032\n\026DOC_FORMAT_UNSPECIF" +
-      "IED\020\000\022\022\n\016DOC_FORMAT_PDF\020\001\022\022\n\016DOC_FORMAT_" +
-      "XLS\020\002\022\022\n\016DOC_FORMAT_ODS\020\003\022\022\n\016DOC_FORMAT_" +
-      "RTF\020\004\022\022\n\016DOC_FORMAT_PPT\020\005\022\022\n\016DOC_FORMAT_" +
-      "ODP\020\006\022\022\n\016DOC_FORMAT_SWF\020\007\022\022\n\016DOC_FORMAT_" +
-      "ODT\020\010\022\022\n\016DOC_FORMAT_ODG\020\t\022\022\n\016DOC_FORMAT_" +
-      "DOC\020\nB\020\n\016filter_optionsB\016\n\014site_options\"" +
-      "\236\003\n\021GenSearchResponse\022<\n\007message\030\001 \001(\0132+" +
-      ".yandex.cloud.searchapi.v2.GenSearchMess" +
-      "age\022D\n\007sources\030\002 \003(\01323.yandex.cloud.sear" +
-      "chapi.v2.GenSearchResponse.Source\022P\n\016sea" +
-      "rch_queries\030\003 \003(\01328.yandex.cloud.searcha" +
-      "pi.v2.GenSearchResponse.SearchQuery\022\034\n\024f" +
-      "ixed_misspell_query\030\004 \001(\t\022\032\n\022is_answer_r" +
-      "ejected\030\005 \001(\010\022\030\n\020is_bullet_answer\030\006 \001(\010\032" +
-      "2\n\006Source\022\013\n\003url\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\014\n" +
-      "\004used\030\003 \001(\010\032+\n\013SearchQuery\022\014\n\004text\030\001 \001(\t" +
-      "\022\016\n\006req_id\030\002 \001(\t*?\n\004Role\022\024\n\020ROLE_UNSPECI" +
-      "FIED\020\000\022\r\n\tROLE_USER\020\001\022\022\n\016ROLE_ASSISTANT\020" +
-      "\0022\225\001\n\020GenSearchService\022\200\001\n\006Search\022+.yand" +
-      "ex.cloud.searchapi.v2.GenSearchRequest\032," +
-      ".yandex.cloud.searchapi.v2.GenSearchResp" +
-      "onse\"\031\202\323\344\223\002\023\"\016/v2/gen/search:\001*0\001Be\n\032yan" +
-      "dex.cloud.api.search.v2ZGgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/search" +
-      "api/v2;searchapib\006proto3"
+      "pi/annotations.proto\"i\n\020GenSearchMessage" +
+      "\022 \n\007content\030\001 \001(\tB\017\350\3071\001\212\3101\007<=16384\0223\n\004ro" +
+      "le\030\002 \001(\0162\037.yandex.cloud.searchapi.v2.Rol" +
+      "eB\004\350\3071\001\"\256\010\n\020GenSearchRequest\022H\n\010messages" +
+      "\030\001 \003(\0132+.yandex.cloud.searchapi.v2.GenSe" +
+      "archMessageB\t\202\3101\0051-100\022\037\n\tfolder_id\030\002 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022L\n\004site\030\003 \001(\01326.yandex.c" +
+      "loud.searchapi.v2.GenSearchRequest.SiteO" +
+      "ptionB\004\350\3071\001H\000\022L\n\004host\030\004 \001(\01326.yandex.clo" +
+      "ud.searchapi.v2.GenSearchRequest.HostOpt" +
+      "ionB\004\350\3071\001H\000\022J\n\003url\030\005 \001(\01325.yandex.cloud." +
+      "searchapi.v2.GenSearchRequest.UrlOptionB" +
+      "\004\350\3071\001H\000\022\024\n\014fix_misspell\030\006 \001(\010\022\030\n\020enable_" +
+      "nrfm_docs\030\007 \001(\010\022Z\n\016search_filters\030\010 \003(\0132" +
+      "8.yandex.cloud.searchapi.v2.GenSearchReq" +
+      "uest.SearchFilterB\010\202\3101\004<=10\032/\n\nSiteOptio" +
+      "n\022!\n\004site\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=100\032-\n\t" +
+      "UrlOption\022 \n\003url\030\001 \003(\tB\023\212\3101\006<=1024\202\3101\005<=" +
+      "100\032/\n\nHostOption\022!\n\004host\030\001 \003(\tB\023\212\3101\006<=1" +
+      "024\202\3101\005<=100\032\231\003\n\014SearchFilter\022\030\n\004date\030\001 " +
+      "\001(\tB\010\212\3101\004<=25H\000\022\025\n\004lang\030\002 \001(\tB\005\212\3101\0012H\000\022T" +
+      "\n\006format\030\003 \001(\0162B.yandex.cloud.searchapi." +
+      "v2.GenSearchRequest.SearchFilter.DocForm" +
+      "atH\000\"\357\001\n\tDocFormat\022\032\n\026DOC_FORMAT_UNSPECI" +
+      "FIED\020\000\022\022\n\016DOC_FORMAT_PDF\020\001\022\022\n\016DOC_FORMAT" +
+      "_XLS\020\002\022\022\n\016DOC_FORMAT_ODS\020\003\022\022\n\016DOC_FORMAT" +
+      "_RTF\020\004\022\022\n\016DOC_FORMAT_PPT\020\005\022\022\n\016DOC_FORMAT" +
+      "_ODP\020\006\022\022\n\016DOC_FORMAT_SWF\020\007\022\022\n\016DOC_FORMAT" +
+      "_ODT\020\010\022\022\n\016DOC_FORMAT_ODG\020\t\022\022\n\016DOC_FORMAT" +
+      "_DOC\020\nB\020\n\016filter_optionsB\016\n\014site_options" +
+      "\"\236\003\n\021GenSearchResponse\022<\n\007message\030\001 \001(\0132" +
+      "+.yandex.cloud.searchapi.v2.GenSearchMes" +
+      "sage\022D\n\007sources\030\002 \003(\01323.yandex.cloud.sea" +
+      "rchapi.v2.GenSearchResponse.Source\022P\n\016se" +
+      "arch_queries\030\003 \003(\01328.yandex.cloud.search" +
+      "api.v2.GenSearchResponse.SearchQuery\022\034\n\024" +
+      "fixed_misspell_query\030\004 \001(\t\022\032\n\022is_answer_" +
+      "rejected\030\005 \001(\010\022\030\n\020is_bullet_answer\030\006 \001(\010" +
+      "\0322\n\006Source\022\013\n\003url\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\014" +
+      "\n\004used\030\003 \001(\010\032+\n\013SearchQuery\022\014\n\004text\030\001 \001(" +
+      "\t\022\016\n\006req_id\030\002 \001(\t*?\n\004Role\022\024\n\020ROLE_UNSPEC" +
+      "IFIED\020\000\022\r\n\tROLE_USER\020\001\022\022\n\016ROLE_ASSISTANT" +
+      "\020\0022\225\001\n\020GenSearchService\022\200\001\n\006Search\022+.yan" +
+      "dex.cloud.searchapi.v2.GenSearchRequest\032" +
+      ",.yandex.cloud.searchapi.v2.GenSearchRes" +
+      "ponse\"\031\202\323\344\223\002\023\"\016/v2/gen/search:\001*0\001Be\n\032ya" +
+      "ndex.cloud.api.search.v2ZGgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/searc" +
+      "hapi/v2;searchapib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

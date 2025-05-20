@@ -638,6 +638,37 @@ public final class ClusterServiceGrpc {
     return getAddHostsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateHosts",
+      requestType = yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateHostsMethod;
+    if ((getUpdateHostsMethod = ClusterServiceGrpc.getUpdateHostsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getUpdateHostsMethod = ClusterServiceGrpc.getUpdateHostsMethod) == null) {
+          ClusterServiceGrpc.getUpdateHostsMethod = getUpdateHostsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateHosts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("UpdateHosts"))
+              .build();
+        }
+      }
+    }
+    return getUpdateHostsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteHostsMethod;
 
@@ -1105,6 +1136,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public void updateHosts(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateHostsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified hosts for a cluster.
      * </pre>
      */
@@ -1315,6 +1356,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterHostsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ADD_HOSTS)))
+          .addMethod(
+            getUpdateHostsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_HOSTS)))
           .addMethod(
             getDeleteHostsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1600,6 +1648,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddHostsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public void updateHosts(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateHostsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1893,6 +1952,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation addHosts(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterHostsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateHosts(yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateHostsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2191,6 +2260,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified hosts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateHosts(
+        yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateHostsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified hosts for a cluster.
      * </pre>
      */
@@ -2287,13 +2367,14 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST_HOSTS = 17;
   private static final int METHODID_LIST_HOSTS_AT_REVISION = 18;
   private static final int METHODID_ADD_HOSTS = 19;
-  private static final int METHODID_DELETE_HOSTS = 20;
-  private static final int METHODID_RESETUP_HOSTS = 21;
-  private static final int METHODID_GET_SHARD = 22;
-  private static final int METHODID_LIST_SHARDS = 23;
-  private static final int METHODID_LIST_SHARDS_AT_REVISION = 24;
-  private static final int METHODID_ADD_SHARD = 25;
-  private static final int METHODID_DELETE_SHARD = 26;
+  private static final int METHODID_UPDATE_HOSTS = 20;
+  private static final int METHODID_DELETE_HOSTS = 21;
+  private static final int METHODID_RESETUP_HOSTS = 22;
+  private static final int METHODID_GET_SHARD = 23;
+  private static final int METHODID_LIST_SHARDS = 24;
+  private static final int METHODID_LIST_SHARDS_AT_REVISION = 25;
+  private static final int METHODID_ADD_SHARD = 26;
+  private static final int METHODID_DELETE_SHARD = 27;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2390,6 +2471,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_ADD_HOSTS:
           serviceImpl.addHosts((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.AddClusterHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_HOSTS:
+          serviceImpl.updateHosts((yandex.cloud.api.mdb.spqr.v1.ClusterServiceOuterClass.UpdateClusterHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE_HOSTS:
@@ -2501,6 +2586,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getListHostsMethod())
               .addMethod(getListHostsAtRevisionMethod())
               .addMethod(getAddHostsMethod())
+              .addMethod(getUpdateHostsMethod())
               .addMethod(getDeleteHostsMethod())
               .addMethod(getResetupHostsMethod())
               .addMethod(getGetShardMethod())

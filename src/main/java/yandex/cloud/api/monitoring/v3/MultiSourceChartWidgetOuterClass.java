@@ -319,6 +319,33 @@ public final class MultiSourceChartWidgetOuterClass {
      * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.RepeatSettings repeat = 11;</code>
      */
     yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.RepeatSettingsOrBuilder getRepeatOrBuilder();
+
+    /**
+     * <pre>
+     * Threshold settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+     * @return Whether the thresholds field is set.
+     */
+    boolean hasThresholds();
+    /**
+     * <pre>
+     * Threshold settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+     * @return The thresholds.
+     */
+    yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds getThresholds();
+    /**
+     * <pre>
+     * Threshold settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+     */
+    yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.ThresholdsOrBuilder getThresholdsOrBuilder();
   }
   /**
    * <pre>
@@ -468,6 +495,19 @@ public final class MultiSourceChartWidgetOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(repeat_);
                 repeat_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Builder subBuilder = null;
+              if (thresholds_ != null) {
+                subBuilder = thresholds_.toBuilder();
+              }
+              thresholds_ = input.readMessage(yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(thresholds_);
+                thresholds_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8089,6 +8129,33 @@ public final class MultiSourceChartWidgetOuterClass {
          */
         yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorSchemeOrBuilder getHashOrBuilder();
 
+        /**
+         * <pre>
+         * Threshold settings color scheme.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+         * @return Whether the thresholds field is set.
+         */
+        boolean hasThresholds();
+        /**
+         * <pre>
+         * Threshold settings color scheme.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+         * @return The thresholds.
+         */
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme getThresholds();
+        /**
+         * <pre>
+         * Threshold settings color scheme.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+         */
+        yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorSchemeOrBuilder getThresholdsOrBuilder();
+
         public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.SchemeCase getSchemeCase();
       }
       /**
@@ -8190,6 +8257,20 @@ public final class MultiSourceChartWidgetOuterClass {
                     scheme_ = subBuilder.buildPartial();
                   }
                   schemeCase_ = 4;
+                  break;
+                }
+                case 42: {
+                  yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Builder subBuilder = null;
+                  if (schemeCase_ == 5) {
+                    subBuilder = ((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_).toBuilder();
+                  }
+                  scheme_ =
+                      input.readMessage(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_);
+                    scheme_ = subBuilder.buildPartial();
+                  }
+                  schemeCase_ = 5;
                   break;
                 }
                 default: {
@@ -10640,6 +10721,675 @@ public final class MultiSourceChartWidgetOuterClass {
 
         }
 
+        public interface ThresholdsColorSchemeOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme)
+            com.google.protobuf.MessageOrBuilder {
+
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
+           * @return The enum numeric value on the wire for aggregation.
+           */
+          int getAggregationValue();
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
+           * @return The aggregation.
+           */
+          yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation getAggregation();
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme}
+         */
+        public static final class ThresholdsColorScheme extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme)
+            ThresholdsColorSchemeOrBuilder {
+        private static final long serialVersionUID = 0L;
+          // Use ThresholdsColorScheme.newBuilder() to construct.
+          private ThresholdsColorScheme(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+          }
+          private ThresholdsColorScheme() {
+            aggregation_ = 0;
+          }
+
+          @java.lang.Override
+          @SuppressWarnings({"unused"})
+          protected java.lang.Object newInstance(
+              UnusedPrivateParameter unused) {
+            return new ThresholdsColorScheme();
+          }
+
+          @java.lang.Override
+          public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+            return this.unknownFields;
+          }
+          private ThresholdsColorScheme(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+              throw new java.lang.NullPointerException();
+            }
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  case 8: {
+                    int rawValue = input.readEnum();
+
+                    aggregation_ = rawValue;
+                    break;
+                  }
+                  default: {
+                    if (!parseUnknownField(
+                        input, unknownFields, extensionRegistry, tag)) {
+                      done = true;
+                    }
+                    break;
+                  }
+                }
+              }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(
+                  e).setUnfinishedMessage(this);
+            } finally {
+              this.unknownFields = unknownFields.build();
+              makeExtensionsImmutable();
+            }
+          }
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Builder.class);
+          }
+
+          /**
+           * Protobuf enum {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation}
+           */
+          public enum Aggregation
+              implements com.google.protobuf.ProtocolMessageEnum {
+            /**
+             * <code>AGGREGATION_UNSPECIFIED = 0;</code>
+             */
+            AGGREGATION_UNSPECIFIED(0),
+            /**
+             * <code>AGGREGATION_LAST = 1;</code>
+             */
+            AGGREGATION_LAST(1),
+            /**
+             * <code>AGGREGATION_MIN = 2;</code>
+             */
+            AGGREGATION_MIN(2),
+            /**
+             * <code>AGGREGATION_MAX = 3;</code>
+             */
+            AGGREGATION_MAX(3),
+            /**
+             * <code>AGGREGATION_AVG = 4;</code>
+             */
+            AGGREGATION_AVG(4),
+            /**
+             * <code>AGGREGATION_SUM = 5;</code>
+             */
+            AGGREGATION_SUM(5),
+            UNRECOGNIZED(-1),
+            ;
+
+            /**
+             * <code>AGGREGATION_UNSPECIFIED = 0;</code>
+             */
+            public static final int AGGREGATION_UNSPECIFIED_VALUE = 0;
+            /**
+             * <code>AGGREGATION_LAST = 1;</code>
+             */
+            public static final int AGGREGATION_LAST_VALUE = 1;
+            /**
+             * <code>AGGREGATION_MIN = 2;</code>
+             */
+            public static final int AGGREGATION_MIN_VALUE = 2;
+            /**
+             * <code>AGGREGATION_MAX = 3;</code>
+             */
+            public static final int AGGREGATION_MAX_VALUE = 3;
+            /**
+             * <code>AGGREGATION_AVG = 4;</code>
+             */
+            public static final int AGGREGATION_AVG_VALUE = 4;
+            /**
+             * <code>AGGREGATION_SUM = 5;</code>
+             */
+            public static final int AGGREGATION_SUM_VALUE = 5;
+
+
+            public final int getNumber() {
+              if (this == UNRECOGNIZED) {
+                throw new java.lang.IllegalArgumentException(
+                    "Can't get the number of an unknown enum value.");
+              }
+              return value;
+            }
+
+            /**
+             * @param value The numeric wire value of the corresponding enum entry.
+             * @return The enum associated with the given numeric wire value.
+             * @deprecated Use {@link #forNumber(int)} instead.
+             */
+            @java.lang.Deprecated
+            public static Aggregation valueOf(int value) {
+              return forNumber(value);
+            }
+
+            /**
+             * @param value The numeric wire value of the corresponding enum entry.
+             * @return The enum associated with the given numeric wire value.
+             */
+            public static Aggregation forNumber(int value) {
+              switch (value) {
+                case 0: return AGGREGATION_UNSPECIFIED;
+                case 1: return AGGREGATION_LAST;
+                case 2: return AGGREGATION_MIN;
+                case 3: return AGGREGATION_MAX;
+                case 4: return AGGREGATION_AVG;
+                case 5: return AGGREGATION_SUM;
+                default: return null;
+              }
+            }
+
+            public static com.google.protobuf.Internal.EnumLiteMap<Aggregation>
+                internalGetValueMap() {
+              return internalValueMap;
+            }
+            private static final com.google.protobuf.Internal.EnumLiteMap<
+                Aggregation> internalValueMap =
+                  new com.google.protobuf.Internal.EnumLiteMap<Aggregation>() {
+                    public Aggregation findValueByNumber(int number) {
+                      return Aggregation.forNumber(number);
+                    }
+                  };
+
+            public final com.google.protobuf.Descriptors.EnumValueDescriptor
+                getValueDescriptor() {
+              if (this == UNRECOGNIZED) {
+                throw new java.lang.IllegalStateException(
+                    "Can't get the descriptor of an unrecognized enum value.");
+              }
+              return getDescriptor().getValues().get(ordinal());
+            }
+            public final com.google.protobuf.Descriptors.EnumDescriptor
+                getDescriptorForType() {
+              return getDescriptor();
+            }
+            public static final com.google.protobuf.Descriptors.EnumDescriptor
+                getDescriptor() {
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDescriptor().getEnumTypes().get(0);
+            }
+
+            private static final Aggregation[] VALUES = values();
+
+            public static Aggregation valueOf(
+                com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+              if (desc.getType() != getDescriptor()) {
+                throw new java.lang.IllegalArgumentException(
+                  "EnumValueDescriptor is not for this type.");
+              }
+              if (desc.getIndex() == -1) {
+                return UNRECOGNIZED;
+              }
+              return VALUES[desc.getIndex()];
+            }
+
+            private final int value;
+
+            private Aggregation(int value) {
+              this.value = value;
+            }
+
+            // @@protoc_insertion_point(enum_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation)
+          }
+
+          public static final int AGGREGATION_FIELD_NUMBER = 1;
+          private int aggregation_;
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
+           * @return The enum numeric value on the wire for aggregation.
+           */
+          @java.lang.Override public int getAggregationValue() {
+            return aggregation_;
+          }
+          /**
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
+           * @return The aggregation.
+           */
+          @java.lang.Override public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation getAggregation() {
+            @SuppressWarnings("deprecation")
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation result = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation.valueOf(aggregation_);
+            return result == null ? yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation.UNRECOGNIZED : result;
+          }
+
+          private byte memoizedIsInitialized = -1;
+          @java.lang.Override
+          public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+          }
+
+          @java.lang.Override
+          public void writeTo(com.google.protobuf.CodedOutputStream output)
+                              throws java.io.IOException {
+            if (aggregation_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation.AGGREGATION_UNSPECIFIED.getNumber()) {
+              output.writeEnum(1, aggregation_);
+            }
+            unknownFields.writeTo(output);
+          }
+
+          @java.lang.Override
+          public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (aggregation_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation.AGGREGATION_UNSPECIFIED.getNumber()) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeEnumSize(1, aggregation_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+          }
+
+          @java.lang.Override
+          public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+             return true;
+            }
+            if (!(obj instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme)) {
+              return super.equals(obj);
+            }
+            yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme other = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) obj;
+
+            if (aggregation_ != other.aggregation_) return false;
+            if (!unknownFields.equals(other.unknownFields)) return false;
+            return true;
+          }
+
+          @java.lang.Override
+          public int hashCode() {
+            if (memoizedHashCode != 0) {
+              return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + AGGREGATION_FIELD_NUMBER;
+            hash = (53 * hash) + aggregation_;
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+          }
+
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(
+              java.nio.ByteBuffer data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(
+              java.nio.ByteBuffer data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(
+              com.google.protobuf.ByteString data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(
+              com.google.protobuf.ByteString data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(byte[] data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(
+              byte[] data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseDelimitedFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseDelimitedWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseDelimitedFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(
+              com.google.protobuf.CodedInputStream input)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input);
+          }
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parseFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                .parseWithIOException(PARSER, input, extensionRegistry);
+          }
+
+          @java.lang.Override
+          public Builder newBuilderForType() { return newBuilder(); }
+          public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+          }
+          public static Builder newBuilder(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+          }
+          @java.lang.Override
+          public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                ? new Builder() : new Builder().mergeFrom(this);
+          }
+
+          @java.lang.Override
+          protected Builder newBuilderForType(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+          }
+          /**
+           * Protobuf type {@code yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme}
+           */
+          public static final class Builder extends
+              com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+              // @@protoc_insertion_point(builder_implements:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme)
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorSchemeOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+                getDescriptor() {
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+                internalGetFieldAccessorTable() {
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_fieldAccessorTable
+                  .ensureFieldAccessorsInitialized(
+                      yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.class, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Builder.class);
+            }
+
+            // Construct using yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.newBuilder()
+            private Builder() {
+              maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              super(parent);
+              maybeForceBuilderInitialization();
+            }
+            private void maybeForceBuilderInitialization() {
+              if (com.google.protobuf.GeneratedMessageV3
+                      .alwaysUseFieldBuilders) {
+              }
+            }
+            @java.lang.Override
+            public Builder clear() {
+              super.clear();
+              aggregation_ = 0;
+
+              return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+                getDescriptorForType() {
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor;
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme getDefaultInstanceForType() {
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme build() {
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme result = buildPartial();
+              if (!result.isInitialized()) {
+                throw newUninitializedMessageException(result);
+              }
+              return result;
+            }
+
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme buildPartial() {
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme result = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme(this);
+              result.aggregation_ = aggregation_;
+              onBuilt();
+              return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+              return super.clone();
+            }
+            @java.lang.Override
+            public Builder setField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.setField(field, value);
+            }
+            @java.lang.Override
+            public Builder clearField(
+                com.google.protobuf.Descriptors.FieldDescriptor field) {
+              return super.clearField(field);
+            }
+            @java.lang.Override
+            public Builder clearOneof(
+                com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              return super.clearOneof(oneof);
+            }
+            @java.lang.Override
+            public Builder setRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                int index, java.lang.Object value) {
+              return super.setRepeatedField(field, index, value);
+            }
+            @java.lang.Override
+            public Builder addRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.addRepeatedField(field, value);
+            }
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+              if (other instanceof yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) {
+                return mergeFrom((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme)other);
+              } else {
+                super.mergeFrom(other);
+                return this;
+              }
+            }
+
+            public Builder mergeFrom(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme other) {
+              if (other == yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance()) return this;
+              if (other.aggregation_ != 0) {
+                setAggregationValue(other.getAggregationValue());
+              }
+              this.mergeUnknownFields(other.unknownFields);
+              onChanged();
+              return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+              return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme parsedMessage = null;
+              try {
+                parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                parsedMessage = (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) e.getUnfinishedMessage();
+                throw e.unwrapIOException();
+              } finally {
+                if (parsedMessage != null) {
+                  mergeFrom(parsedMessage);
+                }
+              }
+              return this;
+            }
+
+            private int aggregation_ = 0;
+            /**
+             * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
+             * @return The enum numeric value on the wire for aggregation.
+             */
+            @java.lang.Override public int getAggregationValue() {
+              return aggregation_;
+            }
+            /**
+             * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
+             * @param value The enum numeric value on the wire for aggregation to set.
+             * @return This builder for chaining.
+             */
+            public Builder setAggregationValue(int value) {
+              
+              aggregation_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
+             * @return The aggregation.
+             */
+            @java.lang.Override
+            public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation getAggregation() {
+              @SuppressWarnings("deprecation")
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation result = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation.valueOf(aggregation_);
+              return result == null ? yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation.UNRECOGNIZED : result;
+            }
+            /**
+             * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
+             * @param value The aggregation to set.
+             * @return This builder for chaining.
+             */
+            public Builder setAggregation(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation value) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              
+              aggregation_ = value.getNumber();
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Aggregation aggregation = 1;</code>
+             * @return This builder for chaining.
+             */
+            public Builder clearAggregation() {
+              
+              aggregation_ = 0;
+              onChanged();
+              return this;
+            }
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                final com.google.protobuf.UnknownFieldSet unknownFields) {
+              return super.setUnknownFields(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                final com.google.protobuf.UnknownFieldSet unknownFields) {
+              return super.mergeUnknownFields(unknownFields);
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme)
+          }
+
+          // @@protoc_insertion_point(class_scope:yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme)
+          private static final yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme DEFAULT_INSTANCE;
+          static {
+            DEFAULT_INSTANCE = new yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme();
+          }
+
+          public static yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+          }
+
+          private static final com.google.protobuf.Parser<ThresholdsColorScheme>
+              PARSER = new com.google.protobuf.AbstractParser<ThresholdsColorScheme>() {
+            @java.lang.Override
+            public ThresholdsColorScheme parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new ThresholdsColorScheme(input, extensionRegistry);
+            }
+          };
+
+          public static com.google.protobuf.Parser<ThresholdsColorScheme> parser() {
+            return PARSER;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Parser<ThresholdsColorScheme> getParserForType() {
+            return PARSER;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+          }
+
+        }
+
         private int schemeCase_ = 0;
         private java.lang.Object scheme_;
         public enum SchemeCase
@@ -10649,6 +11399,7 @@ public final class MultiSourceChartWidgetOuterClass {
           STANDARD(2),
           GRADIENT(3),
           HASH(4),
+          THRESHOLDS(5),
           SCHEME_NOT_SET(0);
           private final int value;
           private SchemeCase(int value) {
@@ -10670,6 +11421,7 @@ public final class MultiSourceChartWidgetOuterClass {
               case 2: return STANDARD;
               case 3: return GRADIENT;
               case 4: return HASH;
+              case 5: return THRESHOLDS;
               case 0: return SCHEME_NOT_SET;
               default: return null;
             }
@@ -10857,6 +11609,49 @@ public final class MultiSourceChartWidgetOuterClass {
           return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme.getDefaultInstance();
         }
 
+        public static final int THRESHOLDS_FIELD_NUMBER = 5;
+        /**
+         * <pre>
+         * Threshold settings color scheme.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+         * @return Whether the thresholds field is set.
+         */
+        @java.lang.Override
+        public boolean hasThresholds() {
+          return schemeCase_ == 5;
+        }
+        /**
+         * <pre>
+         * Threshold settings color scheme.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+         * @return The thresholds.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme getThresholds() {
+          if (schemeCase_ == 5) {
+             return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_;
+          }
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance();
+        }
+        /**
+         * <pre>
+         * Threshold settings color scheme.
+         * </pre>
+         *
+         * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorSchemeOrBuilder getThresholdsOrBuilder() {
+          if (schemeCase_ == 5) {
+             return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_;
+          }
+          return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance();
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -10883,6 +11678,9 @@ public final class MultiSourceChartWidgetOuterClass {
           if (schemeCase_ == 4) {
             output.writeMessage(4, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_);
           }
+          if (schemeCase_ == 5) {
+            output.writeMessage(5, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -10907,6 +11705,10 @@ public final class MultiSourceChartWidgetOuterClass {
           if (schemeCase_ == 4) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(4, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.HashColorScheme) scheme_);
+          }
+          if (schemeCase_ == 5) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(5, (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -10941,6 +11743,10 @@ public final class MultiSourceChartWidgetOuterClass {
               if (!getHash()
                   .equals(other.getHash())) return false;
               break;
+            case 5:
+              if (!getThresholds()
+                  .equals(other.getThresholds())) return false;
+              break;
             case 0:
             default:
           }
@@ -10971,6 +11777,10 @@ public final class MultiSourceChartWidgetOuterClass {
             case 4:
               hash = (37 * hash) + HASH_FIELD_NUMBER;
               hash = (53 * hash) + getHash().hashCode();
+              break;
+            case 5:
+              hash = (37 * hash) + THRESHOLDS_FIELD_NUMBER;
+              hash = (53 * hash) + getThresholds().hashCode();
               break;
             case 0:
             default:
@@ -11164,6 +11974,13 @@ public final class MultiSourceChartWidgetOuterClass {
                 result.scheme_ = hashBuilder_.build();
               }
             }
+            if (schemeCase_ == 5) {
+              if (thresholdsBuilder_ == null) {
+                result.scheme_ = scheme_;
+              } else {
+                result.scheme_ = thresholdsBuilder_.build();
+              }
+            }
             result.schemeCase_ = schemeCase_;
             onBuilt();
             return result;
@@ -11228,6 +12045,10 @@ public final class MultiSourceChartWidgetOuterClass {
               }
               case HASH: {
                 mergeHash(other.getHash());
+                break;
+              }
+              case THRESHOLDS: {
+                mergeThresholds(other.getThresholds());
                 break;
               }
               case SCHEME_NOT_SET: {
@@ -11984,6 +12805,183 @@ public final class MultiSourceChartWidgetOuterClass {
             schemeCase_ = 4;
             onChanged();;
             return hashBuilder_;
+          }
+
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorSchemeOrBuilder> thresholdsBuilder_;
+          /**
+           * <pre>
+           * Threshold settings color scheme.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+           * @return Whether the thresholds field is set.
+           */
+          @java.lang.Override
+          public boolean hasThresholds() {
+            return schemeCase_ == 5;
+          }
+          /**
+           * <pre>
+           * Threshold settings color scheme.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+           * @return The thresholds.
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme getThresholds() {
+            if (thresholdsBuilder_ == null) {
+              if (schemeCase_ == 5) {
+                return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_;
+              }
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance();
+            } else {
+              if (schemeCase_ == 5) {
+                return thresholdsBuilder_.getMessage();
+              }
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance();
+            }
+          }
+          /**
+           * <pre>
+           * Threshold settings color scheme.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+           */
+          public Builder setThresholds(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme value) {
+            if (thresholdsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              scheme_ = value;
+              onChanged();
+            } else {
+              thresholdsBuilder_.setMessage(value);
+            }
+            schemeCase_ = 5;
+            return this;
+          }
+          /**
+           * <pre>
+           * Threshold settings color scheme.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+           */
+          public Builder setThresholds(
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Builder builderForValue) {
+            if (thresholdsBuilder_ == null) {
+              scheme_ = builderForValue.build();
+              onChanged();
+            } else {
+              thresholdsBuilder_.setMessage(builderForValue.build());
+            }
+            schemeCase_ = 5;
+            return this;
+          }
+          /**
+           * <pre>
+           * Threshold settings color scheme.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+           */
+          public Builder mergeThresholds(yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme value) {
+            if (thresholdsBuilder_ == null) {
+              if (schemeCase_ == 5 &&
+                  scheme_ != yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance()) {
+                scheme_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.newBuilder((yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_)
+                    .mergeFrom(value).buildPartial();
+              } else {
+                scheme_ = value;
+              }
+              onChanged();
+            } else {
+              if (schemeCase_ == 5) {
+                thresholdsBuilder_.mergeFrom(value);
+              }
+              thresholdsBuilder_.setMessage(value);
+            }
+            schemeCase_ = 5;
+            return this;
+          }
+          /**
+           * <pre>
+           * Threshold settings color scheme.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+           */
+          public Builder clearThresholds() {
+            if (thresholdsBuilder_ == null) {
+              if (schemeCase_ == 5) {
+                schemeCase_ = 0;
+                scheme_ = null;
+                onChanged();
+              }
+            } else {
+              if (schemeCase_ == 5) {
+                schemeCase_ = 0;
+                scheme_ = null;
+              }
+              thresholdsBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <pre>
+           * Threshold settings color scheme.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+           */
+          public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Builder getThresholdsBuilder() {
+            return getThresholdsFieldBuilder().getBuilder();
+          }
+          /**
+           * <pre>
+           * Threshold settings color scheme.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+           */
+          @java.lang.Override
+          public yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorSchemeOrBuilder getThresholdsOrBuilder() {
+            if ((schemeCase_ == 5) && (thresholdsBuilder_ != null)) {
+              return thresholdsBuilder_.getMessageOrBuilder();
+            } else {
+              if (schemeCase_ == 5) {
+                return (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_;
+              }
+              return yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance();
+            }
+          }
+          /**
+           * <pre>
+           * Threshold settings color scheme.
+           * </pre>
+           *
+           * <code>.yandex.cloud.monitoring.v3.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme thresholds = 5;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorSchemeOrBuilder> 
+              getThresholdsFieldBuilder() {
+            if (thresholdsBuilder_ == null) {
+              if (!(schemeCase_ == 5)) {
+                scheme_ = yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.getDefaultInstance();
+              }
+              thresholdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme.Builder, yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorSchemeOrBuilder>(
+                      (yandex.cloud.api.monitoring.v3.MultiSourceChartWidgetOuterClass.MultiSourceChartWidget.VisualizationSettings.ColorSchemeSettings.ThresholdsColorScheme) scheme_,
+                      getParentForChildren(),
+                      isClean());
+              scheme_ = null;
+            }
+            schemeCase_ = 5;
+            onChanged();;
+            return thresholdsBuilder_;
           }
           @java.lang.Override
           public final Builder setUnknownFields(
@@ -22344,6 +23342,44 @@ public final class MultiSourceChartWidgetOuterClass {
       return getRepeat();
     }
 
+    public static final int THRESHOLDS_FIELD_NUMBER = 12;
+    private yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds thresholds_;
+    /**
+     * <pre>
+     * Threshold settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+     * @return Whether the thresholds field is set.
+     */
+    @java.lang.Override
+    public boolean hasThresholds() {
+      return thresholds_ != null;
+    }
+    /**
+     * <pre>
+     * Threshold settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+     * @return The thresholds.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds getThresholds() {
+      return thresholds_ == null ? yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.getDefaultInstance() : thresholds_;
+    }
+    /**
+     * <pre>
+     * Threshold settings
+     * </pre>
+     *
+     * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.ThresholdsOrBuilder getThresholdsOrBuilder() {
+      return getThresholds();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -22390,6 +23426,9 @@ public final class MultiSourceChartWidgetOuterClass {
       }
       if (repeat_ != null) {
         output.writeMessage(11, getRepeat());
+      }
+      if (thresholds_ != null) {
+        output.writeMessage(12, getThresholds());
       }
       unknownFields.writeTo(output);
     }
@@ -22441,6 +23480,10 @@ public final class MultiSourceChartWidgetOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getRepeat());
       }
+      if (thresholds_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getThresholds());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -22485,6 +23528,11 @@ public final class MultiSourceChartWidgetOuterClass {
       if (hasRepeat()) {
         if (!getRepeat()
             .equals(other.getRepeat())) return false;
+      }
+      if (hasThresholds() != other.hasThresholds()) return false;
+      if (hasThresholds()) {
+        if (!getThresholds()
+            .equals(other.getThresholds())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -22531,6 +23579,10 @@ public final class MultiSourceChartWidgetOuterClass {
       if (hasRepeat()) {
         hash = (37 * hash) + REPEAT_FIELD_NUMBER;
         hash = (53 * hash) + getRepeat().hashCode();
+      }
+      if (hasThresholds()) {
+        hash = (37 * hash) + THRESHOLDS_FIELD_NUMBER;
+        hash = (53 * hash) + getThresholds().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -22718,6 +23770,12 @@ public final class MultiSourceChartWidgetOuterClass {
           repeat_ = null;
           repeatBuilder_ = null;
         }
+        if (thresholdsBuilder_ == null) {
+          thresholds_ = null;
+        } else {
+          thresholds_ = null;
+          thresholdsBuilder_ = null;
+        }
         return this;
       }
 
@@ -22791,6 +23849,11 @@ public final class MultiSourceChartWidgetOuterClass {
           result.repeat_ = repeat_;
         } else {
           result.repeat_ = repeatBuilder_.build();
+        }
+        if (thresholdsBuilder_ == null) {
+          result.thresholds_ = thresholds_;
+        } else {
+          result.thresholds_ = thresholdsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -22944,6 +24007,9 @@ public final class MultiSourceChartWidgetOuterClass {
         }
         if (other.hasRepeat()) {
           mergeRepeat(other.getRepeat());
+        }
+        if (other.hasThresholds()) {
+          mergeThresholds(other.getThresholds());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -24780,6 +25846,161 @@ public final class MultiSourceChartWidgetOuterClass {
         }
         return repeatBuilder_;
       }
+
+      private yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds thresholds_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds, yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Builder, yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.ThresholdsOrBuilder> thresholdsBuilder_;
+      /**
+       * <pre>
+       * Threshold settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+       * @return Whether the thresholds field is set.
+       */
+      public boolean hasThresholds() {
+        return thresholdsBuilder_ != null || thresholds_ != null;
+      }
+      /**
+       * <pre>
+       * Threshold settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+       * @return The thresholds.
+       */
+      public yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds getThresholds() {
+        if (thresholdsBuilder_ == null) {
+          return thresholds_ == null ? yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.getDefaultInstance() : thresholds_;
+        } else {
+          return thresholdsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Threshold settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+       */
+      public Builder setThresholds(yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds value) {
+        if (thresholdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          thresholds_ = value;
+          onChanged();
+        } else {
+          thresholdsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+       */
+      public Builder setThresholds(
+          yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Builder builderForValue) {
+        if (thresholdsBuilder_ == null) {
+          thresholds_ = builderForValue.build();
+          onChanged();
+        } else {
+          thresholdsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+       */
+      public Builder mergeThresholds(yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds value) {
+        if (thresholdsBuilder_ == null) {
+          if (thresholds_ != null) {
+            thresholds_ =
+              yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.newBuilder(thresholds_).mergeFrom(value).buildPartial();
+          } else {
+            thresholds_ = value;
+          }
+          onChanged();
+        } else {
+          thresholdsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+       */
+      public Builder clearThresholds() {
+        if (thresholdsBuilder_ == null) {
+          thresholds_ = null;
+          onChanged();
+        } else {
+          thresholds_ = null;
+          thresholdsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Builder getThresholdsBuilder() {
+        
+        onChanged();
+        return getThresholdsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Threshold settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+       */
+      public yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.ThresholdsOrBuilder getThresholdsOrBuilder() {
+        if (thresholdsBuilder_ != null) {
+          return thresholdsBuilder_.getMessageOrBuilder();
+        } else {
+          return thresholds_ == null ?
+              yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.getDefaultInstance() : thresholds_;
+        }
+      }
+      /**
+       * <pre>
+       * Threshold settings
+       * </pre>
+       *
+       * <code>.yandex.cloud.monitoring.v3.Thresholds thresholds = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds, yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Builder, yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.ThresholdsOrBuilder> 
+          getThresholdsFieldBuilder() {
+        if (thresholdsBuilder_ == null) {
+          thresholdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds, yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Builder, yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.ThresholdsOrBuilder>(
+                  getThresholds(),
+                  getParentForChildren(),
+                  isClean());
+          thresholds_ = null;
+        }
+        return thresholdsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24899,6 +26120,11 @@ public final class MultiSourceChartWidgetOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_HeatmapSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24947,146 +26173,161 @@ public final class MultiSourceChartWidgetOuterClass {
       "oring.v3\032\036google/protobuf/wrappers.proto" +
       "\032-yandex/cloud/monitoring/v3/downsamplin" +
       "g.proto\032,yandex/cloud/monitoring/v3/unit" +
-      "_format.proto\"\332*\n\026MultiSourceChartWidget" +
-      "\022\n\n\002id\030\001 \001(\t\022J\n\007targets\030\002 \003(\01329.yandex.c" +
-      "loud.monitoring.v3.MultiSourceChartWidge" +
-      "t.Target\022S\n\014data_sources\030\003 \003(\0132=.yandex." +
+      "_format.proto\032+yandex/cloud/monitoring/v" +
+      "3/thresholds.proto\"\350.\n\026MultiSourceChartW" +
+      "idget\022\n\n\002id\030\001 \001(\t\022J\n\007targets\030\002 \003(\01329.yan" +
+      "dex.cloud.monitoring.v3.MultiSourceChart" +
+      "Widget.Target\022S\n\014data_sources\030\003 \003(\0132=.ya" +
+      "ndex.cloud.monitoring.v3.MultiSourceChar" +
+      "tWidget.DataSource\022h\n\026visualization_sett" +
+      "ings\030\004 \001(\0132H.yandex.cloud.monitoring.v3." +
+      "MultiSourceChartWidget.VisualizationSett" +
+      "ings\022\\\n\020series_overrides\030\005 \003(\0132B.yandex." +
       "cloud.monitoring.v3.MultiSourceChartWidg" +
-      "et.DataSource\022h\n\026visualization_settings\030" +
-      "\004 \001(\0132H.yandex.cloud.monitoring.v3.Multi" +
-      "SourceChartWidget.VisualizationSettings\022" +
-      "\\\n\020series_overrides\030\005 \003(\0132B.yandex.cloud" +
-      ".monitoring.v3.MultiSourceChartWidget.Se" +
-      "riesOverrides\022c\n\024name_hiding_settings\030\006 " +
-      "\001(\0132E.yandex.cloud.monitoring.v3.MultiSo" +
-      "urceChartWidget.NameHidingSettings\022\023\n\013de" +
-      "scription\030\007 \001(\t\022\r\n\005title\030\010 \001(\t\022\026\n\016displa" +
-      "y_legend\030\t \001(\010\022Q\n\006freeze\030\n \001(\0162A.yandex." +
-      "cloud.monitoring.v3.MultiSourceChartWidg" +
-      "et.FreezeDuration\022Q\n\006repeat\030\013 \001(\0132A.yand" +
-      "ex.cloud.monitoring.v3.MultiSourceChartW" +
-      "idget.RepeatSettings\032\323\003\n\006Target\022g\n\021monit" +
-      "oring_target\030\001 \001(\0132J.yandex.cloud.monito" +
-      "ring.v3.MultiSourceChartWidget.Target.Mo" +
-      "nitoringTargetH\000\022g\n\021prometheus_target\030\002 " +
-      "\001(\0132J.yandex.cloud.monitoring.v3.MultiSo" +
-      "urceChartWidget.Target.PrometheusTargetH" +
-      "\000\032j\n\020MonitoringTarget\022\026\n\016data_source_id\030" +
-      "\001 \001(\t\022\r\n\005query\030\002 \001(\t\022\021\n\ttext_mode\030\003 \001(\010\022" +
-      "\016\n\006hidden\030\004 \001(\010\022\014\n\004name\030\005 \001(\t\032\200\001\n\020Promet" +
-      "heusTarget\022\026\n\016data_source_id\030\001 \001(\t\022\024\n\014wo" +
-      "rkspace_id\030\002 \001(\t\022\r\n\005query\030\003 \001(\t\022\021\n\ttext_" +
-      "mode\030\004 \001(\010\022\016\n\006hidden\030\005 \001(\010\022\014\n\004name\030\006 \001(\t" +
-      "B\010\n\006target\032\235\003\n\nDataSource\022t\n\026monitoring_" +
-      "data_source\030\001 \001(\0132R.yandex.cloud.monitor" +
-      "ing.v3.MultiSourceChartWidget.DataSource" +
-      ".MonitoringDataSourceH\000\022t\n\026prometheus_da" +
-      "ta_source\030\002 \001(\0132R.yandex.cloud.monitorin" +
-      "g.v3.MultiSourceChartWidget.DataSource.P" +
-      "rometheusDataSourceH\000\032b\n\024MonitoringDataS" +
-      "ource\022\n\n\002id\030\001 \001(\t\022>\n\014downsampling\030\002 \001(\0132" +
-      "(.yandex.cloud.monitoring.v3.Downsamplin" +
-      "g\0320\n\024PrometheusDataSource\022\n\n\002id\030\001 \001(\t\022\014\n" +
-      "\004step\030\002 \001(\003B\r\n\013data_source\032\326\025\n\025Visualiza" +
-      "tionSettings\022h\n\004type\030\001 \001(\0162Z.yandex.clou" +
-      "d.monitoring.v3.MultiSourceChartWidget.V" +
-      "isualizationSettings.VisualizationType\022\021" +
-      "\n\tnormalize\030\002 \001(\010\022i\n\013interpolate\030\003 \001(\0162T" +
+      "et.SeriesOverrides\022c\n\024name_hiding_settin" +
+      "gs\030\006 \001(\0132E.yandex.cloud.monitoring.v3.Mu" +
+      "ltiSourceChartWidget.NameHidingSettings\022" +
+      "\023\n\013description\030\007 \001(\t\022\r\n\005title\030\010 \001(\t\022\026\n\016d" +
+      "isplay_legend\030\t \001(\010\022Q\n\006freeze\030\n \001(\0162A.ya" +
+      "ndex.cloud.monitoring.v3.MultiSourceChar" +
+      "tWidget.FreezeDuration\022Q\n\006repeat\030\013 \001(\0132A" +
       ".yandex.cloud.monitoring.v3.MultiSourceC" +
-      "hartWidget.VisualizationSettings.Interpo" +
-      "late\022o\n\013aggregation\030\004 \001(\0162Z.yandex.cloud" +
-      ".monitoring.v3.MultiSourceChartWidget.Vi" +
-      "sualizationSettings.SeriesAggregation\022{\n" +
-      "\025color_scheme_settings\030\005 \001(\0132\\.yandex.cl" +
+      "hartWidget.RepeatSettings\022:\n\nthresholds\030" +
+      "\014 \001(\0132&.yandex.cloud.monitoring.v3.Thres" +
+      "holds\032\323\003\n\006Target\022g\n\021monitoring_target\030\001 " +
+      "\001(\0132J.yandex.cloud.monitoring.v3.MultiSo" +
+      "urceChartWidget.Target.MonitoringTargetH" +
+      "\000\022g\n\021prometheus_target\030\002 \001(\0132J.yandex.cl" +
       "oud.monitoring.v3.MultiSourceChartWidget" +
-      ".VisualizationSettings.ColorSchemeSettin" +
-      "gs\022r\n\020heatmap_settings\030\006 \001(\0132X.yandex.cl" +
-      "oud.monitoring.v3.MultiSourceChartWidget" +
-      ".VisualizationSettings.HeatmapSettings\022n" +
-      "\n\016yaxis_settings\030\007 \001(\0132V.yandex.cloud.mo" +
-      "nitoring.v3.MultiSourceChartWidget.Visua" +
-      "lizationSettings.YaxisSettings\022\r\n\005title\030" +
-      "\010 \001(\t\022\023\n\013show_labels\030\t \001(\010\032\341\005\n\023ColorSche" +
-      "meSettings\022\206\001\n\tautomatic\030\001 \001(\0132q.yandex." +
-      "cloud.monitoring.v3.MultiSourceChartWidg" +
-      "et.VisualizationSettings.ColorSchemeSett" +
-      "ings.AutomaticColorSchemeH\000\022\204\001\n\010standard" +
-      "\030\002 \001(\0132p.yandex.cloud.monitoring.v3.Mult" +
-      "iSourceChartWidget.VisualizationSettings" +
-      ".ColorSchemeSettings.StandardColorScheme" +
-      "H\000\022\204\001\n\010gradient\030\003 \001(\0132p.yandex.cloud.mon" +
-      "itoring.v3.MultiSourceChartWidget.Visual" +
-      "izationSettings.ColorSchemeSettings.Grad" +
-      "ientColorSchemeH\000\022|\n\004hash\030\004 \001(\0132l.yandex" +
+      ".Target.PrometheusTargetH\000\032j\n\020Monitoring" +
+      "Target\022\026\n\016data_source_id\030\001 \001(\t\022\r\n\005query\030" +
+      "\002 \001(\t\022\021\n\ttext_mode\030\003 \001(\010\022\016\n\006hidden\030\004 \001(\010" +
+      "\022\014\n\004name\030\005 \001(\t\032\200\001\n\020PrometheusTarget\022\026\n\016d" +
+      "ata_source_id\030\001 \001(\t\022\024\n\014workspace_id\030\002 \001(" +
+      "\t\022\r\n\005query\030\003 \001(\t\022\021\n\ttext_mode\030\004 \001(\010\022\016\n\006h" +
+      "idden\030\005 \001(\010\022\014\n\004name\030\006 \001(\tB\010\n\006target\032\235\003\n\n" +
+      "DataSource\022t\n\026monitoring_data_source\030\001 \001" +
+      "(\0132R.yandex.cloud.monitoring.v3.MultiSou" +
+      "rceChartWidget.DataSource.MonitoringData" +
+      "SourceH\000\022t\n\026prometheus_data_source\030\002 \001(\013" +
+      "2R.yandex.cloud.monitoring.v3.MultiSourc" +
+      "eChartWidget.DataSource.PrometheusDataSo" +
+      "urceH\000\032b\n\024MonitoringDataSource\022\n\n\002id\030\001 \001" +
+      "(\t\022>\n\014downsampling\030\002 \001(\0132(.yandex.cloud." +
+      "monitoring.v3.Downsampling\0320\n\024Prometheus" +
+      "DataSource\022\n\n\002id\030\001 \001(\t\022\014\n\004step\030\002 \001(\003B\r\n\013" +
+      "data_source\032\250\031\n\025VisualizationSettings\022h\n" +
+      "\004type\030\001 \001(\0162Z.yandex.cloud.monitoring.v3" +
+      ".MultiSourceChartWidget.VisualizationSet" +
+      "tings.VisualizationType\022\021\n\tnormalize\030\002 \001" +
+      "(\010\022i\n\013interpolate\030\003 \001(\0162T.yandex.cloud.m" +
+      "onitoring.v3.MultiSourceChartWidget.Visu" +
+      "alizationSettings.Interpolate\022o\n\013aggrega" +
+      "tion\030\004 \001(\0162Z.yandex.cloud.monitoring.v3." +
+      "MultiSourceChartWidget.VisualizationSett" +
+      "ings.SeriesAggregation\022{\n\025color_scheme_s" +
+      "ettings\030\005 \001(\0132\\.yandex.cloud.monitoring." +
+      "v3.MultiSourceChartWidget.VisualizationS" +
+      "ettings.ColorSchemeSettings\022r\n\020heatmap_s" +
+      "ettings\030\006 \001(\0132X.yandex.cloud.monitoring." +
+      "v3.MultiSourceChartWidget.VisualizationS" +
+      "ettings.HeatmapSettings\022n\n\016yaxis_setting" +
+      "s\030\007 \001(\0132V.yandex.cloud.monitoring.v3.Mul" +
+      "tiSourceChartWidget.VisualizationSetting" +
+      "s.YaxisSettings\022\r\n\005title\030\010 \001(\t\022\023\n\013show_l" +
+      "abels\030\t \001(\010\032\263\t\n\023ColorSchemeSettings\022\206\001\n\t" +
+      "automatic\030\001 \001(\0132q.yandex.cloud.monitorin" +
+      "g.v3.MultiSourceChartWidget.Visualizatio" +
+      "nSettings.ColorSchemeSettings.AutomaticC" +
+      "olorSchemeH\000\022\204\001\n\010standard\030\002 \001(\0132p.yandex" +
       ".cloud.monitoring.v3.MultiSourceChartWid" +
       "get.VisualizationSettings.ColorSchemeSet" +
-      "tings.HashColorSchemeH\000\032\026\n\024AutomaticColo" +
-      "rScheme\032\025\n\023StandardColorScheme\032i\n\023Gradie" +
-      "ntColorScheme\022\023\n\013green_value\030\002 \001(\t\022\024\n\014ye" +
-      "llow_value\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t\022\024\n\014v" +
-      "iolet_value\030\005 \001(\t\032\021\n\017HashColorSchemeB\010\n\006" +
-      "scheme\032e\n\017HeatmapSettings\022\023\n\013green_value" +
-      "\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021\n\tred_valu" +
-      "e\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t\032\377\001\n\005Yaxis\022" +
-      "`\n\004type\030\001 \001(\0162R.yandex.cloud.monitoring." +
-      "v3.MultiSourceChartWidget.VisualizationS" +
-      "ettings.YaxisType\022\r\n\005title\030\002 \001(\t\022\013\n\003min\030" +
-      "\003 \001(\t\022\013\n\003max\030\004 \001(\t\022;\n\013unit_format\030\005 \001(\0162" +
-      "&.yandex.cloud.monitoring.v3.UnitFormat\022" +
-      ".\n\tprecision\030\006 \001(\0132\033.google.protobuf.Int" +
-      "64Value\032\314\001\n\rYaxisSettings\022\\\n\004left\030\001 \001(\0132" +
-      "N.yandex.cloud.monitoring.v3.MultiSource" +
-      "ChartWidget.VisualizationSettings.Yaxis\022" +
-      "]\n\005right\030\002 \001(\0132N.yandex.cloud.monitoring" +
-      ".v3.MultiSourceChartWidget.Visualization" +
-      "Settings.Yaxis\"\256\002\n\021VisualizationType\022\"\n\036" +
-      "VISUALIZATION_TYPE_UNSPECIFIED\020\000\022\033\n\027VISU" +
-      "ALIZATION_TYPE_LINE\020\001\022\034\n\030VISUALIZATION_T" +
-      "YPE_STACK\020\002\022\035\n\031VISUALIZATION_TYPE_COLUMN" +
-      "\020\003\022\035\n\031VISUALIZATION_TYPE_POINTS\020\004\022\032\n\026VIS" +
-      "UALIZATION_TYPE_PIE\020\005\022\033\n\027VISUALIZATION_T" +
-      "YPE_BARS\020\006\022#\n\037VISUALIZATION_TYPE_DISTRIB" +
-      "UTION\020\007\022\036\n\032VISUALIZATION_TYPE_HEATMAP\020\010\"" +
-      "o\n\013Interpolate\022\033\n\027INTERPOLATE_UNSPECIFIE" +
-      "D\020\000\022\026\n\022INTERPOLATE_LINEAR\020\001\022\024\n\020INTERPOLA" +
-      "TE_LEFT\020\002\022\025\n\021INTERPOLATE_RIGHT\020\003\"Z\n\tYaxi" +
-      "sType\022\032\n\026YAXIS_TYPE_UNSPECIFIED\020\000\022\025\n\021YAX" +
-      "IS_TYPE_LINEAR\020\001\022\032\n\026YAXIS_TYPE_LOGARITHM" +
-      "IC\020\002\"\304\001\n\021SeriesAggregation\022\"\n\036SERIES_AGG" +
-      "REGATION_UNSPECIFIED\020\000\022\032\n\026SERIES_AGGREGA" +
-      "TION_AVG\020\001\022\032\n\026SERIES_AGGREGATION_MIN\020\002\022\032" +
-      "\n\026SERIES_AGGREGATION_MAX\020\003\022\033\n\027SERIES_AGG" +
-      "REGATION_LAST\020\004\022\032\n\026SERIES_AGGREGATION_SU" +
-      "M\020\005\032\241\006\n\017SeriesOverrides\022\016\n\004name\030\001 \001(\tH\000\022" +
-      "\026\n\014target_index\030\002 \001(\tH\000\022k\n\010settings\030\003 \001(" +
-      "\0132Y.yandex.cloud.monitoring.v3.MultiSour" +
-      "ceChartWidget.SeriesOverrides.SeriesOver" +
-      "rideSettings\032\260\002\n\026SeriesOverrideSettings\022" +
-      "\014\n\004name\030\001 \001(\t\022\r\n\005color\030\002 \001(\t\022h\n\004type\030\003 \001" +
-      "(\0162Z.yandex.cloud.monitoring.v3.MultiSou" +
-      "rceChartWidget.SeriesOverrides.SeriesVis" +
-      "ualizationType\022\022\n\nstack_name\030\004 \001(\t\022\021\n\tgr" +
-      "ow_down\030\005 \001(\010\022h\n\016yaxis_position\030\006 \001(\0162P." +
-      "yandex.cloud.monitoring.v3.MultiSourceCh" +
-      "artWidget.SeriesOverrides.YaxisPosition\"" +
-      "b\n\rYaxisPosition\022\036\n\032YAXIS_POSITION_UNSPE" +
-      "CIFIED\020\000\022\027\n\023YAXIS_POSITION_LEFT\020\001\022\030\n\024YAX" +
-      "IS_POSITION_RIGHT\020\002\"\331\001\n\027SeriesVisualizat" +
-      "ionType\022)\n%SERIES_VISUALIZATION_TYPE_UNS" +
-      "PECIFIED\020\000\022\"\n\036SERIES_VISUALIZATION_TYPE_" +
-      "LINE\020\001\022#\n\037SERIES_VISUALIZATION_TYPE_STAC" +
-      "K\020\002\022$\n SERIES_VISUALIZATION_TYPE_COLUMN\020" +
-      "\003\022$\n SERIES_VISUALIZATION_TYPE_POINTS\020\004B" +
-      "\006\n\004type\0325\n\022NameHidingSettings\022\020\n\010positiv" +
-      "e\030\001 \001(\010\022\r\n\005names\030\002 \003(\t\032>\n\016RepeatSettings" +
-      "\022\021\n\trepeat_by\030\001 \003(\t\022\031\n\021max_charts_in_row" +
-      "\030\002 \001(\003\"\231\001\n\016FreezeDuration\022\037\n\033FREEZE_DURA" +
-      "TION_UNSPECIFIED\020\000\022\030\n\024FREEZE_DURATION_HO" +
-      "UR\020\001\022\027\n\023FREEZE_DURATION_DAY\020\002\022\030\n\024FREEZE_" +
-      "DURATION_WEEK\020\003\022\031\n\025FREEZE_DURATION_MONTH" +
-      "\020\004Bk\n\036yandex.cloud.api.monitoring.v3ZIgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/monitoring/v3;monitoringb\006proto3"
+      "tings.StandardColorSchemeH\000\022\204\001\n\010gradient" +
+      "\030\003 \001(\0132p.yandex.cloud.monitoring.v3.Mult" +
+      "iSourceChartWidget.VisualizationSettings" +
+      ".ColorSchemeSettings.GradientColorScheme" +
+      "H\000\022|\n\004hash\030\004 \001(\0132l.yandex.cloud.monitori" +
+      "ng.v3.MultiSourceChartWidget.Visualizati" +
+      "onSettings.ColorSchemeSettings.HashColor" +
+      "SchemeH\000\022\210\001\n\nthresholds\030\005 \001(\0132r.yandex.c" +
+      "loud.monitoring.v3.MultiSourceChartWidge" +
+      "t.VisualizationSettings.ColorSchemeSetti" +
+      "ngs.ThresholdsColorSchemeH\000\032\026\n\024Automatic" +
+      "ColorScheme\032\025\n\023StandardColorScheme\032i\n\023Gr" +
+      "adientColorScheme\022\023\n\013green_value\030\002 \001(\t\022\024" +
+      "\n\014yellow_value\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t\022" +
+      "\024\n\014violet_value\030\005 \001(\t\032\021\n\017HashColorScheme" +
+      "\032\304\002\n\025ThresholdsColorScheme\022\223\001\n\013aggregati" +
+      "on\030\001 \001(\0162~.yandex.cloud.monitoring.v3.Mu" +
+      "ltiSourceChartWidget.VisualizationSettin" +
+      "gs.ColorSchemeSettings.ThresholdsColorSc" +
+      "heme.Aggregation\"\224\001\n\013Aggregation\022\033\n\027AGGR" +
+      "EGATION_UNSPECIFIED\020\000\022\024\n\020AGGREGATION_LAS" +
+      "T\020\001\022\023\n\017AGGREGATION_MIN\020\002\022\023\n\017AGGREGATION_" +
+      "MAX\020\003\022\023\n\017AGGREGATION_AVG\020\004\022\023\n\017AGGREGATIO" +
+      "N_SUM\020\005B\010\n\006scheme\032e\n\017HeatmapSettings\022\023\n\013" +
+      "green_value\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022" +
+      "\021\n\tred_value\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t" +
+      "\032\377\001\n\005Yaxis\022`\n\004type\030\001 \001(\0162R.yandex.cloud." +
+      "monitoring.v3.MultiSourceChartWidget.Vis" +
+      "ualizationSettings.YaxisType\022\r\n\005title\030\002 " +
+      "\001(\t\022\013\n\003min\030\003 \001(\t\022\013\n\003max\030\004 \001(\t\022;\n\013unit_fo" +
+      "rmat\030\005 \001(\0162&.yandex.cloud.monitoring.v3." +
+      "UnitFormat\022.\n\tprecision\030\006 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\032\314\001\n\rYaxisSettings\022\\\n\004" +
+      "left\030\001 \001(\0132N.yandex.cloud.monitoring.v3." +
+      "MultiSourceChartWidget.VisualizationSett" +
+      "ings.Yaxis\022]\n\005right\030\002 \001(\0132N.yandex.cloud" +
+      ".monitoring.v3.MultiSourceChartWidget.Vi" +
+      "sualizationSettings.Yaxis\"\256\002\n\021Visualizat" +
+      "ionType\022\"\n\036VISUALIZATION_TYPE_UNSPECIFIE" +
+      "D\020\000\022\033\n\027VISUALIZATION_TYPE_LINE\020\001\022\034\n\030VISU" +
+      "ALIZATION_TYPE_STACK\020\002\022\035\n\031VISUALIZATION_" +
+      "TYPE_COLUMN\020\003\022\035\n\031VISUALIZATION_TYPE_POIN" +
+      "TS\020\004\022\032\n\026VISUALIZATION_TYPE_PIE\020\005\022\033\n\027VISU" +
+      "ALIZATION_TYPE_BARS\020\006\022#\n\037VISUALIZATION_T" +
+      "YPE_DISTRIBUTION\020\007\022\036\n\032VISUALIZATION_TYPE" +
+      "_HEATMAP\020\010\"o\n\013Interpolate\022\033\n\027INTERPOLATE" +
+      "_UNSPECIFIED\020\000\022\026\n\022INTERPOLATE_LINEAR\020\001\022\024" +
+      "\n\020INTERPOLATE_LEFT\020\002\022\025\n\021INTERPOLATE_RIGH" +
+      "T\020\003\"Z\n\tYaxisType\022\032\n\026YAXIS_TYPE_UNSPECIFI" +
+      "ED\020\000\022\025\n\021YAXIS_TYPE_LINEAR\020\001\022\032\n\026YAXIS_TYP" +
+      "E_LOGARITHMIC\020\002\"\304\001\n\021SeriesAggregation\022\"\n" +
+      "\036SERIES_AGGREGATION_UNSPECIFIED\020\000\022\032\n\026SER" +
+      "IES_AGGREGATION_AVG\020\001\022\032\n\026SERIES_AGGREGAT" +
+      "ION_MIN\020\002\022\032\n\026SERIES_AGGREGATION_MAX\020\003\022\033\n" +
+      "\027SERIES_AGGREGATION_LAST\020\004\022\032\n\026SERIES_AGG" +
+      "REGATION_SUM\020\005\032\241\006\n\017SeriesOverrides\022\016\n\004na" +
+      "me\030\001 \001(\tH\000\022\026\n\014target_index\030\002 \001(\tH\000\022k\n\010se" +
+      "ttings\030\003 \001(\0132Y.yandex.cloud.monitoring.v" +
+      "3.MultiSourceChartWidget.SeriesOverrides" +
+      ".SeriesOverrideSettings\032\260\002\n\026SeriesOverri" +
+      "deSettings\022\014\n\004name\030\001 \001(\t\022\r\n\005color\030\002 \001(\t\022" +
+      "h\n\004type\030\003 \001(\0162Z.yandex.cloud.monitoring." +
+      "v3.MultiSourceChartWidget.SeriesOverride" +
+      "s.SeriesVisualizationType\022\022\n\nstack_name\030" +
+      "\004 \001(\t\022\021\n\tgrow_down\030\005 \001(\010\022h\n\016yaxis_positi" +
+      "on\030\006 \001(\0162P.yandex.cloud.monitoring.v3.Mu" +
+      "ltiSourceChartWidget.SeriesOverrides.Yax" +
+      "isPosition\"b\n\rYaxisPosition\022\036\n\032YAXIS_POS" +
+      "ITION_UNSPECIFIED\020\000\022\027\n\023YAXIS_POSITION_LE" +
+      "FT\020\001\022\030\n\024YAXIS_POSITION_RIGHT\020\002\"\331\001\n\027Serie" +
+      "sVisualizationType\022)\n%SERIES_VISUALIZATI" +
+      "ON_TYPE_UNSPECIFIED\020\000\022\"\n\036SERIES_VISUALIZ" +
+      "ATION_TYPE_LINE\020\001\022#\n\037SERIES_VISUALIZATIO" +
+      "N_TYPE_STACK\020\002\022$\n SERIES_VISUALIZATION_T" +
+      "YPE_COLUMN\020\003\022$\n SERIES_VISUALIZATION_TYP" +
+      "E_POINTS\020\004B\006\n\004type\0325\n\022NameHidingSettings" +
+      "\022\020\n\010positive\030\001 \001(\010\022\r\n\005names\030\002 \003(\t\032>\n\016Rep" +
+      "eatSettings\022\021\n\trepeat_by\030\001 \003(\t\022\031\n\021max_ch" +
+      "arts_in_row\030\002 \001(\003\"\231\001\n\016FreezeDuration\022\037\n\033" +
+      "FREEZE_DURATION_UNSPECIFIED\020\000\022\030\n\024FREEZE_" +
+      "DURATION_HOUR\020\001\022\027\n\023FREEZE_DURATION_DAY\020\002" +
+      "\022\030\n\024FREEZE_DURATION_WEEK\020\003\022\031\n\025FREEZE_DUR" +
+      "ATION_MONTH\020\004Bk\n\036yandex.cloud.api.monito" +
+      "ring.v3ZIgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/monitoring/v3;monitori" +
+      "ngb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25094,13 +26335,14 @@ public final class MultiSourceChartWidgetOuterClass {
           com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.monitoring.v3.DownsamplingOuterClass.getDescriptor(),
           yandex.cloud.api.monitoring.v3.UnitFormatOuterClass.getDescriptor(),
+          yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor,
-        new java.lang.String[] { "Id", "Targets", "DataSources", "VisualizationSettings", "SeriesOverrides", "NameHidingSettings", "Description", "Title", "DisplayLegend", "Freeze", "Repeat", });
+        new java.lang.String[] { "Id", "Targets", "DataSources", "VisualizationSettings", "SeriesOverrides", "NameHidingSettings", "Description", "Title", "DisplayLegend", "Freeze", "Repeat", "Thresholds", });
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_Target_descriptor =
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_Target_fieldAccessorTable = new
@@ -25148,7 +26390,7 @@ public final class MultiSourceChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor,
-        new java.lang.String[] { "Automatic", "Standard", "Gradient", "Hash", "Scheme", });
+        new java.lang.String[] { "Automatic", "Standard", "Gradient", "Hash", "Thresholds", "Scheme", });
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_AutomaticColorScheme_descriptor =
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_AutomaticColorScheme_fieldAccessorTable = new
@@ -25173,6 +26415,12 @@ public final class MultiSourceChartWidgetOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_HashColorScheme_descriptor,
         new java.lang.String[] { });
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor =
+      internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_ColorSchemeSettings_ThresholdsColorScheme_descriptor,
+        new java.lang.String[] { "Aggregation", });
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_HeatmapSettings_descriptor =
       internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_monitoring_v3_MultiSourceChartWidget_VisualizationSettings_HeatmapSettings_fieldAccessorTable = new
@@ -25218,6 +26466,7 @@ public final class MultiSourceChartWidgetOuterClass {
     com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.monitoring.v3.DownsamplingOuterClass.getDescriptor();
     yandex.cloud.api.monitoring.v3.UnitFormatOuterClass.getDescriptor();
+    yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
