@@ -19,11 +19,19 @@ public final class ProductInstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the product instance to return.
+     * </pre>
+     *
      * <code>string product_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The productInstanceId.
      */
     java.lang.String getProductInstanceId();
     /**
+     * <pre>
+     * ID of the product instance to return.
+     * </pre>
+     *
      * <code>string product_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for productInstanceId.
      */
@@ -117,6 +125,10 @@ public final class ProductInstanceServiceOuterClass {
     public static final int PRODUCT_INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object productInstanceId_;
     /**
+     * <pre>
+     * ID of the product instance to return.
+     * </pre>
+     *
      * <code>string product_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The productInstanceId.
      */
@@ -134,6 +146,10 @@ public final class ProductInstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the product instance to return.
+     * </pre>
+     *
      * <code>string product_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for productInstanceId.
      */
@@ -456,6 +472,10 @@ public final class ProductInstanceServiceOuterClass {
 
       private java.lang.Object productInstanceId_ = "";
       /**
+       * <pre>
+       * ID of the product instance to return.
+       * </pre>
+       *
        * <code>string product_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The productInstanceId.
        */
@@ -472,6 +492,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the product instance to return.
+       * </pre>
+       *
        * <code>string product_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for productInstanceId.
        */
@@ -489,6 +513,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the product instance to return.
+       * </pre>
+       *
        * <code>string product_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The productInstanceId to set.
        * @return This builder for chaining.
@@ -504,6 +532,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the product instance to return.
+       * </pre>
+       *
        * <code>string product_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -514,6 +546,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the product instance to return.
+       * </pre>
+       *
        * <code>string product_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for productInstanceId to set.
        * @return This builder for chaining.
@@ -587,11 +623,19 @@ public final class ProductInstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Signed JWT token which contains information about product instance and subscription.
+     * </pre>
+     *
      * <code>string token = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The token.
      */
     java.lang.String getToken();
     /**
+     * <pre>
+     * Signed JWT token which contains information about product instance and subscription.
+     * </pre>
+     *
      * <code>string token = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for token.
      */
@@ -599,11 +643,19 @@ public final class ProductInstanceServiceOuterClass {
         getTokenBytes();
 
     /**
+     * <pre>
+     * ID of the resource to which the product instance will be claimed.
+     * </pre>
+     *
      * <code>string resource_id = 2;</code>
      * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
+     * <pre>
+     * ID of the resource to which the product instance will be claimed.
+     * </pre>
+     *
      * <code>string resource_id = 2;</code>
      * @return The bytes for resourceId.
      */
@@ -611,16 +663,28 @@ public final class ProductInstanceServiceOuterClass {
         getResourceIdBytes();
 
     /**
+     * <pre>
+     * Additional information about the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
      * @return Whether the resourceInfo field is set.
      */
     boolean hasResourceInfo();
     /**
+     * <pre>
+     * Additional information about the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
      * @return The resourceInfo.
      */
     yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfo getResourceInfo();
     /**
+     * <pre>
+     * Additional information about the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
      */
     yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfoOrBuilder getResourceInfoOrBuilder();
@@ -732,6 +796,10 @@ public final class ProductInstanceServiceOuterClass {
     public static final int TOKEN_FIELD_NUMBER = 1;
     private volatile java.lang.Object token_;
     /**
+     * <pre>
+     * Signed JWT token which contains information about product instance and subscription.
+     * </pre>
+     *
      * <code>string token = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The token.
      */
@@ -749,6 +817,10 @@ public final class ProductInstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Signed JWT token which contains information about product instance and subscription.
+     * </pre>
+     *
      * <code>string token = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for token.
      */
@@ -770,6 +842,10 @@ public final class ProductInstanceServiceOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object resourceId_;
     /**
+     * <pre>
+     * ID of the resource to which the product instance will be claimed.
+     * </pre>
+     *
      * <code>string resource_id = 2;</code>
      * @return The resourceId.
      */
@@ -787,6 +863,10 @@ public final class ProductInstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the resource to which the product instance will be claimed.
+     * </pre>
+     *
      * <code>string resource_id = 2;</code>
      * @return The bytes for resourceId.
      */
@@ -808,6 +888,10 @@ public final class ProductInstanceServiceOuterClass {
     public static final int RESOURCE_INFO_FIELD_NUMBER = 3;
     private yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfo resourceInfo_;
     /**
+     * <pre>
+     * Additional information about the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
      * @return Whether the resourceInfo field is set.
      */
@@ -816,6 +900,10 @@ public final class ProductInstanceServiceOuterClass {
       return resourceInfo_ != null;
     }
     /**
+     * <pre>
+     * Additional information about the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
      * @return The resourceInfo.
      */
@@ -824,6 +912,10 @@ public final class ProductInstanceServiceOuterClass {
       return resourceInfo_ == null ? yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfo.getDefaultInstance() : resourceInfo_;
     }
     /**
+     * <pre>
+     * Additional information about the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
      */
     @java.lang.Override
@@ -1182,6 +1274,10 @@ public final class ProductInstanceServiceOuterClass {
 
       private java.lang.Object token_ = "";
       /**
+       * <pre>
+       * Signed JWT token which contains information about product instance and subscription.
+       * </pre>
+       *
        * <code>string token = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The token.
        */
@@ -1198,6 +1294,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Signed JWT token which contains information about product instance and subscription.
+       * </pre>
+       *
        * <code>string token = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for token.
        */
@@ -1215,6 +1315,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Signed JWT token which contains information about product instance and subscription.
+       * </pre>
+       *
        * <code>string token = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The token to set.
        * @return This builder for chaining.
@@ -1230,6 +1334,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Signed JWT token which contains information about product instance and subscription.
+       * </pre>
+       *
        * <code>string token = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -1240,6 +1348,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Signed JWT token which contains information about product instance and subscription.
+       * </pre>
+       *
        * <code>string token = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for token to set.
        * @return This builder for chaining.
@@ -1258,6 +1370,10 @@ public final class ProductInstanceServiceOuterClass {
 
       private java.lang.Object resourceId_ = "";
       /**
+       * <pre>
+       * ID of the resource to which the product instance will be claimed.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @return The resourceId.
        */
@@ -1274,6 +1390,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource to which the product instance will be claimed.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @return The bytes for resourceId.
        */
@@ -1291,6 +1411,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource to which the product instance will be claimed.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @param value The resourceId to set.
        * @return This builder for chaining.
@@ -1306,6 +1430,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource to which the product instance will be claimed.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1316,6 +1444,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource to which the product instance will be claimed.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
@@ -1336,6 +1468,10 @@ public final class ProductInstanceServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfo, yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfo.Builder, yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfoOrBuilder> resourceInfoBuilder_;
       /**
+       * <pre>
+       * Additional information about the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
        * @return Whether the resourceInfo field is set.
        */
@@ -1343,6 +1479,10 @@ public final class ProductInstanceServiceOuterClass {
         return resourceInfoBuilder_ != null || resourceInfo_ != null;
       }
       /**
+       * <pre>
+       * Additional information about the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
        * @return The resourceInfo.
        */
@@ -1354,6 +1494,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Additional information about the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
        */
       public Builder setResourceInfo(yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfo value) {
@@ -1370,6 +1514,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional information about the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
        */
       public Builder setResourceInfo(
@@ -1384,6 +1532,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional information about the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
        */
       public Builder mergeResourceInfo(yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfo value) {
@@ -1402,6 +1554,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional information about the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
        */
       public Builder clearResourceInfo() {
@@ -1416,6 +1572,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional information about the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
        */
       public yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfo.Builder getResourceInfoBuilder() {
@@ -1424,6 +1584,10 @@ public final class ProductInstanceServiceOuterClass {
         return getResourceInfoFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Additional information about the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
        */
       public yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.SaasInfoOrBuilder getResourceInfoOrBuilder() {
@@ -1435,6 +1599,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Additional information about the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.SaasInfo resource_info = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1508,11 +1676,19 @@ public final class ProductInstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the product to which the product instance belongs.
+     * </pre>
+     *
      * <code>string product_id = 1;</code>
      * @return The productId.
      */
     java.lang.String getProductId();
     /**
+     * <pre>
+     * ID of the product to which the product instance belongs.
+     * </pre>
+     *
      * <code>string product_id = 1;</code>
      * @return The bytes for productId.
      */
@@ -1520,11 +1696,19 @@ public final class ProductInstanceServiceOuterClass {
         getProductIdBytes();
 
     /**
+     * <pre>
+     * ID of the product instance.
+     * </pre>
+     *
      * <code>string product_instance_id = 2;</code>
      * @return The productInstanceId.
      */
     java.lang.String getProductInstanceId();
     /**
+     * <pre>
+     * ID of the product instance.
+     * </pre>
+     *
      * <code>string product_instance_id = 2;</code>
      * @return The bytes for productInstanceId.
      */
@@ -1532,11 +1716,19 @@ public final class ProductInstanceServiceOuterClass {
         getProductInstanceIdBytes();
 
     /**
+     * <pre>
+     * ID of the subscription.
+     * </pre>
+     *
      * <code>string license_instance_id = 3;</code>
      * @return The licenseInstanceId.
      */
     java.lang.String getLicenseInstanceId();
     /**
+     * <pre>
+     * ID of the subscription.
+     * </pre>
+     *
      * <code>string license_instance_id = 3;</code>
      * @return The bytes for licenseInstanceId.
      */
@@ -1644,6 +1836,10 @@ public final class ProductInstanceServiceOuterClass {
     public static final int PRODUCT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object productId_;
     /**
+     * <pre>
+     * ID of the product to which the product instance belongs.
+     * </pre>
+     *
      * <code>string product_id = 1;</code>
      * @return The productId.
      */
@@ -1661,6 +1857,10 @@ public final class ProductInstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the product to which the product instance belongs.
+     * </pre>
+     *
      * <code>string product_id = 1;</code>
      * @return The bytes for productId.
      */
@@ -1682,6 +1882,10 @@ public final class ProductInstanceServiceOuterClass {
     public static final int PRODUCT_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object productInstanceId_;
     /**
+     * <pre>
+     * ID of the product instance.
+     * </pre>
+     *
      * <code>string product_instance_id = 2;</code>
      * @return The productInstanceId.
      */
@@ -1699,6 +1903,10 @@ public final class ProductInstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the product instance.
+     * </pre>
+     *
      * <code>string product_instance_id = 2;</code>
      * @return The bytes for productInstanceId.
      */
@@ -1720,6 +1928,10 @@ public final class ProductInstanceServiceOuterClass {
     public static final int LICENSE_INSTANCE_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object licenseInstanceId_;
     /**
+     * <pre>
+     * ID of the subscription.
+     * </pre>
+     *
      * <code>string license_instance_id = 3;</code>
      * @return The licenseInstanceId.
      */
@@ -1737,6 +1949,10 @@ public final class ProductInstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription.
+     * </pre>
+     *
      * <code>string license_instance_id = 3;</code>
      * @return The bytes for licenseInstanceId.
      */
@@ -2093,6 +2309,10 @@ public final class ProductInstanceServiceOuterClass {
 
       private java.lang.Object productId_ = "";
       /**
+       * <pre>
+       * ID of the product to which the product instance belongs.
+       * </pre>
+       *
        * <code>string product_id = 1;</code>
        * @return The productId.
        */
@@ -2109,6 +2329,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the product to which the product instance belongs.
+       * </pre>
+       *
        * <code>string product_id = 1;</code>
        * @return The bytes for productId.
        */
@@ -2126,6 +2350,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the product to which the product instance belongs.
+       * </pre>
+       *
        * <code>string product_id = 1;</code>
        * @param value The productId to set.
        * @return This builder for chaining.
@@ -2141,6 +2369,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the product to which the product instance belongs.
+       * </pre>
+       *
        * <code>string product_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2151,6 +2383,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the product to which the product instance belongs.
+       * </pre>
+       *
        * <code>string product_id = 1;</code>
        * @param value The bytes for productId to set.
        * @return This builder for chaining.
@@ -2169,6 +2405,10 @@ public final class ProductInstanceServiceOuterClass {
 
       private java.lang.Object productInstanceId_ = "";
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string product_instance_id = 2;</code>
        * @return The productInstanceId.
        */
@@ -2185,6 +2425,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string product_instance_id = 2;</code>
        * @return The bytes for productInstanceId.
        */
@@ -2202,6 +2446,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string product_instance_id = 2;</code>
        * @param value The productInstanceId to set.
        * @return This builder for chaining.
@@ -2217,6 +2465,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string product_instance_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -2227,6 +2479,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string product_instance_id = 2;</code>
        * @param value The bytes for productInstanceId to set.
        * @return This builder for chaining.
@@ -2245,6 +2501,10 @@ public final class ProductInstanceServiceOuterClass {
 
       private java.lang.Object licenseInstanceId_ = "";
       /**
+       * <pre>
+       * ID of the subscription.
+       * </pre>
+       *
        * <code>string license_instance_id = 3;</code>
        * @return The licenseInstanceId.
        */
@@ -2261,6 +2521,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription.
+       * </pre>
+       *
        * <code>string license_instance_id = 3;</code>
        * @return The bytes for licenseInstanceId.
        */
@@ -2278,6 +2542,10 @@ public final class ProductInstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription.
+       * </pre>
+       *
        * <code>string license_instance_id = 3;</code>
        * @param value The licenseInstanceId to set.
        * @return This builder for chaining.
@@ -2293,6 +2561,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription.
+       * </pre>
+       *
        * <code>string license_instance_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -2303,6 +2575,10 @@ public final class ProductInstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription.
+       * </pre>
+       *
        * <code>string license_instance_id = 3;</code>
        * @param value The bytes for licenseInstanceId to set.
        * @return This builder for chaining.

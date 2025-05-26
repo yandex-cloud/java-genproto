@@ -24,22 +24,42 @@ public final class ProductInstanceOuterClass {
      */
     STATE_UNSPECIFIED(0),
     /**
+     * <pre>
+     * Product instance is activated.
+     * </pre>
+     *
      * <code>ACTIVATED = 1;</code>
      */
     ACTIVATED(1),
     /**
+     * <pre>
+     * Product instance is deactivated.
+     * </pre>
+     *
      * <code>DEACTIVATED = 2;</code>
      */
     DEACTIVATED(2),
     /**
+     * <pre>
+     * Product instance is pending activation.
+     * </pre>
+     *
      * <code>PENDING_ACTIVATION = 3;</code>
      */
     PENDING_ACTIVATION(3),
     /**
+     * <pre>
+     * Product instance is deprecated.
+     * </pre>
+     *
      * <code>DEPRECATED = 4;</code>
      */
     DEPRECATED(4),
     /**
+     * <pre>
+     * Product instance is deleted.
+     * </pre>
+     *
      * <code>DELETED = 5;</code>
      */
     DELETED(5),
@@ -51,22 +71,42 @@ public final class ProductInstanceOuterClass {
      */
     public static final int STATE_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * Product instance is activated.
+     * </pre>
+     *
      * <code>ACTIVATED = 1;</code>
      */
     public static final int ACTIVATED_VALUE = 1;
     /**
+     * <pre>
+     * Product instance is deactivated.
+     * </pre>
+     *
      * <code>DEACTIVATED = 2;</code>
      */
     public static final int DEACTIVATED_VALUE = 2;
     /**
+     * <pre>
+     * Product instance is pending activation.
+     * </pre>
+     *
      * <code>PENDING_ACTIVATION = 3;</code>
      */
     public static final int PENDING_ACTIVATION_VALUE = 3;
     /**
+     * <pre>
+     * Product instance is deprecated.
+     * </pre>
+     *
      * <code>DEPRECATED = 4;</code>
      */
     public static final int DEPRECATED_VALUE = 4;
     /**
+     * <pre>
+     * Product instance is deleted.
+     * </pre>
+     *
      * <code>DELETED = 5;</code>
      */
     public static final int DELETED_VALUE = 5;
@@ -168,18 +208,34 @@ public final class ProductInstanceOuterClass {
      */
     RESOURCE_TYPE_UNSPECIFIED(0),
     /**
+     * <pre>
+     * SaaS resource.
+     * </pre>
+     *
      * <code>SAAS = 1;</code>
      */
     SAAS(1),
     /**
+     * <pre>
+     * Kubernetes resource.
+     * </pre>
+     *
      * <code>K8S = 2;</code>
      */
     K8S(2),
     /**
+     * <pre>
+     * Compute resource.
+     * </pre>
+     *
      * <code>COMPUTE = 3;</code>
      */
     COMPUTE(3),
     /**
+     * <pre>
+     * Cloud Apps resource.
+     * </pre>
+     *
      * <code>CLOUD_APPS = 4;</code>
      */
     CLOUD_APPS(4),
@@ -191,18 +247,34 @@ public final class ProductInstanceOuterClass {
      */
     public static final int RESOURCE_TYPE_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * SaaS resource.
+     * </pre>
+     *
      * <code>SAAS = 1;</code>
      */
     public static final int SAAS_VALUE = 1;
     /**
+     * <pre>
+     * Kubernetes resource.
+     * </pre>
+     *
      * <code>K8S = 2;</code>
      */
     public static final int K8S_VALUE = 2;
     /**
+     * <pre>
+     * Compute resource.
+     * </pre>
+     *
      * <code>COMPUTE = 3;</code>
      */
     public static final int COMPUTE_VALUE = 3;
     /**
+     * <pre>
+     * Cloud Apps resource.
+     * </pre>
+     *
      * <code>CLOUD_APPS = 4;</code>
      */
     public static final int CLOUD_APPS_VALUE = 4;
@@ -298,11 +370,19 @@ public final class ProductInstanceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the product instance.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the product instance.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -310,11 +390,19 @@ public final class ProductInstanceOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the resource.
+     * </pre>
+     *
      * <code>string resource_id = 2;</code>
      * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
+     * <pre>
+     * ID of the resource.
+     * </pre>
+     *
      * <code>string resource_id = 2;</code>
      * @return The bytes for resourceId.
      */
@@ -322,21 +410,37 @@ public final class ProductInstanceOuterClass {
         getResourceIdBytes();
 
     /**
+     * <pre>
+     * Type of the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.ResourceType resource_type = 3;</code>
      * @return The enum numeric value on the wire for resourceType.
      */
     int getResourceTypeValue();
     /**
+     * <pre>
+     * Type of the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.ResourceType resource_type = 3;</code>
      * @return The resourceType.
      */
     yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.ResourceType getResourceType();
 
     /**
+     * <pre>
+     * Metadata of the resource; Reserved for future use.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
      */
     int getResourceMetadataCount();
     /**
+     * <pre>
+     * Metadata of the resource; Reserved for future use.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
      */
     boolean containsResourceMetadata(
@@ -348,11 +452,19 @@ public final class ProductInstanceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getResourceMetadata();
     /**
+     * <pre>
+     * Metadata of the resource; Reserved for future use.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getResourceMetadataMap();
     /**
+     * <pre>
+     * Metadata of the resource; Reserved for future use.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
      */
 
@@ -360,6 +472,10 @@ public final class ProductInstanceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Metadata of the resource; Reserved for future use.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
      */
 
@@ -367,42 +483,74 @@ public final class ProductInstanceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * State of the product instance.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.State state = 5;</code>
      * @return The enum numeric value on the wire for state.
      */
     int getStateValue();
     /**
+     * <pre>
+     * State of the product instance.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.State state = 5;</code>
      * @return The state.
      */
     yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.State getState();
 
     /**
+     * <pre>
+     * Creation timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Update timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Update timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Update timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
@@ -637,6 +785,10 @@ public final class ProductInstanceOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the product instance.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -654,6 +806,10 @@ public final class ProductInstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the product instance.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -675,6 +831,10 @@ public final class ProductInstanceOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object resourceId_;
     /**
+     * <pre>
+     * ID of the resource.
+     * </pre>
+     *
      * <code>string resource_id = 2;</code>
      * @return The resourceId.
      */
@@ -692,6 +852,10 @@ public final class ProductInstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the resource.
+     * </pre>
+     *
      * <code>string resource_id = 2;</code>
      * @return The bytes for resourceId.
      */
@@ -713,6 +877,10 @@ public final class ProductInstanceOuterClass {
     public static final int RESOURCE_TYPE_FIELD_NUMBER = 3;
     private int resourceType_;
     /**
+     * <pre>
+     * Type of the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.ResourceType resource_type = 3;</code>
      * @return The enum numeric value on the wire for resourceType.
      */
@@ -720,6 +888,10 @@ public final class ProductInstanceOuterClass {
       return resourceType_;
     }
     /**
+     * <pre>
+     * Type of the resource.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.ResourceType resource_type = 3;</code>
      * @return The resourceType.
      */
@@ -756,6 +928,10 @@ public final class ProductInstanceOuterClass {
       return internalGetResourceMetadata().getMap().size();
     }
     /**
+     * <pre>
+     * Metadata of the resource; Reserved for future use.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
      */
 
@@ -774,6 +950,10 @@ public final class ProductInstanceOuterClass {
       return getResourceMetadataMap();
     }
     /**
+     * <pre>
+     * Metadata of the resource; Reserved for future use.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
      */
     @java.lang.Override
@@ -782,6 +962,10 @@ public final class ProductInstanceOuterClass {
       return internalGetResourceMetadata().getMap();
     }
     /**
+     * <pre>
+     * Metadata of the resource; Reserved for future use.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
      */
     @java.lang.Override
@@ -795,6 +979,10 @@ public final class ProductInstanceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Metadata of the resource; Reserved for future use.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
      */
     @java.lang.Override
@@ -813,6 +1001,10 @@ public final class ProductInstanceOuterClass {
     public static final int STATE_FIELD_NUMBER = 5;
     private int state_;
     /**
+     * <pre>
+     * State of the product instance.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.State state = 5;</code>
      * @return The enum numeric value on the wire for state.
      */
@@ -820,6 +1012,10 @@ public final class ProductInstanceOuterClass {
       return state_;
     }
     /**
+     * <pre>
+     * State of the product instance.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.pim.v1.saas.State state = 5;</code>
      * @return The state.
      */
@@ -832,6 +1028,10 @@ public final class ProductInstanceOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 6;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return Whether the createdAt field is set.
      */
@@ -840,6 +1040,10 @@ public final class ProductInstanceOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return The createdAt.
      */
@@ -848,6 +1052,10 @@ public final class ProductInstanceOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     @java.lang.Override
@@ -858,6 +1066,10 @@ public final class ProductInstanceOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Update timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -866,6 +1078,10 @@ public final class ProductInstanceOuterClass {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Update timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return The updatedAt.
      */
@@ -874,6 +1090,10 @@ public final class ProductInstanceOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Update timestamp
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      */
     @java.lang.Override
@@ -1434,6 +1654,10 @@ public final class ProductInstanceOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1450,6 +1674,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1467,6 +1695,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1482,6 +1714,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1492,6 +1728,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the product instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1510,6 +1750,10 @@ public final class ProductInstanceOuterClass {
 
       private java.lang.Object resourceId_ = "";
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @return The resourceId.
        */
@@ -1526,6 +1770,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @return The bytes for resourceId.
        */
@@ -1543,6 +1791,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @param value The resourceId to set.
        * @return This builder for chaining.
@@ -1558,6 +1810,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1568,6 +1824,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 2;</code>
        * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
@@ -1586,6 +1846,10 @@ public final class ProductInstanceOuterClass {
 
       private int resourceType_ = 0;
       /**
+       * <pre>
+       * Type of the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.ResourceType resource_type = 3;</code>
        * @return The enum numeric value on the wire for resourceType.
        */
@@ -1593,6 +1857,10 @@ public final class ProductInstanceOuterClass {
         return resourceType_;
       }
       /**
+       * <pre>
+       * Type of the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.ResourceType resource_type = 3;</code>
        * @param value The enum numeric value on the wire for resourceType to set.
        * @return This builder for chaining.
@@ -1604,6 +1872,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.ResourceType resource_type = 3;</code>
        * @return The resourceType.
        */
@@ -1614,6 +1886,10 @@ public final class ProductInstanceOuterClass {
         return result == null ? yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.ResourceType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Type of the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.ResourceType resource_type = 3;</code>
        * @param value The resourceType to set.
        * @return This builder for chaining.
@@ -1628,6 +1904,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the resource.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.ResourceType resource_type = 3;</code>
        * @return This builder for chaining.
        */
@@ -1665,6 +1945,10 @@ public final class ProductInstanceOuterClass {
         return internalGetResourceMetadata().getMap().size();
       }
       /**
+       * <pre>
+       * Metadata of the resource; Reserved for future use.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
        */
 
@@ -1683,6 +1967,10 @@ public final class ProductInstanceOuterClass {
         return getResourceMetadataMap();
       }
       /**
+       * <pre>
+       * Metadata of the resource; Reserved for future use.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
        */
       @java.lang.Override
@@ -1691,6 +1979,10 @@ public final class ProductInstanceOuterClass {
         return internalGetResourceMetadata().getMap();
       }
       /**
+       * <pre>
+       * Metadata of the resource; Reserved for future use.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
        */
       @java.lang.Override
@@ -1704,6 +1996,10 @@ public final class ProductInstanceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Metadata of the resource; Reserved for future use.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
        */
       @java.lang.Override
@@ -1725,6 +2021,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Metadata of the resource; Reserved for future use.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
        */
 
@@ -1744,6 +2044,10 @@ public final class ProductInstanceOuterClass {
         return internalGetMutableResourceMetadata().getMutableMap();
       }
       /**
+       * <pre>
+       * Metadata of the resource; Reserved for future use.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
        */
       public Builder putResourceMetadata(
@@ -1759,6 +2063,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Metadata of the resource; Reserved for future use.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; resource_metadata = 4;</code>
        */
 
@@ -1771,6 +2079,10 @@ public final class ProductInstanceOuterClass {
 
       private int state_ = 0;
       /**
+       * <pre>
+       * State of the product instance.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.State state = 5;</code>
        * @return The enum numeric value on the wire for state.
        */
@@ -1778,6 +2090,10 @@ public final class ProductInstanceOuterClass {
         return state_;
       }
       /**
+       * <pre>
+       * State of the product instance.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.State state = 5;</code>
        * @param value The enum numeric value on the wire for state to set.
        * @return This builder for chaining.
@@ -1789,6 +2105,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * State of the product instance.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.State state = 5;</code>
        * @return The state.
        */
@@ -1799,6 +2119,10 @@ public final class ProductInstanceOuterClass {
         return result == null ? yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.State.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * State of the product instance.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.State state = 5;</code>
        * @param value The state to set.
        * @return This builder for chaining.
@@ -1813,6 +2137,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * State of the product instance.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.pim.v1.saas.State state = 5;</code>
        * @return This builder for chaining.
        */
@@ -1827,6 +2155,10 @@ public final class ProductInstanceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1834,6 +2166,10 @@ public final class ProductInstanceOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        * @return The createdAt.
        */
@@ -1845,6 +2181,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1861,6 +2201,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder setCreatedAt(
@@ -1875,6 +2219,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1893,6 +2241,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder clearCreatedAt() {
@@ -1907,6 +2259,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1915,6 +2271,10 @@ public final class ProductInstanceOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1926,6 +2286,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1946,6 +2310,10 @@ public final class ProductInstanceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Update timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -1953,6 +2321,10 @@ public final class ProductInstanceOuterClass {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Update timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        * @return The updatedAt.
        */
@@ -1964,6 +2336,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -1980,6 +2356,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder setUpdatedAt(
@@ -1994,6 +2374,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2012,6 +2396,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder clearUpdatedAt() {
@@ -2026,6 +2414,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -2034,6 +2426,10 @@ public final class ProductInstanceOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Update timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -2045,6 +2441,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update timestamp
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2259,11 +2659,19 @@ public final class ProductInstanceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the SaaS resource.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the SaaS resource.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -2271,10 +2679,18 @@ public final class ProductInstanceOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * Additional data about the SaaS resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; data = 2;</code>
      */
     int getDataCount();
     /**
+     * <pre>
+     * Additional data about the SaaS resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; data = 2;</code>
      */
     boolean containsData(
@@ -2286,11 +2702,19 @@ public final class ProductInstanceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getData();
     /**
+     * <pre>
+     * Additional data about the SaaS resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; data = 2;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getDataMap();
     /**
+     * <pre>
+     * Additional data about the SaaS resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; data = 2;</code>
      */
 
@@ -2298,6 +2722,10 @@ public final class ProductInstanceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Additional data about the SaaS resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; data = 2;</code>
      */
 
@@ -2417,6 +2845,10 @@ public final class ProductInstanceOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the SaaS resource.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -2434,6 +2866,10 @@ public final class ProductInstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the SaaS resource.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -2479,6 +2915,10 @@ public final class ProductInstanceOuterClass {
       return internalGetData().getMap().size();
     }
     /**
+     * <pre>
+     * Additional data about the SaaS resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; data = 2;</code>
      */
 
@@ -2497,6 +2937,10 @@ public final class ProductInstanceOuterClass {
       return getDataMap();
     }
     /**
+     * <pre>
+     * Additional data about the SaaS resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; data = 2;</code>
      */
     @java.lang.Override
@@ -2505,6 +2949,10 @@ public final class ProductInstanceOuterClass {
       return internalGetData().getMap();
     }
     /**
+     * <pre>
+     * Additional data about the SaaS resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; data = 2;</code>
      */
     @java.lang.Override
@@ -2518,6 +2966,10 @@ public final class ProductInstanceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Additional data about the SaaS resource.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; data = 2;</code>
      */
     @java.lang.Override
@@ -2888,6 +3340,10 @@ public final class ProductInstanceOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the SaaS resource.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -2904,6 +3360,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SaaS resource.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -2921,6 +3381,10 @@ public final class ProductInstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the SaaS resource.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -2936,6 +3400,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SaaS resource.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2946,6 +3414,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the SaaS resource.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -2989,6 +3461,10 @@ public final class ProductInstanceOuterClass {
         return internalGetData().getMap().size();
       }
       /**
+       * <pre>
+       * Additional data about the SaaS resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; data = 2;</code>
        */
 
@@ -3007,6 +3483,10 @@ public final class ProductInstanceOuterClass {
         return getDataMap();
       }
       /**
+       * <pre>
+       * Additional data about the SaaS resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; data = 2;</code>
        */
       @java.lang.Override
@@ -3015,6 +3495,10 @@ public final class ProductInstanceOuterClass {
         return internalGetData().getMap();
       }
       /**
+       * <pre>
+       * Additional data about the SaaS resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; data = 2;</code>
        */
       @java.lang.Override
@@ -3028,6 +3512,10 @@ public final class ProductInstanceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Additional data about the SaaS resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; data = 2;</code>
        */
       @java.lang.Override
@@ -3049,6 +3537,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional data about the SaaS resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; data = 2;</code>
        */
 
@@ -3068,6 +3560,10 @@ public final class ProductInstanceOuterClass {
         return internalGetMutableData().getMutableMap();
       }
       /**
+       * <pre>
+       * Additional data about the SaaS resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; data = 2;</code>
        */
       public Builder putData(
@@ -3083,6 +3579,10 @@ public final class ProductInstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional data about the SaaS resource.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; data = 2;</code>
        */
 

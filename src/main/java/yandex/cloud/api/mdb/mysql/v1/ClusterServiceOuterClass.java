@@ -14153,6 +14153,33 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+     * @return Whether the maintenanceWindow field is set.
+     */
+    boolean hasMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+     * @return The maintenanceWindow.
+     */
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+     */
+    yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RestoreClusterRequest}
@@ -14314,6 +14341,19 @@ public final class ClusterServiceOuterClass {
                 mutable_bitField0_ |= 0x00000008;
               }
               hostGroupIds_.add(s);
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder subBuilder = null;
+              if (maintenanceWindow_ != null) {
+                subBuilder = maintenanceWindow_.toBuilder();
+              }
+              maintenanceWindow_ = input.readMessage(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceWindow_);
+                maintenanceWindow_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -14978,6 +15018,44 @@ public final class ClusterServiceOuterClass {
       return hostGroupIds_.getByteString(index);
     }
 
+    public static final int MAINTENANCE_WINDOW_FIELD_NUMBER = 15;
+    private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+     * @return Whether the maintenanceWindow field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaintenanceWindow() {
+      return maintenanceWindow_ != null;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+     * @return The maintenanceWindow.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+      return maintenanceWindow_ == null ? yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+    }
+    /**
+     * <pre>
+     * Window of maintenance operations.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+      return getMaintenanceWindow();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15033,6 +15111,9 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < hostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, hostGroupIds_.getRaw(i));
+      }
+      if (maintenanceWindow_ != null) {
+        output.writeMessage(15, getMaintenanceWindow());
       }
       unknownFields.writeTo(output);
     }
@@ -15104,6 +15185,10 @@ public final class ClusterServiceOuterClass {
         size += dataSize;
         size += 1 * getHostGroupIdsList().size();
       }
+      if (maintenanceWindow_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getMaintenanceWindow());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -15150,6 +15235,11 @@ public final class ClusterServiceOuterClass {
           != other.getDeletionProtection()) return false;
       if (!getHostGroupIdsList()
           .equals(other.getHostGroupIdsList())) return false;
+      if (hasMaintenanceWindow() != other.hasMaintenanceWindow()) return false;
+      if (hasMaintenanceWindow()) {
+        if (!getMaintenanceWindow()
+            .equals(other.getMaintenanceWindow())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15199,6 +15289,10 @@ public final class ClusterServiceOuterClass {
       if (getHostGroupIdsCount() > 0) {
         hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getHostGroupIdsList().hashCode();
+      }
+      if (hasMaintenanceWindow()) {
+        hash = (37 * hash) + MAINTENANCE_WINDOW_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceWindow().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -15393,6 +15487,12 @@ public final class ClusterServiceOuterClass {
 
         hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
         return this;
       }
 
@@ -15458,6 +15558,11 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.hostGroupIds_ = hostGroupIds_;
+        if (maintenanceWindowBuilder_ == null) {
+          result.maintenanceWindow_ = maintenanceWindow_;
+        } else {
+          result.maintenanceWindow_ = maintenanceWindowBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -15585,6 +15690,9 @@ public final class ClusterServiceOuterClass {
             hostGroupIds_.addAll(other.hostGroupIds_);
           }
           onChanged();
+        }
+        if (other.hasMaintenanceWindow()) {
+          mergeMaintenanceWindow(other.getMaintenanceWindow());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -17289,6 +17397,161 @@ public final class ClusterServiceOuterClass {
         hostGroupIds_.add(value);
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+       * @return Whether the maintenanceWindow field is set.
+       */
+      public boolean hasMaintenanceWindow() {
+        return maintenanceWindowBuilder_ != null || maintenanceWindow_ != null;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+       * @return The maintenanceWindow.
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          return maintenanceWindow_ == null ? yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        } else {
+          return maintenanceWindowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public Builder setMaintenanceWindow(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceWindow_ = value;
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public Builder setMaintenanceWindow(
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder builderForValue) {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public Builder mergeMaintenanceWindow(yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow value) {
+        if (maintenanceWindowBuilder_ == null) {
+          if (maintenanceWindow_ != null) {
+            maintenanceWindow_ =
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.newBuilder(maintenanceWindow_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceWindow_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceWindowBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public Builder clearMaintenanceWindow() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindow_ = null;
+          onChanged();
+        } else {
+          maintenanceWindow_ = null;
+          maintenanceWindowBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder getMaintenanceWindowBuilder() {
+        
+        onChanged();
+        return getMaintenanceWindowFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      public yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder getMaintenanceWindowOrBuilder() {
+        if (maintenanceWindowBuilder_ != null) {
+          return maintenanceWindowBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceWindow_ == null ?
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.getDefaultInstance() : maintenanceWindow_;
+        }
+      }
+      /**
+       * <pre>
+       * Window of maintenance operations.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder> 
+          getMaintenanceWindowFieldBuilder() {
+        if (maintenanceWindowBuilder_ == null) {
+          maintenanceWindowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder>(
+                  getMaintenanceWindow(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceWindow_ = null;
+        }
+        return maintenanceWindowBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -50678,7 +50941,7 @@ public final class ClusterServiceOuterClass {
       "8\n\024BackupClusterRequest\022 \n\ncluster_id\030\001 " +
       "\001(\tB\014\350\3071\001\212\3101\004<=50\">\n\025BackupClusterMetada" +
       "ta\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(" +
-      "\t\"\261\005\n\025RestoreClusterRequest\022\027\n\tbackup_id" +
+      "\t\"\373\005\n\025RestoreClusterRequest\022\027\n\tbackup_id" +
       "\030\001 \001(\tB\004\350\3071\001\022.\n\004time\030\002 \001(\0132\032.google.prot" +
       "obuf.TimestampB\004\350\3071\001\022$\n\004name\030\004 \001(\tB\026\350\3071\001" +
       "\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\005 \001(\tB" +
@@ -50694,220 +50957,222 @@ public final class ClusterServiceOuterClass {
       "B\010\212\3101\004<=50\022\033\n\tfolder_id\030\013 \001(\tB\010\212\3101\004<=50\022" +
       "\032\n\022security_group_ids\030\014 \003(\t\022\033\n\023deletion_" +
       "protection\030\r \001(\010\022\026\n\016host_group_ids\030\016 \003(\t" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001J\004\010\003\020\004\"?\n\026RestoreClusterMetadata\022" +
-      "\022\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"]" +
-      "\n\033StartClusterFailoverRequest\022 \n\ncluster" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\thost_name\030\002 \001" +
-      "(\tB\t\212\3101\005<=253\"2\n\034StartClusterFailoverMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t\"\312\002\n\034Reschedule" +
-      "MaintenanceRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022e\n\017reschedule_type\030\002 \001(\0162F." +
-      "yandex.cloud.mdb.mysql.v1.RescheduleMain" +
-      "tenanceRequest.RescheduleTypeB\004\350\3071\001\0221\n\rd" +
-      "elayed_until\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\"n\n\016RescheduleType\022\037\n\033RESCHEDULE_T" +
-      "YPE_UNSPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT" +
-      "_AVAILABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l" +
-      "\n\035RescheduleMaintenanceMetadata\022\022\n\nclust" +
-      "er_id\030\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampJ\004\010\002\020\004\"\256\001\n\tLogReco" +
-      "rd\022-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf." +
-      "Timestamp\022B\n\007message\030\002 \003(\01321.yandex.clou" +
-      "d.mdb.mysql.v1.LogRecord.MessageEntry\032.\n" +
-      "\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"\330\003\n\026ListClusterLogsRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_fil" +
-      "ter\030\002 \003(\t\022S\n\014service_type\030\003 \001(\0162=.yandex" +
-      ".cloud.mdb.mysql.v1.ListClusterLogsReque" +
-      "st.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022\035\n\tpage_size\030" +
-      "\006 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212" +
-      "\3101\005<=100\022\036\n\026always_next_page_token\030\010 \001(\010" +
-      "\"v\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIF" +
-      "IED\020\000\022\017\n\013MYSQL_ERROR\020\001\022\021\n\rMYSQL_GENERAL\020" +
-      "\002\022\024\n\020MYSQL_SLOW_QUERY\020\003\022\017\n\013MYSQL_AUDIT\020\004" +
-      "\"f\n\027ListClusterLogsResponse\0222\n\004logs\030\001 \003(" +
-      "\0132$.yandex.cloud.mdb.mysql.v1.LogRecord\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"b\n\017StreamLogRec" +
-      "ord\0224\n\006record\030\001 \001(\0132$.yandex.cloud.mdb.m" +
-      "ysql.v1.LogRecord\022\031\n\021next_record_token\030\002" +
-      " \001(\t\"\273\003\n\030StreamClusterLogsRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_fi" +
-      "lter\030\002 \003(\t\022U\n\014service_type\030\003 \001(\0162?.yande" +
-      "x.cloud.mdb.mysql.v1.StreamClusterLogsRe" +
-      "quest.ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022+\n\007to_time\030\005 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\037\n\014record_" +
-      "token\030\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n" +
-      "\212\3101\006<=1000\"v\n\013ServiceType\022\034\n\030SERVICE_TYP" +
-      "E_UNSPECIFIED\020\000\022\017\n\013MYSQL_ERROR\020\001\022\021\n\rMYSQ" +
-      "L_GENERAL\020\002\022\024\n\020MYSQL_SLOW_QUERY\020\003\022\017\n\013MYS" +
-      "QL_AUDIT\020\004\"~\n\034ListClusterOperationsReque" +
-      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperati" +
-      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
-      ".cloud.operation.Operation\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"{\n\031ListClusterBackupsRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"i\n\032ListClusterBackupsRe" +
-      "sponse\0222\n\007backups\030\001 \003(\0132!.yandex.cloud.m" +
-      "db.mysql.v1.Backup\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"y\n\027ListClusterHostsRequest\022 \n\ncluste" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"c\n\030ListClusterHostsResponse\022.\n\005ho" +
-      "sts\030\001 \003(\0132\037.yandex.cloud.mdb.mysql.v1.Ho" +
-      "st\022\027\n\017next_page_token\030\002 \001(\t\"{\n\026AddCluste" +
-      "rHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022?\n\nhost_specs\030\002 \003(\0132#.yandex.clo" +
-      "ud.mdb.mysql.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddC" +
-      "lusterHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022" +
-      "\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteClusterHost" +
-      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"" +
-      "D\n\032DeleteClusterHostsMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"7\n\023StartCl" +
-      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"*\n\024StartClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n\nclus" +
-      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\022MoveClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"b\n\023MoveClusterMetadata\022\022\n\nclu" +
-      "ster_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022" +
-      "\035\n\025destination_folder_id\030\003 \001(\t\"\213\001\n\031Updat" +
-      "eClusterHostsRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022L\n\021update_host_specs\030\002 \003(" +
-      "\0132).yandex.cloud.mdb.mysql.v1.UpdateHost" +
-      "SpecB\006\202\3101\002>0\"D\n\032UpdateClusterHostsMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003" +
-      "(\t\"\321\001\n\016UpdateHostSpec\022\027\n\thost_name\030\001 \001(\t" +
-      "B\004\350\3071\001\022\032\n\022replication_source\030\002 \001(\t\022/\n\013up" +
-      "date_mask\030\003 \001(\0132\032.google.protobuf.FieldM" +
-      "ask\022\"\n\017backup_priority\030\004 \001(\003B\t\372\3071\0050-100\022" +
-      "\030\n\020assign_public_ip\030\005 \001(\010\022\033\n\010priority\030\006 " +
-      "\001(\003B\t\372\3071\0050-100\"\271\001\n\010HostSpec\022\031\n\007zone_id\030\001" +
-      " \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<" +
-      "=50\022\030\n\020assign_public_ip\030\003 \001(\010\022\032\n\022replica" +
-      "tion_source\030\004 \001(\t\022\"\n\017backup_priority\030\005 \001" +
-      "(\003B\t\372\3071\0050-100\022\033\n\010priority\030\006 \001(\003B\t\372\3071\0050-1" +
-      "00\"\252\004\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022]\n\020my" +
-      "sql_config_5_7\030\002 \001(\01320.yandex.cloud.mdb." +
-      "mysql.v1.config.MysqlConfig5_7H\000R\017mysqlC" +
-      "onfig_5_7\022]\n\020mysql_config_8_0\030\006 \001(\01320.ya" +
-      "ndex.cloud.mdb.mysql.v1.config.MysqlConf" +
-      "ig8_0H\000R\017mysqlConfig_8_0\0227\n\tresources\030\003 " +
-      "\001(\0132$.yandex.cloud.mdb.mysql.v1.Resource" +
-      "s\0223\n\023backup_window_start\030\004 \001(\0132\026.google." +
-      "type.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yandex." +
-      "cloud.mdb.mysql.v1.Access\022R\n\027performance" +
-      "_diagnostics\030\007 \001(\01321.yandex.cloud.mdb.my" +
-      "sql.v1.PerformanceDiagnostics\022H\n\031backup_" +
-      "retain_period_days\030\010 \001(\0132\033.google.protob" +
-      "uf.Int64ValueB\010\372\3071\0047-60B\016\n\014mysql_config2" +
-      "\312\035\n\016ClusterService\022\210\001\n\003Get\022,.yandex.clou" +
-      "d.mdb.mysql.v1.GetClusterRequest\032\".yande" +
-      "x.cloud.mdb.mysql.v1.Cluster\"/\202\323\344\223\002)\022\'/m" +
-      "anaged-mysql/v1/clusters/{cluster_id}\022\213\001" +
-      "\n\004List\022..yandex.cloud.mdb.mysql.v1.ListC" +
-      "lustersRequest\032/.yandex.cloud.mdb.mysql." +
-      "v1.ListClustersResponse\"\"\202\323\344\223\002\034\022\032/manage" +
-      "d-mysql/v1/clusters\022\247\001\n\006Create\022/.yandex." +
-      "cloud.mdb.mysql.v1.CreateClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"I\202\323\344\223" +
-      "\002\037\"\032/managed-mysql/v1/clusters:\001*\262\322* \n\025C" +
-      "reateClusterMetadata\022\007Cluster\022\264\001\n\006Update" +
-      "\022/.yandex.cloud.mdb.mysql.v1.UpdateClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"V\202\323\344\223\002,2\'/managed-mysql/v1/clusters" +
-      "/{cluster_id}:\001*\262\322* \n\025UpdateClusterMetad" +
-      "ata\022\007Cluster\022\277\001\n\006Delete\022/.yandex.cloud.m" +
-      "db.mysql.v1.DeleteClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"a\202\323\344\223\002)*\'/ma" +
-      "naged-mysql/v1/clusters/{cluster_id}\262\322*." +
-      "\n\025DeleteClusterMetadata\022\025google.protobuf" +
-      ".Empty\022\264\001\n\005Start\022..yandex.cloud.mdb.mysq" +
-      "l.v1.StartClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"X\202\323\344\223\002/\"-/managed-my" +
-      "sql/v1/clusters/{cluster_id}:start\262\322*\037\n\024" +
-      "StartClusterMetadata\022\007Cluster\022\260\001\n\004Stop\022-" +
-      ".yandex.cloud.mdb.mysql.v1.StopClusterRe" +
+      "\022H\n\022maintenance_window\030\017 \001(\0132,.yandex.cl" +
+      "oud.mdb.mysql.v1.MaintenanceWindow\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001J\004\010\003\020\004\"?\n\026RestoreClusterMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"]\n\033Star" +
+      "tClusterFailoverRequest\022 \n\ncluster_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\034\n\thost_name\030\002 \001(\tB\t\212\310" +
+      "1\005<=253\"2\n\034StartClusterFailoverMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\"\312\002\n\034RescheduleMainte" +
+      "nanceRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022e\n\017reschedule_type\030\002 \001(\0162F.yandex" +
+      ".cloud.mdb.mysql.v1.RescheduleMaintenanc" +
+      "eRequest.RescheduleTypeB\004\350\3071\001\0221\n\rdelayed" +
+      "_until\030\003 \001(\0132\032.google.protobuf.Timestamp" +
+      "\"n\n\016RescheduleType\022\037\n\033RESCHEDULE_TYPE_UN" +
+      "SPECIFIED\020\000\022\r\n\tIMMEDIATE\020\001\022\031\n\025NEXT_AVAIL" +
+      "ABLE_WINDOW\020\002\022\021\n\rSPECIFIC_TIME\020\003\"l\n\035Resc" +
+      "heduleMaintenanceMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\0221\n\rdelayed_until\030\004 \001(\0132\032.google.pr" +
+      "otobuf.TimestampJ\004\010\002\020\004\"\256\001\n\tLogRecord\022-\n\t" +
+      "timestamp\030\001 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022B\n\007message\030\002 \003(\01321.yandex.cloud.mdb." +
+      "mysql.v1.LogRecord.MessageEntry\032.\n\014Messa" +
+      "geEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\330\003\n\026ListClusterLogsRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 " +
+      "\003(\t\022S\n\014service_type\030\003 \001(\0162=.yandex.cloud" +
+      ".mdb.mysql.v1.ListClusterLogsRequest.Ser" +
+      "viceType\022-\n\tfrom_time\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B" +
+      "\n\372\3071\0060-1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=1" +
+      "00\022\036\n\026always_next_page_token\030\010 \001(\010\"v\n\013Se" +
+      "rviceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022" +
+      "\017\n\013MYSQL_ERROR\020\001\022\021\n\rMYSQL_GENERAL\020\002\022\024\n\020M" +
+      "YSQL_SLOW_QUERY\020\003\022\017\n\013MYSQL_AUDIT\020\004\"f\n\027Li" +
+      "stClusterLogsResponse\0222\n\004logs\030\001 \003(\0132$.ya" +
+      "ndex.cloud.mdb.mysql.v1.LogRecord\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"b\n\017StreamLogRecord\0224\n" +
+      "\006record\030\001 \001(\0132$.yandex.cloud.mdb.mysql.v" +
+      "1.LogRecord\022\031\n\021next_record_token\030\002 \001(\t\"\273" +
+      "\003\n\030StreamClusterLogsRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002" +
+      " \003(\t\022U\n\014service_type\030\003 \001(\0162?.yandex.clou" +
+      "d.mdb.mysql.v1.StreamClusterLogsRequest." +
+      "ServiceType\022-\n\tfrom_time\030\004 \001(\0132\032.google." +
+      "protobuf.Timestamp\022+\n\007to_time\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\037\n\014record_token\030" +
+      "\006 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=" +
+      "1000\"v\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSP" +
+      "ECIFIED\020\000\022\017\n\013MYSQL_ERROR\020\001\022\021\n\rMYSQL_GENE" +
+      "RAL\020\002\022\024\n\020MYSQL_SLOW_QUERY\020\003\022\017\n\013MYSQL_AUD" +
+      "IT\020\004\"~\n\034ListClusterOperationsRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\"o\n\035ListClusterOperationsRes" +
+      "ponse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud" +
+      ".operation.Operation\022\027\n\017next_page_token\030" +
+      "\002 \001(\t\"{\n\031ListClusterBackupsRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"i\n\032ListClusterBackupsResponse" +
+      "\0222\n\007backups\030\001 \003(\0132!.yandex.cloud.mdb.mys" +
+      "ql.v1.Backup\022\027\n\017next_page_token\030\002 \001(\t\"y\n" +
+      "\027ListClusterHostsRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"c\n\030ListClusterHostsResponse\022.\n\005hosts\030\001 " +
+      "\003(\0132\037.yandex.cloud.mdb.mysql.v1.Host\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"{\n\026AddClusterHosts" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022?\n\nhost_specs\030\002 \003(\0132#.yandex.cloud.mdb" +
+      ".mysql.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddCluster" +
+      "HostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhos" +
+      "t_names\030\002 \003(\t\"b\n\031DeleteClusterHostsReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022#\n\n" +
+      "host_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D\n\032Del" +
+      "eteClusterHostsMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\022\022\n\nhost_names\030\002 \003(\t\"7\n\023StartClusterR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"*\n\024StartClusterMetadata\022\022\n\ncluster_id\030\001" +
+      " \001(\t\"6\n\022StopClusterRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopClusterMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\022MoveClusterRe" +
+      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\"b\n\023MoveClusterMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025des" +
+      "tination_folder_id\030\003 \001(\t\"\213\001\n\031UpdateClust" +
+      "erHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022L\n\021update_host_specs\030\002 \003(\0132).ya" +
+      "ndex.cloud.mdb.mysql.v1.UpdateHostSpecB\006" +
+      "\202\3101\002>0\"D\n\032UpdateClusterHostsMetadata\022\022\n\n" +
+      "cluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\321\001\n" +
+      "\016UpdateHostSpec\022\027\n\thost_name\030\001 \001(\tB\004\350\3071\001" +
+      "\022\032\n\022replication_source\030\002 \001(\t\022/\n\013update_m" +
+      "ask\030\003 \001(\0132\032.google.protobuf.FieldMask\022\"\n" +
+      "\017backup_priority\030\004 \001(\003B\t\372\3071\0050-100\022\030\n\020ass" +
+      "ign_public_ip\030\005 \001(\010\022\033\n\010priority\030\006 \001(\003B\t\372" +
+      "\3071\0050-100\"\271\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010" +
+      "\212\3101\004<=50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n" +
+      "\020assign_public_ip\030\003 \001(\010\022\032\n\022replication_s" +
+      "ource\030\004 \001(\t\022\"\n\017backup_priority\030\005 \001(\003B\t\372\307" +
+      "1\0050-100\022\033\n\010priority\030\006 \001(\003B\t\372\3071\0050-100\"\252\004\n" +
+      "\nConfigSpec\022\017\n\007version\030\001 \001(\t\022]\n\020mysql_co" +
+      "nfig_5_7\030\002 \001(\01320.yandex.cloud.mdb.mysql." +
+      "v1.config.MysqlConfig5_7H\000R\017mysqlConfig_" +
+      "5_7\022]\n\020mysql_config_8_0\030\006 \001(\01320.yandex.c" +
+      "loud.mdb.mysql.v1.config.MysqlConfig8_0H" +
+      "\000R\017mysqlConfig_8_0\0227\n\tresources\030\003 \001(\0132$." +
+      "yandex.cloud.mdb.mysql.v1.Resources\0223\n\023b" +
+      "ackup_window_start\030\004 \001(\0132\026.google.type.T" +
+      "imeOfDay\0221\n\006access\030\005 \001(\0132!.yandex.cloud." +
+      "mdb.mysql.v1.Access\022R\n\027performance_diagn" +
+      "ostics\030\007 \001(\01321.yandex.cloud.mdb.mysql.v1" +
+      ".PerformanceDiagnostics\022H\n\031backup_retain" +
+      "_period_days\030\010 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\010\372\3071\0047-60B\016\n\014mysql_config2\312\035\n\016Cl" +
+      "usterService\022\210\001\n\003Get\022,.yandex.cloud.mdb." +
+      "mysql.v1.GetClusterRequest\032\".yandex.clou" +
+      "d.mdb.mysql.v1.Cluster\"/\202\323\344\223\002)\022\'/managed" +
+      "-mysql/v1/clusters/{cluster_id}\022\213\001\n\004List" +
+      "\022..yandex.cloud.mdb.mysql.v1.ListCluster" +
+      "sRequest\032/.yandex.cloud.mdb.mysql.v1.Lis" +
+      "tClustersResponse\"\"\202\323\344\223\002\034\022\032/managed-mysq" +
+      "l/v1/clusters\022\247\001\n\006Create\022/.yandex.cloud." +
+      "mdb.mysql.v1.CreateClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"I\202\323\344\223\002\037\"\032/m" +
+      "anaged-mysql/v1/clusters:\001*\262\322* \n\025CreateC" +
+      "lusterMetadata\022\007Cluster\022\264\001\n\006Update\022/.yan" +
+      "dex.cloud.mdb.mysql.v1.UpdateClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"V" +
+      "\202\323\344\223\002,2\'/managed-mysql/v1/clusters/{clus" +
+      "ter_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007C" +
+      "luster\022\277\001\n\006Delete\022/.yandex.cloud.mdb.mys" +
+      "ql.v1.DeleteClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"a\202\323\344\223\002)*\'/managed-" +
+      "mysql/v1/clusters/{cluster_id}\262\322*.\n\025Dele" +
+      "teClusterMetadata\022\025google.protobuf.Empty" +
+      "\022\264\001\n\005Start\022..yandex.cloud.mdb.mysql.v1.S" +
+      "tartClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"X\202\323\344\223\002/\"-/managed-mysql/v1" +
+      "/clusters/{cluster_id}:start\262\322*\037\n\024StartC" +
+      "lusterMetadata\022\007Cluster\022\260\001\n\004Stop\022-.yande" +
+      "x.cloud.mdb.mysql.v1.StopClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"V\202\323\344\223" +
+      "\002.\",/managed-mysql/v1/clusters/{cluster_" +
+      "id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clust" +
+      "er\022\263\001\n\004Move\022-.yandex.cloud.mdb.mysql.v1." +
+      "MoveClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"Y\202\323\344\223\0021\",/managed-mysql/v1" +
+      "/clusters/{cluster_id}:move:\001*\262\322*\036\n\023Move" +
+      "ClusterMetadata\022\007Cluster\022\270\001\n\006Backup\022/.ya" +
+      "ndex.cloud.mdb.mysql.v1.BackupClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "Z\202\323\344\223\0020\"./managed-mysql/v1/clusters/{clu" +
+      "ster_id}:backup\262\322* \n\025BackupClusterMetada" +
+      "ta\022\007Cluster\022\262\001\n\007Restore\0220.yandex.cloud.m" +
+      "db.mysql.v1.RestoreClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"R\202\323\344\223\002\'\"\"/m" +
+      "anaged-mysql/v1/clusters:restore:\001*\262\322*!\n" +
+      "\026RestoreClusterMetadata\022\007Cluster\022\351\001\n\025Res" +
+      "cheduleMaintenance\0227.yandex.cloud.mdb.my" +
+      "sql.v1.RescheduleMaintenanceRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"t\202\323\344\223\002B\"=" +
+      "/managed-mysql/v1/clusters/{cluster_id}:" +
+      "rescheduleMaintenance:\001*\262\322*(\n\035Reschedule" +
+      "MaintenanceMetadata\022\007Cluster\022\327\001\n\rStartFa" +
+      "ilover\0226.yandex.cloud.mdb.mysql.v1.Start" +
+      "ClusterFailoverRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"k\202\323\344\223\002:\"5/managed-mysq" +
+      "l/v1/clusters/{cluster_id}:startFailover" +
+      ":\001*\262\322*\'\n\034StartClusterFailoverMetadata\022\007C" +
+      "luster\022\247\001\n\010ListLogs\0221.yandex.cloud.mdb.m" +
+      "ysql.v1.ListClusterLogsRequest\0322.yandex." +
+      "cloud.mdb.mysql.v1.ListClusterLogsRespon" +
+      "se\"4\202\323\344\223\002.\022,/managed-mysql/v1/clusters/{" +
+      "cluster_id}:logs\022\254\001\n\nStreamLogs\0223.yandex" +
+      ".cloud.mdb.mysql.v1.StreamClusterLogsReq" +
+      "uest\032*.yandex.cloud.mdb.mysql.v1.StreamL" +
+      "ogRecord\";\202\323\344\223\0025\0223/managed-mysql/v1/clus" +
+      "ters/{cluster_id}:stream_logs0\001\022\277\001\n\016List" +
+      "Operations\0227.yandex.cloud.mdb.mysql.v1.L" +
+      "istClusterOperationsRequest\0328.yandex.clo" +
+      "ud.mdb.mysql.v1.ListClusterOperationsRes" +
+      "ponse\":\202\323\344\223\0024\0222/managed-mysql/v1/cluster" +
+      "s/{cluster_id}/operations\022\263\001\n\013ListBackup" +
+      "s\0224.yandex.cloud.mdb.mysql.v1.ListCluste" +
+      "rBackupsRequest\0325.yandex.cloud.mdb.mysql" +
+      ".v1.ListClusterBackupsResponse\"7\202\323\344\223\0021\022/" +
+      "/managed-mysql/v1/clusters/{cluster_id}/" +
+      "backups\022\253\001\n\tListHosts\0222.yandex.cloud.mdb" +
+      ".mysql.v1.ListClusterHostsRequest\0323.yand" +
+      "ex.cloud.mdb.mysql.v1.ListClusterHostsRe" +
+      "sponse\"5\202\323\344\223\002/\022-/managed-mysql/v1/cluste" +
+      "rs/{cluster_id}/hosts\022\332\001\n\010AddHosts\0221.yan" +
+      "dex.cloud.mdb.mysql.v1.AddClusterHostsRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"V\202\323\344\223\002.\",/managed-mysql/v1/clusters/{cl" +
-      "uster_id}:stop\262\322*\036\n\023StopClusterMetadata\022" +
-      "\007Cluster\022\263\001\n\004Move\022-.yandex.cloud.mdb.mys" +
-      "ql.v1.MoveClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"Y\202\323\344\223\0021\",/managed-my" +
-      "sql/v1/clusters/{cluster_id}:move:\001*\262\322*\036" +
-      "\n\023MoveClusterMetadata\022\007Cluster\022\270\001\n\006Backu" +
-      "p\022/.yandex.cloud.mdb.mysql.v1.BackupClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"Z\202\323\344\223\0020\"./managed-mysql/v1/cluster" +
-      "s/{cluster_id}:backup\262\322* \n\025BackupCluster" +
-      "Metadata\022\007Cluster\022\262\001\n\007Restore\0220.yandex.c" +
-      "loud.mdb.mysql.v1.RestoreClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"R\202\323\344\223" +
-      "\002\'\"\"/managed-mysql/v1/clusters:restore:\001" +
-      "*\262\322*!\n\026RestoreClusterMetadata\022\007Cluster\022\351" +
-      "\001\n\025RescheduleMaintenance\0227.yandex.cloud." +
-      "mdb.mysql.v1.RescheduleMaintenanceReques" +
-      "t\032!.yandex.cloud.operation.Operation\"t\202\323" +
-      "\344\223\002B\"=/managed-mysql/v1/clusters/{cluste" +
-      "r_id}:rescheduleMaintenance:\001*\262\322*(\n\035Resc" +
-      "heduleMaintenanceMetadata\022\007Cluster\022\327\001\n\rS" +
-      "tartFailover\0226.yandex.cloud.mdb.mysql.v1" +
-      ".StartClusterFailoverRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"k\202\323\344\223\002:\"5/manage" +
-      "d-mysql/v1/clusters/{cluster_id}:startFa" +
-      "ilover:\001*\262\322*\'\n\034StartClusterFailoverMetad" +
-      "ata\022\007Cluster\022\247\001\n\010ListLogs\0221.yandex.cloud" +
-      ".mdb.mysql.v1.ListClusterLogsRequest\0322.y" +
-      "andex.cloud.mdb.mysql.v1.ListClusterLogs" +
-      "Response\"4\202\323\344\223\002.\022,/managed-mysql/v1/clus" +
-      "ters/{cluster_id}:logs\022\254\001\n\nStreamLogs\0223." +
-      "yandex.cloud.mdb.mysql.v1.StreamClusterL" +
-      "ogsRequest\032*.yandex.cloud.mdb.mysql.v1.S" +
-      "treamLogRecord\";\202\323\344\223\0025\0223/managed-mysql/v" +
-      "1/clusters/{cluster_id}:stream_logs0\001\022\277\001" +
-      "\n\016ListOperations\0227.yandex.cloud.mdb.mysq" +
-      "l.v1.ListClusterOperationsRequest\0328.yand" +
-      "ex.cloud.mdb.mysql.v1.ListClusterOperati" +
-      "onsResponse\":\202\323\344\223\0024\0222/managed-mysql/v1/c" +
-      "lusters/{cluster_id}/operations\022\263\001\n\013List" +
-      "Backups\0224.yandex.cloud.mdb.mysql.v1.List" +
-      "ClusterBackupsRequest\0325.yandex.cloud.mdb" +
-      ".mysql.v1.ListClusterBackupsResponse\"7\202\323" +
-      "\344\223\0021\022//managed-mysql/v1/clusters/{cluste" +
-      "r_id}/backups\022\253\001\n\tListHosts\0222.yandex.clo" +
-      "ud.mdb.mysql.v1.ListClusterHostsRequest\032" +
-      "3.yandex.cloud.mdb.mysql.v1.ListClusterH" +
-      "ostsResponse\"5\202\323\344\223\002/\022-/managed-mysql/v1/" +
-      "clusters/{cluster_id}/hosts\022\332\001\n\010AddHosts" +
-      "\0221.yandex.cloud.mdb.mysql.v1.AddClusterH" +
-      "ostsRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"x\202\323\344\223\002>\"9/managed-mysql/v1/cluste" +
-      "rs/{cluster_id}/hosts:batchCreate:\001*\262\322*0" +
-      "\n\027AddClusterHostsMetadata\022\025google.protob" +
-      "uf.Empty\022\343\001\n\013UpdateHosts\0224.yandex.cloud." +
-      "mdb.mysql.v1.UpdateClusterHostsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"{\202\323\344\223\002" +
-      ">\"9/managed-mysql/v1/clusters/{cluster_i" +
-      "d}/hosts:batchUpdate:\001*\262\322*3\n\032UpdateClust" +
-      "erHostsMetadata\022\025google.protobuf.Empty\022\343" +
-      "\001\n\013DeleteHosts\0224.yandex.cloud.mdb.mysql." +
-      "v1.DeleteClusterHostsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"{\202\323\344\223\002>\"9/manage" +
-      "d-mysql/v1/clusters/{cluster_id}/hosts:b" +
-      "atchDelete:\001*\262\322*3\n\032DeleteClusterHostsMet" +
-      "adata\022\025google.protobuf.EmptyBd\n\035yandex.c" +
-      "loud.api.mdb.mysql.v1ZCgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/mdb/mysq" +
-      "l/v1;mysqlb\006proto3"
+      "\"x\202\323\344\223\002>\"9/managed-mysql/v1/clusters/{cl" +
+      "uster_id}/hosts:batchCreate:\001*\262\322*0\n\027AddC" +
+      "lusterHostsMetadata\022\025google.protobuf.Emp" +
+      "ty\022\343\001\n\013UpdateHosts\0224.yandex.cloud.mdb.my" +
+      "sql.v1.UpdateClusterHostsRequest\032!.yande" +
+      "x.cloud.operation.Operation\"{\202\323\344\223\002>\"9/ma" +
+      "naged-mysql/v1/clusters/{cluster_id}/hos" +
+      "ts:batchUpdate:\001*\262\322*3\n\032UpdateClusterHost" +
+      "sMetadata\022\025google.protobuf.Empty\022\343\001\n\013Del" +
+      "eteHosts\0224.yandex.cloud.mdb.mysql.v1.Del" +
+      "eteClusterHostsRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"{\202\323\344\223\002>\"9/managed-mysq" +
+      "l/v1/clusters/{cluster_id}/hosts:batchDe" +
+      "lete:\001*\262\322*3\n\032DeleteClusterHostsMetadata\022" +
+      "\025google.protobuf.EmptyBd\n\035yandex.cloud.a" +
+      "pi.mdb.mysql.v1ZCgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/mdb/mysql/v1;m" +
+      "ysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -51011,7 +51276,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_descriptor,
-        new java.lang.String[] { "BackupId", "Time", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", });
+        new java.lang.String[] { "BackupId", "Time", "Name", "Description", "Labels", "Environment", "ConfigSpec", "HostSpecs", "NetworkId", "FolderId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", "MaintenanceWindow", });
     internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mysql_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new

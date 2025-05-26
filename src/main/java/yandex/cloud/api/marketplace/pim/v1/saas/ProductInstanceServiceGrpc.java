@@ -3,6 +3,9 @@ package yandex.cloud.api.marketplace.pim.v1.saas;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing product instances.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,10 +125,16 @@ public final class ProductInstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing product instances.
+   * </pre>
    */
   public static abstract class ProductInstanceServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified product instance.
+     * </pre>
      */
     public void get(yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceServiceOuterClass.GetProductInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.ProductInstance> responseObserver) {
@@ -133,6 +142,9 @@ public final class ProductInstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Claims a product instance - activates it and optionally locks to subscription
+     * </pre>
      */
     public void claim(yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceServiceOuterClass.ClaimProductInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -160,6 +172,9 @@ public final class ProductInstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing product instances.
+   * </pre>
    */
   public static final class ProductInstanceServiceStub extends io.grpc.stub.AbstractAsyncStub<ProductInstanceServiceStub> {
     private ProductInstanceServiceStub(
@@ -174,6 +189,9 @@ public final class ProductInstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified product instance.
+     * </pre>
      */
     public void get(yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceServiceOuterClass.GetProductInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.ProductInstance> responseObserver) {
@@ -182,6 +200,9 @@ public final class ProductInstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Claims a product instance - activates it and optionally locks to subscription
+     * </pre>
      */
     public void claim(yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceServiceOuterClass.ClaimProductInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -191,6 +212,9 @@ public final class ProductInstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing product instances.
+   * </pre>
    */
   public static final class ProductInstanceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProductInstanceServiceBlockingStub> {
     private ProductInstanceServiceBlockingStub(
@@ -205,6 +229,9 @@ public final class ProductInstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified product instance.
+     * </pre>
      */
     public yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.ProductInstance get(yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceServiceOuterClass.GetProductInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -212,6 +239,9 @@ public final class ProductInstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Claims a product instance - activates it and optionally locks to subscription
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation claim(yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceServiceOuterClass.ClaimProductInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -220,6 +250,9 @@ public final class ProductInstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing product instances.
+   * </pre>
    */
   public static final class ProductInstanceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProductInstanceServiceFutureStub> {
     private ProductInstanceServiceFutureStub(
@@ -234,6 +267,9 @@ public final class ProductInstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified product instance.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceOuterClass.ProductInstance> get(
         yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceServiceOuterClass.GetProductInstanceRequest request) {
@@ -242,6 +278,9 @@ public final class ProductInstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Claims a product instance - activates it and optionally locks to subscription
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> claim(
         yandex.cloud.api.marketplace.pim.v1.saas.ProductInstanceServiceOuterClass.ClaimProductInstanceRequest request) {

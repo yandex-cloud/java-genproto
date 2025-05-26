@@ -316,7 +316,16 @@ public final class ThresholdsOuterClass {
        * Threshold value
        * </pre>
        *
-       * <code>double value = 2;</code>
+       * <code>optional double value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      boolean hasValue();
+      /**
+       * <pre>
+       * Threshold value
+       * </pre>
+       *
+       * <code>optional double value = 2;</code>
        * @return The value.
        */
       double getValue();
@@ -357,6 +366,7 @@ public final class ThresholdsOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
+        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -374,7 +384,7 @@ public final class ThresholdsOuterClass {
                 break;
               }
               case 17: {
-
+                bitField0_ |= 0x00000001;
                 value_ = input.readDouble();
                 break;
               }
@@ -410,6 +420,7 @@ public final class ThresholdsOuterClass {
                 yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Item.class, yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Item.Builder.class);
       }
 
+      private int bitField0_;
       public static final int COLOR_FIELD_NUMBER = 1;
       private volatile java.lang.Object color_;
       /**
@@ -463,7 +474,19 @@ public final class ThresholdsOuterClass {
        * Threshold value
        * </pre>
        *
-       * <code>double value = 2;</code>
+       * <code>optional double value = 2;</code>
+       * @return Whether the value field is set.
+       */
+      @java.lang.Override
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Threshold value
+       * </pre>
+       *
+       * <code>optional double value = 2;</code>
        * @return The value.
        */
       @java.lang.Override
@@ -488,7 +511,7 @@ public final class ThresholdsOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(color_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, color_);
         }
-        if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           output.writeDouble(2, value_);
         }
         unknownFields.writeTo(output);
@@ -503,7 +526,7 @@ public final class ThresholdsOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(color_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, color_);
         }
-        if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(2, value_);
         }
@@ -524,9 +547,12 @@ public final class ThresholdsOuterClass {
 
         if (!getColor()
             .equals(other.getColor())) return false;
-        if (java.lang.Double.doubleToLongBits(getValue())
-            != java.lang.Double.doubleToLongBits(
-                other.getValue())) return false;
+        if (hasValue() != other.hasValue()) return false;
+        if (hasValue()) {
+          if (java.lang.Double.doubleToLongBits(getValue())
+              != java.lang.Double.doubleToLongBits(
+                  other.getValue())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -540,9 +566,11 @@ public final class ThresholdsOuterClass {
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + COLOR_FIELD_NUMBER;
         hash = (53 * hash) + getColor().hashCode();
-        hash = (37 * hash) + VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-            java.lang.Double.doubleToLongBits(getValue()));
+        if (hasValue()) {
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getValue()));
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -679,7 +707,7 @@ public final class ThresholdsOuterClass {
           color_ = "";
 
           value_ = 0D;
-
+          bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
 
@@ -706,8 +734,14 @@ public final class ThresholdsOuterClass {
         @java.lang.Override
         public yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Item buildPartial() {
           yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Item result = new yandex.cloud.api.monitoring.v3.ThresholdsOuterClass.Thresholds.Item(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           result.color_ = color_;
-          result.value_ = value_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.value_ = value_;
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -760,7 +794,7 @@ public final class ThresholdsOuterClass {
             color_ = other.color_;
             onChanged();
           }
-          if (other.getValue() != 0D) {
+          if (other.hasValue()) {
             setValue(other.getValue());
           }
           this.mergeUnknownFields(other.unknownFields);
@@ -791,6 +825,7 @@ public final class ThresholdsOuterClass {
           }
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object color_ = "";
         /**
@@ -894,7 +929,19 @@ public final class ThresholdsOuterClass {
          * Threshold value
          * </pre>
          *
-         * <code>double value = 2;</code>
+         * <code>optional double value = 2;</code>
+         * @return Whether the value field is set.
+         */
+        @java.lang.Override
+        public boolean hasValue() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Threshold value
+         * </pre>
+         *
+         * <code>optional double value = 2;</code>
          * @return The value.
          */
         @java.lang.Override
@@ -906,12 +953,12 @@ public final class ThresholdsOuterClass {
          * Threshold value
          * </pre>
          *
-         * <code>double value = 2;</code>
+         * <code>optional double value = 2;</code>
          * @param value The value to set.
          * @return This builder for chaining.
          */
         public Builder setValue(double value) {
-          
+          bitField0_ |= 0x00000001;
           value_ = value;
           onChanged();
           return this;
@@ -921,11 +968,11 @@ public final class ThresholdsOuterClass {
          * Threshold value
          * </pre>
          *
-         * <code>double value = 2;</code>
+         * <code>optional double value = 2;</code>
          * @return This builder for chaining.
          */
         public Builder clearValue() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           value_ = 0D;
           onChanged();
           return this;
@@ -1886,16 +1933,17 @@ public final class ThresholdsOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/monitoring/v3/thresholds." +
-      "proto\022\032yandex.cloud.monitoring.v3\"\366\001\n\nTh" +
+      "proto\022\032yandex.cloud.monitoring.v3\"\205\002\n\nTh" +
       "resholds\022:\n\005items\030\001 \003(\0132+.yandex.cloud.m" +
       "onitoring.v3.Thresholds.Item\022B\n\tshow_mod" +
       "e\030\002 \001(\0162/.yandex.cloud.monitoring.v3.Thr" +
-      "esholds.ShowMode\032$\n\004Item\022\r\n\005color\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\001\"B\n\010ShowMode\022\031\n\025SHOW_MODE_" +
-      "UNSPECIFIED\020\000\022\033\n\027SHOW_MODE_CONSTANT_LINE" +
-      "\020\001Bk\n\036yandex.cloud.api.monitoring.v3ZIgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/monitoring/v3;monitoringb\006proto3"
+      "esholds.ShowMode\0323\n\004Item\022\r\n\005color\030\001 \001(\t\022" +
+      "\022\n\005value\030\002 \001(\001H\000\210\001\001B\010\n\006_value\"B\n\010ShowMod" +
+      "e\022\031\n\025SHOW_MODE_UNSPECIFIED\020\000\022\033\n\027SHOW_MOD" +
+      "E_CONSTANT_LINE\020\001Bk\n\036yandex.cloud.api.mo" +
+      "nitoring.v3ZIgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/monitoring/v3;moni" +
+      "toringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1912,7 +1960,7 @@ public final class ThresholdsOuterClass {
     internal_static_yandex_cloud_monitoring_v3_Thresholds_Item_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_Thresholds_Item_descriptor,
-        new java.lang.String[] { "Color", "Value", });
+        new java.lang.String[] { "Color", "Value", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -7865,6 +7865,39 @@ public final class Common {
      * <code>.yandex.cloud.ai.assistants.v1.RephraserOptions rephraser_options = 3;</code>
      */
     yandex.cloud.api.ai.assistants.v1.Common.RephraserOptionsOrBuilder getRephraserOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * Defines the strategy for triggering search.
+     * Controls whether search results are always included or returned only when
+     * the model explicitly calls the tool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+     * @return Whether the callStrategy field is set.
+     */
+    boolean hasCallStrategy();
+    /**
+     * <pre>
+     * Defines the strategy for triggering search.
+     * Controls whether search results are always included or returned only when
+     * the model explicitly calls the tool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+     * @return The callStrategy.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.CallStrategy getCallStrategy();
+    /**
+     * <pre>
+     * Defines the strategy for triggering search.
+     * Controls whether search results are always included or returned only when
+     * the model explicitly calls the tool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.CallStrategyOrBuilder getCallStrategyOrBuilder();
   }
   /**
    * <pre>
@@ -7948,6 +7981,19 @@ public final class Common {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(rephraserOptions_);
                 rephraserOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.Builder subBuilder = null;
+              if (callStrategy_ != null) {
+                subBuilder = callStrategy_.toBuilder();
+              }
+              callStrategy_ = input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(callStrategy_);
+                callStrategy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8126,6 +8172,50 @@ public final class Common {
       return getRephraserOptions();
     }
 
+    public static final int CALL_STRATEGY_FIELD_NUMBER = 4;
+    private yandex.cloud.api.ai.assistants.v1.Common.CallStrategy callStrategy_;
+    /**
+     * <pre>
+     * Defines the strategy for triggering search.
+     * Controls whether search results are always included or returned only when
+     * the model explicitly calls the tool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+     * @return Whether the callStrategy field is set.
+     */
+    @java.lang.Override
+    public boolean hasCallStrategy() {
+      return callStrategy_ != null;
+    }
+    /**
+     * <pre>
+     * Defines the strategy for triggering search.
+     * Controls whether search results are always included or returned only when
+     * the model explicitly calls the tool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+     * @return The callStrategy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy getCallStrategy() {
+      return callStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.getDefaultInstance() : callStrategy_;
+    }
+    /**
+     * <pre>
+     * Defines the strategy for triggering search.
+     * Controls whether search results are always included or returned only when
+     * the model explicitly calls the tool.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.CallStrategyOrBuilder getCallStrategyOrBuilder() {
+      return getCallStrategy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8148,6 +8238,9 @@ public final class Common {
       }
       if (rephraserOptions_ != null) {
         output.writeMessage(3, getRephraserOptions());
+      }
+      if (callStrategy_ != null) {
+        output.writeMessage(4, getCallStrategy());
       }
       unknownFields.writeTo(output);
     }
@@ -8173,6 +8266,10 @@ public final class Common {
       if (rephraserOptions_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRephraserOptions());
+      }
+      if (callStrategy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCallStrategy());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8201,6 +8298,11 @@ public final class Common {
         if (!getRephraserOptions()
             .equals(other.getRephraserOptions())) return false;
       }
+      if (hasCallStrategy() != other.hasCallStrategy()) return false;
+      if (hasCallStrategy()) {
+        if (!getCallStrategy()
+            .equals(other.getCallStrategy())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8223,6 +8325,10 @@ public final class Common {
       if (hasRephraserOptions()) {
         hash = (37 * hash) + REPHRASER_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getRephraserOptions().hashCode();
+      }
+      if (hasCallStrategy()) {
+        hash = (37 * hash) + CALL_STRATEGY_FIELD_NUMBER;
+        hash = (53 * hash) + getCallStrategy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8375,6 +8481,12 @@ public final class Common {
           rephraserOptions_ = null;
           rephraserOptionsBuilder_ = null;
         }
+        if (callStrategyBuilder_ == null) {
+          callStrategy_ = null;
+        } else {
+          callStrategy_ = null;
+          callStrategyBuilder_ = null;
+        }
         return this;
       }
 
@@ -8416,6 +8528,11 @@ public final class Common {
           result.rephraserOptions_ = rephraserOptions_;
         } else {
           result.rephraserOptions_ = rephraserOptionsBuilder_.build();
+        }
+        if (callStrategyBuilder_ == null) {
+          result.callStrategy_ = callStrategy_;
+        } else {
+          result.callStrategy_ = callStrategyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8480,6 +8597,9 @@ public final class Common {
         }
         if (other.hasRephraserOptions()) {
           mergeRephraserOptions(other.getRephraserOptions());
+        }
+        if (other.hasCallStrategy()) {
+          mergeCallStrategy(other.getCallStrategy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9002,6 +9122,179 @@ public final class Common {
         }
         return rephraserOptionsBuilder_;
       }
+
+      private yandex.cloud.api.ai.assistants.v1.Common.CallStrategy callStrategy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.Builder, yandex.cloud.api.ai.assistants.v1.Common.CallStrategyOrBuilder> callStrategyBuilder_;
+      /**
+       * <pre>
+       * Defines the strategy for triggering search.
+       * Controls whether search results are always included or returned only when
+       * the model explicitly calls the tool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+       * @return Whether the callStrategy field is set.
+       */
+      public boolean hasCallStrategy() {
+        return callStrategyBuilder_ != null || callStrategy_ != null;
+      }
+      /**
+       * <pre>
+       * Defines the strategy for triggering search.
+       * Controls whether search results are always included or returned only when
+       * the model explicitly calls the tool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+       * @return The callStrategy.
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy getCallStrategy() {
+        if (callStrategyBuilder_ == null) {
+          return callStrategy_ == null ? yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.getDefaultInstance() : callStrategy_;
+        } else {
+          return callStrategyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Defines the strategy for triggering search.
+       * Controls whether search results are always included or returned only when
+       * the model explicitly calls the tool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+       */
+      public Builder setCallStrategy(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy value) {
+        if (callStrategyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          callStrategy_ = value;
+          onChanged();
+        } else {
+          callStrategyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines the strategy for triggering search.
+       * Controls whether search results are always included or returned only when
+       * the model explicitly calls the tool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+       */
+      public Builder setCallStrategy(
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.Builder builderForValue) {
+        if (callStrategyBuilder_ == null) {
+          callStrategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          callStrategyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines the strategy for triggering search.
+       * Controls whether search results are always included or returned only when
+       * the model explicitly calls the tool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+       */
+      public Builder mergeCallStrategy(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy value) {
+        if (callStrategyBuilder_ == null) {
+          if (callStrategy_ != null) {
+            callStrategy_ =
+              yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.newBuilder(callStrategy_).mergeFrom(value).buildPartial();
+          } else {
+            callStrategy_ = value;
+          }
+          onChanged();
+        } else {
+          callStrategyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines the strategy for triggering search.
+       * Controls whether search results are always included or returned only when
+       * the model explicitly calls the tool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+       */
+      public Builder clearCallStrategy() {
+        if (callStrategyBuilder_ == null) {
+          callStrategy_ = null;
+          onChanged();
+        } else {
+          callStrategy_ = null;
+          callStrategyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Defines the strategy for triggering search.
+       * Controls whether search results are always included or returned only when
+       * the model explicitly calls the tool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.Builder getCallStrategyBuilder() {
+        
+        onChanged();
+        return getCallStrategyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Defines the strategy for triggering search.
+       * Controls whether search results are always included or returned only when
+       * the model explicitly calls the tool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategyOrBuilder getCallStrategyOrBuilder() {
+        if (callStrategyBuilder_ != null) {
+          return callStrategyBuilder_.getMessageOrBuilder();
+        } else {
+          return callStrategy_ == null ?
+              yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.getDefaultInstance() : callStrategy_;
+        }
+      }
+      /**
+       * <pre>
+       * Defines the strategy for triggering search.
+       * Controls whether search results are always included or returned only when
+       * the model explicitly calls the tool.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy call_strategy = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.Builder, yandex.cloud.api.ai.assistants.v1.Common.CallStrategyOrBuilder> 
+          getCallStrategyFieldBuilder() {
+        if (callStrategyBuilder_ == null) {
+          callStrategyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.CallStrategy, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.Builder, yandex.cloud.api.ai.assistants.v1.Common.CallStrategyOrBuilder>(
+                  getCallStrategy(),
+                  getParentForChildren(),
+                  isClean());
+          callStrategy_ = null;
+        }
+        return callStrategyBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9050,6 +9343,2187 @@ public final class Common {
 
     @java.lang.Override
     public yandex.cloud.api.ai.assistants.v1.Common.SearchIndexTool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CallStrategyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.CallStrategy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+     * @return Whether the alwaysCall field is set.
+     */
+    boolean hasAlwaysCall();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+     * @return The alwaysCall.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall getAlwaysCall();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCallOrBuilder getAlwaysCallOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+     * @return Whether the autoCall field is set.
+     */
+    boolean hasAutoCall();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+     * @return The autoCall.
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall getAutoCall();
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+     */
+    yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCallOrBuilder getAutoCallOrBuilder();
+
+    public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.StrategyCase getStrategyCase();
+  }
+  /**
+   * <pre>
+   * Defines when the assistant uses the search tool.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.ai.assistants.v1.CallStrategy}
+   */
+  public static final class CallStrategy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.CallStrategy)
+      CallStrategyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CallStrategy.newBuilder() to construct.
+    private CallStrategy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CallStrategy() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CallStrategy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CallStrategy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.Builder subBuilder = null;
+              if (strategyCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_).toBuilder();
+              }
+              strategy_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_);
+                strategy_ = subBuilder.buildPartial();
+              }
+              strategyCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.Builder subBuilder = null;
+              if (strategyCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_).toBuilder();
+              }
+              strategy_ =
+                  input.readMessage(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_);
+                strategy_ = subBuilder.buildPartial();
+              }
+              strategyCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.class, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.Builder.class);
+    }
+
+    public interface AlwaysCallOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * <pre>
+     * Always includes retrieved search results in the prompt.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall}
+     */
+    public static final class AlwaysCall extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall)
+        AlwaysCallOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AlwaysCall.newBuilder() to construct.
+      private AlwaysCall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AlwaysCall() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AlwaysCall();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AlwaysCall(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.class, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall other = (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Always includes retrieved search results in the prompt.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall)
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCallOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.class, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall build() {
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall buildPartial() {
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall result = new yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) {
+            return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall other) {
+          if (other == yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall)
+      private static final yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall();
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AlwaysCall>
+          PARSER = new com.google.protobuf.AbstractParser<AlwaysCall>() {
+        @java.lang.Override
+        public AlwaysCall parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AlwaysCall(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AlwaysCall> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AlwaysCall> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AutoCallOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The name of the tool as exposed to the model.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      java.lang.String getName();
+      /**
+       * <pre>
+       * The name of the tool as exposed to the model.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <pre>
+       * Required instruction that helps the model decide when to call the tool.
+       * </pre>
+       *
+       * <code>string instruction = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The instruction.
+       */
+      java.lang.String getInstruction();
+      /**
+       * <pre>
+       * Required instruction that helps the model decide when to call the tool.
+       * </pre>
+       *
+       * <code>string instruction = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for instruction.
+       */
+      com.google.protobuf.ByteString
+          getInstructionBytes();
+    }
+    /**
+     * <pre>
+     * Exposes the tool as a callable function.
+     * The model decides when to trigger search based on the instruction.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall}
+     */
+    public static final class AutoCall extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall)
+        AutoCallOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AutoCall.newBuilder() to construct.
+      private AutoCall(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AutoCall() {
+        name_ = "";
+        instruction_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AutoCall();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AutoCall(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                instruction_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.class, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <pre>
+       * The name of the tool as exposed to the model.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      @java.lang.Override
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the tool as exposed to the model.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int INSTRUCTION_FIELD_NUMBER = 2;
+      private volatile java.lang.Object instruction_;
+      /**
+       * <pre>
+       * Required instruction that helps the model decide when to call the tool.
+       * </pre>
+       *
+       * <code>string instruction = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The instruction.
+       */
+      @java.lang.Override
+      public java.lang.String getInstruction() {
+        java.lang.Object ref = instruction_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instruction_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required instruction that helps the model decide when to call the tool.
+       * </pre>
+       *
+       * <code>string instruction = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for instruction.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getInstructionBytes() {
+        java.lang.Object ref = instruction_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instruction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instruction_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, instruction_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(instruction_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, instruction_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall other = (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) obj;
+
+        if (!getName()
+            .equals(other.getName())) return false;
+        if (!getInstruction()
+            .equals(other.getInstruction())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (37 * hash) + INSTRUCTION_FIELD_NUMBER;
+        hash = (53 * hash) + getInstruction().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Exposes the tool as a callable function.
+       * The model decides when to trigger search based on the instruction.
+       * </pre>
+       *
+       * Protobuf type {@code yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall)
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCallOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.class, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          instruction_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall build() {
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall buildPartial() {
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall result = new yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall(this);
+          result.name_ = name_;
+          result.instruction_ = instruction_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) {
+            return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall other) {
+          if (other == yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (!other.getInstruction().isEmpty()) {
+            instruction_ = other.instruction_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <pre>
+         * The name of the tool as exposed to the model.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @return The name.
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The name of the tool as exposed to the model.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @return The bytes for name.
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The name of the tool as exposed to the model.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The name of the tool as exposed to the model.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The name of the tool as exposed to the model.
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object instruction_ = "";
+        /**
+         * <pre>
+         * Required instruction that helps the model decide when to call the tool.
+         * </pre>
+         *
+         * <code>string instruction = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The instruction.
+         */
+        public java.lang.String getInstruction() {
+          java.lang.Object ref = instruction_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            instruction_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required instruction that helps the model decide when to call the tool.
+         * </pre>
+         *
+         * <code>string instruction = 2 [(.yandex.cloud.required) = true];</code>
+         * @return The bytes for instruction.
+         */
+        public com.google.protobuf.ByteString
+            getInstructionBytes() {
+          java.lang.Object ref = instruction_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            instruction_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required instruction that helps the model decide when to call the tool.
+         * </pre>
+         *
+         * <code>string instruction = 2 [(.yandex.cloud.required) = true];</code>
+         * @param value The instruction to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInstruction(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          instruction_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required instruction that helps the model decide when to call the tool.
+         * </pre>
+         *
+         * <code>string instruction = 2 [(.yandex.cloud.required) = true];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearInstruction() {
+          
+          instruction_ = getDefaultInstance().getInstruction();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required instruction that helps the model decide when to call the tool.
+         * </pre>
+         *
+         * <code>string instruction = 2 [(.yandex.cloud.required) = true];</code>
+         * @param value The bytes for instruction to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInstructionBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          instruction_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall)
+      private static final yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall();
+      }
+
+      public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AutoCall>
+          PARSER = new com.google.protobuf.AbstractParser<AutoCall>() {
+        @java.lang.Override
+        public AutoCall parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AutoCall(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AutoCall> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AutoCall> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int strategyCase_ = 0;
+    private java.lang.Object strategy_;
+    public enum StrategyCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ALWAYS_CALL(1),
+      AUTO_CALL(2),
+      STRATEGY_NOT_SET(0);
+      private final int value;
+      private StrategyCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static StrategyCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static StrategyCase forNumber(int value) {
+        switch (value) {
+          case 1: return ALWAYS_CALL;
+          case 2: return AUTO_CALL;
+          case 0: return STRATEGY_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public StrategyCase
+    getStrategyCase() {
+      return StrategyCase.forNumber(
+          strategyCase_);
+    }
+
+    public static final int ALWAYS_CALL_FIELD_NUMBER = 1;
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+     * @return Whether the alwaysCall field is set.
+     */
+    @java.lang.Override
+    public boolean hasAlwaysCall() {
+      return strategyCase_ == 1;
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+     * @return The alwaysCall.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall getAlwaysCall() {
+      if (strategyCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCallOrBuilder getAlwaysCallOrBuilder() {
+      if (strategyCase_ == 1) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.getDefaultInstance();
+    }
+
+    public static final int AUTO_CALL_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+     * @return Whether the autoCall field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoCall() {
+      return strategyCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+     * @return The autoCall.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall getAutoCall() {
+      if (strategyCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCallOrBuilder getAutoCallOrBuilder() {
+      if (strategyCase_ == 2) {
+         return (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_;
+      }
+      return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (strategyCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_);
+      }
+      if (strategyCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (strategyCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_);
+      }
+      if (strategyCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.assistants.v1.Common.CallStrategy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.assistants.v1.Common.CallStrategy other = (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy) obj;
+
+      if (!getStrategyCase().equals(other.getStrategyCase())) return false;
+      switch (strategyCase_) {
+        case 1:
+          if (!getAlwaysCall()
+              .equals(other.getAlwaysCall())) return false;
+          break;
+        case 2:
+          if (!getAutoCall()
+              .equals(other.getAutoCall())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (strategyCase_) {
+        case 1:
+          hash = (37 * hash) + ALWAYS_CALL_FIELD_NUMBER;
+          hash = (53 * hash) + getAlwaysCall().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + AUTO_CALL_FIELD_NUMBER;
+          hash = (53 * hash) + getAutoCall().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Defines when the assistant uses the search tool.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.ai.assistants.v1.CallStrategy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.assistants.v1.CallStrategy)
+        yandex.cloud.api.ai.assistants.v1.Common.CallStrategyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.class, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        strategyCase_ = 0;
+        strategy_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy build() {
+        yandex.cloud.api.ai.assistants.v1.Common.CallStrategy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy buildPartial() {
+        yandex.cloud.api.ai.assistants.v1.Common.CallStrategy result = new yandex.cloud.api.ai.assistants.v1.Common.CallStrategy(this);
+        if (strategyCase_ == 1) {
+          if (alwaysCallBuilder_ == null) {
+            result.strategy_ = strategy_;
+          } else {
+            result.strategy_ = alwaysCallBuilder_.build();
+          }
+        }
+        if (strategyCase_ == 2) {
+          if (autoCallBuilder_ == null) {
+            result.strategy_ = strategy_;
+          } else {
+            result.strategy_ = autoCallBuilder_.build();
+          }
+        }
+        result.strategyCase_ = strategyCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.assistants.v1.Common.CallStrategy) {
+          return mergeFrom((yandex.cloud.api.ai.assistants.v1.Common.CallStrategy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy other) {
+        if (other == yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.getDefaultInstance()) return this;
+        switch (other.getStrategyCase()) {
+          case ALWAYS_CALL: {
+            mergeAlwaysCall(other.getAlwaysCall());
+            break;
+          }
+          case AUTO_CALL: {
+            mergeAutoCall(other.getAutoCall());
+            break;
+          }
+          case STRATEGY_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.assistants.v1.Common.CallStrategy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int strategyCase_ = 0;
+      private java.lang.Object strategy_;
+      public StrategyCase
+          getStrategyCase() {
+        return StrategyCase.forNumber(
+            strategyCase_);
+      }
+
+      public Builder clearStrategy() {
+        strategyCase_ = 0;
+        strategy_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCallOrBuilder> alwaysCallBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+       * @return Whether the alwaysCall field is set.
+       */
+      @java.lang.Override
+      public boolean hasAlwaysCall() {
+        return strategyCase_ == 1;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+       * @return The alwaysCall.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall getAlwaysCall() {
+        if (alwaysCallBuilder_ == null) {
+          if (strategyCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.getDefaultInstance();
+        } else {
+          if (strategyCase_ == 1) {
+            return alwaysCallBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+       */
+      public Builder setAlwaysCall(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall value) {
+        if (alwaysCallBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          strategy_ = value;
+          onChanged();
+        } else {
+          alwaysCallBuilder_.setMessage(value);
+        }
+        strategyCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+       */
+      public Builder setAlwaysCall(
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.Builder builderForValue) {
+        if (alwaysCallBuilder_ == null) {
+          strategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          alwaysCallBuilder_.setMessage(builderForValue.build());
+        }
+        strategyCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+       */
+      public Builder mergeAlwaysCall(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall value) {
+        if (alwaysCallBuilder_ == null) {
+          if (strategyCase_ == 1 &&
+              strategy_ != yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.getDefaultInstance()) {
+            strategy_ = yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            strategy_ = value;
+          }
+          onChanged();
+        } else {
+          if (strategyCase_ == 1) {
+            alwaysCallBuilder_.mergeFrom(value);
+          }
+          alwaysCallBuilder_.setMessage(value);
+        }
+        strategyCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+       */
+      public Builder clearAlwaysCall() {
+        if (alwaysCallBuilder_ == null) {
+          if (strategyCase_ == 1) {
+            strategyCase_ = 0;
+            strategy_ = null;
+            onChanged();
+          }
+        } else {
+          if (strategyCase_ == 1) {
+            strategyCase_ = 0;
+            strategy_ = null;
+          }
+          alwaysCallBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.Builder getAlwaysCallBuilder() {
+        return getAlwaysCallFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCallOrBuilder getAlwaysCallOrBuilder() {
+        if ((strategyCase_ == 1) && (alwaysCallBuilder_ != null)) {
+          return alwaysCallBuilder_.getMessageOrBuilder();
+        } else {
+          if (strategyCase_ == 1) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AlwaysCall always_call = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCallOrBuilder> 
+          getAlwaysCallFieldBuilder() {
+        if (alwaysCallBuilder_ == null) {
+          if (!(strategyCase_ == 1)) {
+            strategy_ = yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.getDefaultInstance();
+          }
+          alwaysCallBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCallOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AlwaysCall) strategy_,
+                  getParentForChildren(),
+                  isClean());
+          strategy_ = null;
+        }
+        strategyCase_ = 1;
+        onChanged();;
+        return alwaysCallBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCallOrBuilder> autoCallBuilder_;
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+       * @return Whether the autoCall field is set.
+       */
+      @java.lang.Override
+      public boolean hasAutoCall() {
+        return strategyCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+       * @return The autoCall.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall getAutoCall() {
+        if (autoCallBuilder_ == null) {
+          if (strategyCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.getDefaultInstance();
+        } else {
+          if (strategyCase_ == 2) {
+            return autoCallBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+       */
+      public Builder setAutoCall(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall value) {
+        if (autoCallBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          strategy_ = value;
+          onChanged();
+        } else {
+          autoCallBuilder_.setMessage(value);
+        }
+        strategyCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+       */
+      public Builder setAutoCall(
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.Builder builderForValue) {
+        if (autoCallBuilder_ == null) {
+          strategy_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoCallBuilder_.setMessage(builderForValue.build());
+        }
+        strategyCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+       */
+      public Builder mergeAutoCall(yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall value) {
+        if (autoCallBuilder_ == null) {
+          if (strategyCase_ == 2 &&
+              strategy_ != yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.getDefaultInstance()) {
+            strategy_ = yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.newBuilder((yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            strategy_ = value;
+          }
+          onChanged();
+        } else {
+          if (strategyCase_ == 2) {
+            autoCallBuilder_.mergeFrom(value);
+          }
+          autoCallBuilder_.setMessage(value);
+        }
+        strategyCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+       */
+      public Builder clearAutoCall() {
+        if (autoCallBuilder_ == null) {
+          if (strategyCase_ == 2) {
+            strategyCase_ = 0;
+            strategy_ = null;
+            onChanged();
+          }
+        } else {
+          if (strategyCase_ == 2) {
+            strategyCase_ = 0;
+            strategy_ = null;
+          }
+          autoCallBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+       */
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.Builder getAutoCallBuilder() {
+        return getAutoCallFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCallOrBuilder getAutoCallOrBuilder() {
+        if ((strategyCase_ == 2) && (autoCallBuilder_ != null)) {
+          return autoCallBuilder_.getMessageOrBuilder();
+        } else {
+          if (strategyCase_ == 2) {
+            return (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_;
+          }
+          return yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ai.assistants.v1.CallStrategy.AutoCall auto_call = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCallOrBuilder> 
+          getAutoCallFieldBuilder() {
+        if (autoCallBuilder_ == null) {
+          if (!(strategyCase_ == 2)) {
+            strategy_ = yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.getDefaultInstance();
+          }
+          autoCallBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall.Builder, yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCallOrBuilder>(
+                  (yandex.cloud.api.ai.assistants.v1.Common.CallStrategy.AutoCall) strategy_,
+                  getParentForChildren(),
+                  isClean());
+          strategy_ = null;
+        }
+        strategyCase_ = 2;
+        onChanged();;
+        return autoCallBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.assistants.v1.CallStrategy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.assistants.v1.CallStrategy)
+    private static final yandex.cloud.api.ai.assistants.v1.Common.CallStrategy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.assistants.v1.Common.CallStrategy();
+    }
+
+    public static yandex.cloud.api.ai.assistants.v1.Common.CallStrategy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CallStrategy>
+        PARSER = new com.google.protobuf.AbstractParser<CallStrategy>() {
+      @java.lang.Override
+      public CallStrategy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CallStrategy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CallStrategy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CallStrategy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.assistants.v1.Common.CallStrategy getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12624,6 +15098,21 @@ public final class Common {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12681,22 +15170,30 @@ public final class Common {
       "dex.cloud.ai.assistants.v1.FunctionResul" +
       "tH\000B\020\n\016ToolResultType\"Q\n\016ToolResultList\022" +
       "?\n\014tool_results\030\001 \003(\0132).yandex.cloud.ai." +
-      "assistants.v1.ToolResult\"\255\001\n\017SearchIndex" +
+      "assistants.v1.ToolResult\"\361\001\n\017SearchIndex" +
       "Tool\022\030\n\020search_index_ids\030\001 \003(\t\0224\n\017max_nu" +
       "m_results\030\002 \001(\0132\033.google.protobuf.Int64V" +
       "alue\022J\n\021rephraser_options\030\003 \001(\0132/.yandex" +
       ".cloud.ai.assistants.v1.RephraserOptions" +
-      "\"^\n\014FunctionTool\022\014\n\004name\030\001 \001(\t\022\023\n\013descri" +
-      "ption\030\002 \001(\t\022+\n\nparameters\030\003 \001(\0132\027.google" +
-      ".protobuf.Struct\"H\n\014FunctionCall\022\014\n\004name" +
-      "\030\001 \001(\t\022*\n\targuments\030\002 \001(\0132\027.google.proto" +
-      "buf.Struct\"@\n\016FunctionResult\022\014\n\004name\030\001 \001" +
-      "(\t\022\021\n\007content\030\002 \001(\tH\000B\r\n\013ContentType\"/\n\020" +
-      "RephraserOptions\022\033\n\rrephraser_uri\030\001 \001(\tB" +
-      "\004\350\3071\001Bq\n!yandex.cloud.api.ai.assistants." +
-      "v1ZLgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/ai/assistants/v1;assistants" +
-      "b\006proto3"
+      "\022B\n\rcall_strategy\030\004 \001(\0132+.yandex.cloud.a" +
+      "i.assistants.v1.CallStrategy\"\367\001\n\014CallStr" +
+      "ategy\022M\n\013always_call\030\001 \001(\01326.yandex.clou" +
+      "d.ai.assistants.v1.CallStrategy.AlwaysCa" +
+      "llH\000\022I\n\tauto_call\030\002 \001(\01324.yandex.cloud.a" +
+      "i.assistants.v1.CallStrategy.AutoCallH\000\032" +
+      "\014\n\nAlwaysCall\0323\n\010AutoCall\022\014\n\004name\030\001 \001(\t\022" +
+      "\031\n\013instruction\030\002 \001(\tB\004\350\3071\001B\n\n\010Strategy\"^" +
+      "\n\014FunctionTool\022\014\n\004name\030\001 \001(\t\022\023\n\013descript" +
+      "ion\030\002 \001(\t\022+\n\nparameters\030\003 \001(\0132\027.google.p" +
+      "rotobuf.Struct\"H\n\014FunctionCall\022\014\n\004name\030\001" +
+      " \001(\t\022*\n\targuments\030\002 \001(\0132\027.google.protobu" +
+      "f.Struct\"@\n\016FunctionResult\022\014\n\004name\030\001 \001(\t" +
+      "\022\021\n\007content\030\002 \001(\tH\000B\r\n\013ContentType\"/\n\020Re" +
+      "phraserOptions\022\033\n\rrephraser_uri\030\001 \001(\tB\004\350" +
+      "\3071\001Bq\n!yandex.cloud.api.ai.assistants.v1" +
+      "ZLgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/ai/assistants/v1;assistantsb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12764,27 +15261,45 @@ public final class Common {
     internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_SearchIndexTool_descriptor,
-        new java.lang.String[] { "SearchIndexIds", "MaxNumResults", "RephraserOptions", });
-    internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor =
+        new java.lang.String[] { "SearchIndexIds", "MaxNumResults", "RephraserOptions", "CallStrategy", });
+    internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_descriptor,
+        new java.lang.String[] { "AlwaysCall", "AutoCall", "Strategy", });
+    internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_descriptor =
+      internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AlwaysCall_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_descriptor =
+      internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_assistants_v1_CallStrategy_AutoCall_descriptor,
+        new java.lang.String[] { "Name", "Instruction", });
+    internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_FunctionTool_descriptor,
         new java.lang.String[] { "Name", "Description", "Parameters", });
     internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_FunctionCall_descriptor,
         new java.lang.String[] { "Name", "Arguments", });
     internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_FunctionResult_descriptor,
         new java.lang.String[] { "Name", "Content", "ContentType", });
     internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_assistants_v1_RephraserOptions_descriptor,

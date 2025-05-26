@@ -1717,30 +1717,25 @@ public final class PERES {
     java.lang.String[] descriptorData = {
       "\n:yandex/cloud/serverless/eventrouter/v1" +
       "/event_service.proto\022&yandex.cloud.serve" +
-      "rless.eventrouter.v1\032\034google/api/annotat" +
-      "ions.proto\032\033google/protobuf/empty.proto\032" +
-      "\035yandex/cloud/validation.proto\"G\n\017PutEve" +
-      "ntRequest\022\024\n\006bus_id\030\001 \001(\tB\004\350\3071\001\022\036\n\004body\030" +
-      "\002 \001(\tB\020\350\3071\001\212\3101\010<=262144\"W\n\021SendEventsReq" +
-      "uest\022\032\n\014connector_id\030\001 \001(\tB\004\350\3071\001\022&\n\007mess" +
-      "age\030\002 \003(\tB\025\202\3101\0051-100\212\3101\010<=2621442\252\002\n\014Eve" +
-      "ntService\022\206\001\n\003Put\0227.yandex.cloud.serverl" +
-      "ess.eventrouter.v1.PutEventRequest\032\026.goo" +
-      "gle.protobuf.Empty\".\202\323\344\223\002(\"#/eventrouter" +
-      "/v1/events/{bus_id}:put:\001*\022\220\001\n\004Send\0229.ya" +
+      "rless.eventrouter.v1\032\033google/protobuf/em" +
+      "pty.proto\032\035yandex/cloud/validation.proto" +
+      "\"G\n\017PutEventRequest\022\024\n\006bus_id\030\001 \001(\tB\004\350\3071" +
+      "\001\022\036\n\004body\030\002 \001(\tB\020\350\3071\001\212\3101\010<=262144\"W\n\021Sen" +
+      "dEventsRequest\022\032\n\014connector_id\030\001 \001(\tB\004\350\307" +
+      "1\001\022&\n\007message\030\002 \003(\tB\025\202\3101\0051-100\212\3101\010<=2621" +
+      "442\301\001\n\014EventService\022V\n\003Put\0227.yandex.clou" +
+      "d.serverless.eventrouter.v1.PutEventRequ" +
+      "est\032\026.google.protobuf.Empty\022Y\n\004Send\0229.ya" +
       "ndex.cloud.serverless.eventrouter.v1.Sen" +
-      "dEventsRequest\032\026.google.protobuf.Empty\"5" +
-      "\202\323\344\223\002/\"*/eventrouter/v1/events/{connecto" +
-      "r_id}:send:\001*B\213\001\n*yandex.cloud.api.serve" +
-      "rless.eventrouter.v1B\005PERESZVgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/se" +
-      "rverless/eventrouter/v1;eventrouterb\006pro" +
-      "to3"
+      "dEventsRequest\032\026.google.protobuf.EmptyB\213" +
+      "\001\n*yandex.cloud.api.serverless.eventrout" +
+      "er.v1B\005PERESZVgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/serverless/eventr" +
+      "outer/v1;eventrouterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -1758,13 +1753,11 @@ public final class PERES {
         new java.lang.String[] { "ConnectorId", "Message", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
